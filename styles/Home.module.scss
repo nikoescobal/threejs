@@ -1,5 +1,8 @@
+@import 'variables';
+
 .container {
   padding: 0 2rem;
+  background: $light-background;
 }
 
 .main {
