@@ -29,7 +29,7 @@
   height: 100vh;
   // max-height: 8rem;
   background: rgba($color: #000000, $alpha: 0.75);
-  color: white;
+  color: $dark-mode-text-color;
   font-family: 'Source Sans Pro', sans-serif;
   backdrop-filter: blur(8px);
   transition: top ease-in-out 0.75s !important;
@@ -40,8 +40,12 @@
 }
 
 
-.light {
+.navbar.light {
   background: rgba($color: #dde3f9, $alpha: 0.85);
+}
+
+.navbar.light a {
+  color: $light-mode-text-color;
 }
 
 .navbar > div {
