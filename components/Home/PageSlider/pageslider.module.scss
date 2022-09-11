@@ -1,0 +1,94 @@
+.cards-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  min-height: 22rem;
+  bottom: 10vh;
+  right: 30%;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.card {
+  background: transparent !important;
+  color: white;
+  // width: 62ch !important;
+  // max-width: 75ch !important;
+  text-align: center;
+  border-radius: 8px;
+  padding: 0 !important;
+}
+
+.card h4 {
+  font-size: 1.75rem !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-bottom: 0.1rem;
+}
+
+.card p {
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.fade-slider .swiper-slide:not(.swiper-slide-active) {
+  opacity: 0 !important;
+}
+
+.fade-slider h4 {
+  font-family: 'Montserrat', serif;
+}
+
+.fade-slider .swiper-horizontal > .swiper-pagination-bullets {
+  bottom: -8px !important;
+}
+
+.fade-slider .swiper-pagination-bullet {
+  border: 1px solid white;
+}
+
+.fade-slider .swiper-pagination-bullet-active {
+  background: white !important;
+}
+
+.card a {
+  display: inline-block;
+  text-decoration: none;
+  background: linear-gradient(90deg, #1d4ab2, #18419f);
+  color: white;
+  padding: 0.3rem 0;
+  width: 100%;
+  max-width: 13rem;
+  margin-top: 1.25rem;
+  border-radius: 14px;
+  font-size: 1.05rem;
+  font-family: 'Source Sans Pro', serif;
+  font-weight: 600;
+}
+
+.App.light .card h4,
+.App.light .card p {
+  color: black;
+}
+
+@media only screen and (min-width: 480px) {
+  .cards-wrapper {
+    margin-left: auto;
+    margin-right: 2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .cards-wrapper {
+    margin-left: auto;
+  max-width: 40ch;
+
+    // margin-right: 8rem;
+  }
+
+  .card h4 {
+    font-size: 2.25rem !important;
+  }
+}

@@ -1,26 +1,36 @@
-html,
+/* html,
 body {
   padding: 0;
   margin: 0;
-  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, */
-    /* Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
-}
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+} */
 
 #__next *{
   font-family: 'Montserrat', serif;
-  transition:
+  /* transition:
     color 0.3s ease-in-out,
     background-color 0.3s ease-in-out,
-    top 0.3s ease-in-out;
+    top 0.3s ease-in-out; */
+}
+
+.content-wrapper {
+  background: #0d0e0e;
+  color: white;
+  position: relative;
+}
+
+.content-wrapper.light {
+  background: #dde3f9;
+  color: rgb(75, 75, 75);
 }
 
 #__next > .light,
 #__next > .light a {
-  color: rgb(75, 75, 75);
 }
 
 img {
-  width: 100%;
+  width: 100% !important;
   height: auto;
 }
 
@@ -29,10 +39,16 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+p {
+  line-height: 2.75ch;
 }
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* 
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -41,4 +57,4 @@ a {
     color: white;
     background: black;
   }
-}
+} */

@@ -1,0 +1,68 @@
+@import '../../../styles/variables';
+
+.clear-container {
+  background: rgba(255, 255, 255, 0.05);
+  display: grid;
+  gap: 1rem;
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  position: relative;
+  padding: 2rem 1rem 3rem;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+  margin: 0 auto;
+  border: 1px solid $ln-blue;
+}
+
+.App.light .clear-container {
+  background: rgba(0, 0, 0, 0.05) !important;
+}
+
+.clear-container h4{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+.clear-container p{
+  max-width: 70ch;
+  // margin: 0 auto;
+  font-size: 0.9rem;
+}
+
+.clear-container a{
+  background: #1960EA;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+  max-width: 8rem;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  font-family: 'Montserrat', serif;
+}
+
+.clear-container.reduced-padding{
+  padding: 2rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .clear-container {
+    gap: 1.75rem;
+    padding: 5rem 4rem 5rem;
+  }
+
+  .reduced-padding{
+    padding: 3.5rem 2.5rem;
+  }
+ 
+  .clear-container h4{
+    font-size: 1.85rem;
+  }
+
+  
+  .clear-container p{
+    font-size: 1.1rem;
+  }
+}
