@@ -10,6 +10,8 @@ import HomeNavbar from '../components/Navbar/Navbar';
 import generics from '../styles/generics.module.scss';
 import styles from '../styles/Home.module.scss';
 import Roadmap from '../components/Generic/Roadmap/Roadmap';
+import Partners from '../components/Generic/Partners/Partners';
+import Map from '../components/Home/Map/Map';
 
 export default function Home() {
   return (
@@ -39,6 +41,8 @@ export default function Home() {
         <App />
       </WavesWrapper>
       <Roadmap />
+      <Partners />
+      <Map />
     </div>
   );
 }

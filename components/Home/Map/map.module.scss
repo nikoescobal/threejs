@@ -1,0 +1,43 @@
+.map {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25vw;
+  margin-top: 40vw;
+  margin-bottom: 40vw;
+  max-width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+}
+
+.map h4 {
+  font-size: clamp(1.4rem, 5vw, 2rem);
+  text-transform: capitalize;
+  font-family: 'Montserrat', serif;
+  margin-bottom: 1rem;
+  position: relative;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.map img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+  width: 80%;
+}
+
+.map.light img {
+  filter: invert(0.6);
+}
+
+@media only screen and (min-width: 768px) {
+  .map {
+    margin-top: 16vw;
+    margin-bottom: 16vw;
+  }
+}
