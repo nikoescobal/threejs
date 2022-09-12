@@ -41,7 +41,8 @@
 
 
 .navbar.light {
-  background: rgba($color: #dde3f9, $alpha: 0.85);
+  // background: rgba($color: #dde3f9, $alpha: 0.85);
+  background: rgba($color: $light-mode--dark-3, $alpha: 0.85);
 }
 
 .navbar.light a {

@@ -1,0 +1,31 @@
+@import '../../styles/variables';
+
+.container {
+  background-image: radial-gradient(circle farthest-side at 50% 40%, rgba($ln-blue, 0.5), transparent);
+}
+
+.container.light {
+  background-image: radial-gradient(circle farthest-side at 50% 40%, rgba(white, 0.5), transparent);
+}
+
+.header h4{
+  font-size: 1.2rem;
+  max-width: 44ch;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.header span {
+  color: $ln-blue;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .container {
+    background-image: radial-gradient(circle farthest-side at 67% 30%, rgba($ln-blue, 0.75), transparent 60%);
+  }
+
+  .container.light {
+    background-image: radial-gradient(circle farthest-side at 67% 30%, rgba(black, 0.2), transparent 60%);
+  }
+}

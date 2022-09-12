@@ -1,3 +1,5 @@
+@import '../../../styles/variables';
+
 $roadmap-cell-width: 27vw;
 $roadmap-cell-height: calc($roadmap-cell-width / 0.8125);
 $roadmap-cell-gap: 0.5rem;
@@ -37,12 +39,14 @@ $roadmap-cell-gap: 0.5rem;
 
 .roadmap.light .before {
   // background: #ccd2e6;
-  background: #d0d5ec;
+  // background: #d0d5ec;
+  background: $light-mode--dark-3;
   transform: translateY(-7%) skew(15deg, 0) rotate(12deg);
 }
 
 .roadmap.light .after {
-  background: #e2e8ff;
+  // background: #e2e8ff;
+  background: $light-mode--dark-2;
   transform: translateY(-7%) skew(-15deg, 0) rotate(-12deg);
 }
 

@@ -12,6 +12,7 @@ import styles from '../styles/Home.module.scss';
 import Roadmap from '../components/Generic/Roadmap/Roadmap';
 import Partners from '../components/Generic/Partners/Partners';
 import Map from '../components/Home/Map/Map';
+import FollowUs from '../components/Generic/FollowUs/FollowUs';
 
 export default function Home() {
   return (
@@ -43,6 +44,7 @@ export default function Home() {
       <Roadmap />
       <Partners />
       <Map />
+      <FollowUs />
     </div>
   );
 }
