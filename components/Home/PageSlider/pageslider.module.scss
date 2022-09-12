@@ -1,3 +1,5 @@
+@import '../../../styles/variables';
+
 .cards-wrapper {
   display: flex;
   align-items: center;
@@ -68,9 +70,9 @@
   font-weight: 600;
 }
 
-.App.light .card h4,
-.App.light .card p {
-  color: black;
+.light .card h4,
+.light .card p {
+  color: $light-mode-text-color !important;
 }
 
 @media only screen and (min-width: 480px) {

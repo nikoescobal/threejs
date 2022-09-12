@@ -8,10 +8,13 @@ import generics from '../../../styles/generics.module.scss'
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import useStore from '../../../store/store';
 
 function PageSlider() {
+  const { isDarkMode } = useStore((state) => state);
+  
   return (
-    <section className={`${generics['spacing-x']}`}>
+    <section className={`${generics['spacing-x']} ${!isDarkMode ? `${styles['light']}` : ''}`}>
       <div className={`${styles['cards-wrapper']}`}>
         <Swiper
           className={`${styles['fade-slider']}`}

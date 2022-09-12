@@ -1,0 +1,126 @@
+$news-cell-height: 8rem;
+$news-cell-width: 6.5rem;
+$news-cell-gap: 0.5rem;
+
+.news-letter {
+  text-align: center;
+  padding-top: clamp(6rem, 5vw, 16rem);
+  margin-bottom: clamp(10rem, 15vw, 24rem);
+}
+
+.news-letter.light {
+}
+
+.news-letter.light img {
+  filter: invert(1);
+}
+
+.news-letter > div:last-of-type {
+  padding: 4rem 0;
+}
+
+.news-letter h4,
+.map h4 {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  font-family: 'Montserrat', serif;
+  margin-bottom: 1rem;
+}
+
+.news-letter p {
+  font-size: 0.9rem;
+  max-width: 50ch;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+.news-letter form {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem auto 0;
+  gap: 0.5rem;
+  max-width: 44rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.news-letter input {
+  width: 100%;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #EEF2F6;
+  color: white;
+  padding: 0.75rem 0.5rem;
+}
+
+.news-letter.light input {
+  border: 1px solid rgb(75, 75, 75);
+  color: rgb(75, 75, 75);
+}
+
+.news-letter input::placeholder {
+  color: white;
+}
+
+.news-letter.light input::placeholder {
+  color: rgb(75, 75, 75);
+}
+
+.news-letter button {
+  background: #1e50ff;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-family: 'Montserrat', serif;
+  font-weight: 500;
+  max-width: 10rem;
+}
+
+.map {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25vw;
+  margin-bottom: 8vw;
+  // border: 1px solid rgb(13, 47, 137);
+  max-width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+}
+
+.map img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+  width: 80%;
+}
+
+.map.light img {
+  filter: invert(0.6);
+}
+
+.map h4 {
+  position: relative;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .news-letter h4,
+  .map h4 {
+    font-size: 2rem;
+  }
+
+  .news-letter p {
+    font-size: 1.1rem;
+  }
+  
+  .news-letter form {
+    flex-direction: row;
+  }
+}

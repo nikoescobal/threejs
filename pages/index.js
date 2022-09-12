@@ -2,6 +2,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import ClearContainer from '../components/Generic/ClearContainer/ClearContainer';
 import WavesWrapper from '../components/Generic/WavesWrapper/WavesWrapper';
+import NewsLetter from '../components/Home/NewsLetter/NewsLetter';
+import App from '../components/Home/App/App';
 import Header from '../components/Home/Header';
 import PageSlider from '../components/Home/PageSlider/PageSlider';
 import HomeNavbar from '../components/Navbar/Navbar';
@@ -31,7 +33,10 @@ export default function Home() {
             </p>
         </ClearContainer>
       </div>
-      <WavesWrapper />
+      <WavesWrapper>
+        <NewsLetter />
+        <App />
+      </WavesWrapper>
     </div>
   );
 }

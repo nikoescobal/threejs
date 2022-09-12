@@ -3,10 +3,13 @@ import generics from '../../styles/generics.module.scss'
 import Logo from '../../public/logo-cropped.png'
 import Image from 'next/image'
 import PageSlider from './PageSlider/PageSlider'
+import useStore from '../../store/store'
 
 function Header() {
+  const { isDarkMode } = useStore((state) => state);
+  
   return (
-    <div className={`${styles.container}`}>
+    <div className={`${styles.container} ${!isDarkMode ? `${styles.light}` : ''}`}>
       <section className={`${generics.header} ${styles.header} header-intro ${generics['spacing-x']} ${generics['spacing-t']}`}>
         <div className={`${generics['img-wrapper']}`}>
           <Image src={Logo} alt="logo" />

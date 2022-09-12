@@ -1,0 +1,67 @@
+@import '../../../styles/variables';
+
+$vertical-inner-spacing: 20vw;
+
+.waves-wrapper {
+  // padding-top: 40vw;
+  overflow: hidden;
+  // background: $dark-background;
+  // padding-top: $vertical-inner-spacing;
+  padding-bottom: $vertical-inner-spacing;
+}
+
+.waves-wrapper.light .content-wrapper {
+  background: $light-mode-waves-color;
+}
+
+.waves-img-wrapper {
+  padding-top: calc($vertical-inner-spacing * 2);
+  // background-image: radial-gradient(circle farthest-side at 50% 200%, rgba($ln-blue, 0.1), transparent);
+  background-image: linear-gradient(transparent 10%, rgba($ln-blue, 0.2));
+  position: relative;
+}
+
+.waves-wrapper.light .waves-img-wrapper {
+  background-image: linear-gradient(transparent, rgba(black, 0.4));
+}
+
+.waves-img-wrapper:last-of-type {
+  rotate: 180deg;
+}
+
+.waves-img-wrapper img {
+  margin-bottom: -0.3rem;
+  width: 101vw !important;
+}
+
+.waves-img-wrapper:first-of-type img {
+  position: absolute;
+  // top: 0.9rem;
+  bottom: 0;
+  left: 0;
+}
+
+.waves-img-wrapper:last-of-type img {
+  position: absolute;
+  bottom: -0.9rem;
+  left: 0;
+}
+
+.content-wrapper {
+  padding-top: calc($vertical-inner-spacing / 2);
+  padding-bottom: $vertical-inner-spacing;
+}
+
+// .radial-wrapper-top {
+//   width: 95vw;
+//   height: 40vw;
+// }
+
+@media only screen and (min-width: 768px) {
+  .waves-wrapper {
+  }
+  
+  .waves-wrapper > img {
+    // min-height: 40vw;
+  }
+}

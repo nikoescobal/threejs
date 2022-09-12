@@ -43,7 +43,9 @@ p {
   line-height: 2.75ch;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
