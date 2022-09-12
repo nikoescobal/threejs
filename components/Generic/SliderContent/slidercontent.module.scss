@@ -1,0 +1,39 @@
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+  
+  background-color: transparent !important;
+}
+
+.slide-content-wrapper {
+  // padding: 0.75rem 2rem;
+  background: #202121;
+  color: white;
+  list-style: none;
+  border: 1px solid #0046FF;
+  border-radius: 20px !important;
+  text-align: left;
+}
+
+.slide-content-wrapper.light {
+  background: #afb3c5;
+}
+
+.slide-content-wrapper li {
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  font-family: 'Montserrat', serif;
+}
+
+.slide-content-wrapper li:not(:last-of-type) {
+  border-bottom: 1px solid #4D7DFF;
+}
+
+.slide-content-wrapper li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  font-size: 1rem;
+  color: #2670FE; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+

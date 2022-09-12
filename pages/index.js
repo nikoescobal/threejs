@@ -9,6 +9,7 @@ import PageSlider from '../components/Home/PageSlider/PageSlider';
 import HomeNavbar from '../components/Navbar/Navbar';
 import generics from '../styles/generics.module.scss';
 import styles from '../styles/Home.module.scss';
+import Roadmap from '../components/Generic/Roadmap/Roadmap';
 
 export default function Home() {
   return (
@@ -37,6 +38,7 @@ export default function Home() {
         <NewsLetter />
         <App />
       </WavesWrapper>
+      <Roadmap />
     </div>
   );
 }

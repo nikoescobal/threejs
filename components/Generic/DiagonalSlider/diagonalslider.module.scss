@@ -1,0 +1,153 @@
+.slider {
+  position: relative;
+  z-index: 1;
+  // display: flex;
+  // justify-content: start;
+}
+
+.slide-main {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide {
+  // min-width: 50vw;
+  min-width: 33vw;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+
+.slide button {
+  background: linear-gradient(90deg, #1d4ab2, #18419f);
+  color: white;
+  padding: 0.3rem 0;
+  width: 100%;
+  max-width: 13rem;
+  margin-top: 1.25rem;
+  border-radius: 14px;
+  font-size: 1.05rem;
+  font-family: "Source Sans Pro", serif;
+  font-weight: 600;
+  border: none;
+  opacity: 1;
+}
+
+.slide-button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slide button[disabled] {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.connector {
+  position: absolute;
+  z-index: 2;
+  width: 20vw;
+}
+
+.arrows-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.slider.light .arrows-wrapper {
+  filter: invert(1);
+}
+
+.arrows-wrapper > div {
+  width: 100vw;
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  max-width: 4rem;
+  z-index: 2;
+}
+
+.slider button.arrow{
+  background: transparent;
+  border: none;
+}
+
+.slide {
+  opacity: 0.5;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.arrow.left {
+  top: 50%;
+  left: 1%;
+  transform: translate(-0%, -50%) scale(-1);
+}
+
+.arrow.right {
+  top: 50%;
+  right: 1%;
+  transform: translate(-0%, -50%);
+}
+
+.phase-wrapper {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 9rem;
+  width: 8rem;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: linear-gradient(#494949, #666666);
+}
+
+.phase-wrapper p {
+  position: relative;
+  z-index: 1;
+}
+
+.slide.active .phase-wrapper {
+  position: relative;
+  background: linear-gradient(#00C5FD, #003BE7);
+}
+
+.slider.light .slide.active .phase-wrapper {
+  color: white;
+}
+
+.slide .phase-wrapper::after {
+  content: '';
+  background: #141515;
+  position: absolute;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 8rem;
+  width: 7rem;
+}
+
+.slide.active .phase-wrapper::after {
+  content: '';
+  background: #0a3087;
+  position: absolute;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 8rem;
+  width: 7rem;
+}
+
+.content-wrapper {
+
+}
