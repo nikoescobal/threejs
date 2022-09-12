@@ -36,7 +36,8 @@ img {
 }
 
 h3 {
-  font-size: clamp(1.4rem, 1vw + 0.75rem, 2rem);
+  font-size: clamp(1.4rem, 5vw, 2rem);
+  font-weight: bold;
 }
 
 a {
