@@ -3,6 +3,7 @@ import useStore from '../store/store';
 import '../styles/fonts.css';
 import '../styles/globals.css';
 import '../styles/generics.module.scss';
+import Footer from '../components/Footer/Footer';
 
 function MyApp({ Component, pageProps }) {
   const { isDarkMode } = useStore((state) => state);
@@ -11,6 +12,7 @@ function MyApp({ Component, pageProps }) {
     <div className={`content-wrapper ${isDarkMode ? '' : 'light'} `}>
       <Navbar />
       <Component {...pageProps} />
+      <Footer />
     </div>
   )
 }
