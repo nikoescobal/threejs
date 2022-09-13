@@ -16,12 +16,12 @@ import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
 function Token() {
   const ref = useRef();
   // const gltf = useLoader(GLTFLoader, '/3d/ln_token_3d.gltf');
-  const gltf = useLoader(GLTFLoader, '/3d/Token_Updated.glb');
-  // const gltf = useLoader(GLTFLoader, '/3d/Token_Updated-small.glb', loader => {
-  //   const dracoLoader = new DRACOLoader();
-  //   dracoLoader.setDecoderPath('https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/js/libs/draco/');
-  //   loader.setDRACOLoader(dracoLoader);
-  //  });
+  // const gltf = useLoader(GLTFLoader, '/3d/Token_Updated.glb');
+  const gltf = useLoader(GLTFLoader, '/3d/Token_Updated-small.glb', loader => {
+    const dracoLoader = new DRACOLoader();
+    dracoLoader.setDecoderPath('https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/js/libs/draco/');
+    loader.setDRACOLoader(dracoLoader);
+   });
   const clonedScene = useMemo(() => gltf.scene.clone(), []);
 
   useLayoutEffect(() => {
