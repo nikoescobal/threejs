@@ -17,7 +17,7 @@ function Token() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <GenericHeader title={'LGCN Token'} subtitle={'a multichain utility & payment token'} rightObj={isDesktop ? <TokenModel /> : <Image src={TokenImage} />} />
+        <GenericHeader title={'LGCN Token'} subtitle={'a multichain utility & payment token'} rightObj={isDesktop ? <TokenModel /> : <Image src={TokenImage} alt="token" />} />
       </div>
     </>
   )
