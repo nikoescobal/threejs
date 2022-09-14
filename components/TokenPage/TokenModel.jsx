@@ -31,14 +31,14 @@ function Token() {
           {
             color: 0x1e4fbc,
             roughness: 0.25,
-            metalness: 1,
+            metalness: 1.25,
             sheenColor: 0x1e4fbc,
             sheen: 0.5,
             ior: 1.45,
             specularColor: 0xffffff,
             specularIntensity: 0.5,
             emissive: 0x1e4fbc,
-            emissiveIntensity: 0.2
+            emissiveIntensity: 0.5
           },
         );
       }

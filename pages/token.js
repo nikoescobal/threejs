@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
 import GenericHeader from '../components/Generic/Header/GenericHeader'
+import Chart from '../components/TokenPage/Graph/Chart'
 import TokenModel from '../components/TokenPage/TokenModel'
 import TokenImage from '../public/illustrations/token-3d.png'
 
@@ -18,6 +19,9 @@ function Token() {
       </Head>
       <div>
         <GenericHeader title={'LGCN Token'} subtitle={'a multichain utility & payment token'} rightObj={isDesktop ? <TokenModel /> : <Image src={TokenImage} alt="token" />} />
+      </div>
+      <div>
+        <Chart />
       </div>
     </>
   )

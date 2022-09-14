@@ -38,10 +38,6 @@ function Navbar() {
     setIsOpen(!isOpen);
   };
 
-  useEffect(() => {
-    console.log('scroll', scrollDirection);
-  }, [scrollDirection]);
-
   return (
     <>
       {/* { !pathname.includes('blogs') && (

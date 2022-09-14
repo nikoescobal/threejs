@@ -1,0 +1,56 @@
+.apexcharts-legend {
+  justify-content: center !important;
+  gap: 1rem;
+  top: 0 !important;
+}
+
+.apexcharts-legend span{
+  color: #eee !important;
+}
+
+.App.light .apexcharts-legend span{
+  color: rgb(31, 31, 31) !important;
+}
+
+.apex-chart {
+  padding-bottom: 4rem;
+}
+
+.donut {
+  transition: rotate 0.3s ease-in-out;
+  position: relative;
+  overflow: visible !important;
+}
+
+.donut-wrapper {
+  transform: translateX(-18vw);
+}
+
+.donut-wrapper::after {
+  // content:'';
+  background: white;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.donut-segment {
+  // color: gray;
+  // stroke: gray;
+}
+
+.donut-segment text {
+  font-size: 0.1rem;
+}
+
+.active {
+  // fill: red !important;
+  stroke-width: 12;
+}
+
+.donut g.active text {
+  font-size: 0.3rem;
+}

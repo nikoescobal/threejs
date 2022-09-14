@@ -9,11 +9,13 @@ const useStore = create((set) => ({
   blogs: [],
   isIntroDone: false,
   isDarkMode: true,
+  currentChartColor: '#ffffff',
   setUser: (payload) => set({ user: payload }),
   setIsLoggedIn: (payload) => set({ isLoggedIn: payload }),
   setBlogs: (payload) => set({ blogs: payload }),
   setIsIntroDone: (payload) => set({ isIntroDone: payload }),
   toggleDarkMode: () => set((state) => ({ isDarkMode: !state.isDarkMode })),
+  setCurrentChartColor: (payload) => set({ currentChartColor: payload }),
 }));
 
 export default useStore;
