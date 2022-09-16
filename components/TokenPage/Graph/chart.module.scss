@@ -1,3 +1,5 @@
+@import '../../../styles/variables';
+
 .apexcharts-legend {
   justify-content: center !important;
   gap: 1rem;
@@ -12,8 +14,44 @@
   color: rgb(31, 31, 31) !important;
 }
 
-.apex-chart {
-  padding-bottom: 4rem;
+.chart-wrapper {
+  position: relative;
+  // display: grid;
+  // grid-template-columns: repeat(2, 1fr);
+}
+
+.chart-content {
+  position: absolute;
+  display: grid;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.05);
+  padding: clamp(1rem, 10vw + 1rem, 4rem);
+  // min-width: clamp(16rem, 20vw + 10rem, 48rem);
+  min-width: 16rem;
+  width: 100%;
+  max-width: 40rem;
+  border-radius: 8px;
+}
+
+.chart-content h3 {
+  font-size: clamp(2.5rem, 10vw + 1rem, 4rem);
+}
+
+.chart-content h4 {
+  font-family: 'din condensed', serif !important;
+  font-size: clamp(2.25rem, 10vw + 1rem, 3.5rem);
+}
+
+.chart-content a {
+  display: inline-block;
+  background: $ln-blue;
+  font-size: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  margin-top: 2rem;
+  border-radius: 6px;
 }
 
 .donut {
