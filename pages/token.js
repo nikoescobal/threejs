@@ -8,6 +8,7 @@ import TokenModel from '../components/TokenPage/TokenModel'
 import TokenImage from '../public/illustrations/token-3d.png'
 import WavesWrapper from '../components/Generic/WavesWrapper/WavesWrapper'
 import HexagonSlider from '../components/TokenPage/HexagonSlider/HexagonSlider'
+import TokenIntro from '../components/TokenPage/TokenIntro/TokenIntro'
 
 function Token() {
   const isDesktop = useMediaQuery('(min-width: 1024px)');
@@ -15,17 +16,18 @@ function Token() {
   return (
     <>
       <Head>
-        <title>App</title>
-        <meta name="description" content="Legacy Network Application" />
+        <title>Token</title>
+        <meta name="description" content="Legacy Network Token" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
         <GenericHeader title={'LGCN Token'} subtitle={'a multichain utility & payment token'} rightObj={isDesktop ? <TokenModel /> : <Image src={TokenImage} alt="token" />} />
+        <TokenIntro />
+        <WavesWrapper>
+          <HexagonSlider />
+          <Chart />
+        </WavesWrapper>
       </div>
-      <WavesWrapper>
-        <HexagonSlider />
-        <Chart />
-      </WavesWrapper>
     </>
   )
 }
