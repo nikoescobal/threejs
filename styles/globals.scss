@@ -61,6 +61,22 @@ button {
   font-family: 'source sans pro', serif !important;
 }
 
+.button-blue {
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+  background: linear-gradient(90deg, #1d4ab2, #18419f);
+  color: white;
+  padding: 0.4rem 0;
+  width: 100%;
+  max-width: 13rem;
+  margin-top: 1.25rem;
+  border-radius: 4px;
+  font-size: 1.05rem;
+  font-family: 'Source Sans Pro', serif !important;
+  font-weight: 600;
+}
+
 *,
 *::before,
 *::after {

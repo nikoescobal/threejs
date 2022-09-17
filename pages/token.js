@@ -3,12 +3,12 @@ import Head from 'next/head'
 import Image from 'next/image'
 import React from 'react'
 import GenericHeader from '../components/Generic/Header/GenericHeader'
-import Chart from '../components/TokenPage/Graph/Chart'
 import TokenModel from '../components/TokenPage/TokenModel'
 import TokenImage from '../public/illustrations/token-3d.png'
 import WavesWrapper from '../components/Generic/WavesWrapper/WavesWrapper'
 import TokenIntro from '../components/TokenPage/TokenIntro/TokenIntro'
 import HexagonSliderSection from '../components/TokenPage/HexagonSliderSection/HexagonSliderSection'
+import ChartSection from '../components/TokenPage/ChartSection/ChartSection'
 
 function Token() {
   const isDesktop = useMediaQuery('(min-width: 1024px)');
@@ -25,7 +25,7 @@ function Token() {
         <TokenIntro />
         <WavesWrapper>
           <HexagonSliderSection />
-          <Chart />
+          <ChartSection />
         </WavesWrapper>
       </div>
     </>

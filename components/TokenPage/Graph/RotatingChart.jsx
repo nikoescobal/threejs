@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import useStore from '../../../store/store';
 import styles from './chart.module.scss';
 
-function Chart() {
+function RotatingChart() {
   const data = [
     {
       title: 'Ecosystem',
@@ -156,4 +156,4 @@ function Chart() {
   );
 }
 
-export default Chart;
+export default RotatingChart;

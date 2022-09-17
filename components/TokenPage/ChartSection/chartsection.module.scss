@@ -1,0 +1,13 @@
+.text-wrapper {
+  text-align: center;
+  max-width: 75ch;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: clamp(1rem, 5vw, 2rem);
+  flex-wrap: wrap;
+}

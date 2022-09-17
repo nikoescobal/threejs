@@ -10,6 +10,32 @@ function HexagonSlider() {
   const [touchEnd, setTouchEnd] = useState(0);
 
   const { isDarkMode } = useStore((state) => state);
+  const data = [
+    {
+      title: 'title 1',
+      body: 'body 1',
+    },
+    {
+      title: 'title 2',
+      body: 'body 2',
+    },
+    {
+      title: 'title 3',
+      body: 'body 3',
+    },
+    {
+      title: 'title 4',
+      body: 'body 4',
+    },
+    {
+      title: 'title 5',
+      body: 'body 5',
+    },
+    {
+      title: 'title 6',
+      body: 'body 6',
+    },
+  ]
 
   useEffect(() => console.log(currentRotation), [currentRotation])
 
@@ -22,7 +48,7 @@ function HexagonSlider() {
   }
 
   function moveSliderLeft() {
-    setCurrentRotation(currentRotation - 60);
+    setCurrentRotation(currentRotation + 60);
     if (currentIndex === 0) {
       setCurrentIndex(5)
     } else {
@@ -31,7 +57,7 @@ function HexagonSlider() {
   };
 
   function moveSliderRight() {
-    setCurrentRotation(currentRotation + 60);
+    setCurrentRotation(currentRotation - 60);
     setCurrentIndex((currentIndex + 1) % 6)
   };
 
@@ -54,17 +80,26 @@ function HexagonSlider() {
         transform: `rotateY(${currentRotation}deg) rotateX(0deg) rotateZ(-0deg)`
       }}>
         <div className={`${styles['side-faces']}`}>
-          <div className={`${styles['side']}`}>
+          {
+            data.map((item, index) => (
+              <div className={`${styles['side']} ${index === currentIndex ? `${styles.active}` : ''}`} key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </div>
+            ))
+          }
+          
+          {/* <div className={`${styles['side']}`}>
             side 1
           </div>
           <div className={`${styles['side']}`}>side 2</div>
           <div className={`${styles['side']}`}>side 3</div>
           <div className={`${styles['side']}`}>side 4</div>
           <div className={`${styles['side']}`}>side 5</div>
-          <div className={`${styles['side']}`}>side 6</div>
+          <div className={`${styles['side']}`}>side 6</div> */}
         </div>
       </div>
-      <div>
+      <div style={{marginTop: '8rem'}}>
         <button type='button' onClick={moveSliderLeft}>Left</button>
         <button type='button' onClick={moveSliderRight}>Right</button>
       </div>
