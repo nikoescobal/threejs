@@ -16,23 +16,30 @@
 
 .chart-wrapper {
   position: relative;
-  // display: grid;
-  // grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  // transform: translateX(-10vw);
 }
 
 .chart-content {
-  position: absolute;
+  // position: absolute;
   display: grid;
   align-items: center;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(0vw);
+  // transform: translate(-50%, -50%);
   background: rgba(255, 255, 255, 0.05);
-  padding: clamp(1rem, 10vw + 1rem, 4rem);
+  // padding: clamp(1rem, 10vw + 1rem, 4rem);
+  padding: clamp(1rem, 10vw + 1rem, 4rem) 8rem;
   // min-width: clamp(16rem, 20vw + 10rem, 48rem);
-  min-width: 16rem;
+  // min-width: 16rem;
+  max-height: 28rem;
   width: 100%;
-  max-width: 40rem;
+  max-width: 50rem;
+  // max-width: 75vw;
   border-radius: 8px;
 }
 
@@ -61,18 +68,27 @@
 }
 
 .donut-wrapper {
-  transform: translateX(-18vw);
+  // transform: translateX(-18vw);
+  position: relative;
+  z-index: 1;
+  // min-width: 40vw !important;
+  min-width: 16rem;
+  margin: 1rem;
+  // scale: 1.5;
 }
 
-.donut-wrapper::after {
-  // content:'';
-  background: white;
-  height: 2px;
-  width: 100%;
+.donut-wrapper::before {
+  content:'';
+  background: $dark-background;
+  height: calc(100% + 5rem);
+  aspect-ratio: 1;
+  // width: 100%;
   position: absolute;
-  top: 47%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  transform: translate(-40%, -50%);
+  // z-index: 1;
 }
 
 .donut-segment {
@@ -91,4 +107,44 @@
 
 .donut g.active text {
   font-size: 0.3rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .chart-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+  }
+  
+  .donut-wrapper {
+    margin: 0;
+    min-width: 30rem;
+    transform: translateX(-45%);
+  }
+  
+  .chart-content {
+    transform: translateX(-40%);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .chart-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+  }
+  
+  .donut-wrapper {
+    margin: 0;
+    min-width: 30rem;
+    transform: translateX(-45%);
+  }
+  
+  .chart-content {
+    transform: translateX(-28%);
+  }
 }

@@ -107,7 +107,7 @@ function RotatingChart() {
   return (
     <div className={`${styles['chart-wrapper']}`}>
       <div className={`${styles['donut-wrapper']}`}>
-        <svg width="40%" height="40%" viewBox="0 0 42 42" className={`${styles.donut}`}
+        <svg width="100%" height="100%" viewBox="0 0 42 42" className={`${styles.donut}`}
         style={{
           rotate: `calc(${currentRotation}deg * -1)`
         }}>
@@ -132,8 +132,8 @@ function RotatingChart() {
             ))
           }
         </svg>
-        <button type="button" onClick={turnCounterClockwise} >Prev</button>
-      <button type="button" onClick={turnClockwise} style={{margin: '4rem'}}>Next</button>
+        {/* <button type="button" onClick={turnCounterClockwise} >Prev</button>
+        <button type="button" onClick={turnClockwise} style={{margin: '4rem'}}>Next</button> */}
       </div>
       <div className={`${styles['chart-content']}`}>
         <div className={`${styles['items-wrapper']}`}>
