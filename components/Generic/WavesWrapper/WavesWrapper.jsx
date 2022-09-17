@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import useStore from '../../../store/store';
 import styles from './waveswrapper.module.scss';
 
-function WavesWrapper({children}) {
+function WavesWrapper({children, hideBottom}) {
   const { isDarkMode } = useStore((state) => state);
   
   return (
@@ -26,20 +26,30 @@ function WavesWrapper({children}) {
         { children }
       </div>
       {/* <Image objectFit='fill' src="/backgrounds/wave-shape-light.svg#svgView(viewBox(600, 00, 2000, 1050))" className="waves-bg" alt="" /> */}
-      <div className={`${styles['waves-img-wrapper']} ${styles['bottom']}}`}>
-        <div className={`${styles['radial-wrapper-top']}`}></div>
-        <img src="/backgrounds/wave-shape-dark-2.svg" className="waves-bg" alt=""
-        style={{
-          opacity: isDarkMode ? '1' : '0',
-        }} />
-        <img src="/backgrounds/wave-shape-light-2.svg" className="waves-bg" alt=""
+      { !hideBottom && 
+        <div className={`${styles['waves-img-wrapper']} ${styles['bottom']}}`}>
+          <div className={`${styles['radial-wrapper-top']}`}></div>
+          <img src="/backgrounds/wave-shape-dark-2.svg" className="waves-bg" alt=""
           style={{
-            opacity: isDarkMode ? '0' : '1',
-          }}
-         />
-      </div>
+            opacity: isDarkMode ? '1' : '0',
+          }} />
+          <img src="/backgrounds/wave-shape-light-2.svg" className="waves-bg" alt=""
+            style={{
+              opacity: isDarkMode ? '0' : '1',
+            }}
+          />
+        </div>
+      }
     </div>
   )
+}
+
+WavesWrapper.propTypes = {
+  disableBottom: PropTypes.bool,
+}
+
+WavesWrapper.defaultProps = {
+  disableBottom: false,
 }
 
 export default WavesWrapper

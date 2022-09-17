@@ -9,6 +9,7 @@ import WavesWrapper from '../components/Generic/WavesWrapper/WavesWrapper'
 import TokenIntro from '../components/TokenPage/TokenIntro/TokenIntro'
 import HexagonSliderSection from '../components/TokenPage/HexagonSliderSection/HexagonSliderSection'
 import ChartSection from '../components/TokenPage/ChartSection/ChartSection'
+import SidePressureSection from '../components/TokenPage/SidePressureSection/SidePressureSection'
 
 function Token() {
   const isDesktop = useMediaQuery('(min-width: 1024px)');
@@ -23,10 +24,11 @@ function Token() {
       <div>
         <GenericHeader title={'LGCN Token'} subtitle={'a multichain utility & payment token'} rightObj={isDesktop ? <TokenModel /> : <Image src={TokenImage} alt="token" />} />
         <TokenIntro />
-        <WavesWrapper>
+        <WavesWrapper hideBottom={true}>
           <HexagonSliderSection />
           <ChartSection />
         </WavesWrapper>
+        <SidePressureSection />
       </div>
     </>
   )

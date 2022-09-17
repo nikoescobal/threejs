@@ -33,7 +33,7 @@
   // transform: translate(-50%, -50%);
   background: rgba(255, 255, 255, 0.05);
   // padding: clamp(1rem, 10vw + 1rem, 4rem);
-  padding: clamp(1rem, 10vw + 1rem, 4rem) 8rem;
+  padding: clamp(1rem, 10vw + 1rem, 4rem) clamp(1rem, 10vw + 1rem, 8rem);
   // min-width: clamp(16rem, 20vw + 10rem, 48rem);
   // min-width: 16rem;
   max-height: 28rem;
@@ -78,17 +78,7 @@
 }
 
 .donut-wrapper::before {
-  content:'';
-  background: $dark-background;
-  height: calc(100% + 5rem);
-  aspect-ratio: 1;
-  // width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 50%;
-  transform: translate(-40%, -50%);
-  // z-index: 1;
+  transform: translate(-50%, -50%);
 }
 
 .donut-segment {
@@ -142,6 +132,20 @@
     margin: 0;
     min-width: 30rem;
     transform: translateX(-45%);
+  }
+  
+  .donut-wrapper::before {
+    content:'';
+    background: $dark-background;
+    height: calc(100% + 5rem);
+    aspect-ratio: 1;
+    // width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-40%, -50%);
+    // z-index: 1;
   }
   
   .chart-content {
