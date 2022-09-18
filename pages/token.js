@@ -10,6 +10,7 @@ import TokenIntro from '../components/TokenPage/TokenIntro/TokenIntro'
 import HexagonSliderSection from '../components/TokenPage/HexagonSliderSection/HexagonSliderSection'
 import ChartSection from '../components/TokenPage/ChartSection/ChartSection'
 import SidePressureSection from '../components/TokenPage/SidePressureSection/SidePressureSection'
+import StakingSection from '../components/TokenPage/StakingSection/StakingSection'
 
 function Token() {
   const isDesktop = useMediaQuery('(min-width: 1024px)');
@@ -29,6 +30,7 @@ function Token() {
           <ChartSection />
         </WavesWrapper>
         <SidePressureSection />
+        <StakingSection />
       </div>
     </>
   )

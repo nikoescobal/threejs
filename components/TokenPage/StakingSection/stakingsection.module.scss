@@ -1,0 +1,24 @@
+.staking-section {
+  margin-top: 8rem;
+  text-align: center;
+}
+
+.steps-wrapper {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.step {
+  // min-width: 12rem;
+  max-width: 20rem;
+  font-weight: 600;
+}
+
+.step p:last-of-type {
+  font-size: 0.85rem;
+  color: #AFAEAE;
+  font-weight: 500;
+}
