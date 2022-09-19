@@ -1,4 +1,6 @@
 @use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
+@use '../../../styles/buttons' as *;
 
 .section {
   padding: 8rem 3rem 2rem;
@@ -11,11 +13,28 @@
 
   h3 {
     font-family: 'Din condensed', serif !important;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
+
+    @include lg {
+      font-size: 2.5rem;
+    }
   }
 
   p {
     padding: 1rem 0 2rem;
-    color: hsla(0, 0%, 65%, 1);
+    color: $gray;
+
+    @include lg {
+      font-size: 1.5rem;
+      line-height: 2.2rem;
+    }
+
+    &:last-of-type {
+      padding: 0.5rem 0 1rem 0;
+    }
+  }
+
+  button {
+    @include btn-blue();
   }
 }

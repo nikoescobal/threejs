@@ -1,0 +1,23 @@
+@use './colors' as *;
+
+@mixin btn-blue {
+  padding: 0.9375rem 0 0.875rem;
+  vertical-align: middle;
+  align-items: center;
+  border-radius: 4px;
+  text-decoration: none;
+  border: transparent;
+  margin: 0 0 1rem;
+  display: flex;
+  justify-content: center;
+  font-family: 'Source Sans Pro', serif !important;
+  background: $bg-gradient-1;
+  color: white;
+  font-size: 1.05rem;
+  line-height: 26px;
+  font-weight: 600;
+  letter-spacing: -3%;
+  cursor: pointer;
+  width: 100%;
+  max-width: 17rem;
+}

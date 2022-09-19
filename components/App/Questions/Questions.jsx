@@ -28,6 +28,10 @@ function Questions() {
         important. Understandable correlations are shown to create an "aha
         experience".
       </p>
+      <p>Our solution to the global mental health crisis</p>
+      <button className={`${styles.button}`}>
+        More about mental health crisis
+      </button>
     </section>
   );
 }
