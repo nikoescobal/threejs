@@ -1,0 +1,21 @@
+@use '../../../styles/breakpoints' as *;
+
+.section {
+  padding: 8rem 3rem 2rem;
+
+  h2 {
+    padding: 1rem 0 3.25rem;
+    font-size: 2.9rem;
+    line-height: 2.5rem;
+  }
+
+  h3 {
+    font-family: 'Din condensed', serif !important;
+    font-size: 2.5rem;
+  }
+
+  p {
+    padding: 1rem 0 2rem;
+    color: hsla(0, 0%, 65%, 1);
+  }
+}
