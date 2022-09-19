@@ -5,7 +5,7 @@ import generics from '../../../styles/generics.module.scss'
 // import Image from 'next/image'
 import useStore from '../../../store/store'
 
-function GenericHeader({title, subtitle, rightObj, imageUrl, imageAlt}) {
+function GenericHeader({title, subtitle, rightObj}) {
   const { isDarkMode } = useStore((state) => state);
 
   return (
