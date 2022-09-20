@@ -15,7 +15,7 @@ function app() {
       </Head>
       <GenericHeader
         rightObj={<Image src={Character} alt="character" />}
-        title="LGCN TOKEN"
+        title="The LN APP"
         subtitle={'The future of personal development'}
       />
       <Questions />

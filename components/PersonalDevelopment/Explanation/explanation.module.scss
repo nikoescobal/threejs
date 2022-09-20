@@ -1,0 +1,31 @@
+.wrapper {
+  position: relative;
+  padding-bottom: 8rem;
+}
+
+.wrapper > div:not(div:first-of-type) {
+  position: relative;
+}
+.wrapper > div:nth-of-type(2) {
+  margin-bottom: 2rem;
+}
+
+.wrapper h3 {
+  font-family: 'din condensed', 'serif' !important;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  margin-bottom: 1rem;
+}
+
+.wrapper ol {
+  display: grid;
+  gap: 0.75rem;
+  margin-left: 1.25rem;
+}
+
+.image-wrapper {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  opacity: 0.2;
+}
