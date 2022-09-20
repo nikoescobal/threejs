@@ -1,44 +1,44 @@
-export const lgcnfunctions = [
+export const ln = [
   {
     title: 'Game Pass',
     description:
       'P2E prize-based competitions. complete each level and earn crypto prizes - you decide.',
-    image: '../../public/features/feature-1.png',
+    img: '../../public/features/feature-1.png',
     id: 0,
   },
   {
     title: 'Profile',
     description:
       'Add social features to your game with a player profile that gives them a consistent identity across the network.',
-    image: '../../public/features/feature-2.png',
+    img: '../../public/features/feature-2.png',
     id: 1,
   },
   {
     title: 'LGCN Wallet',
     description:
       'Add social features to your game with a player profile that gives them a consistent identity across the network.',
-    image: '../../public/features/feature-3.png',
+    img: '../../public/features/feature-3.png',
     id: 2,
   },
   {
     title: 'Noncostodual wallet',
     description:
       'P2E prize-based competitions. complete each level and earn crypto prizes - you decide.',
-    image: '../../public/features/feature-4.png',
+    img: '../../public/features/feature-4.png',
     id: 3,
   },
   {
     title: 'Send/Receive LGCN',
     description:
       'P2E prize-based competitions. complete each level and earn crypto prizes - you decide.',
-    image: '../../public/features/feature-5.png',
+    img: '../../public/features/feature-5.png',
     id: 4,
   },
   {
     title: 'Staking/Vesting',
     description:
       'P2E prize-based competitions. complete each level and earn crypto prizes - you decide.',
-    image: '../../public/features/feature-6.png',
+    img: '../../public/features/feature-6.png',
     id: 5,
   },
 ];

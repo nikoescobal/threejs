@@ -1,11 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
 import useStore from '../../../store/store';
-import styles from './lgcn.module.scss';
+import styles from './ln.module.scss';
 import WavesWrapper from '../../Generic/WavesWrapper/WavesWrapper';
 import generics from '../../../styles/generics.module.scss';
-import { lgcnfunctions } from '../../Constants/Constants';
+import { ln } from '../../Constants/AppConstants';
+import Image from 'next/image';
 
-function LGCN() {
+function Ln() {
   const { isDarkMode } = useStore();
 
   return (
@@ -13,14 +14,12 @@ function LGCN() {
       className={`${styles.section} ${!isDarkMode ? `${styles.light}` : ''}`}
     >
       <WavesWrapper hideBottom={true}>
-        <h2>LGCN APP</h2>
-        {lgcnfunctions.map((lgcnfunction, index) => (
-          <div
-            key={index}
-            className={`${styles['questions-wrapper']} ${generics['spacing-x']}`}
-          >
-            <h3>{lgcnfunction.title}</h3>
-            <p>{lgcnfunction.text}</p>
+        <h2>LN APP</h2>
+        {ln.map((ln, index) => (
+          <div key={index}>
+            <h3>{ln.title}</h3>
+            <h4>{ln.description}</h4>
+            {<Image src={ln.img.src} alt="character" />}
           </div>
         ))}
       </WavesWrapper>
@@ -28,4 +27,4 @@ function LGCN() {
   );
 }
 
-export default LGCN;
+export default Ln;

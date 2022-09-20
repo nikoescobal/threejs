@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import React from 'react';
 import Questions from '../components/App/Questions/Questions';
-import Lgcn from '../components/App/Lgcn/Lgcn';
+import Ln from '../components/App/Ln/Ln';
 import Features from '../components/App/Features/Features';
 import Benefits from '../components/App/Benefits/Benefits';
 import Download from '../components/App/Download/Download';
@@ -19,11 +19,11 @@ function app() {
       </Head>
       <GenericHeader
         rightObj={<Image src={Character} alt="character" />}
-        title="LGCN TOKEN"
+        title="The LN APP"
         subtitle={'The future of personal development'}
       />
       <Questions />
-      <Lgcn />
+      <Ln />
       <Features />
       <Benefits />
       <Download />

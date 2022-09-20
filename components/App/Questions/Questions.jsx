@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import useStore from '../../../store/store';
 import styles from './questions.module.scss';
-import { questions } from '../../Constants/Constants.js';
+import { questions } from '../../Constants/AppConstants';
 
 function Questions() {
   const { isDarkMode } = useStore();
@@ -10,6 +10,9 @@ function Questions() {
     <section
       className={`${styles.section} ${!isDarkMode ? `${styles.light}` : ''}`}
     >
+      <h2>
+        The Legacy Network app answers three essential questions for the user
+      </h2>
       {questions.map((question, index) => (
         <div key={index}>
           <h3>{question.title}</h3>
