@@ -83,6 +83,26 @@
   // transform: translateX(-50%);
 }
 
+.nft-card-section {
+  padding-bottom: 8rem;
+}
+
+.nft-card-section > div {
+  display: grid;
+  // grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(11.95rem, 1fr));
+  gap: 2rem;
+  overflow: visible;
+}
+
+.nft-card-section p {
+  padding-top: 4rem;
+  font-size: 0.75rem;
+  max-width: 65ch;
+  margin: auto;
+  text-align: center;
+}
+
 @media only screen and (min-width: 1024px) {
   .first-card-section {
     flex-direction: row;

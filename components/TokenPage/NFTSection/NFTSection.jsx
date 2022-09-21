@@ -3,6 +3,8 @@ import styles from './nft_section.module.scss';
 import generics from '../../../styles/generics.module.scss';
 import Character1 from '../../../public/nft/character1.png';
 import Image from 'next/image';
+import CharacterCard from '../CharacterCard/CharacterCard';
+// import VikingOne from '../../../public/nft/character1.png'
 
 function NFTSection() {
   const { isDarkMode } = useStore((state) => state);
@@ -27,6 +29,38 @@ function NFTSection() {
           <h3>2,000</h3>
           <h4>Possibilities</h4>
         </div>
+      </div>
+      <div className={styles['nft-card-section']}>
+        <div>
+          <CharacterCard srcOne={'/nft/viking.png'} altOne={"viking"} srcTwo={'/nft/character.png'} altTwo="viking">
+            Common
+            Character Trait
+            Examples
+          </CharacterCard>
+          <CharacterCard srcOne={'/nft/viking.png'} altOne={"viking"} srcTwo={'/nft/character.png'} altTwo="viking">
+            Common
+            Character Trait
+            Examples
+          </CharacterCard>
+          <CharacterCard srcOne={'/nft/viking.png'} altOne={"viking"} srcTwo={'/nft/character.png'} altTwo="viking">
+            Common
+            Character Trait
+            Examples
+          </CharacterCard>
+          <CharacterCard srcOne={'/nft/viking.png'} altOne={"viking"} srcTwo={'/nft/character.png'} altTwo="viking">
+            Common
+            Character Trait
+            Examples
+          </CharacterCard>
+          <CharacterCard srcOne={'/nft/viking.png'} altOne={"viking"} srcTwo={'/nft/character.png'} altTwo="viking">
+            Common
+            Character Trait
+            Examples
+          </CharacterCard>
+        </div>
+        <p>
+          The Legacy Network NFT on Ethereum is the first batch of characters that will populate the Legacy Network Play to earn game app, earning these NFT an armour or upgrades indicate their elite status. 
+        </p>
       </div>
     </div>
   )
