@@ -4,6 +4,7 @@ import React from 'react'
 import GenericHeader from '../components/Generic/Header/GenericHeader'
 import WavesWrapper from '../components/Generic/WavesWrapper/WavesWrapper'
 import Explanation from '../components/PersonalDevelopment/Explanation/Explanation'
+import HealthCrisis from '../components/PersonalDevelopment/HealthCrisis/HealthCrisis'
 import Achievements from '../public/illustrations/Achievements.png'
 
 function PersonalDevelopment() {
@@ -21,10 +22,7 @@ function PersonalDevelopment() {
       />
       <Explanation />
       <WavesWrapper hideBottom={true}>
-        <h2>Mental health crisis across the world</h2>
-        <p>
-          In case you need more convincing about the severity of the mental health crisis the world is facing, here are just a few of the poignant statistics from Mental Health 2022 adult data: 
-        </p>
+        <HealthCrisis />
       </WavesWrapper>
     </div>
   )

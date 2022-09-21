@@ -94,3 +94,14 @@ button {
     background: black;
   }
 } */
+
+.apexcharts-legend {
+  // flex-direction: column;
+  display: grid !important;
+  // margin-top: 16rem !important;
+  justify-content: center !important;
+}
+
+.apexcharts-legend-text {
+  color: white !important;
+}

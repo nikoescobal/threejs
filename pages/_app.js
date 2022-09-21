@@ -3,6 +3,7 @@ import useStore from '../store/store';
 import '../styles/fonts.css';
 import '../styles/globals.scss';
 import '../styles/generics.module.scss';
+import '../styles/apexcharts.module.scss';
 import Footer from '../components/Footer/Footer';
 
 function MyApp({ Component, pageProps }) {
