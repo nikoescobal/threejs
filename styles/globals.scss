@@ -107,3 +107,79 @@ button {
 .apexcharts-legend-text {
   color: white !important;
 }
+
+/* MUI */
+.MuiTab-root {
+  color: white;
+  font-family: "din condensed", sans-serif;
+  font-size: 1.2rem;
+}
+
+.MuiAccordionSummary-content.Mui-expanded {
+  color: #154EE3 !important;
+  background: transparent !important;
+}
+
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root.Mui-expanded {
+  // margin: 0 !important;
+  // background: transparent !important;
+  color: #154EE3;
+}
+
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(15px) !important;
+  border-radius: 10px !important;
+  color: #CFCFCF !important;
+  margin: 1rem 0;
+}
+
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root svg{
+  color: #CFCFCF !important;
+}
+
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root.Mui-expanded svg{
+  color: #154EE3 !important;
+}
+
+.MuiTabs-flexContainer button {
+  flex: 1;
+  color: #646464 !important;
+  font-family: 'Montserrat', serif !important;
+  font-size: 0.85rem !important;
+  min-width: max-content;
+}
+
+.MuiTabs-flexContainer button.Mui-selected {
+  color: #1657FF !important;
+}
+
+.MuiTabs-indicator {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .MuiTabs-indicator {
+    display: block;
+    background: #1657FF !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .MuiTabs-flexContainer {
+    overflow-x: hidden;
+    gap: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .MuiTabs-flexContainer button {
+    font-size: 1rem !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .MuiTabs-flexContainer button {
+    font-size: 1.2rem;
+  }
+}

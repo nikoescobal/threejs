@@ -25,8 +25,8 @@ $roadmap-cell-gap: 0.5rem;
   // padding: 24rem 0 20rem 0;
 }
 
-.roadmap .before,
-.roadmap .after {
+.roadmap.background-visible .before,
+.roadmap.background-visible .after {
   content: '';
   position: absolute;
   background: white;
@@ -37,59 +37,59 @@ $roadmap-cell-gap: 0.5rem;
   z-index: 1;
 }
 
-.roadmap.light .before {
+.roadmap.background-visible.light .before {
   // background: #ccd2e6;
   // background: #d0d5ec;
   background: $light-mode--dark-3;
   transform: translateY(-7%) skew(15deg, 0) rotate(12deg);
 }
 
-.roadmap.light .after {
+.roadmap.background-visible.light .after {
   // background: #e2e8ff;
   background: $light-mode--dark-2;
   transform: translateY(-7%) skew(-15deg, 0) rotate(-12deg);
 }
 
-.roadmap .before {
+.roadmap.background-visible .before {
   background: #101111;
   transform: translateY(-7%) skew(15deg, 0) rotate(12deg);
 }
 
-.roadmap .after {
+.roadmap.background-visible .after {
   background: #141515;
   transform: translateY(-7%) skew(-15deg, 0) rotate(-12deg);
 }
 
-.roadmap .before img:first-of-type {
+.roadmap.background-visible .before img:first-of-type {
   transform: skew(15deg, 0) rotate(12deg);
   top: -20%;
   left: 0;
 }
 
-.roadmap .before img:last-of-type {
+.roadmap.background-visible .before img:last-of-type {
   transform: skew(15deg, 0) rotate(12deg);
   bottom: -20%;
   left: 0;
 }
 
-.roadmap .after img:first-of-type {
+.roadmap.background-visible .after img:first-of-type {
   transform: skew(15deg, 0) rotate(12deg);
   top: -20%;
   left: 0;
 }
 
-.roadmap .after img:last-of-type {
+.roadmap.background-visible .after img:last-of-type {
   transform: skew(15deg, 0) rotate(12deg);
   bottom: -20%;
   left: 0;
 }
 
-.roadmap .before > div,
-.roadmap .after > div {
+.roadmap.background-visible .before > div,
+.roadmap.background-visible .after > div {
   position: relative;
 }
-.roadmap .before img,
-.roadmap .after img {
+.roadmap.background-visible .before img,
+.roadmap.background-visible .after img {
   position: absolute;
   transform: none;
 }

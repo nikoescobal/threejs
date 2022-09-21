@@ -2,6 +2,7 @@ import Navbar from '../components/Navbar/Navbar';
 import useStore from '../store/store';
 import '../styles/fonts.css';
 import '../styles/globals.scss';
+import '../styles/generics.scss';
 import '../styles/generics.module.scss';
 import '../styles/apexcharts.module.scss';
 import Footer from '../components/Footer/Footer';
