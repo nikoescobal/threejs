@@ -3,7 +3,7 @@ import generics from '../../../styles/generics.module.scss';
 import DonutChart from '../DonutChart/DonutChart';
 import { style } from '@mui/system';
 import Image from 'next/image';
-import Pillar from '../../../public/illustrations/pillar.svg'
+import Pillar from '../../../public/illustrations/pillar.png'
 
 function HealthCrisis() {
   return (

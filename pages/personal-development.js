@@ -13,7 +13,7 @@ function PersonalDevelopment() {
     <div>
       <Head>
         <title>Personal Development</title>
-        <meta name="description" content="Legacy Network Application" />
+        <meta name="description" content="Personal Development" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <GenericHeader
