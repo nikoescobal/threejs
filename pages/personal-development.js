@@ -5,6 +5,7 @@ import GenericHeader from '../components/Generic/Header/GenericHeader'
 import WavesWrapper from '../components/Generic/WavesWrapper/WavesWrapper'
 import Explanation from '../components/PersonalDevelopment/Explanation/Explanation'
 import HealthCrisis from '../components/PersonalDevelopment/HealthCrisis/HealthCrisis'
+import StepsForPersonalDevelopment from '../components/PersonalDevelopment/StepsForPersonalDevelopment/StepsForPersonalDevelopment'
 import Achievements from '../public/illustrations/Achievements.png'
 
 function PersonalDevelopment() {
@@ -24,6 +25,7 @@ function PersonalDevelopment() {
       <WavesWrapper hideBottom={true}>
         <HealthCrisis />
       </WavesWrapper>
+      <StepsForPersonalDevelopment />
     </div>
   )
 }
