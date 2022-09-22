@@ -6,9 +6,13 @@
   padding: 8rem 3rem 2rem;
 
   h2 {
-    padding: 1rem 0 3.25rem;
-    font-size: 2.6rem;
+    padding: 1rem 3rem 3.25rem;
+    font-size: 2rem;
     line-height: 2.5rem;
+
+    @include md {
+      font-size: 2.6rem;
+    }
   }
 
   h3 {
@@ -21,13 +25,60 @@
     }
   }
 
-  p {
-    padding: 1rem 0 2rem;
-    color: $gray;
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  .content {
+    padding: 1.5rem 0;
+
+    @include md {
+      display: grid;
+      grid-template-columns: 1.3fr 2fr;
+      place-items: center;
+
+      @include md {
+        display: grid;
+        grid-template-columns: 1.3fr 2fr;
+      }
+
+      .imagereverse {
+        order: 1;
+
+        img {
+          padding: 3rem 0 0;
+        }
+      }
+    }
+  }
+
+  .imgwrapper {
+    max-width: 250px;
+    margin: 0 auto;
+
+    @include md {
+      max-width: 384px;
+
+      img {
+        object-fit: cover;
+      }
+    }
 
     @include lg {
-      font-size: 1.5rem;
-      line-height: 2.2rem;
+      width: 100%;
+    }
+  }
+
+  p {
+    padding: 0.65rem 0 2rem !important;
+    color: $gray;
+    width: 100%;
+    line-height: 2ch;
+    font-size: 0.95rem;
+
+    @include md {
+      margin: inherit;
+      font-size: 1rem;
     }
 
     &:last-of-type {
@@ -40,8 +91,12 @@
     margin: 0 0 3.5rem;
   }
 
-  .sleep span {
-    background: red !important;
-    scale: 1.5;
+  .wrapper {
+    display: flex;
+  }
+
+  .icons img {
+    max-width: 10.125rem;
+    padding: 0 0.65rem 0 0;
   }
 }
