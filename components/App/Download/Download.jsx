@@ -14,10 +14,22 @@ function Download() {
         already work for you with the pre-launch app features - staking and
         vesting.
       </p>
-      <p>We provide the storage for your earned tokens</p>
-      <button className={`${styles.button}`}>
-        More about mental health crisis
-      </button>
+      <div className={`${styles.container}`}>
+        <div className={`${styles.imgwrapper}`}>
+          <img src="/downloads/download1.png" alt="download 1" />
+        </div>
+        <div className={`${styles.imgwrapper}`}>
+          <img src="/downloads/download2.png" alt="download 2" />
+        </div>
+      </div>
+      <div className={`${styles.stores}`}>
+        <div className={`${styles.icons}`}>
+          <img src="/logos/play-store.png" alt="play store logo" />
+        </div>
+        <div className={`${styles.icons}`}>
+          <img src="/logos/app-store.png" alt="app store logo" />
+        </div>
+      </div>
     </section>
   );
 }

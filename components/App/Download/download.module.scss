@@ -7,8 +7,9 @@
 
   h2 {
     padding: 1rem 0 3.25rem;
-    font-size: 2.9rem;
-    line-height: 2.5rem;
+    font-size: 2.4rem;
+    line-height: 2.25rem;
+    text-align: center;
   }
 
   h3 {
@@ -23,6 +24,7 @@
   p {
     padding: 1rem 0 2rem;
     color: $gray;
+    text-align: center;
 
     @include lg {
       font-size: 1.5rem;
@@ -36,5 +38,55 @@
 
   button {
     @include btn-blue();
+  }
+
+  .container {
+    @include md {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      place-items: center;
+      width: 45vw;
+      margin: 0 auto;
+      gap: 1rem;
+    }
+  }
+
+  .stores {
+    @include md {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      place-items: center;
+      width: 22vw;
+      margin: 0 auto;
+      gap: 1rem;
+    }
+  }
+
+  .imgwrapper {
+    padding: 2rem 0;
+    max-width: 250px;
+    margin: 0 auto;
+
+    @include md {
+      max-width: 384px;
+
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+
+  .icons {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    max-width: 10.125rem;
+
+    img {
+      margin: 0 auto;
+      text-align: center;
+      padding: 0 0.65rem 0 0;
+      width: 100%;
+    }
   }
 }

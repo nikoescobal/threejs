@@ -25,8 +25,8 @@ function app() {
       <Questions />
       <Features />
       <Ln />
-      {/* <Benefits /> */}
       <Download />
+      <Benefits />
     </div>
   );
 }
