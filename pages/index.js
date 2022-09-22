@@ -13,6 +13,7 @@ import Roadmap from '../components/Generic/Roadmap/Roadmap';
 import Partners from '../components/Generic/Partners/Partners';
 import Map from '../components/Home/Map/Map';
 import FollowUs from '../components/Generic/FollowUs/FollowUs';
+import CardSection from '../components/Home/CardSection/CardSection';
 
 export default function Home() {
   return (
@@ -39,7 +40,8 @@ export default function Home() {
       </div>
       <WavesWrapper>
         <NewsLetter />
-        <App />
+        <CardSection />
+      <App />
       </WavesWrapper>
       <Roadmap />
       <Partners />

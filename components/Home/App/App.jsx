@@ -6,7 +6,7 @@ import iPhone from '../../../public/illustrations/iPhone.png';
 
 function App() {
   return (
-    <section className={`${styles['app-wrappe']} ${generics['alternating-rows-wrapper']} ${generics['spacing-x']}`}>
+    <section className={`${styles['app-wrapper']} ${generics['alternating-rows-wrapper']} ${generics['spacing-x']}`}>
       <div className={`${generics['alternating-rows']}`}>
         <div>
           <img src="/illustrations/iPhone.png" alt="" />
