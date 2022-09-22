@@ -8,21 +8,21 @@ function Questions() {
 
   return (
     <section
-      className={`${styles.section} ${!isDarkMode ? `${styles.light}` : ''}`}
+      className={`${styles.section} ${!isDarkMode ? `${styles.light}` : ''} spacing-x`}
     >
-      <h2>
+      <h3>
         The Legacy Network app answers three essential questions for the user
-      </h2>
+      </h3>
       {questions.map((question, index) => (
-        <div key={index}>
-          <h3>{question.title}</h3>
+        <div key={index} className={styles.question}>
+          <h4>{question.title}</h4>
           <p>{question.text}</p>
         </div>
       ))}
       <div className={`${styles.solution}`}>
         Our solution to the global mental health crisis
       </div>
-      <button className={`${styles.button}`}>
+      <button className={`${styles.button} button-blue`}>
         More about mental health crisis
       </button>
     </section>
