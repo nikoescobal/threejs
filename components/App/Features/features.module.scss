@@ -1,18 +1,18 @@
 @use '../../../styles/breakpoints' as *;
 @use '../../../styles/colors' as *;
 @use '../../../styles/buttons' as *;
-@use '../../../styles/variables' as *;
 
 .section {
   padding: 8rem 3rem 2rem;
 
   h2 {
     padding: 1rem 0 3.25rem;
-    font-size: 2.9rem;
+    font-size: 2.6rem;
     line-height: 2.5rem;
   }
 
   h3 {
+    padding: 3rem 0 0;
     font-family: 'Din condensed', serif !important;
     font-size: 1.8rem;
 
@@ -22,21 +22,26 @@
   }
 
   p {
-    padding: 0.25rem 0 2.5rem;
+    padding: 1rem 0 2rem;
     color: $gray;
 
     @include lg {
       font-size: 1.5rem;
       line-height: 2.2rem;
     }
-  }
 
-  .solution {
-    padding: 1rem 0 0 0;
+    &:last-of-type {
+      padding: 0.5rem 0 1rem 0;
+    }
   }
 
   button {
     @include btn-blue();
-    margin: 1rem 0 0 0;
+    margin: 0 0 3.5rem;
+  }
+
+  .sleep span {
+    background: red !important;
+    scale: 1.5;
   }
 }

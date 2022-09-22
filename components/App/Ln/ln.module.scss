@@ -1,0 +1,84 @@
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
+@use '../../../styles/buttons' as *;
+@use '../../../styles/variables' as *;
+
+.section {
+  padding: 8rem 0 2rem;
+  text-align: center;
+
+  h2 {
+    padding: 1rem 3rem 3.25rem;
+    font-size: 2.9rem;
+    line-height: 2.5rem;
+  }
+
+  h3 {
+    font-family: 'Din condensed', serif !important;
+    font-size: 1.8rem;
+    padding: 0.5rem 3rem 0;
+
+    @include lg {
+      font-size: 2rem;
+    }
+  }
+
+  h4 {
+    padding: 0.5rem 3rem;
+    width: 60%;
+    margin: 0 auto;
+
+    @include md {
+      width: 100%;
+      font-size: 0.875rem;
+    }
+  }
+
+  p {
+    padding: 0.25rem 0 2.5rem;
+    color: $gray;
+
+    @include lg {
+      font-size: 1.5rem;
+      line-height: 2.2rem;
+    }
+  }
+
+  span {
+    padding: 3.5rem 0 0 0;
+  }
+
+  button {
+    @include btn-blue();
+    margin: 1rem 0 0 0;
+  }
+
+  .container {
+    display: grid;
+
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include lg {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .lnwrapper {
+    padding: 2rem 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .imgwrapper {
+    width: 241px;
+    height: 489px;
+    margin: 0 auto;
+    object-fit: cover;
+
+    img {
+      padding: 1rem 0;
+    }
+  }
+}
