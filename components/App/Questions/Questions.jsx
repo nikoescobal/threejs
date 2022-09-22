@@ -19,7 +19,9 @@ function Questions() {
           <p>{question.text}</p>
         </div>
       ))}
-      <span>Our solution to the global mental health crisis</span>
+      <div className={`${styles.solution}`}>
+        Our solution to the global mental health crisis
+      </div>
       <button className={`${styles.button}`}>
         More about mental health crisis
       </button>

@@ -19,12 +19,19 @@
     padding: 0.5rem 3rem 0;
 
     @include lg {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
   }
 
   h4 {
-    padding: 0 3rem 0.5rem;
+    padding: 0.5rem 3rem;
+    width: 60%;
+    margin: 0 auto;
+
+    @include md {
+      width: 100%;
+      font-size: 0.875rem;
+    }
   }
 
   p {
@@ -44,5 +51,34 @@
   button {
     @include btn-blue();
     margin: 1rem 0 0 0;
+  }
+
+  .container {
+    display: grid;
+
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include lg {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .lnwrapper {
+    padding: 2rem 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .imgwrapper {
+    width: 241px;
+    height: 489px;
+    margin: 0 auto;
+    object-fit: cover;
+
+    img {
+      padding: 1rem 0;
+    }
   }
 }

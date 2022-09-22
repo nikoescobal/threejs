@@ -3,7 +3,7 @@ import useStore from '../../../store/store';
 import styles from './ln.module.scss';
 import WavesWrapper from '../../Generic/WavesWrapper/WavesWrapper';
 import generics from '../../../styles/generics.module.scss';
-import { ln } from '../../Constants/AppConstants';
+import { lnfunctions } from '../../Constants/AppConstants';
 import Image from 'next/image';
 
 function Ln() {
@@ -15,13 +15,17 @@ function Ln() {
     >
       <WavesWrapper hideBottom={true}>
         <h2>LN APP</h2>
-        {ln.map((ln, index) => (
-          <div key={index}>
-            <h3>{ln.title}</h3>
-            <h4>{ln.description}</h4>
-            {<Image src={ln.img.src} alt="character" />}
-          </div>
-        ))}
+        <div className={`${styles.container}`}>
+          {lnfunctions.map((lnfunction) => (
+            <div key={lnfunction.id} className={`${styles.lnwrapper}`}>
+              <h3>{lnfunction.title}</h3>
+              <h4>{lnfunction.description}</h4>
+              <div className={`${styles.imgwrapper}`}>
+                <img src={'/' + lnfunction.img} alt="function 1" />
+              </div>
+            </div>
+          ))}
+        </div>
       </WavesWrapper>
     </section>
   );

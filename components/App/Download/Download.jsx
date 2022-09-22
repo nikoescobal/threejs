@@ -7,28 +7,14 @@ function Download() {
 
   return (
     <section className={`${styles.section}`}>
-      <h2>
-        The Legacy Network app answers three essential questions for the user
-      </h2>
-      <h3>WHAT</h3>
-      <p className="{}">
-        Here, the user is told a fact, for example, that healthy self-confidence
-        is important for success in various areas of life.
-      </p>
-      <h3>HOW</h3>
+      <h2>Download our pre-launch app </h2>
       <p>
-        In the last step, the user is shown concrete steps on how to acquire
-        self-confidence. The big goal is divided into small, achievable steps.
-        If a step is not feasible for the user, the artificial intelligence
-        offers alternatives.
+        For our early users we have carefully prepared a pre-launch app that
+        allows early interaction with our ecosysyem to make your LGCN Token
+        already work for you with the pre-launch app features - staking and
+        vesting.
       </p>
-      <h3>WHY</h3>
-      <p>
-        Subsequently, it is explained in detail why a healthy self-confidence is
-        important. Understandable correlations are shown to create an "aha
-        experience".
-      </p>
-      <p>Our solution to the global mental health crisis</p>
+      <p>We provide the storage for your earned tokens</p>
       <button className={`${styles.button}`}>
         More about mental health crisis
       </button>
