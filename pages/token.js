@@ -12,6 +12,7 @@ import ChartSection from '../components/TokenPage/ChartSection/ChartSection'
 import SidePressureSection from '../components/TokenPage/SidePressureSection/SidePressureSection'
 import StakingSection from '../components/TokenPage/StakingSection/StakingSection'
 import NFTSection from '../components/TokenPage/NFTSection/NFTSection'
+import UtilitySection from '../components/TokenPage/UtilitySection/UtilitySection'
 
 function Token() {
   const isDesktop = useMediaQuery('(min-width: 1024px)');
@@ -33,6 +34,7 @@ function Token() {
         <SidePressureSection />
         <StakingSection />
         <NFTSection />
+        <UtilitySection />
       </div>
     </>
   )

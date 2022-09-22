@@ -63,6 +63,16 @@ button {
   font-family: 'source sans pro', serif !important;
 }
 
+.grid {
+  display: grid;
+}
+
+
+
+.three-col {
+  grid-template-columns: 1fr 1fr;
+}
+
 .button-blue {
   display: inline-block;
   border: none;
@@ -162,6 +172,10 @@ button {
   .MuiTabs-indicator {
     display: block;
     background: #1657FF !important;
+  }
+
+  .three-col {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 

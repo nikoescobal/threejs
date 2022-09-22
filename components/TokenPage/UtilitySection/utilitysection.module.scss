@@ -1,0 +1,19 @@
+@import '../../../styles/variables';
+
+.wrapper {
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.grid {
+  margin: 4rem 0;
+  gap: 4rem;
+}
+
+.grid img {
+  max-width: 12rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  aspect-ratio: 1;
+  border: 1px solid $ln-blue;
+}
