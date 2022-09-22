@@ -23,10 +23,10 @@ function app() {
         subtitle={'The future of personal development'}
       />
       <Questions />
-      <Ln />
       <Features />
-      {/* <Benefits /> */}
+      <Ln />
       <Download />
+      <Benefits />
     </div>
   );
 }

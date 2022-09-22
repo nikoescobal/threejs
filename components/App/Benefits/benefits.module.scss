@@ -9,11 +9,13 @@
     padding: 1rem 0 3.25rem;
     font-size: 2.9rem;
     line-height: 2.5rem;
+    text-align: center;
   }
 
   h3 {
     font-family: 'Din condensed', serif !important;
     font-size: 1.8rem;
+    padding: 2rem 0;
 
     @include lg {
       font-size: 2.5rem;
@@ -23,9 +25,10 @@
   p {
     padding: 1rem 0 2rem;
     color: $gray;
+    font-size: 0.875rem;
 
     @include lg {
-      font-size: 1.5rem;
+      font-size: 1rem;
       line-height: 2.2rem;
     }
 
@@ -36,5 +39,62 @@
 
   button {
     @include btn-blue();
+
+    &:last-child {
+      margin: 2rem 0 0;
+    }
+  }
+
+  .content {
+    padding: 1.5rem 0;
+
+    @include md {
+      display: grid;
+      grid-template-columns: 1.3fr 2fr;
+      place-items: center;
+
+      @include md {
+        display: grid;
+        grid-template-columns: 1.3fr 2fr;
+      }
+
+      .imagereverse {
+        order: 1;
+
+        img {
+          padding: 3rem 0 0;
+        }
+      }
+    }
+  }
+
+  .imgwrapper {
+    max-width: 250px;
+    margin: 0 auto;
+
+    :first-child {
+      padding: 0 0 3rem;
+    }
+
+    @include md {
+      max-width: 242px;
+
+      img {
+        object-fit: cover;
+      }
+    }
+
+    @include lg {
+      width: 100%;
+    }
+  }
+
+  .bg {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #0d2f89;
+    backdrop-filter: blur(7.5px);
+    border-radius: 20px;
+    padding: 3rem;
+    margin: 2rem 0;
   }
 }
