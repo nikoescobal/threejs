@@ -107,6 +107,21 @@ button {
   }
 } */
 
+.gradient {
+  position: absolute;
+  overflow: visible;
+  opacity: 0.1;
+}
+
+.gradient img {
+  // object-fit: contain;
+  
+}
+
+.gradient span {
+  overflow: visible !important;
+}
+
 .apexcharts-legend {
   // flex-direction: column;
   display: grid !important;

@@ -3,6 +3,22 @@
 .container {
   padding: 0 2rem;
   background: $light-background;
+  position: relative;
+}
+
+.hammer-wrapper {
+  position: relative;
+}
+
+.hammer {
+  position: absolute;
+  top: 10%;
+  left: -30%;
+  max-width: 110%;
+}
+
+.hammer img {
+  transform: rotateZ(-55deg);
 }
 
 .clear-container-wrapper {

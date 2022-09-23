@@ -14,6 +14,9 @@ import Partners from '../components/Generic/Partners/Partners';
 import Map from '../components/Home/Map/Map';
 import FollowUs from '../components/Generic/FollowUs/FollowUs';
 import CardSection from '../components/Home/CardSection/CardSection';
+import { Parallax } from 'react-scroll-parallax';
+import Hammer from '../public/backgrounds/hammer.png'
+import Gradient from '../public/backgrounds/gradient.png'
 
 export default function Home() {
   return (
@@ -24,21 +27,32 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
-      <div className={`${styles['clear-container-wrapper']} ${generics['spacing-x']}`}>
-        <ClearContainer
-            title={"The world's most innovative personal development app"}
-            styles={{ background: 'url(assets/parallax/waves-layered.svg)' }}
-            textAlign="center"
-          >
-            <p>
-              Welcome to Legacy Network, one of the most effective personal development app
-              which uses a play to earn technique to help you achieve the best of yourself.
-              Thousands of people come here each day for inspiration and motivation.
-            </p>
-        </ClearContainer>
+      <div className={styles['hammer-wrapper']}>
+        <Parallax speed={60} className={styles['hammer']}>
+          <Image className="" src={Hammer} alt="hammer" />
+        </Parallax>
+        <Header />
+        <div className={`${styles['clear-container-wrapper']} ${generics['spacing-x']}`}>
+          <ClearContainer
+              title={"The world's most innovative personal development app"}
+              styles={{ background: 'url(assets/parallax/waves-layered.svg)' }}
+              textAlign="center"
+            >
+              <p>
+                Welcome to Legacy Network, one of the most effective personal development app
+                which uses a play to earn technique to help you achieve the best of yourself.
+                Thousands of people come here each day for inspiration and motivation.
+              </p>
+          </ClearContainer>
+        </div>
       </div>
       <WavesWrapper>
+        <div className="gradient" style={{
+          top: '30%',
+          left: '10%'
+        }}>
+          <img src={Gradient.src} alt="" />
+        </div>
         <NewsLetter />
         <CardSection />
       <App />

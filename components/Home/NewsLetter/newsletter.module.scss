@@ -4,8 +4,7 @@ $news-cell-gap: 0.5rem;
 
 .news-letter {
   text-align: center;
-  padding-top: clamp(6rem, 5vw, 16rem);
-  margin-bottom: clamp(10rem, 15vw, 24rem);
+  margin-bottom: 10rem;
 }
 
 .news-letter.light {
@@ -111,6 +110,11 @@ $news-cell-gap: 0.5rem;
 }
 
 @media only screen and (min-width: 768px) {
+  .news-letter {
+    padding-bottom: clamp(6rem, 5vw, 16rem);
+    margin-bottom: clamp(10rem, 15vw, 24rem);
+  }
+  
   .news-letter h4,
   .map h4 {
     font-size: 2rem;

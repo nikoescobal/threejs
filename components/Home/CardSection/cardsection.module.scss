@@ -1,6 +1,6 @@
 .wrapper {
   position: relative;
-  margin-top: 20rem;
+  margin-top: clamp(0rem, 20vw + 1rem, 20rem);
 }
 
 .img-wrapper {
