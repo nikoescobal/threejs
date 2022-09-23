@@ -27,7 +27,7 @@ function Token() {
       <div>
         <GenericHeader title={'LGCN Token'} subtitle={'a multichain utility & payment token'} rightObj={isDesktop ? <TokenModel /> : <Image src={TokenImage} alt="token" />} />
         <TokenIntro />
-        <WavesWrapper hideBottom={true}>
+        <WavesWrapper >
           <HexagonSliderSection />
           <ChartSection />
         </WavesWrapper>

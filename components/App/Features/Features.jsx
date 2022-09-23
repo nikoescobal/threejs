@@ -14,11 +14,11 @@ import WavesWrapper from '../../Generic/WavesWrapper/WavesWrapper';
 import generics from '../../../styles/generics.module.scss';
 
 function Features() {
-  const { isDarkMode } = useStore();
+  const { isDarkMode } = useStore((state) => state);
 
   return (
-    <WavesWrapper hideBottom={true}>
-      <section className={`${styles.section} spacing-x`}>
+    <WavesWrapper>
+      <section className={`${styles.section} ${!isDarkMode ? `${styles.light}}` : ''} spacing-x`}>
         <h3>Key Features of the personal development App</h3>
 
         <div className={`${styles.content}`}>

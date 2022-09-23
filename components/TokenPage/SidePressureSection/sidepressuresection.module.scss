@@ -20,6 +20,10 @@
   min-width: 20rem;
 }
 
+.light .card {
+  background: rgba(0, 0, 0, 0.1);
+}
+
 .card svg {
   background: rgba(239, 228, 252, 0.1);
   border-radius: 50%;

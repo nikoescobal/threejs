@@ -4,10 +4,13 @@ import Money from '../../../public/illustrations/money.svg';
 import Wallet from '../../../public/illustrations/wallet.svg';
 import Stack from '../../../public/illustrations/stack.svg';
 import Image from 'next/image';
+import useStore from '../../../store/store';
 
 function StakingSection() {
+  const { isDarkMode } = useStore();
+  
   return (
-    <div className={`${styles['staking-section']} ${generics['spacing-x']}`}>
+    <div className={`${styles['staking-section']} ${generics['spacing-x']} ${!isDarkMode ? `${styles.light}` : ''}`}>
       <h2>How The Staking Reward Works</h2>
       <div className={`${styles['steps-wrapper']}`}>
         <div className={`${styles['step']}`}>
