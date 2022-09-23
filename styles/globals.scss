@@ -122,6 +122,30 @@ button {
   overflow: visible !important;
 }
 
+/* Security */
+.security {
+  position: relative;
+  overflow: hidden;
+}
+
+.security > div {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 5;
+}
+
+.security > img:last-of-type {
+  position: absolute;
+  top: 50vw;
+  right: -50vw;
+  z-index: 0;
+  opacity: 0.15;
+}
+
+/* ApexCharts */
+
 .apexcharts-legend {
   // flex-direction: column;
   display: grid !important;
