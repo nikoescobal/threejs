@@ -17,3 +17,7 @@
   aspect-ratio: 1;
   border: 1px solid $ln-blue;
 }
+
+.light .grid img {
+  filter: invert(0.5);
+}

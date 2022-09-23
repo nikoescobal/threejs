@@ -31,8 +31,12 @@ function Token() {
           <HexagonSliderSection />
           <ChartSection />
         </WavesWrapper>
-        <SidePressureSection />
-        <StakingSection />
+        <div style={{
+          background: 'radial-gradient(circle farthest-side at 0% 50%, rgba(30, 79, 188, 0.05), transparent 40%)'
+        }}>
+          <SidePressureSection />
+          <StakingSection />
+        </div>
         <NFTSection />
         <UtilitySection />
       </div>

@@ -1,10 +1,13 @@
 import RotatingChart from '../Graph/RotatingChart';
 import styles from './chartsection.module.scss';
 import generics from '../../../styles/generics.module.scss';
+import useStore from '../../../store/store';
 
 function ChartSection() {
+  const { isDarkMode } = useStore();
+  
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper} ${!isDarkMode ? `${styles.light}` : ''}`}>
       <div className={`${styles['text-wrapper']} ${generics['spacing-x']}`}>
         <h2>The Tokenomics</h2>
         <p>

@@ -1,6 +1,9 @@
+import useStore from '../../../store/store';
 import styles from './utilitysection.module.scss';
 
 function UtilitySection() {
+  const { isDarkMode } = useStore();
+  
   const data = [
     {
       img: '/illustrations/world.svg',
@@ -29,7 +32,7 @@ function UtilitySection() {
   ]
   
   return (
-    <section className={`${styles.wrapper} spacing-x`}>
+    <section className={`${styles.wrapper}  ${!isDarkMode ? `${styles.light}` : ''} spacing-x`}>
       <h3>NFT Utility</h3>
       <p>
         Unique tokenized assets with in-game benefits that you can offer to your players. Legacy Network offers an integrated pipeline to turn your playable assets into minted NFT&apos;s that can be offered for sale to players. Our platform handles all the merchandising, marketing, and payments complexity.
