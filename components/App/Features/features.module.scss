@@ -3,26 +3,28 @@
 @use '../../../styles/buttons' as *;
 
 .section {
-  padding: 8rem 3rem 2rem;
+  // padding: 8rem 3rem 2rem;
 
   h2 {
-    padding: 1rem 3rem 3.25rem;
-    font-size: 2rem;
-    line-height: 2.5rem;
+    // padding: 1rem 3rem 3.25rem;
+    // font-size: 2rem;
+    // line-height: 2.5rem;
 
-    @include md {
-      font-size: 2.6rem;
-    }
+    // @include md {
+    //   font-size: 2.6rem;
+    // }
   }
 
-  h3 {
-    padding: 3rem 0 0;
-    font-family: 'Din condensed', serif !important;
-    font-size: 1.8rem;
+  & > h3 {
+    text-align: center;
+    margin-bottom: 4rem;
+    // padding: 3rem 0 0;
+    // font-family: 'Din condensed', serif !important;
+    // font-size: 1.8rem;
 
-    @include lg {
-      font-size: 2.5rem;
-    }
+    // @include lg {
+    //   font-size: 2.5rem;
+    // }
   }
 
   h4 {
@@ -57,7 +59,7 @@
     margin: 0 auto;
 
     @include md {
-      max-width: 384px;
+      // max-width: 384px;
 
       img {
         object-fit: cover;
@@ -70,29 +72,30 @@
   }
 
   p {
-    padding: 0.65rem 0 2rem !important;
+    // padding: 0.65rem 0 2rem !important;
     color: $gray;
-    width: 100%;
-    line-height: 2ch;
-    font-size: 0.95rem;
+    // width: 100%;
+    // line-height: 2ch;
+    // font-size: 0.95rem;
 
-    @include md {
-      margin: inherit;
-      font-size: 1rem;
-    }
+    // @include md {
+    //   margin: inherit;
+    //   font-size: 1rem;
+    // }
 
-    &:last-of-type {
-      padding: 0.5rem 0 1rem 0;
-    }
+    // &:last-of-type {
+    //   padding: 0.5rem 0 1rem 0;
+    // }
   }
 
   button {
-    @include btn-blue();
+    // @include btn-blue();
     margin: 0 0 3.5rem;
   }
 
   .wrapper {
     display: flex;
+    margin-top: 1rem;
   }
 
   .icons img {

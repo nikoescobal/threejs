@@ -6,8 +6,8 @@ function Download() {
   const { isDarkMode } = useStore();
 
   return (
-    <section className={`${styles.section}`}>
-      <h2>Download our pre-launch app </h2>
+    <section className={`${styles.section} spacing-x`}>
+      <h3>Download our pre-launch app </h3>
       <p>
         For our early users we have carefully prepared a pre-launch app that
         allows early interaction with our ecosysyem to make your LGCN Token

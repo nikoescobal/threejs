@@ -19,7 +19,7 @@ function Features() {
   return (
     <WavesWrapper hideBottom={true}>
       <section className={`${styles.section} spacing-x`}>
-        <h2>Key Features of the personal development App </h2>
+        <h3>Key Features of the personal development App</h3>
 
         <div className={`${styles.content}`}>
           <div className={`${styles.imgwrapper}`}>
@@ -38,7 +38,6 @@ function Features() {
               whether beginner or professional. The content consists of both a
               theoretical and a practical part.
             </p>
-            <button>See Details</button>
           </div>
         </div>
 
@@ -47,7 +46,6 @@ function Features() {
             <img
               src="/features/kf2.png"
               alt="key feature 2"
-              style={{ scale: '1.25' }}
             />
           </div>
 
@@ -60,7 +58,7 @@ function Features() {
 
             <div className={`${styles.wrapper}`}>
               <div className={`${styles.icons}`}>
-                <img src="/icons/moon.png" alt="halfmoon icon" />
+                <img src="/features/health-moon.png" alt="halfmoon icon" />
               </div>
               <div className={`${styles.healthtext}`}>
                 <h4>Detailed sleep analysis</h4>
@@ -72,7 +70,7 @@ function Features() {
             </div>
             <div className={`${styles.wrapper}`}>
               <div className={`${styles.icons}`}>
-                <img src="/icons/muscle.png" alt="muscles icon" />
+                <img src="/features/health-muscle.png" alt="muscles icon" style={{scale: '1.25'}} />
               </div>
               <div className={`${styles.healthtext}`}>
                 <h4>Detailed nutritional analysis</h4>
@@ -85,7 +83,7 @@ function Features() {
 
             <div className={`${styles.wrapper}`}>
               <div className={`${styles.icons}`}>
-                <img src="/icons/clock.png" alt="clock icon" />
+                <img src="/features/health-time.png" alt="clock icon" style={{scale: '1.3'}} />
               </div>
               <div className={`${styles.healthtext}`}>
                 <h4>Time Management & Routine Planning</h4>
@@ -99,8 +97,10 @@ function Features() {
         </div>
 
         <div className={`${styles.content}`}>
-          <div className={`${styles.imgwrapper}`}>
-            <img src="/features/kf3.png" alt="key feature 3" />
+          <div className={`${styles.imgwrapper}`} style={{padding: '2rem 0'}}>
+            <img src="/features/kf3.png" alt="key feature 3" style={{
+              transform: 'scale(1.5) translate(0%, 5%)'
+              }} />
           </div>
           <div>
             <h3>

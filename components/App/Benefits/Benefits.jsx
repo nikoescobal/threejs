@@ -1,64 +1,64 @@
 /* eslint-disable react/no-unescaped-entities */
 import useStore from '../../../store/store';
+import ClearContainer from '../../Generic/ClearContainer/ClearContainer';
 import styles from './benefits.module.scss';
+import generics from '../../../styles/generics.module.scss';
 
 function Benefits() {
   const { isDarkMode } = useStore();
 
   return (
-    <section className={`${styles.section}`}>
-      <h2>Benefits of using the app </h2>
-      <div className={`${styles.content}`}>
-        <div className={`${styles.imgwrapper}`}>
-          <img src="/downloads/download1.png" alt="download 1" />
+    <section className={`${styles['app-wrapper']} ${generics['alternating-rows-wrapper']} spacing-x`}>
+      <div className={`${generics['alternating-rows']}`}>
+        <div style={{marginBottom: '4rem'}}>
+          <img src="/downloads/download1.png" alt="" />
         </div>
-        <div className={`${styles.bg}`}>
-          <h3>Non-Custodial wallet</h3>
+        <ClearContainer
+          title="A gamified all in one solution developed to get the best out of you"
+          to="/app"
+          linkText="Read More"
+          reducedPadding
+        >
           <p>
-            The Legacy Network blockchain wallet allows for easy on-boarding
-            with a seed pharase and flexibility to receive, send, stake and vest
-            the LGCN Token across crypto users. Payment rails for fiat
-            on-boarding, KYC/AML, NFT support, and the LGCN token...we've
-            handled it all to make it easy for you to enage in a game with your
-            community participating in your success.
+            The Legacy Network app is divided in a health and an education area.
+            The education area is where users learn how to achieve their individual goals
+            by reprogramming their minds, developing effective characteristics and forming
+            new, positive habits.
           </p>
-          <button>Read More</button>
-        </div>
+        </ClearContainer>
       </div>
-
-      <div className={`${styles.content}`}>
-        <div className={`${styles.imagereverse}`}>
-          <img src="/nft/char-with-iphone.png" />
-        </div>
-
-        <div className={`${styles.bg}`}>
-          <h3>NFT</h3>
+      <div className={`${generics['alternating-rows']}`}>
+        <div><img src="/nft/char-with-iphone.png" alt="" className={`${styles.scaled}`}/></div>
+        <ClearContainer
+          title="The first artificial intelligence designed to analyze human behavior"
+          to="/app"
+          linkText="Read More"
+          reducedPadding
+        >
           <p>
-            Unique tokenized assets with in-game benefits that you can offer to
-            your players. Legacy Network offers an integrated pipeline to turn
-            your playable assets into minted NFT's that can be offered for sale
-            to players. Fund your game or offer playable NFT's to an established
-            game community. Our platform handles all the merchandising,
-            marketing, and payments complexity.
+            Our artificial intelligence evaluates the collected information about the user
+            and utilizes it to deliver individual and effective solutions. Over time, the AI
+            turns into a personal coach which knows more about the user, than he knows about himself.
           </p>
-          <button>Read More</button>
-        </div>
+        </ClearContainer>
       </div>
-
-      <div className={`${styles.content}`}>
-        <div className={`${styles.imgwrapper}`}>
-          <img src="/illustrations/token-3d.png" alt="token-3d" />
+      <div className={`${generics['alternating-rows']}`}>
+        <div style={{marginBottom: '4rem'}}>
+          <img src="/downloads/download2.png" alt="" />
         </div>
-        <div className={`${styles.bg}`}>
-          <h3>LGCN TOKEN</h3>
+        <ClearContainer
+          title="A gamified all in one solution developed to get the best out of you"
+          to="/app"
+          linkText="Read More"
+          reducedPadding
+        >
           <p>
-            Integrate the LGCN token to offer players the chance to use the
-            token in your blockchain game economy. Sell NFT's for the token or
-            offer game mechanics powered by the LGCN platform that allow them to
-            earn, buy, or win it in your game.
+            The Legacy Network app is divided in a health and an education area.
+            The education area is where users learn how to achieve their individual goals
+            by reprogramming their minds, developing effective characteristics and forming
+            new, positive habits.
           </p>
-          <button>Read More</button>
-        </div>
+        </ClearContainer>
       </div>
     </section>
   );
