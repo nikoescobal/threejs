@@ -19,7 +19,7 @@ function HealthCrisis() {
           <DonutChart />  
         </div>
         <button type='button' className='button-blue'>More about mental health crisis</button>
-        <h3>The pillar of an unhappy life</h3>
+        <h3 style={{marginBottom: '2rem'}}>The pillar of an unhappy life</h3>
         <div>
           <Image src={Pillar} alt='pillar of an unhappy life'/>
         </div>

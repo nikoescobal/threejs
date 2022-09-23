@@ -8,6 +8,7 @@ import Benefits from '../components/App/Benefits/Benefits';
 import Download from '../components/App/Download/Download';
 import GenericHeader from '../components/Generic/Header/GenericHeader';
 import Character from '../public/nft/char-with-iphone.png';
+import Roadmap from '../components/Generic/Roadmap/Roadmap';
 
 function app() {
   return (
@@ -18,12 +19,13 @@ function app() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <GenericHeader
-        rightObj={<Image src={Character} alt="character" />}
-        title="The LN APP"
+        rightObj={<img src={Character.src} alt="character" style={{scale: '1.4'}} />}
+        title="The LEGACY NETWORK APP"
         subtitle={'The future of personal development'}
       />
       <Questions />
       <Features />
+      <Roadmap showBackground={false} />
       <Ln />
       <Download />
       <Benefits />
