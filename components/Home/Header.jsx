@@ -4,12 +4,18 @@ import Logo from '../../public/logo-cropped.png'
 import Image from 'next/image'
 import PageSlider from './PageSlider/PageSlider'
 import useStore from '../../store/store'
+import Gradient from '../Generic/Gradient/Gradient'
 
 function Header() {
   const { isDarkMode } = useStore((state) => state);
   
   return (
     <div className={`${styles.container} ${!isDarkMode ? `${styles.light}` : ''}`}>
+      <Gradient style={{
+        top: '-12%',
+        right: '-5%',
+        maxWidth: '80%'
+        }} />
       <section className={`${generics.header} ${styles.header} header-intro ${generics['spacing-x']} ${generics['spacing-t']}`}>
         <div className={`${generics['img-wrapper']}`}>
           <Image src={Logo} alt="logo" />
