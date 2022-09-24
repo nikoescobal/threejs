@@ -69,7 +69,7 @@ function CardSection() {
         </div>
       </div>
       <h4 className='spacing-x'>
-        Make expanding your knowledge and building your dream life your addiction with help of our AI
+        Make expanding your knowledge and building your dream life with help of our AI
       </h4>
     </div>
   )
