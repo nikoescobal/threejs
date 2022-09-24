@@ -20,6 +20,54 @@ function Partners() {
       endpoint: 'cv-labs.svg',
       alt: 'cv labs3'
     },
+    {
+      endpoint: 'cv-labs.svg',
+      alt: 'cv labs'
+    },
+    {
+      endpoint: 'cv-labs.svg',
+      alt: 'cv labs1'
+    },
+    {
+      endpoint: 'cv-labs.svg',
+      alt: 'cv labs2'
+    },
+    {
+      endpoint: 'cv-labs.svg',
+      alt: 'cv labs3'
+    },
+    {
+      endpoint: 'cv-labs.svg',
+      alt: 'cv labs'
+    },
+    {
+      endpoint: 'cv-labs.svg',
+      alt: 'cv labs1'
+    },
+    {
+      endpoint: 'cv-labs.svg',
+      alt: 'cv labs2'
+    },
+    {
+      endpoint: 'cv-labs.svg',
+      alt: 'cv labs3'
+    },
+    {
+      endpoint: 'cv-labs.svg',
+      alt: 'cv labs'
+    },
+    {
+      endpoint: 'cv-labs.svg',
+      alt: 'cv labs1'
+    },
+    {
+      endpoint: 'cv-labs.svg',
+      alt: 'cv labs2'
+    },
+    {
+      endpoint: 'cv-labs.svg',
+      alt: 'cv labs3'
+    },
   ]
   const { isDarkMode } = useStore((state) => state);
   

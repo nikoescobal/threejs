@@ -6,9 +6,11 @@
 }
 
 .logos-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem 2rem;
   background: rgba($color: $light-background, $alpha: 0.1);
   padding-top: 2rem;
