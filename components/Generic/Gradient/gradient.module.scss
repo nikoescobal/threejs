@@ -2,3 +2,8 @@
   position: absolute;
   opacity: 0.2;
 }
+
+.wrapper.light {
+  filter: grayscale(100%);
+  opacity: 0.35;
+}

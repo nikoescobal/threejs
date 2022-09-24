@@ -1,15 +1,21 @@
 /* eslint-disable react/prop-types */
 import Link from 'next/link';
 import PropTypes from 'prop-types';
+import useStore from '../../../store/store';
 import styles from './clearcontainer.module.scss';
 
 function ClearContainer({
   title, children, to, linkText, textAlign,
   reducedPadding,
 }) {
+  const { isDarkMode } = useStore();
+  
   return (
     <div
-      className={`${styles['clear-container']} ${reducedPadding ? `${styles['reduced-padding']}` : ''}`}
+      className={`
+        ${styles['clear-container']} 
+        ${!isDarkMode ? `${styles.light}` : ''} 
+        ${reducedPadding ? `${styles['reduced-padding']}` : ''}`}
       style={{
         textAlign,
       }}

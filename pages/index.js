@@ -38,7 +38,7 @@ export default function Home() {
               styles={{ background: 'url(assets/parallax/waves-layered.svg)' }}
               textAlign="center"
             >
-              <p>
+              <p style={{margin: '0 auto'}}>
                 Welcome to Legacy Network, one of the most effective personal development app
                 which uses a play to earn technique to help you achieve the best of yourself.
                 Thousands of people come here each day for inspiration and motivation.

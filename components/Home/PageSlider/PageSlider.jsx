@@ -36,7 +36,7 @@ function PageSlider() {
                   {item.body}
                 </p>
                 <Link href={item.url}>
-                  <a className="button-blue">LEARN MORE</a>
+                  <a className="button-blue">Learn more</a>
                 </Link>
               </div>
           </SwiperSlide>
