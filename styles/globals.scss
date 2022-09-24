@@ -87,14 +87,16 @@ button {
   display: inline-block;
   border: none;
   text-decoration: none;
-  background: linear-gradient(90deg, #1d4ab2, #18419f);
+  // background: linear-gradient(90deg, #1d4ab2, #18419f);
+  background: #1960EA;
   color: white;
-  padding: 0.4rem 0;
+  text-align: center;
+  padding: 0.6rem 0;
   width: 100%;
   max-width: 13rem;
   margin-top: 1.25rem;
   border-radius: 4px;
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   font-family: 'Montserrat', serif !important;
   font-weight: 600;
 }

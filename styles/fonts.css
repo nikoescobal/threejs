@@ -1,4 +1,9 @@
 @font-face {
+  font-family: 'Fjalla';
+  src: local('Fjalla'), url(/fonts/FjallaOne/FjallaOne-Regular.ttf);
+}
+
+@font-face {
   font-family: 'Montserrat';
   src: local('Montserrat'), url(/fonts/montserrat/Montserrat-Regular.otf) format('opentype');
 }

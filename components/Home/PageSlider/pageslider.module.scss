@@ -12,27 +12,46 @@
   padding-bottom: 8rem;
 }
 
+.grid {
+  // display: grid;
+  // display: flex;
+  // flex-direction: column;
+  position: relative;
+  min-height: 18rem;
+  overflow: visible;
+}
+
+.grid a {
+  justify-self: flex-end;
+  position: absolute;
+  left: 0%;
+  bottom: 2rem;
+  // transform: translate(-50%, 0%);
+}
+
 .card {
   background: transparent !important;
   color: white;
   // width: 62ch !important;
   // max-width: 75ch !important;
-  text-align: center;
+  // text-align: center;
   border-radius: 8px;
   padding: 0 !important;
 }
 
 .card h4 {
-  font-size: 1.75rem !important;
+  // font-size: 1.75rem !important;
+  // font
   font-weight: 600;
-  text-transform: uppercase;
+  text-transform: capitalize !important;
   padding-bottom: 0.1rem;
 }
 
 .card p {
-  font-weight: 500;
-  font-size: 0.8rem;
-  text-transform: uppercase;
+  // font-weight: 500;
+  font-size: 0.9rem;
+  padding-top: 0.5rem;
+  // text-transform: uppercase;
 }
 
 .fade-slider .swiper-slide:not(.swiper-slide-active) {
@@ -40,7 +59,7 @@
 }
 
 .fade-slider h4 {
-  font-family: 'Montserrat', serif;
+  font-family: 'Fjalla', serif;
 }
 
 .fade-slider .swiper-horizontal > .swiper-pagination-bullets {
@@ -56,18 +75,18 @@
 }
 
 .card a {
-  display: inline-block;
-  text-decoration: none;
-  background: linear-gradient(90deg, #1d4ab2, #18419f);
-  color: white;
-  padding: 0.3rem 0;
-  width: 100%;
-  max-width: 13rem;
-  margin-top: 1.25rem;
-  border-radius: 14px;
-  font-size: 1.05rem;
-  font-family: 'Source Sans Pro', serif !important;
-  font-weight: 600;
+  // display: inline-block;
+  // text-decoration: none;
+  // background: linear-gradient(90deg, #1d4ab2, #18419f);
+  // color: white;
+  // padding: 0.3rem 0;
+  // width: 100%;
+  // max-width: 13rem;
+  // margin-top: 1.25rem;
+  // border-radius: 14px;
+  // font-size: 1.05rem;
+  // // font-family: 'Source Sans Pro', serif !important;
+  // font-weight: 600;
 }
 
 .light .card h4,
@@ -85,7 +104,7 @@
 @media only screen and (min-width: 768px) {
   .cards-wrapper {
     margin-left: auto;
-  max-width: 40ch;
+    max-width: 45ch;
 
     // margin-right: 8rem;
   }
