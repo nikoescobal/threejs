@@ -1,11 +1,12 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {
-  EffectFade, Navigation, Pagination, Autoplay,
+  EffectFlip, Navigation, Pagination, Autoplay,
 } from 'swiper';
 import Link from 'next/link';
 import styles from './pageslider.module.scss'
 import generics from '../../../styles/generics.module.scss'
 import 'swiper/css';
+import "swiper/css/effect-flip";
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import useStore from '../../../store/store';
@@ -25,14 +26,16 @@ function PageSlider() {
       <div className={`${styles['cards-wrapper']}`}>
         <Swiper
           className={`${styles['fade-slider']}`}
+          effect={"flip"}
+          grabCursor={true}
           pagination={{
             clickable: true,
           }}
           autoplay={{
-            delay: 5000,
+            delay: 9000,
             disableOnInteraction: false,
           }}
-          modules={[Autoplay, Navigation, Pagination]}
+          modules={[Autoplay, EffectFlip, Navigation, Pagination]}
         >
           {content.map((item) => (
             <SwiperSlide key={item.title} className={`${styles['card']}`}>
@@ -41,9 +44,11 @@ function PageSlider() {
                 <p>
                   {item.body}
                 </p>
-                <Link href={item.url}>
-                  <a className="button-blue">Learn more</a>
-                </Link>
+                <div className={styles['link-wrapper']}>
+                  <Link href={item.url}>
+                    <a className="button-blue">Learn more</a>
+                  </Link>
+                </div>
               </div>
           </SwiperSlide>
           ))}

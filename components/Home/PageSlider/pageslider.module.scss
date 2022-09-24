@@ -5,13 +5,13 @@
 }
 
 .cards-wrapper {
-  display: flex;
-  align-items: center;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  min-height: 22rem;
-  bottom: 10vh;
-  right: 30%;
+//   display: flex;
+//   align-items: center;
+//   margin-left: 2rem;
+//   margin-right: 2rem;
+//   min-height: 22rem;
+//   bottom: 10vh;
+//   right: 30%;
   padding-top: 8rem;
   padding-bottom: 8rem;
 }
@@ -27,9 +27,9 @@
 
 .grid a {
   justify-self: flex-end;
-  position: absolute;
-  left: 0%;
-  bottom: 2rem;
+  // position: absolute;
+  // left: 0%;
+  // bottom: 2rem;
   // transform: translate(-50%, 0%);
 }
 
@@ -57,9 +57,13 @@
   // text-transform: uppercase;
 }
 
-.fade-slider .swiper-slide:not(.swiper-slide-active) {
-  opacity: 0 !important;
+.link-wrapper {
+  justify-self: end;
 }
+
+// .fade-slider .swiper-slide:not(.swiper-slide-active) {
+//   opacity: 0 !important;
+// }
 
 .fade-slider h4 {
   font-family: 'Fjalla', serif;
