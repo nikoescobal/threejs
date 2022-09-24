@@ -13,26 +13,29 @@ function Roadmap({ showBackground }) {
       ${styles.roadmap}
       ${styles['home-roadmap']}
       ${showBackground ? `${styles['background-visible']}` : ''}
-      ${!isDarkMode ? `${styles.light}` : ''}`}>
-      {/* { isDarkMode && <img src="/assets/backgrounds/waves-layered-dark-2.svg#svgView(viewBox(600, 00, 2000, 1050))" className="waves-bg" alt="" /> }
-      { !isDarkMode && <img src="/assets/backgrounds/waves-layered-light-2.svg#svgView(viewBox(600, 00, 2000, 1050))" className="waves-bg" alt="" /> } */}
-
-      {/* <h4>Roadmap</h4> */}
-      <div className={`${styles.before}`}>
-        <div>
-          {/* <img src="/assets/backgrounds/dashed-lines.png" alt="" />
-            <img src="/assets/backgrounds/dashed-lines.png" alt="" /> */}
-        </div>
-      </div>
-      <div className={`${styles.after}`}>
-        <div>
-          {/* <img src="/assets/backgrounds/dashed-lines.png" alt="" /> */}
-          {/* <img src="/assets/backgrounds/dashed-lines.png" alt="" /> */}
-        </div>
-      </div>
-
-      {/* <img src="assets/backgrounds/radial.png" className={`${styles.rad}`} alt="" />
-      <img src="assets/backgrounds/radial.png" className={`${styles.rad}`} alt="" /> */}
+      ${!isDarkMode ? `${styles.light}` : ''}`}
+    >
+      {showBackground &&
+        <>
+          <div className={`${styles.before}`}>
+            <svg width="1693" height="380" viewBox="0 0 1693 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.21048 374.358L1691.29 5.14067" stroke="#3C3C3C" strokeWidth="10" strokeDasharray="37 37"/>
+            </svg>
+            <svg width="1693" height="380" viewBox="0 0 1693 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.21048 374.358L1691.29 5.14067" stroke="#3C3C3C" strokeWidth="10" strokeDasharray="37 37"/>
+            </svg>
+          </div>
+          <div className={`${styles.after}`}>
+            <svg width="1693" height="380" viewBox="0 0 1693 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.21048 374.358L1691.29 5.14067" stroke="#3C3C3C" strokeWidth="10" strokeDasharray="37 37"/>
+            </svg>
+            <svg width="1693" height="380" viewBox="0 0 1693 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.21048 374.358L1691.29 5.14067" stroke="#3C3C3C" strokeWidth="10" strokeDasharray="37 37"/>
+            </svg>
+          </div>
+        </>
+      }
+      <h3>Our Roadmap</h3>
       <DiagonalSlider />
     </div>
   );

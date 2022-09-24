@@ -2,6 +2,8 @@ import styles from './diagonalslider.module.scss';
 import { useState } from 'react';
 import SliderContent from '../SliderContent/SliderContent';
 import useStore from '../../../store/store';
+import { useMediaQuery } from '@mui/material';
+import { useEffect } from 'react';
 
 function DiagonalSlider() {
   const roadmapItems = [
@@ -76,9 +78,18 @@ function DiagonalSlider() {
     },
   ];
   const { isDarkMode } = useStore((state) => state);
+  const isTablet = useMediaQuery('(min-width: 768px)')
   const [openDialog, setOpenDialog] = useState(false);
   const [position, setPosition] = useState({ x: 1, y: 0 });
-  const offset = { x: 33, y: -6 };
+  // const offset = { x: 33, y: -6 };
+  const [offset, setOffset] = useState({ x: 95, y: -6 });
+
+  useEffect(() => {
+    console.log(isTablet);
+    if (isTablet) {
+      setOffset({ x: 33, y: -6 });
+    }
+  }, [isTablet])
 
   const handleDialogOpen = () => {
     setOpenDialog(true);
@@ -109,7 +120,7 @@ function DiagonalSlider() {
         <div
           className={`${styles['slide-main']}`}
           style={{
-            transform: `translate(${position.x * offset.x}vw, ${-4 + position.y * offset.y}vw)`,
+            transform: `translate(${(position.x - (isTablet ? 0 : 1)) * offset.x}vw, ${position.y * offset.y}vw)`,
           }}
         >
           {
@@ -136,7 +147,9 @@ function DiagonalSlider() {
                 {/* <ul className={`${styles['content-wrapper']}`}>
                   <li>{item.content}</li>
                 </ul> */}
-                <button type="button" className={`${styles['slide-button']}`} disabled={index !== Math.abs(position.x - 1) && 'false'} onClick={() => { handleDialogOpen(); console.log(index, Math.abs(position.x - 1)); }}>Read More</button>
+                <div>
+                  <button type="button" className={`${styles['slide-button']} button-blue`} onClick={() => { handleDialogOpen(); console.log(index, Math.abs(position.x - 1)); }}>Read More</button>
+                </div>
                 {
                   // index !== roadmapItems.length - 1 && (
                   // <div className="connector">

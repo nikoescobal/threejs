@@ -14,7 +14,12 @@ function SliderContent({ list, open, isActive, onClose }) {
 
   return (
     // <Dialog onClose={handleClose} open={open}>
-      isActive && <ul className={`${styles['slide-content-wrapper']} ${!isDarkMode ? `${styles.light}` : ''}`}>
+      <ul className={`
+          ${styles['slide-content-wrapper']}
+          ${isActive ? `${styles.active}` : ''}
+          ${!isDarkMode ? `${styles.light}` : ''}
+        `}
+      >
         {list.map((item, index) => (
           <li key={`${index}1`}>
             {item}

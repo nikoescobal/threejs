@@ -11,6 +11,11 @@
   border: 1px solid #0046FF;
   border-radius: 20px !important;
   text-align: left;
+  visibility: hidden;
+}
+
+.slide-content-wrapper.active {
+  visibility: visible;
 }
 
 .slide-content-wrapper.light {
