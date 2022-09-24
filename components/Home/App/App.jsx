@@ -3,10 +3,23 @@ import ClearContainer from '../../Generic/ClearContainer/ClearContainer';
 import styles from './app.module.scss';
 import generics from '../../../styles/generics.module.scss';
 import iPhone from '../../../public/illustrations/iPhone.png';
+import Waves from '../../../public/backgrounds/waves-2.png'
+import Image from 'next/image';
+import useStore from '../../../store/store';
 
 function App() {
+  const { isDarkMode } = useStore();
+  
   return (
-    <section className={`${styles['app-wrapper']} ${generics['alternating-rows-wrapper']} ${generics['spacing-x']}`}>
+    <section className={`
+      ${styles['app-wrapper']}
+      ${!isDarkMode ? `${styles.light}` : ''}
+      ${generics['alternating-rows-wrapper']}
+      ${generics['spacing-x']}`
+    }>
+      <div className={`${styles['waves-wrapper']}`}>
+        <Image src={Waves} alt="" />
+      </div>
       <div className={`${generics['alternating-rows']}`}>
         <div>
           <img src="/illustrations/iPhone.png" alt="" />

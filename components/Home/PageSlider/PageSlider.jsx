@@ -10,12 +10,18 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import useStore from '../../../store/store';
 import content from './content';
+import Circles from '../../../public/backgrounds/circles.svg'
+import Image from 'next/image';
 
 function PageSlider() {
   const { isDarkMode } = useStore((state) => state);
   
   return (
-    <section className={`${generics['spacing-x']} ${!isDarkMode ? `${styles['light']}` : ''}`}>
+    <section className={`${styles['main-wrapper']} ${generics['spacing-x']} ${!isDarkMode ? `${styles['light']}` : ''}`}>
+      <div className={styles['circles-wrapper']}>
+        <Image src={Circles} alt="" />
+      </div>
+      
       <div className={`${styles['cards-wrapper']}`}>
         <Swiper
           className={`${styles['fade-slider']}`}

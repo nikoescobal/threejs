@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import PropTypes from 'prop-types';
 import useStore from '../../../store/store';
+import Gradient from '../Gradient/Gradient';
 import styles from './waveswrapper.module.scss';
 
 function WavesWrapper({children, hideBottom}) {
@@ -8,18 +9,25 @@ function WavesWrapper({children, hideBottom}) {
   
   return (
     <div className={`${styles['waves-wrapper']} ${!isDarkMode ? `${styles.light}` : ''}`}>
+          {/* <Gradient style={{
+            top: '-20%',
+            left: '0%',
+            width: '100vw',
+          }} /> */}
       <div className={`${styles['waves-img-wrapper']}`}>
-        <div className={`${styles['radial-wrapper-top']}`}></div>
-        <img src="/backgrounds/wave-shape-dark-2.svg" className="waves-bg" alt=""
-          style={{
-            opacity: isDarkMode ? '1' : '0',
-          }}
-         />
-        <img src="/backgrounds/wave-shape-light-2.svg" className="waves-bg" alt=""
-          style={{
-            opacity: isDarkMode ? '0' : '1',
-          }}
-         />
+        {/* <div className={`${styles['radial-wrapper-top']}`}></div> */}
+        <div className={`${styles['top-waves-wrapper']}`}>
+          <img src="/backgrounds/wave-shape-dark-2.svg" className="waves-bg" alt=""
+            style={{
+              opacity: isDarkMode ? '1' : '0',
+            }}
+          />
+          <img src="/backgrounds/wave-shape-light-2.svg" className="waves-bg" alt=""
+            style={{
+              opacity: isDarkMode ? '0' : '1',
+            }}
+          />
+        </div>
       </div>
       {/* <img src="/backgrounds/wave-shape-dark.svg#svgView(viewBox(600, 00, 2000, 1050))" className="waves-bg" alt="" /> */}
       <div className={`${styles['content-wrapper']}`}>

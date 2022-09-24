@@ -25,7 +25,9 @@ function ClearContainer({
       {linkText?.length > 0
       && (
       <div>
-        <Link href={to}>{linkText}</Link>
+        <Link href={to}>
+          <a className='button-blue'>{linkText}</a>
+        </Link>
       </div>
       )}
     </div>

@@ -11,18 +11,16 @@
   z-index: 1;
   transition: all 0.3s ease-in-out;
   margin: 0 auto;
-  border: 1px solid $ln-blue;
 }
 
 .clear-container.light {
-  background: rgba(0, 0, 0, 0.2) !important;
+  background: rgba(0, 0, 0, 0.1) !important;
 }
 
 .clear-container h4{
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
-  font-size: clamp(1.15rem, 1vw + 0.75rem, 1.85rem);
+  // font-size: clamp(1.15rem, 2vw + 0.75rem, 1.85rem);
 }
 
 .clear-container p{
@@ -32,15 +30,15 @@
 }
 
 .clear-container a{
-  background: #1960EA;
-  border-radius: 6px;
-  text-decoration: none;
-  color: white;
-  max-width: 8rem;
-  padding: 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-  font-family: 'Montserrat', serif;
+  // background: #1960EA;
+  // border-radius: 6px;
+  // text-decoration: none;
+  // color: white;
+  // max-width: 8rem;
+  // padding: 1rem;
+  // text-align: center;
+  // font-size: 0.9rem;
+  // font-family: 'Montserrat', serif;
 }
 
 .clear-container.reduced-padding{

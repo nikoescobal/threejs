@@ -1,5 +1,9 @@
 @import '../../../styles/variables';
 
+.main-wrapper {
+  position: relative;
+}
+
 .cards-wrapper {
   display: flex;
   align-items: center;
@@ -91,6 +95,13 @@
 .light .card h4,
 .light .card p {
   color: $light-mode-text-color !important;
+}
+
+.circles-wrapper {
+  position: absolute;
+  top: 0;
+  right: -16%;
+  max-width: 28rem;
 }
 
 @media only screen and (min-width: 480px) {

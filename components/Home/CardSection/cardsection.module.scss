@@ -3,9 +3,16 @@
   margin-top: clamp(0rem, 20vw + 1rem, 20rem);
 }
 
+.wrapper > h4 {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 4rem;
+  max-width: 55ch;
+}
+
 .img-wrapper {
   position: absolute;
-  top: 11%;
+  top: 6%;
   left: 51.5%;
   width: 90%;
   transform: translate(-50%, -50%);
@@ -29,6 +36,10 @@
   min-width: 10rem;
   position: relative;
   box-shadow: -1px 0px 1px rgba($color: white, $alpha: 0.75);
+}
+
+.light .card {
+  background: linear-gradient(126.3deg, #B4B4B4 62%, #767676 127.91%);
 }
 
 // .card::before {

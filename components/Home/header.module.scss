@@ -2,10 +2,15 @@
 
 .container {
   // background-image: radial-gradient(circle farthest-side at 50% 40%, rgba($ln-blue, 0.5), transparent);
+  position: relative;
 }
 
 .container.light {
   // background-image: radial-gradient(circle farthest-side at 50% 40%, rgba(white, 0.5), transparent);
+}
+
+.header {
+  position: relative;
 }
 
 .header h4{
@@ -19,6 +24,14 @@
   color: $ln-blue;
   font-weight: bold;
   font-family: 'fjalla', serif;
+}
+
+.waves-wrapper {
+  position: absolute;
+  top: -20%;
+  // left: -30%;
+  left: -300px;
+  rotate: -90deg;
 }
 
 @media (min-width: 768px) {

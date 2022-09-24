@@ -2,10 +2,13 @@ import styles from './cardsection.module.scss';
 import MovingIcon from '@mui/icons-material/Moving';
 import Image from 'next/image';
 import Chests from '../../../public/backgrounds/chests.png'
+import useStore from '../../../store/store';
 
 function CardSection() {
+  const { isDarkMode } = useStore();
+  
   return (
-    <div className={`${styles.wrapper}`}>
+    <div className={`${styles.wrapper} ${!isDarkMode ? `${styles.light}` : ''}`}>
       <div className={styles['img-wrapper']}>
         <Image src={Chests} alt="chests" />
       </div>
@@ -65,6 +68,9 @@ function CardSection() {
           </div>
         </div>
       </div>
+      <h4 className='spacing-x'>
+        Make expanding your knowledge and building your dream life your addiction with help of our AI
+      </h4>
     </div>
   )
 }

@@ -1,10 +1,11 @@
-import styles from './header.module.scss'
-import generics from '../../styles/generics.module.scss'
-import Logo from '../../public/logo-cropped.png'
-import Image from 'next/image'
-import PageSlider from './PageSlider/PageSlider'
-import useStore from '../../store/store'
-import Gradient from '../Generic/Gradient/Gradient'
+import styles from './header.module.scss';
+import generics from '../../styles/generics.module.scss';
+import Logo from '../../public/logo-cropped.png';
+import Image from 'next/image';
+import PageSlider from './PageSlider/PageSlider';
+import useStore from '../../store/store';
+import Gradient from '../Generic/Gradient/Gradient';
+import Waves from '../../public/backgrounds/waves-5.png';
 
 function Header() {
   const { isDarkMode } = useStore((state) => state);
@@ -16,6 +17,9 @@ function Header() {
         right: '-5%',
         maxWidth: '80%'
         }} />
+      <div className={styles['waves-wrapper']}>
+        <Image src={Waves} alt="" />
+      </div>
       <section className={`${generics.header} ${styles.header} header-intro ${generics['spacing-x']} ${generics['spacing-t']}`}>
         <div className={`${generics['img-wrapper']}`}>
           <Image src={Logo} alt="logo" />
