@@ -5,11 +5,19 @@ import { style } from '@mui/system';
 import Image from 'next/image';
 import Pillar from '../../../public/illustrations/pillar.png'
 import useStore from '../../../store/store';
+import Gradient from '../../Generic/Gradient/Gradient';
 
 function HealthCrisis() {
   const { isDarkMode } = useStore();
   
   return (
+    <>
+    <Gradient style={{
+      top: '75%',
+      left: '50%',
+      width: '80%',
+      transform: 'translate(-50%, -75%)'
+    }} />
     <div className={`${styles.wrapper} ${!isDarkMode ? `${styles.light}` : ''} ${generics['spacing-x']}`}>
       <div>
         <h3>Mental health crisis across the world</h3>
@@ -28,6 +36,7 @@ function HealthCrisis() {
         </div>
       </div>
     </div>
+    </>
   )
 }
 
