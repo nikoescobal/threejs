@@ -9,6 +9,7 @@ import WavesWrapper from '../components/Generic/WavesWrapper/WavesWrapper'
 import Partners from '../components/Generic/Partners/Partners'
 import FollowUs from '../components/Generic/FollowUs/FollowUs'
 import Logo from '../public/logo-cropped.png'
+import NewsLetter from '../components/Home/NewsLetter/NewsLetter'
 
 function AboutUs() {
   return (
@@ -24,9 +25,9 @@ function AboutUs() {
         subtitle={'& our goal'}
       />
       <About />
-      <WavesWrapper hideBottom={true}>
-        <h3 style={{textAlign: 'center'}}>Roadmap</h3>
-        <Roadmap showBackground={false} />
+      <WavesWrapper>
+        <NewsLetter />
+        {/* <Roadmap showBackground={false} /> */}
       </WavesWrapper>
       <Team />
       <Partners />

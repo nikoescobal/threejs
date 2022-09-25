@@ -1,9 +1,16 @@
+@import '../../../styles/variables';
+
 .meet-team {
   // padding: 6rem 4rem;
   position: relative;
-  margin-top: -32vw;
+  // margin-top: -32vw;
   margin-bottom: 8rem;
   z-index: 1;
+  background: linear-gradient(rgba($color: $ln-blue, $alpha: 0.2), transparent);
+}
+
+.meet-team.light {
+  background: linear-gradient(rgba($color: black, $alpha: 0.2), transparent);
 }
 
 .meet-team > img{

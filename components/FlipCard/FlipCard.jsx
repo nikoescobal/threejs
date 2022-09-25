@@ -9,7 +9,7 @@ function FlipCard({ className, disableFlip, visible }) {
     <div className={`
       ${styles.flip}
       ${className}
-      ${!isDarkMode ? 'light' : ''}
+      ${!isDarkMode ? `${styles.light}` : ''}
       ${disableFlip ? 'disabled' : `${styles.enabled}`}
       ${visible ? '' : 'invisible'}`}>
       <div className={`${styles['flip-content']}`}>

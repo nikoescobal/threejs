@@ -27,7 +27,7 @@ function About() {
 
   return (
     <section
-      className={`${styles['about-section']} ${isDarkMode ? '' : 'light'} spacing-x`}
+      className={`${styles['about-section']} ${isDarkMode ? '' : `${styles.light}`} spacing-x`}
     >
       { isDesktop && (
       <div className={`${styles['tabs-wrapper']}`}>

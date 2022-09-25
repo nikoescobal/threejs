@@ -1,7 +1,14 @@
+@import '../../../styles//variables';
+
 .about-section {
   display: grid;
   gap: 6rem;
   position: relative;
+  background: linear-gradient(transparent 50%, rgba($color: $ln-blue, $alpha: 0.2));
+}
+
+.about-section.light {
+  background: linear-gradient(transparent 50%, rgba($color: black, $alpha: 0.2));
 }
 
 .about-section > img {
