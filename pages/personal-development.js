@@ -7,6 +7,7 @@ import Explanation from '../components/PersonalDevelopment/Explanation/Explanati
 import HealthCrisis from '../components/PersonalDevelopment/HealthCrisis/HealthCrisis'
 import StepsForPersonalDevelopment from '../components/PersonalDevelopment/StepsForPersonalDevelopment/StepsForPersonalDevelopment'
 import Achievements from '../public/illustrations/Achievements.png'
+import Waves from '../public/backgrounds/waves-5.png';
 
 function PersonalDevelopment() {
   return (
@@ -17,7 +18,23 @@ function PersonalDevelopment() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <GenericHeader
-        rightObj={<Image src={Achievements} alt="achievements" />}
+        waves={
+          <div style={{
+            position: 'absolute',
+            top: '-20%',
+            left: '-300px',
+            rotate: '-90deg',
+          }}>
+            <Image
+              src={Waves}
+              alt=""
+            />
+          </div>
+        }
+        rightObj={<img src={Achievements.src} alt="achievements" style={{
+          scale: '1.2',
+          marginBottom: '1rem'
+        }} />}
         title="Personal Development"
         subtitle={'& its importance'}
       />
@@ -25,7 +42,7 @@ function PersonalDevelopment() {
       <WavesWrapper hideBottom={true}>
         <HealthCrisis />
       </WavesWrapper>
-      <StepsForPersonalDevelopment />
+      {/* <StepsForPersonalDevelopment /> */}
     </div>
   )
 }

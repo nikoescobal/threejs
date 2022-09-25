@@ -4,10 +4,13 @@ import DonutChart from '../DonutChart/DonutChart';
 import { style } from '@mui/system';
 import Image from 'next/image';
 import Pillar from '../../../public/illustrations/pillar.png'
+import useStore from '../../../store/store';
 
 function HealthCrisis() {
+  const { isDarkMode } = useStore();
+  
   return (
-    <div className={`${styles.wrapper} ${generics['spacing-x']}`}>
+    <div className={`${styles.wrapper} ${!isDarkMode ? `${styles.light}` : ''} ${generics['spacing-x']}`}>
       <div>
         <h3>Mental health crisis across the world</h3>
         <p>
@@ -20,7 +23,7 @@ function HealthCrisis() {
         </div>
         <button type='button' className='button-blue'>More about mental health crisis</button>
         <h3 style={{marginBottom: '2rem'}}>The pillar of an unhappy life</h3>
-        <div>
+        <div className={styles['pillar-wrapper']}>
           <Image src={Pillar} alt='pillar of an unhappy life'/>
         </div>
       </div>

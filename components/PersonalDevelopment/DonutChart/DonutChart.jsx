@@ -29,6 +29,9 @@ function DonutChart() {
       fill: {
         opacity: 0.8,
       },
+      hover: {
+        mode: null
+      },
       stroke: {
         width: 0,
       },
@@ -56,6 +59,7 @@ function DonutChart() {
         align: 'center'
       },
       tooltip: {
+        enabled: false,
         onDatasetHover: {
           highlightDataSeries: false,
         },

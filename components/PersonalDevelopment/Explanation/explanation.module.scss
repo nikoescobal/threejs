@@ -1,7 +1,14 @@
+@import '../../../styles/variables';
+
 .wrapper {
   position: relative;
   margin-top: 8rem;
-  margin-bottom: -4rem;
+  background: linear-gradient(transparent 50%, rgba($color: $ln-blue, $alpha: 0.2));
+  // margin-bottom: -4rem;
+}
+
+.wrapper.light {
+  background: linear-gradient(transparent 50%, rgba($color: black, $alpha: 0.2));
 }
 
 .wrapper > div:not(div:first-of-type) {

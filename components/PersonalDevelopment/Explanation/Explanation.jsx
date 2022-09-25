@@ -2,10 +2,13 @@ import styles from './explanation.module.scss';
 import generics from '../../../styles/generics.module.scss';
 import Image from 'next/image';
 import Grid from '../../../public/illustrations/grid.svg';
+import useStore from '../../../store/store';
 
 function Explanation() {
+  const { isDarkMode } = useStore();
+  
   return (
-    <div className={`${styles.wrapper} ${generics['spacing-x']}`}>
+    <div className={`${styles.wrapper} ${!isDarkMode ? `${styles.light}` : ''} ${generics['spacing-x']}`}>
       <div className={styles['image-wrapper']}>
         <Image src={Grid} alt="grid" />
       </div>
