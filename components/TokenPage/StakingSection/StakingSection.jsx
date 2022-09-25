@@ -11,7 +11,7 @@ function StakingSection() {
   
   return (
     <div className={`${styles['staking-section']} ${generics['spacing-x']} ${!isDarkMode ? `${styles.light}` : ''}`}>
-      <h2>How The Staking Reward Works</h2>
+      <h3>How staking works</h3>
       <div className={`${styles['steps-wrapper']}`}>
         <div className={`${styles['step']}`}>
           <p>Step 1:</p>

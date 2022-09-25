@@ -1,6 +1,16 @@
+@import '../../../styles//variables';
+
 .wrapper {
+  background: linear-gradient(transparent 60%, rgba($color: $ln-blue, $alpha: 0.2));
   padding-top: 20vw;
+  text-align: center;
+}
+
+.wrapper.light {
+  background: linear-gradient(transparent 60%, rgba($color: black, $alpha: 0.2));
+}
+
+.wrapper div {
   max-width: 75ch;
   margin: 0 auto;
-  text-align: center;
 }

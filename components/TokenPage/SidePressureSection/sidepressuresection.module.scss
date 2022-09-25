@@ -1,3 +1,13 @@
+@import '../../../styles/variables';
+
+.section {
+  padding-top: 8rem;
+}
+
+.section.light {
+  background: linear-gradient(rgba($color: $light-background, $alpha: 0.2) 10%, transparent);
+}
+
 .text-wrapper {
   text-align: center;
 }

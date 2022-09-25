@@ -12,8 +12,8 @@ function GenericHeader({title, subtitle, rightObj, waves}) {
   return (
     <div className={`${styles.container} ${!isDarkMode ? `${styles.light}` : ''}`}>
       <Gradient style={{
-        top: '-12%',
-        right: '-5%',
+        top: '-20%',
+        right: '-15%',
         maxWidth: '80%'
         }} />
       {/* <div className={styles['waves-wrapper']}> */}

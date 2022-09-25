@@ -1,11 +1,11 @@
 @import '../../../styles/variables';
 
 .wrapper {
-  background-image: radial-gradient(circle farthest-side at 100% 50%, rgba($ln-blue, 0.2), transparent 30%);
+  // background-image: radial-gradient(circle farthest-side at 100% 50%, rgba($ln-blue, 0.2), transparent 30%);
 }
 
 .light.wrapper {
-  background-image: radial-gradient(circle farthest-side at 100% 50%, rgba(black, 0.2), transparent 30%);
+  // background-image: radial-gradient(circle farthest-side at 100% 50%, rgba(black, 0.2), transparent 30%);
 }
 
 .text-wrapper {
@@ -20,4 +20,5 @@
   justify-content: center;
   gap: clamp(1rem, 5vw, 2rem);
   flex-wrap: wrap;
+  padding-bottom: 2rem;
 }

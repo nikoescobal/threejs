@@ -15,7 +15,7 @@ function UtilitySection() {
     },
     {
       img: '/illustrations/balance.svg',
-      text: 'Neutral',
+      text: 'Access to special areas within the app',
     },
     {
       img: '/illustrations/person.svg',
@@ -27,7 +27,7 @@ function UtilitySection() {
     },
     {
       img: '/illustrations/medal.svg',
-      text: 'High play to earn reward',
+      text: 'Network opportunities',
     },
   ]
   

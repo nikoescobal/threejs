@@ -7,9 +7,9 @@ function SidePressureSection() {
   const { isDarkMode } = useStore();
   
   return (
-    <section className={`${generics['spacing-x']} ${!isDarkMode ? `${styles.light}` : ''}`}>
+    <section className={`${styles.section} ${generics['spacing-x']} ${!isDarkMode ? `${styles.light}` : ''}`}>
       <div className={styles['text-wrapper']}>
-        <h2>Healthy Buy Side Pressure</h2>
+        <h3>A real utility token with healthy buyside pressure</h3>
         <p>
           One of our main goal is to create a real utility token with constant, non-spculative buy side
         </p>

@@ -13,6 +13,7 @@ import SidePressureSection from '../components/TokenPage/SidePressureSection/Sid
 import StakingSection from '../components/TokenPage/StakingSection/StakingSection'
 import NFTSection from '../components/TokenPage/NFTSection/NFTSection'
 import UtilitySection from '../components/TokenPage/UtilitySection/UtilitySection'
+import Waves from '../public/backgrounds/waves-5.png';
 
 function Token() {
   const isDesktop = useMediaQuery('(min-width: 1024px)');
@@ -25,9 +26,21 @@ function Token() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <GenericHeader title={'LGCN Token'} subtitle={'a multichain utility & payment token'} rightObj={isDesktop ? <TokenModel /> : <Image src={TokenImage} alt="token" />} />
+        <GenericHeader waves={
+          <div style={{
+            position: 'absolute',
+            top: '-20%',
+            left: '-300px',
+            rotate: '-90deg',
+          }}>
+            <Image
+              src={Waves}
+              alt=""
+            />
+          </div>
+        } title={'LGCN Token'} subtitle={'a multichain utility & payment token'} rightObj={isDesktop ? <TokenModel /> : <Image src={TokenImage} alt="token" />} />
         <TokenIntro />
-        <WavesWrapper >
+        <WavesWrapper hideBottom={true}>
           <HexagonSliderSection />
           <ChartSection />
         </WavesWrapper>
