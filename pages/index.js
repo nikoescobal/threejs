@@ -61,7 +61,12 @@ export default function Home() {
       </WavesWrapper>
       <App />
       <Roadmap />
+      <div style={{
+        paddingTop: '16rem'
+      }}>
+
       <Partners />
+      </div>
       <Map />
       <FollowUs />
     </div>
