@@ -12,12 +12,25 @@ import clock from '../../../public/icons/clock.svg';
 import halfmoon from '../../../public/icons/halfmoon.svg';
 import WavesWrapper from '../../Generic/WavesWrapper/WavesWrapper';
 import generics from '../../../styles/generics.module.scss';
+import Gradient from '../../Generic/Gradient/Gradient';
 
 function Features() {
   const { isDarkMode } = useStore((state) => state);
 
   return (
-    <WavesWrapper>
+    <WavesWrapper hideBottom={true}>
+      <Gradient style={{
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: '90%'
+      }} />
+      <Gradient style={{
+        top: '125%',
+        left: '0%',
+        transform: 'translate(-50%, -50%)',
+        width: '90%'
+      }} />
       <section className={`${styles.section} ${!isDarkMode ? `${styles.light}}` : ''} spacing-x`}>
         <h3>Key Features of the personal development App</h3>
 
@@ -98,7 +111,7 @@ function Features() {
 
         <div className={`${styles.content}`}>
           <div className={`${styles.imgwrapper}`} style={{padding: '2rem 0'}}>
-            <img src="/features/kf3.png" alt="key feature 3" style={{
+            <img src="/illustrations/ai.png" alt="key feature 3" style={{
               transform: 'scale(1.5) translate(0%, 5%)'
               }} />
           </div>

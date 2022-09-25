@@ -8,7 +8,11 @@ function WavesWrapper({children, hideBottom}) {
   const { isDarkMode } = useStore((state) => state);
   
   return (
-    <div className={`${styles['waves-wrapper']} ${!isDarkMode ? `${styles.light}` : ''}`}>
+    <div className={`
+      ${styles['waves-wrapper']}
+      ${!isDarkMode ? `${styles.light}` : ''}
+      ${hideBottom ? `${styles['bottom-hidden']}` : ''}
+    `}>
           {/* <Gradient style={{
             top: '-20%',
             left: '0%',

@@ -6,7 +6,7 @@ import styles from './clearcontainer.module.scss';
 
 function ClearContainer({
   title, children, to, linkText, textAlign,
-  reducedPadding,
+  reducedPadding, style
 }) {
   const { isDarkMode } = useStore();
   
@@ -18,6 +18,7 @@ function ClearContainer({
         ${reducedPadding ? `${styles['reduced-padding']}` : ''}`}
       style={{
         textAlign,
+        ...style
       }}
     >
       <h4>{title}</h4>

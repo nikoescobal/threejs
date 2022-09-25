@@ -3,10 +3,27 @@ import useStore from '../../../store/store';
 import ClearContainer from '../../Generic/ClearContainer/ClearContainer';
 import styles from './benefits.module.scss';
 import generics from '../../../styles/generics.module.scss';
+import { useMediaQuery } from '@mui/material';
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 function Benefits() {
   const { isDarkMode } = useStore();
+  const isDesktop = useMediaQuery('(min-width: 1024px)');
+  const [scale, setScale] = useState(1);
 
+  useEffect(() => {
+    if (isDesktop) {
+      setScale(1.5);
+    } else {
+      setScale(1);
+    }
+  }, [isDesktop])
+
+  useEffect(() => {
+    console.log(scale);
+  }, [scale])
+  
   return (
     <section className={`${styles['app-wrapper']} ${generics['alternating-rows-wrapper']} spacing-x`}>
       <div className={`${generics['alternating-rows']}`}>
@@ -14,49 +31,47 @@ function Benefits() {
           <img src="/downloads/download1.png" alt="" />
         </div>
         <ClearContainer
-          title="A gamified all in one solution developed to get the best out of you"
+          title="Non-Custodial wallet"
           to="/app"
           linkText="Read More"
           reducedPadding
         >
           <p>
-            The Legacy Network app is divided in a health and an education area.
-            The education area is where users learn how to achieve their individual goals
-            by reprogramming their minds, developing effective characteristics and forming
-            new, positive habits.
+            The Legacy Network blockchain wallet allows for easy on-boarding with a seed pharase and flexibility to receive, send, stake and vest the LGCN Token across crypto users.
+          </p>
+          <p>
+            Payment rails for fiat on-boarding, KYC/AML, NFT support, and the LGCN token...we've handled it all to make it easy for you to enage in a game with your community participating in your success.
           </p>
         </ClearContainer>
       </div>
       <div className={`${generics['alternating-rows']}`}>
         <div><img src="/nft/char-with-iphone.png" alt="" className={`${styles.scaled}`}/></div>
         <ClearContainer
-          title="The first artificial intelligence designed to analyze human behavior"
+          title="NFT"
           to="/app"
           linkText="Read More"
           reducedPadding
         >
           <p>
-            Our artificial intelligence evaluates the collected information about the user
-            and utilizes it to deliver individual and effective solutions. Over time, the AI
-            turns into a personal coach which knows more about the user, than he knows about himself.
+            Unique tokenized assets with in-game benefits that you can offer to your players. Legacy Network offers an integrated pipeline to turn your playable assets into minted NFT's that can be offered for sale to players. Fund your game or offer playable NFT's to an established game community. Our platform handles all the merchandising, marketing, and payments complexity.
           </p>
         </ClearContainer>
       </div>
       <div className={`${generics['alternating-rows']}`}>
-        <div style={{marginBottom: '4rem'}}>
-          <img src="/downloads/download2.png" alt="" />
+        <div style={{
+          marginBottom: '4rem',
+          scale: `${scale}`
+        }}>
+          <img src="/illustrations/token.png" alt=""  />
         </div>
         <ClearContainer
-          title="A gamified all in one solution developed to get the best out of you"
+          title="LGCN TOKEN"
           to="/app"
           linkText="Read More"
           reducedPadding
         >
           <p>
-            The Legacy Network app is divided in a health and an education area.
-            The education area is where users learn how to achieve their individual goals
-            by reprogramming their minds, developing effective characteristics and forming
-            new, positive habits.
+            Integrate the LGCN token to offer players the chance to use the token in your blockchain game economy. Sell NFT's for the token or offer game mechanics powered by the LGCN platform that allow them to earn, buy, or win it in your game.
           </p>
         </ClearContainer>
       </div>

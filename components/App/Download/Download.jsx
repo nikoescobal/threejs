@@ -22,13 +22,14 @@ function Download() {
           <img src="/downloads/download2.png" alt="download 2" />
         </div>
       </div>
+        <h4>Coming soon</h4>
       <div className={`${styles.stores}`}>
-        <div className={`${styles.icons}`}>
+        {/* <div className={`${styles.icons}`}>
           <img src="/logos/play-store.png" alt="play store logo" />
         </div>
         <div className={`${styles.icons}`}>
           <img src="/logos/app-store.png" alt="app store logo" />
-        </div>
+        </div> */}
       </div>
     </section>
   );

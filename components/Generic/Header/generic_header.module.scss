@@ -1,11 +1,19 @@
 @import '../../../styles/variables';
 
 .container {
-  background-image: radial-gradient(circle farthest-side at 50% 40%, rgba($ln-blue, 0.5), transparent);
+  position: relative;
+  // background-image: radial-gradient(circle farthest-side at 50% 40%, rgba($ln-blue, 0.5), transparent);
+}
+
+.container > div {
+  // position: relative;
 }
 
 .container.light {
-  background-image: radial-gradient(circle farthest-side at 50% 40%, rgba(white, 0.5), transparent);
+  // background-image: radial-gradient(circle farthest-side at 50% 40%, rgba(white, 0.5), transparent);
+}
+.header {
+  position: relative;
 }
 
 .header h4{
@@ -21,12 +29,19 @@
   font-weight: bold;
 }
 
+.waves-wrapper {
+  position: absolute;
+  // top: -20%;
+  // left: -300px;
+  // rotate: -90deg;
+}
+
 @media (min-width: 768px) {
   .container {
-    background-image: radial-gradient(circle farthest-side at 67% 30%, rgba($ln-blue, 0.75), transparent 50%);
+    // background-image: radial-gradient(circle farthest-side at 67% 30%, rgba($ln-blue, 0.75), transparent 50%);
   }
 
   .container.light {
-    background-image: radial-gradient(circle farthest-side at 67% 30%, rgba(black, 0.2), transparent 50%);
+    // background-image: radial-gradient(circle farthest-side at 67% 30%, rgba(black, 0.2), transparent 50%);
   }
 }

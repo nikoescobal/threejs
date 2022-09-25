@@ -6,7 +6,7 @@ import SliderContent from '../SliderContent/SliderContent';
 import styles from './roadmap.module.scss';
 import Gradient from '../Gradient/Gradient';
 
-function Roadmap({ showBackground }) {
+function Roadmap({ showBackground, style }) {
   const { isDarkMode } = useStore((state) => state);
   
   return (
@@ -15,6 +15,7 @@ function Roadmap({ showBackground }) {
       ${styles['home-roadmap']}
       ${showBackground ? `${styles['background-visible']}` : ''}
       ${!isDarkMode ? `${styles.light}` : ''}`}
+      style={style}
     >
       {showBackground &&
         <>

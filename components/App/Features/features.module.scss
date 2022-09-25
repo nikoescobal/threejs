@@ -1,9 +1,11 @@
 @use '../../../styles/breakpoints' as *;
 @use '../../../styles/colors' as *;
 @use '../../../styles/buttons' as *;
+@use '../../../styles/variables' as *;
 
 .section {
   // padding: 8rem 3rem 2rem;
+  padding-bottom: 8rem;
 
   h2 {
     // padding: 1rem 3rem 3.25rem;
@@ -48,6 +50,7 @@
         order: 1;
 
         img {
+          max-width: 30rem;
           padding: 3rem 0 0;
         }
       }
