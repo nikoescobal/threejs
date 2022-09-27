@@ -7,7 +7,11 @@ $vertical-inner-spacing: 15vw;
   position: relative;
 }
 
-.waves-wrapper.light .content-wrapper {
+.content-wrapper {
+  background-color: $dark-background;
+}
+
+.light .content-wrapper {
   background-color: $light-mode-waves-color;
 }
 
