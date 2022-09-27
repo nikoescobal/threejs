@@ -139,23 +139,25 @@ function RotatingChart() {
         {/* <button type="button" onClick={turnCounterClockwise} >Prev</button>
         <button type="button" onClick={turnClockwise} style={{margin: '4rem'}}>Next</button> */}
       </div>
-      <div className={`${styles['chart-content']}`}>
-        <div className={`${styles['items-wrapper']}`}>
-          <h3 style={{color: currentChartColor}}>
-            {data[selectedIndex].percentage}%
-          </h3>
-          <h4>
-            {data[selectedIndex].title}
-          </h4>
-          <p>
-            {data[selectedIndex].description}
-          </p>
-          <div className={styles['arrows-wrapper']}>
-            <Image src={Arrow} alt="arrow-left" onClick={turnCounterClockwise} />
-            <Image src={Arrow} alt="arrow-right" onClick={turnClockwise} />
-            {/* <Link href="/">
-              <a className='button-blue'>Read More</a>
-            </Link> */}
+      <div className={styles.bg}>
+        <div className={`${styles['chart-content']}`}>
+          <div className={`${styles['items-wrapper']}`}>
+            <h3 style={{color: currentChartColor}}>
+              {data[selectedIndex].percentage}%
+            </h3>
+            <h4>
+              {data[selectedIndex].title}
+            </h4>
+            <p>
+              {data[selectedIndex].description}
+            </p>
+            <div className={styles['arrows-wrapper']}>
+              <Image src={Arrow} alt="arrow-left" onClick={turnCounterClockwise} />
+              <Image src={Arrow} alt="arrow-right" onClick={turnClockwise} />
+              {/* <Link href="/">
+                <a className='button-blue'>Read More</a>
+              </Link> */}
+            </div>
           </div>
         </div>
       </div>
