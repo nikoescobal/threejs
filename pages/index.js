@@ -65,7 +65,7 @@ export default function Home() {
         <CardSection />
       </WavesWrapper>
       <App />
-      <Roadmap />
+      <Roadmap title={'Our Roadmap'} />
       <div
         style={{
           paddingTop: '16rem',

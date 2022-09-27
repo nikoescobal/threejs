@@ -46,6 +46,7 @@ function App() {
       <Questions />
       <Features />
       <Roadmap
+        title={'Benefits'}
         showBackground={false}
         style={{
           paddingBottom: '8rem',

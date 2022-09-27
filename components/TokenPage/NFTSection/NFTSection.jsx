@@ -28,7 +28,7 @@ function NFTSection() {
       <div className={styles['first-card-section']}>
         <div className={styles['text-section']}>
           <h3>20</h3>
-          <h4>1 of 1s</h4>
+          <h4>Legendary NFTs</h4>
         </div>
         <div>
           <Image src={Character1} alt="nft-character" />
