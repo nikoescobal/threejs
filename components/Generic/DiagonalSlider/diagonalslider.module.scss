@@ -1,3 +1,5 @@
+@import '../../../styles/variables';
+
 .slider {
   position: relative;
   z-index: 1;
@@ -40,6 +42,14 @@
   transform: translateY(-50%);
 }
 
+.arrows-wrapper img {
+  transition: scale 0.3s ease-in;
+}
+
+.arrows-wrapper img:hover {
+  scale: 1.25;
+}
+
 .slider.light .arrows-wrapper {
   filter: invert(1);
 }
@@ -55,7 +65,7 @@
   z-index: 2;
 }
 
-.slider button.arrow{
+.slider button.arrow {
   background: transparent;
   border: none;
 }
@@ -103,7 +113,7 @@
 
 .slide.active .phase-wrapper {
   position: relative;
-  background: linear-gradient(#00C5FD, #003BE7);
+  background: linear-gradient(#00c5fd, #003be7);
 }
 
 .slider.light .slide.active .phase-wrapper {
@@ -143,7 +153,6 @@
 }
 
 .content-wrapper {
-
 }
 
 @media only screen and (min-width: 768px) {

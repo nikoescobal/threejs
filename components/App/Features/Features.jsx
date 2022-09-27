@@ -19,19 +19,27 @@ function Features() {
 
   return (
     <WavesWrapper hideBottom={true}>
-      <Gradient style={{
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        width: '90%'
-      }} />
-      <Gradient style={{
-        top: '125%',
-        left: '0%',
-        transform: 'translate(-50%, -50%)',
-        width: '90%'
-      }} />
-      <section className={`${styles.section} ${!isDarkMode ? `${styles.light}}` : ''} spacing-x`}>
+      <Gradient
+        style={{
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: '90%',
+        }}
+      />
+      <Gradient
+        style={{
+          top: '125%',
+          left: '0%',
+          transform: 'translate(-50%, -50%)',
+          width: '90%',
+        }}
+      />
+      <section
+        className={`${styles.section} ${
+          !isDarkMode ? `${styles.light}}` : ''
+        } spacing-x`}
+      >
         <h3>Key Features of the personal development App</h3>
 
         <div className={`${styles.content}`}>
@@ -56,13 +64,10 @@ function Features() {
 
         <div className={`${styles.content}`}>
           <div className={`${styles.imagereverse}`}>
-            <img
-              src="/features/kf2.png"
-              alt="key feature 2"
-            />
+            <img src="/features/kf2.png" alt="key feature 2" />
           </div>
 
-          <div>
+          <div className={`${styles.healthwrapper}`}>
             <h3>Health Area</h3>
             <p>
               The health area of the final app version is expected to include
@@ -71,7 +76,11 @@ function Features() {
 
             <div className={`${styles.wrapper}`}>
               <div className={`${styles.icons}`}>
-                <img src="/features/health-moon.png" alt="halfmoon icon" />
+                <img
+                  src="/features/health-moon.png"
+                  alt="halfmoon icon"
+                  style={{ scale: '1.25' }}
+                />
               </div>
               <div className={`${styles.healthtext}`}>
                 <h4>Detailed sleep analysis</h4>
@@ -83,7 +92,11 @@ function Features() {
             </div>
             <div className={`${styles.wrapper}`}>
               <div className={`${styles.icons}`}>
-                <img src="/features/health-muscle.png" alt="muscles icon" style={{scale: '1.25'}} />
+                <img
+                  src="/features/health-muscle.png"
+                  alt="muscles icon"
+                  style={{ scale: '1.25' }}
+                />
               </div>
               <div className={`${styles.healthtext}`}>
                 <h4>Detailed nutritional analysis</h4>
@@ -96,7 +109,11 @@ function Features() {
 
             <div className={`${styles.wrapper}`}>
               <div className={`${styles.icons}`}>
-                <img src="/features/health-time.png" alt="clock icon" style={{scale: '1.3'}} />
+                <img
+                  src="/features/health-time.png"
+                  alt="clock icon"
+                  style={{ scale: '1.25' }}
+                />
               </div>
               <div className={`${styles.healthtext}`}>
                 <h4>Time Management & Routine Planning</h4>
@@ -110,10 +127,14 @@ function Features() {
         </div>
 
         <div className={`${styles.content}`}>
-          <div className={`${styles.imgwrapper}`} style={{padding: '2rem 0'}}>
-            <img src="/illustrations/ai.png" alt="key feature 3" style={{
-              transform: 'scale(1.5) translate(0%, 5%)'
-              }} />
+          <div className={`${styles.imgwrapper}`} style={{ padding: '2rem 0' }}>
+            <img
+              src="/illustrations/ai.png"
+              alt="key feature 3"
+              style={{
+                transform: 'scale(1.5) translate(0%, 5%)',
+              }}
+            />
           </div>
           <div>
             <h3>

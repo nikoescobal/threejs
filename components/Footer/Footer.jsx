@@ -135,8 +135,17 @@ function Footer() {
       </div>
       <div className={styles['rights-container']}>
         <div>
-          <svg width="865" height="86" viewBox="0 0 865 86" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M34 30.5C35.2 66.9 11.8333 82.3333 0 85.5L865 84C842.2 84 832.167 60.6667 830 49C833.2 13 804 1.33333 789 0H74.5C42.9 0 34.3333 20.3333 34 30.5Z" fill="#D9D9D9"/>
+          <svg
+            width="865"
+            height="86"
+            viewBox="0 0 865 86"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M34 30.5C35.2 66.9 11.8333 82.3333 0 85.5L865 84C842.2 84 832.167 60.6667 830 49C833.2 13 804 1.33333 789 0H74.5C42.9 0 34.3333 20.3333 34 30.5Z"
+              fill="#D9D9D9"
+            />
           </svg>
           <p>
             ©
