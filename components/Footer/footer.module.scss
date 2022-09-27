@@ -24,13 +24,22 @@
 
 .footer a,
 .footer p{
-  color: #ADB9C7;
+  // color: #ADB9C7;
   text-decoration: none;
+  transition: none;
 }
 
 .footer.light a,
 .footer.light p {
-  color: white;
+  color: $light-mode-text-color;
+}
+
+.footer a {
+  transition: color 0.3s ease-in-out;
+}
+
+.footer a:hover {
+  color: $ln-blue;
 }
 
 .address {
@@ -54,27 +63,50 @@
 
 .footer__main {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: baseline;
+  // display: grid;
+  // grid-template-columns: repeat(4, 1fr);
+  // justify-content: space-between;
   flex-wrap: wrap;
-  max-width: 50rem;
+  max-width: 42rem;
   margin: 0 auto;
   gap: 2rem;
 }
 
+.footer section {
+  // display: flex;
+}
+
+.footer section > div:last-of-type {
+  // display: flex;
+  position: absolute;
+  top: 60px;
+  right: 100px;
+}
+
 .footer__column {
+  min-height: 20rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   min-width: 9.5rem;
-  align-items: center;
+  // align-items: center;
   // flex-basis: 25%;
   // display: grid;
   // align-items: start;
   // width: 100%;
 }
 
+.footer__column > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
 .footer__column__title {
-  color: white;
+  // color: white;
   font-size: 1.2rem;
   font-weight: 700;
   height: 1.5rem;
@@ -90,11 +122,12 @@
 
 .footer__column:last-of-type img {
   // justify-content: end;
-  filter: brightness(0) invert(1);
+  // filter: brightness(0) invert(1);
 }
 
 .footer__column__logo {
-  width: 3rem !important;
+  // width: 3rem !important;
+  max-width: 8rem;
 }
 
 .footer__column__items__wrapper {
@@ -102,7 +135,7 @@
   // justify-content: center;
   // text-align: center;
   gap: 1rem;
-  font-size: 0.75rem;
+  // font-size: 0.75rem;
 }
 
 .footer__column:nth-of-type(2)
@@ -122,7 +155,7 @@
 .footer__socials {
   display: flex;
   gap: 1rem;
-  color: white;
+  // color: white;
   justify-content: center;
   // margin-top: 2rem;
 }
@@ -133,33 +166,50 @@ svg{
 }
 
 
-.logo-container{
-  position: absolute !important;
-  top: -0px;
-  left: 0;
-}
+// .logo-container{
+//   position: absolute !important;
+//   top: -0px;
+//   left: 0;
+//   max-width: 8rem;
+// }
 
-.logo-container > div{
-  position: relative;
-  top: -1px;
-  left: 0;
-}
+// .logo-container > div{
+//   position: relative;
+//   top: -1px;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background: red;
+// }
 
-.logo-container > div img{
-  position: absolute;
-  top: 25%;
-  left: 60px;
-  // transform: translate(-5%, -40%);
-  // height: 8rem;
-  max-width: 4rem;
-}
+// .logo-container .shape {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   // max-width: 13rem;
+//   width: 100%;
+// }
+
+// .logo-container > div img{
+//   position: absolute;
+//   top: 25%;
+//   left: 60px;
+//   z-index: 1;
+//   // transform: translate(-5%, -40%);
+//   // height: 8rem;
+//   max-width: 4rem;
+// }
 
 .rights-container {
   // position: absolute !important;
   // bottom: -15px;
-  padding-top: 8rem;
+  // padding-top: 8rem;
+  position: absolute !important;
+  bottom: 0;
+  left: 50%;
 
-  bottom: -2vw;
+  // bottom: -2vw;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -174,18 +224,25 @@ svg{
 .rights-container p {
   position: relative;
   z-index: 2;
-  // position: absolute;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
   // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%);
+  // top: -40%;
+  bottom: calc(50%);
+  left: 50%;
+  min-width: 36ch;
+  transform: translate(-50%, -50%);
   // z-index: 1;
 }
 
 .rights-container svg {
   // width: 50vw;
-  width: 100%;
+  min-width: 564px;
+  width: 50vw;
+  max-width: 60vw !important;
   position: absolute;
-  bottom: 0%;
+  bottom: -18px;
   left: 50%;
   transform: translate(-50%, -0%);
 }
@@ -196,4 +253,52 @@ svg{
 
 .light.footer svg path {
   fill: $light-background;
+}
+
+.socials-wrapper{
+  display: grid;
+  position: absolute !important;
+  gap: 1rem;
+  left: 50px;
+  bottom: 3rem;
+}
+
+.socials-wrapper svg{
+  width: 100%;
+  font-size: 3rem;
+  max-width: 2.281rem;
+  color: $light-background;
+}
+
+.socials-wrapper path{
+  fill: $light-mode--dark-3 !important;
+}
+
+.light .socials-wrapper path{
+  fill: $dark-background--light-2 !important;
+}
+
+.logo-wrapper {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  max-width: 12rem;
+  max-height: 12rem;
+  background: red;
+}
+
+.logo-wrapper svg {
+  position: absolute;
+  top: -32px;
+  left: 0;
+  max-width: 12rem;
+  z-index: 0;
+}
+
+.logo-wrapper img {
+  position: absolute !important;
+  width: 4rem !important;
+  z-index: 1;
+  top: 32px;
+  left: 32px;
 }
