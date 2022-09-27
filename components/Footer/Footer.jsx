@@ -69,7 +69,7 @@ function Footer() {
             {/* <span className={`${styles.footer__column__title}`}>Contact Us</span> */}
             <div className={`${styles.footer__column__items__wrapper}`}>
               <a href="mailto:hello@legacynetwork.io" className={`${styles.footer__column__item}`}>
-                Contact
+                hello@legacynetwork.io
               </a>
               <Link href={"/"} className={`${styles.footer__column__item}`}>
                 Äulestr. 74
