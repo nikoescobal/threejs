@@ -18,7 +18,7 @@ function Header() {
         maxWidth: '80%'
         }} />
       <div className={styles['waves-wrapper']}>
-        <Image src={Waves} alt="" />
+        <Image draggable="false" src={Waves} alt="" />
       </div>
       <section className={`${generics.header} ${styles.header} header-intro ${generics['spacing-x']} ${generics['spacing-t']}`}>
         <div className={`${generics['img-wrapper']}`}>

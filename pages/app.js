@@ -33,11 +33,12 @@ function App() {
             <Image
               src={Waves}
               alt=""
+              draggable="false"
             />
           </div>
         }
         rightObj={
-          <img src={Character.src} alt="character" style={{scale: isTablet ? '1.6' : '1.4'}} />
+          <img src={Character.src} draggable="false" alt="character" style={{scale: isTablet ? '1.6' : '1.4'}} />
         }
         title="The LEGACY NETWORK APP"
         subtitle={'The future of personal development'}

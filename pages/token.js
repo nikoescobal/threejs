@@ -36,9 +36,10 @@ function Token() {
             <Image
               src={Waves}
               alt=""
+              draggable="false"
             />
           </div>
-        } title={'LGCN Token'} subtitle={'a multichain utility & payment token'} rightObj={isDesktop ? <TokenModel /> : <Image src={TokenImage} alt="token" />} />
+        } title={'LGCN Token'} subtitle={'a multichain utility & payment token'} rightObj={isDesktop ? <TokenModel /> : <Image src={TokenImage} alt="token" draggable="false" />} />
         <TokenIntro />
         <WavesWrapper hideBottom={true}>
           <HexagonSliderSection />

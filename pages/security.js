@@ -4,6 +4,7 @@ import React from 'react'
 import ClearContainer from '../components/Generic/ClearContainer/ClearContainer'
 import GenericHeader from '../components/Generic/Header/GenericHeader'
 import DataSecurity from '../public/illustrations/data-security.png'
+import Waves from '../public/backgrounds/waves-5.png';
 
 function Security() {
   return (
@@ -14,7 +15,32 @@ function Security() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <GenericHeader title={'Security'} subtitle={'giving people back control of their data'} rightObj={<Image style={{scale: '1.5'}} src={DataSecurity} alt="token" />} />
+      <GenericHeader
+        waves={
+          <div style={{
+            position: 'absolute',
+            top: '-20%',
+            left: '-300px',
+            rotate: '-90deg',
+          }}>
+            <Image
+              src={Waves}
+              alt=""
+              draggable="false"
+            />
+          </div>
+        }
+        title={'Security'}
+        subtitle={'giving people back control of their data'}
+        rightObj={
+            <Image
+              style={{scale: '1.5'}}
+              src={DataSecurity}
+              alt="token"
+              draggable="false"
+            />
+          }
+        />
       <div className="security spacing-x">
         <ClearContainer>
           <h4 className="title__2">

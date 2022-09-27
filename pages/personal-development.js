@@ -28,10 +28,11 @@ function PersonalDevelopment() {
             <Image
               src={Waves}
               alt=""
+              draggable="false"
             />
           </div>
         }
-        rightObj={<img src={Achievements.src} alt="achievements" style={{
+        rightObj={<img src={Achievements.src} alt="achievements" draggable="false" style={{
           scale: '1.2',
           marginBottom: '1rem'
         }} />}

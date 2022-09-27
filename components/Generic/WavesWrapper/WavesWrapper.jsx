@@ -21,12 +21,20 @@ function WavesWrapper({children, hideBottom}) {
       <div className={`${styles['waves-img-wrapper']}`}>
         {/* <div className={`${styles['radial-wrapper-top']}`}></div> */}
         <div className={`${styles['top-waves-wrapper']}`}>
-          <img src="/backgrounds/wave-shape-dark-2.svg" className="waves-bg" alt=""
+          <img
+            src="/backgrounds/wave-shape-dark-2.svg"
+            className="waves-bg"
+            alt=""
+            draggable="false"
             style={{
               opacity: isDarkMode ? '1' : '0',
             }}
           />
-          <img src="/backgrounds/wave-shape-light-2.svg" className="waves-bg" alt=""
+          <img
+            src="/backgrounds/wave-shape-light-2.svg"
+            className="waves-bg"
+            alt=""
+            draggable="false"
             style={{
               opacity: isDarkMode ? '0' : '1',
             }}
@@ -41,11 +49,20 @@ function WavesWrapper({children, hideBottom}) {
       { !hideBottom && 
         <div className={`${styles['waves-img-wrapper']} ${styles['bottom']}}`}>
           <div className={`${styles['radial-wrapper-top']}`}></div>
-          <img src="/backgrounds/wave-shape-dark-2.svg" className="waves-bg" alt=""
-          style={{
-            opacity: isDarkMode ? '1' : '0',
-          }} />
-          <img src="/backgrounds/wave-shape-light-2.svg" className="waves-bg" alt=""
+          <img
+            src="/backgrounds/wave-shape-dark-2.svg"
+            className="waves-bg"
+            alt=""
+            draggable="false"
+            style={{
+              opacity: isDarkMode ? '1' : '0',
+            }}
+          />
+          <img
+            src="/backgrounds/wave-shape-light-2.svg"
+            className="waves-bg"
+            alt=""
+            draggable="false"
             style={{
               opacity: isDarkMode ? '0' : '1',
             }}

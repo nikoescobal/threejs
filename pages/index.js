@@ -34,7 +34,7 @@ export default function Home() {
 
       <div className={styles['hammer-wrapper']}>
         <Parallax speed={60} className={styles['hammer']}>
-          <Image className="" src={Hammer} alt="hammer" />
+          <Image className="" src={Hammer} alt="hammer" draggable="false" />
         </Parallax>
         <Header />
         <div

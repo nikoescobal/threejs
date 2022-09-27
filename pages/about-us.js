@@ -10,6 +10,7 @@ import Partners from '../components/Generic/Partners/Partners'
 import FollowUs from '../components/Generic/FollowUs/FollowUs'
 import Logo from '../public/logo-cropped.png'
 import NewsLetter from '../components/Home/NewsLetter/NewsLetter'
+import Waves from '../public/backgrounds/waves-5.png';
 
 function AboutUs() {
   return (
@@ -20,7 +21,21 @@ function AboutUs() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <GenericHeader
-        rightObj={<Image src={Logo} alt="logo" />}
+        waves={
+          <div style={{
+            position: 'absolute',
+            top: '-20%',
+            left: '-300px',
+            rotate: '-90deg',
+          }}>
+            <Image
+              src={Waves}
+              alt=""
+              draggable="false"
+            />
+          </div>
+        }
+        rightObj={<Image src={Logo} alt="logo" draggable="false" />}
         title="About Us"
         subtitle={'& our goal'}
       />

@@ -11,7 +11,7 @@ function Gradient({style, isHalf}) {
   
   return (
     <div className={`${styles.wrapper} ${!isDarkMode ? `${styles.light}` : ''}`} style={style}>
-      <Image src={isHalf ? GradientImgHalf : GradientImg} alt=""  />
+      <Image draggable="false" src={isHalf ? GradientImgHalf : GradientImg} alt="" unselectable='on' />
     </div>
   )
 }
