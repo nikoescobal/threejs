@@ -93,33 +93,18 @@ $width: 20rem;
   color: white;
 }
 
-.arrow {
-  display: inline-block;
-  position: absolute;
-  max-width: 8rem;
-  height: min-content;
+.arrows-wrapper {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.arrows-wrapper span {
   cursor: pointer;
-  bottom: -10rem;
 }
 
-svg.arrow {
-  fill: $dark-mode-text-color;
-}
-
-.light svg.arrow {
-  fill: $light-mode-text-color
-}
-
-.arrow.left {
-  left: 20%;
-  transform: scaleX(-1) translateX(-20%) ;
-  rotate: 60deg;
-}
-
-.arrow.right {
-  right: 20%;
-  transform: translateX(-20%) ;
-  rotate: -60deg;
+.arrows-wrapper span:first-of-type {
+  rotate: 180deg;
 }
 
 .side h3,

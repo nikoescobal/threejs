@@ -14,6 +14,7 @@ import StakingSection from '../components/TokenPage/StakingSection/StakingSectio
 import NFTSection from '../components/TokenPage/NFTSection/NFTSection'
 import UtilitySection from '../components/TokenPage/UtilitySection/UtilitySection'
 import Waves from '../public/backgrounds/waves-5.png';
+import BlockChainBanner from '../components/TokenPage/BlockchainBanner/BlockChainBanner'
 
 function Token() {
   const isDesktop = useMediaQuery('(min-width: 1024px)');
@@ -43,6 +44,7 @@ function Token() {
         <TokenIntro />
         <WavesWrapper hideBottom={true}>
           <HexagonSliderSection />
+          <BlockChainBanner />
           <ChartSection />
         </WavesWrapper>
         <div style={{

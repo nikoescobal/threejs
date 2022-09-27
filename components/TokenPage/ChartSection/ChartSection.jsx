@@ -23,6 +23,7 @@ function ChartSection() {
       </div>
       <RotatingChart />
       <div className={styles['button-wrapper']}>
+        <button type='button' className='button-blue'>Read more</button>
         <button type='button' className='button-blue'>Our smart contract</button>
         <button type='button' className='button-blue'>Our audit response</button>
       </div>

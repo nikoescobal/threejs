@@ -66,6 +66,22 @@
   // color: white;
 }
 
+.arrows-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+.arrows-wrapper img {
+  scale: 0.8;
+  cursor: pointer;
+}
+
+.arrows-wrapper span:first-of-type img {
+  rotate: 180deg;
+  transform: translateY(1.5px);
+}
+
 .donut {
   transition: rotate 0.3s ease-in-out;
   position: relative;

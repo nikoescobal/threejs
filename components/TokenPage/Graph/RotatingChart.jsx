@@ -3,6 +3,8 @@ import Link from 'next/link';
 import React, { useEffect, useRef, useState } from 'react';
 import useStore from '../../../store/store';
 import styles from './chart.module.scss';
+import Arrow from '../../../public/slider/arrow-r.svg'
+import Image from 'next/image';
 
 function RotatingChart() {
   const {isDarkMode } = useStore()
@@ -108,20 +110,7 @@ function RotatingChart() {
   return (
     <div className={`${styles['chart-wrapper']} ${!isDarkMode ? `${styles.light}` : ''}`}>
       <div className={`${styles['donut-wrapper']}`}>
-      <div >
-          <svg
-            className={`${styles.arrow} ${styles.left}`}
-            onClick={turnCounterClockwise}
-            xmlns="http://www.w3.org/2000/svg" xmlSpace="preserve" enableBackground="new 0 0 595.28 841.89" viewBox="0 0 776.09175 693.66538" height="693.66541" width="776.0918" y="0px" x="0px" id="Layer_1" version="1.1">
-            <g transform="matrix(2.7190747,0,0,3.1037754,-326.9763,-1172.9045)" id="g3"><path style={{clipRule: 'evenodd', fillRule: 'evenodd'}} id="path5" d="m 130.838,381.118 c 1.125,28.749 5.277,54.82 12.695,78.018 7.205,22.53 18.847,40.222 36.812,53.747 52.018,39.16 153.369,16.572 153.369,16.572 l -4.632,-32.843 72.918,42.778 -58.597,58.775 -3.85,-27.303 c 0,0 -100.347,18.529 -163.905,-34.881 -37.659,-31.646 -53.293,-84.021 -51.593,-153.962 0.266,-0.247 4.728,-0.908 6.783,-0.901 z"/></g>
-          </svg>
-          <svg
-            className={`${styles.arrow} ${styles.right}`}
-            onClick={turnClockwise}
-            xmlns="http://www.w3.org/2000/svg" xmlSpace="preserve" enableBackground="new 0 0 595.28 841.89" viewBox="0 0 776.09175 693.66538" height="693.66541" width="776.0918" y="0px" x="0px" id="Layer_1" version="1.1">
-            <g transform="matrix(2.7190747,0,0,3.1037754,-326.9763,-1172.9045)" id="g3"><path style={{clipRule: 'evenodd', fillRule: 'evenodd'}} id="path5" d="m 130.838,381.118 c 1.125,28.749 5.277,54.82 12.695,78.018 7.205,22.53 18.847,40.222 36.812,53.747 52.018,39.16 153.369,16.572 153.369,16.572 l -4.632,-32.843 72.918,42.778 -58.597,58.775 -3.85,-27.303 c 0,0 -100.347,18.529 -163.905,-34.881 -37.659,-31.646 -53.293,-84.021 -51.593,-153.962 0.266,-0.247 4.728,-0.908 6.783,-0.901 z"/></g>
-          </svg>
-      </div>
+      
         <svg width="100%" height="100%" viewBox="0 0 42 42" className={`${styles.donut}`}
         style={{
           rotate: `calc(${currentRotation}deg * -1)`
@@ -161,10 +150,12 @@ function RotatingChart() {
           <p>
             {data[selectedIndex].description}
           </p>
-          <div>
-            <Link href="/">
+          <div className={styles['arrows-wrapper']}>
+            <Image src={Arrow} alt="arrow-left" onClick={turnCounterClockwise} />
+            <Image src={Arrow} alt="arrow-right" onClick={turnClockwise} />
+            {/* <Link href="/">
               <a className='button-blue'>Read More</a>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
