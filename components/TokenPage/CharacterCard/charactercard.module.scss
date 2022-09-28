@@ -5,6 +5,8 @@
   overflow: visible;
   position: relative;
   border-radius: 12px;
+  overflow-y: visible;
+  overflow-x: visible;
 }
 
 .light .card {
@@ -24,9 +26,17 @@
 
 .card span{
   position: absolute !important;
-  left: -20% !important;
-  bottom: -30% !important;
+  left: -40% !important;
+  bottom: -20% !important;
   overflow: visible !important;
+}
+
+.card h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 8rem;
+  transform: translate(-50%, -50%);
 }
 
 .card img {

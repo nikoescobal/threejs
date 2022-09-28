@@ -3,7 +3,7 @@ import Image from 'next/image';
 import useStore from '../../../store/store';
 import styles from './charactercard.module.scss';
 
-function CharacterCard({children, srcOne, altOne, srcTwo, altTwo}) {
+function CharacterCard({children, srcOne, altOne, srcTwo, altTwo, isQuestionMark}) {
   const { isDarkMode } = useStore();
   
   return (
@@ -11,8 +11,11 @@ function CharacterCard({children, srcOne, altOne, srcTwo, altTwo}) {
       <div className={styles.card}>
         <h4>{children}</h4>
         <div>
-          <Image src={srcOne} alt={altOne} layout="fill"
-    objectFit="contain" />
+          { isQuestionMark
+            ? <h3>?</h3>
+            : <Image src={srcOne} alt={altOne} layout="fill"
+              objectFit="contain" />
+          }
         </div>
         {/* <div>
           <Image src={srcTwo} alt={altTwo} layout="fill"
@@ -21,6 +24,10 @@ function CharacterCard({children, srcOne, altOne, srcTwo, altTwo}) {
       </div>
     </div>
   )
+}
+
+CharacterCard.defaultProps= {
+  isQuestionMark: false
 }
 
 export default CharacterCard

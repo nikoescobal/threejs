@@ -69,6 +69,7 @@ function NFTSection() {
             altOne={'viking'}
             srcTwo={'/nft/character.png'}
             altTwo="viking"
+            isQuestionMark={true}
           >
             Common Character Trait Examples
           </CharacterCard>
@@ -77,6 +78,7 @@ function NFTSection() {
             altOne={'viking'}
             srcTwo={'/nft/character.png'}
             altTwo="viking"
+            isQuestionMark={true}
           >
             Common Character Trait Examples
           </CharacterCard>
