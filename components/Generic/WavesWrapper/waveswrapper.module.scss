@@ -12,11 +12,13 @@ $vertical-inner-spacing: 15vw;
 }
 
 .light .content-wrapper {
-  background-color: $light-mode-waves-color;
+  // background-color: $light-mode-waves-color;
+  background: linear-gradient($light-mode-waves-start, $light-mode-waves-color, $light-background);
 }
 
 .waves-wrapper.light.bottom-hidden .content-wrapper{
-  background: linear-gradient($light-mode-waves-color 80%, rgba($color: $light-background, $alpha: 1.0)) !important;
+  // background: linear-gradient($light-mode-waves-color 80%, rgba($color: $light-background, $alpha: 1.0)) !important;
+  background: linear-gradient($light-mode-waves-start, $light-mode-waves-color, $light-background);
 }
 
 .top-waves-wrapper {
@@ -30,7 +32,7 @@ $vertical-inner-spacing: 15vw;
 }
 
 .waves-wrapper.light .waves-img-wrapper {
-  background-image: linear-gradient(rgba(black, 0.2), rgba(black, 0.2));
+  background-image: linear-gradient(rgba($light-mode-primary, 0.2), rgba($light-mode-primary, 0.2));
 }
 
 .waves-img-wrapper:last-of-type {

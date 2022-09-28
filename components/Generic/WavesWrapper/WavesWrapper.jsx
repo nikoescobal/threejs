@@ -31,7 +31,7 @@ function WavesWrapper({children, hideBottom}) {
             }}
           />
           <img
-            src="/backgrounds/wave-shape-light-2.svg"
+            src="/backgrounds/wave-shape-light-new.svg"
             className="waves-bg"
             alt=""
             draggable="false"
