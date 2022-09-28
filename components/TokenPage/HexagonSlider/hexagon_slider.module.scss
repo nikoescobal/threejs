@@ -97,6 +97,7 @@ $width: 20rem;
   margin-top: 4rem;
   display: flex;
   justify-content: space-between;
+  filter: invert(48%) sepia(80%) saturate(3488%) hue-rotate(208deg) brightness(101%) contrast(83%);
 }
 
 .arrows-wrapper span {

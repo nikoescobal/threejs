@@ -1,4 +1,4 @@
-@import '../../../styles//variables';
+@import '../../../styles/variables';
 
 .wrapper {
   background: linear-gradient(transparent 60%, rgba($color: $ln-blue, $alpha: 0.2));
@@ -7,7 +7,8 @@
 }
 
 .wrapper.light {
-  background: linear-gradient(transparent 60%, rgba($color: black, $alpha: 0.2));
+  // background: linear-gradient(transparent 60%, rgba($color: $lg, $alpha: 0.2));
+  background: $light-mode-primary;
 }
 
 .wrapper div {
