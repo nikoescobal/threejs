@@ -1,12 +1,13 @@
 import styles from './blockchainbanner.module.scss';
 import ClearContainer from '../../Generic/ClearContainer/ClearContainer'
+import BlockChainImg from '../../../public/illustrations/blockchain.png';
 
 function BlockChainBanner() {
   return (
     <div className={`${styles.wrapper} spacing-x`}>
       <div className={`alternating-rows`}>
         <div>
-          <img src="/illustrations/blockchain.png" alt="" />
+          <img src={BlockChainImg.src} alt="" />
         </div>
         <ClearContainer
           title="Blockchain"
