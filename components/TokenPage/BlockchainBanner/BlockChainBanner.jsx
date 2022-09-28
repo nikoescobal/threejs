@@ -1,6 +1,6 @@
 import styles from './blockchainbanner.module.scss';
 import ClearContainer from '../../Generic/ClearContainer/ClearContainer'
-import BlockChainImg from '../../../public/illustrations/BlockchainV1.png';
+import BlockChainImg from '../../../public/BlockchainV1.png';
 
 function BlockChainBanner() {
   return (
