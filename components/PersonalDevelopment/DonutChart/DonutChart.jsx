@@ -59,15 +59,18 @@ function DonutChart() {
         align: 'center'
       },
       tooltip: {
-        enabled: false,
-        onDatasetHover: {
-          highlightDataSeries: false,
-        },
-        y: {
-          formatter(value) {
-            return `${value}%`;
+          custom: function({series, seriesIndex, dataPointIndex, w}) {
+            return ''
           },
-        },
+        // enabled: false,
+        // onDatasetHover: {
+        //   highlightDataSeries: false,
+        // },
+        // y: {
+        //   formatter(value) {
+        //     return `${value}%`;
+        //   },
+        // },
         // z: {
         //   formatter(value, opts) {
         //     const percent = opts.w.globals.seriesPercent[opts.seriesIndex][opts.dataPointIndex];

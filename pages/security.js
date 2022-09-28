@@ -33,9 +33,9 @@ function Security() {
         title={'Security'}
         subtitle={'giving people back control of their data'}
         rightObj={
-            <Image
-              style={{scale: '1.5'}}
-              src={DataSecurity}
+            <img
+              style={{scale: '1.75'}}
+              src={DataSecurity.src}
               alt="token"
               draggable="false"
             />

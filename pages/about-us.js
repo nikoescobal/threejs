@@ -8,7 +8,7 @@ import Roadmap from '../components/Generic/Roadmap/Roadmap'
 import WavesWrapper from '../components/Generic/WavesWrapper/WavesWrapper'
 import Partners from '../components/Generic/Partners/Partners'
 import FollowUs from '../components/Generic/FollowUs/FollowUs'
-import Logo from '../public/logo-cropped.png'
+import QuestionMark from '../public/backgrounds/question-mark.svg'
 import NewsLetter from '../components/Home/NewsLetter/NewsLetter'
 import Waves from '../public/backgrounds/waves-5.png';
 
@@ -35,7 +35,7 @@ function AboutUs() {
             />
           </div>
         }
-        rightObj={<Image src={Logo} alt="logo" draggable="false" />}
+        rightObj={<img src={QuestionMark.src} alt="logo" draggable="false" style={{scale: '1.5'}} />}
         title="About Us"
         subtitle={'& our goal'}
       />
