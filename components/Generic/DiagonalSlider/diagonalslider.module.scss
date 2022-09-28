@@ -140,6 +140,10 @@
   width: 7rem;
 }
 
+.light .slide .phase-wrapper::after {
+  background: $light-mode-primary;
+}
+
 .slide.active .phase-wrapper::after {
   content: '';
   background: #0a3087;

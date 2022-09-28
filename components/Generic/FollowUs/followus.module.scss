@@ -51,7 +51,7 @@
 }
 
 .follow-us.light svg {
-  color: $light-mode--dark-3;
+  color: rgba($color: $light-mode-secondary, $alpha: 0.5);
 }
 
 .icon-wrapper {
@@ -61,7 +61,7 @@
 }
 
 .follow-us.light .icon-wrapper {
-  background: $light-mode--dark-1;
+  background: rgba($color: $light-mode-tertiary, $alpha: 0.3);
 }
 
 @keyframes gradient {

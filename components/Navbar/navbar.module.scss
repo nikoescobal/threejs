@@ -1,20 +1,5 @@
 @import '../../styles/variables';
 
-// .navbar-wrapper {
-//   // width: 100%;
-//   width: 100vw;
-//   position: fixed;
-//   z-index: 10;
-//   // inset: 0 0 0 0;
-//   top: -100rem !important;
-//   left: 0;
-//   transition: all ease-in-out 0.3s;
-// }
-
-// .navbar-wrapper.open {
-//   top: 0;
-// }
-
 .navbar {
   position: fixed;
   z-index: 10;
@@ -41,7 +26,7 @@
 
 .navbar.light {
   // background: rgba($color: #dde3f9, $alpha: 0.85);
-  background: rgba($color: $light-mode--dark-3, $alpha: 0.85);
+  background: rgba($color: #8DB2FC, $alpha: 0.2);
 }
 
 .navbar.light a {

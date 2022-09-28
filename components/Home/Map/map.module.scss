@@ -32,7 +32,8 @@
 }
 
 .map.light img {
-  filter: invert(0.6);
+  filter: invert(77%) sepia(35%) saturate(294%) hue-rotate(190deg) brightness(103%) contrast(102%);
+
 }
 
 @media only screen and (min-width: 768px) {

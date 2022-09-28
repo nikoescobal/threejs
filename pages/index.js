@@ -54,7 +54,7 @@ export default function Home() {
           </ClearContainer>
         </div>
       </div>
-      <WavesWrapper>
+      <WavesWrapper hideBottom>
         {/* <div className="gradient" style={{
           top: '30%',
           left: '10%'

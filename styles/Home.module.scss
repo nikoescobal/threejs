@@ -29,7 +29,8 @@
 }
 
 .light .clear-container-wrapper {
-  background: linear-gradient(transparent, rgba($color: black, $alpha: 0.2));
+  // background: linear-gradient(transparent, rgba($color: black, $alpha: 0.2));
+  background: linear-gradient(transparent, rgba($color: $light-mode-primary, $alpha: 0.2));
 }
 
 @media (min-width: 480px) {

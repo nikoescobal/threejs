@@ -96,7 +96,10 @@
   // font-weight: 600;
 }
 
-.light .card h4,
+// .light .card h3 {
+//   color: $light-mode-secondary !important;
+// }
+
 .light .card p {
   color: $light-mode-text-color !important;
 }

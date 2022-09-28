@@ -20,9 +20,12 @@
   text-transform: uppercase;
 }
 
+.light h4 {
+  color: $light-mode-secondary;
+}
 .header span {
-  color: $ln-blue;
-  font-weight: bold;
+  // color: $ln-blue;
+  // font-weight: bold;
   font-family: 'fjalla', serif;
 }
 

@@ -2,6 +2,7 @@
 
 .app-wrapper {
   position: relative;
+  padding-top: 8rem;
   padding-bottom: 16rem;
   background-image: linear-gradient(rgba($color: $ln-blue, $alpha: 0.2), transparent 30%);
   // padding-top: 12rem;
@@ -11,7 +12,8 @@
 }
 
 .app-wrapper.light {
-  background-image: linear-gradient(rgba($color: black, $alpha: 0.2), transparent 30%);
+  // background-image: linear-gradient(rgba($color: black, $alpha: 0.2), transparent 30%);
+  background: $light-mode-primary;
 }
 
 .waves-wrapper {

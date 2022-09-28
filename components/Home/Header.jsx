@@ -6,6 +6,7 @@ import PageSlider from './PageSlider/PageSlider';
 import useStore from '../../store/store';
 import Gradient from '../Generic/Gradient/Gradient';
 import Waves from '../../public/backgrounds/waves-5.png';
+import WaveLines from '../Generic/WaveLines/WaveLines';
 
 function Header() {
   const { isDarkMode } = useStore((state) => state);
@@ -17,9 +18,7 @@ function Header() {
         right: '-5%',
         maxWidth: '80%'
         }} />
-      <div className={styles['waves-wrapper']}>
-        <Image draggable="false" src={Waves} alt="" />
-      </div>
+      <WaveLines className={styles['waves-wrapper']} />
       <section className={`${generics.header} ${styles.header} header-intro ${generics['spacing-x']} ${generics['spacing-t']}`}>
         <div className={`${generics['img-wrapper']}`}>
           <Image src={Logo} alt="logo" />

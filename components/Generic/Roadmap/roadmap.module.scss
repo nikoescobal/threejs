@@ -47,11 +47,11 @@ $roadmap-cell-gap: 0.5rem;
 }
 
 .light .before {
-  background: $light-mode--dark-3;
+  background: $light-mode-primary;
 }
 
 .light .after {
-  background: $light-mode--dark-2;
+  background: $light-mode-primary;
 }
 
 .before {
@@ -75,7 +75,7 @@ $roadmap-cell-gap: 0.5rem;
   transform: none;
 }
 
-/* Bars dashes */
+/* Bar dashes */
 .before svg:first-of-type {
   position: absolute;
   top: -20%;
@@ -92,6 +92,14 @@ $roadmap-cell-gap: 0.5rem;
   width: 100vw;
 }
 
+.light .before svg:first-of-type {
+  filter: invert(77%) sepia(35%) saturate(294%) hue-rotate(190deg) brightness(103%) contrast(102%);
+}
+
+.light .before svg:last-of-type {
+  filter: invert(77%) sepia(35%) saturate(294%) hue-rotate(190deg) brightness(103%) contrast(102%);
+}
+
 .after svg:first-of-type {
   position: absolute;
   top: -20%;
@@ -106,6 +114,14 @@ $roadmap-cell-gap: 0.5rem;
   left: 0;
   rotate: 12.5deg;
   width: 100vw;
+}
+
+.light .after svg:first-of-type {
+  filter: invert(77%) sepia(35%) saturate(294%) hue-rotate(190deg) brightness(103%) contrast(102%);
+}
+
+.light .after svg:last-of-type {
+  filter: invert(77%) sepia(35%) saturate(294%) hue-rotate(190deg) brightness(103%) contrast(102%);
 }
 
 .roadmap > img {
