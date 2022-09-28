@@ -25,7 +25,12 @@ function Benefits() {
   }, [scale])
   
   return (
-    <section className={`${styles['app-wrapper']} ${generics['alternating-rows-wrapper']} spacing-x`}>
+    <section className={`
+      ${styles['app-wrapper']}
+      ${generics['alternating-rows-wrapper']}
+      ${!isDarkMode ? `${styles['light']}` : ''}
+      spacing-x`}
+    >
       <div className={`${generics['alternating-rows']}`}>
         <div style={{marginBottom: '4rem'}}>
           <img src="/downloads/download1.png" alt="" />

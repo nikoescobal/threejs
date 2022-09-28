@@ -32,7 +32,8 @@ $vertical-inner-spacing: 15vw;
 }
 
 .waves-wrapper.light .waves-img-wrapper {
-  background-image: linear-gradient(rgba($light-mode-primary, 0.2), rgba($light-mode-primary, 0.2));
+  // background-image: linear-gradient(rgba($light-mode-primary, 0.0), rgba($light-mode-primary, 0.0));
+  background: none;
 }
 
 .waves-img-wrapper:last-of-type {

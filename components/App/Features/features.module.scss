@@ -4,31 +4,13 @@
 @use '../../../styles/variables' as *;
 
 .section {
-  // padding: 8rem 3rem 2rem;
   padding-bottom: 8rem;
   position: relative;
   z-index: 1;
 
-  h2 {
-    // padding: 1rem 3rem 3.25rem;
-    // font-size: 2rem;
-    // line-height: 2.5rem;
-
-    // @include md {
-    //   font-size: 2.6rem;
-    // }
-  }
-
   & > h3 {
     text-align: center;
     margin-bottom: 4rem;
-    // padding: 3rem 0 0;
-    // font-family: 'Din condensed', serif !important;
-    // font-size: 1.8rem;
-
-    // @include lg {
-    //   font-size: 2.5rem;
-    // }
   }
 
   h4 {
@@ -76,12 +58,7 @@
     }
   }
 
-  // p {
-  //   color: $gray;
-  // }
-
   button {
-    // @include btn-blue();
     margin: 0 0 3.5rem;
   }
 
@@ -96,4 +73,10 @@
     max-width: 10.125rem;
     padding: 0 0.65rem 0 0;
   }
+}
+
+.circles {
+  top: 20%;
+  max-width: 30rem;
+  right: 10%;
 }

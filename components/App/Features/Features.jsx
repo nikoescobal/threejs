@@ -13,6 +13,7 @@ import halfmoon from '../../../public/icons/halfmoon.svg';
 import WavesWrapper from '../../Generic/WavesWrapper/WavesWrapper';
 import generics from '../../../styles/generics.module.scss';
 import Gradient from '../../Generic/Gradient/Gradient';
+import Circles from '../../Generic/Circles/Circles';
 
 function Features() {
   const { isDarkMode } = useStore((state) => state);
@@ -35,6 +36,7 @@ function Features() {
           width: '90%',
         }}
       />
+      <Circles className={styles.circles} />
       <section
         className={`${styles.section} ${
           !isDarkMode ? `${styles.light}}` : ''

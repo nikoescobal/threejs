@@ -11,6 +11,7 @@ import GenericHeader from '../components/Generic/Header/GenericHeader';
 import Character from '../public/nft/char-with-iphone.png';
 import Roadmap from '../components/Generic/Roadmap/Roadmap';
 import Waves from '../public/backgrounds/waves-5.png';
+import WaveLines from '../components/Generic/WaveLines/WaveLines';
 
 function App() {
   const isTablet = useMediaQuery('(min-width: 768px)');
@@ -24,18 +25,11 @@ function App() {
       </Head>
       <GenericHeader
         waves={
-          <div style={{
-            position: 'absolute',
-            top: '-20%',
-            left: '-300px',
-            rotate: '-90deg',
-          }}>
-            <Image
-              src={Waves}
-              alt=""
-              draggable="false"
-            />
-          </div>
+            <WaveLines style={{
+              top: '-20%',
+              left: '-300px',
+              rotate: '-90deg',
+            }} />
         }
         rightObj={
           <img src={Character.src} draggable="false" alt="character" style={{scale: isTablet ? '1.6' : '1.4'}} />
