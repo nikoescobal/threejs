@@ -46,7 +46,7 @@ function NFTSection() {
             srcTwo={'/nft/character.png'}
             altTwo="viking"
           >
-            Common Character Trait Examples
+            Viking Character Example
           </CharacterCard>
           <CharacterCard
             srcOne={'/nft/viking.png'}
@@ -54,7 +54,7 @@ function NFTSection() {
             srcTwo={'/nft/character.png'}
             altTwo="viking"
           >
-            Common Character Trait Examples
+            Egyptian Character Example
           </CharacterCard>
           <CharacterCard
             srcOne={'/nft/viking.png'}
@@ -62,16 +62,7 @@ function NFTSection() {
             srcTwo={'/nft/character.png'}
             altTwo="viking"
           >
-            Common Character Trait Examples
-          </CharacterCard>
-          <CharacterCard
-            srcOne={'/nft/viking.png'}
-            altOne={'viking'}
-            srcTwo={'/nft/character.png'}
-            altTwo="viking"
-            isQuestionMark={true}
-          >
-            Common Character Trait Examples
+            African Character Examples
           </CharacterCard>
           <CharacterCard
             srcOne={'/nft/viking.png'}
@@ -80,7 +71,16 @@ function NFTSection() {
             altTwo="viking"
             isQuestionMark={true}
           >
-            Common Character Trait Examples
+            Greek Character Example
+          </CharacterCard>
+          <CharacterCard
+            srcOne={'/nft/viking.png'}
+            altOne={'viking'}
+            srcTwo={'/nft/character.png'}
+            altTwo="viking"
+            isQuestionMark={true}
+          >
+            Aztec Character Example
           </CharacterCard>
         </div>
         <p>

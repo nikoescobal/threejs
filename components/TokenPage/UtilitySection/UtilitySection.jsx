@@ -39,11 +39,7 @@ function UtilitySection() {
     >
       <h3>NFT Utility</h3>
       <p>
-        Unique tokenized assets with in-game benefits that you can offer to your
-        players. Legacy Network offers an integrated pipeline to turn your
-        playable assets into minted NFT&apos;s that can be offered for sale to
-        players. Our platform handles all the merchandising, marketing, and
-        payments complexity.
+        Access to special areas within the app + Network opportunities 
       </p>
       <div className={`${styles.grid} grid three-col`}>
         {data.map((item) => (

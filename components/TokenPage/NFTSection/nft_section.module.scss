@@ -12,7 +12,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 6rem;
-  padding: 6rem 0;
+  padding: calc(3rem + 10vw) 0;
   overflow: visible;
 }
 
@@ -35,6 +35,14 @@
   position: relative;
   overflow: hidden;
   flex-direction: column;
+}
+
+.light .text-section {
+  color: #62688F !important;
+}
+
+.light .text-section h3{
+  color: #62688F !important;
 }
 
 .first-card-section > div:not(div:nth-of-type(2))::before{
@@ -63,7 +71,7 @@
 
 .light .first-card-section .text-section:last-of-type::before,
 .light .first-card-section .text-section:first-of-type::before{
-  box-shadow: 0px 00px 0px 100vw $transparent-dark;
+  box-shadow: 0px 00px 0px 100vw $transparent-light;
 }
 
 .first-card-section h3 {
@@ -101,7 +109,6 @@
 
 .nft-card-section p {
   padding-top: 4rem;
-  font-size: 0.75rem;
   max-width: 65ch;
   margin: auto;
   text-align: center;

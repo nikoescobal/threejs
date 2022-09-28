@@ -1,3 +1,5 @@
+@import '../../../styles/variables';
+
 .card {
   height: 25rem;
   // width: 18rem;
@@ -10,7 +12,8 @@
 }
 
 .light .card {
-  background: rgba(0, 0, 0, 0.1);
+  background: $transparent-light;
+  color: #62688F;
 }
 
 .card h4 {
@@ -25,10 +28,10 @@
 }
 
 .card span{
-  position: absolute !important;
-  left: -40% !important;
-  bottom: -20% !important;
+
   overflow: visible !important;
+  max-width: 16rem;
+
 }
 
 .card h3 {
@@ -42,8 +45,19 @@
 .card img {
   position: static;
   height: auto !important;
-  scale: 1.2;
   bottom: 0;
   left: 0;
-  // transform: tra;
+}
+
+@media only screen and (min-width: 768px) {
+  .card span {
+    position: absolute !important;
+    left: -40% !important;
+    bottom: -20% !important;
+  }
+  
+  .card img {
+    scale: 1.2;
+  }
+  
 }
