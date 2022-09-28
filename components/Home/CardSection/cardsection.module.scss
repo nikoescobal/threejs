@@ -27,7 +27,7 @@
 }
 
 .card {
-  padding: 1.5rem 1.5rem 4rem;
+  padding: 1.5rem 1.5rem 3rem;
   min-height: 12rem;
   // background: rgba(255, 255, 255, 0.05);
   background: linear-gradient(126.3deg, #1A1C22 62%, #0F162A 127.91%);
@@ -58,7 +58,7 @@
   z-index: 1;
 }
 
-.card svg {
+.icon-wrapper {
   background: rgba(239, 228, 252, 0.1);
   border-radius: 50%;
   padding: 0.75rem;
@@ -66,11 +66,16 @@
   margin-bottom: 1rem;
   color: #58A660;
   box-shadow: -1px 0px 1px rgba($color: white, $alpha: 0.75);
-
+  max-width: 4rem;
+  // max-height: 4rem;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card h4 {
-  font-size: clamp(1.5rem, 5vw + 1rem, 2rem);
+  font-size: clamp(1.5rem, 5vw + 1rem, 1.75rem);
   font-family: 'din condensed', serif !important;
   font-weight: 500;
   line-height: 2.25ch;
@@ -81,14 +86,47 @@
   margin-top: 0.5rem;
 }
 
+.connector {
+  display: none;
+}
+
 @media only screen and (min-width: 512px) {
   .cards-wrapper {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1120px) {
   .cards-wrapper {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: relative;
+  }
+
+  .card {
+    position: relative;
+  }
+
+  .connector {
+    display: block;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .connector:nth-of-type(1) {
+    top: 5%;
+    left: 20%;
+    max-width: 10rem;
+  }
+
+  .connector:nth-of-type(2) {
+    bottom: 0%;
+    left: 43%;
+    max-width: 10rem;
+  }
+
+  .connector:nth-of-type(3) {
+    bottom: -5%;
+    right: 25%;
+    max-width: 10rem;
   }
 }
