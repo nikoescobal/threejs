@@ -69,6 +69,10 @@
   gap: 2rem;
 }
 
+.light .arrows-wrapper {
+  filter: invert(48%) sepia(80%) saturate(3488%) hue-rotate(208deg) brightness(101%) contrast(83%);
+}
+
 .arrows-wrapper img {
   scale: 0.8;
   cursor: pointer;
@@ -102,6 +106,10 @@
   // stroke: gray;
 }
 
+.light .donut-segment {
+  // stroke: rgba($color: #000000, $alpha: 0.1)
+}
+
 .donut-segment text {
   font-size: 0.1rem;
 }
@@ -129,7 +137,7 @@ svg.arrow {
 }
 
 .light svg.arrow {
-  fill: $light-mode-text-color
+  fill: $light-mode-text-color;
 }
 
 .arrow.left {
@@ -278,6 +286,6 @@ svg.arrow {
   }
   
   .light .bg::before {
-    box-shadow: 0px 00px 0px 100vw rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 00px 0px 100vw $transparent-light;
   }
 }
