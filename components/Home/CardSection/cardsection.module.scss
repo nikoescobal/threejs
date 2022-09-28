@@ -1,3 +1,5 @@
+@import '../../../styles/variables';
+
 .wrapper {
   position: relative;
   margin-top: clamp(0rem, 20vw + 1rem, 20rem);
@@ -30,7 +32,9 @@
   padding: 1.5rem 1.5rem 3rem;
   min-height: 12rem;
   // background: rgba(255, 255, 255, 0.05);
-  background: linear-gradient(126.3deg, #1A1C22 62%, #0F162A 127.91%);
+  // background: linear-gradient(126.3deg, #1A1C22 62%, #0F162A 127.91%);
+  background: $transparent-darker;
+  backdrop-filter: blur(8px);
   // backdrop-filter: blur(7.5px);
   border-radius: 8px;
   min-width: 10rem;
@@ -39,7 +43,8 @@
 }
 
 .light .card {
-  background: linear-gradient(126.3deg, #B4B4B4 62%, #767676 127.91%);
+  // background: linear-gradient(126.3deg, #B4B4B4 62%, #767676 127.91%);
+  color: white;
 }
 
 // .card::before {
@@ -119,8 +124,8 @@
   }
 
   .connector:nth-of-type(2) {
-    bottom: 0%;
-    left: 43%;
+    bottom: -1%;
+    left: 41%;
     max-width: 10rem;
   }
 
