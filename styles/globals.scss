@@ -27,7 +27,12 @@ body {
 
 .content-wrapper.light {
   background: $light-background;
-  color: rgb(75, 75, 75);
+  color: #3E3E3E;
+}
+
+.content-wrapper.light h2,
+.content-wrapper.light h3 {
+  color: $light-mode-secondary;
 }
 
 #__next > .light,

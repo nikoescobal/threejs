@@ -19,6 +19,11 @@ $light-mode-waves-color: #c9c9c9;
 
 $transparent-darker: rgba($color: black, $alpha: 0.4);
 $transparent-dark: rgba($color: black, $alpha: 0.2);
-$transparent-light: rgba($color: white, $alpha: 0.05);
+// $transparent-light: rgba($color: white, $alpha: 0.05);
+$transparent-light: rgba($color: #5480EA, $alpha: 0.1);
+
+$light-mode-primary: white;
+$light-mode-secondary: #5480EA;
+$light-mode-tertiary: rgba($color: #CADBFF, $alpha: 0.7);
 
 $ln-blue: rgb(30, 79, 188);
