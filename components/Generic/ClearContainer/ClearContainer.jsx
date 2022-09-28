@@ -6,7 +6,7 @@ import styles from './clearcontainer.module.scss';
 
 function ClearContainer({
   title, children, to, linkText, textAlign,
-  reducedPadding, style
+  reducedPadding, style, isTransparent
 }) {
   const { isDarkMode } = useStore();
   
@@ -15,6 +15,7 @@ function ClearContainer({
       className={`
         ${styles['clear-container']} 
         ${!isDarkMode ? `${styles.light}` : ''} 
+        ${isTransparent ? `${styles.transparent}` : ''} 
         ${reducedPadding ? `${styles['reduced-padding']}` : ''}`}
       style={{
         textAlign,

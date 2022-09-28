@@ -10,6 +10,7 @@ function BlockChainBanner() {
         </div>
         <ClearContainer
           title="Blockchain"
+          isTransparent
           reducedPadding
         >
           <p>
