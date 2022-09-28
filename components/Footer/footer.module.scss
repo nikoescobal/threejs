@@ -15,7 +15,7 @@
 
 .footer.light{
   // background: radial-gradient(circle farthest-side at 30% -50%, #58cdfd, #328cfd 60%) no-repeat !important;
-  background: #BCBCBC;;
+  background: rgba($color: $light-mode-secondary, $alpha: 0.3)
 }
 
 .footer.light > img{
@@ -232,7 +232,7 @@ svg{
 }
 
 .light .socials-wrapper path{
-  fill: $dark-background--light-2 !important;
+  fill: $light-mode-secondary !important;
 }
 
 .logo-wrapper {
@@ -269,7 +269,7 @@ svg{
   }
   
   .footer__main {
-    padding-top: 0;
+    padding-top: 3rem;
   }
 
   .socials-wrapper{
