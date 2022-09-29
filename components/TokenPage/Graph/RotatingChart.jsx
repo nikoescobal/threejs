@@ -121,14 +121,7 @@ function RotatingChart() {
                 { index === 0 
                   ? <g className={`${selectedIndex === index ? `${styles.active}` : ''}`}>
                     
-                    <circle
-                      className={`
-                        ${styles['donut-segment']}
-                        ${selectedIndex === index ? `${styles.active}` : ''}
-                      `}
-                      cx="21" cy="21" r="15.91549430918954" fill="transparent"
-                      strokeDashoffset={item.offset}
-                      stroke={selectedIndex === index ? `${item.color}` : ''} strokeDasharray={`${item.percentage} ${100 - item.percentage}`} strokeWidth="9">
+                    <circle className={`${styles['donut-segment']} ${selectedIndex === index ? `${styles.active}` : ''}`} cx="21" cy="21" r="15.91549430918954" fill="transparent" strokeDashoffset={item.offset} stroke={selectedIndex === index ? item.color : '#464444'} strokeDasharray={`${item.percentage} ${100 - item.percentage}`} strokeWidth="9">
                       
                   </circle>
                   <text x="88%" y="55%" textAnchor="middle" stroke="rgba(0,0,0,0.2)" fontSize="0.2rem" strokeWidth="0px" fontWeight="600" fill='rgba(0,0,0,0.2)' >{item.percentage}%</text>
