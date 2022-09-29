@@ -10,7 +10,7 @@ function FlipCard({ className, disableFlip, visible }) {
       ${styles.flip}
       ${className}
       ${!isDarkMode ? `${styles.light}` : ''}
-      ${disableFlip ? 'disabled' : `${styles.enabled}`}
+      ${disableFlip ? `${styles.disabled}` : `${styles.enabled}`}
       ${visible ? '' : 'invisible'}`}>
       <div className={`${styles['flip-content']}`}>
         <div className={`${styles['flip-front']}`}>

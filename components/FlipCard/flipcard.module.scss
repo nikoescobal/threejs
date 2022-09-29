@@ -1,3 +1,5 @@
+@import '../../styles/variables';
+
 .flip {
   width: 100%;
   height: 100%;   
@@ -15,7 +17,8 @@
 }
 
 .light.flip.disabled .flip-front {
-  background: rgba(0, 0, 0, 0.1);
+  // background: rgba(0, 0, 0, 0.1);
+  background: $transparent-light;
 }
 
 .flip-content {
@@ -49,7 +52,8 @@
 
 .light .flip-front,
 .light .flip-back {
-  background: rgba(0, 0, 0, 0.2);
+  // background: rgba(0, 0, 0, 0.2);
+  background: rgba($color: $light-mode-secondary, $alpha: 0.3);
 }
 
 .flip-front {

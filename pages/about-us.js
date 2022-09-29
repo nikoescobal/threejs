@@ -34,7 +34,7 @@ function AboutUs() {
         subtitle={'& our goal'}
       />
       <About />
-      <WavesWrapper>
+      <WavesWrapper hideBottom>
         <NewsLetter />
         {/* <Roadmap showBackground={false} /> */}
       </WavesWrapper>

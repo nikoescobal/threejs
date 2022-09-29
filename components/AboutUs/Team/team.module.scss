@@ -10,7 +10,7 @@
 }
 
 .meet-team.light {
-  background: linear-gradient(rgba($color: black, $alpha: 0.2), transparent);
+  background: linear-gradient(rgba($color: $light-mode-primary, $alpha: 0.2), transparent);
 }
 
 .meet-team > img{

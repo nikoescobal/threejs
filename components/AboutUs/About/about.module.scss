@@ -8,7 +8,7 @@
 }
 
 .about-section.light {
-  background: linear-gradient(transparent 50%, rgba($color: black, $alpha: 0.2));
+  background: linear-gradient(transparent 50%, rgba($color: $light-mode-primary, $alpha: 0));
 }
 
 .about-section > img {
