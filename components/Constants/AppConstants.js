@@ -21,7 +21,7 @@ export const lnfunctions = [
     id: 2,
   },
   {
-    title: 'Noncostodual wallet',
+    title: 'Noncustodial wallet',
     description:
       'P2E prize-based competitions. complete each level and earn crypto prizes - you decide.',
     img: 'functions/ln4.png',

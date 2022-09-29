@@ -109,11 +109,16 @@
 .nft-card-section > div {
   // display: grid;
   // grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+<<<<<<< Updated upstream
   // grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 5rem 2rem;
+=======
+  grid-template-columns: repeat(auto-fill, minmax(15.95rem, 1fr));
+  gap: 2rem;
+>>>>>>> Stashed changes
   overflow: visible;
 }
 
@@ -156,7 +161,7 @@
 
   .first-card-section div > span {
     position: absolute;
-    top: -10%;
+    // top: -10%;
     transform: scale(1.25);
     // left: 50%;
     // width: 100%;
@@ -165,6 +170,7 @@
     // transform: translateX(-50%);
   }
 }
+<<<<<<< Updated upstream
 
 .card-1 {
   // overflow-y: hidden !important;
@@ -246,3 +252,5 @@
     }
   }
 }
+=======
+>>>>>>> Stashed changes
