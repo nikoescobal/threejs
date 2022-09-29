@@ -3,6 +3,7 @@ import styles from './donutchart.module.scss'
 import dynamic from 'next/dynamic'
 
 import { useState } from 'react';
+import useStore from '../../../store/store';
 
 function DonutChart() {
   const ReactApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
@@ -81,11 +82,12 @@ function DonutChart() {
       },
     },
   });
+  const { isDarkMode } = useStore();
 
   return (
-    <div>
+    <div className={`${styles.wrapper} ${isDarkMode ? '' : `${styles.light}`}`}>
       {(typeof window !== 'undefined') && 
-      <ReactApexChart options={data.options} series={data.series} type="donut" width={500} />
+      <ReactApexChart options={data.options} series={data.series} type="donut" width={420} />
       }
     </div>
   )

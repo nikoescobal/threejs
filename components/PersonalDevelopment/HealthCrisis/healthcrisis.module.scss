@@ -22,7 +22,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 4rem;
-  transform: translateX(-18%);
+  transform: translateX(-9%);
+  // transform: translateX(-18%);
 }
 
 .wrapper button{

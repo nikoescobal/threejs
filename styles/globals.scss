@@ -181,6 +181,10 @@ button {
   color: white !important;
 }
 
+#__next > .light .apexcharts-legend-text {
+  color: $light-mode-text-color !important;
+}
+
 /* MUI */
 .MuiTab-root {
   color: white;
