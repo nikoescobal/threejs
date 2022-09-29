@@ -32,9 +32,9 @@ function LogoParticles() {
   return (
     <ParticleImage
       src={"/logo-cropped.png"}
-      scale={0.75}
+      scale={0.5}
       entropy={20}
-      maxParticles={2000}
+      maxParticles={2200}
       particleOptions={particleOptions}
       mouseMoveForce={motionForce}
       touchMoveForce={motionForce}

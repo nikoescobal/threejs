@@ -7,6 +7,7 @@ import useStore from '../../store/store';
 import Gradient from '../Generic/Gradient/Gradient';
 import Waves from '../../public/backgrounds/waves-5.png';
 import WaveLines from '../Generic/WaveLines/WaveLines';
+import LogoParticles from './LogoParticles/LogoParticles';
 
 function Header() {
   const { isDarkMode } = useStore((state) => state);
@@ -20,8 +21,9 @@ function Header() {
         }} />
       <WaveLines className={styles['waves-wrapper']} />
       <section className={`${generics.header} ${styles.header} header-intro ${generics['spacing-x']} ${generics['spacing-t']}`}>
-        <div className={`${generics['img-wrapper']}`}>
-          <Image src={Logo} alt="logo" />
+        <div className={`${generics['img-wrapper']}`} style={{scale: '1.5'}}>
+          {/* <Image src={Logo} alt="logo" /> */}
+          <LogoParticles />
         </div>
         <div className="text">
           <div>
