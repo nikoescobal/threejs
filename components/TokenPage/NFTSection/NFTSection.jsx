@@ -56,7 +56,7 @@ function NFTSection() {
             altTwo="aztec"
             className={styles['card-2']}
           >
-            Egyptian Character Example
+            Aztec Character Example
           </CharacterCard>
           <CharacterCard
             srcOne={'/nft/egyptian.png'}
@@ -65,7 +65,7 @@ function NFTSection() {
             altTwo="egyptian"
             className={styles['card-3']}
           >
-            African Character Examples
+            Egyptian Character Example
           </CharacterCard>
           <CharacterCard
             srcOne={'/nft/viking.png'}
@@ -83,7 +83,7 @@ function NFTSection() {
             altTwo="viking"
             isQuestionMark={true}
           >
-            Aztec Character Example
+            African Character Example
           </CharacterCard>
         </div>
         <p>

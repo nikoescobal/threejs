@@ -113,7 +113,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 5rem 2rem;
   overflow: visible;
 }
 
@@ -184,10 +184,16 @@
   }
 
   @include lg {
-    transform: scale(1.35);
-    left: 75% !important;
-    bottom: -6.5% !important;
+    transform: scale(0.95);
+    left: 3% !important;
+    bottom: -2% !important;
   }
+
+  // @include breakpoint(1250px) {
+  //   transform: scale(1);
+  //   left: 18% !important;
+  //   bottom: 2% !important;
+  // }
 }
 
 .card-2 {
@@ -206,10 +212,15 @@
   }
 
   @include lg {
-    transform: scale(1.35);
-    left: 80% !important;
-    bottom: -6.5% !important;
+    bottom: 5.75% !important;
+    right: -30% !important;
   }
+
+  // @include breakpoint(1250px) {
+  //   transform: scale(0.95);
+  //   left: 15% !important;
+  //   bottom: 14.5% !important;
+  // }
 }
 
 .card-3 img {
@@ -229,9 +240,9 @@
     }
 
     @include lg {
-      transform: scale(1.35);
-      left: 80% !important;
-      bottom: -6.5% !important;
+      transform: scale(1.3);
+      left: 50% !important;
+      bottom: 5.5% !important;
     }
   }
 }
