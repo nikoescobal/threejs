@@ -3,11 +3,11 @@ import Image from 'next/image';
 import useStore from '../../../store/store';
 import styles from './charactercard.module.scss';
 
-function CharacterCard({children, srcOne, altOne, srcTwo, altTwo, isQuestionMark}) {
+function CharacterCard({children, srcOne, altOne, srcTwo, altTwo, isQuestionMark, className}) {
   const { isDarkMode } = useStore();
   
   return (
-    <div className={`${styles.wrapper} ${!isDarkMode ? `${styles.light}` : ''}`}>
+    <div className={`${styles.wrapper} ${!isDarkMode ? `${styles.light}` : ''} ${className}`}>
       <div className={styles.card}>
         <h4>{children}</h4>
         <div>

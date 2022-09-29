@@ -45,6 +45,7 @@ function NFTSection() {
             altOne={'viking'}
             srcTwo={'/nft/character.png'}
             altTwo="viking"
+            className={styles['card-1']}
           >
             Viking Character Example
           </CharacterCard>
