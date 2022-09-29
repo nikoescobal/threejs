@@ -1,7 +1,14 @@
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
+@use '../../../styles/buttons' as *;
 @import '../../../styles/variables';
 
 .wrapper {
-  background-image: radial-gradient(circle farthest-side at 50% 50%, rgba($ln-blue, 0.2), transparent);
+  background-image: radial-gradient(
+    circle farthest-side at 50% 50%,
+    rgba($ln-blue, 0.2),
+    transparent
+  );
 }
 
 .text-wrapper {
@@ -16,7 +23,7 @@
   overflow: visible;
 }
 
-.first-card-section > div{
+.first-card-section > div {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -25,11 +32,11 @@
   overflow: visible;
 }
 
-.first-card-section > div:nth-of-type(2){
+.first-card-section > div:nth-of-type(2) {
   align-items: center;
 }
 
-.first-card-section .text-section{
+.first-card-section .text-section {
   background: rgba(255, 255, 255, 0.05);
   padding: 2rem;
   position: relative;
@@ -38,14 +45,14 @@
 }
 
 .light .text-section {
-  color: #62688F !important;
+  color: #62688f !important;
 }
 
-.light .text-section h3{
-  color: #62688F !important;
+.light .text-section h3 {
+  color: #62688f !important;
 }
 
-.first-card-section > div:not(div:nth-of-type(2))::before{
+.first-card-section > div:not(div:nth-of-type(2))::before {
   // content: '';
   position: absolute;
   top: -50%;
@@ -58,19 +65,19 @@
   box-shadow: 0px 00px 0px 100vw $transparent-light;
 }
 
-.first-card-section .text-section:first-of-type::before{
+.first-card-section .text-section:first-of-type::before {
   // transform: rotateZ(180deg);
   left: 80%;
   // top: ;
 }
 
-.first-card-section .text-section:last-of-type::before{
+.first-card-section .text-section:last-of-type::before {
   // transform: rotateZ(180deg);
   right: 80%;
 }
 
 .light .first-card-section .text-section:last-of-type::before,
-.light .first-card-section .text-section:first-of-type::before{
+.light .first-card-section .text-section:first-of-type::before {
   box-shadow: 0px 00px 0px 100vw $transparent-light;
 }
 
@@ -100,11 +107,19 @@
 }
 
 .nft-card-section > div {
-  display: grid;
+  // display: grid;
   // grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-columns: repeat(auto-fill, minmax(11.95rem, 1fr));
+  // grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
   overflow: visible;
+}
+
+.nft-card-section > div > div {
+  flex-basis: 30%;
+  min-width: 13rem;
 }
 
 .nft-card-section p {
@@ -118,24 +133,24 @@
   .first-card-section {
     flex-direction: row;
   }
-  
-  .first-card-section > .text-section:last-of-type{
+
+  .first-card-section > .text-section:last-of-type {
     align-items: flex-end;
   }
-  
-  .first-card-section > .text-section{
+
+  .first-card-section > .text-section {
     background: none;
     padding: 0 2rem;
-    position:relative;
-    overflow:hidden;
+    position: relative;
+    overflow: hidden;
     flex-direction: column;
   }
-  
-  .first-card-section > div:not(div:nth-of-type(2))::before{
+
+  .first-card-section > div:not(div:nth-of-type(2))::before {
     content: '';
-    top:50%;
+    top: 50%;
     transform: translateY(-50%);
-    width:125%;
+    width: 125%;
     height: 200%;
   }
 
@@ -148,5 +163,68 @@
     // width: 10rem !important;
     // height: 10rem !important;
     // transform: translateX(-50%);
+  }
+}
+
+.card-1 {
+  // overflow-y: hidden !important;
+  // overflow-x: visible !important;
+}
+
+.card-1 img {
+  transform: scale(1.35);
+  bottom: -24.75% !important;
+  left: -50% !important;
+
+  @include md {
+    transform: scale(1.35);
+    right: -50% !important;
+    bottom: -16.5% !important;
+  }
+
+  @include lg {
+    transform: scale(1.35);
+    left: 75% !important;
+    bottom: -6.5% !important;
+  }
+}
+
+.card-2 {
+  // overflow-y: hidden !important;
+  // overflow-x: visible !important;
+}
+
+.card-2 img {
+  transform: scale(1.7);
+  left: 28% !important;
+  bottom: -24% !important;
+
+  @include md {
+    transform: scale(1.35);
+    right: -80% !important;
+    bottom: -16.5% !important;
+  }
+
+  @include lg {
+    transform: scale(1.35);
+    left: 80% !important;
+    bottom: -6.5% !important;
+  }
+}
+
+.card-3 img {
+  transform: scale(1.25);
+  bottom: -13.5% !important;
+
+  @include md {
+    transform: scale(1.5);
+    right: -50% !important;
+    bottom: -16.5% !important;
+  }
+
+  @include lg {
+    transform: scale(1.35);
+    left: 80% !important;
+    bottom: -6.5% !important;
   }
 }
