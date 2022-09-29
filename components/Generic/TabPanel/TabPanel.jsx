@@ -5,13 +5,13 @@ import useStore from '../../../store/store';
 import styles from './tabpanel.module.scss';
 
 function TabPanel({
-  children, value, index, ...other
+  children, value, index, className, ...other
 }) {
   const { isDarkMode } = useStore();  
   
   return (
     <div
-      className={`${styles['tab-panel']} ${!isDarkMode ? `${styles.light}` : ''}`}
+      className={`${styles['tab-panel']} ${!isDarkMode ? `${styles.light}` : ''} ${className}`}
       role="tabpanel"
       hidden={value !== index}
       id={`simple-tabpanel-${index}`}
