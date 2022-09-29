@@ -50,19 +50,19 @@ function NFTSection() {
             Viking Character Example
           </CharacterCard>
           <CharacterCard
-            srcOne={'/nft/egyptian.png'}
-            altOne={'egyptian'}
+            srcOne={'/nft/aztec.png'}
+            altOne={'aztec'}
             srcTwo={'/nft/character.png'}
-            altTwo="egyptian"
+            altTwo="aztec"
             className={styles['card-2']}
           >
             Egyptian Character Example
           </CharacterCard>
           <CharacterCard
-            srcOne={'/nft/aztec.png'}
-            altOne={'aztec'}
+            srcOne={'/nft/egyptian.png'}
+            altOne={'egyptian'}
             srcTwo={'/nft/character.png'}
-            altTwo="aztec"
+            altTwo="egyptian"
             className={styles['card-3']}
           >
             African Character Examples
