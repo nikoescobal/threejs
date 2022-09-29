@@ -5,6 +5,7 @@ import ClearContainer from '../components/Generic/ClearContainer/ClearContainer'
 import GenericHeader from '../components/Generic/Header/GenericHeader'
 import DataSecurity from '../public/illustrations/data-security.png'
 import Waves from '../public/backgrounds/waves-5.png';
+import WaveLines from '../components/Generic/WaveLines/WaveLines'
 
 function Security() {
   return (
@@ -17,18 +18,11 @@ function Security() {
 
       <GenericHeader
         waves={
-          <div style={{
-            position: 'absolute',
+          <WaveLines style={{
             top: '-20%',
             left: '-300px',
             rotate: '-90deg',
-          }}>
-            <Image
-              src={Waves}
-              alt=""
-              draggable="false"
-            />
-          </div>
+          }} />
         }
         title={'Security'}
         subtitle={'giving people back control of their data'}

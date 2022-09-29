@@ -15,6 +15,7 @@ import NFTSection from '../components/TokenPage/NFTSection/NFTSection'
 import UtilitySection from '../components/TokenPage/UtilitySection/UtilitySection'
 import Waves from '../public/backgrounds/waves-5.png';
 import BlockChainBanner from '../components/TokenPage/BlockchainBanner/BlockChainBanner'
+import WaveLines from '../components/Generic/WaveLines/WaveLines'
 
 function Token() {
   const isDesktop = useMediaQuery('(min-width: 1024px)');
@@ -28,19 +29,13 @@ function Token() {
       </Head>
       <div>
         <GenericHeader waves={
-          <div style={{
-            position: 'absolute',
+          <WaveLines style={{
             top: '-20%',
             left: '-300px',
             rotate: '-90deg',
-          }}>
-            <Image
-              src={Waves}
-              alt=""
-              draggable="false"
-            />
-          </div>
-        } title={'LGCN Token'} subtitle={'a multichain utility & payment token'} rightObj={isDesktop ? <TokenModel /> : <Image src={TokenImage} alt="token" draggable="false" />} />
+          }} />
+        }
+         title={'LGCN Token'} subtitle={'a multichain utility & payment token'} rightObj={isDesktop ? <TokenModel /> : <Image src={TokenImage} alt="token" draggable="false" />} />
         <TokenIntro />
         <WavesWrapper hideBottom={true}>
           <HexagonSliderSection />

@@ -11,6 +11,7 @@ import FollowUs from '../components/Generic/FollowUs/FollowUs'
 import QuestionMark from '../public/backgrounds/question-mark.svg'
 import NewsLetter from '../components/Home/NewsLetter/NewsLetter'
 import Waves from '../public/backgrounds/waves-5.png';
+import WaveLines from '../components/Generic/WaveLines/WaveLines'
 
 function AboutUs() {
   return (
@@ -22,18 +23,11 @@ function AboutUs() {
       </Head>
       <GenericHeader
         waves={
-          <div style={{
-            position: 'absolute',
+          <WaveLines style={{
             top: '-20%',
             left: '-300px',
             rotate: '-90deg',
-          }}>
-            <Image
-              src={Waves}
-              alt=""
-              draggable="false"
-            />
-          </div>
+          }} />
         }
         rightObj={<img src={QuestionMark.src} alt="logo" draggable="false" style={{scale: '1.5'}} />}
         title="About Us"

@@ -8,6 +8,7 @@ import HealthCrisis from '../components/PersonalDevelopment/HealthCrisis/HealthC
 import StepsForPersonalDevelopment from '../components/PersonalDevelopment/StepsForPersonalDevelopment/StepsForPersonalDevelopment'
 import Achievements from '../public/illustrations/Achievements.png'
 import Waves from '../public/backgrounds/waves-5.png';
+import WaveLines from '../components/Generic/WaveLines/WaveLines'
 
 function PersonalDevelopment() {
   return (
@@ -19,18 +20,11 @@ function PersonalDevelopment() {
       </Head>
       <GenericHeader
         waves={
-          <div style={{
-            position: 'absolute',
+          <WaveLines style={{
             top: '-20%',
             left: '-300px',
             rotate: '-90deg',
-          }}>
-            <Image
-              src={Waves}
-              alt=""
-              draggable="false"
-            />
-          </div>
+          }} />
         }
         rightObj={<img src={Achievements.src} alt="achievements" draggable="false" style={{
           scale: '1.2',
