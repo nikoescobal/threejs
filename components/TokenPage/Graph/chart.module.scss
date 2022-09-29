@@ -152,6 +152,13 @@ svg.arrow {
   rotate: -60deg;
 }
 
+.arrows-wrapper {
+  position: absolute;
+  bottom: -0%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
 @media only screen and (min-width: 768px) {
   // .chart-wrapper {
   //   position: relative;
@@ -173,7 +180,7 @@ svg.arrow {
 
   .arrow {
     display: inline-block;
-    position: absolute;
+    // position: absolute;
     max-width: 8rem;
     height: min-content;
     cursor: pointer;
@@ -181,6 +188,8 @@ svg.arrow {
     top: auto;
     right: 20%;
   }
+
+
 
   .light .arrows-wrapper {
     filter: brightness(0);
@@ -266,6 +275,7 @@ svg.arrow {
   .bg {
     position: relative;
     transform: translateX(-28%);
+    padding-bottom: 1.5rem;
     // transform: translateX(-28%);
     // clip-path: ellipse(67% 100% at 70% 50%);
     overflow: hidden;

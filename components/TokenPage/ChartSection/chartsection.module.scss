@@ -17,7 +17,9 @@
 
 .button-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  max-width: 50rem;
+  margin: 0 auto;
   gap: clamp(1rem, 5vw, 2rem);
   flex-wrap: wrap;
   padding-bottom: 2rem;
