@@ -12,8 +12,11 @@ import QuestionMark from '../public/backgrounds/question-mark.png'
 import NewsLetter from '../components/Home/NewsLetter/NewsLetter'
 import Waves from '../public/backgrounds/waves-5.png';
 import WaveLines from '../components/Generic/WaveLines/WaveLines'
+import useStore from '../store/store'
 
 function AboutUs() {
+  const { isDarkMode } = useStore();
+  
   return (
     <div>
       <Head>
@@ -29,7 +32,17 @@ function AboutUs() {
             rotate: '-90deg',
           }} />
         }
-        rightObj={<img src={QuestionMark.src} alt="logo" draggable="false" style={{scale: '1.5'}} />}
+        rightObj={
+          <div style={{
+            scale: '1.1'
+          }}>
+            {
+              isDarkMode
+              ? <img src="/backgrounds/question-mark-dark.png" alt="logo" draggable="false" />
+              : <img src="/backgrounds/question-mark-light.png" alt="logo" draggable="false" />
+            }
+          </div>
+        }
         title="About Us"
         subtitle={'& our goal'}
       />
