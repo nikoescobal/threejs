@@ -222,8 +222,8 @@ button {
 .MuiTabs-flexContainer button {
   flex: 1;
   color: #646464 !important;
-  font-family: 'Montserrat', serif !important;
-  font-size: 0.85rem !important;
+  font-family: 'din condensed', serif !important;
+  font-size: 1.25rem !important;
   min-width: max-content;
 }
 
@@ -233,6 +233,21 @@ button {
 
 .MuiTabs-indicator {
   display: none;
+}
+
+.app-preview
+.MuiTabs-flexContainer {
+  justify-content: center;
+}
+
+.app-preview
+.MuiTab-root {
+  max-width: 12rem !important;
+  // margin: 0 auto;
+}
+
+.app-preview > div div {
+  background: transparent !important;
 }
 
 @media (min-width: 480px) {
@@ -250,17 +265,18 @@ button {
   .MuiTabs-flexContainer {
     overflow-x: hidden;
     gap: 0;
+    // font-family: 'din condensed', serif !important;
   }
 }
 
 @media (min-width: 1024px) {
   .MuiTabs-flexContainer button {
-    font-size: 1rem !important;
+    // font-size: 1rem !important;
   }
 }
 
 @media (min-width: 1280px) {
   .MuiTabs-flexContainer button {
-    font-size: 1.2rem;
+    // font-size: 1.2rem;
   }
 }
