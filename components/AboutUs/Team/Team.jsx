@@ -1,6 +1,7 @@
 import { useMediaQuery } from '@mui/material';
 import useStore from '../../../store/store';
 import FlipCard from '../../FlipCard/FlipCard';
+import Gradient from '../../Generic/Gradient/Gradient';
 import styles from './team.module.scss';
 
 function Team() {
@@ -9,6 +10,12 @@ function Team() {
 
   return (
     <section className={`${!isDarkMode ? `${styles.light}` : ''} ${styles['meet-team']}`}>
+      <Gradient style={{
+        top: '75%',
+        left: '0%',
+        transform: 'translate(-50%, -50%)',
+        width: '100%'
+      }} />
       <h2>The Team</h2>
       {isTablet && (
       <div className={`${styles['flip-cards-wrapper']}`}>

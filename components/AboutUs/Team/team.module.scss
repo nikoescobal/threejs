@@ -6,7 +6,7 @@
   // margin-top: -32vw;
   margin-bottom: 8rem;
   z-index: 1;
-  background: linear-gradient(rgba($color: $ln-blue, $alpha: 0.2), transparent);
+  // background: linear-gradient(rgba($color: $ln-blue, $alpha: 0.2), transparent);
 }
 
 .meet-team.light {
@@ -51,6 +51,7 @@
   display: grid;
   gap: 1.5rem;
   width: 120vw;
+  position: relative;
   // transform: translateX(-9rem);
   transform: translateX(-10vw);
 }
