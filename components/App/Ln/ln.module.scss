@@ -4,7 +4,8 @@
 // @use '../../../styles/variables' as *;
 
 .wrapper {
-
+  position: relative;
+  z-index: 5;
 }
 
 .wrapper h3 {
