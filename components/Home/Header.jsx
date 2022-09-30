@@ -33,9 +33,7 @@ function Header() {
               Network
             </h1>
             <h4>
-              A community-driven personal development ecosystem based on
-              {' '}
-              <span>blockchain technology</span>
+              Gamified personal development through AI and blockchain technology
             </h4>
           </div>
         </div>
