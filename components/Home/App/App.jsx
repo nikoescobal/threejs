@@ -28,7 +28,7 @@ function App() {
           <img src="/illustrations/iPhone.png" alt="" />
         </div>
         <ClearContainer
-          title="A gamified all-in-one solution developed to get the best out of you"
+          title="A whole ecosystem designed to support you in building your dream life"
           to="/app"
           linkText="Read More"
           reducedPadding
@@ -46,7 +46,7 @@ function App() {
           <img src="/illustrations/ai.png" alt="" />
         </div>
         <ClearContainer
-          title="The first artificial intelligence designed to analyze human behavior"
+          title="The first artificial intelligence which analyzes your behavior and reflects the collected information back to you "
           to="/app"
           linkText="Read More"
           reducedPadding

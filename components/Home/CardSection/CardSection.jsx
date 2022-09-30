@@ -39,10 +39,9 @@ function CardSection() {
             <Image src={Icon1} alt="icon" />
           </div>
           <div>
-            <h4>Play through content from lessons</h4>
+            <h4>Choose a skill you want to learn</h4>
             <p>
-              Our play-to-earn feature ensures that users are rewarded for every
-              task completed on the app.
+              Our unique education system covers all essential skills for your personal success in mental health, physical health, platonic relationships, romantic relationships, career/finances and much more. 
             </p>
           </div>
         </div>
@@ -51,8 +50,10 @@ function CardSection() {
             <Image src={Icon2} alt="icon" />
           </div>
           <div>
-            <h4>Complete the quest and level up</h4>
-            <p>Complete each individual quest and level up on your earnings</p>
+            <h4>Play through lessons and level up your character </h4>
+            <p>
+              Your in-game character is a reflection of you. When the character levels up in-game, you level up in real life. The character allows you to gain an objective perspective of yourself and to keep track of your progress.
+            </p>
           </div>
         </div>
         <div className={`${styles['card']}`}>
@@ -60,10 +61,9 @@ function CardSection() {
             <Image src={Icon3} alt="icon" />
           </div>
           <div>
-            <h4>Solve quest and test your knowledge</h4>
+            <h4>Test and deepen your knowledge </h4>
             <p>
-              With every quest, you get to test your knowledge on different
-              aspect of life.
+              In the beginning, the reward distribution will be pegged to randomized, theoretical exams. The exams are created in a way which tests your deep understanding of the topic, not your memory. As the project develops further, we will implement more opportunities to earn rewards. 
             </p>
           </div>
         </div>
@@ -72,8 +72,10 @@ function CardSection() {
             <Image src={Icon4} alt="icon" />
           </div>
           <div>
-            <h4>Get rewarded with LGCN tokens</h4>
-            <p>Get rewarded with Legacy Network tokens (LGCN).</p>
+            <h4>Earn reward chests </h4>
+            <p>
+              Chests can include LGCN token, collectibles and other items which can either be traded or reused within the ecosystem.
+            </p>
           </div>
         </div>
       </div>

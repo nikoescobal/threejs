@@ -12,10 +12,9 @@ function NewsLetter() {
       }`}
     >
       <div>
-        <h4>Don&apos;t miss out. Stay updated</h4>
+        <h4>Don&apos;t miss out. Stay updated!</h4>
         <p>
-          Subscribe to our newsletter and be the first to get updates on our
-          product and services.
+          Subscribe to our newsletter and be the first to get updates on our products and services. 
         </p>
         <form>
           <input type="email" name="email" placeholder="Email" id="" />
