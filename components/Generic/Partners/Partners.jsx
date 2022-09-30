@@ -5,84 +5,66 @@ import useStore from '../../../store/store';
 function Partners() {
   const partners = [
     {
-      endpoint: 'cv-labs.svg',
-      alt: 'cv labs'
+      endpoint: 'crypto-valley.png',
+      alt: 'crypto valley logo',
+      class: 'crypto-valley',
     },
     {
-      endpoint: 'cv-labs.svg',
-      alt: 'cv labs1'
+      endpoint: 'cvlabs.svg',
+      alt: 'cv labs logo',
+      class: 'cv-labs',
     },
     {
-      endpoint: 'cv-labs.svg',
-      alt: 'cv labs2'
+      endpoint: 'niedermuller.png',
+      alt: 'niedermuller logo',
+      class: 'niedermuller',
     },
     {
-      endpoint: 'cv-labs.svg',
-      alt: 'cv labs3'
+      endpoint: 'sercor.svg',
+      alt: 'seratio logo',
+      class: 'sercor',
     },
     {
-      endpoint: 'cv-labs.svg',
-      alt: 'cv labs'
+      endpoint: 'synaps.png',
+      alt: 'synaps logo',
+      class: 'synaps',
     },
     {
-      endpoint: 'cv-labs.svg',
-      alt: 'cv labs1'
+      endpoint: 'caag.png',
+      alt: 'caag logo',
+      class: 'caag',
     },
     {
-      endpoint: 'cv-labs.svg',
-      alt: 'cv labs2'
+      endpoint: 'red4sec.png',
+      alt: 'red4sec logo',
+      class: 'red4sec',
     },
     {
-      endpoint: 'cv-labs.svg',
-      alt: 'cv labs3'
+      endpoint: 'maerki.svg',
+      alt: 'maerki logo',
+      class: 'maerki',
     },
-    {
-      endpoint: 'cv-labs.svg',
-      alt: 'cv labs'
-    },
-    {
-      endpoint: 'cv-labs.svg',
-      alt: 'cv labs1'
-    },
-    {
-      endpoint: 'cv-labs.svg',
-      alt: 'cv labs2'
-    },
-    {
-      endpoint: 'cv-labs.svg',
-      alt: 'cv labs3'
-    },
-    {
-      endpoint: 'cv-labs.svg',
-      alt: 'cv labs'
-    },
-    {
-      endpoint: 'cv-labs.svg',
-      alt: 'cv labs1'
-    },
-    {
-      endpoint: 'cv-labs.svg',
-      alt: 'cv labs2'
-    },
-    {
-      endpoint: 'cv-labs.svg',
-      alt: 'cv labs3'
-    },
-  ]
+  ];
   const { isDarkMode } = useStore((state) => state);
-  
+
   return (
-    <section className={`${styles.partners} ${!isDarkMode ? `${styles.light}` : ''}`}>
+    <section
+      className={`${styles.partners} ${!isDarkMode ? `${styles.light}` : ''}`}
+    >
       <h3 className={`${generics['spacing-x']}`}>Our Partners</h3>
       <div className={`${styles['logos-wrapper']} ${generics['spacing-x']}`}>
         {partners.map((logo) => (
           <div key={logo.alt}>
-            <img src={`/logos/${logo.endpoint}`} alt={logo.alt} />
+            <img
+              src={`/logos/${logo.endpoint}`}
+              alt={logo.alt}
+              className={styles[logo.class]}
+            />
           </div>
         ))}
       </div>
     </section>
-  )
+  );
 }
 
-export default Partners
+export default Partners;

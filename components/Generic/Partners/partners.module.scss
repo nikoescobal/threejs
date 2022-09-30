@@ -1,3 +1,4 @@
+@use '../../../styles/breakpoints' as *;
 @import '../../../styles/variables';
 
 .partners h3 {
@@ -6,21 +7,32 @@
 }
 
 .logos-wrapper {
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: space-between;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
   gap: 2rem 2rem;
   background: rgba($color: $light-background, $alpha: 0.1);
   padding-top: 2rem;
   padding-bottom: 2rem;
+  grid-template-columns: 1fr;
+
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include lg {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .partners.light .logos-wrapper {
   background: rgba($color: $light-mode-secondary, $alpha: 0.1);
 }
 
-.logos-wrapper div{
+.logos-wrapper div {
   max-width: clamp(4rem, 10vw + 1rem, 10rem);
+}
+
+.sercor {
+  max-width: 4rem;
 }
