@@ -119,6 +119,10 @@ button {
   text-transform: capitalize;
 }
 
+.light .button-blue {
+  background: $light-mode-secondary;
+}
+
 *,
 *::before,
 *::after {
