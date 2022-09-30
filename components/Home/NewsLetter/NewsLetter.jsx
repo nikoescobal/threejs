@@ -19,7 +19,7 @@ function NewsLetter() {
         </p>
         <form>
           <input type="email" name="email" placeholder="Email" id="" />
-          <button type="submit">Subscribe</button>
+          <button type="submit" className="button-blue">Subscribe</button>
         </form>
       </div>
     </div>
