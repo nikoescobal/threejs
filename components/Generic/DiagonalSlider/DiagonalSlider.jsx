@@ -4,11 +4,12 @@ import SliderContent from '../SliderContent/SliderContent';
 import useStore from '../../../store/store';
 import { useMediaQuery } from '@mui/material';
 import { useEffect } from 'react';
+import benefits from './content';
 
-function DiagonalSlider() {
+function DiagonalSlider({ showBenefits }) {
   const roadmapItems = [
     {
-      phase: '1',
+      phase: 'Phase 1',
       date: 'July - August',
       content: [
         'Smart contract development for all 4 blockchains',
@@ -18,7 +19,7 @@ function DiagonalSlider() {
       ],
     },
     {
-      phase: '2',
+      phase: 'Phase 2',
       date: 'August - September',
       content: [
         'Token deployment',
@@ -29,7 +30,7 @@ function DiagonalSlider() {
       ],
     },
     {
-      phase: '3',
+      phase: 'Phase 3',
       date: 'September - October',
       content: [
         'Expansion of our development teams',
@@ -38,7 +39,7 @@ function DiagonalSlider() {
       ],
     },
     {
-      phase: '4',
+      phase: 'Phase 4',
       date: 'October - November',
       content: [
         'Expansion of our development teams',
@@ -47,7 +48,7 @@ function DiagonalSlider() {
       ],
     },
     {
-      phase: '5',
+      phase: 'Phase 5',
       date: 'November - Q1',
       content: [
         'Token deployment',
@@ -57,7 +58,7 @@ function DiagonalSlider() {
       ],
     },
     {
-      phase: '6',
+      phase: 'Phase 6',
       date: 'Q1 - Q2',
       content: [
         'Token deployment',
@@ -67,7 +68,7 @@ function DiagonalSlider() {
       ],
     },
     {
-      phase: '7',
+      phase: 'Phase 7',
       date: 'Q2 - Q4',
       content: [
         'Token deployment',
@@ -100,9 +101,14 @@ function DiagonalSlider() {
   };
 
   const moveRight = () => {
-    if (Math.abs(position.x) < roadmapItems.length - 2) {
-      // setSelectedSlideIndex(position.x - 2);
-      setPosition({ x: position.x - 1, y: position.y - 1 });
+    if (!showBenefits) {
+      if (Math.abs(position.x) < roadmapItems.length - 2) {
+        setPosition({ x: position.x - 1, y: position.y - 1 });
+      }
+    } else {
+      if (Math.abs(position.x) < benefits.length - 2) {
+        setPosition({ x: position.x - 1, y: position.y - 1 });
+      }
     }
   };
 
@@ -123,7 +129,7 @@ function DiagonalSlider() {
             transform: `translate(${(position.x - (isTablet ? 0 : 1)) * offset.x}vw, ${position.y * offset.y}vw)`,
           }}
         >
-          {
+        { !showBenefits &&
           roadmapItems.map((item, index) => (
             <>
               <div
@@ -135,8 +141,43 @@ function DiagonalSlider() {
               >
                 <div className={`${styles['phase-wrapper']}`}>
                   <p>
-                    Phase
-                    {' '}
+                    {item.phase}
+                  </p>
+                </div>
+                <div className={`${styles['timeframe-wrapper']}`}>
+                  <p>{item.date}</p>
+                </div>
+                <SliderContent list={item.content} isActive={index === Math.abs(position.x - 1)} />
+                {/* <ul className={`${styles['content-wrapper']}`}>
+                  <li>{item.content}</li>
+                </ul> */}
+                <div>
+                  <button type="button" className={`${styles['slide-button']} button-blue`} onClick={() => { handleDialogOpen(); console.log(index, Math.abs(position.x - 1)); }}>Read More</button>
+                </div>
+                {
+                  // index !== roadmapItems.length - 1 && (
+                  // <div className="connector">
+                  //   <img src="/assets/slider/connector.svg" alt="" />
+                  // </div>
+                  // )
+                }
+
+              </div>
+            </>
+          ))
+        }
+        { showBenefits &&
+          benefits.map((item, index) => (
+            <>
+              <div
+                key={item.phase}
+                className={`${styles['slide']} ${index === Math.abs(position.x - 1) ? `${styles['active']}` : ''}`}
+                style={{
+                  transform: `translateY(${offset.y * index}vw)`,
+                }}
+              >
+                <div className={`${styles['phase-wrapper']}`}>
+                  <p>
                     {item.phase}
                   </p>
                 </div>
@@ -180,6 +221,10 @@ function DiagonalSlider() {
         /> */}
       </div>
   )
+}
+
+DiagonalSlider.defaultProps = {
+  showBenefits: false
 }
 
 export default DiagonalSlider

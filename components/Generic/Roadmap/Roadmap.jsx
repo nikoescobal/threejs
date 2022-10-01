@@ -6,7 +6,7 @@ import SliderContent from '../SliderContent/SliderContent';
 import styles from './roadmap.module.scss';
 import Gradient from '../Gradient/Gradient';
 
-function Roadmap({ title, showBackground, style }) {
+function Roadmap({ title, showBackground, style, showBenefits }) {
   const { isDarkMode } = useStore((state) => state);
   
   return (
@@ -47,7 +47,7 @@ function Roadmap({ title, showBackground, style }) {
         </>
       }
       <h3>{title}</h3>
-      <DiagonalSlider />
+      <DiagonalSlider showBenefits={showBenefits} />
     </div>
   );
 }

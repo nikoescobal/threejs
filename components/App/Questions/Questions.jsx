@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import useStore from '../../../store/store';
 import styles from './questions.module.scss';
-import { questions } from '../../Constants/AppConstants';
+import { questions } from './content';
 import Image from 'next/image';
 import Staff from '../../../public/backgrounds/staff.png';
 

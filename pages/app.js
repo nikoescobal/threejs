@@ -40,8 +40,9 @@ function App() {
       <Questions />
       <Features />
       <Roadmap
-        title={'Benefits'}
+        title={'Your Benefits'}
         showBackground={false}
+        showBenefits
         style={{
           paddingBottom: '8rem',
           marginBottom: '0 !important',
