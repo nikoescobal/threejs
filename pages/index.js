@@ -49,7 +49,7 @@ export default function Home() {
           >
             <ul style={{
               margin: '0 auto',
-              textAlign: 'left',
+              textAlign: 'center',
               padding: '0 1rem'
             }}>
               <li>
