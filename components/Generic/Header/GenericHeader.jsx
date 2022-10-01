@@ -10,7 +10,7 @@ function GenericHeader({title, subtitle, rightObj, waves}) {
   const { isDarkMode } = useStore((state) => state);
 
   return (
-    <div className={`${styles.container} ${!isDarkMode ? `${styles.light}` : ''}`}>
+    <div className={`${styles.container} ${!isDarkMode ? `${styles.light}` : ''} max-1920`}>
       <Gradient style={{
         top: '-20%',
         right: '-15%',
@@ -20,7 +20,7 @@ function GenericHeader({title, subtitle, rightObj, waves}) {
         {waves}
       {/* </div> */}
       <section className={`${generics.header} ${styles.header} header-intro ${generics['spacing-x']} ${generics['spacing-t']}`}>
-        <div className={`${generics['img-wrapper']}`}>
+        <div className={`${generics['img-wrapper']}`} style={{display: 'flex', justifyContent: 'center'}}>
           {rightObj}
           {/* <img src={imageUrl} alt={imageAlt} /> */}
         </div>

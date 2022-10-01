@@ -40,7 +40,7 @@ function Features() {
       <section
         className={`${styles.section} ${
           !isDarkMode ? `${styles.light}}` : ''
-        } spacing-x`}
+        } spacing-x max-1920`}
       >
         <h3>Key Features of the Legacy Network App</h3>
 

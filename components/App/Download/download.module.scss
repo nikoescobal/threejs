@@ -24,6 +24,8 @@
   }
 
   p {
+    max-width: 70ch;
+    margin: 0 auto;
     // padding: 1rem 0 2rem;
     // color: $gray;
     // text-align: center;
@@ -40,17 +42,6 @@
 
   button {
     @include btn-blue();
-  }
-
-  .container {
-    @include md {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      place-items: center;
-      width: 45vw;
-      margin: 0 auto;
-      gap: 1rem;
-    }
   }
 
   .stores {

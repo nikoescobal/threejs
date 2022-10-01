@@ -6,7 +6,7 @@ function Download() {
   const { isDarkMode } = useStore();
 
   return (
-    <section className={`${styles.section} spacing-x`}>
+    <section className={`${styles.section} spacing-x max-1920`}>
       <h3>Download our pre-launch app </h3>
       <p>
         For our early users we have carefully prepared a pre-launch app that
@@ -16,10 +16,7 @@ function Download() {
       </p>
       <div className={`${styles.container}`}>
         <div className={`${styles.imgwrapper}`}>
-          <img src="/downloads/download1.png" alt="download 1" />
-        </div>
-        <div className={`${styles.imgwrapper}`}>
-          <img src="/downloads/download2.png" alt="download 2" />
+          <img src="/mockups/2.png" alt="app preview" />
         </div>
       </div>
         <h4>Coming soon</h4>

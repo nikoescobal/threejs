@@ -32,6 +32,7 @@ function Ln() {
       ${!isDarkMode ? `${styles.light}` : ''}
       spacing-x
       app-preview
+      max-1920
     `}
     >
         <h3>Highlight Features</h3>

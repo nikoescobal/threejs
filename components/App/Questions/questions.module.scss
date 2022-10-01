@@ -7,8 +7,8 @@
   padding-top: 8rem;
   position: relative;
 
-  & > div:last-of-type {
   background: linear-gradient(transparent 60%, rgba($color: $ln-blue, $alpha: 0.2));
+  & > div:last-of-type {
     position: relative;
   }
   

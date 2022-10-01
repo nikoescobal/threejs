@@ -31,7 +31,7 @@ function Benefits() {
       ${!isDarkMode ? `${styles['light']}` : ''}
       spacing-x`}
     >
-      <div className={`${generics['alternating-rows']}`}>
+      <div className={`${generics['alternating-rows']} max-1920`}>
         <div style={{marginBottom: '4rem'}}>
           <img src="/downloads/download1.png" alt="" />
         </div>
@@ -49,7 +49,7 @@ function Benefits() {
           </p>
         </ClearContainer>
       </div>
-      <div className={`${generics['alternating-rows']}`}>
+      <div className={`${generics['alternating-rows']} max-1920`}>
         <div><img src="/nft/char-with-iphone.png" alt="" className={`${styles.scaled}`}/></div>
         <ClearContainer
           title="NFT"
@@ -62,7 +62,7 @@ function Benefits() {
           </p>
         </ClearContainer>
       </div>
-      <div className={`${generics['alternating-rows']}`}>
+      <div className={`${generics['alternating-rows']} max-1920`}>
         <div style={{
           marginBottom: '4rem',
           scale: `${scale}`

@@ -10,12 +10,12 @@ function Questions() {
 
   return (
     <section
-      className={`${styles.section} ${!isDarkMode ? `${styles.light}` : ''} `}
+      className={`${styles.section} ${!isDarkMode ? `${styles.light}` : ''}`}
     >
-      <div className={styles.staff}>
+      <div className={`${styles.staff} max-1920`}>
         <Image src={Staff} alt="" draggable="false" />
       </div>
-      <div className='spacing-x'>
+      <div className='spacing-x max-1920'>
         <h3>
           The Legacy Network app answers three essential questions for the user
         </h3>
