@@ -32,17 +32,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles['hammer-wrapper']}>
-        <Parallax speed={60} className={styles['hammer']}>
-          <Image className="" src={Hammer} alt="hammer" draggable="false" />
-        </Parallax>
+      <div className={`${styles['hammer-wrapper']}`}>
+        <div className="max-1920">
+          <Parallax speed={60} className={styles['hammer']}>
+            <Image className="" src={Hammer} alt="hammer" draggable="false" />
+          </Parallax>
+        </div>
         <Header />
         <div
           className={`${styles['clear-container-wrapper']} ${generics['spacing-x']}`}
         >
           <ClearContainer
             title={"The world's most innovative personal development app"}
-            styles={{ background: 'url(assets/parallax/waves-layered.svg)' }}
+            style={{ maxWidth: '1024px' }}
             textAlign="center"
           >
             <ul style={{

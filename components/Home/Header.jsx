@@ -13,7 +13,7 @@ function Header() {
   const { isDarkMode } = useStore((state) => state);
   
   return (
-    <div className={`${styles.container} ${!isDarkMode ? `${styles.light}` : ''}`}>
+    <div className={`${styles.container} ${!isDarkMode ? `${styles.light}` : ''} max-1920`}>
       <Gradient style={{
         top: '-12%',
         right: '-5%',
@@ -21,7 +21,7 @@ function Header() {
         }} />
       <WaveLines className={styles['waves-wrapper']} />
       <section className={`${generics.header} ${styles.header} header-intro ${generics['spacing-x']} ${generics['spacing-t']}`}>
-        <div className={`${generics['img-wrapper']}`} style={{scale: '1.5'}}>
+        <div className={`${generics['img-wrapper']}`} style={{scale: '1.5', display: 'flex', justifyContent: 'center'}}>
           {/* <Image src={Logo} alt="logo" /> */}
           <LogoParticles />
         </div>

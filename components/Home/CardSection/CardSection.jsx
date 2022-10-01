@@ -17,7 +17,7 @@ function CardSection() {
 
   return (
     <div
-      className={`${styles.wrapper} ${!isDarkMode ? `${styles.light}` : ''}`}
+      className={`${styles.wrapper} ${!isDarkMode ? `${styles.light}` : ''} max-1920`}
     >
       <div className={styles['img-wrapper']}>
         <Image src={Chests} alt="chests" />

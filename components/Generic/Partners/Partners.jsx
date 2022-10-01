@@ -49,10 +49,10 @@ function Partners() {
 
   return (
     <section
-      className={`${styles.partners} ${!isDarkMode ? `${styles.light}` : ''}`}
+      className={`${styles.partners} ${!isDarkMode ? `${styles.light}` : ''} `}
     >
       <h3 className={`${generics['spacing-x']}`}>Our Partners</h3>
-      <div className={`${styles['logos-wrapper']} ${generics['spacing-x']}`}>
+      <div className={`${styles['logos-wrapper']} ${generics['spacing-x']} max-1920`}>
         {partners.map((logo) => (
           <div key={logo.alt}>
             <img

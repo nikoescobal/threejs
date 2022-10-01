@@ -23,7 +23,7 @@ function App() {
         <Image src={Waves} alt="" />
       </div> */}
       <WaveLines className={styles['waves-wrapper']} />
-      <div className={`${generics['alternating-rows']}`}>
+      <div className={`${generics['alternating-rows']} max-1920`}>
         <div>
           <img src="/illustrations/iPhone.png" alt="" />
         </div>
@@ -41,7 +41,7 @@ function App() {
           </p>
         </ClearContainer>
       </div>
-      <div className={`${generics['alternating-rows']}`}>
+      <div className={`${generics['alternating-rows']} max-1920`}>
         <div>
           <img src="/illustrations/ai.png" alt="" />
         </div>
