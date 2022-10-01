@@ -10,7 +10,7 @@ function StakingSection() {
   const { isDarkMode } = useStore();
   
   return (
-    <div className={`${styles['staking-section']} ${generics['spacing-x']} ${!isDarkMode ? `${styles.light}` : ''}`}>
+    <div className={`${styles['staking-section']} ${generics['spacing-x']} ${!isDarkMode ? `${styles.light}` : ''} max-1920`}>
       <h3>How the staking works</h3>
       <div className={`${styles['steps-wrapper']}`}>
         <div className={`${styles['step']}`}>

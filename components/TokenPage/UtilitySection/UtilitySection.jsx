@@ -6,27 +6,27 @@ function UtilitySection() {
 
   const data = [
     {
-      img: '/illustrations/world.svg',
+      img: '/icons/util1.svg',
       text: 'Free access to the ecosystem',
     },
     {
-      img: '/illustrations/rounded-grid.svg',
+      img: '/icons/util2.svg',
       text: 'Share distribution',
     },
     {
-      img: '/illustrations/balance.svg',
+      img: '/icons/util3.svg',
       text: 'Access to special areas within the app',
     },
     {
-      img: '/illustrations/person.svg',
+      img: '/icons/util4.svg',
       text: 'In-game character',
     },
     {
-      img: '/illustrations/medal.svg',
+      img: '/icons/util5.svg',
       text: 'High play-to-earn reward',
     },
     {
-      img: '/illustrations/medal.svg',
+      img: '/icons/util6.svg',
       text: 'Network opportunities',
     },
   ];
@@ -35,7 +35,7 @@ function UtilitySection() {
     <section
       className={`${styles.wrapper}  ${
         !isDarkMode ? `${styles.light}` : ''
-      } spacing-x`}
+      } spacing-x max-1920`}
     >
       <h3>NFT Utility</h3>
       <p>

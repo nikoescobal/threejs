@@ -7,7 +7,7 @@ function SidePressureSection() {
   const { isDarkMode } = useStore();
   
   return (
-    <section className={`${styles.section} ${generics['spacing-x']} ${!isDarkMode ? `${styles.light}` : ''}`}>
+    <section className={`${styles.section} ${generics['spacing-x']} ${!isDarkMode ? `${styles.light}` : ''} max-1920`}>
       <div className={styles['text-wrapper']}>
         <h3>A real utility token depegged from the market</h3>
         <p>

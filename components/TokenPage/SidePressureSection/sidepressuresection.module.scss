@@ -8,6 +8,11 @@
   background: linear-gradient(rgba($color: $light-background, $alpha: 0.2) 10%, transparent);
 }
 
+.section p {
+  max-width: 95ch;
+  margin: 0 auto;
+}
+
 .text-wrapper {
   text-align: center;
 }
@@ -28,6 +33,7 @@
   border-radius: 8px;
   width: 30%;
   min-width: 20rem;
+  max-width: 21rem;
 }
 
 .light .card {

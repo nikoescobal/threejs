@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 function BlockChainBanner() {
   return (
-    <div className={`${styles.wrapper} spacing-x`}>
+    <div className={`${styles.wrapper} spacing-x max-1920`}>
       <div className={`alternating-rows`}>
         <div>
           <Image src={BlockChainImg} alt="" />

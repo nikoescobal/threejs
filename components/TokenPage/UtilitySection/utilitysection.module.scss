@@ -11,14 +11,21 @@
 }
 
 .grid img {
-  max-width: 12rem;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 50%;
+  max-width: 6rem;
+  margin-bottom: 1rem;
   aspect-ratio: 1;
-  border: 1px solid $ln-blue;
+}
+
+.grid p {
+  color: #ACACAC;
+}
+
+.light .grid p {
+  color: #62688F;
 }
 
 .light .grid img {
   // filter: invert(0.5);
-  filter: invert(48%) sepia(80%) saturate(3488%) hue-rotate(208deg) brightness(101%) contrast(83%);
+  // filter: invert(48%) sepia(80%) saturate(3488%) hue-rotate(208deg) brightness(101%) contrast(83%);
+  filter: invert(50%) sepia(12%) saturate(4821%) hue-rotate(196deg) brightness(95%) contrast(93%);
 }

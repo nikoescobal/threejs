@@ -160,36 +160,15 @@ svg.arrow {
 }
 
 @media only screen and (min-width: 768px) {
-  // .chart-wrapper {
-  //   position: relative;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: flex-start;
-  //   flex-direction: row;
-  // }
-  
-  // .donut-wrapper {
-  //   margin: 0;
-  //   min-width: 30rem;
-  //   transform: translateX(-45%);
-  // }
-  
-  // .chart-content {
-  //   transform: translateX(-40%);
-  // }
 
   .arrow {
     display: inline-block;
-    // position: absolute;
     max-width: 8rem;
     height: min-content;
     cursor: pointer;
-    // bottom: -10rem;
     top: auto;
     right: 20%;
   }
-
-
 
   .light .arrows-wrapper {
     filter: brightness(0);
@@ -204,12 +183,10 @@ svg.arrow {
   }
   
   .arrow.left {
-    // left: 20%;
     transform: scaleX(1) translateX(-20%) ;
     rotate: 180deg;
     top: -20%;
     left: auto;
-    // top: 20%;
   }
   
   .arrow.right {
@@ -229,12 +206,12 @@ svg.arrow {
     align-items: center;
     justify-content: flex-start;
     flex-direction: row;
+    transform: translate(-15%);
   }
   
   .donut-wrapper {
     margin: 0;
     min-width: 30rem;
-    transform: translateX(-45%);
   }
   
   .donut-wrapper::before {
@@ -242,34 +219,18 @@ svg.arrow {
     background: $dark-background;
     height: calc(100% + 5rem);
     aspect-ratio: 1;
-    // width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     border-radius: 50%;
     transform: translate(-40%, -50%);
-    // z-index: 1;
   }
 
-  .light .donut-wrapper::before {
-    // background: $light-mode-waves-color;
-  }
-  
   .chart-content,
   .light .chart-content {
     transform: translateX(0%);
     background: none;
     min-width: 60vw;
-  }
-
-  .chart-content::before {
-    // content: '';
-    // position: absolute;
-    // top: 0;
-    // left: 0;
-    // width: 100%;
-    // height: 100%;
-    // box-shadow: 0px 00px 0px 100vw rgba(255, 255, 255, 0.05);
   }
 
   .descriptions {
@@ -278,11 +239,9 @@ svg.arrow {
   
   .bg {
     position: relative;
-    transform: translateX(-28%);
     padding-bottom: 1.5rem;
-    // transform: translateX(-28%);
-    // clip-path: ellipse(67% 100% at 70% 50%);
     overflow: hidden;
+    max-width: 768px;
   }
 
   .bg::before {
@@ -293,7 +252,6 @@ svg.arrow {
     transform: translate(-50%, -50%);
     width: 100%;
     height: 200%;
-    // aspect-ratio: 1;
     border-radius: 100%;
     overflow: hidden;
     box-shadow: 0px 00px 0px 100vw rgba(255, 255, 255, 0.05);
@@ -301,5 +259,10 @@ svg.arrow {
   
   .light .bg::before {
     box-shadow: 0px 00px 0px 100vw $transparent-light;
+  }
+
+  .chart-content {
+    padding-left: 15%;
+    padding-right: 15%;
   }
 }

@@ -15,7 +15,7 @@ function NFTSection() {
         !isDarkMode ? `${styles.light}` : ''
       }`}
     >
-      <div className={styles['text-wrapper']}>
+      <div className={`${styles['text-wrapper']} max-1920`}>
         <h3>Discover Our NFT</h3>
         <p>
           The Legacy Network NFT is an in-game character with a unique set of
@@ -25,7 +25,7 @@ function NFTSection() {
           resulting in unique and epic combinations for you to own!
         </p>
       </div>
-      <div className={styles['first-card-section']}>
+      <div className={`${styles['first-card-section']} max-1920`}>
         <div className={styles['text-section']}>
           <h3>20</h3>
           <h4>Legendary NFTs</h4>
@@ -38,7 +38,7 @@ function NFTSection() {
           <h4>Total NFTs</h4>
         </div>
       </div>
-      <div className={styles['nft-card-section']}>
+      <div className={`${styles['nft-card-section']} max-1920`}>
         <div>
           <CharacterCard
             srcOne={'/nft/viking1.png'}

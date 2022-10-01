@@ -7,8 +7,7 @@ function CharacterCard({children, srcOne, altOne, srcTwo, altTwo, isQuestionMark
   const { isDarkMode } = useStore();
   
   return (
-    <div className={`${styles.wrapper} ${!isDarkMode ? `${styles.light}` : ''} ${className}`}>
-      <div className={styles.card}>
+    <div className={`${styles.wrapper} ${styles.card} ${!isDarkMode ? `${styles.light}` : ''} ${className} ${isQuestionMark ? `${styles.question}` : ''}` }>
         <h4>{children}</h4>
         <div>
           { isQuestionMark
@@ -21,7 +20,6 @@ function CharacterCard({children, srcOne, altOne, srcTwo, altTwo, isQuestionMark
           <Image src={srcTwo} alt={altTwo} layout="fill"
   objectFit="contain" />
         </div> */}
-      </div>
     </div>
   )
 }

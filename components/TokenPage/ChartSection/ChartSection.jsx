@@ -8,7 +8,7 @@ function ChartSection() {
   const { isDarkMode } = useStore();
   
   return (
-    <div className={`${styles.wrapper} ${!isDarkMode ? `${styles.light}` : ''}`}>
+    <div className={`${styles.wrapper} ${!isDarkMode ? `${styles.light}` : ''} max-1920`}>
       <Gradient
         style={{
           top: '50%',
@@ -26,7 +26,9 @@ function ChartSection() {
       <div className={styles['button-wrapper']}>
         <button type='button' className='button-blue'>Read more</button>
         <button type='button' className='button-blue'>Our smart contract</button>
-        <button type='button' className='button-blue'>Our audit response</button>
+        <a href='/pdf/audit_report.pdf' download="audit-report" className='button-blue'>
+          Our audit response
+        </a>
       </div>
     </div>
   )
