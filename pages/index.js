@@ -46,7 +46,7 @@ export default function Home() {
             textAlign="center"
           >
             <ul style={{
-              margin: '0 auto',
+              margin: '0',
               textAlign: 'left',
             }}>
               <li>
