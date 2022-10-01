@@ -48,8 +48,9 @@ export default function Home() {
             textAlign="center"
           >
             <ul style={{
-              margin: '0',
+              margin: '0 auto',
               textAlign: 'left',
+              padding: '0 1rem'
             }}>
               <li>
                 Playfully improve all areas of your life
