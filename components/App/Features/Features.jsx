@@ -42,7 +42,7 @@ function Features() {
           !isDarkMode ? `${styles.light}}` : ''
         } spacing-x`}
       >
-        <h3>Key Features of the personal development App</h3>
+        <h3>Key Features of the Legacy Network App</h3>
 
         <div className={`${styles.content}`}>
           <div className={`${styles.imgwrapper}`}>

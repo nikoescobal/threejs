@@ -71,7 +71,7 @@ function Navbar() {
                 <Link href="/security" className={router.pathname === "/security" ? `${styles.active}` : ""}>Security</Link>
               </span>
               <span className={router.asPath === "/blogs" ? `${styles.active}` : ""}>
-                <Link href="/" className={router.pathname === "/" ? `${styles.active}` : ""}>Blogs</Link>
+                <Link href="/" className={router.pathname === "/" ? `${styles.active}` : ""}>Blog</Link>
               </span>
             </div>
             <button type="button" onClick={toggle} className={`${styles['dark-mode-toggle']} ${isDarkMode ? '' : 'light'}`}>
