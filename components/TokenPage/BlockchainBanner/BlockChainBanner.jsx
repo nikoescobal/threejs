@@ -16,10 +16,7 @@ function BlockChainBanner() {
           reducedPadding
         >
           <p>
-            The Legacy Network app is divided in a health and an education area.
-            The education area is where users learn how to achieve their
-            individual goals by reprogramming their minds, developing effective
-            characteristics and forming new, positive habits.
+            The Legacy Network Token will be available on multiple blockchains. VeChain as native blockchain, as well as Binance smart chain, Ethereum and Polygon. The goal of multiple blockchains is to address a target group as broad as possible, and to use the individual advantages of the respective blockchains. The circulation supply of the respective tokens is balanced by means of atomic swap, so that the statistics of the tokens cannot change independently of each other. For transferring tokens between the different blockchains, the new cross-chain bridge of safeswap is used. 
           </p>
         </ClearContainer>
       </div>

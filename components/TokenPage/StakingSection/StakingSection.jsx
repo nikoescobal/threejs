@@ -11,42 +11,42 @@ function StakingSection() {
   
   return (
     <div className={`${styles['staking-section']} ${generics['spacing-x']} ${!isDarkMode ? `${styles.light}` : ''}`}>
-      <h3>How staking works</h3>
+      <h3>How the staking works</h3>
       <div className={`${styles['steps-wrapper']}`}>
         <div className={`${styles['step']}`}>
           <p>Step 1:</p>
           <p>
-            Allocate your assets
+            Get LGCN token
           </p>
           <div>
             <Image src={Money} alt="money" />
           </div>
           <p>
-            Allocate your assets for either Staking or Vesting.
+            You can get your hands on LGCN token by using our ecosystem, by participating in raffles or by buying them on the open market.
           </p>
         </div>
         <div className={`${styles['step']}`}>
           <p>Step 2:</p>
           <p>
-            Freeze your shares for specific period of time
+             Freeze your tokens in the app
           </p>
           <div>
             <Image src={Wallet} alt="wallet" />
           </div>
           <p>
-            Freeze (lock up) your shares up for minimum 3 month to maximum 24 months.
+            As an early adopter, you can freeze your LGCN tokens for 3 – 24 months within our pre-launch app (coming soon).
           </p>
         </div>
         <div className={`${styles['step']}`}>
           <p>Step 3:</p>
           <p>
-            Compound or withdraw
+            Get rewarded
           </p>
           <div>
             <Image src={Stack} alt="stack" />
           </div>
           <p>
-            Automatically compound your returns or enjoy them as cash flow.
+            Profit from staking rewards.
           </p>
         </div>
       </div>

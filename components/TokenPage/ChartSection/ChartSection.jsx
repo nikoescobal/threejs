@@ -16,12 +16,13 @@ function ChartSection() {
         }}
        />
       <div className={`${styles['text-wrapper']} ${generics['spacing-x']}`}>
-        <h3>The Tokenomics</h3>
+        <h3>Token allocation</h3>
         <p>
-          Behind a real utility token, the tokenomics covers all aspects involving a coin&apos;s creation, management, and sometimes removal from a network. We break down each of these concepts below.
+          Transparency, security and fairness are part of our core values. For this reason, all tokens will be vested in smart-contracts and the vesting-schedule will be publicly communicated. It’s in our best interest to make our token as decentral and stable as possible.
         </p>
       </div>
       <RotatingChart />
+      <p style={{textAlign: 'center', transform: 'translateY(-75%)'}}>Vesting schedule coming soon</p>
       <div className={styles['button-wrapper']}>
         <button type='button' className='button-blue'>Read more</button>
         <button type='button' className='button-blue'>Our smart contract</button>

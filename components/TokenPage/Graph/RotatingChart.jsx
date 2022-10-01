@@ -11,14 +11,21 @@ function RotatingChart() {
   const data = [
     {
       title: 'Ecosystem',
-      description: 'test',
+      description: [
+        'Exchange liquidity',
+        'Play to earn pool',
+        'Staking pool',
+      ],
       percentage: 30,
       color: '#f73094',
       offset: 15
     },
     {
       title: 'Token Sale',
-      description: 'test 2',
+      description: [
+        'Private sale',
+        'Public sale',
+      ],
       percentage: 20,
       color: '#775dd0',
       offset: 85,
@@ -28,7 +35,9 @@ function RotatingChart() {
     },
     {
       title: 'Development',
-      description: 'Development has an allocation of 15% which cut across design, research and development.',
+      description: [
+        'Reserve for further development',
+      ],
       percentage: 15,
       color: '#ff4560',
       offset: 65,
@@ -38,7 +47,9 @@ function RotatingChart() {
     },
     {
       title: 'Team',
-      description: 'test 3',
+      description: [
+        'Rewards for our amazing team members'
+      ],
       percentage: 15,
       color: '#feb019',
       offset: 50,
@@ -48,7 +59,11 @@ function RotatingChart() {
     },
     {
       title: 'Community & Marketing',
-      description: 'test 4',
+      description: [
+        'Community events',
+        'Marketing deals',
+        'Raffles'
+      ],
       percentage: 10,
       color: '#00e396',
       offset: 35,
@@ -58,7 +73,9 @@ function RotatingChart() {
     },
     {
       title: 'Advisors & Partners',
-      description: 'test 5',
+      description: [
+        'Rewards for people who helped us along the way'
+      ],
       percentage: 10,
       color: '#008ffb',
       offset: 25,
@@ -148,9 +165,13 @@ function RotatingChart() {
             <h4>
               {data[selectedIndex].title}
             </h4>
-            <p>
-              {data[selectedIndex].description}
-            </p>
+            <ul className={styles.descriptions}>
+              {data[selectedIndex].description.map((desc) => (
+                <li key={desc} >
+                  {desc}
+                </li>
+              ))}
+            </ul>
             <div className={styles['arrows-wrapper']}>
               <Image src={Arrow} alt="arrow-left" onClick={turnCounterClockwise} />
               <Image src={Arrow} alt="arrow-right" onClick={turnClockwise} />

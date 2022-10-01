@@ -9,9 +9,9 @@ function SidePressureSection() {
   return (
     <section className={`${styles.section} ${generics['spacing-x']} ${!isDarkMode ? `${styles.light}` : ''}`}>
       <div className={styles['text-wrapper']}>
-        <h3>A real utility token with healthy buyside pressure</h3>
+        <h3>A real utility token depegged from the market</h3>
         <p>
-          One of our main goal is to create a real utility token with constant, non-spculative buy side
+          A defined real utility token is depegged from on-going market conditions and shouldn&apos;t necessarily crash in a bear market. For this reason we aim to create a token with constant, non-speculative buy side pressure. We achieve this by offering several attractive utilities which aren&apos;t directly related to the crypto industry. These utilities can only be accessed by using LGCN token and the demand for them stays the same or even grows within a bear market.
         </p>
       </div>
       <div className={`${styles['cards-wrapper']}`}>
@@ -21,7 +21,7 @@ function SidePressureSection() {
           </div>
           <div>
             <h4>Subscriptions</h4>
-            <span>Possible explanation</span>
+            <span>All subscriptions are paid in LGCN token.</span>
           </div>
         </div>
         <div className={`${styles['card']}`}>
@@ -29,8 +29,8 @@ function SidePressureSection() {
             <MovingIcon />
           </div>
           <div>
-            <h4>Subscriptions</h4>
-            <span>Possible explanation</span>
+            <h4>In-app purchases</h4>
+            <span>All in-app purchases are paid in LGCN token.</span>
           </div>
         </div>
         <div className={`${styles['card']}`}>
@@ -38,8 +38,8 @@ function SidePressureSection() {
             <MovingIcon />
           </div>
           <div>
-            <h4>Subscriptions</h4>
-            <span>Possible explanation</span>
+            <h4>Staking rewards</h4>
+            <span>Exclusive benefits for long-term believers.</span>
           </div>
         </div>
         <div className={`${styles['card']}`}>
@@ -47,8 +47,8 @@ function SidePressureSection() {
             <MovingIcon />
           </div>
           <div>
-            <h4>Subscriptions</h4>
-            <span>Possible explanation</span>
+            <h4>Non-crypto utility</h4>
+            <span>The demand for our utility doesn&apos;t decrease in a bear-market.</span>
           </div>
         </div>
         <div className={`${styles['card']}`}>
@@ -56,8 +56,8 @@ function SidePressureSection() {
             <MovingIcon />
           </div>
           <div>
-            <h4>Subscriptions</h4>
-            <span>Possible explanation</span>
+            <h4>More in future</h4>
+            <span>More exciting features will be announced on a regular basis!</span>
           </div>
         </div>
       </div>

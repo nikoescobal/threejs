@@ -14,24 +14,24 @@ function HexagonSlider() {
   const { isDarkMode } = useStore((state) => state);
   const data = [
     {
-      title: 'title 1',
-      body: 'body 1',
+      title: 'Get rewarded for learning',
+      body: 'Our goal is to make education as playful and entertaining as possible. Many people struggle with building the necessary discipline to educate themselves on a regular basis. The main reason for this problematic is found in neurology. As things stand today, most people are neurologically addicted to instant gratification, short-termed dopamine release within the brain. We aim to take advantage of this effect and to use it for the user instead of using it against him',
     },
     {
-      title: 'title 2',
-      body: 'body 2',
+      title: 'Get access to our products and services',
+      body: 'The LGCN token serves as the main payment method for subscriptions and purchases within our ecosystem. This allows us to create automatisms such as redistributions and to act independently of third-party providers.',
     },
     {
-      title: 'title 3',
-      body: 'body 3',
+      title: 'Stake your LGCN for additional benefits',
+      body: 'Staking your LGCN will grant you additional benefits such as staking rewards, airdrops, whitelist spots, discounts and access to exclusive services. ',
     },
     {
-      title: 'title 4',
-      body: 'body 4',
+      title: 'Business to business utility',
+      body: 'We plan to make selected parts of our ecosystem such as content libraries and code accessible for other businesses in future. The LGCN token will be needed to access our B2B services which will benefit the community.',
     },
     {
-      title: 'title 5',
-      body: 'body 5',
+      title: 'More about to come',
+      body: `We haven't even started yet! Our goal is to create as much value for our community as possible. For this reason, new, exciting features will be announced on a regular basis.`,
     },
     {
       title: 'title 6',

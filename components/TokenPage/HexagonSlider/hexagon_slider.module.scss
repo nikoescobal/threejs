@@ -41,6 +41,7 @@ $width: 20rem;
   transform-style: preserve-3d;
   transform-origin: 50% 50%;
   perspective-origin: 50% 50%;
+  padding: 1rem;
 }
 
 .top, .bottom {
@@ -83,6 +84,8 @@ $width: 20rem;
   text-align: center;
   line-height: 100px;
   outline: 1px solid transparent;
+  color: white;
+
   // -webkit-perspective: 1000px;
   // text-shadow: 0 0 1px #101010;
 
@@ -90,7 +93,12 @@ $width: 20rem;
 
 .active {
   background: $ln-blue !important;
-  color: white;
+
+  color: white !important;
+  h3 {
+    color: white !important;
+
+  }
 }
 
 .arrows-wrapper {
@@ -110,20 +118,29 @@ $width: 20rem;
 
 .side h3,
 .side p {
-  scale: 0.5;
+  // scale: 0.5;
+}
+
+.light .side h3,
+.light .side p {
+  // scale: 0.5;
 }
 
 .side h3 {
   // font-size: clamp(2.8rem, 10vw, 3rem);
-  font-size: 4rem;
+  font-size: 1rem;
 }
 
 .side p {
-  font-size: 1.5rem;
+  transform: translateY(-2rem);
+  font-size: 0.6rem;
+  padding: 0 1rem;
 }
 
 .light .side {
   background: rgba($color: #000000, $alpha: 0.2);
+  color: $light-mode-text-color;
+
 }
 
 // .top {
