@@ -28,8 +28,7 @@ function Footer() {
       
       <section>
         <div className={`${styles.footer__main}`}>
-          <div className={`${styles.footer__column}`}>
-            {/* <span className={`${styles.footer__column__title}`}>Resources</span> */}
+          {/* <div className={`${styles.footer__column}`}>
             <div className={`${styles.footer__column__items__wrapper}`}>
               <Link href="/" className={`${styles.footer__column__item}`}>
                 Projects
@@ -44,7 +43,7 @@ function Footer() {
                 Discord
               </Link>
             </div>
-          </div>
+          </div> */}
           <div className={`${styles.footer__column}`}>
             {/* <span className={`${styles.footer__column__title}`}>Company</span> */}
             <div className={`${styles.footer__column__items__wrapper}`}>
