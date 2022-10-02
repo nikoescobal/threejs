@@ -37,3 +37,8 @@
   transform: translateY(-50%);
   opacity: 0.2;
 }
+
+.wrapper p,
+.wrapper ol li {
+  max-width: 70ch;
+}
