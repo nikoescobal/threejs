@@ -20,7 +20,7 @@ function GenericHeader({title, subtitle, rightObj, waves}) {
         {waves}
       {/* </div> */}
       <section className={`${generics.header} ${styles.header} header-intro ${generics['spacing-x']} ${generics['spacing-t']}`}>
-        <div className={`${generics['img-wrapper']}`} style={{display: 'flex', justifyContent: 'center'}}>
+        <div className={`${generics['img-wrapper']}`}>
           {rightObj}
           {/* <img src={imageUrl} alt={imageAlt} /> */}
         </div>

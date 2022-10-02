@@ -1,0 +1,47 @@
+@import '../../../styles/variables';
+
+.wrapper {
+  position: relative;
+}
+
+.wrapper span,
+.wrapper p {
+  text-decoration: none;
+  font-weight: 600;
+  font-family: "montserrat", serif !important;
+  font-size: 0.75rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.light span {
+  color: $light-mode-text-color;
+}
+
+.hover-text {
+  position: absolute;
+  top: 55%;
+  left: 6rem;
+  border-radius: 8px;
+  transform: translateY(-50%);
+  background: rgb(48, 48, 48);
+  padding: 0 1rem;
+  z-index: 3;
+  min-width: max-content;
+}
+
+.light .hover-text {
+  background: $light-mode-primary;
+  color: $light-mode-text-color
+}
+
+.wrapper:hover .hover-text {
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  .hover-text {
+    display: none;
+    left: auto;
+    right: -8rem;
+  }
+}

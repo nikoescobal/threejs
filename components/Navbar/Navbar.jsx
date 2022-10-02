@@ -11,6 +11,7 @@ import useStore from '../../store/store';
 import Link from 'next/link'
 import styles from './navbar.module.scss'
 import Image from 'next/image';
+import LinkHover from '../Generic/LinkHover/LinkHover';
 
 function Hamburger({ onClick, className }) {
   return (
@@ -71,7 +72,20 @@ function Navbar() {
                 <Link href="/security" className={router.pathname === "/security" ? `${styles.active}` : ""}>Security</Link>
               </span>
               <span className={router.asPath === "/blogs" ? `${styles.active}` : ""}>
-                <Link href="/" className={router.pathname === "/" ? `${styles.active}` : ""}>Blog</Link>
+                <LinkHover hoverText={"(Coming Soon)"}>
+                  Blog
+                </LinkHover>
+                {/* <Link href="/" className={router.pathname === "/" ? `${styles.active}` : ""}>Blog</Link> */}
+              </span>
+              <span className={router.asPath === "/blogs" ? `${styles.active}` : ""}>
+                <LinkHover hoverText={"(Coming Soon)"}>
+                  Community
+                </LinkHover>
+              </span>
+              <span className={router.asPath === "/blogs" ? `${styles.active}` : ""}>
+                <LinkHover hoverText={"(Coming Soon)"}>
+                  Win
+                </LinkHover>
               </span>
             </div>
             <button type="button" onClick={toggle} className={`${styles['dark-mode-toggle']} ${isDarkMode ? '' : 'light'}`}>
