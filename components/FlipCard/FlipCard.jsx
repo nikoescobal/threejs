@@ -1,8 +1,9 @@
+import LinkedIn from '@mui/icons-material/LinkedIn';
 import PropTypes from 'prop-types';
 import useStore from '../../store/store';
 import styles from './flipcard.module.scss';
 
-function FlipCard({ className, disableFlip, visible }) {
+function FlipCard({ className, disableFlip, visible, profileLink, picture, name }) {
   const { isDarkMode } = useStore((state) => state);
   
   return (
@@ -14,10 +15,18 @@ function FlipCard({ className, disableFlip, visible }) {
       ${visible ? '' : 'invisible'}`}>
       <div className={`${styles['flip-content']}`}>
         <div className={`${styles['flip-front']}`}>
-          {!disableFlip && 'Front'}
+          {!disableFlip && <img src={picture} alt="" />}
         </div>
         <div className={`${styles['flip-back']}`}>
-          {!disableFlip && 'Back'}
+          {!disableFlip && 
+            <div>
+              <p>{name}</p>
+              
+              <a href={profileLink} rel='noreferrer' target="_blank">
+                <LinkedIn />
+              </a>
+            </div>
+          }
         </div>
       </div>
     </div>

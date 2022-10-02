@@ -44,7 +44,7 @@
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(15px);
   border-radius: 20px;
-  padding: 1rem;
+  // padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,9 +58,46 @@
 
 .flip-front {
   backface-visibility: hidden;
+  overflow: hidden;
 }
 .flip-back {
   transform: rotateY(180deg);
   outline: 1px solid transparent;
   backface-visibility: hidden;
+}
+
+.flip-front img {
+  width: 100%;
+  object-fit: cover;
+  object-position: left bottom;
+}
+
+.flip-back div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  // font-size: 3rem;
+}
+
+.light p {
+  color: $light-mode-secondary;
+}
+
+.flip-back a {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.25rem;
+  // height: 100% !important;
+  // width: 100% !important;
+}
+
+.flip-back svg {
+  display: block !important;
+  font-size: 3rem;
+  fill: $ln-blue;
+}
+
+.light svg {
+  fill: $light-mode-secondary;
 }
