@@ -20,7 +20,7 @@ function Partners() {
       class: 'niedermuller',
     },
     {
-      endpoint: 'sercor.svg',
+      endpoint: 'sercor1.png',
       alt: 'seratio logo',
       class: 'sercor',
     },
@@ -40,9 +40,14 @@ function Partners() {
       class: 'red4sec',
     },
     {
-      endpoint: 'maerki.svg',
+      endpoint: 'maerki.png',
       alt: 'maerki logo',
       class: 'maerki',
+    },
+    {
+      endpoint: 'saynode.png',
+      alt: 'saynode logo',
+      class: 'saynode',
     },
   ];
   const { isDarkMode } = useStore((state) => state);
