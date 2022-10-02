@@ -67,22 +67,22 @@ function Footer() {
           </div>
           <div className={`${styles.footer__column}`}>
             {/* <span className={`${styles.footer__column__title}`}>Contact Us</span> */}
-            <div className={`${styles.footer__column__items__wrapper}`}>
-              <a href="mailto:hello@legacynetwork.io" className={`${styles.footer__column__item}`}>
+            <div className={`${styles.items__wrapper}`}>
+              <span className={`${styles.footer__column__ite}`}>
                 hello@legacynetwork.io
-              </a>
-              <Link href={"/"} className={`${styles.footer__column__item}`}>
+              </span>
+              <span className={`${styles.footer__column__item}`}>
                 Äulestr. 74
-              </Link>
-              <Link href="/" className={`${styles.footer__column__item}`}>
+              </span>
+              <span href="/" className={`${styles.footer__column__item}`}>
                 9490 Vaduz
-              </Link>
-              <Link href="/" className={`${styles.footer__column__item}`}>
+              </span>
+              <span href="/" className={`${styles.footer__column__item}`}>
                 Liechtenstein
-              </Link>
-              <Link href="/" className={`${styles.footer__column__item}`}>
+              </span>
+              <span href="/" className={`${styles.footer__column__item}`}>
                 0002.683.628-2
-              </Link>
+              </span>
               {/* <div className={`${styles.footer__socials}`}>
                 <Link href="/" target="_blank">
                   <TwitterIcon />

@@ -100,8 +100,12 @@
 .footer__column > div {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  // gap: 1.5rem;
   justify-content: space-between;
+}
+
+.footer__column:last-of-type > div {
+  gap: 0.5rem;
 }
 
 .footer__column__title {
