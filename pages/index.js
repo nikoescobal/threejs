@@ -47,22 +47,30 @@ export default function Home() {
             style={{ maxWidth: '1024px' }}
             textAlign="center"
           >
-            <ul style={{
+            <ul
+              className={styles['list-wrapper']}
+             style={{
               margin: '0 auto',
               textAlign: 'center',
               padding: '0 1rem'
             }}>
               <li>
-                Playfully improve all areas of your life
+                <span>
+                  Connect with likeminded people and create your own legacy 
+                </span>
               </li>
               <li>
-                Learn about the things school didn&apos;t teach you
+                <span>
+                  Receive individual quests for your personal growth
+                </span>
               </li>
               <li>
-                Receive individual quests for your personal growth
+                <span>
+                  Learn about the things school didn&apos;t teach you
+                </span>
               </li>
               <li>
-                Connect with likeminded people and create your own legacy 
+                <span>Playfully improve all areas of your life</span>
               </li>
             </ul>
           </ClearContainer>

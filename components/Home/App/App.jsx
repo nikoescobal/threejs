@@ -24,8 +24,8 @@ function App() {
       </div> */}
       <WaveLines className={styles['waves-wrapper']} />
       <div className={`${generics['alternating-rows']} max-1920`}>
-        <div>
-          <img src="/illustrations/iPhone.png" alt="" />
+        <div className={styles['mockup-wrapper']}>
+          <img src="/mockups/3.png" alt="" />
         </div>
         <ClearContainer
           title="A whole ecosystem designed to support you in building your dream life"

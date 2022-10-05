@@ -33,6 +33,26 @@
   transform: rotateZ(-55deg);
 }
 
+.list-wrapper {
+  list-style: none;
+}
+
+.list-wrapper span {
+  position: relative;
+}
+
+.list-wrapper span::before {
+  // content: "";
+  position: absolute;
+  top: 50%;
+  left: -1rem;
+  transform: translateY(-50%);
+  height: 8px;
+  width: 8px;
+  background: white;
+  border-radius: 50%;
+}
+
 .clear-container-wrapper {
   background: linear-gradient(transparent, rgba($color: $ln-blue, $alpha: 0.2));
 }

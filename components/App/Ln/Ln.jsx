@@ -8,7 +8,7 @@ import Image from 'next/image';
 import Phone1 from '../../../public/mockups/1.png'
 import Phone2 from '../../../public/downloads/download1.png'
 import Phone3 from '../../../public/downloads/download2.png'
-import Phone4 from '../../../public/features/kf4.png'
+import Phone4 from '../../../public/mockups/3.png'
 import { useState } from 'react';
 
 function Ln() {

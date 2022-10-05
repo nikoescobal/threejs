@@ -24,6 +24,17 @@
 .tab-item img {
   min-width: 12rem;
   max-width: 14rem;
+  height: 388px !important;
+}
+
+.tab-item:last-of-type img {
+  // height: 400px !important;
+  scale: 1.1;
+  transform: translate(7px, 15px);
+}
+
+.tabs-wrapper {
+
 }
 
 // .section {
