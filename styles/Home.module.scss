@@ -1,3 +1,4 @@
+@use '../styles/breakpoints' as *;
 @import 'variables';
 
 .container {
@@ -13,11 +14,19 @@
 .hammer {
   position: absolute;
   // top: 10%;
-  top: calc(10vh + 10vw);
   left: -30%;
   // left: -430px;
+  top: 99%;
   max-width: 110%;
   z-index: 1;
+
+  @include md {
+    top: 60%;
+  }
+
+  @include lg {
+    top: calc(10vh + 10vw);
+  }
 }
 
 .hammer img {
@@ -30,7 +39,10 @@
 
 .light .clear-container-wrapper {
   // background: linear-gradient(transparent, rgba($color: black, $alpha: 0.2));
-  background: linear-gradient(transparent, rgba($color: $light-mode-primary, $alpha: 0.2));
+  background: linear-gradient(
+    transparent,
+    rgba($color: $light-mode-primary, $alpha: 0.2)
+  );
 }
 
 @media (min-width: 480px) {
@@ -39,8 +51,8 @@
     // left: -5%;
     // z-index: 1;
   }
-  
-  .hammer img{
+
+  .hammer img {
     // transform: rotateZ(-55deg);
     // width: 60%;
   }
