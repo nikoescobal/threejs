@@ -35,7 +35,7 @@ function Ln() {
       max-1920
     `}
     >
-        <h3>Highlight Features</h3>
+        <h3>Pre-launch App</h3>
         <div className={`${styles['tabs-wrapper']}`}>
           <Tabs
             className={`${styles['tab-list']}`}
@@ -43,10 +43,10 @@ function Ln() {
             onChange={handleChange}
             aria-label="tabs"
           >
-            <Tab label="LGCN Wallet" {...a11yProps(0)} />
-            <Tab label="Staking/Vesting" {...a11yProps(1)} />
-            <Tab label="Gamified" {...a11yProps(2)} />
-            <Tab label="Community" {...a11yProps(3)} />
+            <Tab label="Wallet" {...a11yProps(0)} />
+            <Tab label="Game" {...a11yProps(1)} />
+            <Tab label="News" {...a11yProps(2)} />
+            <Tab label="Referrals" {...a11yProps(3)} />
           </Tabs>
           <TabPanel value={value} className={styles['tab-item']} index={0}>
             <div>
