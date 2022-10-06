@@ -177,13 +177,17 @@ function TokenModel() {
         className={`${styles['token_canvas']}`}
       >
         {/* <Scene /> */}
-      <ambientLight intensity={0.4} />
+      <ambientLight intensity={1} />
 
         {/* <directionalLight intensity={1} position={[5, 2, 5]} scale={0.5}/>
       <directionalLight intensity={1} position={[-20, 2, -1]} scale={0.5} /> */}
         <CameraControls />
         <Token />
-        <Environment preset='studio' />
+        <Environment
+          // preset='studio'
+          files={'/3d/env/studio2.hdr'}
+          // path={'/3d/env/'}
+        />
         {/* <SkyBox /> */}
       </Canvas>
     </div>
