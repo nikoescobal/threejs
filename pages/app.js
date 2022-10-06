@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import React from 'react';
+import Reveal from 'react-reveal/Reveal';
+import Fade from 'react-reveal/Fade';
 import Questions from '../components/App/Questions/Questions';
 import Ln from '../components/App/Ln/Ln';
 import { useMediaQuery } from '@mui/material';
@@ -15,7 +17,7 @@ import WaveLines from '../components/Generic/WaveLines/WaveLines';
 
 function App() {
   const isTablet = useMediaQuery('(min-width: 768px)');
-  
+
   return (
     <div>
       <Head>
@@ -23,20 +25,30 @@ function App() {
         <meta name="description" content="Legacy Network Application" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <GenericHeader
-        waves={
-            <WaveLines style={{
-              top: '-20%',
-              left: '-300px',
-              rotate: '-90deg',
-            }} />
-        }
-        rightObj={
-          <img src={Character.src} draggable="false" alt="character" style={{scale: isTablet ? '1.6' : '1.4'}} />
-        }
-        title="The LEGACY NETWORK APP"
-        subtitle={'The future of personal development'}
-      />
+      <Reveal effect="fadeInUp" top cascade>
+        <GenericHeader
+          waves={
+            <WaveLines
+              style={{
+                top: '-20%',
+                left: '-300px',
+                rotate: '-90deg',
+              }}
+            />
+          }
+          rightObj={
+            <img
+              src={Character.src}
+              draggable="false"
+              alt="character"
+              style={{ scale: isTablet ? '1.6' : '1.4' }}
+            />
+          }
+          title="The LEGACY NETWORK APP"
+          subtitle={'The future of personal development'}
+        />
+      </Reveal>
+
       <Questions />
       <Features />
       <Roadmap
