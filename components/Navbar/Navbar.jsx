@@ -49,41 +49,46 @@ function Navbar() {
           >
             <div className={styles.navbar__logo__wrapper}>
               <Link href="/">
-                <img src="/logo-cropped.png" alt="logo" />
+                <img src="/logo-cropped.png" alt="logo" onClick={() => setIsOpen(false)} />
               </Link>
             </div>
             <div>
-              <span className={router.asPath === "/" ? `${styles.active}` : ""}>
-                <Link href="/" >Home</Link>
+              <span className={router.asPath === "/" ? `${styles.active}` : ""} onClick={() => setIsOpen(false)}>
+                <Link href="/">Home</Link>
               </span>
-              <span className={router.asPath === "/app" ? `${styles.active}` : ""}>
+              <span className={router.asPath === "/app" ? `${styles.active}` : ""} onClick={() => setIsOpen(false)}>
                 <Link href="/app" className={router.pathname === "/app" ? `${styles.active}` : ""}>App</Link>
               </span>
-              <span className={router.asPath === "/token" ? `${styles.active}` : ""}>
+              <span className={router.asPath === "/token" ? `${styles.active}` : ""} onClick={() => setIsOpen(false)}>
                 <Link href="/token" className={router.pathname === "/token" ? `${styles.active}` : ""}>Token</Link>
               </span>
-              <span className={router.asPath === "/personal-development" ? `${styles.active}` : ""}>
+              <span className={router.asPath === "/personal-development" ? `${styles.active}` : ""} onClick={() => setIsOpen(false)}>
                 <Link href="/personal-development" className={router.pathname === "/personal-development" ? `${styles.active}` : ""}>Personal Development</Link>
               </span>
-              <span className={router.asPath === "/about-us" ? `${styles.active}` : ""}>
+              <span className={router.asPath === "/about-us" ? `${styles.active}` : ""} onClick={() => setIsOpen(false)}>
                 <Link href="/about-us" className={router.pathname === "/about-us" ? `${styles.active}` : ""}>About Us</Link>
               </span>
-              <span className={router.asPath === "/security" ? `${styles.active}` : ""}>
+              <span className={router.asPath === "/security" ? `${styles.active}` : ""} onClick={() => setIsOpen(false)}>
                 <Link href="/security" className={router.pathname === "/security" ? `${styles.active}` : ""}>Security</Link>
               </span>
               <span className={router.asPath === "/blogs" ? `${styles.active}` : ""}>
-                <LinkHover hoverText={"(Coming Soon)"}>
+                <LinkHover hoverText={"Coming Soon"}>
                   Blog
                 </LinkHover>
                 {/* <Link href="/" className={router.pathname === "/" ? `${styles.active}` : ""}>Blog</Link> */}
               </span>
               <span className={router.asPath === "/blogs" ? `${styles.active}` : ""}>
-                <LinkHover hoverText={"(Coming Soon)"}>
-                  Community
+                <LinkHover hoverText={"Coming Soon"}>
+                  Community Board
                 </LinkHover>
               </span>
               <span className={router.asPath === "/blogs" ? `${styles.active}` : ""}>
-                <LinkHover hoverText={"(Coming Soon)"}>
+                <LinkHover hoverText={"Coming Soon"}>
+                  Partnership Board
+                </LinkHover>
+              </span>
+              <span className={router.asPath === "/blogs" ? `${styles.active}` : ""}>
+                <LinkHover hoverText={"Coming Soon"}>
                   Win
                 </LinkHover>
               </span>
