@@ -49,6 +49,16 @@ function Partners() {
       alt: 'saynode logo',
       class: 'saynode',
     },
+    {
+      endpoint: 'safehaven.png',
+      alt: 'safehaven logo',
+      class: 'safehaven',
+    },
+    {
+      endpoint: 'vechain.png',
+      alt: 'vechain logo',
+      class: 'vechain',
+    },
   ];
   const { isDarkMode } = useStore((state) => state);
 
@@ -57,7 +67,9 @@ function Partners() {
       className={`${styles.partners} ${!isDarkMode ? `${styles.light}` : ''} `}
     >
       <h3 className={`${generics['spacing-x']}`}>Our Partners</h3>
-      <div className={`${styles['logos-wrapper']} ${generics['spacing-x']} max-1920`}>
+      <div
+        className={`${styles['logos-wrapper']} ${generics['spacing-x']} max-1920`}
+      >
         {partners.map((logo) => (
           <div key={logo.alt}>
             <img

@@ -36,8 +36,13 @@
 .logos-wrapper img {
 }
 
-.sercor {
+.sercor,
+.vechain {
   max-width: 4rem;
+}
+
+.safehaven {
+  filter: brightness(1) invert(1);
 }
 
 .maerki,
@@ -52,6 +57,7 @@
 .light .saynode,
 .light .crypto-valley,
 .light .synaps,
+.light .safehaven,
 .light .niedermuller {
   filter: brightness(0);
 }

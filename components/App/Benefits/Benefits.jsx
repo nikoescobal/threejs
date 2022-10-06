@@ -18,56 +18,80 @@ function Benefits() {
     } else {
       setScale(1);
     }
-  }, [isDesktop])
+  }, [isDesktop]);
 
   useEffect(() => {
     console.log(scale);
-  }, [scale])
-  
+  }, [scale]);
+
   return (
-    <section className={`
+    <section
+      className={`
       ${styles['app-wrapper']}
       ${generics['alternating-rows-wrapper']}
       ${!isDarkMode ? `${styles['light']}` : ''}
       spacing-x`}
     >
       <div className={`${generics['alternating-rows']} max-1920`}>
-        <div style={{marginBottom: '4rem'}}>
+        <div style={{ marginBottom: '4rem' }}>
           <img src="/downloads/download1.png" alt="" />
         </div>
         <ClearContainer
-          title="Non-Custodial wallet"
+          title="Data Protection"
           to="/app"
           linkText="Read More"
           reducedPadding
         >
           <p>
-            The Legacy Network blockchain wallet allows for easy on-boarding with a seed pharase and flexibility to receive, send, stake and vest the LGCN Token across crypto users.
-          </p>
-          <p>
-            Payment rails for fiat on-boarding, KYC/AML, NFT support, and the LGCN token...we've handled it all to make it easy for you to enage in a game with your community participating in your success.
+            Part of our vision is to give people back control of their data.
+            Legacy Network is the first technology company to use users&apos;
+            data and psychology exclusively for them, not against them. Unlike
+            various Big Data corporations, we will not monetize data and thus
+            will not make our platforms available for serving ads. Although user
+            profiles will be created, these cannot be assigned to a real person,
+            as we will not collect any personal data such as name or address. In
+            this way, users can interact with each other anonymously and without
+            concern. Nevertheless, to ensure the security of the network, some
+            Internet-related data such as the user&apos;s IP address will be
+            collected. This offers the possibility, in an emergency (for
+            example, in case of a crime or threat), to support the responsible
+            investigating authorities and to exclude users from the network in
+            the event of gross violations. A concrete data protection concept
+            will be worked out during development together with experts.
           </p>
         </ClearContainer>
       </div>
       <div className={`${generics['alternating-rows']} max-1920`}>
-        <div><img src="/nft/char-with-iphone.png" alt="" className={`${styles.scaled}`}/></div>
+        <div>
+          <img
+            src="/nft/char-with-iphone.png"
+            alt=""
+            className={`${styles.scaled}`}
+          />
+        </div>
         <ClearContainer
-          title="NFT"
+          title="Cyber Security"
           to="/app"
           linkText="Read More"
           reducedPadding
         >
           <p>
-            Unique tokenized assets with in-game benefits that you can offer to your players. Legacy Network offers an integrated pipeline to turn your playable assets into minted NFT's that can be offered for sale to players. Fund your game or offer playable NFT's to an established game community. Our platform handles all the merchandising, marketing, and payments complexity.
+            To ensure the security of our entire ecosystem, we will have several
+            independent security audits performed. This concerns the token, or
+            smart contract, as well as the app and all platforms. We will
+            analyze past cyber-attacks on other systems and design our own
+            systems to be immune to these as well as other attacks.
           </p>
         </ClearContainer>
       </div>
-      <div className={`${generics['alternating-rows']} max-1920`}>
-        <div style={{
-          marginBottom: '4rem',
-          scale: `${scale}`
-        }}>
-          <img src="/illustrations/token.png" alt=""  />
+      {/* <div className={`${generics['alternating-rows']} max-1920`}>
+        <div
+          style={{
+            marginBottom: '4rem',
+            scale: `${scale}`,
+          }}
+        >
+          <img src="/illustrations/token.png" alt="" />
         </div>
         <ClearContainer
           title="LGCN TOKEN"
@@ -76,10 +100,13 @@ function Benefits() {
           reducedPadding
         >
           <p>
-            Integrate the LGCN token to offer players the chance to use the token in your blockchain game economy. Sell NFT's for the token or offer game mechanics powered by the LGCN platform that allow them to earn, buy, or win it in your game.
+            Integrate the LGCN token to offer players the chance to use the
+            token in your blockchain game economy. Sell NFT's for the token or
+            offer game mechanics powered by the LGCN platform that allow them to
+            earn, buy, or win it in your game.
           </p>
         </ClearContainer>
-      </div>
+      </div> */}
     </section>
   );
 }
