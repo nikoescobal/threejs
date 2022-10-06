@@ -33,6 +33,25 @@
   max-width: clamp(4rem, 10vw + 1rem, 10rem);
 }
 
+.logos-wrapper img {
+}
+
 .sercor {
   max-width: 4rem;
+}
+
+.maerki,
+.caag,
+.saynode,
+.crypto-valley {
+  filter: brightness(0) invert(1);
+}
+
+.light .maerki,
+.light .caag,
+.light .saynode,
+.light .crypto-valley,
+.light .synaps,
+.light .niedermuller {
+  filter: brightness(0);
 }
