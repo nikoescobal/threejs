@@ -18,9 +18,11 @@ import { Parallax } from 'react-scroll-parallax';
 import Hammer from '../public/backgrounds/hammer.png';
 import Gradient from '../public/backgrounds/gradient.png';
 import useStore from '../store/store';
+import { useMediaQuery } from '@mui/material';
 
 export default function Home() {
   const { isDarkMode } = useStore();
+  const isDesktop = useMediaQuery('(min-width: 1024px');
 
   return (
     <div
@@ -34,9 +36,14 @@ export default function Home() {
 
       <div className={`${styles['hammer-wrapper']}`}>
         <div className="max-1920">
-          <Parallax speed={60} className={styles['hammer']}>
-            <Image className="" src={Hammer} alt="hammer" draggable="false" />
-          </Parallax>
+          { isDesktop
+            ? <Parallax speed={60} className={styles['hammer']}>
+                <Image className="" src={Hammer} alt="hammer" draggable="false" />
+              </Parallax>
+            : <div className={styles['hammer']}>
+                <Image className="" src={Hammer} alt="hammer" draggable="false" />
+              </div>
+          }
         </div>
         <Header />
         <div
