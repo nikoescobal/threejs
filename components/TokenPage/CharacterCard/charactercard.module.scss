@@ -4,6 +4,7 @@
   height: 25rem;
   max-width: 15rem;
   background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(3px);
   overflow: visible;
   position: relative;
   border-radius: 12px;
@@ -11,7 +12,7 @@
   overflow-x: visible;
 }
 
-.light .card {
+.light.card {
   background: $transparent-light;
   color: #62688f;
 }
