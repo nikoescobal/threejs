@@ -170,6 +170,13 @@ svg.arrow {
     right: 20%;
   }
 
+  .arrows-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
   .light .arrows-wrapper {
     filter: brightness(0);
   }
@@ -242,6 +249,7 @@ svg.arrow {
     padding-bottom: 1.5rem;
     overflow: hidden;
     max-width: 768px;
+
   }
 
   .bg::before {
@@ -264,5 +272,6 @@ svg.arrow {
   .chart-content {
     padding-left: 15%;
     padding-right: 15%;
+    min-height: 24rem;
   }
 }
