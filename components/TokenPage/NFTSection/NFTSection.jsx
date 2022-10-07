@@ -4,6 +4,7 @@ import generics from '../../../styles/generics.module.scss';
 import Character1 from '../../../public/nft/character1.png';
 import Image from 'next/image';
 import CharacterCard from '../CharacterCard/CharacterCard';
+import WaveLines from '../../Generic/WaveLines/WaveLines';
 // import VikingOne from '../../../public/nft/character1.png'
 
 function NFTSection() {
@@ -15,6 +16,11 @@ function NFTSection() {
         !isDarkMode ? `${styles.light}` : ''
       }`}
     >
+      <WaveLines style={{
+        top: '30%',
+        right: '-20%',
+        rotate: '-45deg'
+      }} />
       <div className={`${styles['text-wrapper']} max-1920`}>
         <h3>Discover Our NFT</h3>
         <p>

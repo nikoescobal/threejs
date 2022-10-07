@@ -21,7 +21,6 @@
   flex-direction: column;
   margin-top: 6rem;
   padding: calc(3rem + 10vw) 0;
-  overflow: visible;
 }
 
 .first-card-section > div {
@@ -67,13 +66,10 @@
 }
 
 .first-card-section .text-section:first-of-type::before {
-  // transform: rotateZ(180deg);
   left: 80%;
-  // top: ;
 }
 
 .first-card-section .text-section:last-of-type::before {
-  // transform: rotateZ(180deg);
   right: 80%;
 }
 

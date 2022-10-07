@@ -27,13 +27,11 @@ function App() {
       </Head>
         <GenericHeader
           waves={
-            <WaveLines
-              style={{
-                top: '-20%',
-                left: '-300px',
-                rotate: '-90deg',
-              }}
-            />
+            <WaveLines style={{
+              top: '-70%',
+              left: '-700px',
+              rotate: '-90deg',
+            }} />
           }
           rightObj={
             <img

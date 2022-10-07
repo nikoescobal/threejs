@@ -30,8 +30,8 @@ function Token() {
       <div>
         <GenericHeader waves={
           <WaveLines style={{
-            top: '-20%',
-            left: '-300px',
+            top: '-70%',
+            left: '-700px',
             rotate: '-90deg',
           }} />
         }

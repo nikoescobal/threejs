@@ -1,6 +1,6 @@
 import useStore from '../../../store/store';
 import styles from './wavelines.module.scss';
-import Waves from '../../../public/backgrounds/waves-5.png';
+import Waves from '../../../public/backgrounds/wave-lines.png';
 import Image from 'next/image';
 
 function WaveLines({className, style}) {
