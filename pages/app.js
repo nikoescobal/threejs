@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import React from 'react';
-import Reveal from 'react-reveal/Reveal';
-import Fade from 'react-reveal/Fade';
+// import Reveal from 'react-reveal/Reveal';
+// import Fade from 'react-reveal/Fade';
 import Questions from '../components/App/Questions/Questions';
 import Ln from '../components/App/Ln/Ln';
 import { useMediaQuery } from '@mui/material';
@@ -25,7 +25,6 @@ function App() {
         <meta name="description" content="Legacy Network Application" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Reveal effect="fadeInUp" top cascade>
         <GenericHeader
           waves={
             <WaveLines
@@ -47,8 +46,6 @@ function App() {
           title="The LEGACY NETWORK APP"
           subtitle={'The future of personal development'}
         />
-      </Reveal>
-
       <Questions />
       <Features />
       <Roadmap
