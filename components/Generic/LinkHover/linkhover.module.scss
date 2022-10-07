@@ -8,9 +8,13 @@
 .wrapper p {
   text-decoration: none;
   font-weight: 600;
-  font-family: "montserrat", serif !important;
+  font-family: 'montserrat', serif !important;
   font-size: 0.75rem;
   transition: color 0.3s ease-in-out;
+}
+
+.wrapper span {
+  padding: 2rem 0;
 }
 
 .light span {
@@ -21,27 +25,32 @@
   position: absolute;
   top: 55%;
   left: 10rem;
-  border-radius: 8px;
+  border-radius: 4px;
   transform: translateY(-50%);
   background: rgb(48, 48, 48);
   padding: 0 1rem;
   z-index: 3;
   min-width: max-content;
+  cursor: pointer;
 }
 
 .light .hover-text {
-  background: $light-mode-primary;
-  color: $light-mode-text-color
+  background: $light-mode-secondary;
+  color: white;
 }
 
 .wrapper:hover .hover-text {
   display: block;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .hover-text {
     display: none;
-    left: auto;
-    right: -8rem;
+    left: -0.5rem;
+    right: auto;
+    background: $ln-blue;
+    padding: 0.25rem;
+    top: -100%;
+    cursor: pointer;
   }
 }

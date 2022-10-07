@@ -67,7 +67,7 @@ function Navbar() {
             />
           </Link>
         </div>
-        <div>
+        <div className={styles.align_navbar}>
           <span
             className={router.asPath === '/' ? `${styles.active}` : ''}
             onClick={() => setIsOpen(false)}
@@ -137,37 +137,44 @@ function Navbar() {
             <LinkHover hoverText={'Coming Soon'}>Blog</LinkHover>
             {/* <Link href="/" className={router.pathname === "/" ? `${styles.active}` : ""}>Blog</Link> */}
           </span>
-          <span
-            className={router.asPath === '/blogs' ? `${styles.active}` : ''}
-          >
-            <LinkHover hoverText={'Coming Soon'}>Community Board</LinkHover>
-          </span>
-          <span
-            className={router.asPath === '/blogs' ? `${styles.active}` : ''}
-          >
-            <LinkHover hoverText={'Coming Soon'}>Partnership Board</LinkHover>
-          </span>
-          <span
-            className={router.asPath === '/blogs' ? `${styles.active}` : ''}
-          >
-            <LinkHover hoverText={'Coming Soon'}>Win</LinkHover>
-          </span>
+          <div className={styles['boards-wrapper']}>
+            <span className={`${isDarkMode ? '' : `${styles.light}`}`}>
+              <LinkHover hoverText={'Coming Soon'}>Boards</LinkHover>
+            </span>
+            <div>
+              <span
+                className={router.asPath === '/blogs' ? `${styles.active}` : ''}
+              >
+                <span>Community</span>
+              </span>
+              <span
+                className={router.asPath === '/blogs' ? `${styles.active}` : ''}
+              >
+                <span>Partnerships</span>
+              </span>
+            </div>
+          </div>
         </div>
-        <button
-          type="button"
-          onClick={toggle}
-          className={`${styles['dark-mode-toggle']} ${
-            isDarkMode ? '' : 'light'
-          }`}
-        >
-          <DarkModeSwitch
-            onChange={() => {}}
-            checked={!isDarkMode}
-            style={{
-              filter: `${isDarkMode ? 'invert(100%)' : 'invert(80%)'}`,
-            }}
-          />
-        </button>
+        <div>
+          <div className={`${styles.win} button-blue`}>
+            <span>Win</span>
+          </div>
+          <button
+            type="button"
+            onClick={toggle}
+            className={`${styles['dark-mode-toggle']} ${
+              isDarkMode ? '' : 'light'
+            }`}
+          >
+            <DarkModeSwitch
+              onChange={() => {}}
+              checked={!isDarkMode}
+              style={{
+                filter: `${isDarkMode ? 'invert(100%)' : 'invert(80%)'}`,
+              }}
+            />
+          </button>
+        </div>
       </nav>
     </>
   );

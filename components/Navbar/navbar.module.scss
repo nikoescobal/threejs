@@ -1,3 +1,4 @@
+@use '../../styles/breakpoints' as *;
 @import '../../styles/variables';
 
 .navbar {
@@ -20,13 +21,18 @@
   transition: top ease-in-out 0.75s !important;
 }
 
+.align_navbar {
+  display: flex;
+  align-items: baseline;
+}
+
 .navbar.open {
   top: 0;
 }
 
 .navbar.light {
   // background: rgba($color: #dde3f9, $alpha: 0.85);
-  background: rgba($color: #8DB2FC, $alpha: 0.2);
+  background: rgba($color: #8db2fc, $alpha: 0.2);
 }
 
 .navbar.light a {
@@ -43,13 +49,18 @@
   width: 4rem;
 }
 
-.navbar a {
+.navbar a,
+.navbar span {
   color: white;
   text-decoration: none;
   font-weight: 600;
   font-family: 'montserrat', serif !important;
   font-size: 0.75rem;
   transition: color 0.3s ease-in-out;
+}
+
+.navbar.light span {
+  color: $light-mode-text-color;
 }
 
 .navbar a:hover {
@@ -59,6 +70,30 @@
 .navbar__logo__wrapper {
   width: 2.5rem;
   cursor: pointer;
+}
+
+.boards-wrapper {
+  position: relative;
+}
+
+.boards-wrapper > div {
+  display: none;
+  position: absolute;
+  top: 1.5rem;
+  left: -0.5rem;
+  background: rgba($color: #000000, $alpha: 0.75);
+}
+
+.light .boards-wrapper > div {
+  background: rgba($color: #8db2fc, $alpha: 0.2);
+}
+
+.boards-wrapper:hover > div {
+  display: grid;
+}
+
+.boards-wrapper > div > span {
+  padding: 0.5rem 0.5rem;
 }
 
 .burger-wrapper {
@@ -150,6 +185,33 @@
   width: 80%;
   height: 2px;
   background: $ln-blue;
+}
+
+.win {
+  right: 140px;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  padding: 0 0.5rem;
+  border-radius: 14px;
+  height: 2.75rem;
+  max-width: 4rem !important;
+  width: 100%;
+  top: 0.75rem;
+
+  @include lg {
+    right: 118px;
+    top: -1.5px;
+    max-width: 4.5rem !important;
+  }
+
+  @include xl {
+    max-width: 5rem !important;
+  }
+}
+
+.win span {
+  color: white !important;
 }
 
 @media only screen and (min-width: 1024px) {
