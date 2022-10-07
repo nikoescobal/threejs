@@ -22,7 +22,7 @@ import { useMediaQuery } from '@mui/material';
 
 export default function Home() {
   const { isDarkMode } = useStore();
-  const isDesktop = useMediaQuery('(min-width: 1024px');
+  const isTablet = useMediaQuery('(min-width: 768px');
 
   return (
     <div
@@ -36,7 +36,7 @@ export default function Home() {
 
       <div className={`${styles['hammer-wrapper']}`}>
         <div className="max-1920">
-          { isDesktop
+          { isTablet
             ? <Parallax speed={60} className={styles['hammer']}>
                 <Image className="" src={Hammer} alt="hammer" draggable="false" />
               </Parallax>

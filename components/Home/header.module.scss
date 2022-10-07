@@ -3,6 +3,7 @@
 .container {
   // background-image: radial-gradient(circle farthest-side at 50% 40%, rgba($ln-blue, 0.5), transparent);
   position: relative;
+  z-index: 1;
 }
 
 .container.light {
