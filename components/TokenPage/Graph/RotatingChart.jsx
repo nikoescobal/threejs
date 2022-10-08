@@ -106,12 +106,10 @@ function RotatingChart() {
   
   const turnCounterClockwise = () => {
     if (selectedIndex === 0) {
-      // console.log(rotationInfo[selectedIndex] / 2);
-      // setCurrentRotation(currentRotation - (rotationInfo[0] / 2) + (rotationInfo[data.length] / 2));
-
-      //hard-coded, fix this
-      //currentRotation - twice the section length (rotation)
-      setCurrentRotation(currentRotation - 72 - 9);
+      const lastItemLength = rotationInfo[rotationInfo.length - 1];
+      const secondLastItemLength = rotationInfo[rotationInfo.length - 2];
+      // move back with average of last two items
+      setCurrentRotation(currentRotation - (lastItemLength + secondLastItemLength) / 2);
       setCurrentChartColor(data[data.length - 1].color);
       setSelectedIndex(data.length - 1);
     }
