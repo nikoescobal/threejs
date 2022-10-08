@@ -110,7 +110,8 @@ function RotatingChart() {
       // setCurrentRotation(currentRotation - (rotationInfo[0] / 2) + (rotationInfo[data.length] / 2));
 
       //hard-coded, fix this
-      setCurrentRotation(currentRotation - 72);
+      //currentRotation - twice the section length (rotation)
+      setCurrentRotation(currentRotation - 72 - 9);
       setCurrentChartColor(data[data.length - 1].color);
       setSelectedIndex(data.length - 1);
     }
