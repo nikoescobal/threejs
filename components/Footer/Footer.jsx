@@ -125,10 +125,15 @@ function Footer() {
         </div>
       </div>
       <div className={styles['socials-wrapper']}>
-        <TelegramIcon />
-        {/* <DiscordIcon /> */}
-        <InstagramIcon />
-        <TwitterIcon />
+        <a href="https://t.me/+cIdNDFAbnN5iZWRk" rel='noreferrer' target="_blank">
+          <TelegramIcon />
+        </a>
+        <a href="https://www.instagram.com/legacynetwork.io/" target='_blank' rel="noreferrer">
+          <InstagramIcon />
+        </a>
+        <a href="https://twitter.com/LegacyNetworkio" rel='noreferrer' target="_blank">
+          <TwitterIcon />
+        </a>
       </div>
       <div className={styles['rights-container']}>
         <div>
