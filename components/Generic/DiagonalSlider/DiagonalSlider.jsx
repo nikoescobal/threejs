@@ -305,7 +305,7 @@ function DiagonalSlider({ showBenefits }) {
                 <div className={`${styles['timeframe-wrapper']}`}>
                   <p>{item.date}</p>
                 </div>
-                <SliderContent list={item.content} isActive={index === Math.abs(position.x - 1)} />
+                <SliderContent list={item.content} isActive={index === Math.abs(position.x - 1)} showBenefits={showBenefits} />
                 {/* <ul className={`${styles['content-wrapper']}`}>
                   <li>{item.content}</li>
                 </ul> */}
