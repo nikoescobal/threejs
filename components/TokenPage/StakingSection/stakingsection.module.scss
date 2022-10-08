@@ -11,11 +11,14 @@
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
+  // display: grid;
+  // grid-template-columns: repeat(3, 1fr);
   justify-content: center;
 }
 
 .step {
-  // min-width: 12rem;
+  flex: 30%;
+  min-width: 12rem;
   max-width: 20rem;
   font-weight: 600;
 }
@@ -39,3 +42,6 @@
   color: $gray-dark;
 }
 
+@media only screen {
+  
+}

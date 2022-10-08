@@ -1,8 +1,8 @@
 import styles from './stakingsection.module.scss';
 import generics from '../../../styles/generics.module.scss';
-import Money from '../../../public/illustrations/money.svg';
-import Wallet from '../../../public/illustrations/wallet.svg';
-import Stack from '../../../public/illustrations/stack.svg';
+import Money from '../../../public/icons/money.svg';
+import Wallet from '../../../public/icons/wallet.svg';
+import Stack from '../../../public/icons/stack.svg';
 import Image from 'next/image';
 import useStore from '../../../store/store';
 
