@@ -14,10 +14,16 @@
 
 .img-wrapper {
   position: absolute;
-  top: 6%;
+  display: grid;
+  place-items: center;
+  top: 2%;
   left: 51.5%;
   width: 90%;
   transform: translate(-50%, -50%);
+}
+
+.img-wrapper span {
+  
 }
 
 .cards-wrapper {
