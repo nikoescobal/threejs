@@ -2,6 +2,7 @@ import styles from './sidepressuresection.module.scss';
 import generics from '../../../styles/generics.module.scss';
 import MovingIcon from '@mui/icons-material/Moving';
 import useStore from '../../../store/store';
+import CloudIcon from '@mui/icons-material/Cloud';
 
 function SidePressureSection() {
   const { isDarkMode } = useStore();
@@ -17,7 +18,8 @@ function SidePressureSection() {
       <div className={`${styles['cards-wrapper']}`}>
         <div className={`${styles['card']}`}>
           <div className={styles['img-wrapper']}>
-            <img src="/icons/bsp1.svg" alt="" />
+            {/* <img src="/icons/bsp1.svg" alt="" /> */}
+            <CloudIcon />
           </div>
           <div>
             <h4>Subscriptions</h4>
