@@ -16,9 +16,11 @@ function RotatingChart() {
         'Play to earn pool',
         'Staking pool',
       ],
-      percentage: 30,
+      // percentage: 30,
+      percentage: 40,
       color: '#f73094',
-      offset: 15
+      // offset: 15
+      offset: 20
     },
     {
       title: 'Token Sale',
@@ -28,22 +30,22 @@ function RotatingChart() {
       ],
       percentage: 20,
       color: '#775dd0',
-      offset: 85,
-      x: 88,
-      y: -50,
-      rotation: 90
+      offset: 80,
+      x: 71,
+      y: -62,
+      rotation: 107
     },
     {
       title: 'Development',
       description: [
         'Reserve for further development',
       ],
-      percentage: 15,
+      percentage: 10,
       color: '#ff4560',
-      offset: 65,
-      x: 18,
-      y: -67,
-      rotation: 152
+      offset: 60,
+      x: 8,
+      y: -63,
+      rotation: 160
     },
     {
       title: 'Team',
@@ -76,12 +78,12 @@ function RotatingChart() {
       description: [
         'Rewards for people who helped us along the way'
       ],
-      percentage: 10,
+      percentage: 5,
       color: '#008ffb',
       offset: 25,
-      x: 6,
-      y: 63,
-      rotation: 288
+      x: -6,
+      y: 56.5,
+      rotation: 275
     },
   ];
   const { currentChartColor, setCurrentChartColor } = useStore((state) => state);
@@ -93,7 +95,8 @@ function RotatingChart() {
 
   const [currentRotation, setCurrentRotation] = useState(0);
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [rotationInfo] = useState([108, 72, 54 , 54, 36, 36, 108]);
+  // const [rotationInfo] = useState([108, 72, 54 , 54, 36, 36, 108]);
+  const [rotationInfo] = useState([144, 72, 36 , 54, 36, 18, 144]);
   
   const turnClockwise = () => {
     setCurrentRotation(currentRotation + (rotationInfo[selectedIndex] / 2) + (rotationInfo[selectedIndex + 1] / 2));
