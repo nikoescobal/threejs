@@ -1,4 +1,4 @@
-@import "../../styles/variables";
+@import '../../styles/variables';
 
 .footer {
   // background: rgb(2, 5, 14);
@@ -13,17 +13,17 @@
   border-radius: 64px 64px 0 0;
 }
 
-.footer.light{
+.footer.light {
   // background: radial-gradient(circle farthest-side at 30% -50%, #58cdfd, #328cfd 60%) no-repeat !important;
-  background: rgba($color: $light-mode-secondary, $alpha: 0.3)
+  background: rgba($color: $light-mode-secondary, $alpha: 0.3);
 }
 
-.footer.light > img{
+.footer.light > img {
   filter: invert(0);
 }
 
 .footer a,
-.footer p{
+.footer p {
   // color: #ADB9C7;
   text-decoration: none;
   transition: none;
@@ -115,6 +115,10 @@
   height: 1.5rem;
 }
 
+.footer__column__items__wrapper a {
+  color: white !important;
+}
+
 .footer__column:nth-of-type(2) {
   // justify-content: center;
 }
@@ -141,8 +145,7 @@
   // font-size: 0.75rem;
 }
 
-.footer__column:nth-of-type(2)
-.footer__column__items__wrapper {
+.footer__column:nth-of-type(2) .footer__column__items__wrapper {
   // grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -163,8 +166,7 @@
   // margin-top: 2rem;
 }
 
-.footer__socials 
-svg{
+.footer__socials svg {
   color: white;
 }
 
@@ -211,7 +213,7 @@ svg{
   fill: $light-background;
 }
 
-.socials-wrapper{
+.socials-wrapper {
   display: flex;
   justify-content: center;
   padding-bottom: 4rem;
@@ -219,7 +221,7 @@ svg{
   gap: 1rem;
 }
 
-.socials-wrapper svg{
+.socials-wrapper svg {
   width: 100%;
   font-size: 3rem;
   max-width: 2.281rem;
@@ -227,15 +229,15 @@ svg{
   cursor: pointer;
 }
 
-.socials-wrapper svg:hover path{
+.socials-wrapper svg:hover path {
   fill: $ln-blue !important;
 }
 
-.socials-wrapper path{
+.socials-wrapper path {
   fill: $light-mode--dark-3 !important;
 }
 
-.light .socials-wrapper path{
+.light .socials-wrapper path {
   fill: $light-mode-secondary !important;
 }
 
@@ -271,12 +273,12 @@ svg{
     text-align: left;
     margin: 0;
   }
-  
+
   .footer__main {
     padding-top: 3rem;
   }
 
-  .socials-wrapper{
+  .socials-wrapper {
     display: grid;
     position: absolute !important;
     gap: 1rem;
