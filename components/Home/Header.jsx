@@ -52,7 +52,7 @@ function Header() {
               className={styles.legacy}
               type="chars"
               interval={0.04}
-              duration={1.8}
+              duration={1}
               animation={{
                 x: '200px',
                 y: '288px',
@@ -65,7 +65,7 @@ function Header() {
               className={styles.legacy}
               type="chars"
               interval={0.04}
-              duration={1.8}
+              duration={1}
               animation={{
                 x: '200px',
                 y: '288px',
@@ -79,7 +79,7 @@ function Header() {
               className={styles.subtitle}
               type="words"
               interval={0.09}
-              duration={2.4}
+              duration={1}
               animation={{
                 x: '-333px',
                 y: '100px',
