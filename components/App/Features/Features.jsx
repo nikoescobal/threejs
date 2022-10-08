@@ -42,7 +42,9 @@ function Features() {
           !isDarkMode ? `${styles.light}}` : ''
         } spacing-x max-1920`}
       >
-        <h3>Key Features of the Legacy Network App</h3>
+        <h3 className={styles['key-features']}>
+          Key Features of the Legacy Network App
+        </h3>
 
         <div className={`${styles.content}`}>
           <div className={`${styles.imgwrapper}`}>
@@ -139,7 +141,7 @@ function Features() {
             />
           </div>
           <div>
-            <h3>
+            <h3 className={styles['ai-features']}>
               The first artifical intelligence designed to analyze human
               behavior
             </h3>

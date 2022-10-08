@@ -150,7 +150,7 @@ function Navbar() {
               <span
                 className={router.asPath === '/blogs' ? `${styles.active}` : ''}
               >
-                <span>Partnerships</span>
+                <span>Partners</span>
               </span>
             </div>
           </div>

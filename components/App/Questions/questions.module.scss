@@ -4,8 +4,12 @@
 @use '../../../styles/variables' as *;
 
 .section {
-  padding-top: 8rem;
   position: relative;
+  padding: 4rem 0 0;
+
+  @include lg {
+    padding-top: 8rem;
+  }
 
   background: linear-gradient(
     transparent 60%,

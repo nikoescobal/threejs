@@ -20,10 +20,6 @@ function Benefits() {
     }
   }, [isDesktop]);
 
-  useEffect(() => {
-    console.log(scale);
-  }, [scale]);
-
   return (
     <section
       className={`
@@ -33,8 +29,11 @@ function Benefits() {
       spacing-x`}
     >
       <div className={`${generics['alternating-rows']} max-1920`}>
-        <div style={{ marginBottom: '4rem' }}>
-          <img src="/downloads/download1.png" alt="" />
+        <div className={styles['img-wrapper']}>
+          <img
+            src="/illustrations/data-protection.png"
+            alt="data protection illustration"
+          />
         </div>
         <ClearContainer
           title="Data Protection"
@@ -62,11 +61,10 @@ function Benefits() {
         </ClearContainer>
       </div>
       <div className={`${generics['alternating-rows']} max-1920`}>
-        <div>
+        <div className={styles['img-wrapper']}>
           <img
-            src="/nft/char-with-iphone.png"
-            alt=""
-            className={`${styles.scaled}`}
+            src="/illustrations/data-security.png"
+            alt="cyber security illustration"
           />
         </div>
         <ClearContainer
@@ -84,29 +82,6 @@ function Benefits() {
           </p>
         </ClearContainer>
       </div>
-      {/* <div className={`${generics['alternating-rows']} max-1920`}>
-        <div
-          style={{
-            marginBottom: '4rem',
-            scale: `${scale}`,
-          }}
-        >
-          <img src="/illustrations/token.png" alt="" />
-        </div>
-        <ClearContainer
-          title="LGCN TOKEN"
-          to="/app"
-          linkText="Read More"
-          reducedPadding
-        >
-          <p>
-            Integrate the LGCN token to offer players the chance to use the
-            token in your blockchain game economy. Sell NFT's for the token or
-            offer game mechanics powered by the LGCN platform that allow them to
-            earn, buy, or win it in your game.
-          </p>
-        </ClearContainer>
-      </div> */}
     </section>
   );
 }

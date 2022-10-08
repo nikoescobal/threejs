@@ -1,17 +1,7 @@
-/* html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-} */
+@use '../styles/breakpoints' as *;
 @import './variables';
 
 #__next * {
-  /* transition:
-  color 0.3s ease-in-out,
-  background-color 0.3s ease-in-out,
-  top 0.3s ease-in-out; */
 }
 
 * {
@@ -27,7 +17,7 @@ body {
 
 .content-wrapper.light {
   background: $light-background;
-  color: #3E3E3E;
+  color: #3e3e3e;
 }
 
 .content-wrapper.light h2,
@@ -42,7 +32,7 @@ body {
 img {
   width: 100% !important;
   height: auto;
-  user-drag: none;  
+  user-drag: none;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-drag: none;
@@ -65,13 +55,11 @@ h2 {
 }
 
 h3 {
-  // font-size: clamp(1.4rem, 5vw, 2rem);
   font-size: clamp(2rem, 10vw, 3rem);
   font-weight: bold;
 }
 
 h4 {
-  // font-size: clamp(1.4rem, 5vw, 2rem);
   font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
   font-weight: bold;
 }
@@ -94,8 +82,6 @@ button {
   display: grid;
 }
 
-
-
 .three-col {
   grid-template-columns: 1fr 1fr;
 }
@@ -104,8 +90,7 @@ button {
   display: inline-block;
   border: none;
   text-decoration: none;
-  // background: linear-gradient(90deg, #1d4ab2, #18419f);
-  background: #1960EA;
+  background: #1960ea;
   color: white;
   text-align: center;
   padding: 0.6rem 0;
@@ -130,16 +115,6 @@ button {
   padding: 0;
   margin: 0;
 }
-/*
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-} */
 
 .gradient {
   position: absolute;
@@ -148,8 +123,6 @@ button {
 }
 
 .gradient img {
-  // object-fit: contain;
-  
 }
 
 .gradient span {
@@ -181,9 +154,7 @@ button {
 /* ApexCharts */
 
 .apexcharts-legend {
-  // flex-direction: column;
   display: grid !important;
-  // margin-top: 16rem !important;
   justify-content: center !important;
 }
 
@@ -198,62 +169,61 @@ button {
 /* MUI */
 .MuiTab-root {
   color: white;
-  font-family: "din condensed", sans-serif;
+  font-family: 'din condensed', sans-serif;
   font-size: 1.2rem;
 }
 
 .MuiAccordionSummary-content.Mui-expanded {
-  color: #154EE3 !important;
+  color: #154ee3 !important;
   background: transparent !important;
 }
 
 .css-1elwnq4-MuiPaper-root-MuiAccordion-root.Mui-expanded {
-  // margin: 0 !important;
-  // background: transparent !important;
-  color: #154EE3;
+  color: #154ee3;
 }
 
 .css-1elwnq4-MuiPaper-root-MuiAccordion-root {
   background: rgba(255, 255, 255, 0.05) !important;
   backdrop-filter: blur(15px) !important;
   border-radius: 10px !important;
-  color: #CFCFCF !important;
+  color: #cfcfcf !important;
   margin: 1rem 0;
 }
 
-.css-1elwnq4-MuiPaper-root-MuiAccordion-root svg{
-  color: #CFCFCF !important;
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root svg {
+  color: #cfcfcf !important;
 }
 
-.css-1elwnq4-MuiPaper-root-MuiAccordion-root.Mui-expanded svg{
-  color: #154EE3 !important;
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root.Mui-expanded svg {
+  color: #154ee3 !important;
 }
 
 .MuiTabs-flexContainer button {
   flex: 1;
   color: #646464 !important;
   font-family: 'din condensed', serif !important;
-  font-size: 1.25rem !important;
+  font-size: 1rem !important;
   min-width: max-content;
+
+  @include lg {
+    font-size: 1.25rem !important;
+  }
 }
 
 .MuiTabs-flexContainer button.Mui-selected {
-  color: #1657FF !important;
+  color: #1657ff !important;
 }
 
 .MuiTabs-indicator {
   display: none;
 }
 
-.app-preview
-.MuiTabs-flexContainer {
+.app-preview .MuiTabs-flexContainer {
   justify-content: center;
 }
 
-.app-preview
-.MuiTab-root {
+.app-preview .MuiTab-root {
   max-width: 12rem !important;
-  // margin: 0 auto;
 }
 
 .app-preview > div div {
@@ -263,7 +233,7 @@ button {
 @media (min-width: 480px) {
   .MuiTabs-indicator {
     display: block;
-    background: #1657FF !important;
+    background: #1657ff !important;
   }
 
   .three-col {
@@ -275,18 +245,15 @@ button {
   .MuiTabs-flexContainer {
     overflow-x: hidden;
     gap: 0;
-    // font-family: 'din condensed', serif !important;
   }
 }
 
 @media (min-width: 1024px) {
   .MuiTabs-flexContainer button {
-    // font-size: 1rem !important;
   }
 }
 
 @media (min-width: 1280px) {
   .MuiTabs-flexContainer button {
-    // font-size: 1.2rem;
   }
 }

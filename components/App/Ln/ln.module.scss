@@ -1,7 +1,4 @@
-// @use '../../../styles/breakpoints' as *;
-// @use '../../../styles/colors' as *;
-// @use '../../../styles/buttons' as *;
-// @use '../../../styles/variables' as *;
+@use '../../../styles/breakpoints' as *;
 
 .wrapper {
   position: relative;
@@ -15,10 +12,13 @@
 
 .tab-item > div {
   display: flex;
+  flex-direction: column;
   gap: 4rem;
   align-items: center;
-  // display: grid;
-  // grid-template-columns: repeat(2, 1fr) !important;
+
+  @include lg {
+    flex-direction: row;
+  }
 }
 
 .tab-item img {
@@ -31,10 +31,6 @@
   // height: 400px !important;
   scale: 1.1;
   transform: translate(7px, 15px);
-}
-
-.tabs-wrapper {
-
 }
 
 // .section {
@@ -124,7 +120,7 @@
 //     max-width: 12rem !important;
 //     margin: 0 auto;
 //     // object-fit: cover;
-    
+
 //     img {
 //       max-width: 12rem !important;
 //       // padding: 1rem 0;

@@ -4,9 +4,25 @@
 @use '../../../styles/variables' as *;
 
 .section {
-  padding-bottom: 8rem;
   position: relative;
   z-index: 1;
+  padding-bottom: 4rem;
+
+  @include lg {
+    padding-bottom: 8rem;
+  }
+
+  .key-features {
+    padding: 1.5rem 0 0.5rem;
+  }
+
+  .ai-features {
+    padding: 2rem 0 0.5rem;
+  }
+
+  h3 {
+    padding: 0.75rem 0;
+  }
 
   & > h3 {
     text-align: center;
