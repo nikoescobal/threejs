@@ -92,11 +92,9 @@ $width: 20rem;
 
 .active {
   background: $ln-blue !important;
-
   color: white !important;
   h3 {
     color: white !important;
-
   }
 }
 
@@ -115,18 +113,17 @@ $width: 20rem;
   rotate: 180deg;
 }
 
-.side h3,
-.side p {
-  // scale: 0.5;
-}
-
 .light .side h3,
 .light .side p {
-  // scale: 0.5;
+  color: $light-mode-text-color;
+}
+
+.light .side.active h3,
+.light .side.active p {
+  color: white;
 }
 
 .side h3 {
-  // font-size: clamp(2.8rem, 10vw, 3rem);
   font-size: 1rem;
 }
 
@@ -138,8 +135,10 @@ $width: 20rem;
 
 .light .side {
   background: rgba($color: #000000, $alpha: 0.2);
-  color: $light-mode-text-color;
+}
 
+.light .side.active {
+  background: $light-mode-secondary !important;
 }
 
 // .top {
