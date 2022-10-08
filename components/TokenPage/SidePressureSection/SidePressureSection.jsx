@@ -16,8 +16,8 @@ function SidePressureSection() {
       </div>
       <div className={`${styles['cards-wrapper']}`}>
         <div className={`${styles['card']}`}>
-          <div>
-            <MovingIcon />
+          <div className={styles['img-wrapper']}>
+            <img src="/icons/bsp1.svg" alt="" />
           </div>
           <div>
             <h4>Subscriptions</h4>
@@ -25,8 +25,8 @@ function SidePressureSection() {
           </div>
         </div>
         <div className={`${styles['card']}`}>
-          <div>
-            <MovingIcon />
+          <div className={styles['img-wrapper']}>
+            <img src="/icons/bsp2.svg" alt="" />
           </div>
           <div>
             <h4>In-app purchases</h4>
@@ -34,8 +34,8 @@ function SidePressureSection() {
           </div>
         </div>
         <div className={`${styles['card']}`}>
-          <div>
-            <MovingIcon />
+          <div className={styles['img-wrapper']}>
+            <img src="/icons/bsp3.svg" alt="" />
           </div>
           <div>
             <h4>Staking rewards</h4>
@@ -43,8 +43,8 @@ function SidePressureSection() {
           </div>
         </div>
         <div className={`${styles['card']}`}>
-          <div>
-            <MovingIcon />
+          <div className={styles['img-wrapper']}>
+            <img src="/icons/bsp4.svg" alt="" />
           </div>
           <div>
             <h4>Non-crypto utility</h4>
@@ -52,8 +52,8 @@ function SidePressureSection() {
           </div>
         </div>
         <div className={`${styles['card']}`}>
-          <div>
-            <MovingIcon />
+          <div className={styles['img-wrapper']}>
+            <img src="/icons/bsp5.svg" alt="" />
           </div>
           <div>
             <h4>More in future</h4>

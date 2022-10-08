@@ -48,6 +48,36 @@
   color: #58A660;
 }
 
+.img-wrapper {
+  max-width: 3.25rem;
+  aspect-ratio: 1 / 1;
+  background: rgba(239, 228, 252, 0.1);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.light .img-wrapper {
+  background: $transparent-dark;
+}
+
+.img-wrapper img{
+  width: 60% !important;
+}
+
+.light .img-wrapper img {
+  // filter: invert(1);
+}
+
+.card:nth-of-type(3) .img-wrapper img{
+  width: 40% !important;
+  transform: translateX(3px);
+}
+
+.card:nth-of-type(5) .img-wrapper img{
+  transform: translate(1px, -1px);
+}
+
 .card h4 {
   font-size: clamp(1.5rem, 5vw + 1rem, 2.25rem);
   font-family: 'din condensed', serif !important;
