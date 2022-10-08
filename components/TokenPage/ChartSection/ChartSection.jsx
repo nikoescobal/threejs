@@ -22,7 +22,7 @@ function ChartSection() {
         </p>
       </div>
       <RotatingChart />
-      <p style={{textAlign: 'center', transform: 'translateY(-75%)'}}>Vesting schedule coming soon</p>
+      <p className={styles.vesting}>Vesting schedule coming soon</p>
       <div className={styles['button-wrapper']}>
         <button type='button' className='button-blue'>Read more</button>
         <button type='button' className='button-blue'>Our smart contract</button>
