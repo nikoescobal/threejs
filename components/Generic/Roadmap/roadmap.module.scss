@@ -42,8 +42,12 @@ $roadmap-cell-gap: 0.5rem;
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 52rem;
+  min-height: 64rem;
   z-index: 1;
+
+  @media only screen and (min-width: 768) {
+    min-height: 60rem;
+  }
 }
 
 .light .before {
@@ -78,7 +82,7 @@ $roadmap-cell-gap: 0.5rem;
 /* Bar dashes */
 .before svg:first-of-type {
   position: absolute;
-  top: -20%;
+  top: -15%;
   left: 0;
   rotate: 12.5deg;
   width: 100vw;
@@ -86,7 +90,7 @@ $roadmap-cell-gap: 0.5rem;
 
 .before svg:last-of-type {
   position: absolute;
-  bottom: -20%;
+  bottom: -15%;
   left: 0;
   rotate: 12.5deg;
   width: 100vw;
@@ -102,7 +106,7 @@ $roadmap-cell-gap: 0.5rem;
 
 .after svg:first-of-type {
   position: absolute;
-  top: -20%;
+  top: -15%;
   left: 0;
   rotate: 12.5deg;
   width: 100vw;
@@ -110,7 +114,7 @@ $roadmap-cell-gap: 0.5rem;
 
 .after svg:last-of-type {
   position: absolute;
-  bottom: -20%;
+  bottom: -15%;
   left: 0;
   rotate: 12.5deg;
   width: 100vw;

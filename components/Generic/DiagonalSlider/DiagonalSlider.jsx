@@ -12,46 +12,192 @@ function DiagonalSlider({ showBenefits }) {
       phase: 'Phase 1',
       date: 'July - August',
       content: [
-        'Token smart contract development for all 4 blockchains',
-        'Token smart contracts security audit',
-        'Pre-production of social-media content for the next months',
-        'Setup of all community channels including bots and automatisms',
+        {
+          content: 'Token smart contract development for all 4 blockchains',
+          isChecked: true
+        },
+        {
+          content: 'Token smart contracts first security audit',
+          isChecked: true
+        }, 
+        {
+          content: 'Pre-production of social-media content for the next months',
+          isChecked: true
+        }, 
+        {
+          content: 'Pre-launch app concept and user interface finished',
+          isChecked: true
+        }, 
       ],
     },
     {
       phase: 'Phase 2',
       date: 'August - September',
       content: [
-        'Release of our new website',
-        'Alpha testing of the pre-launch app',
+        {
+          content: 'Launch of our new website',
+          isChecked: true
+        },
+        {
+          content: 'Announcement of new utilities and strategies',
+          isChecked: true
+        },
+        {
+          content: 'Alpha testing of the pre-launch app',
+          isChecked: false
+        },
+        {
+          content: 'Expansion of our teams',
+          isChecked: false
+        },
       ],
     },
     {
       phase: 'Phase 3',
       date: 'September - October',
       content: [
-        'Expansion of our teams',
-        'Step by step opening of our community channels',
-        'Start of the first social-media campaign',
-        'Attending several blockchain events around the globe',
+        {
+          content: 'Step by step opening of our community channels',
+          isChecked: false
+        },
+        {
+          content: 'Launch of our blog / documentation page',
+          isChecked: false
+        },
+        {
+          content: 'Start of the first social-media campaign',
+          isChecked: false
+        },
+        {
+          content: 'Attending several blockchain events around the globe',
+          isChecked: false
+        },
+        {
+          content: 'Announcement of new strategical partnerships',
+          isChecked: false
+        },
+        {
+          content: 'Announcement of community web-board functions',
+          isChecked: false
+        },
+        {
+          content: 'Announcement of partners web-board functions',
+          isChecked: false
+        },
       ],
     },
     {
       phase: 'Phase 4',
       date: 'October - November',
       content: [
-        'Start of intensive community building along with events',
-        'Beta testing of the pre-launch app',
-        'Start of our youtube channel',
+        {
+          content: 'Start of intensive community building along with events',
+          isChecked: false
+        },
+        {
+          content: 'Start of our web-based giveaway and referral program',
+          isChecked: false
+        },
+        {
+          content: 'Launch of the community web-board (basic functions)',
+          isChecked: false
+        },
+        {
+          content: 'Launch of the partners web-board (basic functions)',
+          isChecked: false
+        },
+        {
+          content: 'Beta testing of the pre-launch app',
+          isChecked: false
+        },
+        {
+          content: 'Start of our YouTube channel',
+          isChecked: false
+        },
       ],
     },
     {
       phase: 'Phase 5',
-      date: 'November - Q1',
+      date: 'November - December',
       content: [
-        'Pre-launch app release',
-        'Token deployment on the blockchains',
-        'Public sale',
+        {
+          content: 'Public sale start (depending on the markets)',
+          isChecked: false
+        },
+        {
+          content: 'Security audist of all smart-contracts',
+          isChecked: false
+        },
+        {
+          content: 'Pre-launch app release for IOS and Android',
+          isChecked: false
+        },
+        {
+          content: 'Token deployment on the blockchains',
+          isChecked: false
+        },
+        {
+          content: 'LGCN listing on the SafeSwap multi-chain bridge',
+          isChecked: false
+        },
+      ],
+    },
+    {
+      phase: 'Phase 6',
+      date: 'December - January',
+      content: [
+        {
+          content: 'Alpha testing of our main app',
+          isChecked: false
+        },
+        {
+          content: 'Start of NFT marketing and whitelisting',
+          isChecked: false
+        },
+        {
+          content: 'Start of our surprise marketing campaign',
+          isChecked: false
+        },
+      ],
+    },
+    {
+      phase: 'Phase 7',
+      date: 'Q1 2022',
+      content: [
+        {
+          content: 'Free NFT mint for whitelisted participants',
+          isChecked: false
+        },
+        {
+          content: 'Beta testing of the main app',
+          isChecked: false
+        },
+        {
+          content: 'Pre-listing on coinmarketcap',
+          isChecked: false
+        },
+        {
+          content: 'LGCN listing on a centralized exchange',
+          isChecked: false
+        },
+        {
+          content: 'Launch of the first version of our main app',
+          isChecked: false
+        },
+        {
+          content: 'End of the web-based giveaway',
+          isChecked: false
+        },
+      ],
+    },
+    {
+      phase: 'Phase 8',
+      date: 'Q2 2022',
+      content: [
+        {
+          content: 'To be continued...',
+          isChecked: false
+        },
       ],
     },
   ];
@@ -124,10 +270,8 @@ function DiagonalSlider({ showBenefits }) {
                 <div className={`${styles['timeframe-wrapper']}`}>
                   <p>{item.date}</p>
                 </div>
-                <SliderContent list={item.content} isActive={index === Math.abs(position.x - 1)} />
-                {/* <ul className={`${styles['content-wrapper']}`}>
-                  <li>{item.content}</li>
-                </ul> */}
+                <SliderContent list={item.content} showBenefits={showBenefits} isActive={index === Math.abs(position.x - 1)} />
+                {/* {item.content.content} */}
                 <div>
                   <button type="button" className={`${styles['slide-button']} button-blue`} onClick={() => { handleDialogOpen(); console.log(index, Math.abs(position.x - 1)); }}>Read More</button>
                 </div>
