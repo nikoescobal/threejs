@@ -117,6 +117,10 @@
   background: linear-gradient(#00c5fd, #003be7);
 }
 
+.light .slide.active .phase-wrapper {
+  // background: linear-gradient(#00c5fd, $light-mode-secondary);
+}
+
 .slider.light .slide.active .phase-wrapper {
   color: white;
 }
@@ -157,6 +161,9 @@
   width: 7rem;
 }
 
+.light .slide.active .phase-wrapper::after {
+  background: $light-mode-secondary;
+}
 .content-wrapper {
 }
 
