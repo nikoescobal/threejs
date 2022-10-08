@@ -1,3 +1,4 @@
+@use '../../../styles/breakpoints' as *;
 @import '../../../styles/variables';
 
 .wrapper {
@@ -23,15 +24,25 @@
 
 .hover-text {
   position: absolute;
-  top: 55%;
-  left: 10rem;
+  top: 230%;
+  left: -0.5rem;
   border-radius: 4px;
   transform: translateY(-50%);
-  background: rgb(48, 48, 48);
-  padding: 0 1rem;
+  padding: 0.1rem 0.365rem;
   z-index: 3;
   min-width: max-content;
   cursor: pointer;
+  right: auto;
+  background: $ln-blue;
+
+  @include lg {
+    display: none;
+    left: -2.75rem;
+  }
+
+  @include breakpoint(1200px) {
+    left: -0.5rem;
+  }
 }
 
 .light .hover-text {
@@ -41,16 +52,4 @@
 
 .wrapper:hover .hover-text {
   display: block;
-}
-
-@media only screen and (min-width: 1024px) {
-  .hover-text {
-    display: none;
-    left: -0.5rem;
-    right: auto;
-    background: $ln-blue;
-    padding: 0.25rem;
-    top: -100%;
-    cursor: pointer;
-  }
 }

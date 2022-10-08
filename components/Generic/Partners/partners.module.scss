@@ -41,23 +41,24 @@
   max-width: 4rem;
 }
 
-.safehaven {
-  filter: brightness(1) invert(1);
-}
-
 .maerki,
 .caag,
 .saynode,
-.crypto-valley {
+.safehaven,
+.crypto-valley,
+.vechain,
+.red4sec {
   filter: brightness(0) invert(1);
 }
 
 .light .maerki,
+.light .red4sec,
 .light .caag,
 .light .saynode,
 .light .crypto-valley,
 .light .synaps,
 .light .safehaven,
-.light .niedermuller {
+.light .niedermuller,
+.light .vechain {
   filter: brightness(0);
 }

@@ -3,7 +3,6 @@
 .container {
   // background-image: radial-gradient(circle farthest-side at 50% 40%, rgba($ln-blue, 0.5), transparent);
   position: relative;
-  z-index: 1;
 }
 
 .container.light {
@@ -14,7 +13,20 @@
   position: relative;
 }
 
-.header h4{
+.legacy {
+  font-size: 5.2rem;
+  line-height: 5.1rem;
+  // padding: 0 0 1rem;
+  // width: 8rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: $light-mode-secondary;
+  padding: 0.6rem 0 0;
+}
+
+.header h4 {
   font-size: 1.2rem;
   max-width: 44ch;
   font-weight: 400;
