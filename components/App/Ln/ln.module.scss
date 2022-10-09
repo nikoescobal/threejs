@@ -10,6 +10,12 @@
   padding-bottom: 2rem;
 }
 
+.tab-item > div:last-of-type {
+  div {
+    max-width: 60ch;
+  }
+}
+
 .tab-item > div {
   display: flex;
   flex-direction: column;
@@ -31,6 +37,18 @@
   // height: 400px !important;
   scale: 1.1;
   transform: translate(7px, 15px);
+}
+
+.list {
+  padding: 2rem 0 0;
+
+  li {
+    margin-left: 1.2rem;
+  }
+
+  li:first-child {
+    padding: 1rem 0 0;
+  }
 }
 
 // .section {

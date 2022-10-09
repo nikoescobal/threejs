@@ -19,7 +19,7 @@ function Questions() {
         </div>
       </Parallax>
 
-      <div className="spacing-x max-1920">
+      <div className={`${styles['spacing-y']} spacing-x max-1920`}>
         <h3>
           The Legacy Network app answers three essential questions for the user
         </h3>

@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import React from 'react';
-// import Reveal from 'react-reveal/Reveal';
-// import Fade from 'react-reveal/Fade';
 import Questions from '../components/App/Questions/Questions';
 import Ln from '../components/App/Ln/Ln';
 import { useMediaQuery } from '@mui/material';
@@ -14,6 +12,7 @@ import Character from '../public/nft/char-with-iphone.png';
 import Roadmap from '../components/Generic/Roadmap/Roadmap';
 import Waves from '../public/backgrounds/waves-5.png';
 import WaveLines from '../components/Generic/WaveLines/WaveLines';
+import styles from '../components/Home/App/app.module.scss';
 
 function App() {
   const isTablet = useMediaQuery('(min-width: 768px)');
@@ -25,16 +24,20 @@ function App() {
         <meta name="description" content="Legacy Network Application" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className={styles['app-header']}>
         <GenericHeader
           waves={
-            <WaveLines style={{
-              top: '-70%',
-              left: '-700px',
-              rotate: '-90deg',
-            }} />
+            <WaveLines
+              style={{
+                top: '-70%',
+                left: '-700px',
+                rotate: '-90deg',
+              }}
+            />
           }
           rightObj={
             <img
+              className={styles.image}
               src={Character.src}
               draggable="false"
               alt="character"
@@ -44,6 +47,8 @@ function App() {
           title="The LEGACY NETWORK APP"
           subtitle={'The future of personal development'}
         />
+      </div>
+
       <Questions />
       <Features />
       <Roadmap

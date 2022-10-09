@@ -5,10 +5,10 @@ import { lnfunctions } from '../Questions/content';
 import TabPanel from '../../Generic/TabPanel/TabPanel';
 import { Tab, Tabs } from '@mui/material';
 import Image from 'next/image';
-import Phone1 from '../../../public/mockups/1.png';
-import Phone2 from '../../../public/downloads/download1.png';
-import Phone3 from '../../../public/downloads/download2.png';
-import Phone4 from '../../../public/mockups/3.png';
+import Managing from '../../../public/mockups/managing.png';
+import Staking from '../../../public/mockups/staking.png';
+import Vesting from '../../../public/mockups/vesting.png';
+import Bridging from '../../../public/mockups/bridging.png';
 import { useState } from 'react';
 
 function Ln() {
@@ -36,7 +36,7 @@ function Ln() {
       max-1920
     `}
     >
-      <h3>Pre-launch App</h3>
+      <h3>Legacy Wallet</h3>
       <div className={`${styles['tabs-wrapper']}`}>
         <Tabs
           className={`${styles['tab-list']}`}
@@ -51,10 +51,10 @@ function Ln() {
         </Tabs>
         <TabPanel value={value} className={styles['tab-item']} index={0}>
           <div>
-            <img src={Phone1.src} alt="phone" />
+            <img src={Managing.src} alt="Managing mockup" />
           </div>
           <div>
-            <h4>Non-custodial wallet</h4>
+            <h4>Managing</h4>
             <p>
               The Legacy Network blockchain wallet allows for easy on-boarding
               with a seed pharase and flexibility to receive, send, stake and
@@ -63,33 +63,62 @@ function Ln() {
               handled it all to make it easy for you to enage in a game with
               your community participating in your success.
             </p>
+            <ul className={styles.list}>
+              Token and NFT support:
+              <li>VeChain</li>
+              <li>Ethereum</li>
+              <li>Binance</li>
+              <li>Polygon.</li>
+            </ul>
           </div>
         </TabPanel>
         <TabPanel value={value} className={styles['tab-item']} index={1}>
           <div>
-            <img src={Phone2.src} alt="phone" />
+            <img src={Staking.src} alt="Staking mockup" />
           </div>
           <div>
-            <h4>Header 2</h4>
-            <p>Text 2</p>
+            <h4>Staking</h4>
+            <p>
+              As a long-term believer, you can stake your LGCN tokens for 6, 12,
+              or 24 months to benefit from exclusive rewards. Alternatively, the
+              flexible staking option can be used, so you can withdraw your
+              funds at any time. Our flexible staking option comes with an
+              auto-compounding feature which saves you time by automatically
+              claiming the rewards and by re-staking them. The tokens are held
+              by audited smart contracts to grant high security and performance.
+            </p>
           </div>
         </TabPanel>
         <TabPanel value={value} className={styles['tab-item']} index={2}>
           <div>
-            <img src={Phone3.src} alt="phone" />
+            <img src={Vesting.src} alt="Vesting mockup" />
           </div>
           <div>
-            <h4>Header 3</h4>
-            <p>text here</p>
+            <h4>Vesting</h4>
+            <p>
+              As a private sale, public sale or giveaway participant, you can
+              claim your vested LGCN tokens directly in the wallet. The feature
+              calculates the claimable amount live, so tokens can be claimed in
+              an interval of your choice. Just like the staking contracts, the
+              vesting contracts are audited as well which grants high security
+              and performance.
+            </p>
           </div>
         </TabPanel>
         <TabPanel value={value} className={styles['tab-item']} index={3}>
           <div>
-            <img src={Phone4.src} alt="phone" />
+            <img src={Bridging.src} alt="Bridging mockup" />
           </div>
           <div>
-            <h4>Header 4</h4>
-            <p>text 4</p>
+            <h4>Bridging</h4>
+            <p>
+              Bringe your LGCN tokens between the supported blockchains in an
+              instant thanks to our SafeSwap integration. Atomic swaps are used
+              which makes bridging cheap, fast and secure. More than that, we
+              are working on an auto-bridge feature which allows you to send
+              your LGCN tokens from one blockchain to another without needing to
+              bridge them first.
+            </p>
           </div>
         </TabPanel>
       </div>
