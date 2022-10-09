@@ -7,11 +7,11 @@
   top: 0 !important;
 }
 
-.apexcharts-legend span{
+.apexcharts-legend span {
   color: #eee !important;
 }
 
-.App.light .apexcharts-legend span{
+.App.light .apexcharts-legend span {
   color: rgb(31, 31, 31) !important;
 }
 
@@ -48,7 +48,7 @@
   top: 43%;
   right: 2rem;
   max-width: 8rem;
-  
+
   @include md {
     top: 2rem;
     right: 24px;
@@ -81,11 +81,13 @@
 .arrows-wrapper {
   display: flex;
   justify-content: flex-end;
-  gap: 2rem;
+  padding: 0 0 1rem;
+  gap: 5rem;
 }
 
 .light .arrows-wrapper {
-  filter: invert(48%) sepia(80%) saturate(3488%) hue-rotate(208deg) brightness(101%) contrast(83%);
+  filter: invert(48%) sepia(80%) saturate(3488%) hue-rotate(208deg)
+    brightness(101%) contrast(83%);
 }
 
 .arrows-wrapper img {
@@ -158,13 +160,13 @@ svg.arrow {
 
 .arrow.left {
   left: -10%;
-  transform: scaleX(-1) translateX(-20%) ;
+  transform: scaleX(-1) translateX(-20%);
   rotate: 60deg;
 }
 
 .arrow.right {
   right: -10%;
-  transform: translateX(-20%) ;
+  transform: translateX(-20%);
   rotate: -60deg;
 }
 
@@ -176,7 +178,6 @@ svg.arrow {
 }
 
 @media only screen and (min-width: 768px) {
-
   .arrow {
     display: inline-block;
     max-width: 8rem;
@@ -196,25 +197,25 @@ svg.arrow {
   .light .arrows-wrapper {
     filter: brightness(0);
   }
-  
+
   svg.arrow {
     fill: $dark-mode-text-color;
   }
-  
+
   .light svg.arrow {
-    fill: $light-mode-text-color
+    fill: $light-mode-text-color;
   }
-  
+
   .arrow.left {
-    transform: scaleX(1) translateX(-20%) ;
+    transform: scaleX(1) translateX(-20%);
     rotate: 180deg;
     top: -20%;
     left: auto;
   }
-  
+
   .arrow.right {
     right: 20%;
-    transform: translateX(-20%) ;
+    transform: translateX(-20%);
     transform: scaleX(-1);
     rotate: -0deg;
     left: auto;
@@ -230,12 +231,12 @@ svg.arrow {
     flex-direction: row;
     transform: translate(-17.8%);
   }
-  
+
   .donut-wrapper {
     margin: 0;
     min-width: 30rem;
   }
-  
+
   .donut-wrapper::before {
     // content:'';
     background: $dark-background;
@@ -258,7 +259,7 @@ svg.arrow {
   .descriptions {
     margin-left: 1rem;
   }
-  
+
   .bg {
     position: relative;
     padding-bottom: 1.5rem;
@@ -285,7 +286,7 @@ svg.arrow {
     overflow: hidden;
     box-shadow: 0px 00px 0px 100vw rgba(255, 255, 255, 0.05);
   }
-  
+
   .light .bg::before {
     box-shadow: 0px 00px 0px 100vw $transparent-light;
   }

@@ -1,9 +1,20 @@
 @import '../../../styles/variables';
 
 .wrapper {
-  background: linear-gradient(transparent 60%, rgba($color: $ln-blue, $alpha: 0.2));
+  background: linear-gradient(
+    transparent 60%,
+    rgba($color: $ln-blue, $alpha: 0.2)
+  );
   padding-top: 20vw;
   text-align: center;
+
+  h3 {
+    padding: 0 0 1rem;
+  }
+
+  p {
+    padding: 0 0 5rem;
+  }
 }
 
 .wrapper.light {
