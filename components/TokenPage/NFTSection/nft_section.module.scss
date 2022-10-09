@@ -46,6 +46,8 @@
 
 .light .text-section {
   color: #62688f !important;
+  // background: rgba($color: $light-mode-secondary, $alpha: 0.2);
+  background: $transparent-light;
 }
 
 .light .text-section h3 {
