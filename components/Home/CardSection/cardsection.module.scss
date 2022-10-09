@@ -1,3 +1,4 @@
+@use '../../../styles/breakpoints' as * ;
 @import '../../../styles/variables';
 
 .wrapper {
@@ -13,13 +14,19 @@
 }
 
 .img-wrapper {
-  position: absolute;
+  // position: absolute;
   display: grid;
   place-items: center;
   top: 2%;
-  left: 51.5%;
+  left: 50%;
   width: 90%;
-  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  margin-top: -6rem;
+  @include md {
+    
+    margin-top: -14rem;
+  }
+  // transform: translate(-50%, -50%);
 }
 
 .img-wrapper span {
