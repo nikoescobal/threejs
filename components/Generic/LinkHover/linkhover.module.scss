@@ -24,8 +24,8 @@
 
 .hover-text {
   position: absolute;
-  top: 230%;
-  left: -0.5rem;
+  top: 50%;
+  left: 5rem;
   border-radius: 4px;
   transform: translateY(-50%);
   padding: 0.1rem 0.365rem;
@@ -37,11 +37,10 @@
 
   @include lg {
     display: none;
-    left: -2.75rem;
-  }
-
-  @include breakpoint(1200px) {
     left: -0.5rem;
+    top: 230%;
+    padding: 0.1rem;
+    font-size: 0.67rem !important;
   }
 }
 
