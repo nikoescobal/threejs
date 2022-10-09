@@ -34,7 +34,7 @@ function StakingSection() {
             <Image src={Wallet} alt="wallet" />
           </div>
           <p>
-            As an early adopter, you can freeze your LGCN tokens for 3 – 24 months within our pre-launch app (coming soon).
+            As an early adopter, you can stake your LGCN tokens for 6, 12 or 24 months within our pre-launch app (coming soon).
           </p>
         </div>
         <div className={`${styles['step']}`}>
