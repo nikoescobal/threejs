@@ -159,6 +159,9 @@ function RotatingChart() {
         <button type="button" onClick={turnClockwise} style={{margin: '4rem'}}>Next</button> */}
       </div>
       <div className={styles.bg}>
+        <div className={`${styles['vesting-wrapper']}`}>
+          <img src="/icons/vesting.png" alt="vesting badge" />
+        </div>
         <div className={`${styles['chart-content']}`}>
           <div className={`${styles['items-wrapper']}`}>
             <h3 style={{color: currentChartColor}}>

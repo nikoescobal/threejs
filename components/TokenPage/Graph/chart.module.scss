@@ -1,3 +1,4 @@
+@use '../../../styles/breakpoints' as *;
 @import '../../../styles/variables';
 
 .apexcharts-legend {
@@ -40,6 +41,18 @@
   width: 100%;
   max-width: 768px;
   border-radius: 8px;
+}
+
+.vesting-wrapper {
+  position: absolute;
+  top: 43%;
+  right: 2rem;
+  max-width: 8rem;
+  
+  @include md {
+    top: 2rem;
+    right: 24px;
+  }
 }
 
 .light .chart-content {
@@ -251,7 +264,7 @@ svg.arrow {
     padding-bottom: 1.5rem;
     overflow: hidden;
     width: 100%;
-    min-width: 712px;
+    min-width: 36rem;
     max-width: 768px;
     transform: translateX(5.5%);
   }
