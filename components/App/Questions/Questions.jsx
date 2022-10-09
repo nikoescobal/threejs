@@ -20,20 +20,25 @@ function Questions() {
       </Parallax>
 
       <div className={`${styles['spacing-y']} spacing-x max-1920`}>
-        <h3>
-          The Legacy Network app answers three essential questions for the user
-        </h3>
-        {questions.map((question, index) => (
-          <div key={index} className={styles.question}>
-            <h4>{question.title}</h4>
-            <p>{question.text}</p>
+        <div className={styles.wrapper}>
+          <h3>
+            The Legacy Network app answers three essential questions for the
+            user
+          </h3>
+          {questions.map((question, index) => (
+            <div key={index} className={styles.question}>
+              <h4>{question.title}</h4>
+              <p>{question.text}</p>
+            </div>
+          ))}
+          <div className={`${styles.solution}`}>
+            Our solution to the global mental health crisis
           </div>
-        ))}
-        <div className={`${styles.solution}`}>
-          Our solution to the global mental health crisis
-        </div>
-        <div className={styles['button-wrapper']}>
-          <button className="button-blue">More on mental health crisis</button>
+          <div>
+            <button className="button-blue">
+              More on mental health crisis
+            </button>
+          </div>
         </div>
       </div>
     </section>
