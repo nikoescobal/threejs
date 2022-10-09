@@ -14,9 +14,12 @@
 }
 .header {
   position: relative;
+  gap: 3rem;
+  display: flex;
+  justify-content: center;
 }
 
-.header h4{
+.header h4 {
   font-size: 1.2rem;
   max-width: 44ch;
   font-weight: 400;

@@ -4,11 +4,17 @@
   display: grid;
   gap: 6rem;
   position: relative;
-  background: linear-gradient(transparent 50%, rgba($color: $ln-blue, $alpha: 0.2));
+  background: linear-gradient(
+    transparent 50%,
+    rgba($color: $ln-blue, $alpha: 0.2)
+  );
 }
 
 .about-section.light {
-  background: linear-gradient(transparent 50%, rgba($color: $light-mode-primary, $alpha: 0));
+  background: linear-gradient(
+    transparent 50%,
+    rgba($color: $light-mode-primary, $alpha: 0)
+  );
 }
 
 .about-section > img {
@@ -18,8 +24,7 @@
   width: 100%;
 }
 
-.about-section
-.intro-text{
+.about-section .intro-text {
   text-align: center;
   margin: 0 auto;
   line-height: 2ch;
@@ -42,4 +47,3 @@
     margin-right: auto;
   }
 }
-
