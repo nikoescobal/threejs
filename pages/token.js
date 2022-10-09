@@ -4,7 +4,7 @@ import Image from 'next/image'
 import React from 'react'
 import GenericHeader from '../components/Generic/Header/GenericHeader'
 import TokenModel from '../components/TokenPage/TokenModel'
-import TokenImage from '../public/illustrations/token-3d.png'
+import TokenImage from '../public/3d/token.png'
 import WavesWrapper from '../components/Generic/WavesWrapper/WavesWrapper'
 import TokenIntro from '../components/TokenPage/TokenIntro/TokenIntro'
 import HexagonSliderSection from '../components/TokenPage/HexagonSliderSection/HexagonSliderSection'
@@ -35,7 +35,16 @@ function Token() {
             rotate: '-90deg',
           }} />
         }
-         title={'LGCN Token'} subtitle={'a multichain utility & payment token'} rightObj={isDesktop ? <TokenModel /> : <Image src={TokenImage} alt="token" draggable="false" />} />
+         title={'LGCN Token'}
+         subtitle={'a multichain utility & payment token'}
+         rightObj={isDesktop ? <TokenModel /> : <Image src={TokenImage} alt="token" draggable="false" />}
+        //  rightObj={isDesktop
+        //   ? <video autoPlay loop={true} muted>
+        //       <source src="/videos/token.mp4"/>
+        //     </video>
+        //   : <Image src={TokenImage} alt="token" draggable="false" />
+        //   }
+        />
         <TokenIntro />
         <WavesWrapper hideBottom={true}>
           <HexagonSliderSection />
