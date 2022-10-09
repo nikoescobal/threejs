@@ -7,11 +7,11 @@ function UtilitySection() {
   const data = [
     {
       img: '/icons/util1.svg',
-      text: 'Free access to the ecosystem',
+      text: 'Free access to our ecosystem',
     },
     {
       img: '/icons/util2.svg',
-      text: 'Share distribution',
+      text: 'Reward distribution',
     },
     {
       img: '/icons/util3.svg',
@@ -23,11 +23,11 @@ function UtilitySection() {
     },
     {
       img: '/icons/util5.svg',
-      text: 'High play-to-earn reward',
+      text: 'Higher play-to-earn reward',
     },
     {
       img: '/icons/util6.svg',
-      text: 'Network opportunities',
+      text: 'Networking opportunities',
     },
   ];
 

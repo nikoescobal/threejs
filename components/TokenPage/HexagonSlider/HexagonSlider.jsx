@@ -30,12 +30,12 @@ function HexagonSlider() {
       body: 'We plan to make selected parts of our ecosystem such as content libraries and code accessible for other businesses in future. The LGCN token will be needed to access our B2B services which will benefit the community.',
     },
     {
-      title: 'More about to come',
-      body: `We haven't even started yet! Our goal is to create as much value for our community as possible. For this reason, new, exciting features will be announced on a regular basis.`,
+      title: 'Get rewarded for contributing to our ecosystem',
+      body: 'In future, users will be able to perform certain actions within the social part of our ecosystem and to earn rewards for doing so.',
     },
     {
-      title: 'title 6',
-      body: 'body 6',
+      title: 'More about to come',
+      body: `We haven't even started yet! Our goal is to create as much value for our community as possible. For this reason, new, exciting features will be announced on a regular basis.`,
     },
   ]
 

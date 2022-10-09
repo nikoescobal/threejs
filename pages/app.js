@@ -61,7 +61,7 @@ function App() {
         }}
       />
       <Ln />
-      <Download />
+      {/* <Download /> */}
       <Benefits />
     </div>
   );
