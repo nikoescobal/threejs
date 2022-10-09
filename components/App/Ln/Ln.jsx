@@ -56,12 +56,13 @@ function Ln() {
           <div>
             <h4>Managing</h4>
             <p>
-              The Legacy Network blockchain wallet allows for easy on-boarding
-              with a seed pharase and flexibility to receive, send, stake and
-              vest the LGCN Token across crypto users. Payment rails for fiat
-              on-boarding, KYC/AML, NFT support, and the LGCN token. We&apos;ve
-              handled it all to make it easy for you to enage in a game with
-              your community participating in your success.
+              Manage your favorite cryptos in a secure non-custodial wallet. The
+              legacy wallet allows you to easily hold, send and receive tokens
+              on multiple blockchains. The private keys are stored locally on
+              the device so you and only you have access to your funds. Browse
+              through the NFT section to see all your collectibles safe in one
+              place. Additionally, the wallet comes with a browser extension
+              which grants you web-access to the exciting world of Web3.
             </p>
             <ul className={styles.list}>
               Token and NFT support:
