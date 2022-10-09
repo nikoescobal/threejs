@@ -39,11 +39,11 @@ function Partners() {
       alt: 'red4sec logo',
       class: 'red4sec',
     },
-    {
-      endpoint: 'maerki.png',
-      alt: 'maerki logo',
-      class: 'maerki',
-    },
+    // {
+    //   endpoint: 'maerki.png',
+    //   alt: 'maerki logo',
+    //   class: 'maerki',
+    // },
     {
       endpoint: 'saynode.png',
       alt: 'saynode logo',
