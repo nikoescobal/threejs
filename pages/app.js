@@ -41,7 +41,7 @@ function App() {
               src={Character.src}
               draggable="false"
               alt="character"
-              style={{ scale: isTablet ? '1.6' : '1.4' }}
+              style={{ scale: isTablet ? '1.6' : '1.4', transform: 'translateX(5%)' }}
             />
           }
           title="The LEGACY NETWORK APP"
