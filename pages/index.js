@@ -36,14 +36,15 @@ export default function Home() {
 
       <div className={`${styles['hammer-wrapper']}`}>
         <div className="max-1920">
-          { isTablet
-            ? <Parallax speed={60} className={styles['hammer']}>
-                <Image className="" src={Hammer} alt="hammer" draggable="false" />
-              </Parallax>
-            : <div className={styles['hammer']}>
-                <Image className="" src={Hammer} alt="hammer" draggable="false" />
-              </div>
-          }
+          {isTablet ? (
+            <Parallax speed={60} className={styles['hammer']}>
+              <Image className="" src={Hammer} alt="hammer" draggable="false" />
+            </Parallax>
+          ) : (
+            <div className={styles['hammer']}>
+              <Image className="" src={Hammer} alt="hammer" draggable="false" />
+            </div>
+          )}
         </div>
         <Header />
         <div
@@ -56,28 +57,27 @@ export default function Home() {
           >
             <ul
               className={styles['list-wrapper']}
-             style={{
-              margin: '0 auto',
-              textAlign: 'center',
-              padding: '0 1rem'
-            }}>
+              style={{
+                margin: '0 auto',
+                textAlign: 'center',
+                padding: '0 1rem',
+              }}
+            >
               <li>
-                <span>
-                  Connect with likeminded people and create your own legacy 
-                </span>
+                <span>&#183;</span>
+                Connect with likeminded people and create your own legacy
               </li>
               <li>
-                <span>
-                  Receive individual quests for your personal growth
-                </span>
+                <span>&#183;</span>
+                Receive individual quests for your personal growth
               </li>
               <li>
-                <span>
-                  Learn about the things school didn&apos;t teach you
-                </span>
+                <span>&#183;</span>
+                Learn about the things school didn&apos;t teach you
               </li>
               <li>
-                <span>Playfully improve all areas of your life</span>
+                <span>&#183;</span>
+                Playfully improve all areas of your life
               </li>
             </ul>
           </ClearContainer>
