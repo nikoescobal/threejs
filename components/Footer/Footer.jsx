@@ -67,10 +67,13 @@ function Footer() {
           <div className={`${styles.footer__column}`}>
             {/* <span className={`${styles.footer__column__title}`}>Contact Us</span> */}
             <div className={`${styles.items__wrapper}`}>
-              <span className={`${styles.footer__column__ite}`}>
+              <a href='mailto:hello@legacynetwork.io' className={`${styles.footer__column__ite}`}>
                 hello@legacynetwork.io
-              </span>
+              </a>
               <span className={`${styles.footer__column__item}`}>
+                LEGACY Network AG
+              </span>
+              <span href="/" className={`${styles.footer__column__item}`}>
                 Äulestr. 74
               </span>
               <span href="/" className={`${styles.footer__column__item}`}>
@@ -80,7 +83,7 @@ function Footer() {
                 Liechtenstein
               </span>
               <span href="/" className={`${styles.footer__column__item}`}>
-                0002.683.628-2
+                FL-0002.683.628-1
               </span>
               {/* <div className={`${styles.footer__socials}`}>
                 <Link href="/" target="_blank">
