@@ -94,6 +94,11 @@
 
 .boards-wrapper > div > span {
   padding: 0.5rem 0.5rem;
+  display: none;
+
+  @include lg {
+    display: block;
+  }
 }
 
 .burger-wrapper {
