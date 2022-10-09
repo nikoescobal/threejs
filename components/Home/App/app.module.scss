@@ -4,11 +4,17 @@
   position: relative;
   padding-top: 8rem;
   padding-bottom: 16rem;
+  gap: 2rem !important;
   // background-image: linear-gradient(rgba($color: $ln-blue, $alpha: 0.2), transparent 30%);
   // padding-top: 12rem;
   // padding-bottom: 8vw;
   // background-image:
   // radial-gradient(circle farthest-side at 50% 100%, rgba(17, 43, 102, 0.5), transparent 75%);
+}
+
+.app-wrapper > h4 {
+  max-width: 60ch;
+  margin: 0 auto;
 }
 
 .app-wrapper.light {
@@ -68,11 +74,17 @@
   transform: translateY(5%) !important;
 }
 
+.alternating-rows:nth-of-type(2)
+img{
+  // font-size: 1.5rem;
+  transform: translateX(8%) !important;
+}
+
 @media (min-width: 768px) {
   .app-wrapper .grid {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    gap: 6rem;
+    // gap: 6rem;
     align-items: center;
   }
 

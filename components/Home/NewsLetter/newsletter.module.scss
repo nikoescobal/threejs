@@ -1,10 +1,15 @@
+@use '../../../styles/breakpoints' as *;
 $news-cell-height: 8rem;
 $news-cell-width: 6.5rem;
 $news-cell-gap: 0.5rem;
 
 .news-letter {
   text-align: center;
-  padding-bottom: 10rem;
+  padding-bottom: 0rem;
+
+  @include md {
+    padding-bottom: 4rem;
+  }
 }
 
 .news-letter.light {
@@ -36,11 +41,15 @@ $news-cell-gap: 0.5rem;
 .news-letter form {
   display: flex;
   flex-direction: column;
-  margin: 4rem auto 0;
+  margin: 1rem auto 0;
   gap: 0.5rem;
   max-width: 44rem;
   justify-content: center;
   align-items: center;
+
+  @include md {
+    margin: 2rem auto 0;
+  }
 }
 
 .news-letter input {
@@ -106,7 +115,7 @@ $news-cell-gap: 0.5rem;
 
 @media only screen and (min-width: 768px) {
   .news-letter {
-    padding-bottom: clamp(6rem, 5vw, 16rem);
+    // padding-bottom: clamp(2rem, 5vw, 16rem);
     // margin-bottom: clamp(10rem, 15vw, 24rem);
   }
   

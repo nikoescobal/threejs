@@ -23,7 +23,10 @@ function App() {
         <Image src={Waves} alt="" />
       </div> */}
       <WaveLines className={styles['waves-wrapper']} />
-      <div className={`${generics['alternating-rows']} max-1920`}>
+      <h4>
+        Expand your knowledge and build your dream life with the help of our AI.
+      </h4>
+      <div className={`${styles['alternating-rows']} ${generics['alternating-rows']} max-1920`}>
         <div className={styles['mockup-wrapper']}>
           <img src="/mockups/3.png" alt="" />
         </div>
@@ -41,7 +44,7 @@ function App() {
           </p>
         </ClearContainer>
       </div>
-      <div className={`${generics['alternating-rows']} max-1920`}>
+      <div className={`${styles['alternating-rows']} ${generics['alternating-rows']} max-1920`}>
         <div>
           <img src="/illustrations/ai.png" alt="" />
         </div>

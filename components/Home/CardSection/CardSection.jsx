@@ -84,9 +84,9 @@ function CardSection() {
           <a className='button-blue'>Learn More</a>
         </Link>
       </div>
-      <h4 className="spacing-x">
+      {/* <h4 className="spacing-x">
         Expand your knowledge and build your dream life with the help of our AI.
-      </h4>
+      </h4> */}
     </div>
   );
 }
