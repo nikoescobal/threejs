@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import useStore from '../../store/store';
 import styles from './flipcard.module.scss';
 
-function FlipCard({ className, disableFlip, visible, profileLink, picture, name }) {
+function FlipCard({ className, position, disableFlip, visible, profileLink, picture, name }) {
   const { isDarkMode } = useStore((state) => state);
   
   return (
@@ -21,7 +21,7 @@ function FlipCard({ className, disableFlip, visible, profileLink, picture, name 
           {!disableFlip && 
             <div>
               <p>{name}</p>
-              
+              {/* <p>{position}</p> */}
               <a href={profileLink} rel='noreferrer' target="_blank">
                 <LinkedIn />
               </a>
