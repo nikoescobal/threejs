@@ -68,7 +68,7 @@ function Features() {
 
         <div className={`${styles.content}`}>
           <div className={`${styles.imagereverse}`}>
-            <img src="/features/kf2.png" alt="key feature 2" />
+            <img src="/features/health-2.png" alt="key feature 2" />
           </div>
 
           <div className={`${styles.healthwrapper}`}>
