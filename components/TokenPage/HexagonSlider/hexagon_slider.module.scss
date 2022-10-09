@@ -1,7 +1,7 @@
 @use '../../../styles/breakpoints' as * ;
 @import '../../../styles/variables';
 
-$height: 16rem;
+$height: 17rem;
 $width: 20rem;
 $mobile-width: 15rem;
 
@@ -120,10 +120,22 @@ $mobile-width: 15rem;
   }
 }
 
+.side h3 {
+  transform: translateY(-1.5rem);
+
+  @include md {
+    transform: translateY(0);
+  }
+}
+
 .side p {
-  transform: translateY(-2rem);
+  transform: translateY(-3.5rem);
   font-size: 0.6rem;
   padding: 0 1rem;
+  
+  @include md {
+    transform: translateY(-2rem);
+  }
 }
 
 .light .side {
