@@ -178,11 +178,12 @@ button {
   background: transparent !important;
 }
 
-.css-1elwnq4-MuiPaper-root-MuiAccordion-root.Mui-expanded {
+.MuiAccordion-root.Mui-expanded {
   color: #154ee3;
 }
 
-.css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+// .css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+.MuiAccordion-root {
   background: rgba(255, 255, 255, 0.05) !important;
   backdrop-filter: blur(15px) !important;
   border-radius: 10px !important;
@@ -190,11 +191,11 @@ button {
   margin: 1rem 0;
 }
 
-.css-1elwnq4-MuiPaper-root-MuiAccordion-root svg {
+.MuiAccordion-root svg {
   color: #cfcfcf !important;
 }
 
-.css-1elwnq4-MuiPaper-root-MuiAccordion-root.Mui-expanded svg {
+.MuiAccordion-root.Mui-expanded svg {
   color: #154ee3 !important;
 }
 
