@@ -13,13 +13,13 @@ function Questions() {
     <section
       className={`${styles.section} ${!isDarkMode ? `${styles.light}` : ''}`}
     >
-       <Parallax speed={30} className={`${styles.staff} max-1920`}>
-        <div >
+      <Parallax speed={30} className={`${styles.staff} max-1920`}>
+        <div>
           <Image src={Staff} alt="" draggable="false" />
         </div>
       </Parallax>
 
-      <div className='spacing-x max-1920'>
+      <div className="spacing-x max-1920">
         <h3>
           The Legacy Network app answers three essential questions for the user
         </h3>
@@ -33,10 +33,9 @@ function Questions() {
           Our solution to the global mental health crisis
         </div>
         <button className={`${styles.button} button-blue`}>
-          More about mental health crisis
+          More on mental health crisis
         </button>
       </div>
-     
     </section>
   );
 }
