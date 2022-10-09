@@ -6,7 +6,6 @@
 }
 
 .slide-content-wrapper {
-  // padding: 0.75rem 2rem;
   background: #202121;
   color: white;
   list-style: none;
@@ -15,6 +14,8 @@
   text-align: left;
   visibility: hidden;
 }
+
+
 
 .slide-content-wrapper.active {
   visibility: visible;
@@ -30,6 +31,16 @@
   padding: 1rem 2rem;
   font-size: 0.9rem;
   font-family: 'Montserrat', serif;
+  position: relative;
+
+}
+
+.check {
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translate(0, -50%);
+  // scale: 1.1;
 }
 
 .slide-content-wrapper li:not(:last-of-type) {
@@ -40,7 +51,7 @@
   border-bottom: 1px solid $light-mode-secondary;
 }
 
-.slide-content-wrapper li::before {
+.slide-content-wrapper li:not(.success)::before {
   content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
   font-size: 1rem;
   color: $ln-blue; /* Change the color */

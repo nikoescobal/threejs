@@ -35,9 +35,9 @@ function SliderContent({ list, open, isActive, onClose, showBenefits }) {
         ))}
         { !showBenefits &&
           list.map((item, index) => (
-          <li key={`${index}1`}>
-            {/* <span>{item.content} {item.isChecked && <CheckIcon color='success' />}</span> */}
-            <span>{item.content}</span>
+          <li key={`${index}1`} className={item.isChecked ? styles['success'] : ''}>
+            <span>{item.isChecked && <CheckIcon className={styles.check} color='success' />} {item.content}</span>
+            {/* <span>{item.content}</span> */}
           </li>
         ))}
       </ul>
