@@ -32,9 +32,9 @@ function Questions() {
         <div className={`${styles.solution}`}>
           Our solution to the global mental health crisis
         </div>
-        <button className={`${styles.button} button-blue`}>
-          More on mental health crisis
-        </button>
+        <div className={styles['button-wrapper']}>
+          <button className="button-blue">More on mental health crisis</button>
+        </div>
       </div>
     </section>
   );

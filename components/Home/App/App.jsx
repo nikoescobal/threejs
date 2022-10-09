@@ -26,7 +26,9 @@ function App() {
       <h4>
         Expand your knowledge and build your dream life with the help of our AI.
       </h4>
-      <div className={`${styles['alternating-rows']} ${generics['alternating-rows']} max-1920`}>
+      <div
+        className={`${styles['alternating-rows']} ${generics['alternating-rows']} max-1920`}
+      >
         <div className={styles['mockup-wrapper']}>
           <img src="/mockups/3.png" alt="" />
         </div>
@@ -44,23 +46,28 @@ function App() {
           </p>
         </ClearContainer>
       </div>
-      <div className={`${styles['alternating-rows']} ${generics['alternating-rows']} max-1920`}>
+
+      <div
+        className={`${styles['alternating-rows']} ${generics['alternating-rows']} max-1920`}
+      >
         <div>
-          <img src="/illustrations/ai.png" alt="" />
+          <img src="/illustrations/ai.png" alt="ai illustration" />
         </div>
-        <ClearContainer
-          title="The first artificial intelligence which analyzes your behavior and reflects the collected information back to you "
-          to="/app"
-          linkText="Read More"
-          reducedPadding
-        >
-          <p>
-            Our artificial intelligence evaluates the collected information
-            about the user and utilizes it to deliver individual and effective
-            solutions. Over time, the AI turns into a personal coach which knows
-            more about the user, than he knows about himself.
-          </p>
-        </ClearContainer>
+        <div className={styles['button-center']}>
+          <ClearContainer
+            title="The first artificial intelligence which analyzes your behavior and reflects the collected information back to you "
+            to="/app"
+            linkText="Read More"
+            reducedPadding
+          >
+            <p>
+              Our artificial intelligence evaluates the collected information
+              about the user and utilizes it to deliver individual and effective
+              solutions. Over time, the AI turns into a personal coach which
+              knows more about the user, than he knows about himself.
+            </p>
+          </ClearContainer>
+        </div>
       </div>
     </section>
   );

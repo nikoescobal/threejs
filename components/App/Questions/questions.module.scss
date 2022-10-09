@@ -42,7 +42,11 @@
     padding-bottom: 2rem;
   }
 
-  button {
+  .button-wrapper {
+    text-align: center;
+  }
+
+  .button {
     max-width: 16rem;
   }
 
@@ -83,4 +87,8 @@
 
 .spacing-y {
   padding-bottom: 3rem;
+
+  button {
+    max-width: 16rem;
+  }
 }
