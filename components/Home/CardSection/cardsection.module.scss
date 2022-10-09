@@ -1,4 +1,4 @@
-@use '../../../styles/breakpoints' as * ;
+@use '../../../styles/breakpoints' as *;
 @import '../../../styles/variables';
 
 .wrapper {
@@ -23,14 +23,12 @@
   margin: 0 auto;
   margin-top: -6rem;
   @include md {
-    
     margin-top: -14rem;
   }
   // transform: translate(-50%, -50%);
 }
 
 .img-wrapper span {
-  
 }
 
 .cards-wrapper {
@@ -52,7 +50,7 @@
   border-radius: 8px;
   min-width: 10rem;
   position: relative;
-  box-shadow: -1px 0px 1px rgba($color: white, $alpha: 0.75);
+  box-shadow: -10px 10px 10px rgba($color: $ln-blue, $alpha: 0.25);
 }
 
 .light .card {
@@ -82,7 +80,7 @@
   padding: 0.75rem;
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #58A660;
+  color: #58a660;
   box-shadow: -1px 0px 1px rgba($color: white, $alpha: 0.75);
   max-width: 4rem;
   // max-height: 4rem;
