@@ -26,8 +26,8 @@ function ChartSection() {
       <div className={styles['button-wrapper']}>
         <button type='button' className='button-blue'>Read more</button>
         <button type='button' className='button-blue'>Our smart contract</button>
-        <a href='/pdf/audit_report.pdf' download="audit-report" className='button-blue'>
-          Our audit response
+        <a href='/pdf/audit_report.pdf' target="_blank" className='button-blue'>
+          Our audit report
         </a>
       </div>
     </div>
