@@ -50,8 +50,9 @@
   aspect-ratio: 1 / 1;
   background: rgba(239, 228, 252, 0.1);
   border-radius: 50%;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .light .img-wrapper {
