@@ -10,7 +10,7 @@ function Partners() {
       class: 'crypto-valley',
     },
     {
-      endpoint: 'cvlabs.svg',
+      endpoint: 'cv-labs.png',
       alt: 'cv labs logo',
       class: 'cv-labs',
     },
@@ -20,7 +20,7 @@ function Partners() {
       class: 'niedermuller',
     },
     {
-      endpoint: 'sercor1.png',
+      endpoint: 'sercor.png',
       alt: 'seratio logo',
       class: 'sercor',
     },
