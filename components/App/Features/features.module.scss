@@ -51,8 +51,8 @@
   .imagereverse {
     order: 1;
 
-    @include lg {
-      scale: 0.85;
+    @include md {
+      scale: 0.7;
     }
 
     img {
