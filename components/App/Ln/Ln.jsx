@@ -44,10 +44,10 @@ function Ln() {
           onChange={handleChange}
           aria-label="tabs"
         >
-          <Tab label="Wallet" {...a11yProps(0)} />
-          <Tab label="Game" {...a11yProps(1)} />
-          <Tab label="News" {...a11yProps(2)} />
-          <Tab label="Referrals" {...a11yProps(3)} />
+          <Tab label="Managing" {...a11yProps(0)} />
+          <Tab label="Staking" {...a11yProps(1)} />
+          <Tab label="Vesting" {...a11yProps(2)} />
+          <Tab label="Bridging" {...a11yProps(3)} />
         </Tabs>
         <TabPanel value={value} className={styles['tab-item']} index={0}>
           <div>
