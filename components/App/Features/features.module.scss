@@ -45,15 +45,19 @@
         display: grid;
         grid-template-columns: 1.3fr 2fr;
       }
+    }
+  }
 
-      .imagereverse {
-        order: 1;
+  .imagereverse {
+    order: 1;
 
-        img {
-          max-width: 30rem;
-          padding: 3rem 0 0;
-        }
-      }
+    @include md {
+      scale: 0.7;
+    }
+
+    img {
+      max-width: 30rem;
+      padding: 3rem 0 0;
     }
   }
 
