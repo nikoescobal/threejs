@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import styles from '../styles/about-us.module.scss';
 import Image from 'next/image'
 import React from 'react'
 import About from '../components/AboutUs/About/About'
@@ -24,28 +25,30 @@ function AboutUs() {
         <meta name="description" content="About Legacy Network" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <GenericHeader
-        waves={
-          <WaveLines style={{
-            top: '-70%',
-            left: '-700px',
-            rotate: '-90deg',
-          }} />
-        }
-        rightObj={
-          <div style={{
-            scale: '1.1'
-          }}>
-            {
-              isDarkMode
-              ? <img src="/backgrounds/question-mark-dark.png" alt="logo" draggable="false" />
-              : <img src="/backgrounds/question-mark-light.png" alt="logo" draggable="false" />
-            }
-          </div>
-        }
-        title="About Us"
-        subtitle={'& our goal'}
-      />
+      <div className={styles['header-wrapper']}>
+        <GenericHeader
+          waves={
+            <WaveLines style={{
+              top: '-70%',
+              left: '-700px',
+              rotate: '-90deg',
+            }} />
+          }
+          rightObj={
+            <div style={{
+              scale: '1.1'
+            }}>
+              {
+                isDarkMode
+                ? <img src="/backgrounds/question-mark-dark.png" alt="logo" draggable="false" />
+                : <img src="/backgrounds/question-mark-light.png" alt="logo" draggable="false" />
+              }
+            </div>
+          }
+          title="About Us"
+          subtitle={'& our goal'}
+        />
+      </div>
       <About />
       <WavesWrapper hideBottom>
         <NewsLetter />
