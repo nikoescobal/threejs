@@ -162,7 +162,7 @@ function DiagonalSlider({ showBenefits }) {
     },
     {
       phase: 'Phase 7',
-      date: 'Q1 2022',
+      date: 'Q1 2023',
       content: [
         {
           content: 'Free NFT mint for whitelisted participants',
@@ -192,7 +192,7 @@ function DiagonalSlider({ showBenefits }) {
     },
     {
       phase: 'Phase 8',
-      date: 'Q2 2022',
+      date: 'Q2 2023',
       content: [
         {
           content: 'To be continued...',
