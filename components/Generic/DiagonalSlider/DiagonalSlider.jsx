@@ -44,11 +44,11 @@ function DiagonalSlider({ showBenefits }) {
         },
         {
           content: 'Alpha testing of the pre-launch app',
-          isChecked: false,
+          isChecked: true,
         },
         {
           content: 'Expansion of our teams',
-          isChecked: false,
+          isChecked: true,
         },
       ],
     },
