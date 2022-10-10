@@ -5,6 +5,7 @@ import useStore from '../../../store/store';
 import { useMediaQuery } from '@mui/material';
 import { useEffect } from 'react';
 import benefits from './content';
+import ComingSoon from '../ComingSoon/ComingSoon';
 
 function DiagonalSlider({ showBenefits }) {
   const roadmapItems = [
@@ -281,7 +282,14 @@ function DiagonalSlider({ showBenefits }) {
                 />
                 {/* {item.content.content} */}
                 <div>
-                  <button
+                  <ComingSoon className={`${styles['slide-button']} ${
+                  index === Math.abs(position.x - 1)
+                    ? `${styles['active']}`
+                    : ''
+                }`}>
+                    Read More
+                  </ComingSoon>
+                  {/* <button
                     type="button"
                     className={`${styles['slide-button']} button-blue`}
                     onClick={() => {
@@ -290,7 +298,7 @@ function DiagonalSlider({ showBenefits }) {
                     }}
                   >
                     Read More
-                  </button>
+                  </button> */}
                 </div>
                 {
                   // index !== roadmapItems.length - 1 && (
@@ -331,7 +339,14 @@ function DiagonalSlider({ showBenefits }) {
                   <li>{item.content}</li>
                 </ul> */}
                 <div>
-                  <button
+                <ComingSoon className={`${styles['slide-button']} ${
+                  index === Math.abs(position.x - 1)
+                    ? `${styles['active']}`
+                    : ''
+                }`}>
+                    Read More
+                  </ComingSoon>
+                  {/* <button
                     type="button"
                     className={`${styles['slide-button']} button-blue`}
                     onClick={() => {
@@ -340,7 +355,7 @@ function DiagonalSlider({ showBenefits }) {
                     }}
                   >
                     Read More
-                  </button>
+                  </button> */}
                 </div>
                 {
                   // index !== roadmapItems.length - 1 && (

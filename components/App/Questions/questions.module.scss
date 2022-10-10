@@ -51,6 +51,10 @@
     max-width: 16rem;
   }
 
+  .button-wrapper {
+    position: relative;
+  }
+
   .staff {
     position: absolute;
     max-width: 40%;
@@ -92,4 +96,8 @@
   button {
     max-width: 16rem;
   }
+}
+
+.btn-wrapper p {
+  color: white !important;
 }

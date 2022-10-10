@@ -5,6 +5,7 @@ import { questions } from './content';
 import Image from 'next/image';
 import Staff from '../../../public/backgrounds/staff.png';
 import { Parallax } from 'react-scroll-parallax';
+import ComingSoon from '../../Generic/ComingSoon/ComingSoon';
 
 function Questions() {
   const { isDarkMode } = useStore();
@@ -35,9 +36,12 @@ function Questions() {
             Our solution to the global mental health crisis
           </div>
           <div>
-            <button className="button-blue">
+            <ComingSoon className={styles['btn-wrapper']}>
               More on mental health crisis
-            </button>
+            </ComingSoon>
+            {/* <button className="button-blue">
+              More on mental health crisis
+            </button> */}
           </div>
         </div>
       </div>

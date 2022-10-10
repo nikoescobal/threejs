@@ -22,7 +22,7 @@ const content = [
   {
     title: 'Security',
     body: "Legacy Network is the first technology company to use users' data and psychology exclusively for them, not against them. Unlike various Big Data corporations, we will not monetize data and thus will not make our platforms available for serving ads.",
-    url: '/security',
+    url: '/app',
   },
 ];
 

@@ -1,20 +1,20 @@
-// import Link from 'next/link';
-// import useStore from '../../../store/store';
-// import styles from './linkhover.module.scss';
+import Link from 'next/link';
+import useStore from '../../../store/store';
+import styles from './comingsoon.module.scss';
 
-// function LinkHover({hoverText, children}) {
-//   const { isDarkMode } = useStore();
+function ComingSoon({className, children, style}) {
+  const { isDarkMode } = useStore();
 
-//   return (
-//     <div className={`${styles.wrapper} ${isDarkMode ? '' : `${styles.light}`}`}>
-//       <p className={styles['hover-text']}>
-//         {hoverText}
-//       </p>
-//       <span>
-//         {children}
-//       </span>
-//     </div>
-//   )
-// }
+  return (
+    <div  className={`${styles.wrapper} ${className} ${isDarkMode ? '' : `${styles.light}`}`}>
+      <p style={style} className={`button-blue`}>
+        {children}
+      </p>
+      <p className={`${styles['hover-text']}`}>
+        Coming Soon
+      </p>
+    </div>
+  )
+}
 
-// export default LinkHover
+export default ComingSoon

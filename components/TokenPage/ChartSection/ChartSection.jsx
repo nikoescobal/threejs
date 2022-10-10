@@ -3,6 +3,7 @@ import styles from './chartsection.module.scss';
 import generics from '../../../styles/generics.module.scss';
 import useStore from '../../../store/store';
 import Gradient from '../../Generic/Gradient/Gradient';
+import ComingSoon from '../../Generic/ComingSoon/ComingSoon';
 
 function ChartSection() {
   const { isDarkMode } = useStore();
@@ -23,11 +24,20 @@ function ChartSection() {
       </div>
       <RotatingChart />
       <div className={styles['button-wrapper']}>
-        <button type='button' className='button-blue'>Read more</button>
-        <button type='button' className='button-blue'>Our smart contract</button>
+        {/* <button type='button' className='button-blue'>Read more</button>
+        <button type='button' className='button-blue'>Our smart contract</button> */}
+        <ComingSoon>
+          Read more
+        </ComingSoon>
+        <ComingSoon style={{width: '20rem'}}>
+          Our smart contract
+        </ComingSoon>
+        <div>
         <a href='/pdf/audit_report.pdf' target="_blank" className='button-blue'>
-          Our audit report
+          <span>Our audit report</span>
         </a>
+
+        </div>
       </div>
     </div>
   )

@@ -1,3 +1,4 @@
+@use '../../../styles/breakpoints' as *;
 @import '../../../styles/variables';
 
 .wrapper {
@@ -20,7 +21,8 @@
 }
 
 .button-wrapper {
-  display: flex;
+  // display: flex;
+  display: grid;
   justify-content: center;
   position: relative;
   max-width: 768px;
@@ -29,6 +31,36 @@
   flex-wrap: wrap;
   padding: 0 2rem 2rem;
   margin-top: 1.25rem;
+
+  @include md {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.button-wrapper  p, 
+.button-wrapper a {
+  width: 100%;
+  max-width: 13rem;
+  height: 3rem;
+}
+
+.button-wrapper p:last-of-type {
+  bottom: -4rem;
+  left: 9rem;
+}
+
+.button-wrapper div {
+  display: flex;
+  justify-content: start;
+  justify-items: center;
+  align-items: flex-end;
+}
+
+.button-wrapper div a{
+  // display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .vesting {

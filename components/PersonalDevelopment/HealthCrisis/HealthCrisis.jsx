@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Pillar from '../../../public/illustrations/pillar.png';
 import useStore from '../../../store/store';
 import Gradient from '../../Generic/Gradient/Gradient';
+import ComingSoon from '../../Generic/ComingSoon/ComingSoon';
 
 function HealthCrisis() {
   const { isDarkMode } = useStore();
@@ -37,10 +38,13 @@ function HealthCrisis() {
             <DonutChart />
             <DonutChart />
           </div>
-          <button type="button" className="button-blue">
+          {/* <button type="button" className="button-blue">
             More on mental health crisis
-          </button>
-          <h3 style={{ marginBottom: '2rem' }}>
+          </button> */}
+          <ComingSoon style={{width: '20rem'}}>
+            More on mental health crisis
+          </ComingSoon>
+          <h3 style={{ marginBottom: '2rem', marginTop: '6rem' }}>
             The pillars of an unhappy life
           </h3>
           <div className={styles['pillar-wrapper']}>

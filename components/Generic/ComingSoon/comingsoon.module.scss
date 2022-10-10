@@ -1,6 +1,28 @@
-// @use '../../../styles/breakpoints' as *;
-// @import '../../../styles/variables';
+@use '../../../styles/breakpoints' as *;
+@import '../../../styles/variables';
 
+.hover-text {
+  display: none;
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.wrapper {
+  position: relative;
+}
+
+.wrapper p:first-of-type {
+  cursor: pointer;
+  // width: max-content;
+
+}
+
+.wrapper:hover .hover-text {
+  display: block;
+  
+}
 // .wrapper {
 //   position: relative;
 // }

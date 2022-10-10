@@ -28,6 +28,11 @@
 .slide-button {
   margin-left: auto;
   margin-right: auto;
+  visibility: hidden;
+}
+
+.slide-button.active p {
+  visibility: visible;
 }
 
 .slide button[disabled] {

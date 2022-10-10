@@ -1,4 +1,5 @@
 import useStore from '../../../store/store';
+import ComingSoon from '../../Generic/ComingSoon/ComingSoon';
 import styles from './utilitysection.module.scss';
 
 function UtilitySection() {
@@ -51,7 +52,8 @@ function UtilitySection() {
           </div>
         ))}
       </div>
-      <button className="button-blue">Learn more</button>
+      {/* <button className="button-blue">Learn more</button> */}
+      <ComingSoon>Learn more</ComingSoon>
     </section>
   );
 }
