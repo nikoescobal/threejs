@@ -36,6 +36,8 @@ function Benefits() {
           />
         </div>
         <ClearContainer
+          isComingSoon
+          // className={styles['coming-soon']}
           title="Data Protection"
           to="/app"
           linkText="Read More"
@@ -68,6 +70,7 @@ function Benefits() {
           />
         </div>
         <ClearContainer
+          isComingSoon
           title="Cyber Security"
           to="/app"
           linkText="Read More"

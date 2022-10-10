@@ -64,3 +64,28 @@
     // font-size: 1.1rem;
   }
 }
+
+.coming-soon {
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: -3rem;
+  transform: translateX(-50%);
+}
+
+.link-wrapper {
+  position: relative;
+}
+
+.link-wrapper:hover .coming-soon {
+  display: block;
+}
+
+.link-text {
+  margin: 0 auto;
+  max-width: 8rem;
+
+  p {
+    font-size: 0.9rem;
+  }
+}
