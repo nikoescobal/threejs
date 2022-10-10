@@ -1,4 +1,4 @@
-@use '../../../styles/breakpoints' as * ;
+@use '../../../styles/breakpoints' as *;
 @import '../../../styles/variables';
 
 $height: 17rem;
@@ -18,7 +18,7 @@ $mobile-width: 15rem;
   transform-origin: 50% 50%;
   // transform: translateY(calc($mobile-width / -2));
   transform: translateY(calc($width / -2));
-  
+
   @include md {
     transform: translateY(calc($width / -2));
   }
@@ -36,7 +36,7 @@ $mobile-width: 15rem;
   transition: transform 0.3s ease-in-out;
   transform-origin: 50% 50%;
   perspective-origin: 50% 50%;
-  
+
   @include md {
     width: $width;
   }
@@ -48,7 +48,8 @@ $mobile-width: 15rem;
   perspective-origin: 50% 50%;
 }
 
-.top, .bottom {
+.top,
+.bottom {
   position: absolute;
   line-height: 100px;
   text-align: center;
@@ -57,9 +58,8 @@ $mobile-width: 15rem;
 .face {
   position: absolute;
   backface-visibility: hidden;
-  background: #fff600;  
-  box-shadow: inset  10px  0 10px -10px black,
-    inset  -10px  0 10px -10px black;
+  background: #fff600;
+  box-shadow: inset 10px 0 10px -10px black, inset -10px 0 10px -10px black;
 }
 
 .side {
@@ -91,7 +91,8 @@ $mobile-width: 15rem;
   margin-top: 4rem;
   display: flex;
   justify-content: space-between;
-  filter: invert(48%) sepia(80%) saturate(3488%) hue-rotate(208deg) brightness(101%) contrast(83%);
+  filter: invert(48%) sepia(80%) saturate(3488%) hue-rotate(208deg)
+    brightness(101%) contrast(83%);
 }
 
 .arrows-wrapper span {
@@ -113,8 +114,8 @@ $mobile-width: 15rem;
 }
 
 .side h3 {
-  font-size: 0.85rem;
-  
+  font-size: 0.75rem;
+
   @include md {
     font-size: 1rem;
   }
@@ -132,7 +133,7 @@ $mobile-width: 15rem;
   transform: translateY(-3.5rem);
   font-size: 0.6rem;
   padding: 0 1rem;
-  
+
   @include md {
     transform: translateY(-2rem);
   }
@@ -147,49 +148,61 @@ $mobile-width: 15rem;
 }
 
 .side:nth-child(1) {
-  transform: rotateY(-0deg) translateZ(calc($mobile-width)) translateY(calc($mobile-width / 2));
+  transform: rotateY(-0deg) translateZ(calc($mobile-width))
+    translateY(calc($mobile-width / 2));
 
   @include md {
-    transform: rotateY(-0deg) translateZ(calc($width)) translateY(calc($width / 2));
+    transform: rotateY(-0deg) translateZ(calc($width))
+      translateY(calc($width / 2));
   }
 }
 
 .side:nth-child(2) {
-  transform: rotateY(-300deg) rotateX(0deg) translateZ(calc($mobile-width)) translateY(calc($mobile-width / 2));
+  transform: rotateY(-300deg) rotateX(0deg) translateZ(calc($mobile-width))
+    translateY(calc($mobile-width / 2));
 
   @include md {
-    transform: rotateY(-300deg) rotateX(0deg) translateZ(calc($width)) translateY(calc($width / 2));
+    transform: rotateY(-300deg) rotateX(0deg) translateZ(calc($width))
+      translateY(calc($width / 2));
   }
 }
 
 .side:nth-child(3) {
-  transform: rotateY(-240deg) rotateX(0deg) translateZ(calc($mobile-width)) translateY(calc($mobile-width / 2));
+  transform: rotateY(-240deg) rotateX(0deg) translateZ(calc($mobile-width))
+    translateY(calc($mobile-width / 2));
 
   @include md {
-    transform: rotateY(-240deg) rotateX(0deg) translateZ(calc($width)) translateY(calc($width / 2));
+    transform: rotateY(-240deg) rotateX(0deg) translateZ(calc($width))
+      translateY(calc($width / 2));
   }
 }
 
 .side:nth-child(4) {
-  transform: rotateY(-180deg) rotateX(0deg) translateZ(calc($mobile-width)) translateY(calc($mobile-width / 2));
+  transform: rotateY(-180deg) rotateX(0deg) translateZ(calc($mobile-width))
+    translateY(calc($mobile-width / 2));
 
   @include md {
-    transform: rotateY(-180deg) rotateX(0deg) translateZ(calc($width)) translateY(calc($width / 2));
+    transform: rotateY(-180deg) rotateX(0deg) translateZ(calc($width))
+      translateY(calc($width / 2));
   }
 }
 
 .side:nth-child(5) {
-  transform: rotateY(-120deg) rotateX(0deg) translateZ(calc($mobile-width)) translateY(calc($mobile-width / 2));
+  transform: rotateY(-120deg) rotateX(0deg) translateZ(calc($mobile-width))
+    translateY(calc($mobile-width / 2));
 
   @include md {
-    transform: rotateY(-120deg) rotateX(0deg) translateZ(calc($width)) translateY(calc($width / 2));
+    transform: rotateY(-120deg) rotateX(0deg) translateZ(calc($width))
+      translateY(calc($width / 2));
   }
 }
 
 .side:nth-child(6) {
-  transform: rotateY(-60deg) rotateX(0deg) translateZ(calc($mobile-width)) translateY(calc($mobile-width / 2));
+  transform: rotateY(-60deg) rotateX(0deg) translateZ(calc($mobile-width))
+    translateY(calc($mobile-width / 2));
 
   @include md {
-    transform: rotateY(-60deg) rotateX(0deg) translateZ(calc($width)) translateY(calc($width / 2));
+    transform: rotateY(-60deg) rotateX(0deg) translateZ(calc($width))
+      translateY(calc($width / 2));
   }
 }
