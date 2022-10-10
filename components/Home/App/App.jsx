@@ -30,7 +30,7 @@ function App() {
         className={`${styles['alternating-rows']} ${generics['alternating-rows']} max-1920`}
       >
         <div className={styles['mockup-wrapper']}>
-          <img src="/mockups/3.png" alt="" />
+          <img src="/mockups/profile.png" alt="" />
         </div>
         <ClearContainer
           title="A whole ecosystem designed to support you in building your dream life"
