@@ -31,12 +31,23 @@
 }
 
 .footer.light a,
-.footer.light p {
+.footer.light p,
+.footer.light button {
   color: $light-mode-text-color;
 }
 
-.footer a {
+.footer a,
+.footer button {
   transition: color 0.3s ease-in-out;
+}
+
+.footer button {
+  background: none;
+  border: none;
+  text-align-last: left;
+  font-family: 'Montserrat', serif !important;
+  font-size: 1rem;
+  color: $dark-mode-text-color;
 }
 
 .footer a:hover {

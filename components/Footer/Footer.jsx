@@ -14,10 +14,24 @@ import LogoContainer from '../../public/footer/logo-container.svg';
 import RightContainer from '../../public/footer/rights-container.svg';
 import Image from 'next/image';
 import { LinkedIn } from '@mui/icons-material';
+import { useState } from 'react';
+import SimpleDialog from '../Generic/SimpleDialog/SimpleDialog';
+import { useEffect } from 'react';
 
 function Footer() {
   const date = new Date();
   const { isDarkMode } = useStore((state) => state);
+  const [openDialog, setOpenDialog] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [selectedValue, setSelectedValue] = useState('');
+
+  const handleDialogOpen = () => {
+    setOpenDialog(true);
+  };
+
+  const handleDialogClose = () => {
+    setOpenDialog(false);
+  };
 
   return (
     <footer
@@ -31,6 +45,21 @@ function Footer() {
       
       <section>
         <div className={`${styles.footer__main}`}>
+        <SimpleDialog
+          selectedValue={selectedValue}
+          open={openDialog}
+          onClose={() => handleDialogClose()}
+          title="Choose language"
+        >
+          <div>
+            <a href="/pdf/WP-Eng.pdf" onClick={handleDialogClose} target="_blank" className={`${styles.footer__column__item} button-blue`}>
+              English
+            </a>
+            <a href="/pdf/WP-Ger.pdf" onClick={handleDialogClose} target="_blank" className={`${styles.footer__column__item} button-blue`}>
+              German
+            </a>
+          </div>
+        </SimpleDialog>
           <div className={`${styles.footer__column} ${styles.left}`}>
             <div className={`${styles.footer__column__items__wrapper}`}>
               <Link href="/" className={`${styles.footer__column__item}`}>
@@ -55,9 +84,13 @@ function Footer() {
               <a href="/pdf/audit_report.pdf" target="_blank" className={`${styles.footer__column__item}`}>
                 Audit Report
               </a>
-              <Link href="/" className={`${styles.footer__column__item}`}>
+              <button type="button" onClick={handleDialogOpen}>
                 Whitepaper
-              </Link>
+                
+              </button>
+              {/* <a href="/pdf/WP-Eng.pdf" target="_blank" className={`${styles.footer__column__item}`}>
+                Whitepaper
+              </a> */}
               <Link href="/" className={`${styles.footer__column__item}`}>
                 Policies
               </Link>

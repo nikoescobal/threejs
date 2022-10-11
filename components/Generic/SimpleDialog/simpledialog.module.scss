@@ -1,0 +1,24 @@
+@use '../../../styles/breakpoints' as *;
+@import '../../../styles/variables';
+
+.content-wrapper {
+  padding: 1rem 4rem 4rem;
+}
+
+.content-wrapper {
+  background: $dark-background;
+  color: $dark-mode-text-color;
+}
+
+.light.content-wrapper {
+  color: $light-mode-text-color;
+  background: $light-background;
+}
+
+.content-wrapper h2 {
+  font-size: 1.1rem;
+
+  @include sm {
+    font-size: 1.25rem;
+  }
+}
