@@ -266,6 +266,10 @@
   left: 32px;
 }
 
+.tiktok {
+  scale: 0.8;
+}
+
 @media only screen and (min-width: 480px) {
   .rights-container p {
     font-size: 0.9rem;
@@ -283,12 +287,20 @@
     padding-top: 3rem;
   }
 
+  .middle {
+    text-align: center;
+  }
+
+  .right {
+    text-align: right;
+  }
+
   .socials-wrapper {
     display: grid;
     position: absolute !important;
-    gap: 1rem;
-    left: 50px;
-    bottom: 3rem;
+    gap: 0rem;
+    left: 64px;
+    bottom: -0.5rem;
     padding-bottom: 0;
   }
 

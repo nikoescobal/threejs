@@ -3,7 +3,8 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TelegramIcon from '@mui/icons-material/Telegram';
-import DiscordIcon from '../../public/icons/discord.svg';
+import TikTokIcon from '../../public/logos/tiktok.svg';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 import useStore from '../../store/store';
 import Link from 'next/link';
 import styles from './footer.module.scss';
@@ -28,44 +29,39 @@ function Footer() {
       
       <section>
         <div className={`${styles.footer__main}`}>
-          {/* <div className={`${styles.footer__column}`}>
+          <div className={`${styles.footer__column} ${styles.left}`}>
             <div className={`${styles.footer__column__items__wrapper}`}>
               <Link href="/" className={`${styles.footer__column__item}`}>
-                Projects
+                Home
               </Link>
-              <Link href="/" className={`${styles.footer__column__item}`}>
-                Marketplace
+              <Link href="/app" className={`${styles.footer__column__item}`}>
+                App
               </Link>
-              <Link href="/" className={`${styles.footer__column__item}`}>
-                Governance
+              <Link href="/token" className={`${styles.footer__column__item}`}>
+                Token
               </Link>
-              <Link href="/" className={`${styles.footer__column__item}`}>
-                Discord
+              <Link href="/personal-development" className={`${styles.footer__column__item}`}>
+                Personal Development
               </Link>
-            </div>
-          </div> */}
-          <div className={`${styles.footer__column}`}>
-            {/* <span className={`${styles.footer__column__title}`}>Company</span> */}
-            <div className={`${styles.footer__column__items__wrapper}`}>
-              <Link href="/" className={`${styles.footer__column__item}`}>
-                Newsletter
-              </Link>
-              <Link href="/" className={`${styles.footer__column__item}`}>
-                LinkedIn
-              </Link>
-              <Link href="/" className={`${styles.footer__column__item}`}>
-                Youtube
-              </Link>
-              <Link href="/" className={`${styles.footer__column__item}`}>
-                Instagram
-              </Link>
-              <Link href="/" className={`${styles.footer__column__item}`}>
-                Twitter
+              <Link href="/about-us" className={`${styles.footer__column__item}`}>
+                About Us
               </Link>
             </div>
           </div>
-          <div className={`${styles.footer__column}`}>
-            {/* <span className={`${styles.footer__column__title}`}>Contact Us</span> */}
+          <div className={`${styles.footer__column} ${styles.middle}`}>
+            <div className={`${styles.footer__column__items__wrapper}`}>
+              <a href="/pdf/audit_report.pdf" target="_blank" className={`${styles.footer__column__item}`}>
+                Audit Report
+              </a>
+              <Link href="/" className={`${styles.footer__column__item}`}>
+                Whitepaper
+              </Link>
+              <Link href="/" className={`${styles.footer__column__item}`}>
+                Policies
+              </Link>
+            </div>
+          </div>
+          <div className={`${styles.footer__column} ${styles.right}`}>
             <div className={`${styles.items__wrapper}`}>
               <a href='mailto:hello@legacynetwork.io' className={`${styles.footer__column__ite}`}>
                 hello@legacynetwork.io
@@ -85,17 +81,6 @@ function Footer() {
               <span href="/" className={`${styles.footer__column__item}`}>
                 FL-0002.683.628-1
               </span>
-              {/* <div className={`${styles.footer__socials}`}>
-                <Link href="/" target="_blank">
-                  <TwitterIcon />
-                </Link>
-                <Link href="/" target="_blank">
-                  <FacebookIcon />
-                </Link>
-                <Link href="/" target="_blank">
-                  <InstagramIcon />
-                </Link>
-              </div> */}
             </div>
           </div>
         </div>
@@ -103,18 +88,6 @@ function Footer() {
           <img src="logo-2.png" className={`${styles.footer__column__logo}`} alt="" />
         </div>
       </section>
-      {/* <div className={styles['logo-container']}>
-        <div>
-          <svg width="267" height="227" className={styles.shape} viewBox="0 0 267 227" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M202 101.654C187.6 6.8543 235 0.15457 267 0.154297H0V226.654C0.4 170.654 59.5 165.987 89 170.654C188.6 187.454 205.833 131.654 202 101.654Z" fill="#D9D9D9"/>
-          </svg>
-          <img src={Logo.src} className={styles.logo} alt="" />
-          <div>
-
-          </div>
-        
-        </div>
-      </div> */}
       <div className={styles['logo-wrapper']}>
         <div>
           <svg width="267" height="227" className={styles.shape} viewBox="0 0 267 227" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -136,6 +109,12 @@ function Footer() {
         </a>
         <a href="https://twitter.com/LegacyNetworkio" rel='noreferrer' target="_blank">
           <TwitterIcon />
+        </a>
+        <a href="https://twitter.com/LegacyNetworkio" rel='noreferrer' target="_blank">
+          <svg className={styles.tiktok} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2859 3333" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fillRule="evenodd" clipRule="evenodd"><path d="M2081 0c55 473 319 755 778 785v532c-266 26-499-61-770-225v995c0 1264-1378 1659-1932 753-356-583-138-1606 1004-1647v561c-87 14-180 36-265 65-254 86-398 247-358 531 77 544 1075 705 992-358V1h551z"/></svg>
+          </a>
+        <a href="https://twitter.com/LegacyNetworkio" rel='noreferrer' target="_blank">
+          <YouTubeIcon />
         </a>
       </div>
       <div className={styles['rights-container']}>
