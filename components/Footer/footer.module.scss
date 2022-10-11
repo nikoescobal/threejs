@@ -50,7 +50,8 @@
   color: $dark-mode-text-color;
 }
 
-.footer a:hover {
+.footer a:hover,
+.footer button:hover {
   color: $ln-blue;
 }
 
