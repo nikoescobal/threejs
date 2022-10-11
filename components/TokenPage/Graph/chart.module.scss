@@ -34,7 +34,7 @@
   // transform: translate(-50%, -50%);
   background: rgba(255, 255, 255, 0.05);
   min-width: 24rem;
-  min-height: 34rem;
+  min-height: 24rem;
   // padding: clamp(1rem, 10vw + 1rem, 4rem);
   padding: clamp(1rem, 10vw + 1rem, 4rem) clamp(1rem, 10vw + 1rem, 8rem);
   max-height: 28rem;
@@ -45,7 +45,7 @@
 
 .vesting-wrapper {
   position: absolute;
-  top: 43%;
+  top: 55%;
   right: 2rem;
   max-width: 8rem;
 
@@ -65,7 +65,7 @@
 
 .chart-content h4 {
   font-family: 'din condensed', serif !important;
-  font-size: clamp(2.25rem, 10vw + 1rem, 3.5rem);
+  font-size: clamp(2.25rem, 10vw + 1rem, 2.5rem);
 }
 
 .chart-content a {
@@ -175,6 +175,14 @@ svg.arrow {
   bottom: -0%;
   left: 50%;
   transform: translate(-50%, 0);
+}
+
+.bg {
+  min-width: 24rem;
+}
+
+.bg ul {
+  margin-left: 1rem;
 }
 
 @media only screen and (min-width: 768px) {
