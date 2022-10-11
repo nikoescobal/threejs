@@ -40,24 +40,24 @@ function Token() {
           }
           title={'LGCN Token'}
           subtitle={'a multichain utility & payment token'}
-          rightObj={
-            isDesktop ? (
-              <TokenModel />
-            ) : (
-              <img
-                style={{ scale: '1.4', transform: 'translateX(-16px)' }}
-                src={TokenImage.src}
-                alt="token"
-                draggable="false"
-              />
-            )
-          }
-          //  rightObj={isDesktop
-          //   ? <video autoPlay loop={true} muted>
-          //       <source src="/videos/token.mp4"/>
-          //     </video>
-          //   : <Image src={TokenImage} alt="token" draggable="false" />
-          //   }
+          // rightObj={
+          //   isDesktop ? (
+          //     <TokenModel />
+          //   ) : (
+          //     <img
+          //       style={{ scale: '1.4', transform: 'translateX(-16px)' }}
+          //       src={TokenImage.src}
+          //       alt="token"
+          //       draggable="false"
+          //     />
+          //   )
+          // }
+           rightObj={isDesktop
+            ? <video style={{scale: '1.25'}} autoPlay loop={true} muted>
+                <source src="/videos/token1.webm"/>
+              </video>
+            : <Image src={TokenImage} alt="token" draggable="false" />
+            }
         />
         <TokenIntro />
         <WavesWrapper hideBottom={true}>
