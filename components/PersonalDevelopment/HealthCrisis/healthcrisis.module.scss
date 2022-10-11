@@ -47,5 +47,7 @@
 }
 
 .coming {
-  background: red;
+  p {
+    min-width: 16rem !important;
+  }
 }
