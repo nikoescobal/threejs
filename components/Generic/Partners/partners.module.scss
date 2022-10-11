@@ -1,0 +1,69 @@
+@use '../../../styles/breakpoints' as *;
+@import '../../../styles/variables';
+
+.partners h3 {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.logos-wrapper {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  gap: 2rem 2rem;
+  background: rgba($color: $light-background, $alpha: 0.1);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include md {
+  }
+
+  @include lg {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.partners.light .logos-wrapper {
+  background: rgba($color: $light-mode-secondary, $alpha: 0.1);
+}
+
+.logos-wrapper div {
+  max-width: clamp(4rem, 10vw + 1rem, 10rem);
+}
+
+.logos-wrapper img {
+}
+
+.sercor,
+.vechain {
+  max-width: 4rem;
+}
+
+.maerki,
+.caag,
+.saynode,
+.safehaven,
+.crypto-valley,
+.vechain,
+.red4sec {
+  filter: brightness(0) invert(1);
+}
+
+.light .maerki,
+.light .red4sec,
+.light .caag,
+.light .saynode,
+.light .crypto-valley,
+.light .synaps,
+.light .safehaven,
+.light .niedermuller,
+.light .vechain {
+  filter: brightness(0);
+}
+
+.light .cv-labs,
+.light .sercor {
+  filter: invert(1);
+}

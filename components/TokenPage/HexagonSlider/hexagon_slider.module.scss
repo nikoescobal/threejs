@@ -1,0 +1,208 @@
+@use '../../../styles/breakpoints' as *;
+@import '../../../styles/variables';
+
+$height: 17rem;
+$width: 20rem;
+$mobile-width: 15rem;
+
+.container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 12rem;
+  position: relative;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  // transform: translateY(calc($mobile-width / -2));
+  transform: translateY(calc($width / -2));
+
+  @include md {
+    transform: translateY(calc($width / -2));
+  }
+}
+
+.container > div:last-of-type {
+  padding-top: 12rem;
+}
+
+.hexagon {
+  width: $mobile-width;
+  height: $height;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease-in-out;
+  transform-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+
+  @include md {
+    width: $width;
+  }
+}
+
+.side-faces {
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+}
+
+.top,
+.bottom {
+  position: absolute;
+  line-height: 100px;
+  text-align: center;
+}
+
+.face {
+  position: absolute;
+  backface-visibility: hidden;
+  background: #fff600;
+  box-shadow: inset 10px 0 10px -10px black, inset -10px 0 10px -10px black;
+}
+
+.side {
+  height: $height;
+  width: $mobile-width;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.05);
+  backface-visibility: hidden;
+  border-radius: 8px;
+  text-align: center;
+  line-height: 100px;
+  outline: 1px solid transparent;
+  color: white;
+
+  @include md {
+    width: $width;
+  }
+}
+
+.active {
+  background: $ln-blue !important;
+  color: white !important;
+  h3 {
+    color: white !important;
+  }
+}
+
+.arrows-wrapper {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+  filter: invert(48%) sepia(80%) saturate(3488%) hue-rotate(208deg)
+    brightness(101%) contrast(83%);
+}
+
+.arrows-wrapper span {
+  cursor: pointer;
+}
+
+.arrows-wrapper span:first-of-type {
+  rotate: 180deg;
+}
+
+.light .side h3,
+.light .side p {
+  color: $light-mode-text-color;
+}
+
+.light .side.active h3,
+.light .side.active p {
+  color: white;
+}
+
+.side h3 {
+  font-size: 0.63rem;
+
+  @include md {
+    font-size: 1rem;
+  }
+}
+
+.side h3 {
+  transform: translateY(-1.5rem);
+
+  @include md {
+    transform: translateY(0);
+  }
+}
+
+.side p {
+  transform: translateY(-3.5rem);
+  font-size: 0.6rem;
+  padding: 0 1rem;
+
+  @include md {
+    transform: translateY(-2rem);
+  }
+}
+
+.light .side {
+  background: rgba($color: #000000, $alpha: 0.2);
+}
+
+.light .side.active {
+  background: $light-mode-secondary !important;
+}
+
+.side:nth-child(1) {
+  transform: rotateY(-0deg) translateZ(calc($mobile-width))
+    translateY(calc($mobile-width / 2));
+
+  @include md {
+    transform: rotateY(-0deg) translateZ(calc($width))
+      translateY(calc($width / 2));
+  }
+}
+
+.side:nth-child(2) {
+  transform: rotateY(-300deg) rotateX(0deg) translateZ(calc($mobile-width))
+    translateY(calc($mobile-width / 2));
+
+  @include md {
+    transform: rotateY(-300deg) rotateX(0deg) translateZ(calc($width))
+      translateY(calc($width / 2));
+  }
+}
+
+.side:nth-child(3) {
+  transform: rotateY(-240deg) rotateX(0deg) translateZ(calc($mobile-width))
+    translateY(calc($mobile-width / 2));
+
+  @include md {
+    transform: rotateY(-240deg) rotateX(0deg) translateZ(calc($width))
+      translateY(calc($width / 2));
+  }
+}
+
+.side:nth-child(4) {
+  transform: rotateY(-180deg) rotateX(0deg) translateZ(calc($mobile-width))
+    translateY(calc($mobile-width / 2));
+
+  @include md {
+    transform: rotateY(-180deg) rotateX(0deg) translateZ(calc($width))
+      translateY(calc($width / 2));
+  }
+}
+
+.side:nth-child(5) {
+  transform: rotateY(-120deg) rotateX(0deg) translateZ(calc($mobile-width))
+    translateY(calc($mobile-width / 2));
+
+  @include md {
+    transform: rotateY(-120deg) rotateX(0deg) translateZ(calc($width))
+      translateY(calc($width / 2));
+  }
+}
+
+.side:nth-child(6) {
+  transform: rotateY(-60deg) rotateX(0deg) translateZ(calc($mobile-width))
+    translateY(calc($mobile-width / 2));
+
+  @include md {
+    transform: rotateY(-60deg) rotateX(0deg) translateZ(calc($width))
+      translateY(calc($width / 2));
+  }
+}

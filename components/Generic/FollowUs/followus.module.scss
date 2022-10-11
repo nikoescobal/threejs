@@ -1,0 +1,80 @@
+@import '../../../styles/variables';
+
+.follow-us {
+  display: grid;
+  justify-content: center;
+  position: relative;
+  margin-bottom: clamp(4rem, 20vw, 12rem);
+}
+
+.follow-us h3 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.follow-us a {
+  transition: all 0.3s ease-in-out;
+}
+
+.follow-us a:hover svg {
+  scale: 1.1;
+  fill: $ln-blue;
+}
+
+.main-icon-wrapper {
+  display: grid;
+  gap: 1rem;
+}
+
+.main-icon-wrapper div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // margin-top: 1rem;
+  // justify-content: space-between;
+}
+
+.top,
+.bottom {
+  gap: 1rem;
+}
+
+.top div,
+.bottom div {
+  gap: 1rem;
+}
+
+.follow-us svg {
+  color: $dark-background--light-2;
+  font-size: clamp(2rem, 10vw, 3rem);
+  cursor: pointer;
+}
+
+.follow-us.light svg {
+  color: rgba($color: $light-mode-secondary, $alpha: 0.5);
+}
+
+.icon-wrapper {
+  background: $dark-background--light-1;
+  width: clamp(4rem, 20vw, 6rem);
+  height: clamp(4rem, 20vw, 6rem);
+}
+
+.follow-us.light .icon-wrapper {
+  background: rgba($color: $light-mode-tertiary, $alpha: 0.3);
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@media (min-width: 768px) {
+}

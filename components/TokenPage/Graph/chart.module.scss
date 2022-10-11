@@ -1,0 +1,307 @@
+@use '../../../styles/breakpoints' as *;
+@import '../../../styles/variables';
+
+.apexcharts-legend {
+  justify-content: center !important;
+  gap: 1rem;
+  top: 0 !important;
+}
+
+.apexcharts-legend span {
+  color: #eee !important;
+}
+
+.App.light .apexcharts-legend span {
+  color: rgb(31, 31, 31) !important;
+}
+
+.chart-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  // transform: translateX(-10vw);
+}
+
+.chart-content {
+  // position: absolute;
+  display: grid;
+  // align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translateX(0vw);
+  // transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.05);
+  min-width: 24rem;
+  min-height: 34rem;
+  // padding: clamp(1rem, 10vw + 1rem, 4rem);
+  padding: clamp(1rem, 10vw + 1rem, 4rem) clamp(1rem, 10vw + 1rem, 8rem);
+  max-height: 28rem;
+  width: 100%;
+  max-width: 768px;
+  border-radius: 8px;
+}
+
+.vesting-wrapper {
+  position: absolute;
+  top: 43%;
+  right: 2rem;
+  max-width: 8rem;
+
+  @include md {
+    top: 2rem;
+    right: 24px;
+  }
+}
+
+.light .chart-content {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.chart-content h3 {
+  font-size: clamp(2.5rem, 10vw + 1rem, 4rem);
+}
+
+.chart-content h4 {
+  font-family: 'din condensed', serif !important;
+  font-size: clamp(2.25rem, 10vw + 1rem, 3.5rem);
+}
+
+.chart-content a {
+  // display: inline-block;
+  // background: $ln-blue;
+  // font-size: 0.75rem;
+  // padding: 0.75rem 1.25rem;
+  // margin-top: 2rem;
+  // border-radius: 6px;
+  // color: white;
+}
+
+.arrows-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 0 1rem;
+  gap: 5rem;
+}
+
+.light .arrows-wrapper {
+  filter: invert(48%) sepia(80%) saturate(3488%) hue-rotate(208deg)
+    brightness(101%) contrast(83%);
+}
+
+.arrows-wrapper img {
+  scale: 0.8;
+  cursor: pointer;
+}
+
+.arrows-wrapper span:first-of-type img {
+  rotate: 180deg;
+  transform: translateY(1.5px);
+}
+
+.donut {
+  transition: rotate 0.3s ease-in-out;
+  position: relative;
+  overflow: visible !important;
+  max-height: 28rem;
+}
+
+.donut-wrapper {
+  position: relative;
+  z-index: 1;
+  min-width: 16rem;
+  margin: 1rem;
+  margin-bottom: 4rem;
+}
+
+.donut-wrapper::before {
+  transform: translate(-50%, -50%);
+}
+
+.donut-segment {
+  // color: gray;
+  // stroke: gray;
+}
+
+.light .donut-segment {
+  // stroke: rgba($color: #000000, $alpha: 0.1)
+}
+
+.donut-segment text {
+  font-size: 0.1rem;
+}
+
+.active {
+  // fill: red !important;
+  stroke-width: 12;
+}
+
+.donut g.active text {
+  font-size: 0.3rem;
+}
+
+.arrow {
+  display: inline-block;
+  position: absolute;
+  max-width: 8rem;
+  height: min-content;
+  cursor: pointer;
+  bottom: -2rem;
+}
+
+svg.arrow {
+  fill: $dark-mode-text-color;
+}
+
+.light svg.arrow {
+  fill: $light-mode-text-color;
+}
+
+.arrow.left {
+  left: -10%;
+  transform: scaleX(-1) translateX(-20%);
+  rotate: 60deg;
+}
+
+.arrow.right {
+  right: -10%;
+  transform: translateX(-20%);
+  rotate: -60deg;
+}
+
+.arrows-wrapper {
+  position: absolute;
+  bottom: -0%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+@media only screen and (min-width: 768px) {
+  .arrow {
+    display: inline-block;
+    max-width: 8rem;
+    height: min-content;
+    cursor: pointer;
+    top: auto;
+    right: 20%;
+  }
+
+  .arrows-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .light .arrows-wrapper {
+    filter: brightness(0);
+  }
+
+  svg.arrow {
+    fill: $dark-mode-text-color;
+  }
+
+  .light svg.arrow {
+    fill: $light-mode-text-color;
+  }
+
+  .arrow.left {
+    transform: scaleX(1) translateX(-20%);
+    rotate: 180deg;
+    top: -20%;
+    left: auto;
+  }
+
+  .arrow.right {
+    right: 20%;
+    transform: translateX(-20%);
+    transform: scaleX(-1);
+    rotate: -0deg;
+    left: auto;
+    bottom: -20%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .chart-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    transform: translate(-17.8%);
+  }
+
+  .donut-wrapper {
+    margin: 0;
+    min-width: 30rem;
+  }
+
+  .donut-wrapper::before {
+    // content:'';
+    background: $dark-background;
+    height: calc(100% + 5rem);
+    aspect-ratio: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-40%, -50%);
+  }
+
+  .chart-content,
+  .light .chart-content {
+    transform: translateX(0%);
+    background: none;
+    // min-width: 60vw;
+  }
+
+  .descriptions {
+    margin-left: 1rem;
+  }
+
+  .bg {
+    position: relative;
+    padding-bottom: 1.5rem;
+    overflow: hidden;
+    width: 100%;
+    min-width: 36rem;
+    max-width: 768px;
+    transform: translateX(5.5%);
+  }
+
+  .bg::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    // left: -300px;
+    left: -39%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    // height: 160%;
+    // height: 160%;
+    // height: 28rem;
+    height: 100vh;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0px 00px 0px 100vw rgba(255, 255, 255, 0.05);
+  }
+
+  .light .bg::before {
+    box-shadow: 0px 00px 0px 100vw $transparent-light;
+  }
+
+  .chart-content {
+    padding-left: 100px;
+    padding-right: 100px;
+    min-height: 24rem;
+    width: 100%;
+    max-width: 768px !important;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .chart-wrapper {
+    transform: translate(-21%);
+  }
+}

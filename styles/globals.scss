@@ -1,0 +1,268 @@
+@use '../styles/breakpoints' as *;
+@import './variables';
+
+#__next * {
+}
+
+* {
+  font-family: 'Montserrat', serif;
+}
+
+.content-wrapper {
+  background: $dark-background;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.content-wrapper.light {
+  background: $light-background;
+  color: #3e3e3e;
+}
+
+.content-wrapper.light h2,
+.content-wrapper.light h3 {
+  color: $light-mode-secondary;
+}
+
+#__next > .light,
+#__next > .light a {
+}
+
+img {
+  width: 100% !important;
+  height: auto;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Fjalla', serif;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: clamp(3rem, 5vw + 1rem, 4.5rem);
+}
+
+h3 {
+  font-size: clamp(2rem, 10vw, 3rem);
+  font-weight: bold;
+}
+
+h4 {
+  font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
+  font-weight: bold;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  line-height: 2.75ch;
+}
+
+button {
+  cursor: pointer;
+  font-family: 'montserrat', serif !important;
+}
+
+.grid {
+  display: grid;
+}
+
+.three-col {
+  grid-template-columns: 1fr 1fr;
+}
+
+.button-blue {
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+  background: #1960ea;
+  color: white;
+  text-align: center;
+  padding: 0.6rem 0;
+  width: 100%;
+  max-width: 13rem;
+  margin-top: 1.25rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-family: 'Montserrat', serif !important;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.light .button-blue {
+  background: $light-mode-secondary;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.gradient {
+  position: absolute;
+  overflow: visible;
+  opacity: 0.1;
+}
+
+.gradient img {
+}
+
+.gradient span {
+  overflow: visible !important;
+}
+
+/* Security */
+.security {
+  position: relative;
+  overflow: hidden;
+}
+
+.security > div {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 5;
+}
+
+.security > img:last-of-type {
+  position: absolute;
+  top: 50vw;
+  right: -50vw;
+  z-index: 0;
+  opacity: 0.15;
+}
+
+/* ApexCharts */
+
+.apexcharts-legend {
+  display: grid !important;
+  justify-content: center !important;
+}
+
+.apexcharts-legend-text {
+  color: white !important;
+}
+
+#__next > .light .apexcharts-legend-text {
+  color: $light-mode-text-color !important;
+}
+
+/* MUI */
+.MuiTab-root {
+  color: white;
+  font-family: 'din condensed', sans-serif;
+  font-size: 1.2rem;
+}
+
+.MuiAccordionSummary-content.Mui-expanded {
+  color: #154ee3 !important;
+  background: transparent !important;
+}
+
+.MuiAccordion-root.Mui-expanded {
+  color: #154ee3;
+}
+
+// .css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+.MuiAccordion-root {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(15px) !important;
+  border-radius: 10px !important;
+  color: #cfcfcf !important;
+  margin: 1rem 0;
+}
+
+.MuiAccordion-root svg {
+  color: #cfcfcf !important;
+}
+
+.MuiAccordion-root.Mui-expanded svg {
+  color: #154ee3 !important;
+}
+
+.MuiTabs-flexContainer button {
+  flex: 1;
+  color: #646464 !important;
+  font-family: 'din condensed', serif !important;
+  font-size: 0.95rem !important;
+  min-width: max-content;
+
+  @include md {
+    font-size: 1.5rem !important;
+  }
+
+  @include lg {
+    font-size: 2rem !important;
+  }
+
+  @include xl {
+    font-size: 2.3rem !important;
+  }
+}
+
+.MuiTabs-flexContainer button.Mui-selected {
+  color: #1657ff !important;
+}
+
+.MuiTabs-indicator {
+  display: none;
+}
+
+.app-preview .MuiTabs-flexContainer {
+  justify-content: center;
+}
+
+.app-preview .MuiTab-root {
+  max-width: 12rem !important;
+}
+
+.app-preview > div div {
+  background: transparent !important;
+}
+
+@media (min-width: 480px) {
+  .MuiTabs-indicator {
+    display: block;
+    background: #1657ff !important;
+  }
+
+  .three-col {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .MuiTabs-flexContainer {
+    overflow-x: hidden;
+    gap: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .MuiTabs-flexContainer button {
+  }
+}
+
+@media (min-width: 1280px) {
+  .MuiTabs-flexContainer button {
+  }
+}

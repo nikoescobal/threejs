@@ -1,0 +1,54 @@
+@use '../../../styles/breakpoints' as *;
+@import '../../../styles/variables';
+
+.wrapper {
+  position: relative;
+}
+
+.wrapper span,
+.wrapper p {
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'montserrat', serif !important;
+  font-size: 0.75rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.wrapper span {
+  padding: 2rem 0;
+}
+
+.light span {
+  color: $light-mode-text-color;
+}
+
+.hover-text {
+  position: absolute;
+  top: 50%;
+  left: 5rem;
+  border-radius: 4px;
+  transform: translateY(-50%);
+  padding: 0.1rem 0.365rem;
+  z-index: 3;
+  min-width: max-content;
+  cursor: pointer;
+  right: auto;
+  background: $ln-blue;
+
+  @include lg {
+    display: none;
+    left: -0.5rem;
+    top: 230%;
+    padding: 0.1rem;
+    font-size: 0.67rem !important;
+  }
+}
+
+.light .hover-text {
+  background: $light-mode-secondary;
+  color: white;
+}
+
+.wrapper:hover .hover-text {
+  display: block;
+}

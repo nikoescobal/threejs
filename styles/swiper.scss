@@ -1,0 +1,23 @@
+.swiper-pagination {
+  text-align: left !important;
+}
+
+.swiper-pagination-bullets {
+  bottom: -2px !important;
+}
+
+.swiper-pagination-bullet {
+  border: 1px solid white;
+}
+
+.light .swiper-pagination-bullet {
+  border: 1px solid black;
+}
+
+.light .swiper-pagination-bullet-active {
+  background: black !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: white !important;
+}

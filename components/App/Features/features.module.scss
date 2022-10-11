@@ -1,0 +1,102 @@
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
+@use '../../../styles/buttons' as *;
+@use '../../../styles/variables' as *;
+
+.section {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 4rem;
+
+  @include lg {
+    padding-bottom: 8rem;
+  }
+
+  .key-features {
+    padding: 4rem 0 0.5rem;
+  }
+
+  .ai-features {
+    padding: 2rem 0 0.5rem;
+  }
+
+  h3 {
+    padding: 0.75rem 0;
+  }
+
+  & > h3 {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  .content {
+    padding: 1.5rem 0;
+
+    @include md {
+      display: grid;
+      grid-template-columns: 1.3fr 2fr;
+      place-items: center;
+
+      @include md {
+        display: grid;
+        grid-template-columns: 1.3fr 2fr;
+      }
+    }
+  }
+
+  .imagereverse {
+    order: 1;
+
+    @include md {
+      scale: 0.7;
+    }
+
+    img {
+      max-width: 30rem;
+      padding: 3rem 0 5rem;
+    }
+  }
+
+  .imgwrapper {
+    max-width: 250px;
+    margin: 0 auto;
+
+    @include md {
+      // max-width: 384px;
+
+      img {
+        object-fit: cover;
+      }
+    }
+
+    @include lg {
+      width: 100%;
+    }
+  }
+
+  button {
+    margin: 0 0 3.5rem;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .icons img {
+    max-width: 10.125rem;
+    padding: 0 0.65rem 0 0;
+  }
+}
+
+.circles {
+  top: 20%;
+  max-width: 30rem;
+  right: 10%;
+}

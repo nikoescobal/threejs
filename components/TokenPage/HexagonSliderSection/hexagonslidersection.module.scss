@@ -1,0 +1,9 @@
+.wrapper {
+  padding-top: 4rem;
+}
+
+.wrapper h2 {
+  font-size: clamp(2rem, 10vw, 3rem);
+  text-align: center;
+  padding-bottom: 8rem;
+}

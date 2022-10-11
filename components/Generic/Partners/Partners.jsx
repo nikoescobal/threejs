@@ -1,0 +1,87 @@
+import styles from './partners.module.scss';
+import generics from '../../../styles/generics.module.scss';
+import useStore from '../../../store/store';
+
+function Partners() {
+  const partners = [
+    {
+      endpoint: 'crypto-valley.png',
+      alt: 'crypto valley logo',
+      class: 'crypto-valley',
+    },
+    {
+      endpoint: 'cv-labs.png',
+      alt: 'cv labs logo',
+      class: 'cv-labs',
+    },
+    {
+      endpoint: 'niedermuller.png',
+      alt: 'niedermuller logo',
+      class: 'niedermuller',
+    },
+    {
+      endpoint: 'sercor.png',
+      alt: 'seratio logo',
+      class: 'sercor',
+    },
+    {
+      endpoint: 'synaps.png',
+      alt: 'synaps logo',
+      class: 'synaps',
+    },
+    {
+      endpoint: 'caag.png',
+      alt: 'caag logo',
+      class: 'caag',
+    },
+    {
+      endpoint: 'red4sec.png',
+      alt: 'red4sec logo',
+      class: 'red4sec',
+    },
+    // {
+    //   endpoint: 'maerki.png',
+    //   alt: 'maerki logo',
+    //   class: 'maerki',
+    // },
+    {
+      endpoint: 'saynode.png',
+      alt: 'saynode logo',
+      class: 'saynode',
+    },
+    {
+      endpoint: 'safehaven.png',
+      alt: 'safehaven logo',
+      class: 'safehaven',
+    },
+    {
+      endpoint: 'vechain.png',
+      alt: 'vechain logo',
+      class: 'vechain',
+    },
+  ];
+  const { isDarkMode } = useStore((state) => state);
+
+  return (
+    <section
+      className={`${styles.partners} ${!isDarkMode ? `${styles.light}` : ''} `}
+    >
+      <h3 className={`${generics['spacing-x']}`}>Our Partners</h3>
+      <div
+        className={`${styles['logos-wrapper']} ${generics['spacing-x']} max-1920`}
+      >
+        {partners.map((logo) => (
+          <div key={logo.alt}>
+            <img
+              src={`/logos/${logo.endpoint}`}
+              alt={logo.alt}
+              className={styles[logo.class]}
+            />
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+export default Partners;

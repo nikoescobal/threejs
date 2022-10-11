@@ -1,0 +1,106 @@
+@import '../../../styles/variables';
+
+.meet-team {
+  // padding: 6rem 4rem;
+  position: relative;
+  // margin-top: -32vw;
+  margin-bottom: 8rem;
+  z-index: 1;
+  // background: linear-gradient(rgba($color: $ln-blue, $alpha: 0.2), transparent);
+}
+
+.meet-team.light {
+  background: linear-gradient(rgba($color: $light-mode-primary, $alpha: 0.2), transparent);
+}
+
+.meet-team > img{
+  position: absolute;
+}
+
+.meet-team > img:first-of-type{
+  top: -50vw;
+  left: -20vw;
+  opacity: 0.2;
+  width: 80%;
+}
+
+.meet-team > img:last-of-type{
+  top: -70vw;
+  left: 0vw;
+}
+
+.meet-team h2 {
+  text-align: center;
+  color: white;
+  font-family: 'din condensed', serif;
+  position: relative;
+  padding-bottom: 3.5rem;
+}
+
+.cards-wrapper {
+  // display: flex;
+  // // grid-template-columns: 1fr 1fr 1fr;
+  // gap: 1.5rem;
+  // padding-top: 3rem;
+  // justify-content: space-around;
+  // flex-wrap: wrap;
+  // justify-items: center;
+}
+
+.flip-cards-wrapper {
+  display: grid;
+  gap: 1.5rem;
+  width: 120vw;
+  position: relative;
+  // transform: translateX(-9rem);
+  transform: translateX(-10vw);
+}
+
+.flip-cards-wrapper > div {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.flip-cards-wrapper .flip {
+  // flex-basis: 30%;
+  // // background: rgba(255, 255, 255, 0.05);
+  // backdrop-filter: blur(15px);
+  // border-radius: 20px;
+  // // padding: 1.5rem 1rem;
+  // min-height: 12rem;
+  min-height: 20vw;
+  width: 100%;
+  // min-width: 16rem;
+  // max-width: 18rem;
+  max-width: 20vw;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+}
+
+.cards-wrapper img {
+  border-radius: 20px;
+}
+
+.tablet-cards-wrapper {
+  // display: grid;
+  // grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tablet-cards-wrapper
+.card-item {
+  background: rgba($color: white, $alpha: 0.05);
+  text-align: center;
+  aspect-ratio: 1;
+  flex-basis: 50%;
+}
+
+@media (min-width: 768px) {
+  .meet-team h4 {
+    font-size: 6rem;
+  }
+}

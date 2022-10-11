@@ -1,0 +1,103 @@
+@import '../../styles/variables';
+
+.flip {
+  width: 100%;
+  height: 100%;   
+  text-align: center;
+  perspective: 1000px;  
+  outline: 1px solid transparent;
+}
+
+.flip.invisible {
+  visibility: hidden;
+}
+
+.flip.disabled .flip-front {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.light.flip.disabled .flip-front {
+  // background: rgba(0, 0, 0, 0.1);
+  background: $transparent-light;
+}
+
+.flip-content {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  outline: 1px solid transparent;
+  backface-visibility: hidden;
+
+}
+.flip.enabled:hover .flip-content {
+  transform: rotateY(180deg);
+  transition: transform 1s;
+}
+.flip-front, .flip-back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  line-height: 150px;
+  // backface-visibility: visible;  
+  color: #fff;    
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  // padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.light .flip-front,
+.light .flip-back {
+  // background: rgba(0, 0, 0, 0.2);
+  background: rgba($color: $light-mode-secondary, $alpha: 0.3);
+}
+
+.flip-front {
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+.flip-back {
+  transform: rotateY(180deg);
+  outline: 1px solid transparent;
+  backface-visibility: hidden;
+}
+
+.flip-front img {
+  width: 100%;
+  object-fit: cover;
+  object-position: left bottom;
+}
+
+.flip-back div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  // font-size: 3rem;
+}
+
+.light p {
+  color: $light-mode-secondary;
+}
+
+.flip-back a {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.25rem;
+  // height: 100% !important;
+  // width: 100% !important;
+}
+
+.flip-back svg {
+  display: block !important;
+  font-size: 3rem;
+  fill: $ln-blue;
+}
+
+.light svg {
+  fill: $light-mode-secondary;
+}

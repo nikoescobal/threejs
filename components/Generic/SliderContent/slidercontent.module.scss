@@ -1,0 +1,66 @@
+@import '../../../styles/variables';
+
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+  
+  background-color: transparent !important;
+}
+
+.slide-content-wrapper {
+  background: #202121;
+  color: white;
+  list-style: none;
+  border: 1px solid $ln-blue;
+  border-radius: 20px !important;
+  text-align: left;
+  visibility: hidden;
+}
+
+
+
+.slide-content-wrapper.active {
+  visibility: visible;
+}
+
+.slide-content-wrapper.light {
+  background: $transparent-light;
+  color: $light-mode-text-color;
+  border: 1px solid $light-mode-secondary;
+}
+
+.slide-content-wrapper li {
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  font-family: 'Montserrat', serif;
+  position: relative;
+
+}
+
+.check {
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translate(0, -50%);
+  // scale: 1.1;
+}
+
+.slide-content-wrapper li:not(:last-of-type) {
+  border-bottom: 1px solid $ln-blue;
+}
+
+.light.slide-content-wrapper li:not(:last-of-type) {
+  border-bottom: 1px solid $light-mode-secondary;
+}
+
+.slide-content-wrapper li:not(.success)::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  font-size: 1rem;
+  color: $ln-blue; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.light.slide-content-wrapper li::before {
+  color: $light-mode-secondary;
+}

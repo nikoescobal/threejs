@@ -1,0 +1,47 @@
+@use '../../../styles/breakpoints' as *;
+
+.wrapper {
+  padding-bottom: 4rem;
+  position: relative;
+}
+
+.wrapper > div:first-of-type {
+  text-align: center;
+  max-width: 75ch;
+  margin: 0 auto;
+}
+
+.wrapper > div:first-of-type h3{
+  font-family: 'din condensed', serif !important;
+  font-size: clamp(2rem, 10vw, 3rem);
+}
+
+.donut-wrapper {
+  // display: flex;
+  // gap: 2rem;
+  // justify-content: space-between;
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 4rem;
+
+  transform: translateX(-4rem);
+  @media (min-width: 578px) {
+    transform: translateX(-18%);
+  }
+  @include md {
+    transform: translateX(-9%);
+  }
+}
+
+.wrapper button{
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+  max-width: 17rem !important;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.light .pillar-wrapper {
+  filter: invert(1);
+}

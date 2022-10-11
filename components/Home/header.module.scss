@@ -1,0 +1,60 @@
+@import '../../styles/variables';
+
+.container {
+  // background-image: radial-gradient(circle farthest-side at 50% 40%, rgba($ln-blue, 0.5), transparent);
+  position: relative;
+}
+
+.container.light {
+  // background-image: radial-gradient(circle farthest-side at 50% 40%, rgba(white, 0.5), transparent);
+}
+
+.header {
+  position: relative;
+}
+
+.legacy {
+  font-size: 5.2rem;
+  line-height: 5.1rem;
+  // padding: 0 0 1rem;
+  // width: 8rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: $light-mode-secondary;
+  // padding: 0.6rem 0 0;
+}
+
+.header h4 {
+  font-size: 1.2rem;
+  max-width: 44ch;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.light h4 {
+  color: $light-mode-secondary;
+}
+.header span {
+  // color: $ln-blue;
+  // font-weight: bold;
+  font-family: 'fjalla', serif;
+}
+
+.waves-wrapper {
+  position: absolute;
+  top: -40%;
+  left: -690px;
+  rotate: -90deg;
+}
+
+@media (min-width: 768px) {
+  .container {
+    // background-image: radial-gradient(circle farthest-side at 67% 30%, rgba($ln-blue, 0.75), transparent 60%);
+  }
+
+  .container.light {
+    // background-image: radial-gradient(circle farthest-side at 67% 30%, rgba(black, 0.2), transparent 60%);
+  }
+}

@@ -1,0 +1,17 @@
+.wrapper {
+  position: absolute;
+  opacity: 0.2;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.wrapper.light {
+  // filter: grayscale(100%);
+  // opacity: 0.35;
+  opacity: .4;
+  filter: invert(77%) sepia(35%) saturate(294%) hue-rotate(190deg) brightness(103%) contrast(102%);
+}

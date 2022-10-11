@@ -1,0 +1,79 @@
+@import '../../../styles/variables';
+
+$vertical-inner-spacing: 15vw;
+
+.waves-wrapper {
+  overflow: visible;
+  position: relative;
+}
+
+.content-wrapper {
+  background-color: $dark-background;
+}
+
+.light .content-wrapper {
+  // background-color: $light-mode-waves-color;
+  background: linear-gradient($light-mode-waves-start, $light-mode-waves-color, $light-background);
+}
+
+.waves-wrapper.light.bottom-hidden .content-wrapper{
+  // background: linear-gradient($light-mode-waves-color 80%, rgba($color: $light-background, $alpha: 1.0)) !important;
+  background: linear-gradient($light-mode-waves-start, $light-mode-waves-color, $light-background);
+}
+
+.top-waves-wrapper {
+  position: absolute;
+}
+
+.waves-img-wrapper {
+  padding-top: calc($vertical-inner-spacing * 1.5);
+  background-image: linear-gradient(rgba($ln-blue, 0.2), rgba($ln-blue, 0.2));
+  position: relative;
+}
+
+.waves-wrapper.light .waves-img-wrapper {
+  // background-image: linear-gradient(rgba($light-mode-primary, 0.0), rgba($light-mode-primary, 0.0));
+  background: none;
+}
+
+.waves-img-wrapper:last-of-type {
+  rotate: 180deg;
+}
+
+.waves-img-wrapper img {
+  margin-bottom: -0.3rem;
+  width: 101vw !important;
+}
+
+.waves-img-wrapper:first-of-type img {
+  position: absolute;
+  // top: 0.9rem;
+  bottom: 0;
+  left: 0;
+}
+
+.waves-img-wrapper:last-of-type img {
+  position: absolute;
+  // bottom: -0.9rem;
+  bottom: 0;
+  left: 0;
+}
+
+.content-wrapper {
+  // padding-top: calc($vertical-inner-spacing / 2);
+  // padding-bottom: $vertical-inner-spacing;
+}
+
+// .radial-wrapper-top {
+//   width: 95vw;
+//   height: 40vw;
+// }
+
+@media only screen and (min-width: 768px) {
+  .waves-wrapper {
+  }
+  
+  .waves-wrapper > img {
+    // min-height: 40vw;
+  }
+}

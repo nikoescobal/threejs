@@ -1,0 +1,30 @@
+.wrapper {
+  padding-top: 8rem;
+}
+
+.wrapper > div {
+  text-align: center;
+}
+
+.grid {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.grid p {
+  font-size: 0.75rem;
+}
+
+@media only screen and (min-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

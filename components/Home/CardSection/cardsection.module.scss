@@ -1,0 +1,148 @@
+@use '../../../styles/breakpoints' as *;
+@import '../../../styles/variables';
+
+.wrapper {
+  position: relative;
+  margin-top: clamp(0rem, 20vw + 1rem, 20rem);
+}
+
+.wrapper > h4 {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 4rem;
+  max-width: 55ch;
+}
+
+.img-wrapper {
+  // position: absolute;
+  display: grid;
+  place-items: center;
+  top: 2%;
+  left: 50%;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: -6rem;
+  @include md {
+    margin-top: -14rem;
+  }
+  // transform: translate(-50%, -50%);
+}
+
+.img-wrapper span {
+}
+
+.cards-wrapper {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  padding: 1.5rem 1.5rem 3rem;
+  min-height: 12rem;
+  // background: rgba(255, 255, 255, 0.05);
+  // background: linear-gradient(126.3deg, #1A1C22 62%, #0F162A 127.91%);
+  background: $transparent-darker;
+  backdrop-filter: blur(8px);
+  // backdrop-filter: blur(7.5px);
+  border-radius: 8px;
+  min-width: 10rem;
+  position: relative;
+  box-shadow: -10px 10px 10px rgba($color: $ln-blue, $alpha: 0.25);
+}
+
+.light .card {
+  // background: linear-gradient(126.3deg, #B4B4B4 62%, #767676 127.91%);
+  color: white;
+}
+
+// .card::before {
+//   content: '';
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   height: 100%;
+//   width: 100%;
+//   z-index: 0;
+//   background: linear-gradient(90deg, white, transparent);
+// }
+
+.card > div {
+  position: relative;
+  z-index: 1;
+}
+
+.icon-wrapper {
+  background: rgba(239, 228, 252, 0.1);
+  border-radius: 50%;
+  padding: 0.75rem;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #58a660;
+  // box-shadow: 3px 0px 3px rgba($color: gold, $alpha: 0.75);
+  max-width: 4rem;
+  // max-height: 4rem;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card h4 {
+  font-size: clamp(1.5rem, 5vw + 1rem, 1.75rem);
+  font-family: 'din condensed', serif !important;
+  font-weight: 500;
+  line-height: 2.25ch;
+}
+
+.card p {
+  font-size: clamp(0.75rem, 5vw + 1rem, 0.75rem);
+  margin-top: 0.5rem;
+}
+
+.connector {
+  display: none;
+}
+
+@media only screen and (min-width: 512px) {
+  .cards-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1120px) {
+  .cards-wrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: relative;
+  }
+
+  .card {
+    position: relative;
+  }
+
+  .connector {
+    display: block;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .connector:nth-of-type(1) {
+    top: 5%;
+    left: 20%;
+    max-width: 10rem;
+  }
+
+  .connector:nth-of-type(2) {
+    bottom: -1%;
+    left: 41%;
+    max-width: 10rem;
+  }
+
+  .connector:nth-of-type(3) {
+    bottom: -5%;
+    right: 25%;
+    max-width: 10rem;
+  }
+}

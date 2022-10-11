@@ -1,0 +1,47 @@
+@import '../../../styles/colors';
+
+.staking-section {
+  margin-top: 8rem;
+  padding-bottom: 8rem;
+  text-align: center;
+}
+
+.steps-wrapper {
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  // display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+}
+
+.step {
+  flex: 30%;
+  min-width: 12rem;
+  max-width: 20rem;
+  font-weight: 600;
+}
+
+.light .step img {
+  filter: invert(48%) sepia(80%) saturate(3488%) hue-rotate(208deg) brightness(101%) contrast(83%);
+}
+
+.step p:nth-of-type(2) {
+  padding-bottom: 1.5rem;
+}
+
+.step p:last-of-type {
+  font-size: 0.85rem;
+  color: #AFAEAE;
+  font-weight: 500;
+  padding-top: 1.5rem;
+}
+
+.light .step p:last-of-type {
+  color: $gray-dark;
+}
+
+@media only screen {
+  
+}
