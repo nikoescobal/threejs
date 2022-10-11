@@ -41,8 +41,15 @@ function HealthCrisis() {
           {/* <button type="button" className="button-blue">
             More on mental health crisis
           </button> */}
-          <ComingSoon style={{width: '20rem'}}>
-            More on mental health crisis
+          <ComingSoon
+            style={{
+              margin: 'auto',
+              'padding-right': '15rem',
+              'padding-left': '1.5rem',
+              'margin-top': '4rem',
+            }}
+          >
+            <pre>More on mental health crisis</pre>
           </ComingSoon>
           <h3 style={{ marginBottom: '2rem', marginTop: '6rem' }}>
             The pillars of an unhappy life
