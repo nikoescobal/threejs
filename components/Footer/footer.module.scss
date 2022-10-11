@@ -1,3 +1,4 @@
+@use '../../styles/breakpoints' as *;
 @import '../../styles/variables';
 
 .footer {
@@ -288,20 +289,24 @@
   }
 
   .middle {
-    text-align: center;
+    // text-align: center;
   }
 
   .right {
-    text-align: right;
+    // text-align: right;
   }
 
   .socials-wrapper {
     display: grid;
     position: absolute !important;
-    gap: 0rem;
-    left: 64px;
-    bottom: -0.5rem;
+    gap: 1rem;
+    left: 32px;
+    bottom: 1.5rem;
     padding-bottom: 0;
+
+    @include lg {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   .rights-container svg {

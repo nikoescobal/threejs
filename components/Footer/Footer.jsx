@@ -5,6 +5,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import TelegramIcon from '@mui/icons-material/Telegram';
 import TikTokIcon from '../../public/logos/tiktok.svg';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import RedditIcon from '@mui/icons-material/Reddit';
 import useStore from '../../store/store';
 import Link from 'next/link';
 import styles from './footer.module.scss';
@@ -115,6 +116,9 @@ function Footer() {
           </a>
         <a href="https://twitter.com/LegacyNetworkio" rel='noreferrer' target="_blank">
           <YouTubeIcon />
+        </a>
+        <a href="https://twitter.com/LegacyNetworkio" rel='noreferrer' target="_blank">
+          <RedditIcon />
         </a>
       </div>
       <div className={styles['rights-container']}>
