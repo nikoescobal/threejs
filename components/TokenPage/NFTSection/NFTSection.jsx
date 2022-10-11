@@ -80,7 +80,7 @@ function NFTSection() {
             altTwo="egyptian"
             className={styles['card-4']}
           >
-            Spartan
+            Greek
           </CharacterCard>
           <CharacterCard
             srcOne={'/nft/african.png'}
