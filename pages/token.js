@@ -53,9 +53,11 @@ function Token() {
           //   )
           // }
            rightObj={isDesktop
-            ? <video style={{scale: '1.25'}} autoPlay loop={true} muted>
-                <source src="/videos/token1.webm"/>
-              </video>
+            ? <div>
+                <video style={{scale: '1.3', width: '100%'}} autoPlay loop={true} muted>
+                  <source src="/videos/token3.webm"/>
+                </video>
+              </div>
             : <Image src={TokenImage} alt="token" draggable="false" />
             }
         />
