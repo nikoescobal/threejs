@@ -113,13 +113,15 @@
   // width: 20rem;
 
   p:nth-child(2) {
-    top: 94%;
+    top: 97%;
     font-size: 0.8rem;
     left: 50%;
 
     @include md {
       margin: 0;
       font-size: 1rem;
+      left: 68%;
+      top: 100%;
     }
 
     @include md {
