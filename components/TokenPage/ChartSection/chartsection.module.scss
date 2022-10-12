@@ -33,7 +33,15 @@
   margin-top: 1.25rem;
 
   @include md {
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5rem 2rem;
+  }
+}
+
+.button-wrapper p {
+  @include md {
+    min-width: 11rem;
   }
 }
 
@@ -80,10 +88,43 @@
     transform: translateY(-75%);
     padding-top: 0;
   }
+}
 
-  .button-wrapper {
-    justify-content: space-between;
-    padding-left: 0;
-    padding-right: 0;
+.audit-report {
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+  background: #1960ea;
+  color: white;
+  text-align: center;
+  padding: 0.6rem 0;
+  width: 100%;
+  min-width: 12rem;
+  max-width: 20rem;
+  margin-top: 1.25rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-family: 'Montserrat', serif !important;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.coming {
+  // width: 20rem;
+
+  p:nth-child(2) {
+    top: 94%;
+    font-size: 0.8rem;
+    left: 50%;
+
+    @include md {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    @include md {
+      font-size: 1rem;
+      margin-left: auto;
+    }
   }
 }
