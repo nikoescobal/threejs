@@ -3,9 +3,6 @@
 
 .content-wrapper {
   padding: 1rem 4rem 4rem;
-}
-
-.content-wrapper {
   background: $dark-background;
   color: $dark-mode-text-color;
 }
@@ -16,9 +13,13 @@
 }
 
 .content-wrapper h2 {
+  display: flex;
+  justify-content: center;
   font-size: 1.1rem;
+  white-space: nowrap;
+  font-size: 1.25rem;
 
-  @include sm {
-    font-size: 1.25rem;
+  @include md {
+    font-size: 1.5rem;
   }
 }

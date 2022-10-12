@@ -44,10 +44,14 @@
 .footer button {
   background: none;
   border: none;
-  text-align-last: left;
+  text-align: center;
   font-family: 'Montserrat', serif !important;
   font-size: 1rem;
   color: $dark-mode-text-color;
+
+  @include lg {
+    text-align: left;
+  }
 }
 
 .footer a:hover,

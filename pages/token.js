@@ -16,6 +16,7 @@ import UtilitySection from '../components/TokenPage/UtilitySection/UtilitySectio
 import Waves from '../public/backgrounds/waves-5.png';
 import BlockChainBanner from '../components/TokenPage/BlockchainBanner/BlockChainBanner';
 import WaveLines from '../components/Generic/WaveLines/WaveLines';
+import Script from 'next/script';
 
 function Token() {
   const isDesktop = useMediaQuery('(min-width: 1024px)');
@@ -27,6 +28,19 @@ function Token() {
         <meta name="description" content="Legacy Network Token" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_ID}`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics-script" strategy="afterInteractive">
+        {`
+      window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '${process.env.GOOGLE_ANALYTICS_ID}');
+      `}
+      </Script>
       <div>
         <GenericHeader
           waves={

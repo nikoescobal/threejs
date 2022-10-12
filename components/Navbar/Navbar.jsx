@@ -12,6 +12,7 @@ import Link from 'next/link';
 import styles from './navbar.module.scss';
 import Image from 'next/image';
 import LinkHover from '../Generic/LinkHover/LinkHover';
+import ComingSoon from '../Generic/ComingSoon/ComingSoon';
 
 function Hamburger({ onClick, className }) {
   return (
@@ -157,7 +158,7 @@ function Navbar() {
         </div>
         <div>
           <div className={`${styles.win} button-blue`}>
-            <span>Win</span>
+            <ComingSoon className={styles.coming}>Win</ComingSoon>
           </div>
           <button
             type="button"

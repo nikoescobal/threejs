@@ -34,7 +34,16 @@ function ChartSection() {
         {/* <button type='button' className='button-blue'>Read more</button>
         <button type='button' className='button-blue'>Our smart contract</button> */}
         <ComingSoon className={styles.coming}>Read more</ComingSoon>
-        <ComingSoon className={styles.coming}>Our smart contract</ComingSoon>
+        <div>
+          <a
+            href="https://github.com/LegacyNetworkAG/LGCN_Token_Contracts"
+            target="_blank"
+            rel="noreferrer"
+            className={`${styles['audit-report']}`}
+          >
+            <span>Our smart contract</span>
+          </a>
+        </div>
         <div>
           <a
             href="/pdf/audit_report.pdf"

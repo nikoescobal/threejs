@@ -217,7 +217,8 @@ function RotatingChart() {
       </div>
       <div className={styles.bg}>
         <div className={`${styles['vesting-wrapper']}`}>
-          <img src="/icons/vesting.png" alt="vesting badge" />
+          Vesting schedule coming soon
+          <div />
         </div>
         <div className={`${styles['chart-content']}`}>
           <div className={`${styles['items-wrapper']}`}>

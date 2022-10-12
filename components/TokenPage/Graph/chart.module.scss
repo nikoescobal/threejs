@@ -1,4 +1,5 @@
 @use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
 @import '../../../styles/variables';
 
 .apexcharts-legend {
@@ -45,13 +46,25 @@
 
 .vesting-wrapper {
   position: absolute;
-  top: 55%;
-  right: 2rem;
+  top: 52%;
+  right: 0.95rem;
+  font-size: 0.75rem;
   max-width: 8rem;
+  background: $ln-blue;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1.4px solid $light-blue;
+  font-weight: 600;
 
   @include md {
     top: 2rem;
-    right: 24px;
+    right: 4.5rem;
+  }
+
+  @include lg {
+    right: 2rem;
   }
 }
 

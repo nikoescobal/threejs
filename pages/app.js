@@ -13,6 +13,7 @@ import Roadmap from '../components/Generic/Roadmap/Roadmap';
 import Waves from '../public/backgrounds/waves-5.png';
 import WaveLines from '../components/Generic/WaveLines/WaveLines';
 import styles from '../components/Home/App/app.module.scss';
+import Script from 'next/script';
 
 function App() {
   const isTablet = useMediaQuery('(min-width: 768px)');
@@ -24,6 +25,19 @@ function App() {
         <meta name="description" content="Legacy Network Application" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_ID}`}
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics-script" strategy="afterInteractive">
+        {`
+      window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '${process.env.GOOGLE_ANALYTICS_ID}');
+      `}
+      </Script>
       <div className={styles['app-header']}>
         <GenericHeader
           waves={
@@ -41,7 +55,10 @@ function App() {
               src={Character.src}
               draggable="false"
               alt="character"
-              style={{ scale: isTablet ? '1.6' : '1.4', transform: 'translateX(5%)' }}
+              style={{
+                scale: isTablet ? '1.6' : '1.4',
+                transform: 'translateX(5%)',
+              }}
             />
           }
           title="The LEGACY NETWORK APP"

@@ -41,7 +41,8 @@
 
 .button-wrapper p {
   @include md {
-    min-width: 11rem;
+    width: 100%;
+    min-width: 10rem;
   }
 }
 
