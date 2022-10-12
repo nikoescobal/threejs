@@ -37,11 +37,12 @@
   }
 }
 
-.button-wrapper  p, 
+.button-wrapper p,
 .button-wrapper a {
   width: 100%;
   max-width: 13rem;
   height: 3rem;
+  margin: 0 auto;
 }
 
 .button-wrapper p:last-of-type {
@@ -56,7 +57,7 @@
   align-items: flex-end;
 }
 
-.button-wrapper div a{
+.button-wrapper div a {
   // display: block;
   display: flex;
   justify-content: center;
