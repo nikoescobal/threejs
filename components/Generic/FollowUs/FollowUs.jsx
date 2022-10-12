@@ -42,7 +42,7 @@ function FollowUs() {
               <RedditIcon />
             </div>
           </a>
-          <a href="https://t.me/+cIdNDFAbnN5iZWRk" rel='noreferrer' target="_blank">
+          <a href="https://t.me/LegacyNetworkAnnouncements" rel='noreferrer' target="_blank">
             <div className={`${styles['icon-wrapper']}`}>
               <TelegramIcon />
             </div>
