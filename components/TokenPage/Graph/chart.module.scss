@@ -47,15 +47,13 @@
 .vesting-wrapper {
   position: absolute;
   top: 52%;
-  right: 0.95rem;
+  right: 0.12rem;
   font-size: 0.75rem;
-  max-width: 8rem;
-  background: $ln-blue;
+  max-width: 11rem;
   color: white;
   text-align: center;
   padding: 1rem;
   border-radius: 5px;
-  border: 1.4px solid $light-blue;
   font-weight: 600;
 
   @include md {
