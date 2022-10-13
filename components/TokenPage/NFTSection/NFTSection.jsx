@@ -5,7 +5,7 @@ import Character1 from '../../../public/nft/character1.png';
 import Image from 'next/image';
 import CharacterCard from '../CharacterCard/CharacterCard';
 import WaveLines from '../../Generic/WaveLines/WaveLines';
-// import VikingOne from '../../../public/nft/character1.png'
+import VikingOne from '../../../public/nft/viking-big.png';
 
 function NFTSection() {
   const { isDarkMode } = useStore((state) => state);
@@ -16,11 +16,13 @@ function NFTSection() {
         !isDarkMode ? `${styles.light}` : ''
       }`}
     >
-      <WaveLines style={{
-        top: '30%',
-        right: '-20%',
-        rotate: '-45deg'
-      }} />
+      <WaveLines
+        style={{
+          top: '30%',
+          right: '-20%',
+          rotate: '-45deg',
+        }}
+      />
       <div className={`${styles['text-wrapper']} max-1920`}>
         <h3>Discover Our NFT</h3>
         <p>
@@ -37,7 +39,7 @@ function NFTSection() {
           <h4>Legendary NFTs</h4>
         </div>
         <div>
-          <Image src={Character1} alt="nft-character" />
+          <Image src={VikingOne} alt="nft-character" />
         </div>
         <div className={styles['text-section']}>
           <h3>2,000</h3>
