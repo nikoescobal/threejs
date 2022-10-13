@@ -34,9 +34,9 @@ function HealthCrisis() {
             poignant statistics from Mental Health 2022 adult data:
           </p>
           <div className={styles['donut-wrapper']}>
-            <DonutChart />
-            <DonutChart />
-            <DonutChart />
+            <DonutChart titleText="Mental Health" labels={['Anxienty Disorder', 'Depression', 'Alcohol Disorder', 'Alcohol Disorder', 'Drug disorder', 'Bipolar disorder', 'Schizophrenia', 'Eating Disorder', 'Others']} series={[284, 265, 107, 71, 46, 20, 16]} />
+            <DonutChart titleText="Overweight" labels={['Overweight', 'Heavily Overweight']} series={[300, 600]} />
+            {/* <DonutChart /> */}
           </div>
           {/* <button type="button" className="button-blue">
             More on mental health crisis

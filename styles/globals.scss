@@ -153,9 +153,22 @@ button {
 
 /* ApexCharts */
 
+.apexcharts-pie {
+  // scale: 1.5;
+  // transform: translateX(-20%);
+}
+
 .apexcharts-legend {
-  display: grid !important;
-  justify-content: center !important;
+  display: grid;
+  // transform: translateY(4rem);
+  
+  @include md {
+    display: flex !important;
+    justify-content: center !important;
+    text-align-last: left;
+  }
+
+  
 }
 
 .apexcharts-legend-text {

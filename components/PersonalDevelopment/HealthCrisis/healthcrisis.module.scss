@@ -22,15 +22,15 @@
   // justify-content: space-between;
   margin-top: 4rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 4rem;
-
-  transform: translateX(-4rem);
+  
+  transform: translateX(-1rem);
   @media (min-width: 578px) {
-    transform: translateX(-18%);
+    transform: translateX(-0%);
   }
   @include md {
-    transform: translateX(-9%);
+    grid-template-columns: repeat(2, 1fr);
+    // transform: translateX(10%);
   }
 }
 
