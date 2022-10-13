@@ -64,10 +64,15 @@
 
     @include md {
       top: 40%;
+      right: -12%;
+      scale: 2.5;
+      // background: red;
     }
 
     @include lg {
-      top: 20%;
+      top: 30%;
+      right: -10%;
+      scale: 3;
     }
   }
 
