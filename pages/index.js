@@ -31,7 +31,7 @@ export default function Home() {
     >
       <Head>
         <title>Legacy Network</title>
-        <meta name="description" content="The World's Most Innovative Personal Development App" />
+        <meta name="description" content="Gamified Personal Development Through AI And Blockchain Technology" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Script
