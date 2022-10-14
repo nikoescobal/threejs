@@ -69,19 +69,20 @@ $mobile-width: 15rem;
 
 .side.active::before {
   content: '';
-  height: $mobile-height;
-  width: $mobile-width;
+  height: calc($mobile-height - 1rem);
+  width: calc($mobile-width - 1rem);
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 50%;
-  transform: translate(-55.05%, 0);
+  // transform: translate(-55.05%, 0);
+  transform: translate(-50%, -50%);
   background: $ln-blue;
   border-radius: 8px;
-  scale: 0.91 0.95;
+  // scale: 0.95 0.95;
 
   @include md {
-    height: $height;
-    width: $width;
+    height: calc($height - 1.25rem);
+    width: calc($width - 1.25rem);
   }
 }
 
