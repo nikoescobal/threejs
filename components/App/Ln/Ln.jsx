@@ -113,7 +113,7 @@ function Ln() {
           <div>
             <h4>Bridging</h4>
             <p>
-              Bringe your LGCN tokens between the supported blockchains in an
+              Bridge your LGCN tokens between the supported blockchains in an
               instant thanks to our SafeSwap integration. Atomic swaps are used
               which makes bridging cheap, fast and secure. More than that, we
               are working on an auto-bridge feature which allows you to send
