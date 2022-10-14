@@ -152,18 +152,13 @@ $mobile-width: 15rem;
   line-height: 2ch;
   margin-top: 3rem;
   padding-bottom: 3rem;
-
-  @include md {
-    font-size: 1rem;
-  }
-}
-
-.side h3 {
   transform: translateY(-1.5rem);
-  padding: 0 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 
   @include md {
     transform: translateY(0);
+    font-size: 1rem;
   }
 }
 
