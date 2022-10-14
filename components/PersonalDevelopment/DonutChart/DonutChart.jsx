@@ -7,10 +7,10 @@ import useStore from '../../../store/store';
 import { useMediaQuery } from '@mui/material';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
-
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-function DonutChart({series, labels, titleText}) {
+function DonutChart({series, labels, titleText, legendPosition}) {
   const ReactApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
   const isTablet = useMediaQuery('(min-width: 768px');
   // const [data] = useState({
@@ -205,13 +205,57 @@ function DonutChart({series, labels, titleText}) {
     <div className={`${styles.wrapper} ${isDarkMode ? '' : `${styles.light}`}`}>
       <div>
         <h4>{titleText}</h4>
-        <Doughnut data={data} options={{
-          plugins: {
-            legend: {
-              position: 'left'
-            }
-          }
-        }} />
+        <p>Per Million</p>
+        <Doughnut 
+          data={data} 
+          plugins={[ChartDataLabels]}
+          options={{
+            plugins: {
+              legend: {
+                display: true,
+                fullSize: false,
+                // maxWidth: 150,
+                labels: {
+                  boxWidth: 20,
+                },
+                title: {
+                  display: false, 
+                  text: 'Per Million'
+                },
+                position: isTablet ? legendPosition : 'left',
+              },
+              title: {
+                display: true,
+                text: 'Per million'
+              },
+              subtitle: {
+                display: true,
+                text: 'Per million'
+              },
+              datalabels: {
+                display: function(context) {
+                  console.log(context.dataIndex);
+                  if (context.dataIndex !== 5 && context.dataIndex !== 6) {
+                    return true
+                  }
+                  return false
+                  // return context.dataIndex !== 5 ; // display labels with an odd index
+                },
+                clip: true,
+                clamp: true, 
+                color: isDarkMode ? 'white' : 'black',
+                formatter: (value, ctx) => {
+                  const datapoints = ctx.chart.data.datasets[0].data
+                  const total = datapoints.reduce((total, datapoint) => total + datapoint, 0)
+                  const percentage = value / total * 100
+                  return percentage.toFixed(2) + "%";
+                },
+              }
+            },
+            // maintainAspectRatio: false,
+            responsive: true
+          }}
+        />
       </div>
       {/* {(typeof window !== 'undefined') && 
       <ReactApexChart options={isTablet ? data.options : mobileData.options} series={isTablet ? data.series : mobileData.series} type="donut" width={isTablet ? 450 : 320} /> 

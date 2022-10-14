@@ -24,14 +24,37 @@
   display: grid;
   gap: 4rem;
   
-  transform: translateX(-1rem);
+  // transform: translateX(-1rem);
   @media (min-width: 578px) {
     transform: translateX(-0%);
   }
   @include md {
-    grid-template-columns: repeat(2, 1fr);
-    // transform: translateX(10%);
+    grid-template-columns: 0.96fr 1fr;
   }
+}
+
+.donut-wrapper h4 {
+  padding-bottom: 1rem;
+
+  @include md {
+    padding-bottom: 0;
+  }
+}
+
+.donut-wrapper > div:first-of-type canvas {
+  
+  @include md {
+    transform: translateX(-18%);
+  }
+}
+
+.donut-wrapper > div:last-of-type canvas {
+  scale: 1.1;
+  @include md {
+    transform: translate(22%, -2%);
+    scale: 1;
+  }
+  // scale: 1.05;
 }
 
 .wrapper button {

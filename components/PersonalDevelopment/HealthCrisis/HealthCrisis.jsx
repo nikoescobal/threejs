@@ -10,7 +10,10 @@ import ComingSoon from '../../Generic/ComingSoon/ComingSoon';
 
 function HealthCrisis() {
   const { isDarkMode } = useStore();
-
+  const series1 = [284, 265, 107, 71, 46, 20, 16, 161]
+  const series2 = [300, 600]
+  const label1 = ['Anxiety Disorder', 'Depression', 'Alcohol Disorder', 'Drug disorder', 'Bipolar disorder', 'Schizophrenia', 'Eating Disorder', 'Others']
+  const label2 = ['Overweight', 'Heavily Overweight']
   return (
     <>
       <Gradient
@@ -34,8 +37,16 @@ function HealthCrisis() {
             poignant statistics from Mental Health 2022 adult data:
           </p>
           <div className={styles['donut-wrapper']}>
-            <DonutChart titleText="Mental Health" labels={['Anxienty Disorder', 'Depression', 'Alcohol Disorder', 'Alcohol Disorder', 'Drug disorder', 'Bipolar disorder', 'Schizophrenia', 'Eating Disorder', 'Others']} series={[284, 265, 107, 71, 46, 20, 16]} />
-            <DonutChart titleText="Overweight" labels={['Overweight', 'Heavily Overweight']} series={[300, 600]} />
+            <div className={styles.donut}>
+              <DonutChart titleText="Mental Health" labels={label1} series={series1} legendPosition="left" />
+              {/* <div>
+                
+              </div> */}
+            </div>
+            <div>
+              <DonutChart titleText="Overweight" labels={label2} series={series2} legendPosition="right" />
+
+            </div>
             {/* <DonutChart /> */}
           </div>
           {/* <button type="button" className="button-blue">
