@@ -160,6 +160,7 @@ $mobile-width: 15rem;
 
 .side h3 {
   transform: translateY(-1.5rem);
+  padding: 0 1rem;
 
   @include md {
     transform: translateY(0);
