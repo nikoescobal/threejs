@@ -18,8 +18,7 @@ function SidePressureSection() {
       <div className={`${styles['cards-wrapper']}`}>
         <div className={`${styles['card']}`}>
           <div className={styles['img-wrapper']}>
-            {/* <img src="/icons/bsp1.svg" alt="" /> */}
-            <CloudIcon />
+            <img src="/icons/bsp1.svg" alt="" />
           </div>
           <div>
             <h4>Subscriptions</h4>
