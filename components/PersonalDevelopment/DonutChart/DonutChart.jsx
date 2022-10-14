@@ -184,6 +184,7 @@ function DonutChart({series, labels, titleText}) {
           'rgba(153, 102, 255, 0.2)',
           'rgba(255, 159, 64, 0.2)',
           'rgba(200, 50, 255, 0.2)',
+          'rgba(139, 195, 74, 0.2)'
         ],
         borderColor: [
           'rgba(255, 99, 132, 1)',
@@ -193,6 +194,7 @@ function DonutChart({series, labels, titleText}) {
           'rgba(153, 102, 255, 1)',
           'rgba(255, 159, 64, 1)',
           'rgba(200, 50, 255, 1)',
+          'rgba(139, 195, 74, 1)'
         ],
         borderWidth: 1,
       },
@@ -203,7 +205,13 @@ function DonutChart({series, labels, titleText}) {
     <div className={`${styles.wrapper} ${isDarkMode ? '' : `${styles.light}`}`}>
       <div>
         <h4>{titleText}</h4>
-        <Doughnut data={data} />
+        <Doughnut data={data} options={{
+          plugins: {
+            legend: {
+              position: 'left'
+            }
+          }
+        }} />
       </div>
       {/* {(typeof window !== 'undefined') && 
       <ReactApexChart options={isTablet ? data.options : mobileData.options} series={isTablet ? data.series : mobileData.series} type="donut" width={isTablet ? 450 : 320} /> 
