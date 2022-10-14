@@ -26,7 +26,10 @@ $mobile-width: 15rem;
 }
 
 .container > div:last-of-type {
-  padding-top: 12rem;
+  padding-top: 8rem;
+  @include md {
+    padding-top: 12rem;
+  }
 }
 
 .hexagon {
@@ -117,11 +120,13 @@ $mobile-width: 15rem;
 }
 
 .arrows-wrapper {
-  margin-top: 4rem;
   display: flex;
   justify-content: space-between;
   filter: invert(48%) sepia(80%) saturate(3488%) hue-rotate(208deg)
-    brightness(101%) contrast(83%);
+  brightness(101%) contrast(83%);
+  @include md {
+    margin-top: 4rem;
+  }
 }
 
 .arrows-wrapper span {
