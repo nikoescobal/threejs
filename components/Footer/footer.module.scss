@@ -54,10 +54,6 @@
   }
 }
 
-.footer a:hover,
-.footer button:hover {
-  color: $ln-blue;
-}
 
 .address {
   text-align: center;
@@ -133,6 +129,17 @@
 .light .footer__column__items__wrapper span {
   color: $light-mode-text-color !important;
 }
+
+.footer a:hover,
+.footer button:hover {
+  color: $ln-blue;
+}
+
+.footer.light a:hover,
+.footer.light button:hover {
+  color: $light-mode-secondary !important;
+}
+
 
 .footer__column:nth-of-type(2) {
   // justify-content: center;
