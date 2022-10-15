@@ -11,7 +11,7 @@ import Script from 'next/script';
 
 function Policies() {
   return (
-    <div>
+    <div className='max-1920'>
       <Head>
         <title>Policies</title>
         <meta name="Legacy Network Policies" content="Policies" />
@@ -53,7 +53,7 @@ function Policies() {
         }
       /> */}
       <div className={styles.intro}>
-        <h1>Our policies</h1>
+        <h1 className='title'>Our policies</h1>
       </div>
       <div className="security spacing-x">
         <ClearContainer>
