@@ -8,10 +8,14 @@ import Waves from '../public/backgrounds/waves-5.png';
 import WaveLines from '../components/Generic/WaveLines/WaveLines';
 import styles from '../styles/policies.module.scss'
 import Script from 'next/script';
+import Link from 'next/link';
+import useStore from '../store/store';
 
 function Policies() {
+  const { isDarkMode } = useStore();
+  
   return (
-    <div className='max-1920'>
+    <div className={`${styles.wrapper} ${isDarkMode? '' : `${styles.light}`} spacing-x max-1920`}>
       <Head>
         <title>Policies</title>
         <meta name="Legacy Network Policies" content="Policies" />
@@ -55,9 +59,8 @@ function Policies() {
       <div className={styles.intro}>
         <h1 className='title'>Our policies</h1>
       </div>
-      <div className="security spacing-x">
+      <div >
         <ClearContainer>
-          {/* <h4 className="title__2">Data Protection</h4> */}
           <p className='bold'>DISCLAIMER Legacy Network AG:</p>
           <p>
             Disclaimer Website:
@@ -99,6 +102,8 @@ function Policies() {
             <br />
             Principality of Liechentstein  Commercial Register: FL-0002.683.628-1
           </p>
+          <a href="mailto:">legal@legacynetwork.io</a>
+          <Link href="/">https://legacynetwork.io</Link>
         </ClearContainer>
       </div>
     </div>
