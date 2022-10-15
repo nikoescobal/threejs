@@ -1,6 +1,10 @@
+.wrapper {
+  position: relative;
+}
+
 .map {
   position: relative;
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
   height: 25vw;
@@ -22,6 +26,12 @@
   padding: 0 1rem;
 }
 
+.map > div {
+  // position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .map img{
   position: absolute;
   top: 50%;
@@ -34,6 +44,14 @@
 .map.light img {
   filter: invert(77%) sepia(35%) saturate(294%) hue-rotate(190deg) brightness(103%) contrast(102%);
 
+}
+
+.particles {
+  height: 28rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 @media only screen and (min-width: 768px) {

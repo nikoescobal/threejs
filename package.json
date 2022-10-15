@@ -16,6 +16,7 @@
     "@react-three/drei": "^9.17.3",
     "@react-three/fiber": "^8.2.2",
     "apexcharts": "^3.35.4",
+    "canvas-sketch-util": "^1.10.0",
     "chart.js": "^3.9.1",
     "chartjs-plugin-datalabels": "^2.1.0",
     "firebase": "^9.11.0",
