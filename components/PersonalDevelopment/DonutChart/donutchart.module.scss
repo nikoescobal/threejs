@@ -1,0 +1,8 @@
+@use '../../../styles/breakpoints' as *;
+
+.subtitle-wrapper {
+
+  @include md {
+    min-height: 8rem;
+  }
+}

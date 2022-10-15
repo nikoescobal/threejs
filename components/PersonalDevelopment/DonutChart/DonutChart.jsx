@@ -10,7 +10,7 @@ import { Doughnut } from 'react-chartjs-2';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-function DonutChart({series, labels, titleText, legendPosition}) {
+function DonutChart({series, labels, titleText, subtitle, legendPosition}) {
   const ReactApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
   const isTablet = useMediaQuery('(min-width: 768px');
   // const [data] = useState({
@@ -205,7 +205,9 @@ function DonutChart({series, labels, titleText, legendPosition}) {
     <div className={`${styles.wrapper} ${isDarkMode ? '' : `${styles.light}`}`}>
       <div>
         <h4>{titleText}</h4>
-        <p>Per Million</p>
+        <div className={styles['subtitle-wrapper']}>
+          <p>{subtitle}</p>
+        </div>
         <Doughnut 
           data={data} 
           plugins={[ChartDataLabels]}

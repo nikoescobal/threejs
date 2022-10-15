@@ -10,8 +10,8 @@ import ComingSoon from '../../Generic/ComingSoon/ComingSoon';
 
 function HealthCrisis() {
   const { isDarkMode } = useStore();
-  const series1 = [284, 265, 107, 71, 46, 20, 16, 161]
-  const series2 = [300, 600]
+  const series1 = [284_000_000, 265_000_000, 107_000_000, 71_000_000, 46_000_000, 20_000_000, 16_000_000, 161_000_000]
+  const series2 = [1_300_000_000, 600_000_000]
   const label1 = ['Anxiety Disorder', 'Depression', 'Alcohol Disorder', 'Drug disorder', 'Bipolar disorder', 'Schizophrenia', 'Eating Disorder', 'Others']
   const label2 = ['Overweight', 'Heavily Overweight']
   return (
@@ -38,13 +38,25 @@ function HealthCrisis() {
           </p>
           <div className={styles['donut-wrapper']}>
             <div className={styles.donut}>
-              <DonutChart titleText="Mental Health" labels={label1} series={series1} legendPosition="left" />
+              <DonutChart
+                titleText="Mental Health Issues"
+                subtitle="970 Mil people across the world suffer from a diagnosed mental illness. Limiting and harmful conditionings which are not seen as a disease are not included."
+                labels={label1}
+                series={series1}
+                legendPosition="left"
+              />
               {/* <div>
                 
               </div> */}
             </div>
             <div>
-              <DonutChart titleText="Overweight" labels={label2} series={series2} legendPosition="right" />
+              <DonutChart
+                titleText="Overweight"
+                subtitle="1.9 Bn people across the world are either overweight or heavily overweight."
+                labels={label2}
+                series={series2}
+                legendPosition="right"
+              />
 
             </div>
             {/* <DonutChart /> */}
