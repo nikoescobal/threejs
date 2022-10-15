@@ -10,12 +10,14 @@ import styles from '../styles/policies.module.scss'
 import Script from 'next/script';
 import Link from 'next/link';
 import useStore from '../store/store';
+import { useMediaQuery } from '@mui/material';
 
 function Policies() {
   const { isDarkMode } = useStore();
+  const isTablet = useMediaQuery('(min-width: 768px)');
   
   return (
-    <div className={`${styles.wrapper} ${isDarkMode? '' : `${styles.light}`} spacing-x max-1920`}>
+    <div className={`${styles.wrapper} ${isDarkMode? '' : `${styles.light}`} max-1920`}>
       <Head>
         <title>Policies</title>
         <meta name="Legacy Network Policies" content="Policies" />
@@ -35,7 +37,7 @@ function Policies() {
       `}
       </Script>
 
-      {/* <GenericHeader
+      <GenericHeader
         waves={
           <WaveLines
             style={{
@@ -45,21 +47,21 @@ function Policies() {
             }}
           />
         }
-        title={'Security'}
-        subtitle={'giving people back control of their data'}
+        title={'Our policies'}
+        // subtitle={'giving people back control of their data'}
         rightObj={
           <img
-            style={{ scale: '1.75' }}
-            src={DataSecurity.src}
+            style={{ transform: `translateX(${isTablet ? '30%' : '0'})` }}
+            src="/headers/policies.png"
             alt="token"
             draggable="false"
           />
         }
-      /> */}
-      <div className={styles.intro}>
+      />
+      {/* <div className={styles.intro}>
         <h1 className='title'>Our policies</h1>
-      </div>
-      <div >
+      </div> */}
+      <div className={`spacing-x`}>
         <ClearContainer>
           <p className='bold'>DISCLAIMER Legacy Network AG:</p>
           <p>
