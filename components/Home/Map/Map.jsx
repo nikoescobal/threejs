@@ -12,13 +12,13 @@ function Map() {
   return (
     <section className={styles.wrapper}>
       <div className={`${styles.map} ${!isDarkMode ? `${styles.light}` : ''} max-1920`}>
-        {/* <div>
+        <div>
         <img src="/backgrounds/mapbase.png" alt="" />
 
-        </div> */}
+        </div>
         <h4>Join Us To Make The world A Better Place</h4>
       </div>
-      <MapParticles className={styles.particles} />
+      {/* <MapParticles className={styles.particles} /> */}
     </section>
   )
 }
