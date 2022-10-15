@@ -118,7 +118,7 @@ function Footer() {
               {/* <a href="/pdf/WP-Eng.pdf" target="_blank" className={`${styles.footer__column__item}`}>
                 Whitepaper
               </a> */}
-              <Link href="/" className={`${styles.footer__column__item}`}>
+              <Link href="/policies" className={`${styles.footer__column__item}`}>
                 Policies
               </Link>
             </div>
