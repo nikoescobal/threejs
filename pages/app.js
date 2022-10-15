@@ -57,7 +57,6 @@ function App() {
               alt="character"
               style={{
                 scale: isTablet ? '1.6' : '1.4',
-                transform: 'translateX(5%)',
               }}
             />
           }

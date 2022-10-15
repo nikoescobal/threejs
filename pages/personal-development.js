@@ -10,6 +10,7 @@ import Achievements from '../public/illustrations/Achievements.png';
 import Waves from '../public/backgrounds/waves-5.png';
 import WaveLines from '../components/Generic/WaveLines/WaveLines';
 import Script from 'next/script';
+import styles from '../components/PersonalDevelopment/personaldevelopment.module.scss';
 
 function PersonalDevelopment() {
   return (
@@ -44,6 +45,7 @@ function PersonalDevelopment() {
         }
         rightObj={
           <img
+            className={styles.image}
             src={Achievements.src}
             alt="achievements"
             draggable="false"
