@@ -16,6 +16,7 @@ import UtilitySection from '../components/TokenPage/UtilitySection/UtilitySectio
 import Waves from '../public/backgrounds/waves-5.png';
 import BlockChainBanner from '../components/TokenPage/BlockchainBanner/BlockChainBanner';
 import WaveLines from '../components/Generic/WaveLines/WaveLines';
+import Script from 'next/script';
 
 function Token() {
   const isDesktop = useMediaQuery('(min-width: 1024px)');
@@ -27,6 +28,7 @@ function Token() {
         <meta name="description" content="Legacy Network Token" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <div>
         <GenericHeader
           waves={
@@ -40,24 +42,26 @@ function Token() {
           }
           title={'LGCN Token'}
           subtitle={'a multichain utility & payment token'}
-          rightObj={
-            isDesktop ? (
-              <TokenModel />
-            ) : (
-              <img
-                style={{ scale: '1.4', transform: 'translateX(-16px)' }}
-                src={TokenImage.src}
-                alt="token"
-                draggable="false"
-              />
-            )
-          }
-          //  rightObj={isDesktop
-          //   ? <video autoPlay loop={true} muted>
-          //       <source src="/videos/token.mp4"/>
-          //     </video>
-          //   : <Image src={TokenImage} alt="token" draggable="false" />
-          //   }
+          // rightObj={
+          //   isDesktop ? (
+          //     <TokenModel />
+          //   ) : (
+          //     <img
+          //       style={{ scale: '1.4', transform: 'translateX(-16px)' }}
+          //       src={TokenImage.src}
+          //       alt="token"
+          //       draggable="false"
+          //     />
+          //   )
+          // }
+           rightObj={isDesktop
+            ? <div>
+                <video style={{scale: '1.3', width: '100%'}} autoPlay loop={true} muted>
+                  <source src="/videos/token3.webm"/>
+                </video>
+              </div>
+            : <Image src={TokenImage} alt="token" draggable="false" />
+            }
         />
         <TokenIntro />
         <WavesWrapper hideBottom={true}>

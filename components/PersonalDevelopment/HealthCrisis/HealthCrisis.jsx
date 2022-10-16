@@ -10,7 +10,10 @@ import ComingSoon from '../../Generic/ComingSoon/ComingSoon';
 
 function HealthCrisis() {
   const { isDarkMode } = useStore();
-
+  const series1 = [284_000_000, 265_000_000, 107_000_000, 71_000_000, 46_000_000, 20_000_000, 16_000_000, 161_000_000]
+  const series2 = [1_300_000_000, 600_000_000]
+  const label1 = ['Anxiety Disorder', 'Depression', 'Alcohol Disorder', 'Drug disorder', 'Bipolar disorder', 'Schizophrenia', 'Eating Disorder', 'Others']
+  const label2 = ['Overweight', 'Heavily Overweight']
   return (
     <>
       <Gradient
@@ -34,14 +37,34 @@ function HealthCrisis() {
             poignant statistics from Mental Health 2022 adult data:
           </p>
           <div className={styles['donut-wrapper']}>
-            <DonutChart />
-            <DonutChart />
-            <DonutChart />
+            <div className={styles.donut}>
+              <DonutChart
+                titleText="Mental Health Issues"
+                subtitle="970 Mil people across the world suffer from a diagnosed mental illness. Limiting and harmful conditionings which are not seen as a disease are not included."
+                labels={label1}
+                series={series1}
+                legendPosition="left"
+              />
+              {/* <div>
+                
+              </div> */}
+            </div>
+            <div>
+              <DonutChart
+                titleText="Weight Issues"
+                subtitle="1.9 Bn people across the world are either overweight or heavily overweight."
+                labels={label2}
+                series={series2}
+                legendPosition="right"
+              />
+
+            </div>
+            {/* <DonutChart /> */}
           </div>
           {/* <button type="button" className="button-blue">
             More on mental health crisis
           </button> */}
-          <ComingSoon style={{width: '20rem'}}>
+          <ComingSoon className={styles.coming}>
             More on mental health crisis
           </ComingSoon>
           <h3 style={{ marginBottom: '2rem', marginTop: '6rem' }}>

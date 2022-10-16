@@ -1,3 +1,4 @@
+@use '../../styles/breakpoints' as *;
 @import '../../styles/variables';
 
 .footer {
@@ -30,17 +31,29 @@
 }
 
 .footer.light a,
-.footer.light p {
+.footer.light p,
+.footer.light button {
   color: $light-mode-text-color;
 }
 
-.footer a {
+.footer a,
+.footer button {
   transition: color 0.3s ease-in-out;
 }
 
-.footer a:hover {
-  color: $ln-blue;
+.footer button {
+  background: none;
+  border: none;
+  text-align: center;
+  font-family: 'Montserrat', serif !important;
+  font-size: 1rem;
+  color: $dark-mode-text-color;
+
+  @include lg {
+    text-align: left;
+  }
 }
+
 
 .address {
   text-align: center;
@@ -116,6 +129,17 @@
 .light .footer__column__items__wrapper span {
   color: $light-mode-text-color !important;
 }
+
+.footer a:hover,
+.footer button:hover {
+  color: $ln-blue;
+}
+
+.footer.light a:hover,
+.footer.light button:hover {
+  color: $light-mode-secondary !important;
+}
+
 
 .footer__column:nth-of-type(2) {
   // justify-content: center;
@@ -288,20 +312,24 @@
   }
 
   .middle {
-    text-align: center;
+    // text-align: center;
   }
 
   .right {
-    text-align: right;
+    // text-align: right;
   }
 
   .socials-wrapper {
     display: grid;
     position: absolute !important;
-    gap: 0rem;
-    left: 64px;
-    bottom: -0.5rem;
+    gap: 1rem;
+    left: 32px;
+    bottom: 1.5rem;
     padding-bottom: 0;
+
+    @include lg {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   .rights-container svg {

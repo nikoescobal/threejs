@@ -1,0 +1,16 @@
+@use '../../styles/breakpoints' as *;
+@import '../../styles/variables';
+
+.image {
+  @include breakpoint(1200px) {
+    transform: translateX(7%);
+  }
+
+  @include breakpoint(1350px) {
+    transform: translateX(23%);
+  }
+
+  @include xl {
+    transform: translateX(30%);
+  }
+}

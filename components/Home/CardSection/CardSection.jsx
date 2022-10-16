@@ -11,6 +11,7 @@ import Connector1 from '../../../public/illustrations/connector1.svg';
 import Connector2 from '../../../public/illustrations/connector2.svg';
 import Connector3 from '../../../public/illustrations/connector3.svg';
 import Link from 'next/link';
+import ComingSoon from '../../Generic/ComingSoon/ComingSoon';
 
 function CardSection() {
   const { isDarkMode } = useStore();
@@ -80,9 +81,12 @@ function CardSection() {
         </div>
       </div>
       <div style={{display: 'flex', justifyContent: 'center', marginTop: '2rem'}}>
-        <Link href="/">
+        {/* <Link href="/">
           <a className='button-blue'>Learn More</a>
-        </Link>
+        </Link> */}
+        <ComingSoon style={{paddingLeft: '2rem', paddingRight: '2rem'}}>
+          Learn More
+        </ComingSoon>
       </div>
       {/* <h4 className="spacing-x">
         Expand your knowledge and build your dream life with the help of our AI.

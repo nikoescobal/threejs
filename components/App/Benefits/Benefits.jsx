@@ -37,7 +37,6 @@ function Benefits() {
         </div>
         <ClearContainer
           isComingSoon
-          // className={styles['coming-soon']}
           title="Data Protection"
           to="/app"
           linkText="Read More"
@@ -45,20 +44,14 @@ function Benefits() {
         >
           <p>
             Part of our vision is to give people back control of their data.
-            Legacy Network is the first technology company to use users&apos;
-            data and psychology exclusively for them, not against them. Unlike
+            Legacy Network is the first technology company to use user’s data
+            and psychology exclusively for them, not against them. Unlike
             various Big Data corporations, we will not monetize data and thus
-            will not make our platforms available for serving ads. Although user
-            profiles will be created, these cannot be assigned to a real person,
-            as we will not collect any personal data such as name or address. In
-            this way, users can interact with each other anonymously and without
-            concern. Nevertheless, to ensure the security of the network, some
-            Internet-related data such as the user&apos;s IP address will be
-            collected. This offers the possibility, in an emergency (for
-            example, in case of a crime or threat), to support the responsible
-            investigating authorities and to exclude users from the network in
-            the event of gross violations. A concrete data protection concept
-            will be worked out during development together with experts.
+            will not make our platforms available for serving ads. As we will
+            not collect any personal data such as name or address, the user
+            profiles cannot be assigned to a real person. A concrete data
+            protection concept will be worked out during development together
+            with experts.
           </p>
         </ClearContainer>
       </div>

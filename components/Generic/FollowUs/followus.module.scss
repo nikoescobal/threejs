@@ -1,3 +1,4 @@
+@use '../../../styles/breakpoints' as *;
 @import '../../../styles/variables';
 
 .follow-us {
@@ -24,6 +25,11 @@
 .main-icon-wrapper {
   display: grid;
   gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  
+  @include sm {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .main-icon-wrapper div {
@@ -44,8 +50,18 @@
   gap: 1rem;
 }
 
+.bottom{
+  display: grid;
+}
+
+.tiktok svg {
+  // scale: 0.4;
+  width: 2.25rem;
+}
+
 .follow-us svg {
   color: $dark-background--light-2;
+  fill: $dark-background--light-2;
   font-size: clamp(2rem, 10vw, 3rem);
   cursor: pointer;
 }

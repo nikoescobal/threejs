@@ -1,5 +1,8 @@
-.apexcharts-legend {
-  justify-content: center !important;
-  gap: 1rem;
-  top: 0 !important;
+@use '../../../styles/breakpoints' as *;
+
+.subtitle-wrapper {
+
+  @include md {
+    min-height: 8rem;
+  }
 }

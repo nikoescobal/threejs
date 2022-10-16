@@ -6,19 +6,29 @@ import Image from 'next/image';
 import Staff from '../../../public/backgrounds/staff.png';
 import { Parallax } from 'react-scroll-parallax';
 import ComingSoon from '../../Generic/ComingSoon/ComingSoon';
+import { useMediaQuery } from '@mui/material';
 
 function Questions() {
   const { isDarkMode } = useStore();
+  const isTablet = useMediaQuery('(min-width: 768px');
 
   return (
     <section
       className={`${styles.section} ${!isDarkMode ? `${styles.light}` : ''}`}
     >
-      <Parallax speed={30} className={`${styles.staff} max-1920`}>
-        <div>
-          <Image src={Staff} alt="" draggable="false" />
-        </div>
-      </Parallax>
+      <div className="max-1920">
+        {isTablet ? (
+          <Parallax speed={30} className={`${styles.staff} max-1920`}>
+            <div>
+              <Image src={Staff} alt="staff" draggable="false" />
+            </div>
+          </Parallax>
+        ) : (
+          <div className={styles['staff']}>
+            <Image className="" src={Staff} alt="staff" draggable="false" />
+          </div>
+        )}
+      </div>
 
       <div className={`${styles['spacing-y']} spacing-x max-1920`}>
         <div className={styles.wrapper}>
