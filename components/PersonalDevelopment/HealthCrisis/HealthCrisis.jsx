@@ -51,7 +51,7 @@ function HealthCrisis() {
             </div>
             <div>
               <DonutChart
-                titleText="Overweight"
+                titleText="Weight Issues"
                 subtitle="1.9 Bn people across the world are either overweight or heavily overweight."
                 labels={label2}
                 series={series2}
