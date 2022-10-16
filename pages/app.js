@@ -25,19 +25,7 @@ function App() {
         <meta name="description" content="Legacy Network Application" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_ID}`}
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics-script" strategy="afterInteractive">
-        {`
-      window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', '${process.env.GOOGLE_ANALYTICS_ID}');
-      `}
-      </Script>
+      
       <div className={styles['app-header']}>
         <GenericHeader
           waves={
