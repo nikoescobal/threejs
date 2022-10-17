@@ -161,7 +161,7 @@
 }
 
 .dark-mode-toggle {
-  position: static;
+  position: absolute !important;
   top: 2rem;
   right: 5rem;
   border: 1px solid white;
@@ -169,6 +169,10 @@
   background: rgba($color: #000000, $alpha: 0.75);
   border-radius: 12px;
   cursor: pointer;
+
+  @include lg {
+    position: static !important;
+  }
 }
 
 .dark-mode-toggle.light {
