@@ -164,7 +164,7 @@ function Navbar() {
             type="button"
             onClick={toggle}
             className={`${styles['dark-mode-toggle']} ${
-              isDarkMode ? '' : 'light'
+              isDarkMode ? '' : `${styles.light}`
             }`}
           >
             <DarkModeSwitch
