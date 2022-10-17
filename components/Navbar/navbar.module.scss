@@ -161,7 +161,7 @@
 }
 
 .dark-mode-toggle {
-  position: absolute !important;
+  position: absolute;
   top: 2rem;
   right: 5rem;
   border: 1px solid white;
@@ -171,7 +171,7 @@
   cursor: pointer;
 
   @include lg {
-    position: static !important;
+    position: static;
   }
 }
 
