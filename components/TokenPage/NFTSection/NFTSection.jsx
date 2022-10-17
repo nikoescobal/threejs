@@ -27,10 +27,11 @@ function NFTSection() {
         <h3>Discover Our NFT</h3>
         <p>
           The Legacy Network NFT is an in-game character with a unique set of
-          features. There are 16 different animation, face props, armour,
-          expression, color, and character traits. Each trait such as character,
-          animation, face prop, etc. also has multiple tiers of rarity,
-          resulting in unique and epic combinations for you to own!
+          features. There are 5 different tribes that hold the legacy. They come
+          in different forms of animation, face props, armour, colour, and
+          character traits. Each trait such as character, animation, face prop,
+          etc. also has multiple tiers of rarity, resulting in unique and epic
+          combinations for you to own!
         </p>
       </div>
       <div className={`${styles['first-card-section']} max-1920`}>
