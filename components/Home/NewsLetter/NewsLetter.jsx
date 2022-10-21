@@ -10,7 +10,7 @@ function NewsLetter() {
   const { isDarkMode } = useStore((state) => state);
   const newsletterCollection = collection(firestore, 'email-subscribers');
   const [emails, setEmails] = useState([]);
-  const [email, setEmail] = useState([]);
+  const [email, setEmail] = useState('');
 
   const getEmails = async () => {
     const newsLetterQuery = query(newsletterCollection);
@@ -24,6 +24,7 @@ function NewsLetter() {
   };
 
   function saveEmail() {
+    console.log('start');
     addDoc(collection(firestore, "email-subscribers"), {
       email
     })
