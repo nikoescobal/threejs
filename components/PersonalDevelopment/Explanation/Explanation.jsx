@@ -19,7 +19,7 @@ function Explanation() {
       {/* <div className={styles['image-wrapper']}>
         <Image src={Weapon} alt="weapon" />
       </div> */}
-      <div className="max-1920">
+      {/* <div className="max-1920">
         {isTablet ? (
           <Parallax speed={30} className={`${styles.weapon} max-1920`}>
             <div>
@@ -31,7 +31,7 @@ function Explanation() {
             <Image src={Weapon} alt="weapon" draggable="false" />
           </div>
         )}
-      </div>
+      </div> */}
 
       <div className={`max-1920`}>
         <h3>What is personal development about?</h3>
