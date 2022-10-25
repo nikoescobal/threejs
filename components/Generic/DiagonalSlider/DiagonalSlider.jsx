@@ -59,7 +59,7 @@ function DiagonalSlider({ showBenefits }) {
       content: [
         {
           content: 'Step by step opening of our community channels',
-          isChecked: false,
+          isChecked: true,
         },
         {
           content: 'Launch of our blog / documentation page',
@@ -71,7 +71,7 @@ function DiagonalSlider({ showBenefits }) {
         },
         {
           content: 'Attending several blockchain events around the globe',
-          isChecked: false,
+          isChecked: true,
         },
         {
           content: 'Announcement of new strategical partnerships',
