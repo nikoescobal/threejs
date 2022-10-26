@@ -158,7 +158,16 @@ function Navbar() {
         </div>
         <div>
           <div className={`${styles.win} button-blue`}>
-            <ComingSoon className={styles.coming}>Win</ComingSoon>
+            {/* <ComingSoon className={styles.coming}>Win</ComingSoon> */}
+            <Link
+              href="/giveaway"
+              className={`
+                ${router.pathname === '/giveaway' ? `${styles.active}` : ''}
+                button-blue
+              `}
+            >
+              Win
+            </Link>
           </div>
           <button
             type="button"
