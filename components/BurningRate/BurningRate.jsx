@@ -13,10 +13,6 @@ function BurningRate() {
     setTitle(content[index].title)
     setText(content[index].content)
   }
-
-  useEffect(() => {
-    console.log(text);
-  }, [text])
   
   return (
     <section className={`${styles.wrapper} ${isDarkMode ? '' : `${styles.light}`}`}>

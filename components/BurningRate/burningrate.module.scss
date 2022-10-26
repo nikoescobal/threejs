@@ -2,7 +2,6 @@
 @use '../../styles/breakpoints' as *;
 
 .wrapper circle {
-  // fill: red;
   position: relative;
   animation: pulse 1s ease-in-out infinite forwards;
 }
@@ -11,36 +10,16 @@
   display: none !important;
 }
 
-.wrapper svg::before {
-  // // fill: red;
-  // content: 'testsetset';
-  // // position: absolute;
-  // display: inline-block;
-  // top: 50%;
-  // left: 50%;
-  // // transform: translate(-50%, -50%);
-  // background: rgba($color: white, $alpha: 1);
-  // width: 8rem;
-  // height: 8rem;
-  // // animation: pulse 1s ease-in-out infinite forwards;
-}
-
 @keyframes pulse {
   0% {
     width: 0rem !important;
     height: 0rem;
-    // scale: 1;
   }
   
   100% {
     width: 8rem !important;
     height: 8rem;
-    // scale: 1.5;
   }
-}
-
-.wrapper circle:hover {
-  // fill: red;
 }
 
 .wrapper {
@@ -91,13 +70,6 @@
   background: $transparent-light;
 }
 
-.text-wrapper h4,
 .text-wrapper p {
-  // max-width: 80%;
-
-}
-
-.text-wrapper p {
-  // max-width: 80%;
   font-size: 0.75rem;
 }
