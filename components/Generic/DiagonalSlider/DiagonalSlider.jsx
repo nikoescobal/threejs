@@ -59,7 +59,7 @@ function DiagonalSlider({ showBenefits }) {
       content: [
         {
           content: 'Step by step opening of our community channels',
-          isChecked: true,
+          isChecked: false,
         },
         {
           content: 'Launch of our blog / documentation page',
@@ -75,7 +75,7 @@ function DiagonalSlider({ showBenefits }) {
         },
         {
           content: 'Announcement of new strategical partnerships',
-          isChecked: false,
+          isChecked: true,
         },
         {
           content: 'Announcement of community web-board functions',
