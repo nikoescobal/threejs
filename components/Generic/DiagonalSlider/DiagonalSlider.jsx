@@ -130,7 +130,7 @@ function DiagonalSlider({ showBenefits }) {
           isChecked: false,
         },
         {
-          content: 'Pre-launch app release for IOS and Android',
+          content: 'LEGACY Wallet release for IOS and Android',
           isChecked: false,
         },
         {
@@ -282,11 +282,13 @@ function DiagonalSlider({ showBenefits }) {
                 />
                 {/* {item.content.content} */}
                 <div>
-                  <ComingSoon className={`${styles['slide-button']} ${
-                  index === Math.abs(position.x - 1)
-                    ? `${styles['active']}`
-                    : ''
-                }`}>
+                  <ComingSoon
+                    className={`${styles['slide-button']} ${
+                      index === Math.abs(position.x - 1)
+                        ? `${styles['active']}`
+                        : ''
+                    }`}
+                  >
                     Read More
                   </ComingSoon>
                   {/* <button
@@ -339,11 +341,13 @@ function DiagonalSlider({ showBenefits }) {
                   <li>{item.content}</li>
                 </ul> */}
                 <div>
-                <ComingSoon className={`${styles['slide-button']} ${
-                  index === Math.abs(position.x - 1)
-                    ? `${styles['active']}`
-                    : ''
-                }`}>
+                  <ComingSoon
+                    className={`${styles['slide-button']} ${
+                      index === Math.abs(position.x - 1)
+                        ? `${styles['active']}`
+                        : ''
+                    }`}
+                  >
                     Read More
                   </ComingSoon>
                   {/* <button
