@@ -126,7 +126,7 @@ function DiagonalSlider({ showBenefits }) {
           isChecked: false,
         },
         {
-          content: 'Security audist of all smart-contracts',
+          content: 'Security audits of all smart-contracts',
           isChecked: false,
         },
         {
