@@ -158,8 +158,8 @@ function Navbar() {
         </div>
         <div>
           <div className={`${styles.win} button-blue`}>
-            {/* <ComingSoon className={styles.coming}>Win</ComingSoon> */}
-            <Link
+            <ComingSoon className={styles.coming}>Win</ComingSoon>
+            {/* <Link
               href="/giveaway"
               className={`
                 ${router.pathname === '/giveaway' ? `${styles.active}` : ''}
@@ -167,7 +167,7 @@ function Navbar() {
               `}
             >
               Win
-            </Link>
+            </Link> */}
           </div>
           <button
             type="button"
