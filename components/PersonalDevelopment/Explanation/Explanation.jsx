@@ -1,7 +1,7 @@
 import styles from './explanation.module.scss';
 import generics from '../../../styles/generics.module.scss';
 import Image from 'next/image';
-import Weapon from '../../../public/illustrations/african-weapon.png';
+import Shield from '../../../public/illustrations/shield.png';
 import useStore from '../../../store/store';
 import { Parallax } from 'react-scroll-parallax';
 import { useMediaQuery } from '@mui/material';
@@ -17,21 +17,21 @@ function Explanation() {
       }`}
     >
       {/* <div className={styles['image-wrapper']}>
-        <Image src={Weapon} alt="weapon" />
+        <Image src={Shield} alt="shield" />
       </div> */}
-      {/* <div className="max-1920">
+      <div className="max-1920">
         {isTablet ? (
-          <Parallax speed={30} className={`${styles.weapon} max-1920`}>
+          <Parallax speed={30} className={`${styles.shield} max-1920`}>
             <div>
-              <Image src={Weapon} alt="weapon" draggable="false" />
+              <Image src={Shield} alt="shield" draggable="false" />
             </div>
           </Parallax>
         ) : (
-          <div className={styles['weapon']}>
-            <Image src={Weapon} alt="weapon" draggable="false" />
+          <div className={styles['shield']}>
+            <Image src={Shield} alt="shield" draggable="false" />
           </div>
         )}
-      </div> */}
+      </div>
 
       <div className={`max-1920`}>
         <h3>What is personal development about?</h3>

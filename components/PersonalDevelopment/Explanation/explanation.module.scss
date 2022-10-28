@@ -50,11 +50,11 @@
   max-width: 70ch;
 }
 
-.weapon {
+.shield {
   position: absolute;
-  max-width: 40%;
+  max-width: 28%;
   top: 30%;
-  right: 2%;
+  right: 5%;
   scale: 2;
 
   @include md {

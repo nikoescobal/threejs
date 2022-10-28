@@ -17,6 +17,7 @@ import Waves from '../public/backgrounds/waves-5.png';
 import BlockChainBanner from '../components/TokenPage/BlockchainBanner/BlockChainBanner';
 import WaveLines from '../components/Generic/WaveLines/WaveLines';
 import Script from 'next/script';
+import BurningRate from '../components/BurningRate/BurningRate';
 
 function Token() {
   const isDesktop = useMediaQuery('(min-width: 1024px)');
@@ -76,6 +77,7 @@ function Token() {
           }}
         >
           <SidePressureSection />
+          <BurningRate />
           <StakingSection />
         </div>
         <NFTSection />
