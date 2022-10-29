@@ -1,3 +1,4 @@
+@use '../../../styles/breakpoints' as *;
 @import '../../../styles/variables';
 
 .slider {
@@ -52,7 +53,9 @@
 }
 
 .arrows-wrapper img:hover {
-  scale: 1.25;
+  @include md {
+    scale: 1.25;
+  }
 }
 
 .slider.light .arrows-wrapper {
@@ -68,6 +71,7 @@
   position: absolute;
   max-width: 4rem;
   z-index: 2;
+  padding: 0 0.35rem !important;
 }
 
 .slider button.arrow {

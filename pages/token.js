@@ -77,7 +77,7 @@ function Token() {
           }}
         >
           <SidePressureSection />
-          <BurningRate />
+          {/* <BurningRate /> */}
           <StakingSection />
         </div>
         <NFTSection />
