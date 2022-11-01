@@ -1,7 +1,7 @@
 import styles from './explanation.module.scss';
 import generics from '../../../styles/generics.module.scss';
 import Image from 'next/image';
-import Shield from '../../../public/illustrations/shield.png';
+import Shield from '../../../public/backgrounds/shield.png';
 import useStore from '../../../store/store';
 import { Parallax } from 'react-scroll-parallax';
 import { useMediaQuery } from '@mui/material';
