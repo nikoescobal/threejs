@@ -1,3 +1,4 @@
+@use '../../../styles/colors' as *;
 @import '../../../styles/variables';
 
 .clear-container {
@@ -11,6 +12,7 @@
   z-index: 1;
   transition: all 0.3s ease-in-out;
   margin: 0 auto;
+  border: solid 1px $blue;
 }
 
 .clear-container.light {
