@@ -38,22 +38,22 @@ function Ln() {
     >
       <h3>Legacy Wallet</h3>
       <div className={`${styles['tabs-wrapper']}`}>
-        <Tabs
-          className={`${styles['tab-list']}`}
-          value={value}
-          onChange={handleChange}
-          aria-label="tabs"
-        >
-          <Tab label="Managing" {...a11yProps(0)} />
-          <Tab label="Staking" {...a11yProps(1)} />
-          <Tab label="Vesting" {...a11yProps(2)} />
-          <Tab label="Bridging" {...a11yProps(3)} />
-        </Tabs>
         <TabPanel value={value} className={styles['tab-item']} index={0}>
           <div>
             <img src={Managing.src} alt="Managing mockup" />
           </div>
           <div>
+            <Tabs
+              className={`${styles['tab-list']}`}
+              value={value}
+              onChange={handleChange}
+              aria-label="tabs"
+            >
+              <Tab label="Managing" {...a11yProps(0)} />
+              <Tab label="Staking" {...a11yProps(1)} />
+              <Tab label="Vesting" {...a11yProps(2)} />
+              <Tab label="Bridging" {...a11yProps(3)} />
+            </Tabs>
             <h4>Managing</h4>
             <p>
               Manage your favorite cryptos in a secure non-custodial wallet. The
@@ -78,6 +78,17 @@ function Ln() {
             <img src={Staking.src} alt="Staking mockup" />
           </div>
           <div>
+            <Tabs
+              className={`${styles['tab-list']}`}
+              value={value}
+              onChange={handleChange}
+              aria-label="tabs"
+            >
+              <Tab label="Managing" {...a11yProps(0)} />
+              <Tab label="Staking" {...a11yProps(1)} />
+              <Tab label="Vesting" {...a11yProps(2)} />
+              <Tab label="Bridging" {...a11yProps(3)} />
+            </Tabs>
             <h4>Staking</h4>
             <p>
               As a long-term believer, you can stake your LGCN tokens for 6, 12,
@@ -95,6 +106,17 @@ function Ln() {
             <img src={Vesting.src} alt="Vesting mockup" />
           </div>
           <div>
+            <Tabs
+              className={`${styles['tab-list']}`}
+              value={value}
+              onChange={handleChange}
+              aria-label="tabs"
+            >
+              <Tab label="Managing" {...a11yProps(0)} />
+              <Tab label="Staking" {...a11yProps(1)} />
+              <Tab label="Vesting" {...a11yProps(2)} />
+              <Tab label="Bridging" {...a11yProps(3)} />
+            </Tabs>
             <h4>Vesting</h4>
             <p>
               As a private sale, public sale or giveaway participant, you can
@@ -111,6 +133,17 @@ function Ln() {
             <img src={Bridging.src} alt="Bridging mockup" />
           </div>
           <div>
+            <Tabs
+              className={`${styles['tab-list']}`}
+              value={value}
+              onChange={handleChange}
+              aria-label="tabs"
+            >
+              <Tab label="Managing" {...a11yProps(0)} />
+              <Tab label="Staking" {...a11yProps(1)} />
+              <Tab label="Vesting" {...a11yProps(2)} />
+              <Tab label="Bridging" {...a11yProps(3)} />
+            </Tabs>
             <h4>Bridging</h4>
             <p>
               Bridge your LGCN tokens between the supported blockchains in an

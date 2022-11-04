@@ -9,9 +9,21 @@
   // background-image: radial-gradient(circle farthest-side at 100% 50%, rgba(black, 0.2), transparent 30%);
 }
 
+.total {
+  font-weight: bold;
+}
+
+.total span {
+  color: $ln-blue;
+}
+
+.light .total span {
+  color: $light-mode-secondary;
+}
+
 .text-wrapper {
   text-align: center;
-  max-width: 75ch;
+  max-width: 100ch;
   margin: 0 auto;
   padding-bottom: 4rem;
 

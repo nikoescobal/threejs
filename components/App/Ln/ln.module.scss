@@ -5,22 +5,38 @@
   z-index: 5;
 }
 
+.tabs-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .wrapper h3 {
   text-align: center;
   padding-bottom: 2rem;
 }
 
+.tab-item h4 {
+  padding: 2rem 0 0;
+}
+
 .tab-item > div:last-of-type {
   div {
     max-width: 60ch;
+    margin: 0 auto;
+    // transform: translateX(0.1rem);
   }
 }
 
 .tab-item > div {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
-  // align-items: center;
+  gap: 1rem;
+
+  @include md {
+    gap: 4rem;
+  }
 
   @include lg {
     flex-direction: row;

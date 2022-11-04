@@ -3884,6 +3884,11 @@ react-scroll-parallax@^3.3.1:
   dependencies:
     parallax-controller "^1.5.0"
 
+react-scrollbar-size@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/react-scrollbar-size/-/react-scrollbar-size-5.0.0.tgz#29892779dfcb9077ce18e2483d1dba6400c58fb0"
+  integrity sha512-Ly3OuRMz4yDFViTh+ANH6TrG8EqrgjC1uxxm2a/95+2Ijy3XT+bWtzm4QmgZUcUVg+8BCKzmPMM7z39ZtucDIQ==
+
 react-spring@^9.0.0-rc.3:
   version "9.5.2"
   resolved "https://registry.npmjs.org/react-spring/-/react-spring-9.5.2.tgz"
