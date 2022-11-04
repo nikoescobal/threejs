@@ -6,8 +6,15 @@ import { useMediaQuery } from '@mui/material';
 import { useEffect } from 'react';
 import benefits from './content';
 import ComingSoon from '../ComingSoon/ComingSoon';
+import useScrollbarSize from 'react-scrollbar-size';
 
 function DiagonalSlider({ showBenefits }) {
+  const { height, width } = useScrollbarSize();
+  
+  useEffect(() => {
+    console.log('width', width);
+  }, [width])
+  
   const roadmapItems = [
     {
       phase: 'Phase 1',
@@ -384,6 +391,9 @@ function DiagonalSlider({ showBenefits }) {
           <button
             type="button"
             className={`${styles.arrow} ${styles.right}`}
+            style={{
+              right: `calc(${width}px + 1%)`
+            }}
             onClick={moveRight}
           >
             <img src="/slider/arrow.svg" alt="arrow" />
