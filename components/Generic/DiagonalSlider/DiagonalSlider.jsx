@@ -400,6 +400,9 @@ function DiagonalSlider({ showBenefits }) {
           </button>
         </div>
       </div>
+      <div className={styles['double-arrow']}>
+            <img src="/icons/double-arrow.svg" alt="arrow" />
+          </div>
       {/* <SliderContent
           list={roadmapItems[Math.abs(position.x - 1)].content}
           open={openDialog}

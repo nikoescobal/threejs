@@ -87,6 +87,19 @@
   opacity: 1;
 }
 
+.double-arrow {
+  position: absolute;
+  top: -13%;
+  max-width: 4rem;
+  transform: translate(-50%, 0%);
+  
+  top: -75px;
+  left: 47.5vw;
+  @include md {
+    left: 49.5vw;
+  }
+}
+
 .arrow.left {
   top: 50%;
   left: 1%;
