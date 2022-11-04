@@ -44,6 +44,19 @@
   border-radius: 8px;
 }
 
+.token-percentage {
+  font-size: 0.8rem;
+  color: $gray;
+}
+
+.light .token-percentage {
+  color: $gray-dark;
+}
+
+.title {
+  color: $light-mode-secondary;
+}
+
 .vesting-wrapper {
   position: absolute;
   top: 52%;
