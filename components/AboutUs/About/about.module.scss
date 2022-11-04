@@ -35,9 +35,14 @@
   margin-bottom: 4rem;
 }
 
-.tabs-wrapper {
+.tab-list {
+  // background: rgba(141, 178, 252, 0.2) !important;
   overflow: hidden;
   margin-top: 5.5rem;
+}
+
+.tab-list.light {
+  background: rgba(141, 178, 252, 0.2) !important;
 }
 
 @media (min-width: 1024px) {
