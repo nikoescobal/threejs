@@ -39,18 +39,19 @@ function About() {
     >
       {isDesktop && (
         <div className={`${styles['tabs-wrapper']}`}>
-          <Tabs
-            className={`${styles['tab-list']}`}
-            value={value}
-            onChange={handleChange}
-            aria-label="tabs"
-          >
+          <Tabs value={value} onChange={handleChange} aria-label="tabs">
             <Tab label="ABOUT US" {...a11yProps(0)} />
             <Tab label="OUR VISION" {...a11yProps(1)} />
             <Tab label="THE PROBLEM" {...a11yProps(2)} />
             <Tab label="OUR SOLUTION" {...a11yProps(3)} />
           </Tabs>
-          <TabPanel value={value} index={0}>
+          <TabPanel
+            className={`${styles['tab-list']} ${
+              isDarkMode ? '' : `${styles.light}`
+            }`}
+            value={value}
+            index={0}
+          >
             <p>
               Legacy Network is an international technology company based in
               Liechtenstein/ Switzerland. Our mission is to improve
