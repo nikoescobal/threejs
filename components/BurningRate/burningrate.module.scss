@@ -33,8 +33,13 @@
   }
 }
 
-.wrapper h3 {
+.wrapper h3,
+.wrapper p {
   text-align: center;
+}
+
+.text-wrapper h4 {
+  font-size: clamp(1.25rem, 2vw + 1rem, 2rem);
 }
 
 .illustration-wrapper {
@@ -52,24 +57,34 @@
   position: absolute;
   width: 37%;
   min-height: 6rem;
-  top: 28%;
+  top: 34%;
   left: 49%;
-  background: rgba($color: #ffffff, $alpha: 0.05);
   transform: translate(-50%, 0%);
   padding: 0.5rem;
   @include sm {
+    top: 38%;
     min-height: 9rem;
   }
-
+  
   @include md {
+    background: rgba($color: #ffffff, $alpha: 0.05);
+    top: 28%;
     min-height: 12.25rem;
   }
 }
 
 .light .text-wrapper {
-  background: $transparent-light;
+  @include md {
+    background: $transparent-light;
+
+  }
 }
 
 .text-wrapper p {
   font-size: 0.75rem;
+}
+
+.mobile-text-wrapper {
+  padding: 0 1rem;
+  text-align: center;
 }
