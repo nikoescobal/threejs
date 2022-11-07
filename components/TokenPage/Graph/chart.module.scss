@@ -339,7 +339,12 @@ svg.arrow {
 }
 
 .coming {
-  button {
-    background: red !important;
-  }
+  display: inline-block;
+  color: $blue;
 }
+
+// .coming::after {
+//   content: '&#8594;';
+//   font-size: 40px;
+//   color: #fff;
+// }

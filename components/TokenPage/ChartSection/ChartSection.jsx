@@ -3,7 +3,7 @@ import styles from './chartsection.module.scss';
 import generics from '../../../styles/generics.module.scss';
 import useStore from '../../../store/store';
 import Gradient from '../../Generic/Gradient/Gradient';
-import ComingSoon from '../../Generic/ComingSoon/ComingSoon';
+// import ComingSoon from '../../Generic/ComingSoon/ComingSoon';
 
 function ChartSection() {
   const { isDarkMode } = useStore();

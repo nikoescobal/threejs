@@ -3,6 +3,14 @@
 .wrapper {
   position: relative;
   z-index: 5;
+  background-image: url('../../../public/backgrounds/line1.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1500px 700px;
+
+  @include lg {
+    background-size: cover;
+  }
 }
 
 .tabs-wrapper {
