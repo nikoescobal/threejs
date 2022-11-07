@@ -29,14 +29,14 @@ function ChartSection() {
           interest to make our token as decentral and stable as possible.
         </p>
         <p className={`${styles['total']}`}>
-          Total supply: <span>720’000’000</span> LGCN 
+          Total supply: <span>720’000’000</span> LGCN
         </p>
       </div>
       <RotatingChart />
       <div className={styles['button-wrapper']}>
         {/* <button type='button' className='button-blue'>Read more</button>
         <button type='button' className='button-blue'>Our smart contract</button> */}
-        <ComingSoon className={styles.coming}>Read more</ComingSoon>
+        {/* <ComingSoon className={styles.coming}>Read more</ComingSoon> */}
         <div>
           <a
             href="https://github.com/LegacyNetworkAG/LGCN_Token_Contracts"

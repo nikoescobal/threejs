@@ -5,6 +5,7 @@ import useStore from '../../../store/store';
 import styles from './chart.module.scss';
 import Arrow from '../../../public/slider/arrow.svg';
 import Image from 'next/image';
+import ComingSoon from '../../Generic/ComingSoon/ComingSoon';
 
 const data = [
   {
@@ -84,8 +85,8 @@ function RotatingChart() {
     } else {
       setInactiveColor('#CADBFF');
     }
-  }, [isDarkMode])
-  
+  }, [isDarkMode]);
+
   const { currentChartColor, setCurrentChartColor } = useStore(
     (state) => state
   );
@@ -204,7 +205,9 @@ function RotatingChart() {
                     r="15.91549430918954"
                     fill="transparent"
                     strokeDashoffset={item.offset}
-                    stroke={selectedIndex === index ? item.color : inactiveColor}
+                    stroke={
+                      selectedIndex === index ? item.color : inactiveColor
+                    }
                     strokeDasharray={`${item.percentage} ${
                       100 - item.percentage
                     }`}
@@ -243,12 +246,16 @@ function RotatingChart() {
               {data[selectedIndex].percentage}%
             </h3>
             <h4 className={styles['title']}>{data[selectedIndex].title}</h4>
-            <p className={styles['token-percentage']}>{data[selectedIndex].tokens}</p>
+            <p className={styles['token-percentage']}>
+              {data[selectedIndex].tokens}
+            </p>
             <ul className={styles.descriptions}>
               {data[selectedIndex].description.map((desc) => (
                 <li key={desc}>{desc}</li>
               ))}
             </ul>
+            <ComingSoon className={styles.coming}>Read more</ComingSoon>
+
             <div className={styles['arrows-wrapper']}>
               <Image
                 src={Arrow}
