@@ -44,9 +44,9 @@
 
 .waves-wrapper {
   position: absolute;
-  top: -40%;
-  left: -690px;
-  rotate: -90deg;
+  top: 10%;
+  scale: 1.4;
+  object-fit: cover;
 }
 
 @media (min-width: 768px) {

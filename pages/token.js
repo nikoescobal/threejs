@@ -35,9 +35,10 @@ function Token() {
           waves={
             <WaveLines
               style={{
-                top: '-70%',
-                left: '-700px',
-                rotate: '-90deg',
+                top: '10%',
+                scale: '1.4',
+                left: '90px',
+                'object-fit': 'cover',
               }}
             />
           }
@@ -55,14 +56,22 @@ function Token() {
           //     />
           //   )
           // }
-           rightObj={isDesktop
-            ? <div>
-                <video style={{scale: '1.3', width: '100%'}} autoPlay loop={true} muted>
-                  <source src="/videos/token3.webm"/>
+          rightObj={
+            isDesktop ? (
+              <div>
+                <video
+                  style={{ scale: '1.3', width: '100%' }}
+                  autoPlay
+                  loop={true}
+                  muted
+                >
+                  <source src="/videos/token3.webm" />
                 </video>
               </div>
-            : <Image src={TokenImage} alt="token" draggable="false" />
-            }
+            ) : (
+              <Image src={TokenImage} alt="token" draggable="false" />
+            )
+          }
         />
         <TokenIntro />
         <WavesWrapper hideBottom={true}>

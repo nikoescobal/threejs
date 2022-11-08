@@ -25,15 +25,16 @@ function App() {
         <meta name="description" content="Legacy Network Application" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
+
       <div className={styles['app-header']}>
         <GenericHeader
           waves={
             <WaveLines
               style={{
-                top: '-70%',
-                left: '-700px',
-                rotate: '-90deg',
+                top: '10%',
+                scale: '1.4',
+                left: '90px',
+                'object-fit': 'cover',
               }}
             />
           }

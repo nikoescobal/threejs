@@ -50,11 +50,13 @@
   border-radius: 8px;
   min-width: 10rem;
   position: relative;
-  box-shadow: -10px 10px 10px rgba($color: $ln-blue, $alpha: 0.25);
+  border: solid 1px $ln-blue;
+  // box-shadow: -10px 10px 10px rgba($color: $ln-blue, $alpha: 0.25);
 }
 
 .light .card {
   background: $transparent-light;
+  border: transparent;
 }
 
 .light .card {
