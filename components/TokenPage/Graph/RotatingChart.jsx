@@ -134,8 +134,6 @@ function RotatingChart() {
 
   useEffect(() => {
     setCurrentChartColor(data[0].color);
-    // console.log('current rotation', currentRotation);
-    // console.log('current index', selectedIndex);
   }, []);
 
   return (
@@ -249,7 +247,7 @@ function RotatingChart() {
             <h3 style={{ color: currentChartColor }}>
               {data[selectedIndex].percentage}%
             </h3>
-            <h4 className={styles['title']}>{data[selectedIndex].title}</h4>
+            <h4 className={styles['title']} style={{color: currentChartColor}}>{data[selectedIndex].title}</h4>
             <p className={styles['token-percentage']}>
               {data[selectedIndex].tokens}
             </p>
