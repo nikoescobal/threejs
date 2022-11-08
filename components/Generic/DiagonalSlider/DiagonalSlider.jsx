@@ -11,10 +11,6 @@ import useScrollbarSize from 'react-scrollbar-size';
 function DiagonalSlider({ showBenefits }) {
   const { height, width } = useScrollbarSize();
   
-  useEffect(() => {
-    console.log('width', width);
-  }, [width])
-  
   const roadmapItems = [
     {
       phase: 'Phase 1',
@@ -289,25 +285,7 @@ function DiagonalSlider({ showBenefits }) {
                 />
                 {/* {item.content.content} */}
                 <div>
-                  <ComingSoon
-                    className={`${styles['slide-button']} ${
-                      index === Math.abs(position.x - 1)
-                        ? `${styles['active']}`
-                        : ''
-                    }`}
-                  >
-                    Read More
-                  </ComingSoon>
-                  {/* <button
-                    type="button"
-                    className={`${styles['slide-button']} button-blue`}
-                    onClick={() => {
-                      handleDialogOpen();
-                      console.log(index, Math.abs(position.x - 1));
-                    }}
-                  >
-                    Read More
-                  </button> */}
+                  
                 </div>
                 {
                   // index !== roadmapItems.length - 1 && (

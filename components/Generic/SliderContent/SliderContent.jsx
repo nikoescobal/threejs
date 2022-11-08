@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import useStore from '../../../store/store';
 import styles from './slidercontent.module.scss';
 import CheckIcon from '@mui/icons-material/Check';
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 function SliderContent({ list, open, isActive, onClose, showBenefits }) {
   const { isDarkMode } = useStore((state) => state);
@@ -40,6 +41,15 @@ function SliderContent({ list, open, isActive, onClose, showBenefits }) {
             {/* <span>{item.content}</span> */}
           </li>
         ))}
+        <a
+          href='https://blog.legacynetwork.io'
+          rel="no-referrer noreferrer"
+          target="_blank"
+          className={`${styles['slide-button']} read-more`}
+        >
+          Read More
+          <ArrowRightAltIcon />
+        </a>
       </ul>
     // </Dialog>
   );

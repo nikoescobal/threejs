@@ -32,7 +32,10 @@
   font-size: 0.9rem;
   font-family: 'Montserrat', serif;
   position: relative;
+}
 
+.slide-content-wrapper li:last-of-type {
+  padding-bottom: 2.5rem;
 }
 
 .check {
@@ -63,4 +66,10 @@
 
 .light.slide-content-wrapper li::before {
   color: $light-mode-secondary;
+}
+
+.slide-button {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 1rem;
 }
