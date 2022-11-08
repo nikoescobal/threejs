@@ -95,6 +95,18 @@
   }
 }
 
+.healthline {
+  position: absolute;
+  top: 11%;
+  right: 10%;
+  display: none;
+  
+  @include lg {
+    display: block;
+    width: 25%;
+  }
+}
+
 .circles {
   top: 20%;
   max-width: 30rem;

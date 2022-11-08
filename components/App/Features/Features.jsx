@@ -50,7 +50,12 @@ function Features() {
           <div className={`${styles.imgwrapper}`}>
             <img src="/features/kf4.png" alt="key feature 1" />
           </div>
-          <div>
+          <div className={`${styles.healthline}`}>
+            <img src="/illustrations/healthline.svg" alt="heathline" />
+          </div>
+          <div style={{
+            position: 'relative'
+          }}>
             <h3>Education Area</h3>
             <p>
               In the education area of the app, the user can choose from various
