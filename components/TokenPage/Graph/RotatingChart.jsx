@@ -5,6 +5,7 @@ import useStore from '../../../store/store';
 import styles from './chart.module.scss';
 import Arrow from '../../../public/slider/arrow.svg';
 import Image from 'next/image';
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 const data = [
   {
@@ -249,6 +250,10 @@ function RotatingChart() {
                 <li key={desc}>{desc}</li>
               ))}
             </ul>
+            <a href="https://blogs.legacynetwork.io" className={`${styles['read-more']} read-more`}>
+              Read More
+              <ArrowRightAltIcon />
+            </a>
             <div className={styles['arrows-wrapper']}>
               <Image
                 src={Arrow}
@@ -256,6 +261,7 @@ function RotatingChart() {
                 onClick={turnCounterClockwise}
               />
               <Image src={Arrow} alt="arrowight" onClick={turnClockwise} />
+              
               {/* <Link href="/">
                 <a className='button-blue'>Read More</a>
               </Link> */}

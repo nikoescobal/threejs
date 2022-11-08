@@ -54,6 +54,10 @@
 }
 
 .title {
+  color: $dark-mode-secondary;
+}
+
+.light .title {
   color: $light-mode-secondary;
 }
 
@@ -290,6 +294,7 @@ svg.arrow {
 
   .descriptions {
     margin-left: 1rem;
+    padding: 1rem 0;
   }
 
   .bg {

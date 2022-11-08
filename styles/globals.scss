@@ -112,6 +112,17 @@ button {
   background: $light-mode-secondary;
 }
 
+.read-more {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  color: $dark-mode-secondary;
+}
+
+.light .read-more {
+  color: $light-mode-secondary;
+}
+
 *,
 *::before,
 *::after {
