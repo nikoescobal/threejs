@@ -171,7 +171,7 @@ function RotatingChart() {
                     r="15.91549430918954"
                     fill="transparent"
                     strokeDashoffset={item.offset}
-                    stroke={selectedIndex === index ? item.color : '#464444'}
+                    stroke={selectedIndex === index ? item.color : inactiveColor}
                     strokeDasharray={`${item.percentage} ${
                       100 - item.percentage
                     }`}
