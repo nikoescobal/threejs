@@ -112,6 +112,17 @@ button {
   background: $light-mode-secondary;
 }
 
+.outlined {
+  background: transparent !important;
+  border: 1px solid $ln-blue !important;
+  color: $ln-blue !important;
+}
+
+.light .outlined {
+  border: 1px solid $light-mode-secondary !important;
+  color: $light-mode-secondary !important;
+}
+
 .read-more {
   display: flex;
   align-items: center;

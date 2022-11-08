@@ -33,28 +33,42 @@ function ChartSection() {
         </p>
       </div>
       <RotatingChart />
-      <div className={styles['button-wrapper']}>
-        {/* <button type='button' className='button-blue'>Read more</button>
-        <button type='button' className='button-blue'>Our smart contract</button> */}
-        {/* <ComingSoon className={styles.coming}>Read more</ComingSoon> */}
-        <div>
-          <a
-            href="https://github.com/LegacyNetworkAG/LGCN_Token_Contracts"
-            target="_blank"
-            rel="noreferrer"
-            className={`${styles['audit-report']}`}
-          >
-            <span>Our smart contract</span>
-          </a>
+      <div className={`${generics['alternating-rows']} ${styles['cyber-security']} max-1920 spacing-x`}>
+        <div className={styles['img-wrapper']}>
+          <img
+            src="/illustrations/data-protection.png"
+            alt="data protection illustration"
+          />
         </div>
         <div>
-          <a
-            href="/pdf/audit_report.pdf"
-            target="_blank"
-            className={`${styles['audit-report']}`}
-          >
-            <span>Our audit report</span>
-          </a>
+          <h3>Cyber Security</h3>
+          <p>
+            To ensure the security of our entire ecosystem, we will have several independent security audits performed. This concerns the token, or smart contract, as well as the app and all platforms. We will analyze past cyber-attacks on other systems and design our own systems to be immune to these as well as other attacks.
+          </p>
+          <div className={styles['button-wrapper']}>
+            {/* <button type='button' className='button-blue'>Read more</button>
+            <button type='button' className='button-blue'>Our smart contract</button> */}
+            {/* <ComingSoon className={styles.coming}>Read more</ComingSoon> */}
+            <div>
+              <a
+                href="https://github.com/LegacyNetworkAG/LGCN_Token_Contracts"
+                target="_blank"
+                rel="noreferrer"
+                className={`${styles['audit-report']}`}
+              >
+                <span>Our smart contract</span>
+              </a>
+            </div>
+            <div>
+              <a
+                href="/pdf/audit_report.pdf"
+                target="_blank"
+                className={`${styles['audit-report']} outlined`}
+              >
+                <span>Our audit report</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
