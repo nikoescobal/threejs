@@ -16,14 +16,14 @@
   align-items: center;
   justify-items: center;
   gap: 2rem 2rem;
-  // background: rgba($color: $light-background, $alpha: 0.1);
   padding-top: 2rem;
   padding-bottom: 2rem;
   grid-template-columns: 1fr;
   grid-template-columns: repeat(2, 1fr);
-
-  @include md {
-  }
+  background-image: url('../../../public/backgrounds/line1.svg');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   @include lg {
     grid-template-columns: repeat(4, 1fr);

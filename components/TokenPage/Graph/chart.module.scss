@@ -342,3 +342,14 @@ svg.arrow {
     transform: translate(-21%);
   }
 }
+
+.coming {
+  display: inline-block;
+  color: $blue;
+}
+
+// .coming::after {
+//   content: '&#8594;';
+//   font-size: 40px;
+//   color: #fff;
+// }
