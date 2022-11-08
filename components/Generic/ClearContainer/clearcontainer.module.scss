@@ -1,5 +1,6 @@
+@use '../../../styles/breakpoints' as *;
 @use '../../../styles/colors' as *;
-@import '../../../styles/variables';
+@use '../../../styles/variables' as *;
 
 .clear-container {
   background: rgba(255, 255, 255, 0.05);
@@ -42,6 +43,10 @@
 
 .clear-container div:last-of-type {
   text-align: center;
+
+  @include md {
+    text-align: left;
+  }
 }
 
 .clear-container.reduced-padding {
