@@ -326,25 +326,6 @@ function DiagonalSlider({ showBenefits }) {
                   <li>{item.content}</li>
                 </ul> */}
                 <div>
-                  <ComingSoon
-                    className={`${styles['slide-button']} ${
-                      index === Math.abs(position.x - 1)
-                        ? `${styles['active']}`
-                        : ''
-                    }`}
-                  >
-                    Read More
-                  </ComingSoon>
-                  {/* <button
-                    type="button"
-                    className={`${styles['slide-button']} button-blue`}
-                    onClick={() => {
-                      handleDialogOpen();
-                      console.log(index, Math.abs(position.x - 1));
-                    }}
-                  >
-                    Read More
-                  </button> */}
                 </div>
                 {
                   // index !== roadmapItems.length - 1 && (
