@@ -42,8 +42,15 @@ function Questions() {
               <p>{question.text}</p>
             </div>
           ))}
-          <div className={`${styles.solution}`}>
-            Our solution to the global mental health crisis
+          <div>
+            <h4 className={styles.h3}>What is mental health crisis?</h4>
+            <p>
+              A mental health crisis is any situation in which a person's
+              actions, feelings, and behaviors can lead to them hurting
+              themselves or others, and/or put them at risk of being unable to
+              care for themselves or function in the community in a healthy
+              manner.
+            </p>
           </div>
           <div>
             <ComingSoon className={styles['btn-wrapper']}>

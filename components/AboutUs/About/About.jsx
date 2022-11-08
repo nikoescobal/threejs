@@ -68,7 +68,13 @@ function About() {
               information back to him.
             </p>
           </TabPanel>
-          <TabPanel value={value} index={1}>
+          <TabPanel
+            className={`${styles['tab-list']} ${
+              isDarkMode ? '' : `${styles.light}`
+            }`}
+            value={value}
+            index={1}
+          >
             <p>
               <span>Our vision</span> is to create the world&apos;s biggest
               personal development ecosystem with our technology as the gate to
@@ -84,7 +90,13 @@ function About() {
               gained knowledge in their own favor.
             </p>
           </TabPanel>
-          <TabPanel value={value} index={2}>
+          <TabPanel
+            className={`${styles['tab-list']} ${
+              isDarkMode ? '' : `${styles.light}`
+            }`}
+            value={value}
+            index={2}
+          >
             <p>
               As things stand today, over 35% of people in Europe suffer from a
               mental illness that requires treatment. This does not include
@@ -111,7 +123,13 @@ function About() {
               from it.
             </p>
           </TabPanel>
-          <TabPanel value={value} index={3}>
+          <TabPanel
+            className={`${styles['tab-list']} ${
+              isDarkMode ? '' : `${styles.light}`
+            }`}
+            value={value}
+            index={3}
+          >
             <p>
               We are developing a logic-respectively science-based play-to-earn
               system, which explains to the user in a playful way his own

@@ -39,10 +39,12 @@
   // background: rgba(141, 178, 252, 0.2) !important;
   overflow: hidden;
   margin-top: 5.5rem;
+  border: solid 1px $ln-blue;
 }
 
 .tab-list.light {
   background: rgba(141, 178, 252, 0.2) !important;
+  border: transparent;
 }
 
 @media (min-width: 1024px) {

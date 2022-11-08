@@ -36,6 +36,11 @@
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
+  filter: brightness(0.5);
+}
+
+.logos .light {
+  filter: brightness(0.5);
 }
 
 .logos > div {
