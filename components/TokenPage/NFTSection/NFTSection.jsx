@@ -51,9 +51,9 @@ function NFTSection() {
         <div>
           <CharacterCard
             srcOne={'/nft/viking1.png'}
-            altOne={'viking1'}
+            altOne={'viking'}
             srcTwo={'/nft/character.png'}
-            altTwo="viking1"
+            altTwo="viking"
             className={styles['card-1']}
           >
             Viking
@@ -80,16 +80,16 @@ function NFTSection() {
             srcOne={'/nft/spartan.png'}
             altOne={'spartan'}
             srcTwo={'/nft/character.png'}
-            altTwo="egyptian"
+            altTwo="spartan"
             className={styles['card-4']}
           >
             Greek
           </CharacterCard>
           <CharacterCard
-            srcOne={'/nft/african.png'}
-            altOne={'spartan'}
+            srcOne={'/nft/african-new.png'}
+            altOne={'african'}
             srcTwo={'/nft/character.png'}
-            altTwo="egyptian"
+            altTwo="african"
             className={styles['card-5']}
           >
             African
