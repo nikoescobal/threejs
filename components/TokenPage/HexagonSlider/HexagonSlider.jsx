@@ -100,6 +100,9 @@ function HexagonSlider() {
             >
               <h3>{item.title}</h3>
               <p>{item.body}</p>
+              <a href="http://blog.legacynetwork.io" target="_blank" rel="noopener noreferrer" className={`read-more`}>
+                Read More
+              </a>
             </div>
           ))}
 
