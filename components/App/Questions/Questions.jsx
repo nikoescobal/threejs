@@ -44,7 +44,7 @@ function Questions() {
           ))}
           <div>
             <h4 className={styles.h3}>What is mental health crisis?</h4>
-            <p>
+            <p className={styles.p}>
               A mental health crisis is any situation in which a person's
               actions, feelings, and behaviors can lead to them hurting
               themselves or others, and/or put them at risk of being unable to
