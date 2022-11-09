@@ -28,16 +28,7 @@ function App() {
 
       <div className={styles['app-header']}>
         <GenericHeader
-          waves={
-            <WaveLines
-              style={{
-                top: '10%',
-                scale: '1.4',
-                left: '90px',
-                'object-fit': 'cover',
-              }}
-            />
-          }
+          waves={<WaveLines className={`${styles['waves-wrapper']}`} />}
           rightObj={
             <img
               className={styles.image}

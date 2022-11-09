@@ -18,6 +18,7 @@ import BlockChainBanner from '../components/TokenPage/BlockchainBanner/BlockChai
 import WaveLines from '../components/Generic/WaveLines/WaveLines';
 import Script from 'next/script';
 import BurningRate from '../components/BurningRate/BurningRate';
+import styles from '../components/TokenPage/TokenIntro/token_intro.module.scss';
 
 function Token() {
   const isDesktop = useMediaQuery('(min-width: 1024px)');
@@ -32,16 +33,7 @@ function Token() {
 
       <div>
         <GenericHeader
-          waves={
-            <WaveLines
-              style={{
-                top: '10%',
-                scale: '1.4',
-                left: '90px',
-                'object-fit': 'cover',
-              }}
-            />
-          }
+          waves={<WaveLines className={`${styles['waves-wrapper']}`} />}
           title={'LGCN Token'}
           subtitle={'a multichain utility & payment token'}
           // rightObj={

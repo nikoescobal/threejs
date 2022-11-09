@@ -1,3 +1,4 @@
+@use '../../styles/breakpoints' as *;
 @import '../../styles/variables';
 
 .container {
@@ -45,8 +46,20 @@
 .waves-wrapper {
   position: absolute;
   top: 10%;
-  scale: 1.4;
+  scale: 4;
   object-fit: cover;
+
+  @include md {
+    scale: 2;
+    transform: translateX(-9rem);
+    transform: translateY(2rem);
+  }
+
+  @include lg {
+    transform: translateX(3rem);
+    transform: translateY(1rem);
+    transform: scaleX(-1);
+  }
 }
 
 @media (min-width: 768px) {
