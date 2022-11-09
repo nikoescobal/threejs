@@ -1,11 +1,11 @@
 const content = [
   {
-    title: 'Burn',
-    content: 'A big share of the LGCN tokens which are being paid for in-app subscriptions get automatically burned which makes LGCN deflationary.'
+    title: 'Development',
+    content: 'Backflow of LGCN tokens into a company owned wallet to cover running costs and to grant further development and expansion of the Legacy Network ecosystem.'
   },
   {
-    title: 'NFT holders',
-    content: 'Distribution of LGCN tokens to NFT holders as an additional NFT utility.'
+    title: 'Staking Pool',
+    content: 'Just like the play to earn pool, the staking pool also needs liquidity which is provided by existing users.'
   },
   {
     title: 'P2E Pool',
