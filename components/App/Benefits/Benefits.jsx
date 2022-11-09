@@ -55,29 +55,6 @@ function Benefits() {
           </p>
         </ClearContainer>
       </div>
-      <div className={`${generics['alternating-rows']} max-1920`}>
-        <div className={styles['img-wrapper']}>
-          <img
-            src="/illustrations/data-security.png"
-            alt="cyber security illustration"
-          />
-        </div>
-        <ClearContainer
-          isComingSoon
-          title="Cyber Security"
-          to="/app"
-          linkText="Read More"
-          reducedPadding
-        >
-          <p>
-            To ensure the security of our entire ecosystem, we will have several
-            independent security audits performed. This concerns the token, or
-            smart contract, as well as the app and all platforms. We will
-            analyze past cyber-attacks on other systems and design our own
-            systems to be immune to these as well as other attacks.
-          </p>
-        </ClearContainer>
-      </div>
     </section>
   );
 }
