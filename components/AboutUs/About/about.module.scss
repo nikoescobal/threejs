@@ -57,6 +57,7 @@
 }
 
 .waves-wrapper {
+  background: red;
   position: absolute;
   top: 10%;
   scale: 4;
@@ -70,7 +71,7 @@
 
   @include lg {
     top: 10%;
-    scale: 1.4;
+    scale: 3;
     left: 90px;
     object-fit: cover;
   }
