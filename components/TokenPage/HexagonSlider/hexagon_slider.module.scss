@@ -88,7 +88,8 @@ $mobile-width: 15rem;
 
 .light .side::before {
   // background: $light-mode-secondary;
-  background: #c2c6cc;
+  // background: #c2c6cc;
+  background: #e2ebfd;
 } 
 
 .side {
@@ -158,6 +159,10 @@ $mobile-width: 15rem;
   color: $light-mode-text-color;
 }
 
+.light .side.active h3{
+  color: $light-mode-secondary;  
+}
+
 .side h3 {
   font-size: 0.75rem;
   line-height: 2ch;
@@ -185,7 +190,7 @@ $mobile-width: 15rem;
 }
 
 .light .side {
-  background: rgba($color: #000000, $alpha: 0.2);
+  background: $transparent-light;
 }
 
 .light .side.active {
