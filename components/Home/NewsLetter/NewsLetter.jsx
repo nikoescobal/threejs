@@ -44,25 +44,22 @@ function NewsLetter() {
       }`}
     >
       <Snackbar open={openNotification} autoHideDuration={6000} onClose={handleNotificationClose} anchorOrigin={{ vertical: 'top', horizontal: 'center' }}>
-      <SnackbarContent style={{
-          backgroundColor: notificationColor,
-          textAlign: 'center',
-          width: '100%',
-          height: '3rem',
-          position: 'relative',
-        }}
-        message={<p id="client-snackbar" style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          padding: '1rem',
-          width: 'max-content'
-        }}>{notificationMessage}</p>}
-      />
-        {/* <Alert onClose={handleNotificationClose} severity="success" sx={{ width: '100%', background: '#0258ff' }}>
-          {notificationMessage}
-        </Alert> */}
+        <SnackbarContent style={{
+            backgroundColor: notificationColor,
+            textAlign: 'center',
+            width: '100%',
+            height: '3rem',
+            position: 'relative',
+          }}
+          message={<p id="client-snackbar" style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            padding: '1rem',
+            width: 'max-content'
+          }}>{notificationMessage}</p>}
+        />
       </Snackbar>
       <div>
         <h4>Don&apos;t miss out. Stay updated!</h4>
