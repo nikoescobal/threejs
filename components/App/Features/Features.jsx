@@ -25,7 +25,7 @@ function Features() {
           top: '50%',
           left: '50%',
           transform: 'translate(-50%, -50%)',
-          width: '90%',
+          width: '120%',
         }}
       />
       <Gradient
