@@ -5,6 +5,7 @@ import { lnfunctions } from '../Questions/content';
 import TabPanel from '../../Generic/TabPanel/TabPanel';
 import { Tab, Tabs } from '@mui/material';
 import Image from 'next/image';
+import Waves from '../../../public/backgrounds/waves-updated.svg';
 import Managing from '../../../public/mockups/managing.png';
 import Staking from '../../../public/mockups/staking.png';
 import Vesting from '../../../public/mockups/vesting.png';
@@ -36,6 +37,9 @@ function Ln() {
       max-1920
     `}
     >
+      <div className={`${styles['waves-wrapper']}`}>
+        <img className={styles.waves} src={Waves.src} alt="Wave Lines" />
+      </div>
       <h3>Legacy Wallet</h3>
       <div className={`${styles['tabs-wrapper']}`}>
         <TabPanel value={value} className={styles['tab-item']} index={0}>

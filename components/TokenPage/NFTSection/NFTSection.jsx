@@ -16,13 +16,7 @@ function NFTSection() {
         !isDarkMode ? `${styles.light}` : ''
       }`}
     >
-      <WaveLines
-        style={{
-          top: '30%',
-          right: '-20%',
-          rotate: '-45deg',
-        }}
-      />
+      <WaveLines className={styles.waves} />
       <div className={`${styles['text-wrapper']} max-1920`}>
         <h3>Discover Our NFT</h3>
         <p>

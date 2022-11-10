@@ -246,7 +246,7 @@
     @include lg {
       transform: scale(1.4);
       left: 40% !important;
-      bottom: 4.0% !important;
+      bottom: 4% !important;
     }
   }
 }
@@ -270,7 +270,21 @@
     @include lg {
       transform: scale(1.5);
       left: 50% !important;
-      bottom: 4.50% !important;
+      bottom: 4.5% !important;
     }
+  }
+}
+
+.waves {
+  object-fit: cover;
+  left: 0;
+  scale: 1.9;
+  top: 22%;
+
+  @include md {
+    top: 22%;
+    scale: 1.4;
+    left: 90px;
+    object-fit: cover;
   }
 }
