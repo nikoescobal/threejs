@@ -17,6 +17,7 @@ import Waves from '../public/backgrounds/waves-5.png';
 import WaveLines from '../components/Generic/WaveLines/WaveLines';
 import useStore from '../store/store';
 import Script from 'next/script';
+import FAQ from '../components/AboutUs/FAQ/FAQ';
 
 function AboutUs() {
   const { isDarkMode } = useStore();
@@ -72,6 +73,7 @@ function AboutUs() {
       </WavesWrapper>
       <Team />
       <Partners />
+      <FAQ />
       <div
         style={{
           marginTop: '8rem',

@@ -213,12 +213,20 @@ button {
 }
 
 .MuiAccordionSummary-content.Mui-expanded {
-  color: #154ee3 !important;
+  color: $dark-mode-secondary !important;
   background: transparent !important;
 }
 
+.content-wrapper.light .MuiAccordionSummary-content.Mui-expanded .MuiTypography-root {
+  color: $light-mode-secondary !important;
+}
+
 .MuiAccordion-root.Mui-expanded {
-  color: #154ee3;
+  color: $dark-mode-secondary;
+}
+
+.light .MuiAccordion-root.Mui-expanded {
+  color: $light-mode-secondary;
 }
 
 // .css-1elwnq4-MuiPaper-root-MuiAccordion-root {
@@ -234,8 +242,16 @@ button {
   color: #cfcfcf !important;
 }
 
+.light .MuiAccordion-root svg {
+  color: $light-mode-text-color !important;
+}
+
 .MuiAccordion-root.Mui-expanded svg {
-  color: #154ee3 !important;
+  color: $dark-mode-secondary !important;
+}
+
+.light .MuiAccordion-root.Mui-expanded svg {
+  color: $light-mode-secondary !important;
 }
 
 .MuiTabs-flexContainer button {
