@@ -15,7 +15,7 @@ const content = [
         answer: "<p>Bringing people together to get the best out of them and fight global mental health problems is our way to add value to our world. Personal development is about gaining a deep understanding of our psyche and human nature in general. The goal is to find harmful traits in ourselves, understand how they prevent us from succeeding in different areas, and replace them step by step with more effective traits.</p>"
       },
       {
-        question: 'On which blockchain will the LGCN token be available?',
+        question: 'On which blockchain will the LGCT token be available?',
         answer: "<p>The native chain is <b>Ve-Chain</b>, so the token will be available on:</p> <ul><li>Ve-Chain</li><li>Binance Smart Chain</li> <li>Ethereum</li> <li>Polygon/Matic</li></ul>"
       },
       {
@@ -32,7 +32,7 @@ const content = [
       },
       {
         question: 'Will there be other listings in the future?',
-        answer: "<p>Yes, our goal is to make the LGCN token easily tradable for everyone. At first, we will list on a few small exchanges and as soon as all requirements (trading volume, awareness, etc.) are met, we hope to get listed on the big exchanges such as Binance and Coinbase as well.</p>"
+        answer: "<p>Yes, our goal is to make the LGCT token easily tradable for everyone. At first, we will list on a few small exchanges and as soon as all requirements (trading volume, awareness, etc.) are met, we hope to get listed on the big exchanges such as Binance and Coinbase as well.</p>"
       },
       {
         question: 'Why do we need a NFT?',
@@ -97,8 +97,8 @@ const content = [
         answer: "<p>Unfortunately, 90% of crypto projects are not able to survive major crashes. The main reason is, that most of these projects are strongly dependent on hype and the crypto market performance. A second reason is, that many projects create short-living entertainment products where an urgent need isn't given. We are more crisis resistant for the following reasons:</p><ul><li>We aren't necessarily a crypto company, we are a technology company that uses crypto/blockchain integration to make its ecosystem more valuable. We have multiple different income streams and expansion opportunities, which means that we are less affected by market fluctuations.</li><li>Our ecosystem is a problem solver which satisfies multiple urgent needs and reacts to global problems which are getting worse year by year. Products that aren't only wanted for a certain time but needed are more enduring. This adds up to the strength of our fundamentals.</li></ul>"
       },
       {
-        question: "How can the LGCN token be used?",
-        answer: "<p>LGCN is a multichain payment and utility token which can be used within the Legacy Network ecosystem. Its main purpose is to encourage our users to actively use our ecosystem and contribute to its growth.</p><br><p>One of the main problems the world is currently facing is the neurological addiction to short-term reward release in the brain, also called short-term gratification. It's a well-known fact, that one important part of overall success is the preference for education over entertainment. Unfortunately, many people are almost unable to do anything without receiving an instant reward due to the imbalance of their brain chemistry.</p><br><p>For these reasons, we have to release an instant reward consisting of tokens and in-game utilities within our education system to give it an entertaining and satisfying effect.</p><br><p>Utility and payment overview:</p><ul><li>Several in-App purchases like unlocking additional features</li><li>Staking to get access to special rewards and utility</li><li>Purchasing products in our online store</li><li>More in future</li></ul>"
+        question: "How can the LGCT token be used?",
+        answer: "<p>LGCT is a multichain payment and utility token which can be used within the Legacy Network ecosystem. Its main purpose is to encourage our users to actively use our ecosystem and contribute to its growth.</p><br><p>One of the main problems the world is currently facing is the neurological addiction to short-term reward release in the brain, also called short-term gratification. It's a well-known fact, that one important part of overall success is the preference for education over entertainment. Unfortunately, many people are almost unable to do anything without receiving an instant reward due to the imbalance of their brain chemistry.</p><br><p>For these reasons, we have to release an instant reward consisting of tokens and in-game utilities within our education system to give it an entertaining and satisfying effect.</p><br><p>Utility and payment overview:</p><ul><li>Several in-App purchases like unlocking additional features</li><li>Staking to get access to special rewards and utility</li><li>Purchasing products in our online store</li><li>More in future</li></ul>"
       },
       {
         question: "Is Legacy Network a Ponzi scheme?",
