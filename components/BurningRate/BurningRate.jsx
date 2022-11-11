@@ -9,7 +9,7 @@ function BurningRate() {
   const { isDarkMode } = useStore();
   const isTablet = useMediaQuery('(min-width: 768px)');
   const [title, setTitle] = useState(content[0].title);
-  const [text, setText] = useState(content[0].content);
+  const [text, setText] = useState('Hover over the dots to see where our tokens go');
   
   const showText = (index) => {
     setTitle(content[index].title)
@@ -137,11 +137,9 @@ function BurningRate() {
             <h4>{title}</h4>
             <p>{text}</p>
           </>
-          : <p>Hover over the dots to see where our tokens go</p>
+          : <p>Tap on the circles to see where our tokens go</p>
         }
-          
         </div>
-        
       </div>
       <div className={styles['mobile-text-wrapper']}>
         {
