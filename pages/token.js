@@ -34,7 +34,7 @@ function Token() {
       <div>
         <GenericHeader
           waves={<WaveLines className={`${styles['waves-wrapper']}`} />}
-          title={'Legacy Token (LGCT)'}
+          title={'Legacy Token'}
           subtitle={'a multichain utility & payment token'}
           // rightObj={
           //   isDesktop ? (
