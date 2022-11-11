@@ -137,7 +137,7 @@ function BurningRate() {
             <h4>{title}</h4>
             <p>{text}</p>
           </>
-          : <p>Tap circles to see allocation</p>
+          : <p>Hover over the dots to see where our tokens go</p>
         }
           
         </div>
