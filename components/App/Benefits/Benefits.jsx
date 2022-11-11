@@ -28,7 +28,9 @@ function Benefits() {
         </div>
 
         <div className={styles['bullet-wrapper']}>
-          <div className={styles['header']}>
+          <div
+            className={`${styles['margin-adjustment']} ${styles['header']}}`}
+          >
             <div className={styles['img-wrapper']}>
               <img src="/icons/notebook.svg" alt="notebook icon" />
             </div>
