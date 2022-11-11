@@ -6,10 +6,10 @@
 }
 
 .wrapper h4 {
-  padding: 0.4rem 0 0.2rem;
-  text-align: center;
+  padding: 0.4rem 0 1rem;
   
   @include md {
+    text-align: center;
     padding-bottom: 1rem;
   }
   
@@ -62,7 +62,10 @@
 }
 
 .img-wrapper {
-  text-align: center;
+  
+  @include md {
+    text-align: center;
+  }
 
   @include lg {
     max-width: 3.5rem;
