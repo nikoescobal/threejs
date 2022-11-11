@@ -1,103 +1,64 @@
 @use '../../../styles/breakpoints' as *;
-@import '../../../styles/variables';
+@use '../../../styles/variables' as *;
 
-.app-wrapper {
-  position: relative;
-  padding-top: 0.2rem;
-  padding-bottom: 8rem;
-
-  @include md {
-    padding-top: 8rem;
+.wrapper {
+  h4 {
+    padding: 0.4rem 0 1rem;
   }
 }
 
-.app-wrapper .waves-bg {
-  top: 25%;
-  left: -45%;
-  width: 200%;
+.title {
+  text-align: center;
 }
 
-.app-wrapper .floater {
-  top: 75%;
-  left: 85%;
+.header {
+  @include md {
+    text-align: center;
+  }
 }
 
-.app-wrapper .grid {
-  position: relative;
-  margin-bottom: 2rem;
-}
-
-.app-wrapper .grid:nth-of-type(2n) {
-  grid-template-columns: 4fr 1fr;
-}
-
-.app-wrapper .grid:nth-of-type(2n) .clear-container {
-  order: -1;
-}
-
-.app-wrapper .grid .clear-container {
-  max-width: none;
-  gap: 1rem;
-}
-
-.app-wrapper.light h4 {
-  color: $light-mode-text-color !important;
+.bullet-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .img-wrapper {
-  @include md {
-    transform: scale(2);
-  }
+  max-width: 3rem;
+  padding: 4rem 0 0;
 
   @include md {
-    transform: scale(1.75);
+    margin: 0 auto;
   }
 
-  @include xl {
-    padding: 0 2.5rem;
-    transform: scale(2.2);
+  @include lg {
+    margin: auto;
   }
 }
 
-@media (min-width: 768px) {
-  .app-wrapper {
-    gap: 4rem !important;
-    padding-bottom: 8rem;
-  }
+.layout {
+  display: grid;
 
-  .app-wrapper > div {
-    gap: 4rem;
-  }
-
-  .app-wrapper .grid {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    gap: 6rem;
-    align-items: center;
-  }
-
-  .app-wrapper .waves-bg {
-    top: -10%;
-    left: -35%;
-    transform: rotate(30deg);
-    width: 100%;
-  }
-
-  .app-wrapper .grid .clear-container {
-    max-width: none;
+  @include md {
     gap: 1rem;
   }
 
-  .app-wrapper .grid .clear-container h4 {
-    font-size: 1.5rem;
+  @include lg {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+}
+
+.list-wrapper {
+  @include md {
+    margin: 0 auto;
   }
 
-  .app-wrapper img {
-    transform: scale(1) !important;
-    scale: 1 !important;
-    max-width: 12rem !important;
+  li::marker {
+    color: $ln-blue;
+    font-size: 1.3rem;
   }
-  .app-wrapper img.scaled {
-    scale: 2 !important;
-  }
+
+  padding-left: 1rem;
 }

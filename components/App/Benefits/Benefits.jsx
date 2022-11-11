@@ -1,59 +1,81 @@
-/* eslint-disable react/no-unescaped-entities */
+import styles from '../Benefits/benefits.module.scss';
 import useStore from '../../../store/store';
-import ClearContainer from '../../Generic/ClearContainer/ClearContainer';
-import styles from './benefits.module.scss';
-import generics from '../../../styles/generics.module.scss';
-import { useMediaQuery } from '@mui/material';
-import { useEffect } from 'react';
-import { useState } from 'react';
 
 function Benefits() {
   const { isDarkMode } = useStore();
-  const isDesktop = useMediaQuery('(min-width: 1024px)');
-  const [scale, setScale] = useState(1);
-
-  useEffect(() => {
-    if (isDesktop) {
-      setScale(1.5);
-    } else {
-      setScale(1);
-    }
-  }, [isDesktop]);
-
   return (
-    <section
-      className={`
-      ${styles['app-wrapper']}
-      ${generics['alternating-rows-wrapper']}
-      ${!isDarkMode ? `${styles['light']}` : ''}
-      spacing-x`}
-    >
-      <div className={`${generics['alternating-rows']} max-1920`}>
-        <div className={styles['img-wrapper']}>
-          <img
-            src="/illustrations/data-protection.png"
-            alt="data protection illustration"
-          />
+    <section className={`${styles.wrapper} spacing-x`}>
+      <div className={`${styles.title}`}>
+        <h3>Your Benefits</h3>
+        <p>
+          With a lot of powerful features, we guarantee simplity and clarity
+        </p>
+      </div>
+      <div className={`${styles.layout}`}>
+        <div className={styles['bullet-wrapper']}>
+          <div className={styles['header']}>
+            <div className={styles['img-wrapper']}>
+              <img src="/icons/play.svg" alt="play icon" />
+            </div>
+            <h4>Education</h4>
+          </div>
+          <ul className={styles['list-wrapper']}>
+            <li>Get access to high quality content for your personal growth</li>
+            <li>Keep up your motivation thanks to our play to earn system</li>
+            <li>Test and deepen your new gained knowledge </li>
+            <li>Profit from a fair and flexible subscription model </li>
+          </ul>
         </div>
-        <ClearContainer
-          isComingSoon
-          title="Data Protection"
-          to="/app"
-          linkText="Read More"
-          reducedPadding
-        >
-          <p>
-            Part of our vision is to give people back control of their data.
-            Legacy Network is the first technology company to use user’s data
-            and psychology exclusively for them, not against them. Unlike
-            various Big Data corporations, we will not monetize data and thus
-            will not make our platforms available for serving ads. As we will
-            not collect any personal data such as name or address, the user
-            profiles cannot be assigned to a real person. A concrete data
-            protection concept will be worked out during development together
-            with experts.
-          </p>
-        </ClearContainer>
+
+        <div className={styles['bullet-wrapper']}>
+          <div className={styles['header']}>
+            <div className={styles['img-wrapper']}>
+              <img src="/icons/notebook.svg" alt="notebook icon" />
+            </div>
+
+            <h4>Execution</h4>
+          </div>
+          <ul className={styles['list-wrapper']}>
+            <li>
+              Receive individual quests and apply your learnings right away
+            </li>
+            <li>Understand and fix what holds you back from taking action</li>
+            <li>
+              Increase your capability and exceed your limits step by step
+            </li>
+          </ul>
+        </div>
+
+        <div className={styles['bullet-wrapper']}>
+          <div className={styles['header']}>
+            <div className={styles['img-wrapper']}>
+              <img src="/icons/charts.svg" alt="charts icon" />
+            </div>
+            <h4>Monitoring</h4>
+          </div>
+          <ul className={styles['list-wrapper']}>
+            <li>Keep track of your progress in the statistics area</li>
+            <li>Notice problems early and make the necessary adjustments</li>
+            <li>
+              Enjoy to see your growth and the growth of your in-game character
+            </li>
+          </ul>
+        </div>
+
+        <div className={styles['bullet-wrapper']}>
+          <div className={styles['header']}>
+            <div className={styles['img-wrapper']}>
+              <img src="/icons/people.svg" alt="people icon" />
+            </div>
+            <h4>Community</h4>
+          </div>
+          <ul className={styles['list-wrapper']}>
+            <li>Connect with likeminded people who are on the same path</li>
+            <li>Exchange knowledge and ressources with your peers</li>
+            <li>Find your twins and build your own legacy</li>
+            <li>Participate in exciting events</li>
+          </ul>
+        </div>
       </div>
     </section>
   );
