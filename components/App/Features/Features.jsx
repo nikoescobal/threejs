@@ -25,7 +25,7 @@ function Features() {
           top: '50%',
           left: '50%',
           transform: 'translate(-50%, -50%)',
-          width: '90%',
+          width: '120%',
         }}
       />
       <Gradient
@@ -50,7 +50,9 @@ function Features() {
           <div className={`${styles.imgwrapper}`}>
             <img src="/features/kf4.png" alt="key feature 1" />
           </div>
-          <div>
+          <div style={{
+            position: 'relative'
+          }}>
             <h3>Education Area</h3>
             <p>
               In the education area of the app, the user can choose from various
@@ -71,19 +73,31 @@ function Features() {
             <img src="/features/health-2.png" alt="key feature 2" />
           </div>
 
-          <div className={`${styles.healthwrapper}`}>
-            <h3>Health Area</h3>
-            <p>
+          <div className={`${styles['health-wrapper']}`}>
+            <div className={`${styles.healthline}`}>
+              <img src="/illustrations/healthline.svg" alt="heathline" />
+            </div>
+            <h3 style={{
+              position: 'relative',
+              zIndex: '1'
+            }}>Health Area</h3>
+            <p style={{
+              position: 'relative',
+              zIndex: '1'
+            }}>
               The health area of the final app version is expected to include
               the following features:
             </p>
 
-            <div className={`${styles.wrapper}`}>
+            <div className={`${styles.wrapper}`} style={{
+              position: 'relative',
+              zIndex: '1'
+            }}>
               <div className={`${styles.icons}`}>
                 <img
                   src="/features/health-moon.png"
                   alt="halfmoon icon"
-                  style={{ scale: '1.25' }}
+                  style={{ scale: '1.25', zIndex: '1' }}
                 />
               </div>
               <div className={`${styles.healthtext}`}>
@@ -94,12 +108,15 @@ function Features() {
                 </p>
               </div>
             </div>
-            <div className={`${styles.wrapper}`}>
+            <div className={`${styles.wrapper}`} style={{
+              position: 'relative',
+              zIndex: '1'
+            }}>
               <div className={`${styles.icons}`}>
                 <img
                   src="/features/health-muscle.png"
                   alt="muscles icon"
-                  style={{ scale: '1.25' }}
+                  style={{ scale: '1.25', zIndex: '1' }}
                 />
               </div>
               <div className={`${styles.healthtext}`}>
@@ -111,12 +128,15 @@ function Features() {
               </div>
             </div>
 
-            <div className={`${styles.wrapper}`}>
+            <div className={`${styles.wrapper}`} style={{
+              position: 'relative',
+              zIndex: '1'
+            }}>
               <div className={`${styles.icons}`}>
                 <img
                   src="/features/health-time.png"
                   alt="clock icon"
-                  style={{ scale: '1.25' }}
+                  style={{ scale: '1.25', zIndex: '1' }}
                 />
               </div>
               <div className={`${styles.healthtext}`}>

@@ -1,3 +1,4 @@
+import { useMediaQuery } from '@mui/material';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import useStore from '../../store/store';
@@ -6,8 +7,9 @@ import content from './content';
 
 function BurningRate() {
   const { isDarkMode } = useStore();
+  const isTablet = useMediaQuery('(min-width: 768px)');
   const [title, setTitle] = useState(content[0].title);
-  const [text, setText] = useState(content[0].content);
+  const [text, setText] = useState('Hover over the dots to see where our tokens go');
   
   const showText = (index) => {
     setTitle(content[index].title)
@@ -16,7 +18,8 @@ function BurningRate() {
   
   return (
     <section className={`${styles.wrapper} ${isDarkMode ? '' : `${styles.light}`}`}>
-      <h3>Token Burning Rate</h3>
+      <h3>Subscription Token Distribution</h3>
+      <p>Percentages to be announced</p>
       <div className={styles['illustration-wrapper']}>
         <svg version="2.0" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
           viewBox="0 0 3500 3500" style={{
@@ -128,9 +131,24 @@ function BurningRate() {
         <circle className="st9" cx="821.7" cy="1224.6" r="54.4"/>
         </svg>
         <div className={styles['text-wrapper']}>
-          <h4>{title}</h4>
-          <p>{text}</p>
+        {
+          isTablet ?
+          <>
+            <h4>{title}</h4>
+            <p>{text}</p>
+          </>
+          : <p>Tap on the circles to see where our tokens go</p>
+        }
         </div>
+      </div>
+      <div className={styles['mobile-text-wrapper']}>
+        {
+          !isTablet &&
+          <>
+            <h4>{title}</h4>
+            <p>{text}</p>
+          </>
+        }
       </div>
     </section>
   )

@@ -39,18 +39,20 @@ function About() {
     >
       {isDesktop && (
         <div className={`${styles['tabs-wrapper']}`}>
-          <Tabs
-            className={`${styles['tab-list']}`}
-            value={value}
-            onChange={handleChange}
-            aria-label="tabs"
-          >
+          <Tabs value={value} onChange={handleChange} aria-label="tabs">
             <Tab label="ABOUT US" {...a11yProps(0)} />
             <Tab label="OUR VISION" {...a11yProps(1)} />
             <Tab label="THE PROBLEM" {...a11yProps(2)} />
             <Tab label="OUR SOLUTION" {...a11yProps(3)} />
           </Tabs>
-          <TabPanel value={value} index={0}>
+          <TabPanel
+            className={`${styles['tab-list']} ${
+              isDarkMode ? '' : `${styles.light}`
+            }`}
+            value={value}
+            index={0}
+          >
+            <h4>About Us</h4>
             <p>
               Legacy Network is an international technology company based in
               Liechtenstein/ Switzerland. Our mission is to improve
@@ -67,7 +69,14 @@ function About() {
               information back to him.
             </p>
           </TabPanel>
-          <TabPanel value={value} index={1}>
+          <TabPanel
+            className={`${styles['tab-list']} ${
+              isDarkMode ? '' : `${styles.light}`
+            }`}
+            value={value}
+            index={1}
+          >
+            <h4>Our Vision</h4>
             <p>
               <span>Our vision</span> is to create the world&apos;s biggest
               personal development ecosystem with our technology as the gate to
@@ -83,7 +92,14 @@ function About() {
               gained knowledge in their own favor.
             </p>
           </TabPanel>
-          <TabPanel value={value} index={2}>
+          <TabPanel
+            className={`${styles['tab-list']} ${
+              isDarkMode ? '' : `${styles.light}`
+            }`}
+            value={value}
+            index={2}
+          >
+            <h4>The Problem</h4>
             <p>
               As things stand today, over 35% of people in Europe suffer from a
               mental illness that requires treatment. This does not include
@@ -110,7 +126,14 @@ function About() {
               from it.
             </p>
           </TabPanel>
-          <TabPanel value={value} index={3}>
+          <TabPanel
+            className={`${styles['tab-list']} ${
+              isDarkMode ? '' : `${styles.light}`
+            }`}
+            value={value}
+            index={3}
+          >
+            <h4>Our Solution</h4>
             <p>
               We are developing a logic-respectively science-based play-to-earn
               system, which explains to the user in a playful way his own

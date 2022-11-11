@@ -5,6 +5,7 @@ import useStore from '../../../store/store';
 import styles from './chart.module.scss';
 import Arrow from '../../../public/slider/arrow.svg';
 import Image from 'next/image';
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 const data = [
   {
@@ -84,8 +85,8 @@ function RotatingChart() {
     } else {
       setInactiveColor('#CADBFF');
     }
-  }, [isDarkMode])
-  
+  }, [isDarkMode]);
+
   const { currentChartColor, setCurrentChartColor } = useStore(
     (state) => state
   );
@@ -133,8 +134,6 @@ function RotatingChart() {
 
   useEffect(() => {
     setCurrentChartColor(data[0].color);
-    // console.log('current rotation', currentRotation);
-    // console.log('current index', selectedIndex);
   }, []);
 
   return (
@@ -170,7 +169,7 @@ function RotatingChart() {
                     r="15.91549430918954"
                     fill="transparent"
                     strokeDashoffset={item.offset}
-                    stroke={selectedIndex === index ? item.color : '#464444'}
+                    stroke={selectedIndex === index ? item.color : inactiveColor}
                     strokeDasharray={`${item.percentage} ${
                       100 - item.percentage
                     }`}
@@ -204,7 +203,9 @@ function RotatingChart() {
                     r="15.91549430918954"
                     fill="transparent"
                     strokeDashoffset={item.offset}
-                    stroke={selectedIndex === index ? item.color : inactiveColor}
+                    stroke={
+                      selectedIndex === index ? item.color : inactiveColor
+                    }
                     strokeDasharray={`${item.percentage} ${
                       100 - item.percentage
                     }`}
@@ -234,21 +235,31 @@ function RotatingChart() {
       </div>
       <div className={styles.bg}>
         <div className={`${styles['vesting-wrapper']}`}>
-          Vesting schedule coming soon
-          <div />
+          <span style={{
+            color: currentChartColor,
+          }}>
+            Vesting schedule coming soon
+          </span>
+        <div />
         </div>
         <div className={`${styles['chart-content']}`}>
           <div className={`${styles['items-wrapper']}`}>
             <h3 style={{ color: currentChartColor }}>
               {data[selectedIndex].percentage}%
             </h3>
-            <h4 className={styles['title']}>{data[selectedIndex].title}</h4>
-            <p className={styles['token-percentage']}>{data[selectedIndex].tokens}</p>
+            <h4 className={styles['title']} style={{color: currentChartColor}}>{data[selectedIndex].title}</h4>
+            <p className={styles['token-percentage']}>
+              {data[selectedIndex].tokens}
+            </p>
             <ul className={styles.descriptions}>
               {data[selectedIndex].description.map((desc) => (
                 <li key={desc}>{desc}</li>
               ))}
             </ul>
+            <a href="https://blogs.legacynetwork.io" className={`${styles['read-more']} read-more`}>
+              Read More
+              <ArrowRightAltIcon />
+            </a>
             <div className={styles['arrows-wrapper']}>
               <Image
                 src={Arrow}
@@ -256,6 +267,7 @@ function RotatingChart() {
                 onClick={turnCounterClockwise}
               />
               <Image src={Arrow} alt="arrowight" onClick={turnClockwise} />
+              
               {/* <Link href="/">
                 <a className='button-blue'>Read More</a>
               </Link> */}

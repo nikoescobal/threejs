@@ -21,8 +21,8 @@ function SidePressureSection() {
           this reason we aim to create a token with constant, non-speculative
           buy side pressure. We achieve this by offering several attractive
           utilities which aren&apos;t directly related to the crypto industry.
-          These utilities can only be accessed by using LGCN token and the
-          demand for them stays the same or even grows within a bear market.
+          These utilities can only be accessed by using Legacy Token (LGCT) and
+          the demand for them stays the same or even grows within a bear market.
         </p>
       </div>
       <div className={`${styles['cards-wrapper']}`}>
@@ -32,7 +32,7 @@ function SidePressureSection() {
           </div>
           <div>
             <h4>Subscriptions</h4>
-            <span>All subscriptions are paid in LGCN token.</span>
+            <span>All subscriptions are paid in Legacy Token (LGCT).</span>
           </div>
         </div>
         <div className={`${styles['card']}`}>
@@ -41,7 +41,7 @@ function SidePressureSection() {
           </div>
           <div>
             <h4>In-app purchases</h4>
-            <span>All in-app purchases are paid in LGCN token.</span>
+            <span>All in-app purchases are paid in Legacy Token (LGCT).</span>
           </div>
         </div>
         <div className={`${styles['card']}`}>

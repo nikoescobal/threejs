@@ -3,6 +3,11 @@
 .wrapper {
   position: relative;
   z-index: 5;
+  padding: 5rem 0 0;
+
+  @include md {
+    padding: 12rem 0 0;
+  }
 }
 
 .tabs-wrapper {
@@ -64,6 +69,36 @@
 
   li:first-child {
     padding: 1rem 0 0;
+  }
+}
+
+.waves-wrapper {
+  position: relative !important;
+}
+
+.waves {
+  position: absolute !important;
+  object-fit: cover;
+  scale: 5;
+  transform: translateX(-9rem);
+  transform: translateY(8rem);
+
+  @include md {
+    scale: 4;
+    transform: translateX(2rem);
+    transform: translateY(11rem);
+  }
+
+  @include lg {
+    scale: 3;
+    transform: translateX(2rem);
+    transform: translateY(3rem);
+  }
+
+  @include xl {
+    scale: 2;
+    transform: translateX(2rem);
+    transform: translateY(1.4rem);
   }
 }
 

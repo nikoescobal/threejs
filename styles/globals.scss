@@ -112,6 +112,28 @@ button {
   background: $light-mode-secondary;
 }
 
+.outlined {
+  background: transparent !important;
+  border: 1px solid $ln-blue !important;
+  color: $ln-blue !important;
+}
+
+.light .outlined {
+  border: 1px solid $light-mode-secondary !important;
+  color: $light-mode-secondary !important;
+}
+
+.read-more {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  color: $dark-mode-secondary;
+}
+
+.light .read-more {
+  color: $light-mode-secondary;
+}
+
 *,
 *::before,
 *::after {
@@ -191,12 +213,20 @@ button {
 }
 
 .MuiAccordionSummary-content.Mui-expanded {
-  color: #154ee3 !important;
+  color: $dark-mode-secondary !important;
   background: transparent !important;
 }
 
+.content-wrapper.light .MuiAccordionSummary-content.Mui-expanded .MuiTypography-root {
+  color: $light-mode-secondary !important;
+}
+
 .MuiAccordion-root.Mui-expanded {
-  color: #154ee3;
+  color: $dark-mode-secondary;
+}
+
+.light .MuiAccordion-root.Mui-expanded {
+  color: $light-mode-secondary;
 }
 
 // .css-1elwnq4-MuiPaper-root-MuiAccordion-root {
@@ -212,8 +242,16 @@ button {
   color: #cfcfcf !important;
 }
 
+.light .MuiAccordion-root svg {
+  color: $light-mode-text-color !important;
+}
+
 .MuiAccordion-root.Mui-expanded svg {
-  color: #154ee3 !important;
+  color: $dark-mode-secondary !important;
+}
+
+.light .MuiAccordion-root.Mui-expanded svg {
+  color: $light-mode-secondary !important;
 }
 
 .MuiTabs-flexContainer button {

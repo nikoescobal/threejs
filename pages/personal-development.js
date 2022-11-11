@@ -22,15 +22,7 @@ function PersonalDevelopment() {
       </Head>
 
       <GenericHeader
-        waves={
-          <WaveLines
-            style={{
-              top: '-70%',
-              left: '-700px',
-              rotate: '-90deg',
-            }}
-          />
-        }
+        waves={<WaveLines className={`${styles['waves-wrapper']}`} />}
         rightObj={
           <img
             className={styles.image}

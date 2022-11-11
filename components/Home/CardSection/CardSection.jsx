@@ -18,7 +18,9 @@ function CardSection() {
 
   return (
     <div
-      className={`${styles.wrapper} ${!isDarkMode ? `${styles.light}` : ''} max-1920`}
+      className={`${styles.wrapper} ${
+        !isDarkMode ? `${styles.light}` : ''
+      } max-1920`}
     >
       <div className={styles['img-wrapper']}>
         <Image src={Chests} alt="chests" />
@@ -31,9 +33,9 @@ function CardSection() {
         // }}
       >
         {/* <div className={`${styles['connectors']}`}> */}
-          <img src={Connector1.src} alt="" className={`${styles['connector']}`} />
-          <img src={Connector2.src} alt="" className={`${styles['connector']}`} />
-          <img src={Connector3.src} alt="" className={`${styles['connector']}`} />
+        <img src={Connector1.src} alt="" className={`${styles['connector']}`} />
+        <img src={Connector2.src} alt="" className={`${styles['connector']}`} />
+        <img src={Connector3.src} alt="" className={`${styles['connector']}`} />
         {/* </div> */}
         <div className={`${styles['card']}`}>
           <div className={`${styles['icon-wrapper']}`}>
@@ -42,7 +44,10 @@ function CardSection() {
           <div>
             <h4>Choose a skill you want to learn</h4>
             <p>
-              Our unique education system covers all essential skills for your personal success in mental health, physical health, platonic relationships, romantic relationships, career/finances and much more. 
+              Our unique education system covers all essential skills for your
+              personal success in mental health, physical health, platonic
+              relationships, romantic relationships, career/finances and much
+              more.
             </p>
           </div>
         </div>
@@ -53,7 +58,10 @@ function CardSection() {
           <div>
             <h4>Play through lessons and level up your character </h4>
             <p>
-              Your in-game character is a reflection of you. When the character levels up in-game, you level up in real life. The character allows you to gain an objective perspective of yourself and to keep track of your progress.
+              Your in-game character is a reflection of you. When the character
+              levels up in-game, you level up in real life. The character allows
+              you to gain an objective perspective of yourself and to keep track
+              of your progress.
             </p>
           </div>
         </div>
@@ -64,7 +72,11 @@ function CardSection() {
           <div>
             <h4>Test and deepen your knowledge </h4>
             <p>
-              In the beginning, the reward distribution will be pegged to randomized, theoretical exams. The exams are created in a way which tests your deep understanding of the topic, not your memory. As the project develops further, we will implement more opportunities to earn rewards. 
+              In the beginning, the reward distribution will be pegged to
+              randomized, theoretical exams. The exams are created in a way
+              which tests your deep understanding of the topic, not your memory.
+              As the project develops further, we will implement more
+              opportunities to earn rewards.
             </p>
           </div>
         </div>
@@ -75,16 +87,19 @@ function CardSection() {
           <div>
             <h4>Earn reward chests </h4>
             <p>
-              Chests can include LGCN token, collectibles and other items which can either be traded or reused within the ecosystem.
+              Chests can include Legacy Token (LGCT), collectibles and other
+              items which can either be traded or reused within the ecosystem.
             </p>
           </div>
         </div>
       </div>
-      <div style={{display: 'flex', justifyContent: 'center', marginTop: '2rem'}}>
+      <div
+        style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}
+      >
         {/* <Link href="/">
           <a className='button-blue'>Learn More</a>
         </Link> */}
-        <ComingSoon style={{paddingLeft: '2rem', paddingRight: '2rem'}}>
+        <ComingSoon style={{ paddingLeft: '2rem', paddingRight: '2rem' }}>
           Learn More
         </ComingSoon>
       </div>

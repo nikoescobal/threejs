@@ -13,21 +13,37 @@ import { useMediaQuery } from '@mui/material';
 function Header() {
   const { isDarkMode } = useStore((state) => state);
   const isDesktop = useMediaQuery('(min-width: 1024px)');
-  
+
   return (
-    <div className={`${styles.container} ${!isDarkMode ? `${styles.light}` : ''} max-1920`}>
-      <Gradient style={{
-        top: '-12%',
-        right: '-5%',
-        maxWidth: '80%'
-        }} />
+    <div
+      className={`${styles.container} ${
+        !isDarkMode ? `${styles.light}` : ''
+      } max-1920`}
+    >
+      <Gradient
+        style={{
+          top: '-12%',
+          right: '-5%',
+          maxWidth: '80%',
+        }}
+      />
       <WaveLines className={styles['waves-wrapper']} />
-      <section className={`${generics.header} ${styles.header} header-intro ${generics['spacing-x']} ${generics['spacing-t']}`}>
-        <div className={`${generics['img-wrapper']}`} style={{display: 'flex', justifyContent: 'center'}}>
-          {isDesktop
-            ? <div style={{scale: '1.5'}}><LogoParticles /></div>
-            : <div><Image src={Logo} alt="logo" /></div>
-          }
+      <section
+        className={`${generics.header} ${styles.header} header-intro ${generics['spacing-x']} ${generics['spacing-t']}`}
+      >
+        <div
+          className={`${generics['img-wrapper']}`}
+          style={{ display: 'flex', justifyContent: 'center' }}
+        >
+          {isDesktop ? (
+            <div style={{ scale: '1.5' }}>
+              <LogoParticles />
+            </div>
+          ) : (
+            <div>
+              <Image src={Logo} alt="logo" />
+            </div>
+          )}
         </div>
         <div className="text">
           <div>
@@ -44,7 +60,7 @@ function Header() {
       </section>
       <PageSlider />
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;

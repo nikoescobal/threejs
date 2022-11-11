@@ -1,0 +1,105 @@
+@use '../../../styles/colors' as *;
+@use '../../../styles/variables' as *;
+@use '../../../styles/breakpoints' as *;
+
+.wrapper {
+  padding-top: 8rem;
+}
+
+.wrapper p {
+  font-family: 'Montserrat', serif !important;
+}
+
+.wrapper h3 {
+  text-align: center;
+}
+
+.wrapper ul {
+  margin-left: 1rem;
+  line-height: 2.75ch;
+  padding-top: 0.5rem;
+}
+
+.wrapper.light ul li{
+  color: $light-mode-text-color;
+}
+
+.tab-headings {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding: 4rem 0 2rem 0;
+  
+  @include md {
+    gap: 2rem;
+  }
+}
+
+.tab-headings button {
+  color: $dark-mode-text-color;
+  font-size: 0.8rem;
+  text-transform: none;
+  font-weight: 400;
+  padding: 0.8rem 1.75rem;
+  border: 1px solid $dark-mode-secondary;
+  border-radius: 10px;
+}
+
+.light .tab-headings button {
+  border: 1px solid $light-mode-secondary;
+  color: $light-mode-secondary;
+}
+
+.tab-headings button.active {
+  background: $dark-mode-secondary !important;
+}
+
+.light .tab-headings button.active {
+  background: $light-mode-secondary !important;
+  color: white;
+}
+
+.tab-summary p {
+  font-weight: 500;
+}
+
+.tab-content {
+  background: rgba($color: white, $alpha: 0.05);
+  // padding: 2rem 4rem;
+  padding: 2rem clamp(1rem, 6vw, 8rem);
+
+  max-width: 46rem;
+  margin: 0 auto;
+  border-radius: 16px;
+}
+
+.light .tab-content {
+  background: $transparent-light !important;
+}
+
+.light .tab-content p{
+  color: $light-mode-text-color;
+}
+
+.tab-content > div {
+  // border: 1px solid #121212;
+  border-bottom: 1px solid $gray;
+  background: none !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 0 !important;
+  backdrop-filter: blur(0);
+
+  &:last-child {
+    border-bottom: 0,
+  }
+
+  &:not(:last-child) {
+    // border-bottom: 0,
+  }
+  &:before {
+    display: none,
+  }
+}

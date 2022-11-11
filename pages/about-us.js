@@ -9,16 +9,16 @@ import Roadmap from '../components/Generic/Roadmap/Roadmap';
 import WavesWrapper from '../components/Generic/WavesWrapper/WavesWrapper';
 import Partners from '../components/Generic/Partners/Partners';
 import FollowUs from '../components/Generic/FollowUs/FollowUs';
-import QuestionMark from '../public/backgrounds/question-mark.png';
+import AboutUsDark from '../public/backgrounds/about-us-dark.png';
+import AboutUsLight from '../public/backgrounds/about-us-light.png';
 import NewsLetter from '../components/Home/NewsLetter/NewsLetter';
 import Waves from '../public/backgrounds/waves-5.png';
 import WaveLines from '../components/Generic/WaveLines/WaveLines';
 import useStore from '../store/store';
-import Script from 'next/script';
+import FAQ from '../components/AboutUs/FAQ/FAQ';
 
 function AboutUs() {
   const { isDarkMode } = useStore();
-
   return (
     <div>
       <Head>
@@ -29,15 +29,7 @@ function AboutUs() {
 
       <div className={styles['header-wrapper']}>
         <GenericHeader
-          waves={
-            <WaveLines
-              style={{
-                top: '-70%',
-                left: '-700px',
-                rotate: '-90deg',
-              }}
-            />
-          }
+          waves={<WaveLines className={`${styles['waves-wrapper']}`} />}
           rightObj={
             <div
               style={{
@@ -46,13 +38,13 @@ function AboutUs() {
             >
               {isDarkMode ? (
                 <img
-                  src="/backgrounds/question-mark-dark.png"
+                  src="/backgrounds/about-us-dark.png"
                   alt="logo"
                   draggable="false"
                 />
               ) : (
                 <img
-                  src="/backgrounds/question-mark-light.png"
+                  src="/backgrounds/about-us-light.png"
                   alt="logo"
                   draggable="false"
                 />
@@ -70,6 +62,7 @@ function AboutUs() {
       </WavesWrapper>
       <Team />
       <Partners />
+      <FAQ />
       <div
         style={{
           marginTop: '8rem',

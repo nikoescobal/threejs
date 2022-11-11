@@ -1,36 +1,35 @@
-@import '../../../styles/variables';
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
+@use '../../../styles/variables' as *;
 
 .main-wrapper {
   position: relative;
 }
 
 .cards-wrapper {
-  //   display: flex;
-  //   align-items: center;
-  //   margin-left: 2rem;
-  //   margin-right: 2rem;
-  //   min-height: 22rem;
-  //   bottom: 10vh;
-  //   right: 30%;
   padding-top: 8rem;
   padding-bottom: 8rem;
 }
 
 .grid {
-  // display: grid;
-  // display: flex;
-  // flex-direction: column;
   position: relative;
-  min-height: 18rem;
+  min-height: 24rem;
   overflow: visible;
+
+  @include sm {
+    min-height: 22rem;
+  }
+
+  @include md {
+    min-height: 10rem;
+  }
 }
 
 .grid a {
   justify-self: flex-end;
-  // position: absolute;
-  // left: 0%;
-  // bottom: 2rem;
-  // transform: translate(-50%, 0%);
+  position: absolute;
+  left: 0%;
+  bottom: 2rem;
 }
 
 .card {
@@ -54,6 +53,16 @@
   // font-weight: 500;
   font-size: 0.9rem;
   padding-top: 0.5rem;
+  // padding-bottom: 8rem;
+  min-height: 16rem;
+  
+  @include sm {
+    min-height: 0rem;
+  }
+  
+  @include md {
+    min-height: 12rem;
+  }
   // text-transform: uppercase;
 }
 

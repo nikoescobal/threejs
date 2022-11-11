@@ -13,7 +13,7 @@ function Security() {
     <div>
       <Head>
         <title>Token</title>
-        <meta name="description" content="Legacy Network Token" />
+        <meta name="description" content="Legacy Token" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Script
@@ -34,9 +34,10 @@ function Security() {
         waves={
           <WaveLines
             style={{
-              top: '-70%',
-              left: '-700px',
-              rotate: '-90deg',
+              top: '10%',
+              scale: '1.4',
+              left: '90px',
+              'object-fit': 'cover',
             }}
           />
         }

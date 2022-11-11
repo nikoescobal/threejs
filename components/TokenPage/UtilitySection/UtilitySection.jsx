@@ -11,15 +11,15 @@ function UtilitySection() {
       text: 'Free access to our ecosystem',
     },
     {
-      img: '/icons/util2.svg',
+      img: '/icons/util3.svg',
       text: 'Reward distribution',
     },
     {
-      img: '/icons/util3.svg',
+      img: '/icons/util2.svg',
       text: 'Access to special areas within the app',
     },
     {
-      img: '/icons/util4.svg',
+      img: '/icons/util6.svg',
       text: 'In-game character',
     },
     {
@@ -27,7 +27,7 @@ function UtilitySection() {
       text: 'Higher play-to-earn reward',
     },
     {
-      img: '/icons/util6.svg',
+      img: '/icons/util4.svg',
       text: 'Networking opportunities',
     },
   ];

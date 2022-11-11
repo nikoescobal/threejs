@@ -3,9 +3,10 @@ import Image from 'next/image';
 import React from 'react';
 import Questions from '../components/App/Questions/Questions';
 import Ln from '../components/App/Ln/Ln';
+import Benefits from '../components/App/Benefits/Benefits';
 import { useMediaQuery } from '@mui/material';
 import Features from '../components/App/Features/Features';
-import Benefits from '../components/App/Benefits/Benefits';
+import DataProtection from '../components/App/DataProtection/DataProtection';
 import Download from '../components/App/Download/Download';
 import GenericHeader from '../components/Generic/Header/GenericHeader';
 import Character from '../public/nft/char-with-iphone.png';
@@ -25,18 +26,10 @@ function App() {
         <meta name="description" content="Legacy Network Application" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
+
       <div className={styles['app-header']}>
         <GenericHeader
-          waves={
-            <WaveLines
-              style={{
-                top: '-70%',
-                left: '-700px',
-                rotate: '-90deg',
-              }}
-            />
-          }
+          waves={<WaveLines className={`${styles['waves-wrapper']}`} />}
           rightObj={
             <img
               className={styles.image}
@@ -55,18 +48,10 @@ function App() {
 
       <Questions />
       <Features />
-      <Roadmap
-        title={'Your Benefits'}
-        showBackground={false}
-        showBenefits
-        style={{
-          paddingBottom: '8rem',
-          marginBottom: '0 !important',
-        }}
-      />
+      <Benefits />
       <Ln />
       {/* <Download /> */}
-      <Benefits />
+      <DataProtection />
     </div>
   );
 }

@@ -1,103 +1,116 @@
 @use '../../../styles/breakpoints' as *;
-@import '../../../styles/variables';
+@use '../../../styles/variables' as *;
 
-.app-wrapper {
+.wrapper {
   position: relative;
-  padding-top: 0.2rem;
-  padding-bottom: 8rem;
+}
 
+.wrapper h4 {
+  padding: 0.4rem 0 1rem;
+  
   @include md {
-    padding-top: 8rem;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+  
+  @include lg {
+    text-align: left;
   }
 }
 
-.app-wrapper .waves-bg {
-  top: 25%;
-  left: -45%;
-  width: 200%;
+.light.wrapper h4 {
+  color: $light-mode-secondary;
+  // text-align: center;
+  padding-bottom: 1rem;
+  
+  @include lg {
+    // text-align: left;
+    padding-bottom: 0.4rem;
+  }
 }
 
-.app-wrapper .floater {
-  top: 75%;
-  left: 85%;
+.wrapper p {
+  font-size: 1.1rem;
 }
 
-.app-wrapper .grid {
-  position: relative;
-  margin-bottom: 2rem;
+.title {
+  text-align: center;
+  padding-bottom: 3rem;
+
+  @include lg {
+    padding-bottom: 4rem;
+  }
 }
 
-.app-wrapper .grid:nth-of-type(2n) {
-  grid-template-columns: 4fr 1fr;
+.header {
+  text-align: left !important;
+
+  @include md {
+    text-align: center;
+  }
 }
 
-.app-wrapper .grid:nth-of-type(2n) .clear-container {
-  order: -1;
-}
+.wrapper ul {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 32rem;
+  margin: 0 auto;
 
-.app-wrapper .grid .clear-container {
-  max-width: none;
-  gap: 1rem;
-}
-
-.app-wrapper.light h4 {
-  color: $light-mode-text-color !important;
+  @include lg {
+    max-width: none;
+  }
 }
 
 .img-wrapper {
+  
   @include md {
-    transform: scale(2);
+    text-align: center;
   }
 
-  @include md {
-    transform: scale(1.75);
-  }
-
-  @include xl {
-    padding: 0 2.5rem;
-    transform: scale(2.2);
+  @include lg {
+    max-width: 3.5rem;
+    text-align: left;
   }
 }
 
-@media (min-width: 768px) {
-  .app-wrapper {
-    gap: 4rem !important;
-    padding-bottom: 8rem;
-  }
+.img-wrapper img {
+  max-width: 3.5rem;
+  // margin: 0 auto;
+}
 
-  .app-wrapper > div {
-    gap: 4rem;
-  }
+.layout {
+  display: grid;
+  gap: 4rem;
 
-  .app-wrapper .grid {
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    gap: 6rem;
-    align-items: center;
-  }
-
-  .app-wrapper .waves-bg {
-    top: -10%;
-    left: -35%;
-    transform: rotate(30deg);
+  @include md {
+    // gap: 1rem;
     width: 100%;
   }
 
-  .app-wrapper .grid .clear-container {
-    max-width: none;
-    gap: 1rem;
+  @include lg {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem 2rem;
+  }
+}
+
+.list-wrapper {
+  @include md {
+    margin: 0 auto;
   }
 
-  .app-wrapper .grid .clear-container h4 {
-    font-size: 1.5rem;
+  li::marker {
+    color: $ln-blue;
+    font-size: 0.9rem;
   }
 
-  .app-wrapper img {
-    transform: scale(1) !important;
-    scale: 1 !important;
-    max-width: 12rem !important;
-  }
-  .app-wrapper img.scaled {
-    scale: 2 !important;
-  }
+  padding-left: 1rem;
+}
+
+.light.wrapper img{
+  // filter: invert(68%) sepia(48%) saturate(6883%) hue-rotate(203deg) brightness(93%) contrast(98%);
+  filter: invert(43%) sepia(94%) saturate(4000%) hue-rotate(206deg) brightness(97%) contrast(90%);;
+}
+
+.light.wrapper li::marker {
+  color: $light-mode-secondary;
 }

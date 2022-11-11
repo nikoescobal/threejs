@@ -1,24 +1,29 @@
 const content = [
   {
-    title: 'Charity',
-    content: 'Sed ut perspiciatis unde omnis iste natus error sit.'
+    title: 'Development',
+    content:
+      'Backflow of Legacy Token (LGCT)s into a company owned wallet to cover running costs and to grant further development and expansion of the Legacy Network ecosystem.',
   },
   {
-    title: 'Title 1',
-    content: 'text 2'
+    title: 'Staking Pool',
+    content:
+      'Just like the play to earn pool, the staking pool also needs liquidity which is provided by existing users.',
   },
   {
-    title: 'Title 2',
-    content: 'text 3'
+    title: 'P2E Pool',
+    content:
+      'Backflow of Legacy Token (LGCT)s into the play to earn pool to make sure that it always has enough liquidity.',
   },
   {
-    title: 'Title 3',
-    content: 'text 4'
+    title: 'NFT holders',
+    content:
+      'Distribution of Legacy Token (LGCT)s to NFT holders as an additional NFT utility.',
   },
   {
-    title: 'Title 4',
-    content: 'text 5'
+    title: 'Burn',
+    content:
+      'A big share of the Legacy Token (LGCT)s which are being paid for in-app subscriptions get automatically burned which makes Legacy Token (LGCT) deflationary.',
   },
-]
+];
 
 export default content;

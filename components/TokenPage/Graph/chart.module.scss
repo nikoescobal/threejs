@@ -26,22 +26,27 @@
 }
 
 .chart-content {
-  // position: absolute;
   display: grid;
-  // align-items: center;
   top: 50%;
   left: 50%;
   transform: translateX(0vw);
-  // transform: translate(-50%, -50%);
   background: rgba(255, 255, 255, 0.05);
   min-width: 24rem;
-  min-height: 24rem;
-  // padding: clamp(1rem, 10vw + 1rem, 4rem);
+  min-height: 26rem;
   padding: clamp(1rem, 10vw + 1rem, 4rem) clamp(1rem, 10vw + 1rem, 8rem);
   max-height: 28rem;
   width: 100%;
   max-width: 768px;
   border-radius: 8px;
+
+  @include md {
+    .chart-content {
+      padding-left: 100px;
+      padding-right: 100px;
+      width: 100%;
+      max-width: 768px !important;
+    }
+  }
 }
 
 .token-percentage {
@@ -51,10 +56,6 @@
 
 .light .token-percentage {
   color: $gray-dark;
-}
-
-.title {
-  color: $light-mode-secondary;
 }
 
 .vesting-wrapper {
@@ -227,7 +228,7 @@ svg.arrow {
   }
 
   .light .arrows-wrapper {
-    filter: brightness(0);
+    filter: brightness(200%);
   }
 
   svg.arrow {
@@ -290,6 +291,7 @@ svg.arrow {
 
   .descriptions {
     margin-left: 1rem;
+    padding: 1rem 0;
   }
 
   .bg {
@@ -306,14 +308,11 @@ svg.arrow {
     content: '';
     position: absolute;
     top: 50%;
-    // left: -300px;
     left: -39%;
     transform: translate(-50%, -50%);
     width: 100%;
-    // height: 160%;
-    // height: 160%;
-    // height: 28rem;
     height: 100vh;
+    height: calc(416px * 1.7);
     border-radius: 100%;
     overflow: hidden;
     box-shadow: 0px 00px 0px 100vw rgba(255, 255, 255, 0.05);
@@ -322,14 +321,6 @@ svg.arrow {
   .light .bg::before {
     box-shadow: 0px 00px 0px 100vw $transparent-light;
   }
-
-  .chart-content {
-    padding-left: 100px;
-    padding-right: 100px;
-    min-height: 24rem;
-    width: 100%;
-    max-width: 768px !important;
-  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -337,3 +328,14 @@ svg.arrow {
     transform: translate(-21%);
   }
 }
+
+.coming {
+  display: inline-block;
+  color: $blue;
+}
+
+// .coming::after {
+//   content: '&#8594;';
+//   font-size: 40px;
+//   color: #fff;
+// }

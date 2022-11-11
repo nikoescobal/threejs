@@ -18,6 +18,7 @@ import BlockChainBanner from '../components/TokenPage/BlockchainBanner/BlockChai
 import WaveLines from '../components/Generic/WaveLines/WaveLines';
 import Script from 'next/script';
 import BurningRate from '../components/BurningRate/BurningRate';
+import styles from '../components/TokenPage/TokenIntro/token_intro.module.scss';
 
 function Token() {
   const isDesktop = useMediaQuery('(min-width: 1024px)');
@@ -26,22 +27,14 @@ function Token() {
     <>
       <Head>
         <title>Token</title>
-        <meta name="description" content="Legacy Network Token" />
+        <meta name="description" content="Legacy Token" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div>
         <GenericHeader
-          waves={
-            <WaveLines
-              style={{
-                top: '-70%',
-                left: '-700px',
-                rotate: '-90deg',
-              }}
-            />
-          }
-          title={'LGCN Token'}
+          waves={<WaveLines className={`${styles['waves-wrapper']}`} />}
+          title={'Legacy Token'}
           subtitle={'a multichain utility & payment token'}
           // rightObj={
           //   isDesktop ? (
@@ -55,14 +48,22 @@ function Token() {
           //     />
           //   )
           // }
-           rightObj={isDesktop
-            ? <div>
-                <video style={{scale: '1.3', width: '100%'}} autoPlay loop={true} muted>
-                  <source src="/videos/token3.webm"/>
+          rightObj={
+            isDesktop ? (
+              <div>
+                <video
+                  style={{ scale: '1.3', width: '100%' }}
+                  autoPlay
+                  loop={true}
+                  muted
+                >
+                  <source src="/videos/token3.webm" />
                 </video>
               </div>
-            : <Image src={TokenImage} alt="token" draggable="false" />
-            }
+            ) : (
+              <Image src={TokenImage} alt="token" draggable="false" />
+            )
+          }
         />
         <TokenIntro />
         <WavesWrapper hideBottom={true}>
@@ -77,7 +78,7 @@ function Token() {
           }}
         >
           <SidePressureSection />
-          {/* <BurningRate /> */}
+          <BurningRate />
           <StakingSection />
         </div>
         <NFTSection />

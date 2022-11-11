@@ -1,7 +1,7 @@
+@use '../../../styles/breakpoints' as *;
 @import '../../../styles/variables';
 
 .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
-  
   background-color: transparent !important;
 }
 
@@ -14,8 +14,6 @@
   text-align: left;
   visibility: hidden;
 }
-
-
 
 .slide-content-wrapper.active {
   visibility: visible;
@@ -32,7 +30,14 @@
   font-size: 0.9rem;
   font-family: 'Montserrat', serif;
   position: relative;
+}
 
+.slide-content-wrapper li:last-of-type {
+  padding: 1.3rem 2rem;
+
+  @include md {
+    padding: 1.5rem 2rem;
+  }
 }
 
 .check {
@@ -52,7 +57,7 @@
 }
 
 .slide-content-wrapper li:not(.success)::before {
-  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  content: '\2022'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
   font-size: 1rem;
   color: $ln-blue; /* Change the color */
   font-weight: bold; /* If you want it to be bold */
@@ -63,4 +68,14 @@
 
 .light.slide-content-wrapper li::before {
   color: $light-mode-secondary;
+}
+
+.slide-button {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 1rem;
+
+  @include md {
+    transform: translateY(10px) !important;
+  }
 }

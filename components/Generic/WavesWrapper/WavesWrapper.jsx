@@ -22,7 +22,7 @@ function WavesWrapper({children, hideBottom}) {
         {/* <div className={`${styles['radial-wrapper-top']}`}></div> */}
         <div className={`${styles['top-waves-wrapper']}`}>
           <img
-            src="/backgrounds/wave-shape-dark-2.svg"
+            src="/backgrounds/wave-shape-darker.svg"
             className="waves-bg"
             alt=""
             draggable="false"

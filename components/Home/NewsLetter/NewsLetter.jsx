@@ -2,43 +2,39 @@ import styles from './newsletter.module.scss';
 import generics from '../../../styles/generics.module.scss';
 import useStore from '../../../store/store';
 import {collection,QueryDocumentSnapshot,DocumentData,query,where,limit,getDocs, doc, setDoc, addDoc} from "firebase/firestore";
+import axios from 'axios';
 import { firestore } from '../../../firebase/clientapp';
-import { useEffect } from 'react';
 import { useState } from 'react';
+import { Alert, Snackbar, SnackbarContent } from '@mui/material';
 
 function NewsLetter() {
   const { isDarkMode } = useStore((state) => state);
   const newsletterCollection = collection(firestore, 'email-subscribers');
   const [emails, setEmails] = useState([]);
   const [email, setEmail] = useState('');
+  const [openNotification, setOpenNotification] = useState(false);
+  const [notificationMessage, setNotificationMessage] = useState('')
+  const [notificationColor, setNotificationColor] = useState('')
 
-  const getEmails = async () => {
-    const newsLetterQuery = query(newsletterCollection);
-    const querySnapshot = await getDocs(collection(firestore, "email-subscribers"));
-    
-    const result = [];
-    querySnapshot.forEach((snapshot) => {
-      result.push(snapshot.data());
-    });
-    setEmails(result);
-  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  function saveEmail() {
-    console.log('start');
-    addDoc(collection(firestore, "email-subscribers"), {
-      email
-    })
-    .then(() => {
-      console.log('success');
-    })
-    .catch(() => {
-      console.log('error');
-    })
+    try {
+      const response = await axios.post('/api/subscribe', { email })
+      console.log('success', response)
+      setOpenNotification(true);
+      setNotificationMessage('Successfully subscribed');
+      setNotificationColor('#0258ff')
+    } catch (e) {
+      setOpenNotification(true);
+      setNotificationMessage('Subscription failed');
+      setNotificationColor('#d84646')
+      console.log(e.response.data.error)
+    }
   }
   
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    saveEmail(email);
+  const handleNotificationClose = () => {
+    setOpenNotification(false);
   }
   
   return (
@@ -47,6 +43,24 @@ function NewsLetter() {
         !isDarkMode ? `${styles.light}` : ''
       }`}
     >
+      <Snackbar open={openNotification} autoHideDuration={6000} onClose={handleNotificationClose} anchorOrigin={{ vertical: 'top', horizontal: 'center' }}>
+        <SnackbarContent style={{
+            backgroundColor: notificationColor,
+            textAlign: 'center',
+            width: '100%',
+            height: '3rem',
+            position: 'relative',
+          }}
+          message={<p id="client-snackbar" style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            padding: '1rem',
+            width: 'max-content'
+          }}>{notificationMessage}</p>}
+        />
+      </Snackbar>
       <div>
         <h4>Don&apos;t miss out. Stay updated!</h4>
         <p>

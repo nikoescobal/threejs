@@ -105,7 +105,7 @@ function Footer() {
                 Audit Report
               </a>
               <a
-                href="https://github.com/LegacyNetworkAG/LGCN_Token_Contracts"
+                href="https://github.com/LegacyNetworkAG/Legacy Token (LGCT)_Token_Contracts"
                 rel="noreferrer"
                 target="_blank"
                 className={`${styles.footer__column__item}`}
@@ -118,7 +118,10 @@ function Footer() {
               {/* <a href="/pdf/WP-Eng.pdf" target="_blank" className={`${styles.footer__column__item}`}>
                 Whitepaper
               </a> */}
-              <Link href="/policies" className={`${styles.footer__column__item}`}>
+              <Link
+                href="/policies"
+                className={`${styles.footer__column__item}`}
+              >
                 Policies
               </Link>
             </div>

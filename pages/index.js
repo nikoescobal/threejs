@@ -19,7 +19,6 @@ import Hammer from '../public/backgrounds/hammer.png';
 import Gradient from '../public/backgrounds/gradient.png';
 import useStore from '../store/store';
 import { useMediaQuery } from '@mui/material';
-import Script from 'next/script';
 
 export default function Home() {
   const { isDarkMode } = useStore();

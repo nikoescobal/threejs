@@ -15,8 +15,8 @@ const content = [
     url: '/app',
   },
   {
-    title: 'Legacy Network token',
-    body: 'The Legacy Network Token (LGCN) is a multichain utility and payment token. Its purpose is to encourage users to use our ecosystem and actively contribute to its growth.',
+    title: 'Legacy Token',
+    body: 'The Legacy Token (Legacy Token (LGCT)) is a multichain utility and payment token. Its purpose is to encourage users to use our ecosystem and actively contribute to its growth.',
     url: '/token',
   },
   {

@@ -95,6 +95,22 @@
   }
 }
 
+.health-wrapper {
+  position: relative;
+}
+
+.healthline {
+  position: absolute;
+  top: 11%;
+  right: -20%;
+  display: none;
+  
+  @include lg {
+    display: block;
+    width: 120%;
+  }
+}
+
 .circles {
   top: 20%;
   max-width: 30rem;
