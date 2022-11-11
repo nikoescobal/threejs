@@ -4,7 +4,7 @@ import useStore from '../../../store/store';
 function Benefits() {
   const { isDarkMode } = useStore();
   return (
-    <section className={`${styles.wrapper} spacing-x`}>
+    <section className={`${styles.wrapper} ${!isDarkMode ? `${styles.light}` : ''} spacing-x max-1920`}>
       <div className={`${styles.title}`}>
         <h3>Your Benefits</h3>
         <p>
@@ -13,12 +13,10 @@ function Benefits() {
       </div>
       <div className={`${styles.layout}`}>
         <div className={styles['bullet-wrapper']}>
-          <div className={styles['header']}>
-            <div className={styles['img-wrapper']}>
-              <img src="/icons/play.svg" alt="play icon" />
-            </div>
-            <h4>Education</h4>
+          <div className={styles['img-wrapper']}>
+            <img src="/icons/play.svg" alt="play icon" />
           </div>
+          <h4>Education</h4>
           <ul className={styles['list-wrapper']}>
             <li>Get access to high quality content for your personal growth</li>
             <li>Keep up your motivation thanks to our play to earn system</li>
@@ -28,9 +26,7 @@ function Benefits() {
         </div>
 
         <div className={styles['bullet-wrapper']}>
-          <div
-            className={`${styles['margin-adjustment']} ${styles['header']}}`}
-          >
+          <div className={styles['header']}>
             <div className={styles['img-wrapper']}>
               <img src="/icons/notebook.svg" alt="notebook icon" />
             </div>
