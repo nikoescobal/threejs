@@ -28,6 +28,21 @@ function Benefits() {
         <div className={styles['bullet-wrapper']}>
           <div className={styles['header']}>
             <div className={styles['img-wrapper']}>
+              <img src="/icons/people.svg" alt="people icon" />
+            </div>
+            <h4>Community</h4>
+          </div>
+          <ul className={styles['list-wrapper']}>
+            <li>Connect with likeminded people who are on the same path</li>
+            <li>Exchange knowledge and ressources with your peers</li>
+            <li>Find your twins and build your own legacy</li>
+            <li>Participate in exciting events</li>
+          </ul>
+        </div>
+
+        <div className={styles['bullet-wrapper']}>
+          <div className={styles['header']}>
+            <div className={styles['img-wrapper']}>
               <img src="/icons/notebook.svg" alt="notebook icon" />
             </div>
 
@@ -57,21 +72,6 @@ function Benefits() {
             <li>
               Enjoy to see your growth and the growth of your in-game character
             </li>
-          </ul>
-        </div>
-
-        <div className={styles['bullet-wrapper']}>
-          <div className={styles['header']}>
-            <div className={styles['img-wrapper']}>
-              <img src="/icons/people.svg" alt="people icon" />
-            </div>
-            <h4>Community</h4>
-          </div>
-          <ul className={styles['list-wrapper']}>
-            <li>Connect with likeminded people who are on the same path</li>
-            <li>Exchange knowledge and ressources with your peers</li>
-            <li>Find your twins and build your own legacy</li>
-            <li>Participate in exciting events</li>
           </ul>
         </div>
       </div>
