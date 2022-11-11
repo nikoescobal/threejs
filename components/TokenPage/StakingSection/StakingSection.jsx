@@ -8,50 +8,49 @@ import useStore from '../../../store/store';
 
 function StakingSection() {
   const { isDarkMode } = useStore();
-  
+
   return (
-    <div className={`${styles['staking-section']} ${generics['spacing-x']} ${!isDarkMode ? `${styles.light}` : ''} max-1920`}>
+    <div
+      className={`${styles['staking-section']} ${generics['spacing-x']} ${
+        !isDarkMode ? `${styles.light}` : ''
+      } max-1920`}
+    >
       <h3>How the staking works</h3>
       <div className={`${styles['steps-wrapper']}`}>
         <div className={`${styles['step']}`}>
           <p>Step 1:</p>
-          <p>
-            Get LGCN token
-          </p>
+          <p>Get Legacy Token (LGCT)</p>
           <div>
             <Image src={Money} alt="money" />
           </div>
           <p>
-            You can get your hands on LGCN token by using our ecosystem, by participating in raffles or by buying them on the open market.
+            You can get your hands on Legacy Token (LGCT) by using our
+            ecosystem, by participating in raffles or by buying them on the open
+            market.
           </p>
         </div>
         <div className={`${styles['step']}`}>
           <p>Step 2:</p>
-          <p>
-             Freeze your tokens in the app
-          </p>
+          <p>Freeze your tokens in the app</p>
           <div>
             <Image src={Wallet} alt="wallet" />
           </div>
           <p>
-            As an early adopter, you can stake your LGCN tokens for 6, 12 or 24 months within our pre-launch app (coming soon).
+            As an early adopter, you can stake your Legacy Token (LGCT)s for 6,
+            12 or 24 months within our pre-launch app (coming soon).
           </p>
         </div>
         <div className={`${styles['step']}`}>
           <p>Step 3:</p>
-          <p>
-            Get rewarded
-          </p>
+          <p>Get rewarded</p>
           <div>
             <Image src={Stack} alt="stack" />
           </div>
-          <p>
-            Profit from staking rewards.
-          </p>
+          <p>Profit from staking rewards.</p>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default StakingSection
+export default StakingSection;

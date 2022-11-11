@@ -95,13 +95,14 @@ function Ln() {
             </Tabs>
             <h4>Staking</h4>
             <p>
-              As a long-term believer, you can stake your LGCN tokens for 6, 12,
-              or 24 months to benefit from exclusive rewards. Alternatively, the
-              flexible staking option can be used, so you can withdraw your
-              funds at any time. Our flexible staking option comes with an
-              auto-compounding feature which saves you time by automatically
-              claiming the rewards and by re-staking them. The tokens are held
-              by audited smart contracts to grant high security and performance.
+              As a long-term believer, you can stake your Legacy Token (LGCT)s
+              for 6, 12, or 24 months to benefit from exclusive rewards.
+              Alternatively, the flexible staking option can be used, so you can
+              withdraw your funds at any time. Our flexible staking option comes
+              with an auto-compounding feature which saves you time by
+              automatically claiming the rewards and by re-staking them. The
+              tokens are held by audited smart contracts to grant high security
+              and performance.
             </p>
           </div>
         </TabPanel>
@@ -124,11 +125,11 @@ function Ln() {
             <h4>Vesting</h4>
             <p>
               As a private sale, public sale or giveaway participant, you can
-              claim your vested LGCN tokens directly in the wallet. The feature
-              calculates the claimable amount live, so tokens can be claimed in
-              an interval of your choice. Just like the staking contracts, the
-              vesting contracts are audited as well which grants high security
-              and performance.
+              claim your vested Legacy Token (LGCT)s directly in the wallet. The
+              feature calculates the claimable amount live, so tokens can be
+              claimed in an interval of your choice. Just like the staking
+              contracts, the vesting contracts are audited as well which grants
+              high security and performance.
             </p>
           </div>
         </TabPanel>
@@ -150,12 +151,12 @@ function Ln() {
             </Tabs>
             <h4>Bridging</h4>
             <p>
-              Bridge your LGCN tokens between the supported blockchains in an
-              instant thanks to our SafeSwap integration. Atomic swaps are used
-              which makes bridging cheap, fast and secure. More than that, we
-              are working on an auto-bridge feature which allows you to send
-              your LGCN tokens from one blockchain to another without needing to
-              bridge them first.
+              Bridge your Legacy Token (LGCT)s between the supported blockchains
+              in an instant thanks to our SafeSwap integration. Atomic swaps are
+              used which makes bridging cheap, fast and secure. More than that,
+              we are working on an auto-bridge feature which allows you to send
+              your Legacy Token (LGCT)s from one blockchain to another without
+              needing to bridge them first.
             </p>
           </div>
         </TabPanel>

@@ -39,7 +39,7 @@ function Giveaway() {
     <div className={styles['container']}>
       <Head>
         <title>Token Giveaway</title>
-        <meta name="description" content="Legacy Network Token Giveaway" />
+        <meta name="description" content="Legacy Token Giveaway" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Script

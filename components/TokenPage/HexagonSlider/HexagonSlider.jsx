@@ -19,15 +19,15 @@ function HexagonSlider() {
     },
     {
       title: 'Get access to our products and services',
-      body: 'The LGCN token serves as the main payment method for subscriptions and purchases within our ecosystem. This allows us to create automatisms such as redistributions and to act independently of third-party providers.',
+      body: 'The Legacy Token (LGCT) serves as the main payment method for subscriptions and purchases within our ecosystem. This allows us to create automatisms such as redistributions and to act independently of third-party providers.',
     },
     {
-      title: 'Stake your LGCN for additional benefits',
-      body: 'Staking your LGCN will grant you additional benefits such as staking rewards, airdrops, whitelist spots, discounts and access to exclusive services. ',
+      title: 'Stake your Legacy Token (LGCT) for additional benefits',
+      body: 'Staking your Legacy Token (LGCT) will grant you additional benefits such as staking rewards, airdrops, whitelist spots, discounts and access to exclusive services. ',
     },
     {
       title: 'Business to business utility',
-      body: 'We plan to make selected parts of our ecosystem such as content libraries and code accessible for other businesses in future. The LGCN token will be needed to access our B2B services which will benefit the community.',
+      body: 'We plan to make selected parts of our ecosystem such as content libraries and code accessible for other businesses in future. The Legacy Token (LGCT) will be needed to access our B2B services which will benefit the community.',
     },
     {
       title: 'Get rewarded for contributing to our ecosystem',
@@ -100,7 +100,12 @@ function HexagonSlider() {
             >
               <h3>{item.title}</h3>
               <p>{item.body}</p>
-              <a href="http://blog.legacynetwork.io" target="_blank" rel="noopener noreferrer" className={`read-more`}>
+              <a
+                href="http://blog.legacynetwork.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`read-more`}
+              >
                 Read More
               </a>
             </div>

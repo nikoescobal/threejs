@@ -10,7 +10,7 @@ import useScrollbarSize from 'react-scrollbar-size';
 
 function DiagonalSlider({ showBenefits }) {
   const { height, width } = useScrollbarSize();
-  
+
   const roadmapItems = [
     {
       phase: 'Phase 1',
@@ -141,7 +141,8 @@ function DiagonalSlider({ showBenefits }) {
           isChecked: false,
         },
         {
-          content: 'LGCN listing on the SafeSwap multi-chain bridge',
+          content:
+            'Legacy Token (LGCT) listing on the SafeSwap multi-chain bridge',
           isChecked: false,
         },
       ],
@@ -181,7 +182,7 @@ function DiagonalSlider({ showBenefits }) {
           isChecked: false,
         },
         {
-          content: 'LGCN listing on a centralized exchange',
+          content: 'Legacy Token (LGCT) listing on a centralized exchange',
           isChecked: false,
         },
         {
@@ -284,9 +285,7 @@ function DiagonalSlider({ showBenefits }) {
                   isActive={index === Math.abs(position.x - 1)}
                 />
                 {/* {item.content.content} */}
-                <div>
-                  
-                </div>
+                <div></div>
                 {
                   // index !== roadmapItems.length - 1 && (
                   // <div className="connector">
@@ -325,8 +324,7 @@ function DiagonalSlider({ showBenefits }) {
                 {/* <ul className={`${styles['content-wrapper']}`}>
                   <li>{item.content}</li>
                 </ul> */}
-                <div>
-                </div>
+                <div></div>
                 {
                   // index !== roadmapItems.length - 1 && (
                   // <div className="connector">
@@ -351,7 +349,7 @@ function DiagonalSlider({ showBenefits }) {
             type="button"
             className={`${styles.arrow} ${styles.right}`}
             style={{
-              right: `calc(${width}px + 1%)`
+              right: `calc(${width}px + 1%)`,
             }}
             onClick={moveRight}
           >
@@ -360,8 +358,8 @@ function DiagonalSlider({ showBenefits }) {
         </div>
       </div>
       <div className={styles['double-arrow']}>
-            <img src="/icons/double-arrow.svg" alt="arrow" />
-          </div>
+        <img src="/icons/double-arrow.svg" alt="arrow" />
+      </div>
       {/* <SliderContent
           list={roadmapItems[Math.abs(position.x - 1)].content}
           open={openDialog}

@@ -14,7 +14,7 @@ export const lnfunctions = [
     id: 1,
   },
   {
-    title: 'LGCN Wallet',
+    title: 'Legacy Token (LGCT) Wallet',
     description:
       'Add social features to your game with a player profile that gives them a consistent identity across the network.',
     img: 'functions/ln3.png',
@@ -28,7 +28,7 @@ export const lnfunctions = [
     id: 3,
   },
   {
-    title: 'Send/Receive LGCN',
+    title: 'Send/Receive Legacy Token (LGCT)',
     description:
       'P2E prize-based competitions. complete each level and earn crypto prizes - you decide.',
     img: 'functions/ln5.png',
@@ -74,7 +74,7 @@ export const questions = [
 //     id: 1,
 //   },
 //   {
-//     title: 'LGCN Wallet',
+//     title: 'Legacy Token (LGCT) Wallet',
 //     description:
 //       'Add social features to your game with a player profile that gives them a consistent identity across the network.',
 //     img: 'features/kf3.png',

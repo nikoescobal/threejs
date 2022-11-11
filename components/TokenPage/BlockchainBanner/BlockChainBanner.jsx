@@ -18,16 +18,16 @@ function BlockChainBanner() {
         <div className={styles['blockchain-wrapper']}>
           <ClearContainer title="Blockchain" isTransparent reducedPadding>
             <p>
-              The Legacy Network Token will be available on multiple
-              blockchains. VeChain as native blockchain, as well as Binance
-              smart chain, Ethereum and Polygon. The goal of multiple
-              blockchains is to address a target group as broad as possible, and
-              to use the individual advantages of the respective blockchains.
-              The circulation supply of the respective tokens is balanced by
-              means of atomic swap, so that the statistics of the tokens cannot
-              change independently of each other. For transferring tokens
-              between the different blockchains, the new cross-chain bridge of
-              safeswap is used.
+              The Legacy Token will be available on multiple blockchains.
+              VeChain as native blockchain, as well as Binance smart chain,
+              Ethereum and Polygon. The goal of multiple blockchains is to
+              address a target group as broad as possible, and to use the
+              individual advantages of the respective blockchains. The
+              circulation supply of the respective tokens is balanced by means
+              of atomic swap, so that the statistics of the tokens cannot change
+              independently of each other. For transferring tokens between the
+              different blockchains, the new cross-chain bridge of safeswap is
+              used.
             </p>
             <div
               className={`${styles.logos} ${

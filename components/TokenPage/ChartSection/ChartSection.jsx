@@ -29,11 +29,13 @@ function ChartSection() {
           interest to make our token as decentral and stable as possible.
         </p>
         <p className={`${styles['total']}`}>
-          Total supply: <span>720’000’000</span> LGCN
+          Total supply: <span>720’000’000</span> Legacy Token (LGCT)
         </p>
       </div>
       <RotatingChart />
-      <div className={`${generics['alternating-rows']} ${styles['cyber-security']} max-1920 spacing-x`}>
+      <div
+        className={`${generics['alternating-rows']} ${styles['cyber-security']} max-1920 spacing-x`}
+      >
         <div className={styles['img-wrapper']}>
           <img
             src="/illustrations/data-protection.png"
@@ -43,7 +45,11 @@ function ChartSection() {
         <div>
           <h3>Cyber Security</h3>
           <p>
-            To ensure the security of our entire ecosystem, we will have several independent security audits performed. This concerns the token, or smart contract, as well as the app and all platforms. We will analyze past cyber-attacks on other systems and design our own systems to be immune to these as well as other attacks.
+            To ensure the security of our entire ecosystem, we will have several
+            independent security audits performed. This concerns the token, or
+            smart contract, as well as the app and all platforms. We will
+            analyze past cyber-attacks on other systems and design our own
+            systems to be immune to these as well as other attacks.
           </p>
           <div className={styles['button-wrapper']}>
             {/* <button type='button' className='button-blue'>Read more</button>
@@ -51,7 +57,7 @@ function ChartSection() {
             {/* <ComingSoon className={styles.coming}>Read more</ComingSoon> */}
             <div>
               <a
-                href="https://github.com/LegacyNetworkAG/LGCN_Token_Contracts"
+                href="https://github.com/LegacyNetworkAG/Legacy Token (LGCT)_Token_Contracts"
                 target="_blank"
                 rel="noreferrer"
                 className={`${styles['audit-report']}`}
