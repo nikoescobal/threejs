@@ -9,14 +9,12 @@ import Roadmap from '../components/Generic/Roadmap/Roadmap';
 import WavesWrapper from '../components/Generic/WavesWrapper/WavesWrapper';
 import Partners from '../components/Generic/Partners/Partners';
 import FollowUs from '../components/Generic/FollowUs/FollowUs';
-// import QuestionMark from '../public/backgrounds/question-mark.png';
 import AboutUsDark from '../public/backgrounds/about-us-dark.png';
 import AboutUsLight from '../public/backgrounds/about-us-light.png';
 import NewsLetter from '../components/Home/NewsLetter/NewsLetter';
 import Waves from '../public/backgrounds/waves-5.png';
 import WaveLines from '../components/Generic/WaveLines/WaveLines';
 import useStore from '../store/store';
-import Script from 'next/script';
 import FAQ from '../components/AboutUs/FAQ/FAQ';
 
 function AboutUs() {
