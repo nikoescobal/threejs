@@ -12,6 +12,8 @@
 }
 
 .header {
+  text-align: left !important;
+
   @include md {
     text-align: center;
   }
@@ -20,8 +22,12 @@
 .bullet-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+  @include md {
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
 }
 
 .img-wrapper {
