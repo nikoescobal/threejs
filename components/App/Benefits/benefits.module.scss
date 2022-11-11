@@ -20,11 +20,11 @@
 
 .light.wrapper h4 {
   color: $light-mode-secondary;
-  text-align: center;
+  // text-align: center;
   padding-bottom: 1rem;
   
   @include lg {
-    text-align: left;
+    // text-align: left;
     padding-bottom: 0.4rem;
   }
 }
