@@ -7,6 +7,15 @@
 
 .wrapper h4 {
   padding: 0.4rem 0 0.2rem;
+  text-align: center;
+  
+  @include md {
+    padding-bottom: 1rem;
+  }
+  
+  @include lg {
+    text-align: left;
+  }
 }
 
 .light.wrapper h4 {
@@ -44,6 +53,12 @@
 .wrapper ul {
   display: grid;
   gap: 0.75rem;
+  max-width: 32rem;
+  margin: 0 auto;
+
+  @include lg {
+    max-width: none;
+  }
 }
 
 .img-wrapper {
@@ -65,7 +80,7 @@
   gap: 4rem;
 
   @include md {
-    gap: 1rem;
+    // gap: 1rem;
     width: 100%;
   }
 
