@@ -7,14 +7,14 @@
 
 .wrapper h4 {
   padding: 0.4rem 0 1rem;
+  text-align: center;
   
   @include md {
-    text-align: center;
     padding-bottom: 1rem;
   }
   
   @include lg {
-    text-align: left;
+    // text-align: left;
   }
 }
 
@@ -55,6 +55,7 @@
   gap: 0.75rem;
   max-width: 32rem;
   margin: 0 auto;
+  // text-align: center;
 
   @include lg {
     max-width: none;
@@ -62,19 +63,20 @@
 }
 
 .img-wrapper {
+  text-align: center;
   
   @include md {
-    text-align: center;
   }
 
   @include lg {
-    max-width: 3.5rem;
-    text-align: left;
+    // max-width: 3.5rem;
+    // text-align: left;
   }
 }
 
 .img-wrapper img {
   max-width: 3.5rem;
+  height: 3.5rem;
   // margin: 0 auto;
 }
 

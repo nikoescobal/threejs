@@ -40,8 +40,8 @@ function Ln() {
       <div className={`${styles['waves-wrapper']}`}>
         <img className={styles.waves} src={Waves.src} alt="Wave Lines" />
       </div>
-      <h3>Legacy Wallet</h3>
-      <div className={`${styles['tabs-wrapper']}`}>
+      <h3 style={{ position: 'relative' }}>Legacy Wallet</h3>
+      <div className={`${styles['tabs-wrapper']}`} style={{ position: 'relative' }}>
         <TabPanel value={value} className={styles['tab-item']} index={0}>
           <div>
             <img src={Managing.src} alt="Managing mockup" />

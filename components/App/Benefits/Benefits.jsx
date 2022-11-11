@@ -20,8 +20,23 @@ function Benefits() {
           <ul className={styles['list-wrapper']}>
             <li>Get access to high quality content for your personal growth</li>
             <li>Keep up your motivation thanks to our play to earn system</li>
-            <li>Test and deepen your new gained knowledge </li>
             <li>Profit from a fair and flexible subscription model </li>
+            <li>Test and deepen your new gained knowledge </li>
+          </ul>
+        </div>
+
+        <div className={styles['bullet-wrapper']}>
+          <div className={styles['header']}>
+            <div className={styles['img-wrapper']}>
+              <img src="/icons/people.svg" alt="people icon" />
+            </div>
+            <h4>Community</h4>
+          </div>
+          <ul className={styles['list-wrapper']}>
+            <li>Connect with likeminded people who are on the same path</li>
+            <li>Exchange knowledge and ressources with your peers</li>
+            <li>Find your twins and build your own legacy</li>
+            <li>Participate in exciting events</li>
           </ul>
         </div>
 
@@ -52,26 +67,11 @@ function Benefits() {
             <h4>Monitoring</h4>
           </div>
           <ul className={styles['list-wrapper']}>
-            <li>Keep track of your progress in the statistics area</li>
             <li>Notice problems early and make the necessary adjustments</li>
             <li>
               Enjoy to see your growth and the growth of your in-game character
             </li>
-          </ul>
-        </div>
-
-        <div className={styles['bullet-wrapper']}>
-          <div className={styles['header']}>
-            <div className={styles['img-wrapper']}>
-              <img src="/icons/people.svg" alt="people icon" />
-            </div>
-            <h4>Community</h4>
-          </div>
-          <ul className={styles['list-wrapper']}>
-            <li>Connect with likeminded people who are on the same path</li>
-            <li>Exchange knowledge and ressources with your peers</li>
-            <li>Find your twins and build your own legacy</li>
-            <li>Participate in exciting events</li>
+            <li>Keep track of your progress in the statistics area</li>
           </ul>
         </div>
       </div>
