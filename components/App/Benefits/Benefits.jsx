@@ -69,7 +69,7 @@ function Benefits() {
           <ul className={styles['list-wrapper']}>
             <li>Notice problems early and make the necessary adjustments</li>
             <li>
-              Enjoy to see your growth and the growth of your in-game character
+              Enjoy to see your growth and the growth of your character
             </li>
             <li>Keep track of your progress in the statistics area</li>
           </ul>
