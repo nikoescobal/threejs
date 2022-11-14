@@ -8,7 +8,7 @@ import content from './content';
 function BurningRate() {
   const { isDarkMode } = useStore();
   const isTablet = useMediaQuery('(min-width: 768px)');
-  const [title, setTitle] = useState(content[0].title);
+  const [title, setTitle] = useState('');
   const [text, setText] = useState('Hover over the dots to see where our tokens go');
   
   const showText = (index) => {
