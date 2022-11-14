@@ -10,10 +10,14 @@ function BurningRate() {
   const isTablet = useMediaQuery('(min-width: 768px)');
   const [title, setTitle] = useState('');
   const [text, setText] = useState('Hover over the dots to see where our tokens go');
+  const [hasHovered, setHasHovered] = useState(false);
   
   const showText = (index) => {
     setTitle(content[index].title)
     setText(content[index].content)
+    if (!hasHovered) {
+      setHasHovered(true);
+    }
   }
   
   return (
@@ -130,7 +134,7 @@ function BurningRate() {
         <circle className="st9" cx="454.7" cy="2387.5" r="54.4"/>
         <circle className="st9" cx="821.7" cy="1224.6" r="54.4"/>
         </svg>
-        <div className={styles['text-wrapper']}>
+        <div className={`${styles['text-wrapper']} ${!hasHovered ? `${styles.unhovered}` : ''}`}>
         {
           isTablet ?
           <>
