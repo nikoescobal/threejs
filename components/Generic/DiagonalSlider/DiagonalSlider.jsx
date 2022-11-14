@@ -82,11 +82,11 @@ function DiagonalSlider({ showBenefits }) {
         },
         {
           content: 'Announcement of community web-board functions',
-          isChecked: false,
+          isChecked: true,
         },
         {
           content: 'Announcement of partners web-board functions',
-          isChecked: false,
+          isChecked: true,
         },
       ],
     },
