@@ -10,165 +10,23 @@ import { Doughnut } from 'react-chartjs-2';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
+const colors = (opacity) => {
+  return [
+    `rgba(255, 99, 132, ${opacity})`,
+    `rgba(54, 162, 235, ${opacity})`,
+    `rgba(255, 206, 86, ${opacity})`,
+    `rgba(75, 192, 192, ${opacity})`,
+    `rgba(153, 102, 255, ${opacity})`,
+    `rgba(255, 159, 64, ${opacity})`,
+    `rgba(200, 50, 255, ${opacity})`,
+    `rgba(139, 195, 74, ${opacity})`
+  ]
+} 
+
 function DonutChart({series, labels, titleText, subtitle, legendPosition}) {
   const ReactApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
   const isTablet = useMediaQuery('(min-width: 768px');
-  // const [data] = useState({
-  //   // series: [10, 10, 15, 20, 30],
-  //   series: series,
-  //   options: {
-  //     dataLabels: {
-  //       enabled: true,
-  //       formatter: function (val) {
-  //         return Math.round(val) + "%"
-  //       },
-  //     },
-  //     chart: {
-  //       type: 'donut',
-  //     },
-  //     colors: [
-  //       '#008ffb',
-  //       '#00e396',
-  //       '#feb019',
-  //       '#ff4560',
-  //       '#f73094',
-  //     ],
-  //     // labels: ['Personality disorder', 'Substance-use disorder', 'Cognitive disorder', 'Mental disorder', 'Mood disorder'],
-  //     labels: labels,
-  //     fill: {
-  //       opacity: 0.8,
-  //     },
-  //     hover: {
-  //       mode: null
-  //     },
-  //     stroke: {
-  //       width: 0,
-  //     },
-  //     yaxis: {
-  //       show: false,
-  //     },
-  //     legend: {
-  //       show: true,
-  //       position: 'left',
-  //       labels: {
-  //         colors: undefined,
-  //         useSeriesColors: true,
-  //       },
-  //     },
-  //     theme: {
-  //       // monochrome: {
-  //       //   enabled: true,
-  //       //   color: '#1643bf',
-  //       //   shadeTo: 'light',
-  //       //   shadeIntensity: 0.5,
-  //       // },
-  //     },
-  //     title: {
-  //       // text: 'USA',
-  //       text: titleText,
-  //       align: 'center'
-  //     },
-  //     tooltip: {
-  //         custom: function({series, seriesIndex, dataPointIndex, w}) {
-  //           return ''
-  //         },
-  //       // enabled: false,
-  //       // onDatasetHover: {
-  //       //   highlightDataSeries: false,
-  //       // },
-  //       // y: {
-  //       //   formatter(value) {
-  //       //     return `${value}%`;
-  //       //   },
-  //       // },
-  //       // z: {
-  //       //   formatter(value, opts) {
-  //       //     const percent = opts.w.globals.seriesPercent[opts.seriesIndex][opts.dataPointIndex];
-  //       //     console.log(opts);
-  //       //     return `${percent.toFixed(0)}%`;
-  //       //   },
-  //       // },
-  //     },
-  //   },
-  // });
-  // const [mobileData] = useState({
-  //   // series: [10, 10, 15, 20, 30],
-  //   series: series,
-  //   options: {
-  //     dataLabels: {
-  //       enabled: true,
-  //       formatter: function (val) {
-  //         return Math.round(val) + "%"
-  //       },
-  //     },
-  //     chart: {
-  //       type: 'donut',
-  //     },
-  //     colors: [
-  //       '#008ffb',
-  //       '#00e396',
-  //       '#feb019',
-  //       '#ff4560',
-  //       '#f73094',
-  //     ],
-  //     // labels: ['Personality disorder', 'Substance-use disorder', 'Cognitive disorder', 'Mental disorder', 'Mood disorder'],
-  //     labels: labels,
-  //     fill: {
-  //       opacity: 0.8,
-  //     },
-  //     hover: {
-  //       mode: null
-  //     },
-  //     stroke: {
-  //       width: 0,
-  //     },
-  //     yaxis: {
-  //       show: false,
-  //     },
-  //     legend: {
-  //       show: true,
-  //       position: 'top',
-  //       labels: {
-  //         colors: undefined,
-  //         useSeriesColors: true,
-  //       },
-  //     },
-  //     theme: {
-  //       // monochrome: {
-  //       //   enabled: true,
-  //       //   color: '#1643bf',
-  //       //   shadeTo: 'light',
-  //       //   shadeIntensity: 0.5,
-  //       // },
-  //     },
-  //     title: {
-  //       // text: 'USA',
-  //       text: titleText,
-  //       align: 'center'
-  //     },
-  //     tooltip: {
-  //         custom: function({series, seriesIndex, dataPointIndex, w}) {
-  //           return ''
-  //         },
-  //       // enabled: false,
-  //       // onDatasetHover: {
-  //       //   highlightDataSeries: false,
-  //       // },
-  //       // y: {
-  //       //   formatter(value) {
-  //       //     return `${value}%`;
-  //       //   },
-  //       // },
-  //       // z: {
-  //       //   formatter(value, opts) {
-  //       //     const percent = opts.w.globals.seriesPercent[opts.seriesIndex][opts.dataPointIndex];
-  //       //     console.log(opts);
-  //       //     return `${percent.toFixed(0)}%`;
-  //       //   },
-  //       // },
-  //     },
-  //   },
-  // });
+  
   const { isDarkMode } = useStore();
   const data = {
     labels: labels,
@@ -176,26 +34,8 @@ function DonutChart({series, labels, titleText, subtitle, legendPosition}) {
       {
         label: '# of Votes',
         data: series,
-        backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(255, 159, 64, 0.2)',
-          'rgba(200, 50, 255, 0.2)',
-          'rgba(139, 195, 74, 0.2)'
-        ],
-        borderColor: [
-          'rgba(255, 99, 132, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-          'rgba(153, 102, 255, 1)',
-          'rgba(255, 159, 64, 1)',
-          'rgba(200, 50, 255, 1)',
-          'rgba(139, 195, 74, 1)'
-        ],
+        backgroundColor: colors(0.2),
+        borderColor: colors(1),
         borderWidth: 1,
       },
     ],
@@ -208,13 +48,31 @@ function DonutChart({series, labels, titleText, subtitle, legendPosition}) {
         <div className={styles['subtitle-wrapper']}>
           <p>{subtitle}</p>
         </div>
+        { !isTablet &&
+          <div className={styles['colors-wrapper']}>
+            {
+              labels.map((label, index) => (
+                <div key={label}>
+                  <span style={{
+                    display: 'inline-block',
+                    border: `1px solid ${colors(1)[index]}`,
+                    background: colors(0.2)[index],
+                    height: '1rem',
+                    width: '1rem'
+                  }} />
+                  <span>{label}</span>
+                </div>
+              ))
+            }
+          </div>
+        }
         <Doughnut 
           data={data} 
           plugins={[ChartDataLabels]}
           options={{
             plugins: {
               legend: {
-                display: true,
+                display: isTablet,
                 fullSize: false,
                 // maxWidth: 150,
                 labels: {
@@ -224,7 +82,7 @@ function DonutChart({series, labels, titleText, subtitle, legendPosition}) {
                   display: false, 
                   text: 'Per Million'
                 },
-                position: isTablet ? legendPosition : 'left',
+                position: isTablet ? legendPosition : 'top',
               },
               title: {
                 display: true,
