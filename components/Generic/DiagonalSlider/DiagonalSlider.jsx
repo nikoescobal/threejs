@@ -7,9 +7,11 @@ import { useEffect } from 'react';
 import benefits from './content';
 import ComingSoon from '../ComingSoon/ComingSoon';
 import useScrollbarSize from 'react-scrollbar-size';
+import { useSwipeable } from 'react-swipeable';
 
 function DiagonalSlider({ showBenefits }) {
   const { height, width } = useScrollbarSize();
+  
 
   const roadmapItems = [
     {
@@ -247,9 +249,15 @@ function DiagonalSlider({ showBenefits }) {
     }
   };
 
+  const handlers = useSwipeable({
+    onSwipedLeft: (eventData) => moveRight(),
+    onSwipedRight: (eventData) => moveLeft(),
+  });
+
   return (
     <div
-      className={`${styles['slider']} ${!isDarkMode ? `${styles.light}` : ''}`}
+        {...handlers}
+        className={`${styles['slider']} ${!isDarkMode ? `${styles.light}` : ''}` }
     >
       <div
         className={`${styles['slide-main']}`}
