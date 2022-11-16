@@ -13,7 +13,7 @@ function Map() {
     <section className={styles.wrapper}>
       <div className={`${styles.map} ${!isDarkMode ? `${styles.light}` : ''} max-1920`}>
         <div>
-        <img src="/backgrounds/mapbase.png" alt="" />
+        <img src="/backgrounds/mapbase.png" alt="world map" />
 
         </div>
         <h4>Join Us To Make The world A Better Place</h4>

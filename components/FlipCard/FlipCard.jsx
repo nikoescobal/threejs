@@ -15,7 +15,7 @@ function FlipCard({ className, position, disableFlip, visible, profileLink, pict
       ${visible ? '' : 'invisible'}`}>
       <div className={`${styles['flip-content']}`}>
         <div className={`${styles['flip-front']}`}>
-          {!disableFlip && <img src={picture} alt="" />}
+          {!disableFlip && <img src={picture} alt={name} />}
         </div>
         <div className={`${styles['flip-back']}`}>
           {!disableFlip && 

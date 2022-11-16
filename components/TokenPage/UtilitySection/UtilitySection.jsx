@@ -44,7 +44,7 @@ function UtilitySection() {
         {data.map((item) => (
           <div key={item.text}>
             <div>
-              <img src={item.img} alt="" />
+              <img src={item.img} alt="utility illustration" />
             </div>
             <p>{item.text}</p>
           </div>

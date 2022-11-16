@@ -292,15 +292,7 @@ function DiagonalSlider({ showBenefits }) {
                   showBenefits={showBenefits}
                   isActive={index === Math.abs(position.x - 1)}
                 />
-                {/* {item.content.content} */}
                 <div></div>
-                {
-                  // index !== roadmapItems.length - 1 && (
-                  // <div className="connector">
-                  //   <img src="/assets/slider/connector.svg" alt="" />
-                  // </div>
-                  // )
-                }
               </div>
             </>
           ))}
@@ -329,17 +321,7 @@ function DiagonalSlider({ showBenefits }) {
                   isActive={index === Math.abs(position.x - 1)}
                   showBenefits={showBenefits}
                 />
-                {/* <ul className={`${styles['content-wrapper']}`}>
-                  <li>{item.content}</li>
-                </ul> */}
                 <div></div>
-                {
-                  // index !== roadmapItems.length - 1 && (
-                  // <div className="connector">
-                  //   <img src="/assets/slider/connector.svg" alt="" />
-                  // </div>
-                  // )
-                }
               </div>
             </>
           ))}

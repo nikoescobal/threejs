@@ -15,7 +15,7 @@ function WaveLines({ className, style }) {
       ${className}
     `}
     >
-      <Image draggable="false" src={Waves} alt="" />
+      <Image draggable="false" src={Waves} alt="wave lines" />
     </div>
   );
 }

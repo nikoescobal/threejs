@@ -8,7 +8,7 @@ function Circles({className}) {
   
   return (
     <div className={`${className} ${styles.wrapper} ${isDarkMode ? '' : `${styles.light}`}`}>
-      <Image src={CirclesImg} alt="" />
+      <Image src={CirclesImg} alt="circle" />
     </div>
   )
 }

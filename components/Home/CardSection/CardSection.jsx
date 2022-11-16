@@ -33,9 +33,9 @@ function CardSection() {
         // }}
       >
         {/* <div className={`${styles['connectors']}`}> */}
-        <img src={Connector1.src} alt="" className={`${styles['connector']}`} />
-        <img src={Connector2.src} alt="" className={`${styles['connector']}`} />
-        <img src={Connector3.src} alt="" className={`${styles['connector']}`} />
+        <img src={Connector1.src} alt="connector" className={`${styles['connector']}`} />
+        <img src={Connector2.src} alt="connector" className={`${styles['connector']}`} />
+        <img src={Connector3.src} alt="connector" className={`${styles['connector']}`} />
         {/* </div> */}
         <div className={`${styles['card']}`}>
           <div className={`${styles['icon-wrapper']}`}>
