@@ -270,17 +270,38 @@
 
 .img-wrapper {
   position: absolute;
-  scale: 0.8;
-  left: -80%;
-  bottom: -15%;
+  scale: 0.45;
+  left: -95%;
+  // bottom: -55%;
+  top: -10%;
+}
+
+.coming {
+  margin: 0;
 }
 
 .win {
   padding: 0 0 0 1.25rem !important;
   max-width: 6rem !important;
   border-radius: 8px !important;
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+  background: #1960ea;
+  color: white;
+  text-align: center;
+  padding: 0.6rem 0;
+  width: 100%;
+  max-width: 13rem;
+  margin-top: 1.25rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-family: 'Montserrat', serif !important;
+  font-weight: 600;
+  text-transform: capitalize;
 
   @include xl {
     max-width: 7rem !important;
+    padding: 0 0 0 1.25rem !important;
   }
 }
