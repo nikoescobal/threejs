@@ -85,12 +85,6 @@ export default function Home() {
         </div>
       </div>
       <WavesWrapper hideBottom>
-        {/* <div className="gradient" style={{
-          top: '30%',
-          left: '10%'
-        }}>
-          <img src={Gradient.src} alt="" />
-        </div> */}
         <NewsLetter />
         <CardSection />
       </WavesWrapper>

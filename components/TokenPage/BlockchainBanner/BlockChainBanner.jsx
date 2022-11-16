@@ -13,7 +13,7 @@ function BlockChainBanner() {
       <div className={`alternating-rows`}>
         <Circles className={styles.circles} />
         <div>
-          <Image src={BlockChainImg} alt="" />
+          <Image src={BlockChainImg} alt="blockchain" />
         </div>
         <div className={styles['blockchain-wrapper']}>
           <ClearContainer title="Blockchain" isTransparent reducedPadding>

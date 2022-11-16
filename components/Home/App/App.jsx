@@ -19,9 +19,6 @@ function App() {
       ${generics['alternating-rows-wrapper']}
       ${generics['spacing-x']}`}
     >
-      {/* <div className={`${styles['waves-wrapper']}`}>
-        <Image src={Waves} alt="" />
-      </div> */}
       <WaveLines className={styles['waves-wrapper']} />
       <h4>
         Expand your knowledge and build your dream life with the help of our AI.
@@ -30,7 +27,7 @@ function App() {
         className={`${styles['alternating-rows']} ${generics['alternating-rows']} max-1920`}
       >
         <div className={styles['mockup-wrapper']}>
-          <img src="/mockups/profile.png" alt="" />
+          <img src="/mockups/profile.png" alt="phone illustration" />
         </div>
         <ClearContainer
           title="A whole ecosystem designed to support you in building your dream life"

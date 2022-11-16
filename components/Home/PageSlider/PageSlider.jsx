@@ -18,9 +18,6 @@ function PageSlider() {
   
   return (
     <section className={`${styles['main-wrapper']} ${generics['spacing-x']} ${!isDarkMode ? `${styles['light']}` : ''}`}>
-      {/* <div className={styles['circles-wrapper']}>
-        <Image src={Circles} alt="" />
-      </div> */}
       <Circles className={styles['circles-wrapper']} />
       
       <div className={`${styles['cards-wrapper']}`}>

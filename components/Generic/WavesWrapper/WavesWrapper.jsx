@@ -24,7 +24,7 @@ function WavesWrapper({children, hideBottom}) {
           <img
             src="/backgrounds/wave-shape-darker.svg"
             className="waves-bg"
-            alt=""
+            alt="dark mode separator"
             draggable="false"
             style={{
               opacity: isDarkMode ? '1' : '0',
@@ -33,7 +33,7 @@ function WavesWrapper({children, hideBottom}) {
           <img
             src="/backgrounds/wave-shape-light-new.svg"
             className="waves-bg"
-            alt=""
+            alt="light mode separator"
             draggable="false"
             style={{
               opacity: isDarkMode ? '0' : '1',
@@ -41,18 +41,16 @@ function WavesWrapper({children, hideBottom}) {
           />
         </div>
       </div>
-      {/* <img src="/backgrounds/wave-shape-dark.svg#svgView(viewBox(600, 00, 2000, 1050))" className="waves-bg" alt="" /> */}
       <div className={`${styles['content-wrapper']}`}>
         { children }
       </div>
-      {/* <Image objectFit='fill' src="/backgrounds/wave-shape-light.svg#svgView(viewBox(600, 00, 2000, 1050))" className="waves-bg" alt="" /> */}
       { !hideBottom && 
         <div className={`${styles['waves-img-wrapper']} ${styles['bottom']}}`}>
           <div className={`${styles['radial-wrapper-top']}`}></div>
           <img
             src="/backgrounds/wave-shape-dark-2.svg"
             className="waves-bg"
-            alt=""
+            alt="dark mode separator"
             draggable="false"
             style={{
               opacity: isDarkMode ? '1' : '0',
@@ -61,7 +59,7 @@ function WavesWrapper({children, hideBottom}) {
           <img
             src="/backgrounds/wave-shape-light-new.svg"
             className="waves-bg"
-            alt=""
+            alt="light mode separator"
             draggable="false"
             style={{
               opacity: isDarkMode ? '0' : '1',

@@ -27,15 +27,10 @@ function Giveaway() {
   return (
     <div
       className={`${styles.giveaway} ${!isDarkMode ? `${styles.light}` : ''}`}
-      // style={{
-      //   background: 'url("/backgrounds/footer-bg.png"), rgb(2, 5, 14)',
-      //   backgroundSize: 'cover',
-      // }}
     >
       <div className={styles['img-wrapper']}>
         <img src={Chests.src} alt="Chests" />
       </div>
-      {/* <img src="/backgrounds/waves-blue-bl.svg" alt="" /> */}
     </div>
   );
 }

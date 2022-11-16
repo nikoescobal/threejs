@@ -36,13 +36,7 @@ function Footer() {
   return (
     <footer
       className={`${styles.footer} ${!isDarkMode ? `${styles.light}` : ''}`}
-      // style={{
-      //   background: 'url("/backgrounds/footer-bg.png"), rgb(2, 5, 14)',
-      //   backgroundSize: 'cover',
-      // }}
     >
-      {/* <img src="/backgrounds/waves-blue-bl.svg" alt="" /> */}
-
       <section>
         <div className={`${styles.footer__main}`}>
           <SimpleDialog
@@ -156,7 +150,7 @@ function Footer() {
           <img
             src="logo-2.png"
             className={`${styles.footer__column__logo}`}
-            alt=""
+            alt="footer logo 2"
           />
         </div>
       </section>
@@ -175,7 +169,7 @@ function Footer() {
               fill="#D9D9D9"
             />
           </svg>
-          <img src={Logo.src} className={styles.logo} alt="" />
+          <img src={Logo.src} className={styles.logo} alt="footer logo 1" />
           <div></div>
         </div>
       </div>
