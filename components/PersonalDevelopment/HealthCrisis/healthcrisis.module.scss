@@ -49,12 +49,10 @@
 }
 
 .donut-wrapper > div:last-of-type canvas {
-  scale: 1.1;
   @include md {
     transform: translate(22%, -2%);
     scale: 1;
   }
-  // scale: 1.05;
 }
 
 .wrapper button {

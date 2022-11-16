@@ -6,3 +6,26 @@
     min-height: 8rem;
   }
 }
+
+.colors-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  // justify-items: center;
+  gap: 1rem;
+  // justify-items: start;
+  padding: 2rem 0;
+}
+
+.colors-wrapper > div {
+  display: flex;
+  align-items: center;
+  // justify-items: start;
+  // text-align: center;
+}
+
+.colors-wrapper span:last-of-type {
+  // margin-top: -0.5rem;
+  margin-left: 0.5rem;
+  font-size: 0.75rem;
+  // transform: translateY(-5rem);
+}
