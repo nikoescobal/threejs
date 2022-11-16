@@ -31,6 +31,7 @@ export default function Home() {
       <Head>
         <title>Legacy Network</title>
         <meta name="description" content="Gamified Personal Development Through AI And Blockchain Technology" />
+        <meta name="keywords" content="legacy network, personal development, Gamified Personal Development" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
