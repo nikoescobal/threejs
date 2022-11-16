@@ -158,7 +158,12 @@ function Navbar() {
         </div>
         <div>
           <div className={`${styles.win} button-blue`}>
-            <ComingSoon className={styles.coming}>Win</ComingSoon>
+            <ComingSoon className={styles.coming}>
+              <div className={styles['img-wrapper']}>
+                <img src="/icons/trophy-win.svg" alt="trophy icon" />
+              </div>
+              Win
+            </ComingSoon>
             {/* <Link
               href="/giveaway"
               className={`
