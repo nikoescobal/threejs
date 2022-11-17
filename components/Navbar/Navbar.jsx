@@ -146,12 +146,12 @@ function Navbar() {
               <span
                 className={router.asPath === '/blogs' ? `${styles.active}` : ''}
               >
-                <span>Community</span>
+                <span className={styles.community}>Community</span>
               </span>
               <span
                 className={router.asPath === '/blogs' ? `${styles.active}` : ''}
               >
-                <span>Partners</span>
+                <span className={styles.partners}>Partners</span>
               </span>
             </div>
           </div>
@@ -178,6 +178,7 @@ function Navbar() {
               Win
             </Link> */}
           </div>
+          <div className={`${styles['wallet']} outlined`}>Connect Wallet</div>
           <button
             type="button"
             onClick={toggle}
