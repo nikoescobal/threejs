@@ -9,7 +9,7 @@ function BurningRate() {
   const { isDarkMode } = useStore();
   const isTablet = useMediaQuery('(min-width: 768px)');
   const [title, setTitle] = useState('');
-  const [text, setText] = useState('Hover over the dots to see where our tokens go');
+  const [text, setText] = useState('Hover over the dots to see where the subscription tokens go');
   const [hasHovered, setHasHovered] = useState(false);
   
   const showText = (index) => {
@@ -141,7 +141,7 @@ function BurningRate() {
             <h4>{title}</h4>
             <p>{text}</p>
           </>
-          : <p>Tap on the circles to see where our tokens go</p>
+          : <p>Tap on the circles to see where the subscription tokens go</p>
         }
         </div>
       </div>

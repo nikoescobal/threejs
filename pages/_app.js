@@ -10,20 +10,26 @@ import Footer from '../components/Footer/Footer';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { useEffect } from 'react';
 import Script from 'next/script';
+import { ChainId, ThirdwebProvider } from '@thirdweb-dev/react';
 
 function MyApp({ Component, pageProps }) {
   const { isDarkMode } = useStore((state) => state);
-  
+
+  const activeChainId = ChainId.Goerli;
+
   useEffect(() => {
     const imgs = document.getElementsByTagName('img');
-    for(let i = 0; i < imgs.length; i++ ) {
-      imgs[i].setAttribute("ondragstart", "return false")
+    for (let i = 0; i < imgs.length; i++) {
+      imgs[i].setAttribute('ondragstart', 'return false');
     }
-  }, [])
-  
+  }, []);
+
   return (
     <div className={`content-wrapper ${isDarkMode ? '' : 'light'} `}>
-      <Script strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`} />
+      <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      />
 
       <Script id="analytics" strategy="lazyOnload">
         {`
@@ -35,14 +41,17 @@ function MyApp({ Component, pageProps }) {
           });
         `}
       </Script>
-      
+
       <ParallaxProvider>
         <Navbar />
-        <Component {...pageProps} />
+        <ThirdwebProvider desiredChainId={activeChainId}>
+          <Component {...pageProps} />
+        </ThirdwebProvider>
+
         <Footer />
       </ParallaxProvider>
     </div>
-  )
+  );
 }
 
 export default MyApp;
