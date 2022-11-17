@@ -113,7 +113,7 @@ function DiagonalSlider({ showBenefits }) {
           isChecked: false,
         },
         {
-          content: 'Beta testing of the pre-launch app',
+          content: 'Beta testing of the Legacy Wallet',
           isChecked: false,
         },
         {
@@ -126,10 +126,6 @@ function DiagonalSlider({ showBenefits }) {
       phase: 'Phase 5',
       date: 'November - December',
       content: [
-        {
-          content: 'Public sale start (depending on the markets)',
-          isChecked: false,
-        },
         {
           content: 'Security audits of all smart-contracts',
           isChecked: false,
@@ -153,6 +149,10 @@ function DiagonalSlider({ showBenefits }) {
       phase: 'Phase 6',
       date: 'December - January',
       content: [
+        {
+          content: 'Public sale start (depending on the markets)',
+          isChecked: false,
+        },
         {
           content: 'Alpha testing of our main app',
           isChecked: false,
