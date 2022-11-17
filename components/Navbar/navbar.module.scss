@@ -239,6 +239,10 @@
   }
 }
 
+.light .win span {
+  color: $dark-mode-text-color !important;
+}
+
 @media only screen and (min-width: 1024px) {
   .navbar {
     align-items: center;
@@ -304,4 +308,8 @@
     max-width: 7rem !important;
     padding: 0 0 0 1.25rem !important;
   }
+}
+
+.light .win {
+  background: $light-mode-secondary;
 }
