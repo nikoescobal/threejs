@@ -157,7 +157,9 @@ function Navbar() {
           </div>
         </div>
         <div>
-          <div className={`${styles.win} `}>
+          <div
+            className={`${styles.win} ${!isDarkMode ? `${styles.light}` : ''} `}
+          >
             <ComingSoon className={`${styles.coming} `}>
               <img
                 className={styles['img-wrapper']}
