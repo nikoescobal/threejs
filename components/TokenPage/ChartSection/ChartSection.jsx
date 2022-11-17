@@ -57,7 +57,7 @@ function ChartSection() {
             {/* <ComingSoon className={styles.coming}>Read more</ComingSoon> */}
             <div>
               <a
-                href="https://github.com/LegacyNetworkAG/Legacy Token (LGCT)_Token_Contracts"
+                href="https://github.com/LegacyNetworkAG/LGCT-CONTRACTS"
                 target="_blank"
                 rel="noreferrer"
                 className={`${styles['audit-report']}`}
