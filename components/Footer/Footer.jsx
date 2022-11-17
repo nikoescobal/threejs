@@ -99,7 +99,7 @@ function Footer() {
                 Audit Report
               </a>
               <a
-                href="https://github.com/LegacyNetworkAG/Legacy Token (LGCT)_Token_Contracts"
+                href="https://github.com/LegacyNetworkAG/LGCT-CONTRACTS"
                 rel="noreferrer"
                 target="_blank"
                 className={`${styles.footer__column__item}`}
