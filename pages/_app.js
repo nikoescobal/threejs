@@ -15,7 +15,7 @@ import { ChainId, ThirdwebProvider } from '@thirdweb-dev/react';
 function MyApp({ Component, pageProps }) {
   const { isDarkMode } = useStore((state) => state);
 
-  const activeChainId = ChainId.Goerli;
+  const desiredChainId = ChainId.Polygon;
 
   useEffect(() => {
     const imgs = document.getElementsByTagName('img');
@@ -25,14 +25,15 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <div className={`content-wrapper ${isDarkMode ? '' : 'light'} `}>
-      <Script
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-      />
+    <ThirdwebProvider desiredChainId={desiredChainId}>
+      <div className={`content-wrapper ${isDarkMode ? '' : 'light'} `}>
+        <Script
+          strategy="lazyOnload"
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+        />
 
-      <Script id="analytics" strategy="lazyOnload">
-        {`
+        <Script id="analytics" strategy="lazyOnload">
+          {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
@@ -40,17 +41,16 @@ function MyApp({ Component, pageProps }) {
           page_path: window.location.pathname,
           });
         `}
-      </Script>
+        </Script>
 
-      <ParallaxProvider>
-        <Navbar />
-        <ThirdwebProvider desiredChainId={activeChainId}>
+        <ParallaxProvider>
+          <Navbar />
           <Component {...pageProps} />
-        </ThirdwebProvider>
 
-        <Footer />
-      </ParallaxProvider>
-    </div>
+          <Footer />
+        </ParallaxProvider>
+      </div>
+    </ThirdwebProvider>
   );
 }
 

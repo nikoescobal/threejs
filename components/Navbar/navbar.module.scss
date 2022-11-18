@@ -30,7 +30,19 @@
   align-items: baseline;
   transform: translateX(0%);
 
+  @include md {
+    transform: translateX(-5.7rem) !important;
+  }
+
   @include lg {
+    transform: translateX(-6rem) !important;
+  }
+
+  @include lg {
+    transform: translateX(-7rem) !important;
+  }
+
+  @include breakpoint(1700px) {
     transform: translateX(-6rem);
   }
 }
@@ -306,14 +318,14 @@
   top: 0.75rem;
 
   @include lg {
-    right: 242px;
+    right: 255px;
     top: -1.5px;
     padding: 0 0 0 1rem !important;
     max-width: 4rem !important;
   }
 
   @include xl {
-    right: 300px;
+    right: 325px;
     min-width: 7rem !important;
     max-width: 8rem !important;
     font-size: 1rem !important;
@@ -439,48 +451,76 @@
   background: $light-mode-secondary;
 }
 
-.wallet {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  display: inline-block;
-  border: none;
-  text-decoration: none;
-  text-align: center;
-  max-width: 100%;
-  padding: 0.83rem 0 0.85rem;
-  width: 100%;
-  min-width: 10rem;
-  margin-top: 1.25rem;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  font-family: 'Montserrat', serif !important;
-  font-weight: 600;
-  text-transform: capitalize;
-
-  @include md {
-    max-width: 20rem;
-    position: absolute;
-    top: 0;
-    max-width: 5rem;
-    right: 15.9rem;
-    margin-top: 2rem;
-    padding: 0.83rem 0;
-  }
+.wallet span {
+  color: $ln-blue !important;
 
   @include lg {
-    transform: translateX(1.5rem);
-    margin-top: 0;
-    top: 22%;
-    font-size: 0.688rem;
-    min-width: 6.5rem;
-    white-space: nowrap;
-    right: 9.2rem;
+    font-size: 0.688rem !important;
   }
 
   @include xl {
-    font-size: 01rem;
-    min-width: 8rem;
-    max-width: 10rem;
+    font-size: 1rem !important;
   }
+}
+
+.light .wallet span {
+  color: $light-mode-secondary !important;
+}
+
+.wallet {
+  max-height: 2.89rem !important;
+  background: transparent !important;
+  border: 1px solid $ln-blue !important;
+  align-items: center !important;
+  display: flex !important;
+  justify-content: center !important;
+  display: inline-block !important;
+  text-decoration: none !important;
+  text-align: center !important;
+  max-width: 100% !important;
+  padding: 0.83rem 0 0.85rem !important;
+  width: 100% !important;
+  min-width: 10rem !important;
+  margin-top: 1.25rem !important;
+  border-radius: 4px !important;
+  font-size: 0.9rem !important;
+  font-family: 'Montserrat', serif !important;
+  font-weight: 600 !important;
+  text-transform: capitalize !important;
+
+  @include md {
+    min-width: 9.5rem !important;
+    max-width: 20rem !important;
+    position: absolute !important;
+    top: 0 !important;
+    max-width: 5rem !important;
+    right: 14rem !important;
+    margin-top: -24.25rem !important;
+    padding: 0.83rem 0 !important;
+  }
+
+  @include lg {
+    min-width: 7.5rem !important;
+    transform: translateX(9.9rem) !important;
+    margin-top: 0 !important;
+    top: 22% !important;
+    white-space: nowrap !important;
+    right: 9.2rem !important;
+  }
+
+  @include xl {
+    font-size: 1rem !important;
+    min-width: 11rem !important;
+    max-width: 20rem !important;
+    right: 8.75rem !important;
+  }
+}
+
+.light .wallet {
+  border: 1px solid $light-mode-secondary !important;
+}
+
+.wallet svg {
+  stroke-width: 4px !important;
+  transform: translate(5px, 1.5px) !important;
 }
