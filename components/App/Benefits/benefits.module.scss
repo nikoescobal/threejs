@@ -8,11 +8,11 @@
 .wrapper h4 {
   padding: 0.4rem 0 1rem;
   text-align: center;
-  
+
   @include md {
     padding-bottom: 1rem;
   }
-  
+
   @include lg {
     // text-align: left;
   }
@@ -22,7 +22,7 @@
   color: $light-mode-secondary;
   // text-align: center;
   padding-bottom: 1rem;
-  
+
   @include lg {
     // text-align: left;
     padding-bottom: 0.4rem;
@@ -64,7 +64,7 @@
 
 .img-wrapper {
   text-align: center;
-  
+
   @include md {
   }
 
@@ -96,6 +96,8 @@
 }
 
 .list-wrapper {
+  text-align: left !important;
+
   @include md {
     margin: 0 auto;
   }
@@ -108,11 +110,19 @@
   padding-left: 1rem;
 }
 
-.light.wrapper img{
+.light.wrapper img {
   // filter: invert(68%) sepia(48%) saturate(6883%) hue-rotate(203deg) brightness(93%) contrast(98%);
-  filter: invert(43%) sepia(94%) saturate(4000%) hue-rotate(206deg) brightness(97%) contrast(90%);;
+  filter: invert(43%) sepia(94%) saturate(4000%) hue-rotate(206deg)
+    brightness(97%) contrast(90%);
 }
 
 .light.wrapper li::marker {
   color: $light-mode-secondary;
+}
+
+.bullet-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
