@@ -30,16 +30,8 @@
   align-items: baseline;
   transform: translateX(0%);
 
-  @include md {
-    transform: translateX(-5.7rem) !important;
-  }
-
   @include lg {
-    transform: translateX(-6rem) !important;
-  }
-
-  @include lg {
-    transform: translateX(-7rem) !important;
+    transform: translateX(-5.6rem) !important;
   }
 
   @include breakpoint(1700px) {
@@ -47,17 +39,17 @@
   }
 }
 
-.align_navbar span {
-  font-size: 0.9rem !important;
+// .align_navbar span {
+//   font-size: 12px !important;
 
-  @include lg {
-    font-size: 0.8rem !important;
-  }
+//   @include lg {
+//     font-size: 10px !important;
+//   }
 
-  @include xl {
-    font-size: 1rem !important;
-  }
-}
+//   @include xl {
+//     font-size: 0.75rem !important;
+//   }
+// }
 
 .navbar.open {
   top: 0;
@@ -92,11 +84,11 @@
   transition: color 0.3s ease-in-out;
 
   @include lg {
-    font-size: 0.8rem;
+    font-size: 0.625rem;
   }
 
   @include xl {
-    font-size: 1rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -115,31 +107,32 @@
 
 .community {
   @include lg {
-    font-size: 0.8rem !important;
+    font-size: 0.625rem !important;
     // transform: translateY(-1.5rem);
     margin: -1.75rem 0 0.5rem;
     border-radius: 4px;
-    padding: 0 1rem 1.35rem 0.4rem;
+    padding: 0 1rem 1.35rem 0.36rem;
     background: rgba($color: #000000, $alpha: 0.75);
   }
 
   @include xl {
-    font-size: 1rem !important;
+    font-size: 0.75rem !important;
   }
 }
 
 .partners {
   @include lg {
-    font-size: 0.8rem !important;
+    font-size: 0.625rem !important;
     transform: translateY(-1.5rem);
     margin: -1.5rem 0 0.5rem;
     border-radius: 4px;
-    padding: 0 2.7rem 0.75rem 0.4rem;
     background: rgba($color: #000000, $alpha: 0.75);
+    padding: 0 0 0 0.4rem;
   }
 
   @include xl {
-    font-size: 1rem !important;
+    font-size: 0.75rem !important;
+    // padding: 0 2.7rem 0.5rem 0.4rem;
   }
 }
 
@@ -160,7 +153,8 @@
   }
 
   @include xl {
-    padding: 0;
+    top: 2.4rem;
+    padding: 1rem 0;
   }
 }
 
@@ -185,9 +179,6 @@
     border-radius: 0;
     font-size: 0.8rem !important;
     transform: translateY(1.5rem);
-  }
-
-  @include xl {
   }
 }
 
@@ -304,43 +295,13 @@
   background: $ln-blue;
 }
 
-.win {
-  right: 140px;
-  display: grid !important;
-  place-items: center !important;
-  justify-content: center !important;
-  position: absolute;
-  padding: 0 0.5rem;
-  border-radius: 14px;
-  height: 2.75rem;
-  max-width: 4rem !important;
-  width: 100%;
-  top: 0.75rem;
-
-  @include lg {
-    right: 255px;
-    top: -1.5px;
-    padding: 0 0 0 1rem !important;
-    max-width: 4rem !important;
-  }
-
-  @include xl {
-    right: 325px;
-    min-width: 7rem !important;
-    max-width: 8rem !important;
-    font-size: 1rem !important;
-    max-width: 8rem !important;
-    padding: 0 0 0 1.25rem !important;
-  }
-}
-
 .win p {
   @include lg {
     font-size: 0.688rem !important;
   }
 
   @include xl {
-    font-size: 1rem !important;
+    font-size: 0.9rem !important;
   }
 }
 
@@ -349,7 +310,7 @@
   font-size: 0.9rem;
 
   @include md {
-    font-size: 1rem;
+    font-size: 0.9rem !important;
   }
 
   @include lg {
@@ -357,7 +318,7 @@
   }
 
   @include xl {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -415,34 +376,45 @@
 }
 
 .win {
+  right: 8.75rem;
+  display: grid !important;
+  place-items: center !important;
+  justify-content: center !important;
+  position: absolute;
+  padding: 0 0.5rem;
+  height: 2.75rem;
+  top: 0.75rem;
   padding: 0 0 0 1.25rem !important;
-  max-width: 6rem !important;
-  border-radius: 8px !important;
-  display: inline-block;
+  border-radius: 14px;
   border: none;
   text-decoration: none;
   background: #1960ea;
   color: white;
   text-align: center;
-  padding: 0.6rem 0;
+  min-width: 4rem;
+  max-width: 6rem;
   width: 100%;
-  max-width: 13rem;
   margin-top: 1.25rem;
-  border-radius: 4px;
   font-size: 0.9rem;
   font-family: 'Montserrat', serif !important;
   font-weight: 600;
   text-transform: capitalize;
 
   @include lg {
+    right: 16.7rem;
+    max-width: 4rem;
+    top: -1.5px;
+    padding: 0 0 0 1rem !important;
     font-size: 0.688rem !important;
-    max-width: 4rem !important;
     padding: 0 0 0 1rem !important;
   }
 
   @include xl {
     max-width: 7rem !important;
     font-size: 1rem;
+    padding: 0 0 0 1.25rem !important;
+    right: 22.25rem;
+    max-width: 5rem !important;
     padding: 0 0 0 1.25rem !important;
   }
 }
@@ -452,14 +424,20 @@
 }
 
 .wallet span {
+  font-size: 0.9rem;
   color: $ln-blue !important;
+  align-items: center !important;
+  display: flex !important;
+  gap: 0 0.25rem;
+  padding: 0 0.15rem;
+  justify-content: center !important;
 
   @include lg {
-    font-size: 0.688rem !important;
+    font-size: 0.688rem;
   }
 
   @include xl {
-    font-size: 1rem !important;
+    font-size: 0.9rem;
   }
 }
 
@@ -469,13 +447,9 @@
 
 .wallet {
   outline: 0 !important;
-  max-height: 2.89rem !important;
+  max-height: 2.85rem !important;
   background: transparent !important;
   border: 1px solid $ln-blue !important;
-  align-items: center !important;
-  display: flex !important;
-  justify-content: center !important;
-  display: inline-block !important;
   text-decoration: none !important;
   text-align: center !important;
   max-width: 100% !important;
@@ -490,30 +464,28 @@
   text-transform: capitalize !important;
 
   @include md {
-    min-width: 9.5rem !important;
-    max-width: 20rem !important;
+    min-width: 12.1rem !important;
+    max-width: 13rem !important;
     position: absolute !important;
     top: 0 !important;
-    max-width: 5rem !important;
     right: 14rem !important;
-    margin-top: -24.25rem !important;
+    margin-top: -22.8rem !important;
     padding: 0.83rem 0 !important;
   }
 
   @include lg {
-    min-width: 7.5rem !important;
     transform: translateX(9.9rem) !important;
     margin-top: 0 !important;
     top: 22% !important;
     white-space: nowrap !important;
-    right: 9.2rem !important;
+    right: 8.96rem !important;
+    min-width: 8.5rem !important;
   }
 
   @include xl {
-    font-size: 1rem !important;
-    min-width: 11rem !important;
+    min-width: 13.5rem !important;
     max-width: 20rem !important;
-    right: 8.75rem !important;
+    right: 8.5rem !important;
   }
 }
 
@@ -524,4 +496,8 @@
 .wallet svg {
   stroke-width: 4px !important;
   transform: translate(5px, 1.5px) !important;
+
+  @include md {
+    transform: translate(-2px, -1px) !important;
+  }
 }

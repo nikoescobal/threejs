@@ -10,26 +10,18 @@
   text-decoration: none;
   font-weight: 600;
   font-family: 'montserrat', serif !important;
-  font-size: 0.75rem;
+  // font-size: 0.75rem;
   transition: color 0.3s ease-in-out;
-
-  @include lg {
-    font-size: 0.8rem !important;
-  }
 
   @include xl {
     // margin: 1rem 0 0;
-    transform: translateY(-1.4rem);
-    font-size: 1rem !important;
+    // transform: translateY(-1.2rem);
+    // font-size: 1rem !important;
   }
 }
 
 .wrapper span {
   padding: 2rem 0;
-
-  @include xl {
-    padding: 4rem 0;
-  }
 }
 
 .light span {
@@ -38,6 +30,8 @@
 
 .hover-text {
   position: absolute;
+  font-size: 0.75rem !important;
+
   top: 50%;
   left: 5rem;
   border-radius: 4px;
@@ -53,14 +47,15 @@
     display: none;
     left: -0.5rem;
     top: 230%;
-    transform: translateY(0.75rem);
-    // padding: 0.1rem;
-    padding: 0.15rem 0.35rem;
-    font-size: 0.8rem !important;
+    transform: translateY(1.06rem);
+    padding: 0.15rem 0.386rem;
+    font-size: 0.625rem !important;
   }
 
   @include xl {
-    padding: 0 0.35rem;
+    font-size: 0.75rem !important;
+    top: 234%;
+    transform: translateY(0.75rem);
   }
 }
 

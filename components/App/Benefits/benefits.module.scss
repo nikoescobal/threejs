@@ -96,8 +96,6 @@
 }
 
 .list-wrapper {
-  text-align: left !important;
-
   @include md {
     margin: 0 auto;
   }
@@ -118,11 +116,4 @@
 
 .light.wrapper li::marker {
   color: $light-mode-secondary;
-}
-
-.bullet-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
