@@ -185,36 +185,22 @@
 }
 
 .boards-wrapper > div > span {
-  // padding: 0.5rem 0.15rem;
   display: none;
 
   @include lg {
     display: block;
-    // padding: 0.5rem 1rem 1.5rem 0.5rem;
-    // margin-top: 1rem;
+
     border-radius: 0;
     font-size: 0.8rem !important;
     transform: translateY(1.5rem);
   }
 }
 
-// .boards-wrapper > div > span:first-child {
-//   padding: 0.5rem 0.15rem;
-//   display: none;
-
-//   @include lg {
-//     display: block;
-//     // background: red !important;
-//     padding: 0.5rem 1rem 1.5rem 0.5rem;
-//     // margin-top: 1rem;
-//     border-radius: 0;
-//     font-size: 0.8rem !important;
-//     // transform: translateY(1.5rem);
-//   }
-
-//   @include xl {
-//   }
-// }
+.boards-wrapper > div > span:last-child {
+  @include xl {
+    padding: 0.25rem 0 1rem;
+  }
+}
 
 .burger-wrapper {
   position: fixed;
