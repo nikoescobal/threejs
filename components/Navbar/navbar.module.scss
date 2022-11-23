@@ -528,12 +528,14 @@
     white-space: nowrap !important;
     right: 8.96rem !important;
     min-width: 8.5rem !important;
+    padding: 0 0 0 0.5rem !important;
   }
 
   @include xl {
     min-width: 13.5rem !important;
     max-width: 20rem !important;
     right: 8.5rem !important;
+    padding: 0 !important;
   }
 }
 
