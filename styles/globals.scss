@@ -187,14 +187,12 @@ button {
 .apexcharts-legend {
   display: grid;
   // transform: translateY(4rem);
-  
+
   @include md {
     display: flex !important;
     justify-content: center !important;
     text-align-last: left;
   }
-
-  
 }
 
 .apexcharts-legend-text {
@@ -217,7 +215,9 @@ button {
   background: transparent !important;
 }
 
-.content-wrapper.light .MuiAccordionSummary-content.Mui-expanded .MuiTypography-root {
+.content-wrapper.light
+  .MuiAccordionSummary-content.Mui-expanded
+  .MuiTypography-root {
   color: $light-mode-secondary !important;
 }
 
@@ -296,7 +296,7 @@ button {
 
 /* Simple Dialog */
 .MuiPaper-root {
-  background: none;  
+  background: none;
 }
 
 // .light.MuiPaper-root {
@@ -331,12 +331,63 @@ button {
   }
 }
 
-.st1{display:none;fill:#2E3192;}
-          .st2{display:inline;fill:#1D4FBC;}
-          .st3{fill:#CEDCFF;}
-          .st4{fill:#1D4FBC;}
-          .st5{fill:#172E56;}
-          .st6{fill:#5197ED;}
-          .st7{font-family:'Mont-HeavyDEMO';}
-          .st8{font-size:27.6771px;}
-          .st9{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+.st1 {
+  display: none;
+  fill: #2e3192;
+}
+.st2 {
+  display: inline;
+  fill: #1d4fbc;
+}
+.st3 {
+  fill: #cedcff;
+}
+.st4 {
+  fill: #1d4fbc;
+}
+.st5 {
+  fill: #172e56;
+}
+.st6 {
+  fill: #5197ed;
+}
+.st7 {
+  font-family: 'Mont-HeavyDEMO';
+}
+.st8 {
+  font-size: 27.6771px;
+}
+.st9 {
+  fill: #ffffff;
+  stroke: #000000;
+  stroke-miterlimit: 10;
+}
+
+/* Web3 Wallet */
+
+#metamask,
+#coinbasewallet,
+#walletConnect {
+  font-size: 1rem;
+
+  @include lg {
+    font-size: 10px;
+  }
+  @include xl {
+    font-size: 1rem;
+  }
+}
+
+.walletconnect-connect__button {
+  background: $ln-blue !important;
+}
+
+.walletconnect-modal__headerLogo {
+  position: absolute;
+  left: -48%;
+}
+
+.walletconnect-modal__header p {
+  position: absolute;
+  left: 7%;
+}

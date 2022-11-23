@@ -10,8 +10,14 @@
   text-decoration: none;
   font-weight: 600;
   font-family: 'montserrat', serif !important;
-  font-size: 0.75rem;
+  // font-size: 0.75rem;
   transition: color 0.3s ease-in-out;
+
+  @include xl {
+    // margin: 1rem 0 0;
+    // transform: translateY(-1.2rem);
+    // font-size: 1rem !important;
+  }
 }
 
 .wrapper span {
@@ -24,6 +30,8 @@
 
 .hover-text {
   position: absolute;
+  font-size: 0.75rem !important;
+
   top: 50%;
   left: 5rem;
   border-radius: 4px;
@@ -39,8 +47,15 @@
     display: none;
     left: -0.5rem;
     top: 230%;
-    padding: 0.1rem;
-    font-size: 0.67rem !important;
+    transform: translateY(1.06rem);
+    padding: 0.15rem 0.386rem;
+    font-size: 0.625rem !important;
+  }
+
+  @include xl {
+    font-size: 0.75rem !important;
+    top: 234%;
+    transform: translateY(0.75rem);
   }
 }
 

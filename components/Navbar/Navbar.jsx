@@ -13,6 +13,7 @@ import styles from './navbar.module.scss';
 import Image from 'next/image';
 import LinkHover from '../Generic/LinkHover/LinkHover';
 import ComingSoon from '../Generic/ComingSoon/ComingSoon';
+import { ConnectWallet } from '@thirdweb-dev/react';
 
 function Hamburger({ onClick, className }) {
   return (
@@ -146,12 +147,12 @@ function Navbar() {
               <span
                 className={router.asPath === '/blogs' ? `${styles.active}` : ''}
               >
-                <span>Community</span>
+                <span className={styles.community}>Community</span>
               </span>
               <span
                 className={router.asPath === '/blogs' ? `${styles.active}` : ''}
               >
-                <span>Partners</span>
+                <span className={styles.partners}>Partners</span>
               </span>
             </div>
           </div>
@@ -178,6 +179,10 @@ function Navbar() {
               Win
             </Link> */}
           </div>
+          <div>
+            <ConnectWallet className={`${styles['wallet']} outlined`} />
+          </div>
+          {/* <div className={`${styles['wallet']} outlined`}>Connect Wallet</div> */}
           <button
             type="button"
             onClick={toggle}
