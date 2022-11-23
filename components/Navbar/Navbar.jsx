@@ -179,9 +179,9 @@ function Navbar() {
               Win
             </Link> */}
           </div>
-          {/* <div>
+          <div>
             <ConnectWallet className={`${styles['wallet']} outlined`} />
-          </div> */}
+          </div>
           {/* <div className={`${styles['wallet']} outlined`}>Connect Wallet</div> */}
           <button
             type="button"
