@@ -14,6 +14,7 @@ import Image from 'next/image';
 import LinkHover from '../Generic/LinkHover/LinkHover';
 import ComingSoon from '../Generic/ComingSoon/ComingSoon';
 import { ConnectWallet } from '@thirdweb-dev/react';
+// import { ConnectWallet } from '../Wallet/Wallet';
 
 function Hamburger({ onClick, className }) {
   return (
