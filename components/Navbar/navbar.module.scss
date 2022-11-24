@@ -487,7 +487,8 @@
 
   @include lg {
     font-size: 0.688rem;
-    padding: 0;
+    padding: 0 0.1rem;
+    gap: 0 0.15rem !important;
     justify-content: center !important;
   }
 
