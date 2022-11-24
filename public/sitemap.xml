@@ -1,0 +1,36 @@
+<xml version="1.0" encoding="UTF-8">
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+      <loc>http://legacynetwork.io/</loc>
+      <changefreq>weekly</changefreq>
+    </url>
+    <url>
+      <loc>http://legacynetwork.io/app</loc>
+      <changefreq>weekly</changefreq>
+    </url>
+    <url>
+      <loc>http://legacynetwork.io/token</loc>
+      <changefreq>weekly</changefreq>
+    </url>
+    <url>
+      <loc>http://legacynetwork.io/personal-development</loc>
+      <changefreq>weekly</changefreq>
+    </url>
+    <url>
+      <loc>http://legacynetwork.io/about-us</loc>
+      <changefreq>weekly</changefreq>
+    </url>
+    <url>
+      <loc>http://legacynetwork.io/pdf/audit_report.pdf</loc>
+      <changefreq>weekly</changefreq>
+    </url>
+    <url>
+      <loc>http://legacynetwork.io/policies</loc>
+      <changefreq>weekly</changefreq>
+    </url>
+    <url>
+      <loc></loc>
+      <changefreq>weekly</changefreq>
+    </url>
+  </urlset>
+</xml>
