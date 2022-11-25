@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import Image from 'next/image'
 import styles from './gradient.module.scss'
 import GradientImg from '../../../public/backgrounds/gradient.webp'
-import GradientImgHalf from '../../../public/backgrounds/gradient-cut.png'
+import GradientImgHalf from '../../../public/backgrounds/gradient-cut.webp'
 import useStore from '../../../store/store'
 
 function Gradient({style, isHalf}) {
