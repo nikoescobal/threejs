@@ -11,7 +11,6 @@ import { useSwipeable } from 'react-swipeable';
 
 function DiagonalSlider({ showBenefits }) {
   const { height, width } = useScrollbarSize();
-  
 
   const roadmapItems = [
     {
@@ -68,7 +67,7 @@ function DiagonalSlider({ showBenefits }) {
         },
         {
           content: 'Launch of our blog / documentation page',
-          isChecked: false,
+          isChecked: true,
         },
         {
           content: 'Start of the first social-media campaign',
@@ -256,8 +255,8 @@ function DiagonalSlider({ showBenefits }) {
 
   return (
     <div
-        {...handlers}
-        className={`${styles['slider']} ${!isDarkMode ? `${styles.light}` : ''}` }
+      {...handlers}
+      className={`${styles['slider']} ${!isDarkMode ? `${styles.light}` : ''}`}
     >
       <div
         className={`${styles['slide-main']}`}
