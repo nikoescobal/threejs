@@ -15,7 +15,7 @@ import Map from '../components/Home/Map/Map';
 import FollowUs from '../components/Generic/FollowUs/FollowUs';
 import CardSection from '../components/Home/CardSection/CardSection';
 import { Parallax } from 'react-scroll-parallax';
-import Hammer from '../public/backgrounds/hammer.png';
+import Hammer from '../public/backgrounds/hammer.webp';
 import Gradient from '../public/backgrounds/gradient.png';
 import useStore from '../store/store';
 import { useMediaQuery } from '@mui/material';
