@@ -1,6 +1,10 @@
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
+
 .wrapper {
   position: absolute;
   opacity: 0.2;
+  width: 100%;
   user-drag: none;
   -webkit-user-drag: none;
   user-select: none;
