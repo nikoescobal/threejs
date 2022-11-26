@@ -38,15 +38,27 @@
 }
 
 .logos-wrapper div {
-  max-width: clamp(4rem, 10vw + 1rem, 10rem);
+  max-width: clamp(7rem, 10vw + 1rem, 10rem);
+  width: 100%;
 }
 
-.logos-wrapper img {
+.logos-wrapper div a > span {
+
+  max-height: 5rem !important;
+  @include md {
+
+  }
+}
+
+.img-wrapper {
+  display: block;
 }
 
 .sercor,
 .vechain {
-  max-width: 4rem;
+  max-width: 4rem !important;
+  width: 100% !important;
+  // max-height: 3rem;
 }
 
 .maerki,
