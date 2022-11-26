@@ -9,7 +9,7 @@ import RedditIcon from '@mui/icons-material/Reddit';
 import useStore from '../../store/store';
 import Link from 'next/link';
 import styles from './footer.module.scss';
-import Logo from '../../public/logo-cropped.png';
+import Logo from '../../public/logo-cropped.webp';
 import LogoContainer from '../../public/footer/logo-container.svg';
 import RightContainer from '../../public/footer/rights-container.svg';
 import Image from 'next/image';
@@ -148,7 +148,7 @@ function Footer() {
         </div>
         <div className={`${styles.footer__column}`}>
           <img
-            src="logo-2.png"
+            src="logo-2.webp"
             className={`${styles.footer__column__logo}`}
             alt="footer logo 2"
           />

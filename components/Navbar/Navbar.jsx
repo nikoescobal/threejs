@@ -64,7 +64,7 @@ function Navbar() {
         <div className={styles.navbar__logo__wrapper}>
           <Link href="/">
             <img
-              src="/logo-cropped.png"
+              src="/logo-cropped.webp"
               alt="logo"
               onClick={() => setIsOpen(false)}
             />
