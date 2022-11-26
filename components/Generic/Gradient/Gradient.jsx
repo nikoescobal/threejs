@@ -15,7 +15,7 @@ function Gradient({style, isHalf}) {
       <Image 
         // loader={imageKitLoader}
         // src={isHalf ? 'gradient-cut.webp' : 'gradient.webp'}
-        src={isHalf ? '/backgrounds/gradient-cut.webp' : '/backgrounds/gradient-2.webp'}
+        src={isHalf ? '/backgrounds/gradient-cut-2.webp' : '/backgrounds/gradient-2.webp'}
         alt="blue background gradient"
         width={2374}
         height={2374}
@@ -23,6 +23,7 @@ function Gradient({style, isHalf}) {
         // layout='fill'
         loading='eager'
         objectFit='cover'
+        priority
       />
     </div>
   )
