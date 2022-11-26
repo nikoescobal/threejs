@@ -22,13 +22,18 @@
   padding: 0 1rem;
 }
 
-.map img{
-  position: absolute;
+.map > span{
+  position: absolute !important;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  object-fit: contain;
   width: 80%;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.map img {
+
 }
 
 .map.light img {

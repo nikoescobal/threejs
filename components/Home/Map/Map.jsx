@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import useStore from '../../../store/store';
 import styles from './map.module.scss';
 // import MapParticles from './MapParticles';
@@ -12,10 +13,14 @@ function Map() {
   return (
     <section className={styles.wrapper}>
       <div className={`${styles.map} ${!isDarkMode ? `${styles.light}` : ''} max-1920`}>
-        <div>
-        <img src="/backgrounds/mapbase.png" alt="world map" />
-
-        </div>
+        <Image
+          src="/backgrounds/mapbase.webp"
+          width={1566}
+          height={509}
+          layout='responsive'
+          objectFit='contain'
+          alt="world map"
+        />
         <h4>Join Us To Make The world A Better Place</h4>
       </div>
       {/* <MapParticles className={styles.particles} /> */}
