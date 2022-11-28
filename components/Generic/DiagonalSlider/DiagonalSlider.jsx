@@ -15,7 +15,7 @@ function DiagonalSlider({ showBenefits }) {
   const roadmapItems = [
     {
       phase: 'Phase 1',
-      date: 'July - August',
+      date: 'August',
       content: [
         {
           content: 'Token smart contract development for all 4 blockchains',
@@ -37,7 +37,7 @@ function DiagonalSlider({ showBenefits }) {
     },
     {
       phase: 'Phase 2',
-      date: 'August - September',
+      date: 'September',
       content: [
         {
           content: 'Launch of our new website',
@@ -59,12 +59,8 @@ function DiagonalSlider({ showBenefits }) {
     },
     {
       phase: 'Phase 3',
-      date: 'September - October',
+      date: 'October',
       content: [
-        {
-          content: 'Step by step opening of our community channels',
-          isChecked: false,
-        },
         {
           content: 'Launch of our blog / documentation page',
           isChecked: true,
@@ -93,8 +89,12 @@ function DiagonalSlider({ showBenefits }) {
     },
     {
       phase: 'Phase 4',
-      date: 'October - November',
+      date: 'November',
       content: [
+        {
+          content: 'Step by step opening of our community channels',
+          isChecked: false,
+        },
         {
           content: 'Start of intensive community building along with events',
           isChecked: false,
@@ -115,16 +115,16 @@ function DiagonalSlider({ showBenefits }) {
           content: 'Beta testing of the Legacy Wallet',
           isChecked: false,
         },
-        {
-          content: 'Start of our YouTube channel',
-          isChecked: false,
-        },
       ],
     },
     {
       phase: 'Phase 5',
-      date: 'November - December',
+      date: 'December',
       content: [
+        {
+          content: 'Start of our YouTube channel',
+          isChecked: false,
+        },
         {
           content: 'Security audits of all smart-contracts',
           isChecked: false,
@@ -146,7 +146,7 @@ function DiagonalSlider({ showBenefits }) {
     },
     {
       phase: 'Phase 6',
-      date: 'December - January',
+      date: 'January',
       content: [
         {
           content: 'Public sale start (depending on the markets)',

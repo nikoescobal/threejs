@@ -179,7 +179,7 @@ function About() {
                 success in all life areas, as well as the solution for many
                 global problems. For this reason, we committed ourselves to find
                 new ways in order to provide something of true value to the
-                world.Our central product is a gamified education app, which
+                world. Our central product is a gamified education app, which
                 uses a play-to-earn system to reward its users with crypto. The
                 app is powered by the first ever artificial intelligence, which
                 analyses several aspects of a user&apos;s personality and
