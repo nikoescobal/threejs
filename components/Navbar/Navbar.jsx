@@ -64,7 +64,7 @@ function Navbar() {
         <div className={styles.navbar__logo__wrapper}>
           <Link href="/">
             <img
-              src="/logo-cropped.png"
+              src="/logo-cropped.webp"
               alt="logo"
               onClick={() => setIsOpen(false)}
             />
@@ -137,7 +137,20 @@ function Navbar() {
           <span
             className={router.asPath === '/blogs' ? `${styles.active}` : ''}
           >
-            <LinkHover hoverText={'Coming Soon'}>Blog</LinkHover>
+            {/* <LinkHover hoverText={'Coming Soon'}>Blog</LinkHover> */}
+
+            <a
+              href="https://blog.legacynetwork.io/"
+              className={
+                router.pathname === 'https://blog.legacynetwork.io/'
+                  ? `${styles.active}`
+                  : ''
+              }
+              target="_blank"
+              rel="noreferrer"
+            >
+              Blog
+            </a>
             {/* <Link href="/" className={router.pathname === "/" ? `${styles.active}` : ""}>Blog</Link> */}
           </span>
           <div className={styles['boards-wrapper']}>

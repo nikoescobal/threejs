@@ -3,7 +3,7 @@ import useStore from '../../../store/store';
 import styles from './questions.module.scss';
 import { questions } from './content';
 import Image from 'next/image';
-import Staff from '../../../public/backgrounds/staff.png';
+import Staff from '../../../public/backgrounds/staff.webp';
 import { Parallax } from 'react-scroll-parallax';
 import ComingSoon from '../../Generic/ComingSoon/ComingSoon';
 import { useMediaQuery } from '@mui/material';
@@ -16,9 +16,9 @@ function Questions() {
     <section
       className={`${styles.section} ${!isDarkMode ? `${styles.light}` : ''}`}
     >
-      <div className="max-1920">
-        {isTablet ? (
-          <Parallax speed={30} className={`${styles.staff} max-1920`}>
+      <div className={`${styles['spacing-y']} spacing-x max-1920`}>
+      {isTablet ? (
+          <Parallax speed={90} className={`${styles.staff}`}>
             <div>
               <Image src={Staff} alt="staff" draggable="false" />
             </div>
@@ -28,9 +28,6 @@ function Questions() {
             <Image className="" src={Staff} alt="staff" draggable="false" />
           </div>
         )}
-      </div>
-
-      <div className={`${styles['spacing-y']} spacing-x max-1920`}>
         <div className={styles.wrapper}>
           <h3>
             The Legacy Network app answers three essential questions for the

@@ -1,6 +1,6 @@
 import styles from './header.module.scss';
 import generics from '../../styles/generics.module.scss';
-import Logo from '../../public/logo-cropped.png';
+import Logo from '../../public/logo-cropped.webp';
 import Image from 'next/image';
 import PageSlider from './PageSlider/PageSlider';
 import useStore from '../../store/store';

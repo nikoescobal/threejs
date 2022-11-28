@@ -1,6 +1,6 @@
 import styles from './blockchainbanner.module.scss';
 import ClearContainer from '../../Generic/ClearContainer/ClearContainer';
-import BlockChainImg from '../../../public/Blockchainv1.png';
+import BlockChainImg from '../../../public/Blockchainv1.webp';
 import Image from 'next/image';
 import Circles from '../../Generic/Circles/Circles';
 import useStore from '../../../store/store';

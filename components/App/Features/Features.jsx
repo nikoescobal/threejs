@@ -153,7 +153,7 @@ function Features() {
         <div className={`${styles.content}`}>
           <div className={`${styles.imgwrapper}`} style={{ padding: '2rem 0' }}>
             <img
-              src="/illustrations/ai.png"
+              src="/illustrations/ai.webp"
               alt="key feature 3"
               style={{
                 transform: 'scale(1.5) translate(0%, 5%)',

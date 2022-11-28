@@ -5,7 +5,7 @@ import Character1 from '../../../public/nft/character1.png';
 import Image from 'next/image';
 import CharacterCard from '../CharacterCard/CharacterCard';
 import WaveLines from '../../Generic/WaveLines/WaveLines';
-import VikingOne from '../../../public/nft/viking-big.png';
+import VikingOne from '../../../public/nft/viking-big.webp';
 
 function NFTSection() {
   const { isDarkMode } = useStore((state) => state);

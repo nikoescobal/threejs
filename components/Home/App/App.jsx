@@ -48,7 +48,7 @@ function App() {
         className={`${styles['alternating-rows']} ${generics['alternating-rows']} max-1920`}
       >
         <div>
-          <img src="/illustrations/ai.png" alt="ai illustration" />
+          <img src="/illustrations/ai.webp" alt="ai illustration" />
         </div>
         <ClearContainer
           title="The first artificial intelligence which analyzes your behavior and reflects the collected information back to you "
