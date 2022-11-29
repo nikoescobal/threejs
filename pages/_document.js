@@ -1,9 +1,14 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
 class MyDocument extends Document {
+  static async getInitialProps(context) {
+    const initialProps = await Document.getInitialProps(context);
+    return { ...initialProps };
+  }
+  
   render() {
     return (
-      <Html>
+      <Html lang={this.props.locale}>
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
