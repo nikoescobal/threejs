@@ -55,7 +55,7 @@
   src: local('Oswald'), url(/fonts/oswald/Oswald-Regular.ttf);
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Din';
   src: local('Din'), url(/fonts/din/DIN-Regular.ttf);
 }
@@ -93,4 +93,4 @@
   font-family: 'Din';
   font-weight: 800;
   src: local('Din'), url(/fonts/din/DIN-Bold.ttf);
-}
+} */

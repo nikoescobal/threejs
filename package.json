@@ -6,13 +6,25 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "unused": "next-unused",
+    "analyze": "ANALYZE=true next build",
     "lint": "next lint"
+  },
+  "next-unused": {
+    "alias": {},
+    "include": [
+      "components",
+      "public"
+    ],
+    "exclude": [],
+    "entrypoints": []
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@mui/icons-material": "^5.10.3",
     "@mui/material": "^5.10.3",
+    "@next/bundle-analyzer": "^13.0.5",
     "@react-three/drei": "^9.17.3",
     "@react-three/fiber": "^8.2.2",
     "@thirdweb-dev/react": "^3.5.2",
@@ -27,6 +39,7 @@
     "framer-motion": "^7.5.2",
     "html-entities": "^2.3.3",
     "next": "12.2.5",
+    "next-unused": "^0.0.6",
     "react": "18.2.0",
     "react-animated-text-content": "^1.0.1",
     "react-apexcharts": "^1.4.0",
