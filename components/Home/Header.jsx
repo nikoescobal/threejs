@@ -52,10 +52,10 @@ function Header() {
               <br />
               NETWORK
             </h1>
-            <h4 className={styles.subtitle}>
-              Gamified personal development through AI and blockchain technology
-            </h4>
           </div>
+          <h4 className={styles.subtitle}>
+            Gamified personal development through AI and blockchain technology
+          </h4>
         </div>
       </section>
       <PageSlider />
