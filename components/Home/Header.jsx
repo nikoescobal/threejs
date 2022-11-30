@@ -47,7 +47,7 @@ function Header() {
         </div>
         <div className="text">
           <div className={styles['title-wrapper']}>
-            <h1 className={styles.title}>
+            <h1 className={generics.title}>
               LEGACY
               <br />
               NETWORK
