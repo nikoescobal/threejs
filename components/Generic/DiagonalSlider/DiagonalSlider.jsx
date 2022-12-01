@@ -157,18 +157,6 @@ function DiagonalSlider({ showBenefits }) {
           isChecked: false,
         },
         {
-          content: 'Start of NFT marketing and whitelisting',
-          isChecked: false,
-        },
-        {
-          content: 'Start of our surprise marketing campaign',
-          isChecked: false,
-        },
-        {
-          content: 'Free NFT mint for whitelisted participants',
-          isChecked: false,
-        },
-        {
           content: 'Beta testing of the main app',
           isChecked: false,
         },
