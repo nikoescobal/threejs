@@ -104,14 +104,6 @@ function DiagonalSlider({ showBenefits }) {
           isChecked: false,
         },
         {
-          content: 'Launch of the community web-board (basic functions)',
-          isChecked: false,
-        },
-        {
-          content: 'Launch of the partners web-board (basic functions)',
-          isChecked: false,
-        },
-        {
           content: 'Beta testing of the Legacy Wallet',
           isChecked: false,
         },
@@ -146,32 +138,22 @@ function DiagonalSlider({ showBenefits }) {
     },
     {
       phase: 'Phase 6',
-      date: 'January',
+      date: 'Q1 2023',
       content: [
+        {
+          content: 'Launch of the community web-board (basic functions)',
+          isChecked: false,
+        },
+        {
+          content: 'Launch of the partners web-board (basic functions)',
+          isChecked: false,
+        },
         {
           content: 'Public sale start (depending on the markets)',
           isChecked: false,
         },
         {
           content: 'Alpha testing of our main app',
-          isChecked: false,
-        },
-        {
-          content: 'Start of NFT marketing and whitelisting',
-          isChecked: false,
-        },
-        {
-          content: 'Start of our surprise marketing campaign',
-          isChecked: false,
-        },
-      ],
-    },
-    {
-      phase: 'Phase 7',
-      date: 'Q1 2023',
-      content: [
-        {
-          content: 'Free NFT mint for whitelisted participants',
           isChecked: false,
         },
         {
@@ -197,7 +179,7 @@ function DiagonalSlider({ showBenefits }) {
       ],
     },
     {
-      phase: 'Phase 8',
+      phase: 'Phase 7',
       date: 'Q2 2023',
       content: [
         {

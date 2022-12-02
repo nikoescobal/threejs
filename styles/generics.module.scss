@@ -20,10 +20,28 @@
 }
 
 .title {
+  color: white;
   text-transform: uppercase;
   line-height: 2ch;
   font-weight: 400;
   font-size: clamp(3.2rem, 10vw, 6rem);
+}
+
+.title-wrapper {
+  color: white;
+  background: 50% 100% / 50% 50% no-repeat
+    radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: 'Fjalla One', sans-serif;
+  animation: glow 2600ms linear infinite 2000ms;
+
+  @keyframes glow {
+    40% {
+      text-shadow: 0 0 10px #fff;
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -51,7 +69,7 @@
   position: relative;
 }
 
-.alternating-rows img{
+.alternating-rows img {
   max-width: 20rem;
 }
 
@@ -74,12 +92,12 @@
     transform: translateX(-20%);
     scale: 1.2;
   }
-  
+
   .alternating-rows:nth-of-type(2n) {
     flex-direction: row-reverse;
   }
-  
-  .alternating-rows:nth-of-type(2n) img{
+
+  .alternating-rows:nth-of-type(2n) img {
     transform: translateX(20%);
   }
 }

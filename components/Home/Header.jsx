@@ -46,16 +46,16 @@ function Header() {
           )}
         </div>
         <div className="text">
-          <div>
+          <div className={styles['title-wrapper']}>
             <h1 className={generics.title}>
-              Legacy
+              LEGACY
               <br />
-              Network
+              NETWORK
             </h1>
-            <h4 className={styles.subtitle}>
-              Gamified personal development through AI and blockchain technology
-            </h4>
           </div>
+          <h4 className={styles.subtitle}>
+            Gamified personal development through AI and blockchain technology
+          </h4>
         </div>
       </section>
       <PageSlider />
