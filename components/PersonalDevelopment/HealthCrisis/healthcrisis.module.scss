@@ -5,29 +5,25 @@
   position: relative;
 }
 
-.wrapper > div:first-of-type {
+.wrapper>div:first-of-type {
   text-align: center;
   max-width: 75ch;
   margin: 0 auto;
 }
 
-.wrapper > div:first-of-type h3 {
-  font-family: 'din condensed', serif !important;
+.wrapper>div:first-of-type h3 {
   font-size: clamp(2rem, 10vw, 3rem);
 }
 
 .donut-wrapper {
-  // display: flex;
-  // gap: 2rem;
-  // justify-content: space-between;
   margin-top: 4rem;
   display: grid;
   gap: 4rem;
-  
-  // transform: translateX(-1rem);
+
   @media (min-width: 578px) {
     transform: translateX(-0%);
   }
+
   @include md {
     grid-template-columns: 0.96fr 1fr;
   }
@@ -41,14 +37,14 @@
   }
 }
 
-.donut-wrapper > div:first-of-type canvas {
-  
+.donut-wrapper>div:first-of-type canvas {
+
   @include md {
     transform: translateX(-18%);
   }
 }
 
-.donut-wrapper > div:last-of-type canvas {
+.donut-wrapper>div:last-of-type canvas {
   @include md {
     transform: translate(22%, -2%);
     scale: 1;

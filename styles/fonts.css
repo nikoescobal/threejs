@@ -1,53 +1,62 @@
 @font-face {
   font-family: 'Fjalla';
   src: local('Fjalla'), url(/fonts/FjallaOne/FjallaOne-Regular.ttf);
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Montserrat';
   src: local('Montserrat'), url(/fonts/montserrat/Montserrat-Regular.otf) format('opentype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Montserrat';
   font-weight: 100;
   src: local('Montserrat'), url(/fonts/montserrat/Montserrat-Thin.otf) format('opentype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Montserrat';
   font-weight: 200;
   src: local('Montserrat'), url(/fonts/montserrat/Montserrat-ExtraLight.otf) format('opentype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Montserrat';
   font-weight: 300;
   src: local('Montserrat'), url(/fonts/montserrat/Montserrat-Light.otf) format('opentype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Montserrat';
   font-weight: 500;
   src: local('Montserrat'), url(/fonts/montserrat/Montserrat-Medium.otf) format('opentype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Montserrat';
   font-weight: 600;
   src: local('Montserrat'), url(/fonts/montserrat/Montserrat-SemiBold.otf) format('opentype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Montserrat';
   font-weight: 700;
   src: local('Montserrat'), url(/fonts/montserrat/Montserrat-Bold.otf) format('opentype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Montserrat';
   font-weight: 800;
   src: local('Montserrat'), url(/fonts/montserrat/Montserrat-ExtraBold.otf) format('opentype');
+  font-display: swap;
 }
 
 @font-face {

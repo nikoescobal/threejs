@@ -4,11 +4,9 @@
 @import '../../../styles/variables';
 
 .wrapper {
-  background-image: radial-gradient(
-    circle farthest-side at 50% 50%,
-    rgba($ln-blue, 0.2),
-    transparent
-  );
+  background-image: radial-gradient(circle farthest-side at 50% 50%,
+      rgba($ln-blue, 0.2),
+      transparent);
   position: relative;
 
   h3 {
@@ -27,7 +25,7 @@
   padding: calc(3rem + 10vw) 0;
 }
 
-.first-card-section > div {
+.first-card-section>div {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -36,7 +34,7 @@
   overflow: visible;
 }
 
-.first-card-section > div:nth-of-type(2) {
+.first-card-section>div:nth-of-type(2) {
   align-items: center;
 }
 
@@ -56,7 +54,7 @@
   color: #62688f !important;
 }
 
-.first-card-section > div:not(div:nth-of-type(2))::before {
+.first-card-section>div:not(div:nth-of-type(2))::before {
   // content: '';
   position: absolute;
   top: -50%;
@@ -83,34 +81,27 @@
 }
 
 .first-card-section h3 {
-  font-family: 'din condensed', serif !important;
   font-size: clamp(2rem, 10vw, 4rem);
 }
 
 .first-card-section h4 {
-  font-family: 'din condensed', serif !important;
   font-size: clamp(1.75rem, 5vw + 1rem, 2.25rem);
   font-weight: 400;
 }
 
-.first-card-section > span {
+.first-card-section>span {
   position: absolute;
   top: 50%;
   left: 50%;
-  // width: 100%;
   width: 10rem !important;
   height: 10rem !important;
-  // transform: translateX(-50%);
 }
 
 .nft-card-section {
   padding-bottom: 8rem;
 }
 
-.nft-card-section > div {
-  // display: grid;
-  // grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  // grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+.nft-card-section>div {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -118,10 +109,9 @@
   padding: 0 4rem;
 }
 
-.nft-card-section > div > div {
+.nft-card-section>div>div {
   flex-basis: 30%;
   min-width: 13rem;
-  // margin: 0 auto;
 }
 
 .nft-card-section p {
@@ -136,11 +126,11 @@
     flex-direction: row;
   }
 
-  .first-card-section > .text-section:last-of-type {
+  .first-card-section>.text-section:last-of-type {
     align-items: flex-end;
   }
 
-  .first-card-section > .text-section {
+  .first-card-section>.text-section {
     background: none;
     padding: 0 2rem;
     position: relative;
@@ -148,7 +138,7 @@
     flex-direction: column;
   }
 
-  .first-card-section > div:not(div:nth-of-type(2))::before {
+  .first-card-section>div:not(div:nth-of-type(2))::before {
     content: '';
     top: 50%;
     transform: translateY(-50%);
@@ -156,15 +146,9 @@
     height: 200%;
   }
 
-  .first-card-section div > span {
+  .first-card-section div>span {
     position: absolute;
-    // top: -10%;
     transform: scale(1.25);
-    // left: 50%;
-    // width: 100%;
-    // width: 10rem !important;
-    // height: 10rem !important;
-    // transform: translateX(-50%);
   }
 }
 
@@ -276,15 +260,20 @@
 }
 
 .waves {
-  object-fit: cover;
-  left: 0;
-  scale: 1.9;
-  top: 22%;
+  position: absolute;
+  scale: 2;
+  top: 15%;
+  left: 1rem;
 
   @include md {
-    top: 22%;
-    scale: 1.4;
-    left: 90px;
-    object-fit: cover;
+    top: 5%;
+    left: -24rem;
+    scale: 1.15;
+  }
+
+  @include lg {
+    top: 12.0%;
+    transform: scaleX(1);
+    left: -0rem;
   }
 }
