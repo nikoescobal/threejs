@@ -2,13 +2,8 @@
 @import '../../styles/variables';
 
 .container {
-  // background-image: radial-gradient(circle farthest-side at 50% 40%, rgba($ln-blue, 0.5), transparent);
   position: relative;
   z-index: 1;
-}
-
-.container.light {
-  // background-image: radial-gradient(circle farthest-side at 50% 40%, rgba(white, 0.5), transparent);
 }
 
 .header {
@@ -18,14 +13,11 @@
 .legacy {
   font-size: 5.2rem;
   line-height: 5.1rem;
-  // padding: 0 0 1rem;
-  // width: 8rem;
 }
 
 .subtitle {
   font-size: 1.5rem;
   color: $light-mode-secondary;
-  // padding: 0.6rem 0 0;
 }
 
 .header h4 {
@@ -38,52 +30,14 @@
 .light h4 {
   color: $light-mode-secondary;
 }
+
 .header span {
-  // color: $ln-blue;
-  // font-weight: bold;
   font-family: 'fjalla', serif;
 }
 
-.waves-wrapper {
-  position: absolute;
-  top: 10%;
-  scale: 4;
-  object-fit: cover;
-
-  @include md {
-    scale: 2;
-    transform: translateX(-9rem);
-    transform: translateY(2rem);
-  }
-
-  @include lg {
-    transform: translateX(3rem);
-    transform: translateY(1rem);
-    transform: scaleX(-1);
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    // background-image: radial-gradient(circle farthest-side at 67% 30%, rgba($ln-blue, 0.75), transparent 60%);
-  }
-
-  .container.light {
-    // background-image: radial-gradient(circle farthest-side at 67% 30%, rgba(black, 0.2), transparent 60%);
-  }
-}
-
-// .title {
-//   color: white;
-//   text-transform: uppercase;
-//   line-height: 2ch;
-//   font-size: clamp(3.2rem, 10vw, 6rem);
-// }
-
 .title-wrapper {
   color: white;
-  background: 50% 100% / 50% 50% no-repeat
-    radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+  background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

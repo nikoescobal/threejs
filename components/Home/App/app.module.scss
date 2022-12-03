@@ -28,13 +28,13 @@
   }
 }
 
-.app-wrapper > h4 {
+.app-wrapper>h4 {
   max-width: 60ch;
   margin: 0 auto;
+  position: relative;
 }
 
 .app-wrapper.light {
-  // background-image: linear-gradient(rgba($color: black, $alpha: 0.2), transparent 30%);
   background: $light-mode-primary;
 }
 
@@ -44,20 +44,17 @@
 }
 
 .waves-wrapper {
-  position: absolute;
-  top: 15.4%;
-  scale: 4;
-  object-fit: cover;
+  top: -8%;
+  left: -20%;
 
   @include md {
-    scale: 2;
-    transform: translateX(-9rem);
-    transform: translateY(2rem);
+    top: 5%;
+    left: -24rem;
   }
 
   @include lg {
-    transform: translateX(3rem);
-    transform: translateY(1rem);
+    top: 11.0%;
+    left: -0rem;
     transform: scaleX(-1);
   }
 }

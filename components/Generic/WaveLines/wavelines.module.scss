@@ -1,5 +1,30 @@
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
+@use '../../../styles/variables' as *;
+
 .wrapper {
   position: absolute;
+  // top: 10%;
+  top: -8%;
+  left: -20%;
+  scale: 4;
+
+  @include md {
+    top: 5%;
+    left: -24rem;
+    scale: 1.15;
+  }
+
+  @include lg {
+    top: 4.0%;
+    scale: 2;
+    left: -0rem;
+    transform: scaleX(-1);
+  }
+}
+
+.wrapper svg {
+  width: 100%;
 }
 
 .wrapper.light {

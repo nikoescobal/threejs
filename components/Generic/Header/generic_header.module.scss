@@ -5,13 +5,14 @@
   // background-image: radial-gradient(circle farthest-side at 50% 40%, rgba($ln-blue, 0.5), transparent);
 }
 
-.container > div {
+.container>div {
   // position: relative;
 }
 
 .container.light {
   // background-image: radial-gradient(circle farthest-side at 50% 40%, rgba(white, 0.5), transparent);
 }
+
 .header {
   position: relative;
   gap: 3rem;
@@ -31,7 +32,7 @@
 }
 
 .waves-wrapper {
-  position: absolute;
+  // position: absolute;
   // top: -20%;
   // left: -300px;
   // rotate: -90deg;
