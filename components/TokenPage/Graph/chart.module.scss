@@ -89,18 +89,7 @@
 }
 
 .chart-content h4 {
-  font-family: 'din condensed', serif !important;
   font-size: clamp(2.25rem, 10vw + 1rem, 2.5rem);
-}
-
-.chart-content a {
-  // display: inline-block;
-  // background: $ln-blue;
-  // font-size: 0.75rem;
-  // padding: 0.75rem 1.25rem;
-  // margin-top: 2rem;
-  // border-radius: 6px;
-  // color: white;
 }
 
 .arrows-wrapper {
@@ -111,8 +100,7 @@
 }
 
 .light .arrows-wrapper {
-  filter: invert(48%) sepia(80%) saturate(3488%) hue-rotate(208deg)
-    brightness(101%) contrast(83%);
+  filter: invert(48%) sepia(80%) saturate(3488%) hue-rotate(208deg) brightness(101%) contrast(83%);
 }
 
 .arrows-wrapper img {
@@ -144,21 +132,11 @@
   transform: translate(-50%, -50%);
 }
 
-.donut-segment {
-  // color: gray;
-  // stroke: gray;
-}
-
-.light .donut-segment {
-  // stroke: rgba($color: #000000, $alpha: 0.1)
-}
-
 .donut-segment text {
   font-size: 0.1rem;
 }
 
 .active {
-  // fill: red !important;
   stroke-width: 12;
 }
 
@@ -333,9 +311,3 @@ svg.arrow {
   display: inline-block;
   color: $blue;
 }
-
-// .coming::after {
-//   content: '&#8594;';
-//   font-size: 40px;
-//   color: #fff;
-// }

@@ -5,10 +5,8 @@
 }
 
 .section.light {
-  background: linear-gradient(
-    rgba($color: $light-background, $alpha: 0.2) 10%,
-    transparent
-  );
+  background: linear-gradient(rgba($color: $light-background, $alpha: 0.2) 10%,
+      transparent);
 }
 
 .section p {
@@ -85,7 +83,7 @@
 
 .card h4 {
   font-size: clamp(1.5rem, 5vw + 1rem, 2.25rem);
-  font-family: 'din condensed', serif !important;
+  // font-family: 'din condensed', serif !important;
   font-weight: 500;
   padding: 1rem 0 0.1rem;
 }

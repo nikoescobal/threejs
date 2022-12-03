@@ -4,29 +4,25 @@
 .wrapper {
   position: relative;
   margin-top: 8rem;
-  background: linear-gradient(
-    transparent 50%,
-    rgba($color: $ln-blue, $alpha: 0.2)
-  );
+  background: linear-gradient(transparent 50%,
+      rgba($color: $ln-blue, $alpha: 0.2));
   // margin-bottom: -4rem;
 }
 
 .wrapper.light {
-  background: linear-gradient(
-    transparent 50%,
-    rgba($color: $light-mode-primary, $alpha: 0)
-  );
+  background: linear-gradient(transparent 50%,
+      rgba($color: $light-mode-primary, $alpha: 0));
 }
 
-.wrapper > div:not(div:first-of-type) {
+.wrapper>div:not(div:first-of-type) {
   position: relative;
 }
-.wrapper > div:nth-of-type(2) {
+
+.wrapper>div:nth-of-type(2) {
   margin-bottom: 2rem;
 }
 
 .wrapper h3 {
-  font-family: 'din condensed', 'serif' !important;
   font-size: clamp(2rem, 5vw, 2.8rem);
   margin-bottom: 1rem;
 }
