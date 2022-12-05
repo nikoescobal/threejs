@@ -1,3 +1,4 @@
+@import '../../../styles/breakpoints';
 @import '../../../styles/variables';
 
 .meet-team {
@@ -64,6 +65,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  @include md {
+    display: none;
+  }
 }
 
 .tablet-cards-wrapper .card-item {
