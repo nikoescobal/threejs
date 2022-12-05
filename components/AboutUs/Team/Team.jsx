@@ -60,15 +60,11 @@ function Team() {
       {
         !isTablet && (
           <div className={styles['tablet-cards-wrapper']}>
-            <div className={styles['card-item']}>Name</div>
-            <div className={styles['card-item']}>Name</div>
-            <div className={styles['card-item']}>Name</div>
-            <div className={styles['card-item']}>Name</div>
-            <div className={styles['card-item']}>Name</div>
-            <div className={styles['card-item']}>Name</div>
-            <div className={styles['card-item']}>Name</div>
-            <div className={styles['card-item']}>Name</div>
-            <div className={styles['card-item']}>Name</div>
+            <div className={styles['card-item']}>Fabio Martinetti</div>
+            <div className={styles['card-item']}>Dominic Haas</div>
+            <div className={styles['card-item']}>Sasa Markovic</div>
+            <div className={styles['card-item']}>Eleftherios Romanopoulos</div>
+            <div className={styles['card-item']}>Luka Petrovic</div>
           </div>
         )
       }
