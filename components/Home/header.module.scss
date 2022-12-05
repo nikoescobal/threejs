@@ -35,18 +35,34 @@
   font-family: 'fjalla', serif;
 }
 
-.title-wrapper {
-  color: white;
+.title-wrapper h1 {
+  color: white !important;
   background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  font-family: 'Fjalla One', sans-serif;
-  animation: glow 2600ms linear infinite 2000ms;
+  animation: glowdark 2600ms linear infinite 2000ms;
 
-  @keyframes glow {
+  @keyframes glowdark {
     40% {
-      text-shadow: 0 0 10px #fff;
+      text-shadow: 0 0 10px white;
+    }
+  }
+
+}
+
+
+.light .title-wrapper h1 {
+  color: $light-mode-secondary !important;
+  background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: glowlight 2600ms linear infinite 2000ms;
+
+  @keyframes glowlight {
+    40% {
+      text-shadow: 0 0 10px $light-mode-secondary;
     }
   }
 }
