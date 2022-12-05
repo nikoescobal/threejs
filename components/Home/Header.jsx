@@ -35,15 +35,14 @@ function Header() {
           className={`${generics['img-wrapper']}`}
           style={{ display: 'flex', justifyContent: 'center' }}
         >
-          {isDesktop ? (
+          {isDesktop && (
             <div style={{ scale: '1.5' }}>
               <LogoParticles />
             </div>
-          ) : (
-            <div>
-              <Image src={Logo} alt="logo" />
-            </div>
-          )}
+          ) }
+        <div className={styles['logo-img']}>
+          <Image src={Logo} alt="logo" />
+        </div>
         </div>
         <div className="text">
           <div className={styles['title-wrapper']}>
