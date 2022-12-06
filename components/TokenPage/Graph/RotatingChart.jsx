@@ -256,7 +256,7 @@ function RotatingChart() {
                 <li key={desc}>{desc}</li>
               ))}
             </ul>
-            <a href="https://blogs.legacynetwork.io" className={`${styles['read-more']} read-more`}>
+            <a href="https://blog.legacynetwork.io/blogs/yd5uix1WXkySTNAmiIUM" className={`${styles['read-more']} read-more`}>
               Read More
               <ArrowRightAltIcon />
             </a>

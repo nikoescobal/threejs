@@ -38,6 +38,35 @@
   // rotate: -90deg;
 }
 
+.title-wrapper h1 {
+  color: white !important;
+  background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: glowdark 2600ms linear infinite 2000ms;
+
+  @keyframes glowdark {
+    40% {
+      text-shadow: 0 0 10px white;
+    }
+  }
+
+}
+
+.light .title-wrapper h1 {
+  color: $light-mode-secondary !important;
+  background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: glowlight 2600ms linear infinite 2000ms;
+
+  @keyframes glowlight {
+    40% {
+      text-shadow: 0 0 10px $light-mode-secondary;
+    }
+  }
+}
+
 @media (min-width: 768px) {
   .container {
     // background-image: radial-gradient(circle farthest-side at 67% 30%, rgba($ln-blue, 0.75), transparent 50%);

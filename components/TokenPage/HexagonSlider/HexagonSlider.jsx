@@ -101,7 +101,7 @@ function HexagonSlider() {
               <h3>{item.title}</h3>
               <p>{item.body}</p>
               <a
-                href="http://blog.legacynetwork.io"
+                href="https://blog.legacynetwork.io/blogs/BMqUYdmjhe8AVi6by0EG"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`read-more`}
@@ -110,31 +110,14 @@ function HexagonSlider() {
               </a>
             </div>
           ))}
-
-          {/* <div className={`${styles['side']}`}>
-            side 1
-          </div>
-          <div className={`${styles['side']}`}>side 2</div>
-          <div className={`${styles['side']}`}>side 3</div>
-          <div className={`${styles['side']}`}>side 4</div>
-          <div className={`${styles['side']}`}>side 5</div>
-          <div className={`${styles['side']}`}>side 6</div> */}
         </div>
       </div>
       <div>
         <div className={styles['arrows-wrapper']}>
           <Image src={Arrow} alt="arrow-left" onClick={moveSliderLeft} />
           <Image src={Arrow} alt="arrowight" onClick={moveSliderRight} />
-          {/* <Link href="/">
-            <a className='button-blue'>Read More</a>
-          </Link> */}
         </div>
       </div>
-      {/* <div style={{marginTop: '8rem'}} >
-
-        <button type='button' className={`${styles.arrow} ${styles.left}`} onClick={moveSliderLeft}>Left</button>
-        <button type='button' onClick={moveSliderRight}>Right</button>
-      </div> */}
     </div>
   );
 }

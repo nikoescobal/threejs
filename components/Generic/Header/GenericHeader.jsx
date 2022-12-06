@@ -33,7 +33,7 @@ function GenericHeader({ title, subtitle, rightObj, waves }) {
           {/* <img src={imageUrl} alt={imageAlt} /> */}
         </div>
         <div className="text">
-          <div className={generics['title-wrapper']}>
+          <div className={styles['title-wrapper']}>
             <h1 className={generics.title}>{title}</h1>
           </div>
           <h4>{subtitle}</h4>

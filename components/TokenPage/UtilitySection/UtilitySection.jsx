@@ -50,8 +50,7 @@ function UtilitySection() {
           </div>
         ))}
       </div>
-      {/* <button className="button-blue">Learn more</button> */}
-      <ComingSoon>Learn more</ComingSoon>
+      <a href="https://blog.legacynetwork.io/blogs/Q3dj2EaBUPuizZVFQpye" rel='noreferrer' target="_blank" className='button-blue'>Read more</a>
     </section>
   );
 }

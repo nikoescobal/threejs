@@ -88,7 +88,7 @@ function CardSection() {
         </div>
       </div>
       <div
-        style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}
+        style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem', position: 'relative', zIndex: '1' }}
       >
         {/* <Link href="/">
           <a className='button-blue'>Learn More</a>

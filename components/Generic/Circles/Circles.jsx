@@ -8,7 +8,47 @@ function Circles({className}) {
   
   return (
     <div className={`${className} ${styles.wrapper} ${isDarkMode ? '' : `${styles.light}`}`}>
-      <Image src={CirclesImg} alt="circle" />
+      {/* <Image src={CirclesImg} alt="circle" /> */}
+      <svg width="607" height="590" viewBox="0 0 607 590" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g opacity="0.5">
+          <g opacity="0.89">
+            <path opacity="0.89" d="M303.5 588.854C470.566 588.854 606 457.259 606 294.927C606 132.596 470.566 1 303.5 1C136.434 1 1 132.596 1 294.927C1 457.259 136.434 588.854 303.5 588.854Z" stroke="#D1CDDE" strokeOpacity="0.3" strokeWidth="0.8127" strokeLinecap="round" strokeLinejoin="round"/>
+          </g>
+          <g opacity="0.89">
+            <path opacity="0.89" d="M303.501 567.419C458.383 567.419 583.94 445.42 583.94 294.927C583.94 144.435 458.383 22.4362 303.501 22.4362C148.619 22.4362 23.062 144.435 23.062 294.927C23.062 445.42 148.619 567.419 303.501 567.419Z" stroke="#D1CDDE" strokeOpacity="0.3" strokeWidth="0.9493" strokeLinecap="round" strokeLinejoin="round"/>
+          </g>
+          <g opacity="0.89">
+            <path opacity="0.89" d="M303.5 545.983C446.198 545.983 561.878 433.581 561.878 294.927C561.878 156.273 446.198 43.8721 303.5 43.8721C160.802 43.8721 45.1226 156.273 45.1226 294.927C45.1226 433.581 160.802 545.983 303.5 545.983Z" stroke="#D1CDDE" strokeOpacity="0.3" strokeWidth="1.0859" strokeLinecap="round" strokeLinejoin="round"/>
+          </g>
+          <g opacity="0.89">
+            <path opacity="0.89" d="M303.5 524.546C434.014 524.546 539.816 421.742 539.816 294.927C539.816 168.112 434.014 65.3077 303.5 65.3077C172.986 65.3077 67.1831 168.112 67.1831 294.927C67.1831 421.742 172.986 524.546 303.5 524.546Z" stroke="#D1CDDE" strokeOpacity="0.3" strokeWidth="1.2225" strokeLinecap="round" strokeLinejoin="round"/>
+          </g>
+          <g opacity="0.89">
+            <path opacity="0.89" d="M303.5 503.11C421.83 503.11 517.756 409.903 517.756 294.927C517.756 179.951 421.83 86.7438 303.5 86.7438C185.171 86.7438 89.2451 179.951 89.2451 294.927C89.2451 409.903 185.171 503.11 303.5 503.11Z" stroke="#D1CDDE" strokeOpacity="0.3" strokeWidth="1.3591" strokeLinecap="round" strokeLinejoin="round"/>
+          </g>
+          <g opacity="0.89">
+            <path opacity="0.89" d="M303.501 481.674C409.647 481.674 495.695 398.065 495.695 294.927C495.695 191.789 409.647 108.18 303.501 108.18C197.355 108.18 111.307 191.789 111.307 294.927C111.307 398.065 197.355 481.674 303.501 481.674Z" stroke="#D1CDDE" strokeOpacity="0.3" strokeWidth="1.4956" strokeLinecap="round" strokeLinejoin="round"/>
+          </g>
+          <g opacity="0.89">
+            <path opacity="0.89" d="M303.499 460.239C397.461 460.239 473.632 386.226 473.632 294.927C473.632 203.628 397.461 129.616 303.499 129.616C209.537 129.616 133.366 203.628 133.366 294.927C133.366 386.226 209.537 460.239 303.499 460.239Z" stroke="#D1CDDE" strokeOpacity="0.3" strokeWidth="1.6322" strokeLinecap="round" strokeLinejoin="round"/>
+          </g>
+          <g opacity="0.89">
+            <path opacity="0.89" d="M303.499 438.803C385.277 438.803 451.571 374.388 451.571 294.927C451.571 215.467 385.277 151.052 303.499 151.052C221.722 151.052 155.428 215.467 155.428 294.927C155.428 374.388 221.722 438.803 303.499 438.803Z" stroke="#D1CDDE" strokeOpacity="0.3" strokeWidth="1.7688" strokeLinecap="round" strokeLinejoin="round"/>
+          </g>
+          <g opacity="0.89">
+            <path opacity="0.89" d="M303.5 417.403C373.114 417.403 429.548 362.569 429.548 294.927C429.548 227.286 373.114 172.451 303.5 172.451C233.886 172.451 177.452 227.286 177.452 294.927C177.452 362.569 233.886 417.403 303.5 417.403Z" stroke="#D1CDDE" strokeOpacity="0.3" strokeWidth="1.9054" strokeLinecap="round" strokeLinejoin="round"/>
+          </g>
+          <g opacity="0.89">
+            <path opacity="0.89" d="M303.5 395.967C360.931 395.967 407.487 350.73 407.487 294.927C407.487 239.124 360.931 193.887 303.5 193.887C246.07 193.887 199.514 239.124 199.514 294.927C199.514 350.73 246.07 395.967 303.5 395.967Z" stroke="#D1CDDE" strokeOpacity="0.3" strokeWidth="2.042" strokeLinecap="round" strokeLinejoin="round"/>
+          </g>
+          <g opacity="0.89">
+            <path opacity="0.89" d="M303.5 374.531C348.746 374.531 385.425 338.891 385.425 294.927C385.425 250.963 348.746 215.323 303.5 215.323C258.254 215.323 221.574 250.963 221.574 294.927C221.574 338.891 258.254 374.531 303.5 374.531Z" stroke="#D1CDDE" strokeOpacity="0.3" strokeWidth="2.1786" strokeLinecap="round" strokeLinejoin="round"/>
+          </g>
+          <g opacity="0.89">
+            <path opacity="0.89" d="M303.501 353.095C336.563 353.095 363.365 327.053 363.365 294.927C363.365 262.802 336.563 236.76 303.501 236.76C270.439 236.76 243.637 262.802 243.637 294.927C243.637 327.053 270.439 353.095 303.501 353.095Z" stroke="#D1CDDE" strokeOpacity="0.3" strokeWidth="2.3152" strokeLinecap="round" strokeLinejoin="round"/>
+          </g>
+        </g>
+      </svg>
     </div>
   )
 }
