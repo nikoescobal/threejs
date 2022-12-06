@@ -6,7 +6,7 @@
   position: relative;
 }
 
-.wrapper > div {
+.wrapper>div {
   gap: 2rem;
 }
 
@@ -21,11 +21,12 @@
 
 .circles {
   position: absolute;
-  left: 0;
-  top: 0;
+  left: -6rem;
+  top: -12rem;
+  max-width: 22rem !important;
 
   @include md {
-    top: -100%;
+    top: -126%;
   }
 }
 
@@ -43,8 +44,9 @@
   filter: brightness(0.5);
 }
 
-.logos > div {
+.logos>div {
   height: 2.5rem;
+
   @media (min-width: 480px) {
     height: auto;
   }
