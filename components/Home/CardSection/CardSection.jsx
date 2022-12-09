@@ -5,7 +5,7 @@ import Icon2 from '../../../public/icons/card-icon2.svg';
 import Icon3 from '../../../public/icons/card-icon3.svg';
 import Icon4 from '../../../public/icons/card-icon4.svg';
 import Image from 'next/image';
-import Chests from '../../../public/backgrounds/chests.avif';
+import Chests from '../../../public/backgrounds/chests.webp';
 import useStore from '../../../store/store';
 import Connector1 from '../../../public/illustrations/connector1.svg';
 import Connector2 from '../../../public/illustrations/connector2.svg';
