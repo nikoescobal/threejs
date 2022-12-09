@@ -27,7 +27,7 @@ function App() {
         className={`${styles['alternating-rows']} ${generics['alternating-rows']} max-1920`}
       >
         <div className={styles['mockup-wrapper']}>
-          <img src="/mockups/profile.png" alt="phone illustration" />
+          <Image width={256} height={482} layout='responsive' objectFit='cover' src="/mockups/profile.webp" alt="phone illustration" />
         </div>
         <ClearContainer
           title="A whole ecosystem designed to support you in building your dream life"
