@@ -62,10 +62,10 @@ function Navbar() {
         } ${scrollDirection === 'down' ? `${styles['scroll-down']}` : ''}`}
       >
         <div className={styles.navbar__logo__wrapper}>
-          <Link href="/">
+          <Link href="/" title='Navbar link to home page'>
             <img
               src="/logo-cropped.webp"
-              alt="logo"
+              alt="Legacy Network Logo"
               onClick={() => setIsOpen(false)}
             />
           </Link>
@@ -75,7 +75,7 @@ function Navbar() {
             className={router.asPath === '/' ? `${styles.active}` : ''}
             onClick={() => setIsOpen(false)}
           >
-            <Link href="/">Home</Link>
+            <Link href="/" title='Navbar link to home page'>Home</Link>
           </span>
           <span
             className={router.asPath === '/app' ? `${styles.active}` : ''}
@@ -83,6 +83,7 @@ function Navbar() {
           >
             <Link
               href="/app"
+              title='Navbar link to app page'
               className={router.pathname === '/app' ? `${styles.active}` : ''}
             >
               App
@@ -94,6 +95,7 @@ function Navbar() {
           >
             <Link
               href="/token"
+              title='Navbar link to token page'
               className={router.pathname === '/token' ? `${styles.active}` : ''}
             >
               Token
@@ -109,6 +111,7 @@ function Navbar() {
           >
             <Link
               href="/personal-development"
+              title='Navbar link to personal development page'
               className={
                 router.pathname === '/personal-development'
                   ? `${styles.active}`
@@ -124,6 +127,7 @@ function Navbar() {
           >
             <Link
               href="/about-us"
+              title='Navbar link to about us page'
               className={
                 router.pathname === '/about-us' ? `${styles.active}` : ''
               }
@@ -183,20 +187,10 @@ function Navbar() {
               />
               Win
             </ComingSoon>
-            {/* <Link
-              href="/giveaway"
-              className={`
-                ${router.pathname === '/giveaway' ? `${styles.active}` : ''}
-                button-blue
-              `}
-            >
-              Win
-            </Link> */}
           </div>
           <div>
             <ConnectWallet className={`${styles['wallet']} outlined`} />
           </div>
-          {/* <div className={`${styles['wallet']} outlined`}>Connect Wallet</div> */}
           <button
             type="button"
             onClick={toggle}
