@@ -17,6 +17,13 @@ function MyApp({ Component, pageProps }) {
 
   const desiredChainId = ChainId.Polygon;
 
+  useEffect(() => {
+    const imgs = document.getElementsByTagName('img');
+    for (let i = 0; i < imgs.length; i++) {
+      imgs[i].setAttribute('ondragstart', 'return false');
+    }
+  }, []);
+
   return (
     <ThirdwebProvider desiredChainId={desiredChainId}>
       <div className={`content-wrapper ${isDarkMode ? '' : 'light'} `}>
@@ -25,7 +32,7 @@ function MyApp({ Component, pageProps }) {
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
         />
 
-        <Script id="analytics" strategy="afterInteractive">
+        <Script id="analytics" strategy="lazyOnload">
           {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -34,17 +41,6 @@ function MyApp({ Component, pageProps }) {
           page_path: window.location.pathname,
           });
         `}
-        </Script>
-
-        <Script id="img-script" strategy='lazyOnload'>
-          {
-            `
-              const imgs = document.getElementsByTagName('img');
-              for (let i = 0; i < imgs.length; i++) {
-                imgs[i].setAttribute('ondragstart', 'return false');
-              }
-            `
-          }
         </Script>
 
         <ParallaxProvider>
