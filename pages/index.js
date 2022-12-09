@@ -5,20 +5,22 @@ import WavesWrapper from '../components/Generic/WavesWrapper/WavesWrapper';
 import NewsLetter from '../components/Home/NewsLetter/NewsLetter';
 import App from '../components/Home/App/App';
 import Header from '../components/Home/Header';
-import PageSlider from '../components/Home/PageSlider/PageSlider';
-import HomeNavbar from '../components/Navbar/Navbar';
 import generics from '../styles/generics.module.scss';
 import styles from '../styles/Home.module.scss';
-import Roadmap from '../components/Generic/Roadmap/Roadmap';
+// import Roadmap from '../components/Generic/Roadmap/Roadmap';
 import Partners from '../components/Generic/Partners/Partners';
 import Map from '../components/Home/Map/Map';
 import FollowUs from '../components/Generic/FollowUs/FollowUs';
 import CardSection from '../components/Home/CardSection/CardSection';
 import { Parallax } from 'react-scroll-parallax';
 import Hammer from '../public/backgrounds/hammer.webp';
-import Gradient from '../public/backgrounds/gradient.png';
 import useStore from '../store/store';
 import { useMediaQuery } from '@mui/material';
+import dynamic from 'next/dynamic';
+
+const Roadmap = dynamic(() => import('../components/Generic/Roadmap/Roadmap.jsx'), {
+  ssr: false,
+})
 
 export default function Home() {
   const { isDarkMode } = useStore();
