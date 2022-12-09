@@ -42,7 +42,7 @@ function PageSlider() {
                   {item.body}
                 </p>
                 <div className={styles['link-wrapper']}>
-                  <Link href={item.url}>
+                  <Link href={item.url} title={item.urlTitle}>
                     <a className="button-blue">Learn more</a>
                   </Link>
                 </div>
