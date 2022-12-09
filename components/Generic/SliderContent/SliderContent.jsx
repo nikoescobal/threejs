@@ -56,7 +56,12 @@ function SliderContent({ list, open, isActive, onClose, showBenefits }) {
 }
 
 SliderContent.propTypes = {
-  list: PropTypes.arrayOf(PropTypes.string),
+  list: PropTypes.arrayOf(
+    PropTypes.shape({
+        isChecked: PropTypes.bool,
+        content: PropTypes.string,
+    })
+  ),
 };
 
 SliderContent.defaultProps = {
