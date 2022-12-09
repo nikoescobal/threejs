@@ -6,15 +6,18 @@ import Icon3 from '../../../public/icons/card-icon3.svg';
 import Icon4 from '../../../public/icons/card-icon4.svg';
 import Image from 'next/image';
 import Chests from '../../../public/backgrounds/chests.webp';
+import ChestsFallback from '../../../public/backgrounds/chests.png';
 import useStore from '../../../store/store';
 import Connector1 from '../../../public/illustrations/connector1.svg';
 import Connector2 from '../../../public/illustrations/connector2.svg';
 import Connector3 from '../../../public/illustrations/connector3.svg';
 import Link from 'next/link';
 import ComingSoon from '../../Generic/ComingSoon/ComingSoon';
+import { useState } from 'react';
 
 function CardSection() {
   const { isDarkMode } = useStore();
+  const [error, setError] = useState(false);
 
   return (
     <div
@@ -23,7 +26,11 @@ function CardSection() {
       } max-1920`}
     >
       <div className={styles['img-wrapper']}>
-        <Image src={Chests} alt="chests" />
+        <Image
+          src={!error ? Chests : ChestsFallback}
+          alt="chests"
+          onError={() => setError(true)}
+        />
       </div>
       <div
         className={`${styles['cards-wrapper']} spacing-x`}
