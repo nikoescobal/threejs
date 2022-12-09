@@ -8,6 +8,7 @@ import benefits from './content';
 import ComingSoon from '../ComingSoon/ComingSoon';
 import useScrollbarSize from 'react-scrollbar-size';
 import { useSwipeable } from 'react-swipeable';
+import Image from 'next/image';
 
 function DiagonalSlider({ showBenefits }) {
   const { height, width } = useScrollbarSize();
@@ -306,7 +307,7 @@ function DiagonalSlider({ showBenefits }) {
             className={`${styles.arrow} ${styles.left}`}
             onClick={moveLeft}
           >
-            <img src="/slider/arrow.svg" alt="arrow" />
+            <Image layout='fill' src="/slider/arrow.svg" alt="arrow" />
           </button>
           <button
             type="button"
@@ -316,12 +317,12 @@ function DiagonalSlider({ showBenefits }) {
             }}
             onClick={moveRight}
           >
-            <img src="/slider/arrow.svg" alt="arrow" />
+            <Image layout='fill' src="/slider/arrow.svg" alt="arrow" />
           </button>
         </div>
       </div>
       <div className={styles['double-arrow']}>
-        <img src="/icons/double-arrow.svg" alt="arrow" />
+        <Image layout='fill' src="/icons/double-arrow.svg" alt="arrow" />
       </div>
       {/* <SliderContent
           list={roadmapItems[Math.abs(position.x - 1)].content}

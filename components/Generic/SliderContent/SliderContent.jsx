@@ -45,6 +45,7 @@ function SliderContent({ list, open, isActive, onClose, showBenefits }) {
           href='https://blog.legacynetwork.io'
           rel="no-referrer noreferrer"
           target="_blank"
+          title='Link to Legacy Network Blog website'
           className={`${styles['slide-button']} read-more`}
         >
           Read More

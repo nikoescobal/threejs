@@ -9,6 +9,7 @@ function ClearContainer({
   title,
   children,
   to,
+  urlTitle,
   linkText,
   textAlign,
   reducedPadding,
@@ -41,7 +42,7 @@ function ClearContainer({
               <p className="button-blue">{linkText}</p>
             </div>
           ) : (
-            <Link href={to}>
+            <Link href={to} title={urlTitle}>
               <a className="button-blue">{linkText}</a>
             </Link>
           )}

@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }) {
     <ThirdwebProvider desiredChainId={desiredChainId}>
       <div className={`content-wrapper ${isDarkMode ? '' : 'light'} `}>
         <Script
-          strategy="lazyOnload"
+          strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
         />
 

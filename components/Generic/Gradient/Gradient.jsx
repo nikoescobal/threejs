@@ -21,7 +21,7 @@ function Gradient({style, isHalf}) {
         height={2374}
         layout='responsive'
         // layout='fill'
-        loading='eager'
+        // loading='eager'
         objectFit='cover'
         priority
       />
