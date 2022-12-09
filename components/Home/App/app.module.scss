@@ -6,6 +6,7 @@
   padding-bottom: 16rem;
   gap: 2rem !important;
   padding-top: 5rem;
+  z-index: 1;
 
   @include md {
     padding-top: 8rem;

@@ -27,7 +27,7 @@ function App() {
         className={`${styles['alternating-rows']} ${generics['alternating-rows']} max-1920`}
       >
         <div className={styles['mockup-wrapper']}>
-          <Image width={256} height={482} layout='responsive' objectFit='cover' src="/mockups/profile.webp" alt="phone illustration" />
+          <Image width={256} height={482} layout='responsive' objectFit='cover' src="/mockups/profile.webp" alt="Mobile application illustration" />
         </div>
         <ClearContainer
           title="A whole ecosystem designed to support you in building your dream life"
@@ -49,7 +49,7 @@ function App() {
         className={`${styles['alternating-rows']} ${generics['alternating-rows']} max-1920`}
       >
         <div>
-          <img src="/illustrations/ai.webp" alt="ai illustration" />
+          <img loading="lazy" src="/illustrations/ai.webp" alt="Artifial Intelligence illustration" />
         </div>
         <ClearContainer
           title="The first artificial intelligence which analyzes your behavior and reflects the collected information back to you "
