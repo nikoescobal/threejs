@@ -1,8 +1,8 @@
 import styles from './donutchart.module.scss'
 // import ReactApexChart from 'react-apexcharts';
-import dynamic from 'next/dynamic'
+// import dynamic from 'next/dynamic'
 
-import { useState } from 'react';
+// import { useState } from 'react';
 import useStore from '../../../store/store';
 import { useMediaQuery } from '@mui/material';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
@@ -24,7 +24,7 @@ const colors = (opacity) => {
 } 
 
 function DonutChart({series, labels, titleText, subtitle, legendPosition}) {
-  const ReactApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
+  // const ReactApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
   const isTablet = useMediaQuery('(min-width: 768px');
   
   const { isDarkMode } = useStore();
