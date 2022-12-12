@@ -35,7 +35,7 @@ function Navbar() {
   const scrollDirection = useScrollDirection();
   const { isDarkMode, toggleDarkMode } = useStore((state) => state);
   const [isOpen, setIsOpen] = useState(false);
-  const isDesktopOrLaptop = useMediaQuery('(min-width: 1024px)');
+  // const isDesktopOrLaptop = useMediaQuery('(min-width: 1024px)');
   const router = useRouter();
 
   const toggle = () => {
@@ -50,12 +50,10 @@ function Navbar() {
     <>
       {/* { !pathname.includes('blogs') && (
         <> */}
-      {!isDesktopOrLaptop && (
-        <Hamburger
-          onClick={toggleMenu}
-          className={`${isDarkMode ? '' : `${styles.light}`}`}
-        />
-      )}
+      <Hamburger
+        onClick={toggleMenu}
+        className={`${isDarkMode ? '' : `${styles.light}`}`}
+      />
       <nav
         className={`${styles.navbar} ${isDarkMode ? '' : `${styles.light}`} ${
           isOpen ? `${styles.open}` : ''
