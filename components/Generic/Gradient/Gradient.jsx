@@ -6,7 +6,7 @@ import styles from './gradient.module.scss'
 import useStore from '../../../store/store'
 // import imageKitLoader from '../ImageKitLoader/ImageKitLoader';
 
-function Gradient({style, isHalf, className}) {
+function Gradient({style, isHalf, className, preload}) {
   const { isDarkMode } = useStore();
   
   return (
@@ -17,13 +17,13 @@ function Gradient({style, isHalf, className}) {
         // src={isHalf ? 'gradient-cut.webp' : 'gradient.webp'}
         src={isHalf ? '/backgrounds/gradient-cut-2.webp' : '/backgrounds/gradient-2.webp'}
         alt="blue background gradient"
-        width={2374}
-        height={2374}
+        width={375}
+        height={375}
         layout='responsive'
         // layout='fill'
         // loading='eager'
         objectFit='cover'
-        // priority
+        priority={preload}
       />
     </div>
   )
@@ -31,10 +31,12 @@ function Gradient({style, isHalf, className}) {
 
 Gradient.propTypes = {
   isHalf: PropTypes.bool,
+  priority: PropTypes.bool
 }
 
 Gradient.defaultProps = {
   isHalf: false,
+  priority: false,
 }
 
 export default Gradient

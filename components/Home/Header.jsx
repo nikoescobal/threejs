@@ -22,6 +22,7 @@ function Header() {
     >
       <Gradient
         className={styles.gradient}
+        preload={true}
       />
       <WaveLines className={styles['waves-wrapper']} />
       <section
