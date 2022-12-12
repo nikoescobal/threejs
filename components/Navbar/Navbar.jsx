@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { useMediaQuery } from '@mui/material';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 // import { Link, useLocation } from 'react-router-dom';
 import { useRouter } from 'next/router';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
@@ -64,7 +64,9 @@ function Navbar() {
         <div className={styles.navbar__logo__wrapper}>
           <Link href="/" title='Navbar link to home page'>
             <img
-              src="/logo-cropped.webp"
+              src="/logo-small.webp"
+              width={40}
+              height={36}
               alt="Legacy Network Logo"
               onClick={() => setIsOpen(false)}
             />
