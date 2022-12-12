@@ -210,6 +210,11 @@ function DiagonalSlider({ showBenefits }) {
           content: 'Introduction of new Roadmap',
           isChecked: false,
         },
+        {
+          id: 'r32',
+          content: 'To be continued',
+          isChecked: false,
+        },
       ],
     },
   ];
