@@ -16,21 +16,14 @@ function GenericHeader({ title, subtitle, rightObj, waves }) {
       } max-1920`}
     >
       <Gradient
-        style={{
-          top: '-20%',
-          right: '-15%',
-          maxWidth: '80%',
-        }}
+        className={styles.gradient}
       />
-      {/* <div className={styles['waves-wrapper']}> */}
       {waves}
-      {/* </div> */}
       <section
         className={`${generics.header} ${styles.header} header-intro ${generics['spacing-x']} ${generics['spacing-t']}`}
       >
         <div className={`${generics['img-wrapper']}`}>
           {rightObj}
-          {/* <img src={imageUrl} alt={imageAlt} /> */}
         </div>
         <div className="text">
           <div className={styles['title-wrapper']}>

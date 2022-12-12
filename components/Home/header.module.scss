@@ -46,6 +46,31 @@
   width: 100%;
 }
 
+.gradient {
+  top: 0%;
+  transform: translate(-50%, 0%);
+  // transform: translate(0, -50%);
+  right: -100%;
+  width: 150%;
+
+  @include md {
+    top: -0%;
+    right: -20%;
+    transform: none;
+    width: 100%;
+    // max-width: 80%;
+  }
+
+  @include lg {
+    top: -12%;
+    right: -5%;
+    transform: none;
+    width: 100%;
+    max-width: 80%;
+  }
+
+}
+
 .title-wrapper h1 {
   color: white !important;
   background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);

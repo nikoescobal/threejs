@@ -31,6 +31,28 @@
   font-weight: bold;
 }
 
+.gradient {
+  top: 0%;
+  transform: translate(-50%, 0%);
+  right: -100%;
+  width: 150%;
+
+  @include md {
+    top: -0%;
+    right: -20%;
+    transform: none;
+    width: 100%;
+  }
+
+  @include lg {
+    top: -12%;
+    right: -5%;
+    transform: none;
+    width: 100%;
+    max-width: 80%;
+  }
+}
+
 .waves-wrapper {
   // position: absolute;
   // top: -20%;

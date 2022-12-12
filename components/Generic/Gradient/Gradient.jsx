@@ -6,11 +6,11 @@ import styles from './gradient.module.scss'
 import useStore from '../../../store/store'
 // import imageKitLoader from '../ImageKitLoader/ImageKitLoader';
 
-function Gradient({style, isHalf}) {
+function Gradient({style, isHalf, className}) {
   const { isDarkMode } = useStore();
   
   return (
-    <div className={`${styles.wrapper} ${!isDarkMode ? `${styles.light}` : ''}`} style={style} >
+    <div className={`${styles.wrapper} ${className} ${!isDarkMode ? `${styles.light}` : ''}`} style={style} >
       {/* <Image draggable="false" src={isHalf ? GradientImgHalf : GradientImg} alt="gradient" unselectable='on' /> */}
       <Image 
         // loader={imageKitLoader}
