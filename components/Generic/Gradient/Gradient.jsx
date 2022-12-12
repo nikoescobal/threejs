@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import Image from 'next/image'
 import styles from './gradient.module.scss'
-import GradientImg from '../../../public/backgrounds/gradient.webp'
-import GradientImgHalf from '../../../public/backgrounds/gradient-cut.webp'
+// import GradientImg from '../../../public/backgrounds/gradient.webp'
+// import GradientImgHalf from '../../../public/backgrounds/gradient-cut.webp'
 import useStore from '../../../store/store'
-import imageKitLoader from '../ImageKitLoader/ImageKitLoader';
+// import imageKitLoader from '../ImageKitLoader/ImageKitLoader';
 
 function Gradient({style, isHalf}) {
   const { isDarkMode } = useStore();
@@ -23,7 +23,7 @@ function Gradient({style, isHalf}) {
         // layout='fill'
         // loading='eager'
         objectFit='cover'
-        priority
+        // priority
       />
     </div>
   )
