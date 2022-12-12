@@ -1,10 +1,11 @@
+@use '../../../styles/breakpoints' as *;
 @import '../../../styles/variables';
 
 $roadmap-cell-width: 27vw;
 $roadmap-cell-height: calc($roadmap-cell-width / 0.8125);
 $roadmap-cell-gap: 0.5rem;
 
-.home-roadmap > img.waves-bg {
+.home-roadmap>img.waves-bg {
   position: absolute;
   top: -40vw !important;
   left: 0;
@@ -39,13 +40,13 @@ $roadmap-cell-gap: 0.5rem;
   content: '';
   position: absolute;
   background: white;
-  top: 0;
+  top: -1rem;
   left: 0;
   width: 100%;
-  min-height: 64rem;
+  min-height: 58rem;
   z-index: 1;
 
-  @media only screen and (min-width: 768) {
+  @include md {
     min-height: 60rem;
   }
 }
@@ -68,8 +69,8 @@ $roadmap-cell-gap: 0.5rem;
   transform: translateY(-7%) skew(-12deg, 0) rotate(-12deg);
 }
 
-.before > div,
-.after > div {
+.before>div,
+.after>div {
   position: relative;
 }
 
@@ -132,7 +133,7 @@ $roadmap-cell-gap: 0.5rem;
   transform: translateY(-50%);
 }
 
-.roadmap > img {
+.roadmap>img {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -140,15 +141,15 @@ $roadmap-cell-gap: 0.5rem;
   opacity: 0.3;
 }
 
-.roadmap > img:first-of-type {
+.roadmap>img:first-of-type {
   top: -40%;
 }
 
-.roadmap > img:last-of-type {
+.roadmap>img:last-of-type {
   bottom: -50%;
 }
 
-.roadmap h4{
+.roadmap h4 {
   display: grid;
   justify-content: end;
   font-size: 2.5rem;
@@ -158,18 +159,18 @@ $roadmap-cell-gap: 0.5rem;
   margin-bottom: 1rem;
 }
 
-.roadmap > img.rad:nth-of-type(2) {
+.roadmap>img.rad:nth-of-type(2) {
   top: -50%;
   opacity: 0.05;
 }
 
-.roadmap > img.rad:last-of-type {
+.roadmap>img.rad:last-of-type {
   opacity: 0.05;
   bottom: -30%;
 }
 
 @media only screen and (min-width: 480px) {
-  .roadmap h4{
+  .roadmap h4 {
     font-size: 2.5rem;
   }
 }
@@ -181,5 +182,5 @@ $roadmap-cell-gap: 0.5rem;
 
   .roadmap {
     // margin-bottom: 8rem;
-  }  
+  }
 }
