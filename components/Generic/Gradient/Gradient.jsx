@@ -15,7 +15,7 @@ function Gradient({style, isHalf, className, preload}) {
       <Image 
         // loader={imageKitLoader}
         // src={isHalf ? 'gradient-cut.webp' : 'gradient.webp'}
-        src={isHalf ? '/backgrounds/gradient-cut-2.webp' : '/backgrounds/gradient-2.webp'}
+        src={isHalf ? '/backgrounds/gradient-cut-2.webp' : '/backgrounds/gradient-3.webp'}
         alt="blue background gradient"
         width={375}
         height={375}
