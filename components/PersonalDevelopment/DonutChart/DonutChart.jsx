@@ -1,8 +1,4 @@
 import styles from './donutchart.module.scss'
-// import ReactApexChart from 'react-apexcharts';
-import dynamic from 'next/dynamic'
-
-import { useState } from 'react';
 import useStore from '../../../store/store';
 import { useMediaQuery } from '@mui/material';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
@@ -24,7 +20,6 @@ const colors = (opacity) => {
 } 
 
 function DonutChart({series, labels, titleText, subtitle, legendPosition}) {
-  const ReactApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
   const isTablet = useMediaQuery('(min-width: 768px');
   
   const { isDarkMode } = useStore();
@@ -74,7 +69,6 @@ function DonutChart({series, labels, titleText, subtitle, legendPosition}) {
               legend: {
                 display: isTablet,
                 fullSize: false,
-                // maxWidth: 150,
                 labels: {
                   boxWidth: 20,
                 },
@@ -99,7 +93,6 @@ function DonutChart({series, labels, titleText, subtitle, legendPosition}) {
                     return true
                   }
                   return false
-                  // return context.dataIndex !== 5 ; // display labels with an odd index
                 },
                 clip: true,
                 clamp: true, 
@@ -112,14 +105,10 @@ function DonutChart({series, labels, titleText, subtitle, legendPosition}) {
                 },
               }
             },
-            // maintainAspectRatio: false,
             responsive: true
           }}
         />
       </div>
-      {/* {(typeof window !== 'undefined') && 
-      <ReactApexChart options={isTablet ? data.options : mobileData.options} series={isTablet ? data.series : mobileData.series} type="donut" width={isTablet ? 450 : 320} /> 
-      }*/}
     </div>
   )
 }

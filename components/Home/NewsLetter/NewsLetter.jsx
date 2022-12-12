@@ -1,16 +1,16 @@
 import styles from './newsletter.module.scss';
 import generics from '../../../styles/generics.module.scss';
 import useStore from '../../../store/store';
-import {collection,QueryDocumentSnapshot,DocumentData,query,where,limit,getDocs, doc, setDoc, addDoc} from "firebase/firestore";
+// import {collection,QueryDocumentSnapshot,DocumentData,query,where,limit,getDocs, doc, setDoc, addDoc} from "firebase/firestore";
 import axios from 'axios';
-import { firestore } from '../../../firebase/clientapp';
+// import { firestore } from '../../../firebase/clientapp';
 import { useState } from 'react';
-import { Alert, Snackbar, SnackbarContent } from '@mui/material';
+import { Snackbar, SnackbarContent } from '@mui/material';
 
 function NewsLetter() {
   const { isDarkMode } = useStore((state) => state);
-  const newsletterCollection = collection(firestore, 'email-subscribers');
-  const [emails, setEmails] = useState([]);
+  // const newsletterCollection = collection(firestore, 'email-subscribers');
+  // const [emails, setEmails] = useState([]);
   const [email, setEmail] = useState('');
   const [openNotification, setOpenNotification] = useState(false);
   const [notificationMessage, setNotificationMessage] = useState('')
