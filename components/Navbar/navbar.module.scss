@@ -41,31 +41,31 @@
 // }
 
 // Actual version
-.align_navbar {
-  display: flex;
-  align-items: baseline;
-  transform: translateX(0%);
+// .align_navbar {
+//   display: flex;
+//   align-items: baseline;
+//   transform: translateX(0%);
 
-  @include lg {
-    transform: translateX(-5.6rem) !important;
-  }
+//   @include lg {
+//     transform: translateX(-5.6rem) !important;
+//   }
 
-  @include breakpoint(1700px) {
-    transform: translateX(-6rem);
-  }
-}
+//   @include breakpoint(1700px) {
+//     transform: translateX(-6rem);
+//   }
+// }
 
-.align_navbar span {
-  font-size: 12px !important;
+// .align_navbar span {
+//   font-size: 12px !important;
 
-  @include lg {
-    font-size: 10px !important;
-  }
+//   @include lg {
+//     font-size: 10px !important;
+//   }
 
-  @include xl {
-    font-size: 0.75rem !important;
-  }
-}
+//   @include xl {
+//     font-size: 0.75rem !important;
+//   }
+// }
 
 .navbar.open {
   top: 0;
