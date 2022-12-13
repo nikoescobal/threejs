@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { useMediaQuery } from '@mui/material';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 // import { Link, useLocation } from 'react-router-dom';
 import { useRouter } from 'next/router';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
@@ -35,7 +35,7 @@ function Navbar() {
   const scrollDirection = useScrollDirection();
   const { isDarkMode, toggleDarkMode } = useStore((state) => state);
   const [isOpen, setIsOpen] = useState(false);
-  const isDesktopOrLaptop = useMediaQuery('(min-width: 1024px)');
+  // const isDesktopOrLaptop = useMediaQuery('(min-width: 1024px)');
   const router = useRouter();
 
   const toggle = () => {
@@ -50,12 +50,10 @@ function Navbar() {
     <>
       {/* { !pathname.includes('blogs') && (
         <> */}
-      {!isDesktopOrLaptop && (
-        <Hamburger
-          onClick={toggleMenu}
-          className={`${isDarkMode ? '' : `${styles.light}`}`}
-        />
-      )}
+      <Hamburger
+        onClick={toggleMenu}
+        className={`${isDarkMode ? '' : `${styles.light}`}`}
+      />
       <nav
         className={`${styles.navbar} ${isDarkMode ? '' : `${styles.light}`} ${
           isOpen ? `${styles.open}` : ''
@@ -64,7 +62,9 @@ function Navbar() {
         <div className={styles.navbar__logo__wrapper}>
           <Link href="/" title='Navbar link to home page'>
             <img
-              src="/logo-cropped.webp"
+              src="/logo-small.webp"
+              width={40}
+              height={36}
               alt="Legacy Network Logo"
               onClick={() => setIsOpen(false)}
             />

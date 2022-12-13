@@ -21,11 +21,8 @@ function Header() {
       } max-1920`}
     >
       <Gradient
-        style={{
-          top: '-12%',
-          right: '-5%',
-          maxWidth: '80%',
-        }}
+        className={styles.gradient}
+        preload={true}
       />
       <WaveLines className={styles['waves-wrapper']} />
       <section

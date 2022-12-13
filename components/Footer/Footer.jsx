@@ -9,7 +9,7 @@ import RedditIcon from '@mui/icons-material/Reddit';
 import useStore from '../../store/store';
 import Link from 'next/link';
 import styles from './footer.module.scss';
-import Logo from '../../public/logo-cropped.webp';
+import Logo from '../../public/logo-small.webp';
 import LogoContainer from '../../public/footer/logo-container.svg';
 import RightContainer from '../../public/footer/rights-container.svg';
 import Image from 'next/image';
