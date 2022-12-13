@@ -13,7 +13,7 @@ import styles from './navbar.module.scss';
 import Image from 'next/image';
 import LinkHover from '../Generic/LinkHover/LinkHover';
 import ComingSoon from '../Generic/ComingSoon/ComingSoon';
-import { ConnectWallet } from '@thirdweb-dev/react';
+// import { ConnectWallet } from '@thirdweb-dev/react';
 // import { ConnectWallet } from '../Wallet/Wallet';
 
 function Hamburger({ onClick, className }) {
@@ -188,9 +188,9 @@ function Navbar() {
               Win
             </ComingSoon>
           </div>
-          <div>
+          {/* <div>
             <ConnectWallet className={`${styles['wallet']} outlined`} />
-          </div>
+          </div> */}
           <button
             type="button"
             onClick={toggle}

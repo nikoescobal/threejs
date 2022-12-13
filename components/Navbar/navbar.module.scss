@@ -381,52 +381,7 @@
   margin: 0;
 }
 
-// // Temp version due to commented out connect wallet button
-// .win {
-//   right: 8.75rem;
-//   display: grid !important;
-//   place-items: center !important;
-//   justify-content: center !important;
-//   position: absolute;
-//   padding: 0 0.5rem;
-//   height: 2.75rem;
-//   top: 0.75rem;
-//   padding: 0 0 0 1.25rem !important;
-//   border-radius: 14px;
-//   border: none;
-//   text-decoration: none;
-//   background: #1960ea;
-//   color: white;
-//   text-align: center;
-//   min-width: 4rem;
-//   max-width: 6rem;
-//   width: 100%;
-//   margin-top: 1.25rem;
-//   font-size: 0.9rem;
-//   font-family: 'Montserrat', serif !important;
-//   font-weight: 600;
-//   text-transform: capitalize;
-
-//   @include lg {
-//     right: 7.5rem;
-//     max-width: 4rem;
-//     top: -1.5px;
-//     padding: 0 0 0 1rem !important;
-//     font-size: 0.688rem !important;
-//     padding: 0 0 0 1rem !important;
-//   }
-
-//   @include xl {
-//     max-width: 7rem !important;
-//     font-size: 1rem;
-//     padding: 0 0 0 1.25rem !important;
-//     // right: 22.25rem;
-//     max-width: 5rem !important;
-//     padding: 0 0 0 1.25rem !important;
-//   }
-// }
-
-// Actual version to be used
+// Temp version due to commented out connect wallet button
 .win {
   right: 8.75rem;
   display: grid !important;
@@ -437,7 +392,7 @@
   height: 2.75rem;
   top: 0.75rem;
   padding: 0 0 0 1.25rem !important;
-  border-radius: 4px;
+  border-radius: 14px;
   border: none;
   text-decoration: none;
   background: #1960ea;
@@ -453,7 +408,7 @@
   text-transform: capitalize;
 
   @include lg {
-    right: 16.7rem;
+    right: 7.5rem;
     max-width: 4rem;
     top: -1.5px;
     padding: 0 0 0 1rem !important;
@@ -465,11 +420,56 @@
     max-width: 7rem !important;
     font-size: 1rem;
     padding: 0 0 0 1.25rem !important;
-    right: 22.25rem;
+    // right: 22.25rem;
     max-width: 5rem !important;
     padding: 0 0 0 1.25rem !important;
   }
 }
+
+// // Actual version to be used
+// .win {
+//   right: 8.75rem;
+//   display: grid !important;
+//   place-items: center !important;
+//   justify-content: center !important;
+//   position: absolute;
+//   padding: 0 0.5rem;
+//   height: 2.75rem;
+//   top: 0.75rem;
+//   padding: 0 0 0 1.25rem !important;
+//   border-radius: 4px;
+//   border: none;
+//   text-decoration: none;
+//   background: #1960ea;
+//   color: white;
+//   text-align: center;
+//   min-width: 4rem;
+//   max-width: 6rem;
+//   width: 100%;
+//   margin-top: 1.25rem;
+//   font-size: 0.9rem;
+//   font-family: 'Montserrat', serif !important;
+//   font-weight: 600;
+//   text-transform: capitalize;
+
+//   @include lg {
+//     right: 16.7rem;
+//     max-width: 4rem;
+//     top: -1.5px;
+//     padding: 0 0 0 1rem !important;
+//     font-size: 0.688rem !important;
+//     padding: 0 0 0 1rem !important;
+//   }
+
+//   @include xl {
+//     max-width: 7rem !important;
+//     font-size: 1rem;
+//     padding: 0 0 0 1.25rem !important;
+//     right: 22.25rem;
+//     max-width: 5rem !important;
+//     padding: 0 0 0 1.25rem !important;
+//   }
+// }
 
 .light .win {
   background: $light-mode-secondary;
