@@ -1,7 +1,7 @@
 const content = [
   {
     title: 'Who are we?',
-    body: "Legacy Network is an international technology company based in Switzerland. Our mission is to improve people's lives by developing innovative technology.",
+    body: "Legacy Network is an international technology company based in Liechtenstein/Switzerland. Our mission is to improve people's lives by developing innovative technology.",
     url: '/about-us',
     urlTitle: 'Link to About Us page',
   },
