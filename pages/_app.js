@@ -10,12 +10,12 @@ import Footer from '../components/Footer/Footer';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { useEffect } from 'react';
 import Script from 'next/script';
-import { ChainId, ThirdwebProvider } from '@thirdweb-dev/react';
+// import { ChainId, ThirdwebProvider } from '@thirdweb-dev/react';
 
 function MyApp({ Component, pageProps }) {
   const { isDarkMode } = useStore((state) => state);
 
-  const desiredChainId = ChainId.Polygon;
+  // const desiredChainId = ChainId.Polygon;
 
   useEffect(() => {
     const imgs = document.getElementsByTagName('img');
@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <ThirdwebProvider desiredChainId={desiredChainId}>
+    // <ThirdwebProvider desiredChainId={desiredChainId}>
       <div className={`content-wrapper ${isDarkMode ? '' : 'light'} `}>
         <Script
           strategy="afterInteractive"
@@ -50,7 +50,7 @@ function MyApp({ Component, pageProps }) {
           <Footer />
         </ParallaxProvider>
       </div>
-    </ThirdwebProvider>
+    // </ThirdwebProvider>
   );
 }
 
