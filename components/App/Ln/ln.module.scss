@@ -84,21 +84,14 @@
   transform: translateY(8rem);
 
   @include md {
-    scale: 4;
-    transform: translateX(2rem);
-    transform: translateY(11rem);
+    scale: 1.5;
+    transform: translateX(1rem);
+    transform: translateY(9rem);
   }
 
   @include lg {
-    scale: 3;
     transform: translateX(2rem);
     transform: translateY(3rem);
-  }
-
-  @include xl {
-    scale: 2;
-    transform: translateX(2rem);
-    transform: translateY(1.4rem);
   }
 }
 

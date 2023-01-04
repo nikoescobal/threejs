@@ -41,7 +41,10 @@ function Ln() {
         <img className={styles.waves} src={Waves.src} alt="Wave Lines" />
       </div>
       <h3 style={{ position: 'relative' }}>Legacy Wallet</h3>
-      <div className={`${styles['tabs-wrapper']}`} style={{ position: 'relative' }}>
+      <div
+        className={`${styles['tabs-wrapper']}`}
+        style={{ position: 'relative' }}
+      >
         <TabPanel value={value} className={styles['tab-item']} index={0}>
           <div>
             <img src={Managing.src} alt="Managing mockup" />
@@ -58,23 +61,26 @@ function Ln() {
               <Tab label="Vesting" {...a11yProps(2)} />
               <Tab label="Bridging" {...a11yProps(3)} />
             </Tabs>
-            <h4>Managing</h4>
-            <p>
-              Manage your favorite cryptos in a secure non-custodial wallet. The
-              legacy wallet allows you to easily hold, send and receive tokens
-              on multiple blockchains. The private keys are stored locally on
-              the device so you and only you have access to your funds. Browse
-              through the NFT section to see all your collectibles safe in one
-              place. Additionally, the wallet comes with a browser extension
-              which grants you web-access to the exciting world of Web3.
-            </p>
-            <ul className={styles.list}>
-              Token and NFT support:
-              <li>VeChain</li>
-              <li>Ethereum</li>
-              <li>Binance</li>
-              <li>Polygon.</li>
-            </ul>
+            <div className={'spacing-x'}>
+              <h4>Managing</h4>
+              <p>
+                Manage your favorite cryptos in a secure non-custodial wallet.
+                The legacy wallet allows you to easily hold, send and receive
+                tokens on multiple blockchains. The private keys are stored
+                locally on the device so you and only you have access to your
+                funds. Browse through the NFT section to see all your
+                collectibles safe in one place. Additionally, the wallet comes
+                with a browser extension which grants you web-access to the
+                exciting world of Web3.
+              </p>
+              <ul className={styles.list}>
+                Token and NFT support:
+                <li>VeChain</li>
+                <li>Ethereum</li>
+                <li>Binance</li>
+                <li>Polygon.</li>
+              </ul>
+            </div>
           </div>
         </TabPanel>
         <TabPanel value={value} className={styles['tab-item']} index={1}>

@@ -114,17 +114,17 @@ function DiagonalSlider({ showBenefits }) {
         {
           id: 'r16',
           content: 'Token deployment on the blockchains',
-          isChecked: false,
+          isChecked: true,
         },
         {
           id: 'r17',
           content: 'Security audits of all smart contracts',
-          isChecked: false,
+          isChecked: true,
         },
         {
           id: 'r18',
           content: 'Beta testing of the Legacy Wallet',
-          isChecked: false,
+          isChecked: true,
         },
         {
           id: 'r19',
@@ -154,8 +154,7 @@ function DiagonalSlider({ showBenefits }) {
         },
         {
           id: 'r23',
-          content:
-            'Pre-listing on coinmarketcap',
+          content: 'Pre-listing on coinmarketcap',
           isChecked: false,
         },
       ],
@@ -277,14 +276,11 @@ function DiagonalSlider({ showBenefits }) {
           }vw, ${position.y * offset.y}vw)`,
         }}
       >
-        {
-          roadmapItems.map((item, index) => (
+        {roadmapItems.map((item, index) => (
           <div
             key={item.phase}
             className={`${styles['slide']} ${
-              index === Math.abs(position.x - 1)
-                ? `${styles['active']}`
-                : ''
+              index === Math.abs(position.x - 1) ? `${styles['active']}` : ''
             }`}
             style={{
               transform: `translateY(${offset.y * index}vw)`,
@@ -303,7 +299,7 @@ function DiagonalSlider({ showBenefits }) {
             />
             <div></div>
           </div>
-          ))}
+        ))}
       </div>
       <div className={`${styles['arrows-wrapper']}`}>
         <div>
@@ -312,7 +308,7 @@ function DiagonalSlider({ showBenefits }) {
             className={`${styles.arrow} ${styles.left}`}
             onClick={moveLeft}
           >
-            <Image layout='fill' src="/slider/arrow.svg" alt="arrow" />
+            <Image layout="fill" src="/slider/arrow.svg" alt="arrow" />
           </button>
           <button
             type="button"
@@ -322,12 +318,12 @@ function DiagonalSlider({ showBenefits }) {
             }}
             onClick={moveRight}
           >
-            <Image layout='fill' src="/slider/arrow.svg" alt="arrow" />
+            <Image layout="fill" src="/slider/arrow.svg" alt="arrow" />
           </button>
         </div>
       </div>
       <div className={styles['double-arrow']}>
-        <Image layout='fill' src="/icons/double-arrow.svg" alt="arrow" />
+        <Image layout="fill" src="/icons/double-arrow.svg" alt="arrow" />
       </div>
       {/* <SliderContent
           list={roadmapItems[Math.abs(position.x - 1)].content}
