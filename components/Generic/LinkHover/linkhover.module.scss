@@ -59,11 +59,15 @@
   }
 }
 
-.light .hover-text {
-  background: $light-mode-secondary;
-  color: white;
-}
+// .light .hover-text {
+//   background: $light-mode-secondary;
+//   color: white;
+// }
 
-.wrapper:hover .hover-text {
-  display: block;
-}
+// .wrapper:hover .hover-text {
+//   display: block;
+// }
+
+// .wrapper:focus .hover-text {
+//   display: block;
+// }

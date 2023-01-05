@@ -60,7 +60,7 @@ function Navbar() {
         } ${scrollDirection === 'down' ? `${styles['scroll-down']}` : ''}`}
       >
         <div className={styles.navbar__logo__wrapper}>
-          <Link href="/" title='Navbar link to home page'>
+          <Link href="/" title="Navbar link to home page">
             <img
               src="/logo-small.webp"
               width={40}
@@ -75,7 +75,9 @@ function Navbar() {
             className={router.asPath === '/' ? `${styles.active}` : ''}
             onClick={() => setIsOpen(false)}
           >
-            <Link href="/" title='Navbar link to home page'>Home</Link>
+            <Link href="/" title="Navbar link to home page">
+              Home
+            </Link>
           </span>
           <span
             className={router.asPath === '/app' ? `${styles.active}` : ''}
@@ -83,7 +85,7 @@ function Navbar() {
           >
             <Link
               href="/app"
-              title='Navbar link to app page'
+              title="Navbar link to app page"
               className={router.pathname === '/app' ? `${styles.active}` : ''}
             >
               App
@@ -95,7 +97,7 @@ function Navbar() {
           >
             <Link
               href="/token"
-              title='Navbar link to token page'
+              title="Navbar link to token page"
               className={router.pathname === '/token' ? `${styles.active}` : ''}
             >
               Token
@@ -111,7 +113,7 @@ function Navbar() {
           >
             <Link
               href="/personal-development"
-              title='Navbar link to personal development page'
+              title="Navbar link to personal development page"
               className={
                 router.pathname === '/personal-development'
                   ? `${styles.active}`
@@ -127,7 +129,7 @@ function Navbar() {
           >
             <Link
               href="/about-us"
-              title='Navbar link to about us page'
+              title="Navbar link to about us page"
               className={
                 router.pathname === '/about-us' ? `${styles.active}` : ''
               }
@@ -162,6 +164,7 @@ function Navbar() {
               <LinkHover hoverText={'Coming Soon'}>Boards</LinkHover>
             </span>
             <div>
+              <span className={styles.banner}>Coming Soon</span>
               <span
                 className={router.asPath === '/blogs' ? `${styles.active}` : ''}
               >
