@@ -90,17 +90,17 @@ function Policies() {
             damage.
           </p>
           <p>
-            This website is maintained by Legacy Network AG, Äulestrasse 74,
-            9490 Vaduz, Principality of Liechtenstein
+            This website is maintained by Legacy Network AG, Industriering 11,
+            9491 Rugell, Principality of Liechtenstein
           </p>
           <p>Imprint Website:</p>
           <p className="bold">Imprint</p>
           <p className="bold">Contact</p>
           <p className="bold">Legacy Network AG</p>
           <p>
-            Äulestrasse 74
+            Industriering 11
             <br />
-            9490 Vaduz
+            9491 Rugell
             <br />
             Principality of Liechentstein Commercial Register: FL-0002.683.628-1
           </p>
