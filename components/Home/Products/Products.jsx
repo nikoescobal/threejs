@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import ClearContainer from '../../Generic/ClearContainer/ClearContainer';
-import styles from './app.module.scss';
+import styles from './products.module.scss';
 import generics from '../../../styles/generics.module.scss';
 import iPhone from '../../../public/illustrations/iPhone.png';
 import Waves from '../../../public/backgrounds/waves-2.png';
@@ -27,7 +27,14 @@ function App() {
         className={`${styles['alternating-rows']} ${generics['alternating-rows']} max-1920`}
       >
         <div className={styles['mockup-wrapper']}>
-          <Image width={256} height={482} layout='responsive' objectFit='cover' src="/mockups/profile.webp" alt="Mobile application illustration" />
+          <Image
+            width={256}
+            height={482}
+            layout="responsive"
+            objectFit="cover"
+            src="/mockups/profile.webp"
+            alt="Mobile application illustration"
+          />
         </div>
         <ClearContainer
           title="A whole ecosystem designed to support you in building your dream life"
@@ -49,7 +56,11 @@ function App() {
         className={`${styles['alternating-rows']} ${generics['alternating-rows']} max-1920`}
       >
         <div>
-          <img loading="lazy" src="/illustrations/ai.webp" alt="Artifial Intelligence illustration" />
+          <img
+            loading="lazy"
+            src="/illustrations/ai.webp"
+            alt="Artifial Intelligence illustration"
+          />
         </div>
         <ClearContainer
           title="The first artificial intelligence which analyzes your behavior and reflects the collected information back to you "

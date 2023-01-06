@@ -80,15 +80,17 @@ function Navbar() {
             </Link>
           </span>
           <span
-            className={router.asPath === '/app' ? `${styles.active}` : ''}
+            className={router.asPath === '/products' ? `${styles.active}` : ''}
             onClick={() => setIsOpen(false)}
           >
             <Link
-              href="/app"
-              title="Navbar link to app page"
-              className={router.pathname === '/app' ? `${styles.active}` : ''}
+              href="/products"
+              title="Navbar link to products page"
+              className={
+                router.pathname === '/products' ? `${styles.active}` : ''
+              }
             >
-              App
+              Products
             </Link>
           </span>
           <span
