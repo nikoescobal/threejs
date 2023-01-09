@@ -37,8 +37,18 @@
   margin-top: 16rem;
 }
 
-.content-left h3 {
-  text-align: left;
+.text-left {
+  text-align: center;
+
+  @include lg {
+    text-align: left;
+  }
+}
+
+.text-left h3 {
+  @include lg {
+    text-align: left;
+  }
 }
 
 .content-left a {

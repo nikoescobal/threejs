@@ -32,16 +32,17 @@ function FAQ() {
       } spacing-x max-1920`}
     >
       <div className={styles['content-left']}>
-        <h3>Frequently Asked Questions (FAQs)</h3>
-        <p>Didn&apos;t find an answer to your question?</p>
-        <p>Drop us a line here.</p>
-
-        <a
-          className="button-blue"
-          href="mailto:hello@legacynetwork.io?subject=I+Have+A+Question"
-        >
-          Ask a question &#8594;
-        </a>
+        <div className={styles['text-left']}>
+          <h3>Frequently Asked Questions (FAQs)</h3>
+          <p>Didn&apos;t find an answer to your question?</p>
+          <p>Drop us a line here.</p>
+          <a
+            className="button-blue"
+            href="mailto:hello@legacynetwork.io?subject=I+Have+A+Question"
+          >
+            Ask a question &#8594;
+          </a>
+        </div>
       </div>
 
       <div className={styles['content-right']}>
