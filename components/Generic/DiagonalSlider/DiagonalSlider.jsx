@@ -93,7 +93,7 @@ function DiagonalSlider({ showBenefits }) {
         {
           id: 'r13',
           content: 'Start of the first social-media campaign ',
-          isChecked: false,
+          isChecked: true,
         },
         {
           id: 'r14',

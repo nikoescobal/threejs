@@ -1,0 +1,52 @@
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
+@use '../../../styles/variables' as *;
+
+.main-wrapper {
+  padding: 3rem 0;
+}
+
+.wrapper {
+  text-align: center;
+
+  @include lg {
+    text-align: right;
+    max-width: 65rem;
+    margin-left: auto;
+  }
+}
+
+.wrapper p {
+  text-align: center;
+
+  @include lg {
+    text-align: right;
+  }
+}
+
+.spacing-header {
+  text-align: center;
+  padding: 0 0 0.5rem;
+
+  @include lg {
+    text-align: right;
+  }
+}
+
+.spacing-p {
+  text-align: center;
+  padding: 1rem 0;
+
+  @include lg {
+    text-align: right;
+    // max-width: 75rem;
+    margin-left: auto;
+  }
+}
+
+.link-wrapper {
+  @include lg {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
