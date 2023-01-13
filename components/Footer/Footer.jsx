@@ -73,7 +73,7 @@ function Footer() {
           >
             <div>
               <a
-                href="https://ik.imagekit.io/n8ccbmd8gj/LP-Ger.pdf?ik-sdk-version=javascript-1.4.3&updatedAt=1673594835385"
+                href="https://ik.imagekit.io/n8ccbmd8gj/LP-Eng.pdf?ik-sdk-version=javascript-1.4.3&updatedAt=1673594835629"
                 rel='noreferrer'
                 onClick={handleLitePaperDialogClose}
                 target="_blank"
