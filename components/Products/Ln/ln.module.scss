@@ -60,13 +60,22 @@
   min-width: 12rem;
   max-width: 14rem;
   height: 388px !important;
+
+  @include lg {
+    scale: 1.2;
+  }
+
+  @include xl {
+    scale: 1.5;
+    transform: translateX(-25px);
+  }
 }
 
-.tab-item:last-of-type img {
-  // height: 400px !important;
-  scale: 1.1;
-  transform: translate(7px, 15px);
-}
+// .tab-item:last-of-type img {
+//   // height: 400px !important;
+//   scale: 1.1;
+//   transform: translate(7px, 15px);
+// }
 
 .list {
   padding: 2rem 0 0;
