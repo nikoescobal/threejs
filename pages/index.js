@@ -3,7 +3,7 @@ import Image from 'next/image';
 import ClearContainer from '../components/Generic/ClearContainer/ClearContainer';
 import WavesWrapper from '../components/Generic/WavesWrapper/WavesWrapper';
 import NewsLetter from '../components/Home/NewsLetter/NewsLetter';
-import App from '../components/Home/App/App';
+import Products from '../components/Home/Products/Products';
 import Header from '../components/Home/Header';
 import generics from '../styles/generics.module.scss';
 import styles from '../styles/Home.module.scss';
@@ -27,12 +27,21 @@ export default function Home() {
     >
       <Head>
         <title>Legacy Network</title>
-        <meta name="description" content="Gamified Personal Development Through AI And Blockchain Technology" />
-        <meta name="keywords" content="legacy network, personal development, Gamified Personal Development" />
-        <meta name="google-site-verification" content="DNRoawrY9aPMqVGq30qmpm0GPOhscX3PGfmWd2iJ22k" />
+        <meta
+          name="description"
+          content="Gamified Personal Development Through AI And Blockchain Technology"
+        />
+        <meta
+          name="keywords"
+          content="legacy network, personal development, Gamified Personal Development"
+        />
+        <meta
+          name="google-site-verification"
+          content="DNRoawrY9aPMqVGq30qmpm0GPOhscX3PGfmWd2iJ22k"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
+
       <div className={`${styles['hammer-wrapper']}`}>
         <div className="max-1920">
           {isTablet ? (
@@ -86,7 +95,7 @@ export default function Home() {
         <NewsLetter />
         <CardSection />
       </WavesWrapper>
-      <App />
+      <Products />
       <Roadmap title={'Our Roadmap'} />
       <div
         style={{

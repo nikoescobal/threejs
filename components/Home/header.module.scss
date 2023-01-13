@@ -1,5 +1,5 @@
 @use '../../styles/breakpoints' as *;
-@import '../../styles/variables';
+@use '../../styles/variables' as *;
 
 .container {
   position: relative;
@@ -18,6 +18,14 @@
 .subtitle {
   font-size: 1.5rem;
   color: $light-mode-secondary;
+  font-weight: bold;
+  // text-transform: lowercase;
+  // font-size: 3.125rem;
+  // color: white;
+
+  @include lg {
+    white-space: nowrap;
+  }
 }
 
 .header h4 {
@@ -36,7 +44,6 @@
 }
 
 .logo-img {
-
   @include lg {
     display: none;
   }
@@ -68,12 +75,12 @@
     width: 100%;
     max-width: 80%;
   }
-
 }
 
 .title-wrapper h1 {
   color: white !important;
-  background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+  background: 50% 100% / 50% 50% no-repeat
+    radial-gradient(ellipse at bottom, #fff, transparent, transparent);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -84,13 +91,12 @@
       text-shadow: 0 0 10px white;
     }
   }
-
 }
-
 
 .light .title-wrapper h1 {
   color: $light-mode-secondary !important;
-  background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+  background: 50% 100% / 50% 50% no-repeat
+    radial-gradient(ellipse at bottom, #fff, transparent, transparent);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

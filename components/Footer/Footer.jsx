@@ -132,10 +132,10 @@ function Footer() {
                 LEGACY Network AG
               </span>
               <span href="/" className={`${styles.footer__column__item}`}>
-                Äulestr. 74
+                Industriering 11
               </span>
               <span href="/" className={`${styles.footer__column__item}`}>
-                9490 Vaduz
+                9491 Rugell
               </span>
               <span href="/" className={`${styles.footer__column__item}`}>
                 Liechtenstein

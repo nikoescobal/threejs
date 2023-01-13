@@ -96,6 +96,8 @@
 }
 
 .list-wrapper {
+  // list-style:none ;
+
   @include md {
     margin: 0 auto;
   }

@@ -1,7 +1,8 @@
 @use '../styles/breakpoints' as *;
 @import './variables';
 
-#__next * {}
+#__next * {
+}
 
 * {
   font-family: 'Montserrat', serif;
@@ -24,8 +25,9 @@
   color: $light-mode-secondary;
 }
 
-#__next>.light,
-#__next>.light a {}
+#__next > .light,
+#__next > .light a {
+}
 
 img {
   width: 100% !important;
@@ -146,7 +148,8 @@ button {
   opacity: 0.1;
 }
 
-.gradient img {}
+.gradient img {
+}
 
 .gradient span {
   overflow: visible !important;
@@ -158,7 +161,7 @@ button {
   overflow: hidden;
 }
 
-.security>div {
+.security > div {
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin-bottom: 4rem;
@@ -166,7 +169,7 @@ button {
   z-index: 5;
 }
 
-.security>img:last-of-type {
+.security > img:last-of-type {
   position: absolute;
   top: 50vw;
   right: -50vw;
@@ -196,7 +199,7 @@ button {
   color: white !important;
 }
 
-#__next>.light .apexcharts-legend-text {
+#__next > .light .apexcharts-legend-text {
   color: $light-mode-text-color !important;
 }
 
@@ -212,7 +215,9 @@ button {
   background: transparent !important;
 }
 
-.content-wrapper.light .MuiAccordionSummary-content.Mui-expanded .MuiTypography-root {
+.content-wrapper.light
+  .MuiAccordionSummary-content.Mui-expanded
+  .MuiTypography-root {
   color: $light-mode-secondary !important;
 }
 
@@ -285,7 +290,7 @@ button {
   max-width: 12rem !important;
 }
 
-.app-preview>div div {
+.app-preview > div div {
   background: transparent !important;
 }
 
@@ -317,11 +322,13 @@ button {
 }
 
 @media (min-width: 1024px) {
-  .MuiTabs-flexContainer button {}
+  .MuiTabs-flexContainer button {
+  }
 }
 
 @media (min-width: 1280px) {
-  .MuiTabs-flexContainer button {}
+  .MuiTabs-flexContainer button {
+  }
 }
 
 .st1 {
@@ -392,4 +399,33 @@ button {
 .walletconnect-modal__header p {
   position: absolute;
   left: 7%;
+}
+
+.list:not(.success)::before {
+  content: '\2022'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  font-size: 1rem;
+  color: $ln-blue; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.list::before {
+  color: $light-mode-secondary;
+}
+
+.slide-content-wrapper li {
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  font-family: 'Montserrat', serif;
+  position: relative;
+}
+
+.slide-content-wrapper li:last-of-type {
+  padding: 1.3rem 2rem;
+
+  @include md {
+    padding: 1.5rem 2rem;
+  }
 }

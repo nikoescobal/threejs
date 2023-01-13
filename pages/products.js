@@ -1,28 +1,28 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import React from 'react';
-import Questions from '../components/App/Questions/Questions';
-import Ln from '../components/App/Ln/Ln';
-import Benefits from '../components/App/Benefits/Benefits';
+import Questions from '../components/Products/Questions/Questions';
+import Ln from '../components/Products/Ln/Ln';
+import Benefits from '../components/Products/Benefits/Benefits';
 import { useMediaQuery } from '@mui/material';
-import Features from '../components/App/Features/Features';
-import DataProtection from '../components/App/DataProtection/DataProtection';
-import Download from '../components/App/Download/Download';
+import Features from '../components/Products/Features/Features';
+import DataProtection from '../components/Products/DataProtection/DataProtection';
+import Download from '../components/Products/Download/Download';
 import GenericHeader from '../components/Generic/Header/GenericHeader';
 import Character from '../public/nft/char-with-iphone.png';
 import Roadmap from '../components/Generic/Roadmap/Roadmap';
 import Waves from '../public/backgrounds/waves-5.png';
 import WaveLines from '../components/Generic/WaveLines/WaveLines';
-import styles from '../components/Home/App/app.module.scss';
+import styles from '../components/Home/Products/products.module.scss';
 import Script from 'next/script';
 
-function App() {
+function Products() {
   const isTablet = useMediaQuery('(min-width: 768px)');
 
   return (
     <div>
       <Head>
-        <title>App</title>
+        <title>Products</title>
         <meta name="description" content="Legacy Network Application" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -41,7 +41,7 @@ function App() {
               }}
             />
           }
-          title="The LEGACY NETWORK APP"
+          title="LEGACY NETWORK PRODUCTS"
           subtitle={'The future of personal development'}
         />
       </div>
@@ -56,4 +56,4 @@ function App() {
   );
 }
 
-export default App;
+export default Products;

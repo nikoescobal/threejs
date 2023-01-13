@@ -17,7 +17,7 @@ function Questions() {
       className={`${styles.section} ${!isDarkMode ? `${styles.light}` : ''}`}
     >
       <div className={`${styles['spacing-y']} spacing-x max-1920`}>
-      {isTablet ? (
+        {isTablet ? (
           <Parallax speed={90} className={`${styles.staff}`}>
             <div>
               <Image src={Staff} alt="staff" draggable="false" />

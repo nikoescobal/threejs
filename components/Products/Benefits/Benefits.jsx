@@ -4,7 +4,11 @@ import useStore from '../../../store/store';
 function Benefits() {
   const { isDarkMode } = useStore();
   return (
-    <section className={`${styles.wrapper} ${!isDarkMode ? `${styles.light}` : ''} spacing-x max-1920`}>
+    <section
+      className={`${styles.wrapper} ${
+        !isDarkMode ? `${styles.light}` : ''
+      } spacing-x max-1920`}
+    >
       <div className={`${styles.title}`}>
         <h3>Your Benefits</h3>
         <p>
@@ -68,9 +72,7 @@ function Benefits() {
           </div>
           <ul className={styles['list-wrapper']}>
             <li>Notice problems early and make the necessary adjustments</li>
-            <li>
-              Enjoy to see your growth and the growth of your character
-            </li>
+            <li>Enjoy to see your growth and the growth of your character</li>
             <li>Keep track of your progress in the statistics area</li>
           </ul>
         </div>
