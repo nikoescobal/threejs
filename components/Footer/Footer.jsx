@@ -1,36 +1,37 @@
-/* eslint-disable no-unused-vars */
 import TwitterIcon from '@mui/icons-material/Twitter';
-import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TelegramIcon from '@mui/icons-material/Telegram';
-import TikTokIcon from '../../public/logos/tiktok.svg';
-import YouTubeIcon from '@mui/icons-material/YouTube';
 import RedditIcon from '@mui/icons-material/Reddit';
 import useStore from '../../store/store';
 import Link from 'next/link';
 import styles from './footer.module.scss';
 import Logo from '../../public/logo-small.webp';
-import LogoContainer from '../../public/footer/logo-container.svg';
-import RightContainer from '../../public/footer/rights-container.svg';
-import Image from 'next/image';
 import { LinkedIn } from '@mui/icons-material';
 import { useState } from 'react';
-import SimpleDialog from '../Generic/SimpleDialog/SimpleDialog';
-import { useEffect } from 'react';
+import Dialog from '../Generic/SimpleDialog/Dialog';
 
 function Footer() {
   const date = new Date();
   const { isDarkMode } = useStore((state) => state);
-  const [openDialog, setOpenDialog] = useState(false);
+  const [openWhitePaperDialog, setOpenWhitePaperDialog] = useState(false);
+  const [openLitePaperDialog, setOpenLitePaperDialog] = useState(false);
   const [open, setOpen] = useState(false);
   const [selectedValue, setSelectedValue] = useState('');
 
-  const handleDialogOpen = () => {
-    setOpenDialog(true);
+  const handleWhitePaperDialogOpen = () => {
+    setOpenWhitePaperDialog(true);
   };
 
-  const handleDialogClose = () => {
-    setOpenDialog(false);
+  const handleWhitePaperDialogClose = () => {
+    setOpenWhitePaperDialog(false);
+  };
+
+  const handleLitePaperDialogOpen = () => {
+    setOpenLitePaperDialog(true);
+  };
+
+  const handleLitePaperDialogClose = () => {
+    setOpenLitePaperDialog(false);
   };
 
   return (
@@ -39,16 +40,16 @@ function Footer() {
     >
       <section>
         <div className={`${styles.footer__main}`}>
-          <SimpleDialog
+          <Dialog
             selectedValue={selectedValue}
-            open={openDialog}
-            onClose={() => handleDialogClose()}
+            open={openWhitePaperDialog}
+            onClose={() => handleWhitePaperDialogClose()}
             title="Choose language"
           >
             <div>
               <a
                 href="/pdf/WP-Eng.pdf"
-                onClick={handleDialogClose}
+                onClick={handleWhitePaperDialogClose}
                 target="_blank"
                 className={`${styles.footer__column__item} button-blue`}
               >
@@ -56,14 +57,41 @@ function Footer() {
               </a>
               <a
                 href="/pdf/WP-Ger.pdf"
-                onClick={handleDialogClose}
+                onClick={handleWhitePaperDialogClose}
                 target="_blank"
                 className={`${styles.footer__column__item} button-blue`}
               >
                 German
               </a>
             </div>
-          </SimpleDialog>
+          </Dialog>
+          <Dialog
+            selectedValue={selectedValue}
+            open={openLitePaperDialog}
+            onClose={() => handleLitePaperDialogClose()}
+            title="Choose language"
+          >
+            <div>
+              <a
+                href="https://ik.imagekit.io/n8ccbmd8gj/LP-Eng.pdf?ik-sdk-version=javascript-1.4.3&updatedAt=1673594835629"
+                rel='noreferrer'
+                onClick={handleLitePaperDialogClose}
+                target="_blank"
+                className={`${styles.footer__column__item} button-blue`}
+              >
+                English
+              </a>
+              <a
+                href="https://ik.imagekit.io/n8ccbmd8gj/LP-Ger.pdf?ik-sdk-version=javascript-1.4.3&updatedAt=1673594835385"
+                rel='noreferrer'
+                onClick={handleLitePaperDialogClose}
+                target="_blank"
+                className={`${styles.footer__column__item} button-blue`}
+              >
+                German
+              </a>
+            </div>
+          </Dialog>
           <div className={`${styles.footer__column} ${styles.left}`}>
             <div className={`${styles.footer__column__items__wrapper}`}>
               <Link href="/" className={`${styles.footer__column__item}`}>
@@ -106,8 +134,11 @@ function Footer() {
               >
                 Smart Contract
               </a>
-              <button type="button" onClick={handleDialogOpen}>
+              <button type="button" onClick={handleWhitePaperDialogOpen}>
                 Whitepaper
+              </button>
+              <button type="button" onClick={handleLitePaperDialogOpen}>
+                Litepaper
               </button>
               {/* <a href="/pdf/WP-Eng.pdf" target="_blank" className={`${styles.footer__column__item}`}>
                 Whitepaper
