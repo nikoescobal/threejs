@@ -38,7 +38,7 @@ function Products() {
         </div>
         <ClearContainer
           title="A whole ecosystem designed to support you in building your dream life"
-          to="/app"
+          to="/products"
           urlTitle={'Link to Products page'}
           linkText="Read More"
           reducedPadding
@@ -64,7 +64,7 @@ function Products() {
         </div>
         <ClearContainer
           title="The first artificial intelligence which analyzes your behavior and reflects the collected information back to you "
-          to="/app"
+          to="/products"
           urlTitle={'Link to Products page'}
           linkText="Read More"
           reducedPadding
