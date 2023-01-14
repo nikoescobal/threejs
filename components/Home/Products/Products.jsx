@@ -8,7 +8,7 @@ import Image from 'next/image';
 import useStore from '../../../store/store';
 import WaveLines from '../../Generic/WaveLines/WaveLines';
 
-function App() {
+function Products() {
   const { isDarkMode } = useStore();
 
   return (
@@ -39,7 +39,7 @@ function App() {
         <ClearContainer
           title="A whole ecosystem designed to support you in building your dream life"
           to="/app"
-          urlTitle={'Link to App page'}
+          urlTitle={'Link to Products page'}
           linkText="Read More"
           reducedPadding
         >
@@ -65,7 +65,7 @@ function App() {
         <ClearContainer
           title="The first artificial intelligence which analyzes your behavior and reflects the collected information back to you "
           to="/app"
-          urlTitle={'Link to App page'}
+          urlTitle={'Link to Products page'}
           linkText="Read More"
           reducedPadding
         >
@@ -81,4 +81,4 @@ function App() {
   );
 }
 
-export default App;
+export default Products;
