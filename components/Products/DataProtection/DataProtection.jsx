@@ -38,7 +38,7 @@ function DataProtection() {
         <ClearContainer
           isComingSoon
           title="Data Protection"
-          to="/app"
+          to="/products"
           linkText="Read More"
           reducedPadding
         >

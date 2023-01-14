@@ -74,7 +74,7 @@ function Footer() {
             <div>
               <a
                 href="https://ik.imagekit.io/n8ccbmd8gj/LP-Eng.pdf?ik-sdk-version=javascript-1.4.3&updatedAt=1673594835629"
-                rel='noreferrer'
+                rel="noreferrer"
                 onClick={handleLitePaperDialogClose}
                 target="_blank"
                 className={`${styles.footer__column__item} button-blue`}
@@ -83,7 +83,7 @@ function Footer() {
               </a>
               <a
                 href="https://ik.imagekit.io/n8ccbmd8gj/LP-Ger.pdf?ik-sdk-version=javascript-1.4.3&updatedAt=1673594835385"
-                rel='noreferrer'
+                rel="noreferrer"
                 onClick={handleLitePaperDialogClose}
                 target="_blank"
                 className={`${styles.footer__column__item} button-blue`}
@@ -97,8 +97,11 @@ function Footer() {
               <Link href="/" className={`${styles.footer__column__item}`}>
                 Home
               </Link>
-              <Link href="/app" className={`${styles.footer__column__item}`}>
-                App
+              <Link
+                href="/products"
+                className={`${styles.footer__column__item}`}
+              >
+                Products
               </Link>
               <Link href="/token" className={`${styles.footer__column__item}`}>
                 Token

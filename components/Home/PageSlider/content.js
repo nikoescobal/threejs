@@ -12,10 +12,10 @@ const content = [
     urlTitle: 'Link to Personal Development page',
   },
   {
-    title: 'Legacy Network app',
+    title: 'Legacy Network Products',
     body: 'Our artificial intelligence (AI) evaluates information about the user and utilizes it to deliver individual and effective solutions. Over time, the AI turns into a personal coach which knows more about the user, than he knows about himself.',
-    url: '/app',
-    urlTitle: 'Link to App page',
+    url: '/Products',
+    urlTitle: 'Link to Products page',
   },
   {
     title: 'Legacy Token',
@@ -26,8 +26,8 @@ const content = [
   {
     title: 'Security',
     body: "Legacy Network is the first technology company to use users' data and psychology exclusively for them, not against them. Unlike various Big Data corporations, we will not monetize data and thus will not make our platforms available for serving ads.",
-    url: '/app',
-    urlTitle: 'Link to App page',
+    url: '/Products',
+    urlTitle: 'Link to Products page',
   },
 ];
 
