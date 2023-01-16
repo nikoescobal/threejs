@@ -40,14 +40,14 @@
   gap: 2rem;
   justify-content: center;
 
-  @include breakpoint(512px) {
-    grid-template-columns: 1fr 1fr;
-  }
+  // @include breakpoint(512px) {
+  //   grid-template-columns: 1fr 1fr;
+  // }
 
-  @include lg {
-    grid-template-columns: 1fr 1fr 1fr;
-    position: relative;
-  }
+  // @include lg {
+  //   grid-template-columns: 1fr 1fr 1fr;
+  //   position: relative;
+  // }
 }
 
 .card {
@@ -58,15 +58,16 @@
   background: $transparent-darker;
   backdrop-filter: blur(8px);
   // backdrop-filter: blur(7.5px);
-  border-radius: 20px;
+  border-radius: 8px;
+  // border-radius: 20px;
   min-width: 10rem;
   position: relative;
   border: solid 1px $ln-blue;
   // box-shadow: -10px 10px 10px rgba($color: $ln-blue, $alpha: 0.25);
 
-  @include lg {
-    position: relative;
-  }
+  // @include lg {
+  //   position: relative;
+  // }
 }
 
 .light .card {
@@ -119,90 +120,109 @@
 
 .card p {
   font-size: clamp(0.75rem, 5vw + 1rem, 0.75rem);
-  margin-top: 2rem;
+  margin-top: 0.5rem;
+  // margin-top: 2rem;
 }
 
 .connector {
   display: none;
+  // display: block;
+  position: absolute;
+  z-index: 1;
 
-  @include lg {
+  // @include lg {
+  //   display: block;
+  //   position: absolute;
+  //   z-index: 1;
+  //   max-width: 8.5rem;
+  // }
+
+  // @include xl {
+  //   max-width: 10rem;
+  // }
+}
+
+// .connector:nth-of-type(1) {
+//   top: 5%;
+//   left: 27%;
+//   max-width: 10rem;
+
+// @include xl {
+//   left: 29%;
+// }
+// }
+
+// .connector:nth-of-type(2) {
+// bottom: -5%;
+// bottom: -1%;
+// left: 58%;
+// left: 55%;
+// max-width: 8rem;
+// max-width: 10rem;
+
+// @include xl {
+//   left: 57.5%;
+//   max-width: 11rem;
+// }
+// }
+
+// .connector:nth-of-type(3) {
+//   top: 1%;
+//   right: 12%;
+//   transform: rotate(-135deg);
+// }
+
+@media only screen and (min-width: 512px) {
+  .cards-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1120px) {
+  .cards-wrapper {
+    // grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: relative;
+  }
+
+  .card {
+    position: relative;
+  }
+
+  .connector {
     display: block;
     position: absolute;
     z-index: 1;
-    max-width: 8.5rem;
   }
 
-  @include xl {
+  .connector:nth-of-type(1) {
+    top: 5%;
+    // left: 27%;
+    left: 20%;
     max-width: 10rem;
   }
-}
 
-.connector:nth-of-type(1) {
-  top: 5%;
-  left: 27%;
+  .connector:nth-of-type(2) {
+    bottom: -1%;
+    // left: 55%;
+    left: 41%;
+    max-width: 10rem;
 
-  @include xl {
-    left: 29%;
+    // @include lg {
+    //   left: 57%;
+    // }
+
+    // @include xl {
+    //   left: 61%;
+    // }
+  }
+
+  .connector:nth-of-type(3) {
+    bottom: -5%;
+    right: 25%;
+    // top: 1%;
+    // right: 12%;
+    max-width: 10rem;
+    transform: rotate(-135deg);
   }
 }
-
-.connector:nth-of-type(2) {
-  bottom: -5%;
-  left: 58%;
-  max-width: 8rem;
-
-  @include xl {
-    left: 57.5%;
-    max-width: 11rem;
-  }
-}
-
-.connector:nth-of-type(3) {
-  top: 1%;
-  right: 12%;
-  transform: rotate(-135deg);
-}
-
-// @media only screen and (min-width: 1120px) {
-//   .cards-wrapper {
-//     grid-template-columns: 1fr 1fr 1fr;
-//     position: relative;
-//   }
-
-//   .card {
-//     position: relative;
-//   }
-
-//   .connector {
-//     display: block;
-//     position: absolute;
-//     z-index: 1;
-//   }
-
-//   .connector:nth-of-type(1) {
-//     top: 5%;
-//     left: 27%;
-//     max-width: 10rem;
-//   }
-
-//   .connector:nth-of-type(2) {
-//     bottom: -1%;
-//     left: 56%;
-//     max-width: 10rem;
-
-//     @include lg {
-//       left: 57%;
-//     }
-
-//     @include xl {
-//       left: 61%;
-//     }
-//   }
-
-//   .connector:nth-of-type(3) {
-//     top: 1%;
-//     right: 12%;
-//     max-width: 10rem;
-//     transform: rotate(-135deg);
-//   }
-// }

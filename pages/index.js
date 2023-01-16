@@ -3,7 +3,8 @@ import Image from 'next/image';
 import ClearContainer from '../components/Generic/ClearContainer/ClearContainer';
 import WavesWrapper from '../components/Generic/WavesWrapper/WavesWrapper';
 import NewsLetter from '../components/Home/NewsLetter/NewsLetter';
-import Products from '../components/Home/Products/Products';
+import App from '../components/Home/App/App';
+// import Products from '../components/Home/Products/Products';
 import Header from '../components/Home/Header';
 import generics from '../styles/generics.module.scss';
 import styles from '../styles/Home.module.scss';
@@ -95,7 +96,8 @@ export default function Home() {
         <NewsLetter />
         <CardSection />
       </WavesWrapper>
-      <Products />
+      <App />
+      {/* <Products /> */}
       <Roadmap title={'Our Roadmap'} />
       <div
         style={{

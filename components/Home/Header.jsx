@@ -2,8 +2,8 @@ import styles from './header.module.scss';
 import generics from '../../styles/generics.module.scss';
 import Logo from '../../public/logo-cropped.webp';
 import Image from 'next/image';
-// import PageSlider from './PageSlider/PageSlider';
-import HeroText from './HeroText/HeroText';
+import PageSlider from './PageSlider/PageSlider';
+// import HeroText from './HeroText/HeroText';
 import useStore from '../../store/store';
 import Gradient from '../Generic/Gradient/Gradient';
 import Waves from '../../public/backgrounds/waves-5.png';
@@ -67,13 +67,14 @@ function Header() {
             </h1>
           </div>
           <h4 className={styles.subtitle}>
-            Increase your mental sharpness, confidence & wellbeing.
+            {/* Increase your mental sharpness, confidence & wellbeing. */}
+            Gamified personal development through AI and blockchain technology
           </h4>
-          <h4>Daily training to optimise your life.</h4>
+          {/* <h4>Daily training to optimise your life.</h4> */}
         </div>
       </section>
-      {/* <PageSlider /> */}
-      <HeroText />
+      <PageSlider />
+      {/* <HeroText /> */}
     </div>
   );
 }
