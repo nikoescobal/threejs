@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import ClearContainer from '../../Generic/ClearContainer/ClearContainer';
-import styles from './app.module.scss';
+import styles from './products.module.scss';
 import generics from '../../../styles/generics.module.scss';
 import iPhone from '../../../public/illustrations/iPhone.png';
 import Waves from '../../../public/backgrounds/waves-2.png';
@@ -8,7 +8,7 @@ import Image from 'next/image';
 import useStore from '../../../store/store';
 import WaveLines from '../../Generic/WaveLines/WaveLines';
 
-function App() {
+function Products() {
   const { isDarkMode } = useStore();
 
   return (
@@ -38,8 +38,8 @@ function App() {
         </div>
         <ClearContainer
           title="A whole ecosystem designed to support you in building your dream life"
-          to="/app"
-          urlTitle={'Link to App page'}
+          to="/products"
+          urlTitle={'Link to Products page'}
           linkText="Read More"
           reducedPadding
         >
@@ -64,8 +64,8 @@ function App() {
         </div>
         <ClearContainer
           title="The first artificial intelligence which analyzes your behavior and reflects the collected information back to you "
-          to="/app"
-          urlTitle={'Link to App page'}
+          to="/products"
+          urlTitle={'Link to Products page'}
           linkText="Read More"
           reducedPadding
         >
@@ -81,4 +81,4 @@ function App() {
   );
 }
 
-export default App;
+export default Products;
