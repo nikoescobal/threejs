@@ -1,6 +1,8 @@
 import content from './content.js';
 import styles from './legacymethods.module.scss';
 import MethodCard from './MethodCard';
+import Arrow from '../../../public/icons/dotted-arrow.svg';
+import { Diversity3 } from '@mui/icons-material';
 
 const LegacyMethods = () => {
   return (
@@ -26,21 +28,44 @@ const LegacyMethods = () => {
         <div className={styles['divider-wrapper']}>
           <div className={styles['divider-content']}>
             <div className={styles['divider-indicator']}>
+              <div className={styles['arrow-left']}>
+                <img src={Arrow.src} alt="dotted arrow" />
+              </div>
               <span></span>
             </div>
             <div className={styles['divider-indicator']}>
+              <div className={styles['arrow-right']}>
+                <img src={Arrow.src} alt="dotted arrow" />
+              </div>
+
               <span></span>
             </div>
             <div className={styles['divider-indicator']}>
+              <div className={styles['arrow-left']}>
+                <img src={Arrow.src} alt="dotted arrow" />
+              </div>
+
               <span></span>
             </div>
             <div className={styles['divider-indicator']}>
+              <div className={styles['arrow-right']}>
+                <img src={Arrow.src} alt="dotted arrow" />
+              </div>
+
               <span></span>
             </div>
             <div className={styles['divider-indicator']}>
+              <div className={styles['arrow-left']}>
+                <img src={Arrow.src} alt="dotted arrow" />
+              </div>
+
               <span></span>
             </div>
             <div className={styles['divider-indicator']}>
+              <div className={styles['arrow-right']}>
+                <img src={Arrow.src} alt="dotted arrow" />
+              </div>
+
               <span></span>
             </div>
           </div>
