@@ -1,0 +1,36 @@
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
+@use '../../../styles/variables' as *;
+
+.method-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #000000;
+  border-radius: 8px;
+  border: solid 1px $ln-blue;
+  padding: 1.5rem;
+  height: $card-height;
+  width: 100%;
+  gap: 1rem;
+
+  @include lg {
+    max-width: 510px;
+  }
+}
+
+// .method-card:nth-child(even) {
+//   @include lg {
+//     transform: translateY(6.5rem);
+//   }
+//   // margin-top: 5rem;
+// }
+
+// .method-bullets {
+//   list-style-type: none;
+// }
+
+.method-title {
+  font-size: 30px;
+  // padding-bottom: 1rem;
+}
