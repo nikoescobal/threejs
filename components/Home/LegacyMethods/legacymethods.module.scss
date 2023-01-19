@@ -62,6 +62,20 @@
   }
 }
 
+.right {
+  @include lg {
+    background-position: left;
+    background-image: url('../../../public/icons/border-gradient-left.svg');
+  }
+}
+
+.left {
+  @include lg {
+    background-position: right;
+    background-image: url('../../../public/icons/border-gradient-right.svg');
+  }
+}
+
 // .method-card {
 //   border: 22px solid yellow;
 //   display: flex;

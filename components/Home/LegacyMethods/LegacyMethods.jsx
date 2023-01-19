@@ -19,6 +19,7 @@ const LegacyMethods = () => {
         <div className={styles['left-content']}>
           {content.slice(0, 3).map((method, index) => (
             <MethodCard
+              className={styles['left']}
               key={index}
               title={method.title}
               description={method.description}
@@ -74,6 +75,7 @@ const LegacyMethods = () => {
         <div className={styles['right-content']}>
           {content.slice(3, 6).map((method, index) => (
             <MethodCard
+              className={styles['right']}
               key={index}
               title={method.title}
               description={method.description}

@@ -3,30 +3,75 @@
 @use '../../../styles/variables' as *;
 
 .method-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  position: relative;
+  height: 224px;
   // background: #000000;
-  background: linear-gradient(#000000 70%, #000000 70%) padding-box,
-    linear-gradient(90deg, #1960ea, #000000) border-box;
-  border-radius: 8px;
-  border-style: solid;
-  border-color: transparent;
   // border: solid 1px $ln-blue;
-  padding: 1.5rem;
-  height: $card-height;
+  // background-image: url('../../../public/icons/border-gradient-right.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  // background-position: right;
   width: 100%;
-  gap: 1rem;
+  min-height: 224px;
 
   @include lg {
+    min-height: $card-height;
     max-width: 510px;
+    padding: 17px;
+    max-height: $card-height;
   }
 }
 
-.method-card:nth-child(odd) {
-  background: linear-gradient(#000000 30%, #000000 30%) padding-box,
-    linear-gradient(270deg, #1960ea, #000000) border-box !important;
+// .right-content .method-card:nth-last-of-type(even) {
+//   background-position: left;
+//   background-image: url('../../../public/icons/border-gradient-left.svg');
+// }
+
+// .left-content .method-card {
+//   background-position: right;
+//   background-image: url('../../../public/icons/border-gradient-right.svg');
+// }
+
+.inner-content {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  padding: 1.5rem;
+  // gap: 1rem;
+  width: 100%;
+  height: 100%;
+  border-width: 0.5px;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: transparent;
+  background: linear-gradient(#000000 70%, #000000 70%) padding-box,
+    linear-gradient(to bottom left, #1960ea, #ffffff) border-box;
 }
+
+// .card-border {
+//   position: relative;
+// }
+
+.image-border {
+  position: absolute;
+  height: 259px;
+  transform: translate(61px, -27px) rotate(180deg);
+}
+
+// .card-border img:nth-child(odd) {
+//   position: absolute;
+//   height: 259px;
+//   background: red;
+//   transform: translate(61px, -27px);
+// }
+
+// .image-border:nth-child(even) {
+// }
+
+// .method-card:nth-child(odd) {
+//   background: linear-gradient(#000000 30%, #000000 30%) padding-box,
+//     linear-gradient(270deg, #1960ea, #000000) border-box !important;
+// }
 
 // .method-card:nth-child(even) {
 //   @include lg {
@@ -48,4 +93,10 @@
     font-size: 30px;
   }
   // padding-bottom: 1rem;
+}
+
+.method-description {
+  @include lg {
+    line-height: 1.4;
+  }
 }

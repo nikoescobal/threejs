@@ -11,43 +11,97 @@
   padding-bottom: 2rem;
 }
 
-.logos-wrapper {
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  gap: 2rem 2rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  grid-template-columns: 1fr;
-  grid-template-columns: repeat(2, 1fr);
-  background-image: url('../../../public/backgrounds/line1.svg');
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-size: cover;
+// .logos-wrapper {
+//   display: grid;
+//   align-items: center;
+//   justify-items: center;
+//   gap: 2rem 2rem;
+//   padding-top: 2rem;
+//   padding-bottom: 2rem;
+//   grid-template-columns: 1fr;
+//   grid-template-columns: repeat(2, 1fr);
+//   background-image: url('../../../public/backgrounds/line1.svg');
+//   background-position: bottom center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
 
-  @include lg {
-    grid-template-columns: repeat(4, 1fr);
-    background-image: url('../../../public/backgrounds/waves-updated.svg');
-    background-size: cover;
-    background-position: center;
+//   @include lg {
+//     grid-template-columns: repeat(4, 1fr);
+//     background-image: url('../../../public/backgrounds/waves-updated.svg');
+//     background-size: cover;
+//     background-position: center;
+//   }
+// }
+
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
   }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+/*  Styling  */
+.slider {
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.slide a {
+  height: 50px;
+  width: 50px;
+}
+
+.slider:before,
+.slider:after {
+  // background: linear-gradient(
+  //   to right,
+  //   rgba(255, 255, 255, 1) 0%,
+  //   rgba(255, 255, 255, 0) 100%
+  // );
+  // content: '';
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider:after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider:before {
+  left: 0;
+  top: 0;
+}
+.slide-track {
+  animation: scroll 20s linear infinite;
+  display: flex;
+  width: 100px;
+  // width: calc(250px * 14);
+}
+
+.slide {
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .partners.light .logos-wrapper {
   // background: rgba($color: $light-mode-secondary, $alpha: 0.1);
 }
 
-.logos-wrapper div {
+.slider div {
   max-width: clamp(7rem, 10vw + 1rem, 10rem);
   width: 100%;
-}
-
-.logos-wrapper div a > span {
-
-  max-height: 5rem !important;
-  @include md {
-
-  }
 }
 
 .img-wrapper {

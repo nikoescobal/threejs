@@ -166,7 +166,7 @@ function Footer() {
                 Industriering 11
               </span>
               <span href="/" className={`${styles.footer__column__item}`}>
-                9491 Rugell
+                9491 Ruggell
               </span>
               <span href="/" className={`${styles.footer__column__item}`}>
                 Liechtenstein
