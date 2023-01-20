@@ -1,5 +1,6 @@
 @use '../../../styles/breakpoints' as *;
-@import '../../../styles/variables';
+@use '../../../styles/colors' as *;
+@use '../../../styles/variables';
 
 .partners {
   position: relative;
@@ -45,6 +46,8 @@
 
 /*  Styling  */
 .slider {
+  padding: 9rem;
+  background: $dark-gray;
   height: auto;
   margin: auto;
   overflow: hidden;
@@ -100,7 +103,7 @@
 }
 
 .slider div {
-  max-width: clamp(7rem, 10vw + 1rem, 10rem);
+  // max-width: clamp(7rem, 10vw + 1rem, 10rem);
   width: 100%;
 }
 

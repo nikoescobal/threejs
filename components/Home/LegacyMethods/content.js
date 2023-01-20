@@ -56,7 +56,7 @@ const content = [
   {
     title: 'Understand the Basics of Personal Development.',
     description:
-      'Understand each pillar & what they mean. Learn what is currently taught. Understand the overall PD space.',
+      'Understand each pillar & what they mean. Understand the overall PD space.',
   },
   {
     title: 'Understand Yourself.',
