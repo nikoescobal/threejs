@@ -1,20 +1,16 @@
-/* eslint-disable max-len */
-/* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
-import { useMediaQuery } from '@mui/material';
 import { useState } from 'react';
-// import { Link, useLocation } from 'react-router-dom';
 import { useRouter } from 'next/router';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import useScrollDirection from '../../hooks/useScrollDirection';
 import useStore from '../../store/store';
 import Link from 'next/link';
 import styles from './navbar.module.scss';
-import Image from 'next/image';
 import LinkHover from '../Generic/LinkHover/LinkHover';
 import ComingSoon from '../Generic/ComingSoon/ComingSoon';
-// import { ConnectWallet } from '@thirdweb-dev/react';
-// import { ConnectWallet } from '../Wallet/Wallet';
+import LanguageIcon from '@mui/icons-material/Language';
+import { IconButton, MenuItem, MenuList } from '@mui/material';
+import { useCallback } from 'react';
+import Dialog from '../Generic/SimpleDialog/Dialog';
 
 function Hamburger({ onClick, className }) {
   return (
@@ -30,13 +26,41 @@ function Hamburger({ onClick, className }) {
   );
 }
 
+const selectLanguageText = {
+  'en': 'Select a Language',
+  'de': 'Wähle eine Sprache'
+}
+
+const languages = {
+  'en': [
+    {
+      locale: 'en',
+      language: 'English'
+    },
+    {
+      locale: 'de',
+      language: 'German'
+    }
+  ],
+  'de': [
+    {
+      locale: 'en',
+      language: 'Englisch'
+    },
+    {
+      locale: 'de',
+      language: 'Deutsch'
+    }
+  ],
+}
+
 function Navbar() {
-  // const { pathname } = useLocation();
   const scrollDirection = useScrollDirection();
   const { isDarkMode, toggleDarkMode } = useStore((state) => state);
   const [isOpen, setIsOpen] = useState(false);
-  // const isDesktopOrLaptop = useMediaQuery('(min-width: 1024px)');
   const router = useRouter();
+  const { locales, locale, asPath } = router;
+  const [displayLanguages, setDisplayLanguages] = useState(false);
 
   const toggle = () => {
     toggleDarkMode();
@@ -46,6 +70,21 @@ function Navbar() {
     setIsOpen(!isOpen);
   };
 
+  const toggleLanguageList = () => {
+    setDisplayLanguages(!displayLanguages);
+  }
+
+  const switchToLocale = useCallback((locale) => {
+    const path = router.asPath;
+    return router.push(path, path, { locale, scroll: false });
+  }, [router]);
+
+  const switchLanguage = useCallback(async (option) => {
+      const locale = option;
+      setDisplayLanguages(false);
+      await switchToLocale(locale);
+    }, [switchToLocale]);
+
   return (
     <>
       {/* { !pathname.includes('blogs') && (
@@ -54,6 +93,21 @@ function Navbar() {
         onClick={toggleMenu}
         className={`${isDarkMode ? '' : `${styles.light}`}`}
       />
+      <Dialog
+        open={displayLanguages}
+        onClose={() => setDisplayLanguages(false)}
+        title={selectLanguageText[locale]}
+      >
+        <MenuList className={styles.menu}>
+          {
+            languages[locale].map((languageSet) => (
+              <MenuItem onClick={(e) => switchLanguage(languageSet.locale)} key={languageSet.language}>
+                <span className={styles.language}>{languageSet.language}</span>
+              </MenuItem>
+            ))
+          }
+        </MenuList>
+      </Dialog>
       <nav
         className={`${styles.navbar} ${isDarkMode ? '' : `${styles.light}`} ${
           isOpen ? `${styles.open}` : ''
@@ -137,14 +191,9 @@ function Navbar() {
               About Us
             </Link>
           </span>
-          {/* <span className={router.asPath === "/security" ? `${styles.active}` : ""} onClick={() => setIsOpen(false)}>
-                <Link href="/security" className={router.pathname === "/security" ? `${styles.active}` : ""}>Security</Link>
-              </span> */}
           <span
             className={router.asPath === '/blogs' ? `${styles.active}` : ''}
           >
-            {/* <LinkHover hoverText={'Coming Soon'}>Blog</LinkHover> */}
-
             <a
               href="https://blog.legacynetwork.io/"
               className={
@@ -157,7 +206,6 @@ function Navbar() {
             >
               Blog
             </a>
-            {/* <Link href="/" className={router.pathname === "/" ? `${styles.active}` : ""}>Blog</Link> */}
           </span>
           <div className={styles['boards-wrapper']}>
             <span className={`${isDarkMode ? '' : `${styles.light}`}`}>
@@ -191,9 +239,28 @@ function Navbar() {
               Win
             </ComingSoon>
           </div>
-          {/* <div>
-            <ConnectWallet className={`${styles['wallet']} outlined`} />
-          </div> */}
+          <div className={styles.languages}>
+            <IconButton
+              type="button"
+              onClick={toggleLanguageList}
+              className={`${styles['dark-mode-toggle']} ${
+                isDarkMode ? '' : `${styles.light}`
+              }`}
+            >
+              <LanguageIcon />
+            </IconButton>
+            {/* {
+              displayLanguages
+                ? <MenuList className={styles.menu}>
+                    {
+                      languages[locale].map((languageSet) => (
+                        <MenuItem onClick={(e) => switchLanguage(languageSet.locale)} key={languageSet.language}>{languageSet.language}</MenuItem>
+                      ))
+                    }
+                  </MenuList>
+                : null
+            } */}
+          </div>
           <button
             type="button"
             onClick={toggle}

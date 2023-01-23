@@ -1,3 +1,4 @@
+@use '../../styles/colors' as *;
 @use '../../styles/breakpoints' as *;
 @import '../../styles/variables';
 
@@ -80,13 +81,13 @@
   color: $light-mode-text-color;
 }
 
-.navbar > div {
+.navbar>div {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.navbar > img {
+.navbar>img {
   width: 4rem;
 }
 
@@ -126,42 +127,12 @@
   color: gray !important;
 }
 
-// .community {
-//   @include lg {
-//     font-size: 0.625rem !important;
-//     // transform: translateY(-1.5rem);
-//     margin: -1.75rem 0 0.5rem;
-//     border-radius: 4px;
-//     padding: 0 1rem 1.35rem 0.36rem;
-//     // background: rgba($color: #000000, $alpha: 0.75);
-//   }
-
-//   @include xl {
-//     font-size: 0.75rem !important;
-//   }
-// }
-
-// .partners {
-//   @include lg {
-//     font-size: 0.625rem !important;
-//     transform: translateY(-1.5rem);
-//     margin: -1.5rem 0 0.5rem;
-//     border-radius: 4px;
-//     // background: rgba($color: #000000, $alpha: 0.75);
-//     padding: 0 0 0 0.4rem;
-//   }
-
-//   @include xl {
-//     font-size: 0.75rem !important;
-//     // padding: 0 2.7rem 0.5rem 0.4rem;
-//   }
-// }
 
 .boards-wrapper {
   position: relative;
 }
 
-.boards-wrapper > div {
+.boards-wrapper>div {
   display: none;
   position: absolute;
   top: 2.9rem;
@@ -170,11 +141,11 @@
   padding: 1rem 0;
 }
 
-.light .boards-wrapper > div {
+.light .boards-wrapper>div {
   background: rgba($color: #8db2fc, $alpha: 0.2);
 }
 
-.boards-wrapper:hover > div {
+.boards-wrapper:hover>div {
   display: grid;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
@@ -185,7 +156,7 @@
   }
 }
 
-.boards-wrapper > div > span {
+.boards-wrapper>div>span {
   display: none;
 
   @include lg {
@@ -226,7 +197,6 @@
   position: absolute;
   top: 0px;
   right: 0;
-  // transform: translateX(-50%);
   height: 2px;
   width: 30px;
   background: white;
@@ -238,7 +208,6 @@
   position: absolute;
   top: -12px;
   right: 0%;
-  // transform: translate(-50%, -0%);
   height: 2px;
   width: 30px;
   background: white;
@@ -250,7 +219,6 @@
   position: absolute;
   top: 12px;
   right: 0%;
-  // transform: translate(-50%, -0%);
   height: 2px;
   width: 30px;
   background: white;
@@ -342,7 +310,7 @@
     top: 0;
   }
 
-  .navbar > div {
+  .navbar>div {
     flex-direction: row;
     gap: 2.5rem;
 
@@ -406,7 +374,8 @@
   text-transform: capitalize;
 
   @include lg {
-    right: 7.5rem;
+    // right: 7.5rem;
+    right: 12.5rem;
     max-width: 4rem;
     top: -2.5px;
     padding: 0 0 0 1rem !important;
@@ -422,6 +391,25 @@
     max-width: 5rem !important;
     padding: 0 0 0 1.25rem !important;
   }
+}
+
+.languages {
+  position: relative;
+}
+
+.languages svg {
+  color: white;
+}
+
+.light .languages svg {
+  // color: $light-mode-text-color;
+  filter: invert(80%);
+}
+
+.menu span {
+  display: block;
+  text-align: center;
+  width: 100%;
 }
 
 // // Actual version to be used
