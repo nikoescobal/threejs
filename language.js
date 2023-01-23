@@ -4,6 +4,11 @@ const translations = {
       'en': 'Learn More',
       'de': 'Mehr'
     },
+  'read_more': 
+    {
+      'en': 'Read More',
+      'de': 'Mehr'
+    },
   'home': [
     {
       locale: 'en',
