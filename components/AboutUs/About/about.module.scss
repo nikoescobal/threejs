@@ -5,20 +5,20 @@
   display: grid;
   gap: 6rem;
   position: relative;
-  background: linear-gradient(
-    transparent 50%,
-    rgba($color: $ln-blue, $alpha: 0.2)
-  );
+  background: linear-gradient(transparent 50%,
+      rgba($color: $ln-blue, $alpha: 0.2));
 }
 
 .about-section.light {
-  background: linear-gradient(
-    transparent 50%,
-    rgba($color: $light-mode-primary, $alpha: 0)
-  );
+  background: linear-gradient(transparent 50%,
+      rgba($color: $light-mode-primary, $alpha: 0));
 }
 
-.about-section > img {
+.about-section br {
+  margin-bottom: 1rem;
+}
+
+.about-section>img {
   position: absolute;
   bottom: -20vw;
   left: 0;
