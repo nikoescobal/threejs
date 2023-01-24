@@ -13,6 +13,7 @@ import Partners from '../components/Generic/Partners/Partners';
 import Map from '../components/Home/Map/Map';
 import FollowUs from '../components/Generic/FollowUs/FollowUs';
 import CardSection from '../components/Home/CardSection/CardSection';
+import LegacyMethods from '../components/Home/LegacyMethods/LegacyMethods';
 import { Parallax } from 'react-scroll-parallax';
 import Hammer from '../public/backgrounds/hammer.webp';
 import useStore from '../store/store';
@@ -95,6 +96,7 @@ export default function Home() {
       <WavesWrapper hideBottom>
         <NewsLetter />
         <CardSection />
+        <LegacyMethods />
       </WavesWrapper>
       <App />
       {/* <Products /> */}
