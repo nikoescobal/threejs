@@ -1,12 +1,15 @@
 import { useMediaQuery } from '@mui/material';
+import { useRouter } from 'next/router';
 import useStore from '../../../store/store';
 import FlipCard from '../../FlipCard/FlipCard';
 import Gradient from '../../Generic/Gradient/Gradient';
+import content from './content';
 import styles from './team.module.scss';
 
 function Team() {
   const isTablet = useMediaQuery('(min-width: 768px)');
   const { isDarkMode } = useStore();
+  const { locale } = useRouter();
 
   return (
     <section className={`${!isDarkMode ? `${styles.light}` : ''} ${styles['meet-team']} max-1920`}>
@@ -16,7 +19,7 @@ function Team() {
         transform: 'translate(-50%, -50%)',
         width: '100%'
       }} />
-      <h2>The Team</h2>
+      <h2>{content[locale].title}</h2>
       {isTablet && (
       <div className={`${styles['flip-cards-wrapper']}`}>
         <div className={`${styles.odd}`}>
