@@ -4,6 +4,7 @@ import { useMediaQuery } from '@mui/material';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
+import { useRouter } from 'next/router';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const colors = (opacity) => {
@@ -21,6 +22,7 @@ const colors = (opacity) => {
 
 function DonutChart({series, labels, titleText, subtitle, legendPosition}) {
   const isTablet = useMediaQuery('(min-width: 768px');
+  const { locale } = useRouter();
   
   const { isDarkMode } = useStore();
   const data = {
@@ -37,11 +39,13 @@ function DonutChart({series, labels, titleText, subtitle, legendPosition}) {
   };
 
   return (
-    <div className={`${styles.wrapper} ${isDarkMode ? '' : `${styles.light}`}`}>
+    <div className={`${styles.wrapper} ${styles[locale]} ${isDarkMode ? '' : `${styles.light}`}`}>
       <div>
-        <h4>{titleText}</h4>
-        <div className={styles['subtitle-wrapper']}>
-          <p>{subtitle}</p>
+        <div className={styles['text-wrapper']}>
+          <h4>{titleText}</h4>
+          <div className={styles['subtitle-wrapper']}>
+            <p>{subtitle}</p>
+          </div>
         </div>
         { !isTablet &&
           <div className={styles['colors-wrapper']}>
