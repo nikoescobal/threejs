@@ -73,7 +73,7 @@ function Footer() {
           >
             <div>
               <a
-                href="https://ik.imagekit.io/n8ccbmd8gj/LP-Eng.pdf?ik-sdk-version=javascript-1.4.3&updatedAt=1673594835629"
+                href="https://ik.imagekit.io/n8ccbmd8gj/Litepaper_v1.1__compressed.pdf?ik-sdk-version=javascript-1.4.3&updatedAt=1674535078997"
                 rel="noreferrer"
                 onClick={handleLitePaperDialogClose}
                 target="_blank"
@@ -82,7 +82,7 @@ function Footer() {
                 English
               </a>
               <a
-                href="https://ik.imagekit.io/n8ccbmd8gj/LP-Ger.pdf?ik-sdk-version=javascript-1.4.3&updatedAt=1673594835385"
+                href="https://ik.imagekit.io/n8ccbmd8gj/Litepaper_Ger_compressed.pdf?ik-sdk-version=javascript-1.4.3&updatedAt=1674535081093"
                 rel="noreferrer"
                 onClick={handleLitePaperDialogClose}
                 target="_blank"
