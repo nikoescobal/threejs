@@ -16,9 +16,23 @@ import Waves from '../public/backgrounds/waves-5.png';
 import WaveLines from '../components/Generic/WaveLines/WaveLines';
 import useStore from '../store/store';
 import FAQ from '../components/AboutUs/FAQ/FAQ';
+import { useRouter } from 'next/router';
+
+const content = {
+  en: {
+    title: 'About Us',
+    subtitle: '& our goal',
+  },
+  de: {
+    title: 'Über uns',
+    subtitle: '& UNSER ZIEL',
+  }
+}
 
 function AboutUs() {
   const { isDarkMode } = useStore();
+  const { locale } = useRouter();
+  
   return (
     <div>
       <Head>
@@ -51,8 +65,8 @@ function AboutUs() {
               )}
             </div>
           }
-          title="About Us"
-          subtitle={'& our goal'}
+          title={content[locale].title}
+          subtitle={content[locale].subtitle}
         />
       </div>
       <About />
