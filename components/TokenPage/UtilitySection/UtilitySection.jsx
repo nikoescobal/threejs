@@ -1,36 +1,14 @@
+import { useRouter } from 'next/router';
+import translations from '../../../language';
 import useStore from '../../../store/store';
 import ComingSoon from '../../Generic/ComingSoon/ComingSoon';
+import content from './content';
 import styles from './utilitysection.module.scss';
 
 function UtilitySection() {
   const { isDarkMode } = useStore();
-
-  const data = [
-    {
-      img: '/icons/util1.svg',
-      text: 'Free access to our ecosystem',
-    },
-    {
-      img: '/icons/util3.svg',
-      text: 'Reward distribution',
-    },
-    {
-      img: '/icons/util2.svg',
-      text: 'Access to special areas within the app',
-    },
-    {
-      img: '/icons/util6.svg',
-      text: 'In-game character',
-    },
-    {
-      img: '/icons/util5.svg',
-      text: 'Higher play-to-earn reward',
-    },
-    {
-      img: '/icons/util4.svg',
-      text: 'Networking opportunities',
-    },
-  ];
+  const { locale } = useRouter();
+  const data = content[locale].cards
 
   return (
     <section
@@ -38,7 +16,7 @@ function UtilitySection() {
         !isDarkMode ? `${styles.light}` : ''
       } spacing-x max-1920`}
     >
-      <h3>NFT Utility</h3>
+      <h3>{content[locale].title}</h3>
 
       <div className={`${styles.grid} grid three-col`}>
         {data.map((item) => (
@@ -50,7 +28,7 @@ function UtilitySection() {
           </div>
         ))}
       </div>
-      <a href="https://blog.legacynetwork.io/blogs/Q3dj2EaBUPuizZVFQpye" rel='noreferrer' target="_blank" className='button-blue'>Read more</a>
+      <a href="https://blog.legacynetwork.io/blogs/Q3dj2EaBUPuizZVFQpye" rel='noreferrer' target="_blank" className='button-blue'>{translations.read_more[locale]}</a>
     </section>
   );
 }
