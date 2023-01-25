@@ -6,78 +6,14 @@ import styles from './chart.module.scss';
 import Arrow from '../../../public/slider/arrow.svg';
 import Image from 'next/image';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
-
-const data = [
-  {
-    title: 'Ecosystem',
-    description: ['Exchange liquidity', 'Play to earn pool', 'Staking pool'],
-    // percentage: 30,
-    percentage: 40,
-    color: '#f73094',
-    tokens: '288’000’000',
-    // offset: 15
-    offset: 20,
-  },
-  {
-    title: 'Token Sale',
-    description: ['Private sale', 'Public sale'],
-    percentage: 20,
-    color: '#775dd0',
-    offset: 80,
-    tokens: '144’000’000',
-    x: 71,
-    y: -62,
-    rotation: 107,
-  },
-  {
-    title: 'Development',
-    description: ['Reserve for further development'],
-    percentage: 10,
-    color: '#ff4560',
-    offset: 60,
-    tokens: '72’000’000',
-    x: 8,
-    y: -63,
-    rotation: 160,
-  },
-  {
-    title: 'Team',
-    description: ['Rewards for our amazing team members'],
-    percentage: 15,
-    color: '#feb019',
-    offset: 50,
-    tokens: '108’000’000',
-    x: -29,
-    y: -23,
-    rotation: 205,
-  },
-  {
-    title: 'Community & Marketing',
-    description: ['Community events', 'Marketing deals', 'Raffles'],
-    percentage: 10,
-    color: '#00e396',
-    offset: 35,
-    tokens: '72’000’000',
-    x: -26,
-    y: 32,
-    rotation: 251,
-  },
-  {
-    title: 'Advisors & Partners',
-    description: ['Rewards for people who helped us along the way'],
-    percentage: 5,
-    color: '#008ffb',
-    offset: 25,
-    tokens: '36’000’000',
-    x: -6,
-    y: 56.5,
-    rotation: 275,
-  },
-];
+import { useRouter } from 'next/router';
+import content from './content';
 
 function RotatingChart() {
   const { isDarkMode } = useStore();
   const [inactiveColor, setInactiveColor] = useState('#464444');
+  const { locale } = useRouter()
+  const data = content[locale];
 
   useEffect(() => {
     if (isDarkMode) {
