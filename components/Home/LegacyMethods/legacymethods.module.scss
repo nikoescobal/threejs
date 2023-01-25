@@ -2,8 +2,7 @@
 @use '../../../styles/colors' as *;
 @use '../../../styles/variables' as *;
 
-.legacy-method-wrapper {
-}
+.legacy-method-wrapper {}
 
 .title,
 .subtitle {
@@ -97,8 +96,6 @@
     width: 168px;
     padding-top: calc($card-height / 2);
   }
-  // background-color: red;
-  // height: 100%;
 }
 
 .divider-content {
@@ -114,7 +111,12 @@
   }
 }
 
-.divider-content > div {
+.light .divider-content,
+.light .divider-content>div {
+  background: $light-mode-secondary;
+}
+
+.divider-content>div {
   display: none;
 
   @include lg {
