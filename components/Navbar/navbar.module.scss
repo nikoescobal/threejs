@@ -374,8 +374,8 @@
   text-transform: capitalize;
 
   @include lg {
-    // right: 7.5rem;
-    right: 12.5rem;
+    right: 7.5rem;
+    // right: 12.5rem;
     max-width: 4rem;
     top: -2.5px;
     padding: 0 0 0 1rem !important;
