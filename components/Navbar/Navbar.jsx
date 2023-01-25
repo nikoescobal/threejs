@@ -239,7 +239,7 @@ function Navbar() {
               Win
             </ComingSoon>
           </div>
-          <div className={styles.languages}>
+          {/* <div className={styles.languages}>
             <IconButton
               type="button"
               onClick={toggleLanguageList}
@@ -249,18 +249,7 @@ function Navbar() {
             >
               <LanguageIcon />
             </IconButton>
-            {/* {
-              displayLanguages
-                ? <MenuList className={styles.menu}>
-                    {
-                      languages[locale].map((languageSet) => (
-                        <MenuItem onClick={(e) => switchLanguage(languageSet.locale)} key={languageSet.language}>{languageSet.language}</MenuItem>
-                      ))
-                    }
-                  </MenuList>
-                : null
-            } */}
-          </div>
+          </div> */}
           <button
             type="button"
             onClick={toggle}
