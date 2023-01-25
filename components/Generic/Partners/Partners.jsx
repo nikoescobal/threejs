@@ -77,10 +77,20 @@ function Partners() {
   const { locale } = useRouter();
 
   return (
-    <section>
+    <section
+      className={`${styles['legacy-method-wrapper']} ${
+        !isDarkMode ? `${styles['light']}` : ''
+      } `}
+    >
       <div className={styles['container']}>
         <div className={styles['slider-wrapper']}>
-          <h3 className={styles['title']}>{content[locale].title}</h3>
+          <h3
+            className={`${styles['title']} ${
+              !isDarkMode ? `${styles['light']}` : ''
+            } `}
+          >
+            {content[locale].title}
+          </h3>
           <div className={`${styles['slider']} ${styles['animate']}`}>
             <div className={styles['logo-wrapper']}>
               {partners.map((logo, index) => (

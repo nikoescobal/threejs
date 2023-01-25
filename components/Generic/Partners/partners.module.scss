@@ -1,6 +1,12 @@
 @use '../../../styles/breakpoints' as *;
 @use '../../../styles/colors' as *;
-@use '../../../styles/variables';
+@use '../../../styles/variables' as *;
+
+.partners {}
+
+.light .partners {
+  background: $light-mode-secondary;
+}
 
 .maerki,
 .caag,
@@ -38,26 +44,36 @@
 .container {
   margin-bottom: 5rem;
   width: 100%;
+}
 
-  .title {
-    text-align: center;
-    transform: translateY(-5rem);
-  }
+.title {
+  // font-size: 33px;
+  text-align: center;
+  transform: translateY(-5rem);
+}
 
-  .slider-wrapper {
-    position: relative;
-    width: 100%;
-    background: $dark-gray;
-    padding: 8rem 0;
-    overflow: hidden;
-    margin-top: 5rem;
-  }
+.light .title {
+  color: $light-mode-secondary;
+}
 
-  .slider {
-    display: flex;
-    left: 0;
-    position: absolute;
-  }
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+  background: $dark-gray;
+  padding: 8rem 0;
+  overflow: hidden;
+  margin-top: 5rem;
+}
+
+.light .slider-wrapper {
+  background: rgba(84, 128, 234, 0.1);
+  color: white;
+}
+
+.slider {
+  display: flex;
+  left: 0;
+  position: absolute;
 
   .logo {
     max-width: 10rem;
