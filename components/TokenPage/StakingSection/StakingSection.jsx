@@ -1,13 +1,15 @@
 import styles from './stakingsection.module.scss';
 import generics from '../../../styles/generics.module.scss';
-import Money from '../../../public/icons/money.svg';
-import Wallet from '../../../public/icons/wallet.svg';
-import Stack from '../../../public/icons/stack.svg';
+
 import Image from 'next/image';
 import useStore from '../../../store/store';
+import content from './content';
+import { useRouter } from 'next/router';
 
 function StakingSection() {
   const { isDarkMode } = useStore();
+  const { locale } = useRouter();
+  const { uuid } = require('crypto')
 
   return (
     <div
@@ -15,39 +17,20 @@ function StakingSection() {
         !isDarkMode ? `${styles.light}` : ''
       } max-1920`}
     >
-      <h3>How the staking works</h3>
+      <h3>{content[locale].title}</h3>
       <div className={`${styles['steps-wrapper']}`}>
-        <div className={`${styles['step']}`}>
-          <p>Step 1:</p>
-          <p>Get Legacy Token (LGCT)</p>
-          <div>
-            <Image src={Money} alt="money" />
+        {content[locale].steps.map((step, index) => (
+          <div key={uuid} className={`${styles['step']}`}>
+            <p>{content[locale].step_translation} {index + 1}:</p>
+            <p>{step.title}</p>
+            <div>
+              <Image src={step.img} alt="step icon" />
+            </div>
+            <p>
+              {step.description}
+            </p>
           </div>
-          <p>
-            You can get your hands on Legacy Token (LGCT) by using our
-            ecosystem, by participating in raffles or by buying them on the open
-            market.
-          </p>
-        </div>
-        <div className={`${styles['step']}`}>
-          <p>Step 2:</p>
-          <p>Freeze your tokens in the app</p>
-          <div>
-            <Image src={Wallet} alt="wallet" />
-          </div>
-          <p>
-            As an early adopter, you can stake your Legacy Token (LGCT)s for 6,
-            12 or 24 months within our pre-launch app (coming soon).
-          </p>
-        </div>
-        <div className={`${styles['step']}`}>
-          <p>Step 3:</p>
-          <p>Get rewarded</p>
-          <div>
-            <Image src={Stack} alt="stack" />
-          </div>
-          <p>Profit from staking rewards.</p>
-        </div>
+        ))}
       </div>
     </div>
   );

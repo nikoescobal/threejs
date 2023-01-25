@@ -5,7 +5,7 @@ const content = {
     conditions and shouldn&apos;t necessarily crash in a bear market. For
     this reason we aim to create a token with constant, non-speculative
     buy side pressure. We achieve this by offering several attractive
-    utilities which aren&apos;t directly related to the crypto industry.
+    utilities which aren't directly related to the crypto industry.
     These utilities can only be accessed by using Legacy Token (LGCT) and
     the demand for them stays the same or even grows within a bear market.`,
     cards: [
