@@ -11,11 +11,13 @@ import {
 } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+import { useRouter } from 'next/router';
 
 function FAQ() {
   const [selectedTab, setSelectTab] = useState(0);
   const [expanded, setExpanded] = useState(false);
   const { isDarkMode } = useStore();
+  const { locale } = useRouter()
 
   const handleTabSelection = (index) => {
     setSelectTab(index);
@@ -47,7 +49,7 @@ function FAQ() {
 
       <div className={styles['content-right']}>
         <div className={styles['tab-headings']}>
-          {content.map((item, index) => (
+          {content[locale].map((item, index) => (
             <Button
               key={item.title}
               className={`${selectedTab === index ? `${styles.active}` : ''}`}
@@ -58,7 +60,7 @@ function FAQ() {
           ))}
         </div>
         <div className={styles['tab-content']}>
-          {content[selectedTab].content.map((list, index) => (
+          {content[locale][selectedTab].content.map((list, index) => (
             <Accordion
               key={list.question}
               expanded={expanded === index + 1}
