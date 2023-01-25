@@ -1,4 +1,5 @@
 import { useMediaQuery } from '@mui/material';
+import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import useStore from '../../store/store';
@@ -11,10 +12,11 @@ function BurningRate() {
   const [title, setTitle] = useState('');
   const [text, setText] = useState('Hover over the dots to see where the subscription tokens go');
   const [hasHovered, setHasHovered] = useState(false);
+  const { locale } = useRouter();
   
   const showText = (index) => {
-    setTitle(content[index].title)
-    setText(content[index].content)
+    setTitle(content[locale][index].title)
+    setText(content[locale][index].content)
     if (!hasHovered) {
       setHasHovered(true);
     }
