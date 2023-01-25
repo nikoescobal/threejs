@@ -11,8 +11,22 @@ import Waves from '../public/backgrounds/waves-5.png';
 import WaveLines from '../components/Generic/WaveLines/WaveLines';
 import Script from 'next/script';
 import styles from '../components/PersonalDevelopment/personaldevelopment.module.scss';
+import { useRouter } from 'next/router';
+
+const content = {
+  en: {
+    title: 'Personal Development',
+    subtitle: '& its importance'
+  },
+  de: {
+    title: 'Persönlichkeitsentwicklung',
+    subtitle: '& seine Bedeutung'
+  }
+}
 
 function PersonalDevelopment() {
+  const { locale } = useRouter();
+  
   return (
     <div>
       <Head>
@@ -35,8 +49,8 @@ function PersonalDevelopment() {
             }}
           />
         }
-        title="Personal Development"
-        subtitle={'& its importance'}
+        title={content[locale].title}
+        subtitle={content[locale].subtitle}
       />
       <Explanation />
       <WavesWrapper hideBottom={true}>

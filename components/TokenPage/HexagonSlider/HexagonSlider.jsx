@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import useStore from '../../../store/store';
 import styles from './hexagon_slider.module.scss';
 import Arrow from '../../../public/slider/arrow.svg';
+import { useRouter } from 'next/router';
+import content from './content';
 
 function HexagonSlider() {
   const [currentRotation, setCurrentRotation] = useState(0);
@@ -12,32 +14,7 @@ function HexagonSlider() {
   const [touchEnd, setTouchEnd] = useState(0);
 
   const { isDarkMode } = useStore((state) => state);
-  const data = [
-    {
-      title: 'Get rewarded for learning',
-      body: 'Our goal is to make education as playful and entertaining as possible. Many people struggle with building the necessary discipline to educate themselves on a regular basis. The main reason for this problematic is found in neurology. As things stand today, most people are neurologically addicted to instant gratification, short-termed dopamine release within the brain. We aim to take advantage of this effect and to use it for the user instead of using it against him',
-    },
-    {
-      title: 'Get access to our products and services',
-      body: 'The Legacy Token (LGCT) serves as the main payment method for subscriptions and purchases within our ecosystem. This allows us to create automatisms such as redistributions and to act independently of third-party providers.',
-    },
-    {
-      title: 'Stake your Legacy Token (LGCT) for additional benefits',
-      body: 'Staking your Legacy Token (LGCT) will grant you additional benefits such as staking rewards, airdrops, whitelist spots, discounts and access to exclusive services. ',
-    },
-    {
-      title: 'Business to business utility',
-      body: 'We plan to make selected parts of our ecosystem such as content libraries and code accessible for other businesses in future. The Legacy Token (LGCT) will be needed to access our B2B services which will benefit the community.',
-    },
-    {
-      title: 'Get rewarded for contributing to our ecosystem',
-      body: 'In future, users will be able to perform certain actions within the social part of our ecosystem and to earn rewards for doing so.',
-    },
-    {
-      title: 'More about to come',
-      body: `We haven't even started yet! Our goal is to create as much value for our community as possible. For this reason, new, exciting features will be announced on a regular basis.`,
-    },
-  ];
+  const { locale } = useRouter();
 
   useEffect(() => console.log(currentRotation), [currentRotation]);
 
@@ -77,9 +54,11 @@ function HexagonSlider() {
 
   return (
     <div
-      className={`${styles['container']} ${
-        isDarkMode ? '' : `${styles.light}`
-      }`}
+      className={`
+        ${styles['container']}
+        ${styles[locale]}
+        ${isDarkMode ? '' : `${styles.light}`}
+      `}
     >
       <div
         className={`${styles['hexagon']} ${styles['animat']}`}
@@ -91,7 +70,7 @@ function HexagonSlider() {
         }}
       >
         <div className={`${styles['side-faces']}`}>
-          {data.map((item, index) => (
+          {content[locale].map((item, index) => (
             <div
               className={`${styles['side']} ${
                 index === currentIndex ? `${styles.active}` : ''

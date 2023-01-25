@@ -1,6 +1,8 @@
 import styles from './partners.module.scss';
 import generics from '../../../styles/generics.module.scss';
 import useStore from '../../../store/store';
+import { useRouter } from 'next/router';
+import content from './content';
 
 const partners = [
   {
@@ -72,12 +74,23 @@ const partners = [
 
 function Partners() {
   const { isDarkMode } = useStore((state) => state);
+  const { locale } = useRouter();
 
   return (
-    <section>
+    <section
+      className={`${styles['legacy-method-wrapper']} ${
+        !isDarkMode ? `${styles['light']}` : ''
+      } `}
+    >
       <div className={styles['container']}>
         <div className={styles['slider-wrapper']}>
-          <h1 className={styles['title']}>Our Partners</h1>
+          <h3
+            className={`${styles['title']} ${
+              !isDarkMode ? `${styles['light']}` : ''
+            } `}
+          >
+            {content[locale].title}
+          </h3>
           <div className={`${styles['slider']} ${styles['animate']}`}>
             <div className={styles['logo-wrapper']}>
               {partners.map((logo, index) => (

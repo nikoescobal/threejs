@@ -10,15 +10,21 @@ import 'swiper/css/pagination';
 import useStore from '../../../store/store';
 import content from './content';
 import Circles from '../../Generic/Circles/Circles';
+import { useRouter } from 'next/router';
+import translations from '../../../language';
 
 function PageSlider() {
   const { isDarkMode } = useStore((state) => state);
+  const { locale } = useRouter();
 
   return (
     <section
-      className={`${styles['main-wrapper']} ${generics['spacing-x']} ${
-        !isDarkMode ? `${styles['light']}` : ''
-      }`}
+      className={`
+        ${styles['main-wrapper']}
+        ${generics['spacing-x']}
+        ${styles[locale]}
+        ${!isDarkMode ? `${styles['light']}` : ''}
+      `}
     >
       <Circles className={styles['circles-wrapper']} />
 
@@ -36,16 +42,16 @@ function PageSlider() {
           }}
           modules={[Autoplay, EffectFlip, Navigation, Pagination]}
         >
-          {content.map((item) => (
+          {content[locale].map((item) => (
             <SwiperSlide key={item.title} className={`${styles['card']}`}>
               <div className={styles.grid}>
                 <h3>{item.title}</h3>
                 <p>{item.body}</p>
-                <div className={styles['link-wrapper']}>
+                {/* <div className={styles['link-wrapper']}> */}
                   <Link href={item.url} title={item.urlTitle}>
-                    <a className="button-blue">Learn more</a>
+                    <a className="button-blue">{translations['learn_more'][locale]}</a>
                   </Link>
-                </div>
+                {/* </div> */}
               </div>
             </SwiperSlide>
           ))}

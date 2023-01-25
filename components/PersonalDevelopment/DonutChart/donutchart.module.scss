@@ -16,7 +16,7 @@
   padding: 2rem 0;
 }
 
-.colors-wrapper > div {
+.colors-wrapper>div {
   display: flex;
   align-items: center;
   // justify-items: start;
@@ -28,4 +28,12 @@
   margin-left: 0.5rem;
   font-size: 0.75rem;
   // transform: translateY(-5rem);
+}
+
+.de .text-wrapper {
+  min-height: 14.125rem;
+}
+
+.de .text-wrapper h4 {
+  min-height: 5rem;
 }

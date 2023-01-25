@@ -6,6 +6,8 @@ import axios from 'axios';
 // import { firestore } from '../../../firebase/clientapp';
 import { useState } from 'react';
 import { Snackbar, SnackbarContent } from '@mui/material';
+import content from './content';
+import { useRouter } from 'next/router';
 
 function NewsLetter() {
   const { isDarkMode } = useStore((state) => state);
@@ -15,6 +17,7 @@ function NewsLetter() {
   const [openNotification, setOpenNotification] = useState(false);
   const [notificationMessage, setNotificationMessage] = useState('')
   const [notificationColor, setNotificationColor] = useState('')
+  const { locale } = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -62,13 +65,13 @@ function NewsLetter() {
         />
       </Snackbar>
       <div>
-        <h4>Don&apos;t miss out. Stay updated!</h4>
+        <h4>{content[locale].title}</h4>
         <p>
-          Subscribe to our newsletter and be the first to get updates on our products and services. 
+           {content[locale].description}
         </p>
         <form onSubmit={handleSubmit}>
           <input onChange={(e) => setEmail(e.target.value)} type="email" name="email" placeholder="Email" id="" />
-          <button type="submit" className="button-blue">Subscribe</button>
+          <button type="submit" className="button-blue">{content[locale].subscribe}</button>
         </form>
       </div>
     </div>

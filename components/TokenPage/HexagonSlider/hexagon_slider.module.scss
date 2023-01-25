@@ -36,7 +36,7 @@ $mobile-width: 15rem;
 
 .hexagon {
   width: $mobile-width;
-  height: $height;
+  min-height: $height;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.3s ease-in-out;
@@ -46,6 +46,10 @@ $mobile-width: 15rem;
   @include md {
     width: $width;
   }
+}
+
+.de .hexagon {
+  min-height: calc($height + 2rem);
 }
 
 .side-faces {
@@ -86,6 +90,10 @@ $mobile-width: 15rem;
     height: calc($height - 0.4rem);
     width: calc($width - 0.4rem);
   }
+}
+
+.d .side.active::before {
+  height: calc($mobile-height + 8rem);
 }
 
 .light .side::before {

@@ -1,12 +1,19 @@
 import content from './content.js';
 import styles from './legacymethods.module.scss';
+import useStore from '../../../store/store';
 import MethodCard from './MethodCard';
 import Arrow from '../../../public/icons/dotted-arrow.svg';
 import { Diversity3 } from '@mui/icons-material';
 
 const LegacyMethods = () => {
+  const { isDarkMode } = useStore();
+
   return (
-    <section className={`${styles['legacy-method-wrapper']} spacing-x`}>
+    <section
+      className={`${styles['legacy-method-wrapper']} ${
+        !isDarkMode ? `${styles['light']}` : ''
+      } spacing-x`}
+    >
       {/* <hr className={styles['divider']}></hr> */}
 
       <h3 className={styles['title']}>The Legacy Method</h3>
