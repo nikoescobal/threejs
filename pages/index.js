@@ -8,7 +8,8 @@ import App from '../components/Home/App/App';
 import Header from '../components/Home/Header';
 import generics from '../styles/generics.module.scss';
 import styles from '../styles/Home.module.scss';
-import Roadmap from '../components/Generic/Roadmap/Roadmap';
+// import Roadmap from '../components/Generic/Roadmap/Roadmap';
+import Roadmap from '../components/Generic/RoadmapNew/Roadmap';
 import Partners from '../components/Generic/Partners/Partners';
 import Map from '../components/Home/Map/Map';
 import FollowUs from '../components/Generic/FollowUs/FollowUs';
@@ -18,34 +19,11 @@ import { Parallax } from 'react-scroll-parallax';
 import Hammer from '../public/backgrounds/hammer.webp';
 import useStore from '../store/store';
 import { useMediaQuery } from '@mui/material';
-import { useRouter } from 'next/router';
-
-const innovativeSectionContent = {
-  en: {
-    title: "The world's most innovative personal development app",
-    list: [
-      'Connect with likeminded people and create your own legacy',
-      'Receive individual quests for your personal growth',
-      'Learn about the things school didn&apos;t teach you',
-      'Playfully improve all areas of your life',
-    ]
-  },
-  de: {
-    title: "Die innovativste Personalentwicklungs-App der Welt",
-    list: [
-      `Verbinde dich mit Gleichgesinnten und erschaffe dein eigenes Vermächtnis`,
-      'Erhalte individuelle Aufgaben für deine persönliche Entwicklung',
-      'Lern die Dinge, die dir die Schule nicht beigebracht hat',
-      'Verbesser spielerisch alle Bereiche deines Lebens',
-    ]
-  }
-}
 
 export default function Home() {
   const { isDarkMode } = useStore();
   const isTablet = useMediaQuery('(min-width: 768px');
-  const { locale } = useRouter();
-  
+
   return (
     <div
       className={`${styles.content} ${!isDarkMode ? `${styles.light}` : ''}`}
@@ -84,7 +62,7 @@ export default function Home() {
           className={`${styles['clear-container-wrapper']} ${generics['spacing-x']}`}
         >
           <ClearContainer
-            title={[innovativeSectionContent[locale].title]}
+            title={"The world's most innovative personal development app"}
             style={{ maxWidth: '1024px' }}
             textAlign="center"
           >
@@ -96,14 +74,22 @@ export default function Home() {
                 padding: '0 1rem',
               }}
             >
-              {
-                innovativeSectionContent[locale].list.map((item) => (
-                  <li key={item}>
-                    <span>&#183;</span>
-                    {item}
-                  </li>
-                ))
-              }
+              <li>
+                <span>&#183;</span>
+                Connect with likeminded people and create your own legacy
+              </li>
+              <li>
+                <span>&#183;</span>
+                Receive individual quests for your personal growth
+              </li>
+              <li>
+                <span>&#183;</span>
+                Learn about the things school didn&apos;t teach you
+              </li>
+              <li>
+                <span>&#183;</span>
+                Playfully improve all areas of your life
+              </li>
             </ul>
           </ClearContainer>
         </div>
