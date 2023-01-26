@@ -15,8 +15,8 @@ function BurningRate() {
   const { locale } = useRouter();
   
   const showText = (index) => {
-    setTitle(content[locale][index].title)
-    setText(content[locale][index].content)
+    setTitle(content[locale]['list'][index].title)
+    setText(content[locale]['list'][index].content)
     if (!hasHovered) {
       setHasHovered(true);
     }
