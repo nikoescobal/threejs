@@ -1,11 +1,14 @@
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import useStore from '../../../store/store';
+import content from './content';
 import styles from './map.module.scss';
 // import MapParticles from './MapParticles';
 
 function Map() {
   const { isDarkMode } = useStore((state) => state);
+  const { locale } = useRouter();
   const MapParticles = dynamic(
     () => import('./MapParticles'),
     { ssr: false }
@@ -21,7 +24,7 @@ function Map() {
           objectFit='contain'
           alt="world map"
         />
-        <h4>Join Us To Make The world A Better Place</h4>
+        <h4>{content[locale].title}</h4>
       </div>
       {/* <MapParticles className={styles.particles} /> */}
     </section>
