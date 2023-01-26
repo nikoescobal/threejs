@@ -45,6 +45,13 @@
 .title {
   white-space: nowrap;
   // transform: translateY(-50%);
+  @include lg {
+    padding-right: 8.5rem;
+  }
+
+  @include breakpoint(1300px) {
+    padding-right: 11.5rem;
+  }
 }
 
 .legacy-button-wrapper {
@@ -61,8 +68,11 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    justify-content: flex-end !important;
     gap: 1.5rem;
+  }
+
+  @include xl {
+    justify-content: flex-end !important;
   }
 }
 
@@ -84,26 +94,28 @@
 
   &:hover,
   &:focus {
-    background: #1960ea !important;
+    background: $sky-blue !important;
     color: white;
   }
 
   @include md {
-    // font-size: 14px;
     padding: 1rem 4rem;
   }
 
   @include lg {
     max-width: 147px;
-    // justify-content: flex-end;
-    // font-size: 16px;
+    font-size: 14px;
     padding: 1rem 4.5rem;
+  }
+
+  @include xl {
+    font-size: 16px;
   }
 }
 
 .active-button {
   color: white !important;
-  background: #1960ea !important;
+  background: $sky-blue !important;
 }
 
 .roadmap-wrapper svg {
