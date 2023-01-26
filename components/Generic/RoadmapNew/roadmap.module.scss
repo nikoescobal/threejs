@@ -1,0 +1,127 @@
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
+@use '../../../styles/variables' as *;
+
+.roadmap-wrapper {
+  background: $dark-background;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.light.roadmap-wrapper {
+  background: $light-mode-tertiary;
+}
+
+.navigate-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+
+.roadmap-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.2rem;
+  padding-bottom: 3.375rem;
+  align-items: center;
+
+  @include sm {
+    gap: 1.5rem;
+  }
+
+  @include lg {
+    flex-direction: row;
+  }
+}
+
+.title-wrapper {
+  align-items: center;
+  transform: translateX(-1rem);
+}
+
+.title {
+  white-space: nowrap;
+  // transform: translateY(-50%);
+  @include lg {
+    padding-right: 8.5rem;
+  }
+
+  @include breakpoint(1300px) {
+    padding-right: 11.5rem;
+  }
+}
+
+.legacy-button-wrapper {
+  width: 100% !important;
+  display: flex;
+  flex-direction: column !important;
+  gap: 1rem;
+  padding-top: 1rem;
+  justify-content: space-between !important;
+
+  @include lg {
+    display: flex;
+    flex-direction: row !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1.5rem;
+  }
+
+  @include xl {
+    justify-content: flex-end !important;
+  }
+}
+
+.roadmap-button {
+  font-size: 1rem;
+  white-space: nowrap;
+  background: transparent;
+  color: #7a7a7a !important;
+  border-radius: 4px;
+  width: 100%;
+  border: 1px solid $ln-blue !important;
+  text-transform: capitalize;
+  height: 54px;
+  display: flex;
+  justify-content: center;
+  scroll-snap-align: start;
+  padding: 1rem 3rem;
+  text-transform: capitalize !important;
+
+  &:hover,
+  &:focus {
+    background: $sky-blue !important;
+    color: white;
+  }
+
+  @include md {
+    padding: 1rem 4rem;
+  }
+
+  @include lg {
+    max-width: 147px;
+    font-size: 14px;
+    padding: 1rem 4.5rem;
+  }
+
+  @include xl {
+    font-size: 16px;
+  }
+}
+
+.active-button {
+  color: white !important;
+  background: $sky-blue !important;
+}
+
+.roadmap-wrapper svg {
+  color: white;
+}
+
+.light.roadmap-wrapper svg {
+  color: $dark-gray;
+}
