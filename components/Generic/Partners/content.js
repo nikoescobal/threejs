@@ -1,10 +1,10 @@
 const content = {
   en: {
-    title: 'Our Partners'
+    title: 'Our Partners',
   },
   de: {
-    title: 'Unsere Partner'
+    title: 'Unsere Partner',
   },
-}
+};
 
 export default content;

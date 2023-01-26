@@ -98,16 +98,37 @@
   @include sm {
     zoom: 100%;
   }
+
+  &.completed {
+    color: #00ff19;
+    list-style-image: url('../../../public/icons/check-green.svg');
+
+    &.light.completed {
+      color: red;
+      list-style-image: url('../../../public/icons/check-green.svg');
+    }
+  }
 }
 
-.completed {
-  color: #00ff19 !important;
-  list-style-image: url('../../../public/icons/check-green.svg');
-}
+// .phase-wrapper ul > li {
+//   list-style-image: url('../../../public/icons/check-gray.svg');
+//   color: #767676;
+//   padding: 12px 0 12px 8px;
+//   zoom: 75%;
 
-.light .completed {
-  color: #006f0b !important;
-}
+//   @include sm {
+//     zoom: 100%;
+//   }
+// }
+
+// .completed {
+//   color: #00ff19 !important;
+//   list-style-image: url('../../../public/icons/check-green.svg');
+// }
+
+// .light .completed {
+//   color: #006f0b !important;
+// }
 
 .point-list-wrapper {
   border-left: 2px dashed #676767;

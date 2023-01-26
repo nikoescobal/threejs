@@ -1,8 +1,7 @@
 import styles from './partners.module.scss';
 import generics from '../../../styles/generics.module.scss';
 import useStore from '../../../store/store';
-import { useRouter } from 'next/router';
-import content from './content';
+import Image from 'next/image';
 
 const partners = [
   {
@@ -71,63 +70,42 @@ const partners = [
     src: 'https://www.vechain.org/',
   },
 ];
+// const partners = [
+
+//   {
+//     endpoint: 'vechain.webp',
+//     alt: 'vechain logo',
+//     class: 'vechain',
+//     src: 'https://www.vechain.org/'
+//   },
+// ];
 
 function Partners() {
   const { isDarkMode } = useStore((state) => state);
-  const { locale } = useRouter();
 
   return (
     <section
-      className={`${styles['legacy-method-wrapper']} ${
-        !isDarkMode ? `${styles['light']}` : ''
-      } `}
+      className={`${styles.partners} ${!isDarkMode ? `${styles.light}` : ''} `}
     >
-      <div className={styles['container']}>
-        <div className={styles['slider-wrapper']}>
-          <h3
-            className={`${styles['title']} ${
-              !isDarkMode ? `${styles['light']}` : ''
-            } `}
-          >
-            {content[locale].title}
-          </h3>
-          <div className={`${styles['slider']} ${styles['animate']}`}>
-            <div className={styles['logo-wrapper']}>
-              {partners.map((logo, index) => (
-                <a
-                  key={index}
-                  className={styles['slide']}
-                  href={logo.src}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={`/logos/${logo.endpoint}`}
-                    alt={logo.alt}
-                    className={`${styles['logo']} ${styles[logo.class]}`}
-                  />
-                </a>
-              ))}
-            </div>
-            <div className={styles['logo-wrapper']}>
-              {partners.map((logo, index) => (
-                <a
-                  key={index}
-                  className={styles['slide']}
-                  href={logo.src}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={`/logos/${logo.endpoint}`}
-                    alt={logo.alt}
-                    className={`${styles['logo']} ${styles[logo.class]}`}
-                  />
-                </a>
-              ))}
-            </div>
+      <h3 className={`${generics['spacing-x']}`}>Our Partners</h3>
+      <div
+        className={`${styles['logos-wrapper']} ${generics['spacing-x']} max-1920`}
+      >
+        {partners.map((logo) => (
+          <div key={logo.alt}>
+            <a href={logo.src} target="_blank" rel="noopener noreferrer">
+              <Image
+                src={`/logos/${logo.endpoint}`}
+                alt={logo.alt}
+                className={styles[logo.class]}
+                width={64}
+                height={64}
+                layout="responsive"
+                objectFit="contain"
+              />
+            </a>
           </div>
-        </div>
+        ))}
       </div>
     </section>
   );
