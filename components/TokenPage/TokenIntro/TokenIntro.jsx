@@ -1,9 +1,12 @@
 import styles from './token_intro.module.scss';
 import generics from '../../../styles/generics.module.scss';
 import useStore from '../../../store/store';
+import content from './content';
+import { useRouter } from 'next/router';
 
 function TokenIntro() {
   const { isDarkMode } = useStore();
+  const { locale } = useRouter();
 
   return (
     <section
@@ -14,10 +17,9 @@ function TokenIntro() {
       `}
     >
       <div>
-        <h3>What is Legacy Token (LGCT)?</h3>
+        <h3>{content[locale].title}</h3>
         <p>
-          Legacy Token (LGCT) is a multichain utility and payment token which
-          allows users to get the most out of the Legacy Network ecosystem.
+          {content[locale].subtitle}
         </p>
       </div>
     </section>
