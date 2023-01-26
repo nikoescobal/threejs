@@ -48,20 +48,20 @@
 }
 
 .legacy-button-wrapper {
-  width: 100%;
+  width: 100% !important;
   display: flex;
-  flex-direction: column;
+  flex-direction: column !important;
   gap: 1rem;
   padding-top: 1rem;
-  justify-content: space-between;
+  justify-content: space-between !important;
 
   @include lg {
     display: flex;
-    flex-direction: row;
+    flex-direction: row !important;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    justify-content: flex-end;
+    justify-content: flex-end !important;
     gap: 1.5rem;
   }
 }
@@ -80,6 +80,7 @@
   justify-content: center;
   scroll-snap-align: start;
   padding: 1rem 3rem;
+  text-transform: capitalize !important;
 
   &:hover,
   &:focus {
