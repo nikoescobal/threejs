@@ -14,11 +14,12 @@ import Partners from '../components/Generic/Partners/Partners';
 import Map from '../components/Home/Map/Map';
 import FollowUs from '../components/Generic/FollowUs/FollowUs';
 import CardSection from '../components/Home/CardSection/CardSection';
-import LegacyMethods from '../components/Home/LegacyMethods/LegacyMethods';
+import LegacyMethods from '../components/Home/LegacyMethods/LegacyMethodsList/LegacyMethods'; 
 import { Parallax } from 'react-scroll-parallax';
 import Hammer from '../public/backgrounds/hammer.webp';
 import useStore from '../store/store';
 import { useMediaQuery } from '@mui/material';
+import { inDevEnvironment } from '../utils';
 
 export default function Home() {
   const { isDarkMode } = useStore();
@@ -97,7 +98,11 @@ export default function Home() {
       <WavesWrapper hideBottom>
         <NewsLetter />
         <CardSection />
-        <LegacyMethods />
+        {
+          inDevEnvironment
+            ? <LegacyMethods />
+            : null
+        }
       </WavesWrapper>
       <App />
       {/* <Products /> */}

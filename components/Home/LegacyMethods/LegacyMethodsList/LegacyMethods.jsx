@@ -1,12 +1,14 @@
 import content from './content.js';
 import styles from './legacymethods.module.scss';
-import useStore from '../../../store/store';
-import MethodCard from './MethodCard';
-import Arrow from '../../../public/icons/dotted-arrow.svg';
+import useStore from '../../../../store/store';
+import MethodCard from '../MethodCard/MethodCard.jsx';
+import Arrow from '../../../../public/icons/dotted-arrow.svg';
 import { Diversity3 } from '@mui/icons-material';
+import { useRouter } from 'next/router.js';
 
 const LegacyMethods = () => {
   const { isDarkMode } = useStore();
+  const { locale } = useRouter();
 
   return (
     <section
@@ -14,17 +16,12 @@ const LegacyMethods = () => {
         !isDarkMode ? `${styles['light']}` : ''
       } spacing-x`}
     >
-      {/* <hr className={styles['divider']}></hr> */}
-
       <h3 className={styles['title']}>The Legacy Method</h3>
-      <p className={styles['subtitle']}>
-        We follow a systematic approach that is based on 6{' '}
-        <strong>core methodologies</strong>.
-      </p>
+      <p className={styles['subtitle']} dangerouslySetInnerHTML={{__html: content[locale].subtitle}} />
 
       <div className={styles['legacy-methods']}>
         <div className={styles['left-content']}>
-          {content.slice(0, 3).map((method, index) => (
+          {content[locale].list.slice(0, 3).map((method, index) => (
             <MethodCard
               className={styles['left']}
               key={index}
@@ -80,7 +77,7 @@ const LegacyMethods = () => {
         </div>
 
         <div className={styles['right-content']}>
-          {content.slice(3, 6).map((method, index) => (
+          {content[locale].list.slice(3, 6).map((method, index) => (
             <MethodCard
               className={styles['right']}
               key={index}
