@@ -10,9 +10,12 @@ import styles from './followus.module.scss';
 import generics from '../../../styles/generics.module.scss';
 import Link from 'next/link';
 import useStore from '../../../store/store';
+import content from './content';
+import { useRouter } from 'next/router';
 
 function FollowUs() {
   const { isDarkMode } = useStore((state) => state);
+  const { locale } = useRouter();
 
   return (
     <section className={`${styles['follow-us']} ${isDarkMode ? '' : `${styles.light}`} ${generics['spacing-x']}`}>
@@ -20,7 +23,7 @@ function FollowUs() {
       <img src="/assets/parallax/square.png" className="floating-shape" alt="" />
       <img src="/assets/parallax/triangle.png" className="floating-shape" alt="" />
       <img src="/assets/parallax/cross.png" className="floating-shape" alt="" /> */}
-      <h3>Follow Us</h3>
+      <h3>{content[locale].title}</h3>
       <div className={`${styles['main-icon-wrapper']}`}>
           <a href="https://twitter.com/LegacyNetworkio" target='_blank' rel="noreferrer">
             <div className={`${styles['icon-wrapper']}`}>
