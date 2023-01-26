@@ -14,9 +14,12 @@ import WavesWrapper from '../../Generic/WavesWrapper/WavesWrapper';
 import generics from '../../../styles/generics.module.scss';
 import Gradient from '../../Generic/Gradient/Gradient';
 import Circles from '../../Generic/Circles/Circles';
+import { useRouter } from 'next/router';
+import content from './content';
 
 function Features() {
   const { isDarkMode } = useStore((state) => state);
+  const { locale } = useRouter();
 
   return (
     <WavesWrapper hideBottom={true}>
@@ -43,7 +46,7 @@ function Features() {
         } spacing-x max-1920`}
       >
         <h3 className={styles['key-features']}>
-          Key Features of the Legacy Network App
+          {content[locale].title}
         </h3>
 
         <div className={`${styles.content}`}>
@@ -53,17 +56,9 @@ function Features() {
           <div style={{
             position: 'relative'
           }}>
-            <h3>Education Area</h3>
+            <h3>{content[locale].education.title}</h3>
             <p>
-              In the education area of the app, the user can choose from various
-              categories. Each category contains content, which can be text,
-              video, animation, podcast (audio content) and other forms. Each
-              category has its own level system. The AI uses targeted questions,
-              user behavior, feedback app tracking and other parameters to
-              decide how advanced the user already is and which content is
-              relevant to them. This makes the system usable for everyone,
-              whether beginner or professional. The content consists of both a
-              theoretical and a practical part.
+              {content[locale].education.description}
             </p>
           </div>
         </div>
@@ -80,13 +75,12 @@ function Features() {
             <h3 style={{
               position: 'relative',
               zIndex: '1'
-            }}>Health Area</h3>
+            }}>{content[locale].health.title}</h3>
             <p style={{
               position: 'relative',
               zIndex: '1'
             }}>
-              The health area of the final app version is expected to include
-              the following features:
+              {content[locale].health.description}
             </p>
 
             <div className={`${styles.wrapper}`} style={{
@@ -101,10 +95,9 @@ function Features() {
                 />
               </div>
               <div className={`${styles.healthtext}`}>
-                <h4>Detailed sleep analysis</h4>
+                <h4>{content[locale].sleep.title}</h4>
                 <p>
-                  Duration of falling asleep, total sleep duration, quality of
-                  sleep, sounds during sleep, etc.
+                  {content[locale].sleep.description}
                 </p>
               </div>
             </div>
@@ -120,10 +113,9 @@ function Features() {
                 />
               </div>
               <div className={`${styles.healthtext}`}>
-                <h4>Detailed nutritional analysis</h4>
+                <h4>{content[locale].nutritional.title}</h4>
                 <p>
-                  Macro and micronutrients consumed, calories consumed,
-                  identification of deficiencies, individual goals, etc.
+                  {content[locale].nutritional.description}
                 </p>
               </div>
             </div>
@@ -140,10 +132,9 @@ function Features() {
                 />
               </div>
               <div className={`${styles.healthtext}`}>
-                <h4>Time Management & Routine Planning</h4>
+                <h4>{content[locale].time.title}</h4>
                 <p>
-                  Macro and micronutrients consumed, calories consumed,
-                  identification of deficiencies, individual goals, etc.
+                {content[locale].time.description}
                 </p>
               </div>
             </div>
@@ -162,20 +153,13 @@ function Features() {
           </div>
           <div>
             <h3 className={styles['ai-features']}>
-              The first artifical intelligence designed to analyze human
-              behavior
+              {content[locale].ai.title}
             </h3>
             <p>
-              Our artificial intelligence evaluates the collected information
-              about the user and utilizes it to deliver individual and effective
-              solutions. Over time, the AI turns into a personal coach which
-              knows more about the user, than he knows about himself.
+              {content[locale].ai.description_1}
             </p>
             <p>
-              It will be able to find errors in a person’s behavior, thinking
-              and habit which lead to failure in certain important life areas.
-              By systematically adjusting these things, the user will experience
-              a great improvement in one’s life quality.
+              {content[locale].ai.description_2}
             </p>
           </div>
         </div>
