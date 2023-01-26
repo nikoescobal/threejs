@@ -81,13 +81,13 @@
   color: $light-mode-text-color;
 }
 
-.navbar > div {
+.navbar>div {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.navbar > img {
+.navbar>img {
   width: 4rem;
 }
 
@@ -131,7 +131,7 @@
   position: relative;
 }
 
-.boards-wrapper > div {
+.boards-wrapper>div {
   display: none;
   position: absolute;
   top: 2.9rem;
@@ -140,11 +140,11 @@
   padding: 1rem 0;
 }
 
-.light .boards-wrapper > div {
+.light .boards-wrapper>div {
   background: rgba($color: #8db2fc, $alpha: 0.2);
 }
 
-.boards-wrapper:hover > div {
+.boards-wrapper:hover>div {
   display: grid;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
@@ -155,7 +155,7 @@
   }
 }
 
-.boards-wrapper > div > span {
+.boards-wrapper>div>span {
   display: none;
 
   @include lg {
@@ -309,7 +309,7 @@
     top: 0;
   }
 
-  .navbar > div {
+  .navbar>div {
     flex-direction: row;
     gap: 2.5rem;
 
@@ -374,7 +374,6 @@
 
   @include lg {
     right: 7.5rem;
-    // right: 12.5rem;
     max-width: 4rem;
     top: -2.5px;
     padding: 0 0 0 1rem !important;
@@ -389,6 +388,12 @@
     // right: 22.25rem;
     max-width: 5rem !important;
     padding: 0 0 0 1.25rem !important;
+  }
+}
+
+.win[data-env="false"] {
+  @include lg {
+    right: 12.5rem;
   }
 }
 

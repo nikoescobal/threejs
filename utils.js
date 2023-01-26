@@ -1,7 +1,7 @@
-let inDevEnvironment = true;
+let inProdEnvironment = false;
 
 if (process && process.env.NEXT_PUBLIC_ENVIRONMENT === 'production') {
-  inDevEnvironment = false;
+  inProdEnvironment = true;
 }
 
-export { inDevEnvironment };
+export { inProdEnvironment };

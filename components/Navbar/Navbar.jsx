@@ -11,6 +11,7 @@ import LanguageIcon from '@mui/icons-material/Language';
 import { IconButton, MenuItem, MenuList } from '@mui/material';
 import { useCallback } from 'react';
 import Dialog from '../Generic/SimpleDialog/Dialog';
+import { inProdEnvironment } from '../../utils';
 
 function Hamburger({ onClick, className }) {
   return (
@@ -229,6 +230,7 @@ function Navbar() {
         <div>
           <div
             className={`${styles.win} ${!isDarkMode ? `${styles.light}` : ''} `}
+            data-env={inProdEnvironment}
           >
             <ComingSoon className={`${styles.coming} `}>
               <img
@@ -239,17 +241,22 @@ function Navbar() {
               Win
             </ComingSoon>
           </div>
-          {/* <div className={styles.languages}>
-            <IconButton
-              type="button"
-              onClick={toggleLanguageList}
-              className={`${styles['dark-mode-toggle']} ${
-                isDarkMode ? '' : `${styles.light}`
-              }`}
-            >
-              <LanguageIcon />
-            </IconButton>
-          </div> */}
+          {
+            !inProdEnvironment
+              ? <div className={styles.languages}>
+                  <IconButton
+                    type="button"
+                    onClick={toggleLanguageList}
+                    className={`${styles['dark-mode-toggle']} ${
+                      isDarkMode ? '' : `${styles.light}`
+                    }`}
+                  >
+                    <LanguageIcon />
+                  </IconButton>
+                </div>
+              : null
+          }
+          
           <button
             type="button"
             onClick={toggle}

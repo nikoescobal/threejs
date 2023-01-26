@@ -20,7 +20,7 @@ import { Parallax } from 'react-scroll-parallax';
 import Hammer from '../public/backgrounds/hammer.webp';
 import useStore from '../store/store';
 import { useMediaQuery } from '@mui/material';
-import { inDevEnvironment } from '../utils';
+import { inProdEnvironment } from '../utils';
 
 export default function Home() {
   const { isDarkMode } = useStore();
@@ -100,7 +100,7 @@ export default function Home() {
         <NewsLetter />
         <CardSection />
         {
-          inDevEnvironment
+          !inProdEnvironment
             ? <LegacyMethods />
             : null
         }
@@ -108,7 +108,7 @@ export default function Home() {
       <App />
       {/* <Products /> */}
       { 
-        !inDevEnvironment
+        !inProdEnvironment
           ? <RoadmapNew />
           : <Roadmap />
       }
