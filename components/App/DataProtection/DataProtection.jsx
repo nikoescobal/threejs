@@ -6,11 +6,15 @@ import generics from '../../../styles/generics.module.scss';
 import { useMediaQuery } from '@mui/material';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
+import content from './content';
+import translations from '../../../language';
 
 function DataProtection() {
   const { isDarkMode } = useStore();
   const isDesktop = useMediaQuery('(min-width: 1024px)');
   const [scale, setScale] = useState(1);
+  const { locale } = useRouter();
 
   useEffect(() => {
     if (isDesktop) {
@@ -37,21 +41,13 @@ function DataProtection() {
         </div>
         <ClearContainer
           isComingSoon
-          title="Data Protection"
+          title={content[locale].title}
           to="/app"
-          linkText="Read More"
+          linkText={translations.read_more[locale]}
           reducedPadding
         >
           <p>
-            Part of our vision is to give people back control of their data.
-            Legacy Network is the first technology company to use user’s data
-            and psychology exclusively for them, not against them. Unlike
-            various Big Data corporations, we will not monetize data and thus
-            will not make our platforms available for serving ads. As we will
-            not collect any personal data such as name or address, the user
-            profiles cannot be assigned to a real person. A concrete data
-            protection concept will be worked out during development together
-            with experts.
+            {content[locale].description}
           </p>
         </ClearContainer>
       </div>
