@@ -21,10 +21,34 @@ import Hammer from '../public/backgrounds/hammer.webp';
 import useStore from '../store/store';
 import { useMediaQuery } from '@mui/material';
 import { inProdEnvironment } from '../utils';
+import { useRouter } from 'next/router';
+
+const content = {
+  en: {
+    title: `The world's most innovative personal development app`,
+    list: [
+      'Connect with like-minded people and create your own legacy',
+      'Receive individual quests for your personal growth',
+      "Learn about the things school didn't teach you",
+      'Playfully improve all areas of your life'
+    ]
+  },
+  de: {
+    title: 'Die weltweit innovativste App zur Persönlichkeitsentwicklung',
+    list: [
+      'Verbinden Sie sich mit Gleichgesinnten und schaffen Sie Ihr eigenes Vermächtnis',
+      'Erhalte individuelle Aufgaben für dein persönliches Wachstum',
+      'Erfahren Sie über die Dinge, die Ihnen die Schule nicht beigebracht hat',
+      'Verbessern Sie spielerisch alle Bereiche Ihres Lebens'
+    ]
+  }
+}
 
 export default function Home() {
   const { isDarkMode } = useStore();
   const isTablet = useMediaQuery('(min-width: 768px');
+  const { locale } = useRouter();
+  const { uuid } = require('crypto');
 
   return (
     <div
@@ -64,7 +88,7 @@ export default function Home() {
           className={`${styles['clear-container-wrapper']} ${generics['spacing-x']}`}
         >
           <ClearContainer
-            title={"The world's most innovative personal development app"}
+            title={content[locale].title}
             style={{ maxWidth: '1024px' }}
             textAlign="center"
           >
@@ -76,22 +100,14 @@ export default function Home() {
                 padding: '0 1rem',
               }}
             >
-              <li>
-                <span>&#183;</span>
-                Connect with likeminded people and create your own legacy
-              </li>
-              <li>
-                <span>&#183;</span>
-                Receive individual quests for your personal growth
-              </li>
-              <li>
-                <span>&#183;</span>
-                Learn about the things school didn&apos;t teach you
-              </li>
-              <li>
-                <span>&#183;</span>
-                Playfully improve all areas of your life
-              </li>
+              {
+                content[locale].list.map((item) => (
+                  <li key={uuid}>
+                    <span>&#183;</span>
+                    {item}
+                  </li>
+                ))
+              }
             </ul>
           </ClearContainer>
         </div>
