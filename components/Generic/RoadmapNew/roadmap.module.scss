@@ -70,10 +70,10 @@
   font-size: 1rem;
   white-space: nowrap;
   background: transparent;
-  color: #7a7a7a;
+  color: #7a7a7a !important;
   border-radius: 4px;
   width: 100%;
-  border: 1px solid $ln-blue;
+  border: 1px solid $ln-blue !important;
   text-transform: capitalize;
   height: 54px;
   display: flex;
@@ -83,7 +83,7 @@
 
   &:hover,
   &:focus {
-    background: #1960ea;
+    background: #1960ea !important;
     color: white;
   }
 
