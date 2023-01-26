@@ -8,7 +8,7 @@ import content from './content';
 import styles from './roadmap.module.scss';
 import useStore from '../../../store/store';
 
-export default function Roadmap() {
+export default function RoadmapNew() {
   const [currentSlideindex, setCurrentSlideindex] = useState(0);
   const [currentProduct, setCurrentProduct] = useState('legacyApp');
   const [selectedButton, setSelectedButton] = useState(0);

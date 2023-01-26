@@ -8,8 +8,8 @@ import App from '../components/Home/App/App';
 import Header from '../components/Home/Header';
 import generics from '../styles/generics.module.scss';
 import styles from '../styles/Home.module.scss';
-// import Roadmap from '../components/Generic/Roadmap/Roadmap';
-import Roadmap from '../components/Generic/RoadmapNew/Roadmap';
+import Roadmap from '../components/Generic/Roadmap/Roadmap';
+import RoadmapNew from '../components/Generic/RoadmapNew/Roadmap';
 // import Partners from '../components/Generic/Partners/Partners';
 import Partners from '../components/Generic/PartnersNew/Partners';
 import Map from '../components/Home/Map/Map';
@@ -107,7 +107,11 @@ export default function Home() {
       </WavesWrapper>
       <App />
       {/* <Products /> */}
-      <Roadmap title={'Our Roadmap'} />
+      { 
+        !inDevEnvironment
+          ? <RoadmapNew />
+          : <Roadmap />
+      }
       <div
         style={{
           paddingTop: '16rem',
