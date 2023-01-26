@@ -7,10 +7,12 @@ import Staff from '../../../public/backgrounds/staff.webp';
 import { Parallax } from 'react-scroll-parallax';
 import ComingSoon from '../../Generic/ComingSoon/ComingSoon';
 import { useMediaQuery } from '@mui/material';
+import { useRouter } from 'next/router';
 
 function Questions() {
   const { isDarkMode } = useStore();
   const isTablet = useMediaQuery('(min-width: 768px');
+  const { locale } = useRouter();
 
   return (
     <section
@@ -30,28 +32,23 @@ function Questions() {
         )}
         <div className={styles.wrapper}>
           <h3>
-            The Legacy Network app answers three essential questions for the
-            user
+            {questions[locale].title}
           </h3>
-          {questions.map((question, index) => (
+          {questions[locale].list.map((question, index) => (
             <div key={index} className={styles.question}>
               <h4>{question.title}</h4>
               <p>{question.text}</p>
             </div>
           ))}
           <div>
-            <h4 className={styles.h3}>What is mental health crisis?</h4>
+            <h4 className={styles.h3}>{questions[locale].mental_health}</h4>
             <p className={styles.p}>
-              A mental health crisis is any situation in which a person's
-              actions, feelings, and behaviors can lead to them hurting
-              themselves or others, and/or put them at risk of being unable to
-              care for themselves or function in the community in a healthy
-              manner.
+              {questions[locale].mental_description}
             </p>
           </div>
           <div>
             <ComingSoon className={styles['btn-wrapper']}>
-              More on mental health crisis
+              {questions[locale].more}
             </ComingSoon>
             {/* <button className="button-blue">
               More on mental health crisis

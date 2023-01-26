@@ -43,20 +43,53 @@ export const lnfunctions = [
   },
 ];
 
-export const questions = [
-  {
-    title: 'WHAT',
-    text: `Here, the user is told a fact, for example, that healthy self-confidence is important for success in various areas of life. It is shown which areas of life are affected by the trait.`,
+export const questions = {
+  en: {
+    title: 'The Legacy Network app answers three essential questions for the user',
+    mental_health: 'What is mental health crisis?',
+    mental_description: `A mental health crisis is any situation in which a person's
+                    actions, feelings, and behaviors can lead to them hurting
+                    themselves or others, and/or put them at risk of being unable to
+                    care for themselves or function in the community in a healthy
+                    manner.`,
+    more: 'More On Mental Health Crisis',
+    list: [
+      {
+        title: 'WHAT',
+        text: `Here, the user is told a fact, for example, that healthy self-confidence is important for success in various areas of life. It is shown which areas of life are affected by the trait.`,
+      },
+      {
+        title: 'WHY',
+        text: `Subsequently, it is explained in detail why a healthy self-confidence is important. Understandable correlations are shown to create an “aha experience”.`,
+      },
+      {
+        title: 'HOW',
+        text: `In the last step, it is explained how exactly self-confidence is formed. Clear cause and reaction relationships are shown for the user to gain a deep understanding of the trait.`,
+      },
+    ]
   },
-  {
-    title: 'WHY',
-    text: `Subsequently, it is explained in detail why a healthy self-confidence is important. Understandable correlations are shown to create an “aha experience”.`,
-  },
-  {
-    title: 'HOW',
-    text: `In the last step, it is explained how exactly self-confidence is formed. Clear cause and reaction relationships are shown for the user to gain a deep understanding of the trait.`,
-  },
-];
+  de: {
+    title: 'Die Legacy Network App beantwortet dem Nutzer drei grundlegende Fragen:',
+    mental_health: 'Was ist eine psychische Erkrankung?',
+    mental_description: 'Eine psychische Erkrankung ist jede Situation, in der die Handlungen, Gefühle und Verhaltensweisen einer Person dazu führen können, dass sie sich selbst oder andere verletzen, und/oder sie dazu bringen können, sich nicht selbst versorgen oder in der Gemeinschaft auf gesunde Weise funktionieren zu können.',
+    more: 'Mehr zur psychischen Gesundheitskriese',
+    list: [
+      {
+        title: 'WAS',
+        text: `Hier wird dem Nutzer eine Tatsache mitgeteilt, zum Beispiel, dass ein gesundes Selbstbewusstsein für den Erfolg in verschiedenen Lebensbereichen wichtig ist. Es wird gezeigt, in welchen Lebensbereichen die Eigenschaft Auswirkungen hat.`,
+      },
+      {
+        title: 'WARUM',
+        text: `Im Anschluss daran wird ausführlich erklärt, warum ein gesundes Selbstbewusstsein wichtig ist. Verständliche Zusammenhänge werden gezeigt, um ein "Aha-Erlebnis" zu schaffen.`,
+      },
+      {
+        title: 'WIE',
+        text: `Im letzten Schritt wird erklärt, wie genau Selbstbewusstsein entsteht. Klare Ursache-Wirkungs-Beziehungen werden gezeigt, damit der Nutzer ein tiefes Verständnis für die Eigenschaft erlangt.
+        `,
+      },
+    ]
+  }
+};
 
 // export const features = [
 //   {
