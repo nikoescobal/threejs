@@ -19,9 +19,20 @@ import WaveLines from '../components/Generic/WaveLines/WaveLines';
 import Script from 'next/script';
 import BurningRate from '../components/BurningRate/BurningRate';
 import styles from '../components/TokenPage/TokenIntro/token_intro.module.scss';
+import { useRouter } from 'next/router';
+
+const content = {
+  en: {
+    subtitle: 'a multichain utility & payment token'
+  },
+  de: {
+    subtitle: 'Ein Multi Chain Utility & Zahlungstoken'
+  }
+}
 
 function Token() {
   const isDesktop = useMediaQuery('(min-width: 1024px)');
+  const { locale } = useRouter();
 
   return (
     <>
@@ -35,7 +46,7 @@ function Token() {
         <GenericHeader
           waves={<WaveLines className={`${styles['waves-wrapper']}`} />}
           title={'Legacy Token'}
-          subtitle={'a multichain utility & payment token'}
+          subtitle={content[locale].subtitle}
           // rightObj={
           //   isDesktop ? (
           //     <TokenModel />
