@@ -41,7 +41,21 @@ function NFTSection() {
       </div>
       <div className={`${styles['nft-card-section']} max-1920`}>
         <div>
-          <CharacterCard
+          {
+            content[locale].characters.map((character, index) => (
+              <CharacterCard
+                key={character.title}
+                srcOne={character.srcOne}
+                altOne={character.altOne}
+                srcTwo={character.srcTwo}
+                altTwo={character.altTwo}
+                className={styles[`card-${index + 1}`]}
+              >
+                {character.title}
+              </CharacterCard>
+            ))
+          }
+          {/* <CharacterCard
             srcOne={'/nft/viking1.png'}
             altOne={'viking'}
             srcTwo={'/nft/character.png'}
@@ -85,7 +99,7 @@ function NFTSection() {
             className={styles['card-5']}
           >
             African
-          </CharacterCard>
+          </CharacterCard> */}
         </div>
         <p>
           {content[locale].description_2}
