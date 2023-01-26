@@ -10,8 +10,8 @@ import generics from '../styles/generics.module.scss';
 import styles from '../styles/Home.module.scss';
 import Roadmap from '../components/Generic/Roadmap/Roadmap';
 import RoadmapNew from '../components/Generic/RoadmapNew/Roadmap';
-// import Partners from '../components/Generic/Partners/Partners';
-import Partners from '../components/Generic/PartnersNew/Partners';
+import Partners from '../components/Generic/Partners/Partners';
+import PartnersNew from '../components/Generic/PartnersNew/Partners';
 import Map from '../components/Home/Map/Map';
 import FollowUs from '../components/Generic/FollowUs/FollowUs';
 import CardSection from '../components/Home/CardSection/CardSection';
@@ -117,7 +117,12 @@ export default function Home() {
           paddingTop: '16rem',
         }}
       >
-        <Partners />
+        { 
+        !inProdEnvironment
+          ? <PartnersNew />
+          : <Partners />
+      }
+        
       </div>
       <Map />
       <FollowUs />

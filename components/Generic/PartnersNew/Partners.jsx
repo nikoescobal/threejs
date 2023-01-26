@@ -72,7 +72,7 @@ const partners = [
   },
 ];
 
-function Partners() {
+function PartnersNew() {
   const { isDarkMode } = useStore((state) => state);
   const { locale } = useRouter();
 
@@ -133,4 +133,4 @@ function Partners() {
   );
 }
 
-export default Partners;
+export default PartnersNew;
