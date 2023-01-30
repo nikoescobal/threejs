@@ -1,0 +1,118 @@
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
+@use '../../../styles/buttons' as *;
+@use '../../../styles/variables' as *;
+
+.section {
+  position: relative;
+  padding: 4rem 0 0;
+
+  @include lg {
+    padding-top: 8rem;
+  }
+
+  background: linear-gradient(transparent 60%,
+    rgba($color: $ln-blue, $alpha: 0.2));
+
+  &>div:last-of-type {
+    position: relative;
+  }
+
+  h3 {
+    max-width: 40ch;
+    padding-bottom: 4rem;
+  }
+
+  h4 {
+    font-size: clamp(1.75rem, 5vw, 2.25rem);
+  }
+
+  p {
+    color: $gray;
+    max-width: 40ch;
+  }
+
+  .solution {
+    padding: 1rem 0 0 0;
+  }
+
+  .question {
+    padding-bottom: 2rem;
+  }
+
+  .wrapper div:last-of-type {
+    max-width: 22rem;
+    text-align: center;
+  }
+
+  .button {
+    max-width: 16rem;
+  }
+
+  .button-wrapper {
+    position: relative;
+  }
+
+  .circles {
+    top: 0;
+    right: 0;
+  }
+}
+
+.staff {
+  position: absolute;
+  max-width: 100%;
+  top: 5%;
+  right: -40%;
+
+  @include sm {
+    top: -10%;
+    right: -45%;
+  }
+
+  @include md {
+    top: 20.5%;
+    right: -14%;
+    max-width: 55%;
+  }
+
+  @include lg {
+    top: -10%;
+    right: -15%;
+    max-width: 54rem;
+  }
+}
+
+.wrapper {
+  position: relative;
+}
+
+.section.light {
+  background: linear-gradient(transparent 60%,
+      rgba($color: $light-mode-primary, $alpha: 1));
+
+  &>div:last-of-type {
+    background: none;
+    position: relative;
+  }
+
+  p {
+    color: $gray-dark;
+  }
+}
+
+.spacing-y {
+  padding-bottom: 3rem;
+
+  button {
+    max-width: 16rem;
+  }
+}
+
+.btn-wrapper p {
+  color: white !important;
+}
+
+.p {
+  max-width: 100% !important;
+}

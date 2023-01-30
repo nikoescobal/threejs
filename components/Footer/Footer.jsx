@@ -98,7 +98,7 @@ function Footer() {
                 Home
               </Link>
               <Link href="/app" className={`${styles.footer__column__item}`}>
-                App
+                Products
               </Link>
               <Link href="/token" className={`${styles.footer__column__item}`}>
                 Token

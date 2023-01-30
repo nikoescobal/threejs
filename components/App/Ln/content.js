@@ -1,12 +1,7 @@
 const content = {
   en: {
     title: 'Legacy Wallet',
-    tabs: [
-      'Managing',
-      'Staking',
-      'Vesting',
-      'Bridging'
-    ],
+    tabs: ['Managing', 'Staking', 'Vesting', 'Bridging'],
     panels: [
       {
         content: `
@@ -21,13 +16,6 @@ const content = {
             with a browser extension which grants you web-access to the
             exciting world of Web3.
           </p>
-          <ul>
-            Token and NFT support:
-            <li>VeChain</li>
-            <li>Ethereum</li>
-            <li>Binance</li>
-            <li>Polygon.</li>
-          </ul>
         `,
         img: '/mockups/managing.png',
       },
@@ -75,16 +63,11 @@ const content = {
         `,
         img: '/mockups/bridging.png',
       },
-    ]
+    ],
   },
   de: {
     title: 'Legacy Wallet',
-    tabs: [
-      'Managing',
-      'Staking',
-      'Vesting',
-      'Bridging'
-    ],
+    tabs: ['Managing', 'Staking', 'Vesting', 'Bridging'],
     panels: [
       {
         content: `
@@ -92,13 +75,6 @@ const content = {
           <p>
           Verwalten Sie Ihre bevorzugten Kryptowährungen in einer sicheren, non-custodialen Wallet. Die Legacy-Wallet ermöglicht es Ihnen, Token auf mehreren Blockchains einfach zu halten, zu senden und zu empfangen. Die privaten Schlüssel werden lokal auf dem Gerät gespeichert, sodass nur Sie Zugriff auf Ihre Mittel haben. Durchsuchen Sie die NFT-Sektion, um alle Ihre Sammlerstücke an einem sicheren Ort zu sehen. Darüber hinaus verfügt die Wallet über eine Browser-Erweiterung, mit der Sie Zugriff auf die aufregende Welt von Web3 haben.
           </p>
-          <ul>
-            Token und NFT support:
-            <li>VeChain</li>
-            <li>Ethereum</li>
-            <li>Binance</li>
-            <li>Polygon.</li>
-          </ul>
         `,
         img: '/mockups/managing.png',
       },
@@ -131,8 +107,8 @@ const content = {
         `,
         img: '/mockups/bridging.png',
       },
-    ]
-  }
-}
+    ],
+  },
+};
 
 export default content;
