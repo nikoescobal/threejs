@@ -5,12 +5,8 @@
 .method-card {
   position: relative;
   height: 224px;
-  // background: #000000;
-  // border: solid 1px $ln-blue;
-  // background-image: url('../../../public/icons/border-gradient-right.svg');
   background-size: contain;
   background-repeat: no-repeat;
-  // background-position: right;
   width: 100%;
   min-height: 224px;
 
@@ -21,16 +17,6 @@
     max-height: $card-height;
   }
 }
-
-// .right-content .method-card:nth-last-of-type(even) {
-//   background-position: left;
-//   background-image: url('../../../public/icons/border-gradient-left.svg');
-// }
-
-// .left-content .method-card {
-//   background-position: right;
-//   background-image: url('../../../public/icons/border-gradient-right.svg');
-// }
 
 .inner-content {
   padding: 0 0.5rem !important;
@@ -59,53 +45,21 @@
     linear-gradient(to bottom left, $transparent-light, $transparent-light) border-box;
 }
 
-// .card-border {
-//   position: relative;
-// }
-
 .image-border {
   position: absolute;
   height: 259px;
   transform: translate(61px, -27px) rotate(180deg);
 }
 
-// .card-border img:nth-child(odd) {
-//   position: absolute;
-//   height: 259px;
-//   background: red;
-//   transform: translate(61px, -27px);
-// }
-
-// .image-border:nth-child(even) {
-// }
-
-// .method-card:nth-child(odd) {
-//   background: linear-gradient(#000000 30%, #000000 30%) padding-box,
-//     linear-gradient(270deg, #1960ea, #000000) border-box !important;
-// }
-
-// .method-card:nth-child(even) {
-//   @include lg {
-//     transform: translateY(6.5rem);
-//   }
-//   // margin-top: 5rem;
-// }
-
-// .method-bullets {
-//   list-style-type: none;
-// }
-
 .method-title {
   @include lg {
     padding-bottom: 1rem;
-    font-size: 24px;
+    font-size: 1.75rem;
   }
 
   @include xl {
-    font-size: 30px;
+    font-size: 2.25rem;
   }
-
-  // padding-bottom: 1rem;
 }
 
 .method-description {

@@ -10,6 +10,7 @@ import Waves from '../../public/backgrounds/waves-5.png';
 import WaveLines from '../Generic/WaveLines/WaveLines';
 import LogoParticles from './LogoParticles/LogoParticles';
 import { useMediaQuery } from '@mui/material';
+import translations from '../../language';
 
 function Header() {
   const { isDarkMode } = useStore((state) => state);
@@ -24,7 +25,7 @@ function Header() {
       <Gradient className={styles.gradient} preload={true} />
       <WaveLines className={styles['waves-wrapper']} />
       <section
-        className={`${generics.header} ${styles.header} header-intro ${generics['spacing-x']} ${generics['spacing-t']}`}
+        className={`${generics.header} ${styles.header} header-intro spacing-x spacing-t`}
       >
         <div
           className={`${generics['img-wrapper']}`}
@@ -60,15 +61,15 @@ function Header() {
         </div>
         <div className="text">
           <div className={styles['title-wrapper']}>
-            <h1 className={generics.title}>
-              LEGACY
+            <h1>
+              Legacy
               <br />
-              NETWORK
+              Network
             </h1>
           </div>
           <h4 className={styles.subtitle}>
             {/* Increase your mental sharpness, confidence & wellbeing. */}
-            Gamified personal development through AI and blockchain technology
+            Increase your mental sharpness, confidence and wellbeing.
           </h4>
           {/* <h4>Daily training to optimise your life.</h4> */}
         </div>

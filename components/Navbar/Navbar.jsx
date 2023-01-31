@@ -12,6 +12,7 @@ import { IconButton, MenuItem, MenuList } from '@mui/material';
 import { useCallback } from 'react';
 import Dialog from '../Generic/SimpleDialog/Dialog';
 import { inProdEnvironment } from '../../utils';
+import EastIcon from '@mui/icons-material/East';
 
 function Hamburger({ onClick, className }) {
   return (
@@ -110,9 +111,13 @@ function Navbar() {
         </MenuList>
       </Dialog>
       <nav
-        className={`${styles.navbar} ${isDarkMode ? '' : `${styles.light}`} ${
-          isOpen ? `${styles.open}` : ''
-        } ${scrollDirection === 'down' ? `${styles['scroll-down']}` : ''}`}
+        className={`
+          ${styles.navbar}
+          ${isDarkMode ? '' : `${styles.light}`}
+          ${isOpen ? `${styles.open}` : ''}
+          ${scrollDirection === 'down' ? `${styles['scroll-down']}` : ''}`
+        }
+        data-visible-gradient={router.pathname === '/'}
       >
         <div className={styles.navbar__logo__wrapper}>
           <Link href="/" title="Navbar link to home page">
@@ -273,6 +278,10 @@ function Navbar() {
             />
           </button>
         </div>
+      <p className={`${styles['gradient-bar']} ${scrollDirection === 'down' ? `${styles['scroll-down']}` : ''}`} data-visible={router.pathname === '/'}>
+        Join the Legacy Network giveaway | $1 million in prizes and seed funding | Join now, we are waiting for you
+        <EastIcon />
+      </p>
       </nav>
     </>
   );

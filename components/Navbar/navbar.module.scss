@@ -323,7 +323,11 @@
   }
 
   .scroll-down {
-    top: -64px;
+    top: -5rem;
+  }
+
+  .scroll-down[data-visible-gradient="true"] {
+    top: calc(-5rem - 40.5px);
   }
 }
 
@@ -575,3 +579,27 @@
 .light .banner {
   color: white !important;
 }
+
+.gradient-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+  font-weight: 300;
+  font-size: 0.9rem;
+  padding: 0.25rem;
+  top: 5rem;
+  left: 0;
+  background: linear-gradient(90deg, #0C145A 0%, #041E58 50.31%, #8000FF 100%);
+}
+
+.gradient-bar[data-visible="false"] {
+  display: none;
+}
+
+// .gradient-bar.scroll-down {
+//   top: calc(-5rem - 40.5px);
+// }

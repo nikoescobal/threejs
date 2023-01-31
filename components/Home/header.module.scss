@@ -1,5 +1,6 @@
 @use '../../styles/breakpoints' as *;
 @use '../../styles/variables' as *;
+@use '../../styles/colors' as *;
 
 .container {
   position: relative;
@@ -11,31 +12,19 @@
 }
 
 .legacy {
-  font-size: 5.2rem;
-  line-height: 5.1rem;
+  // font-size: 5.2rem;
+  // line-height: 5.1rem;
 }
 
 .subtitle {
-  font-size: 1.5rem;
-  color: $light-mode-secondary;
-  font-weight: bold;
-  // text-transform: lowercase;
-  // font-size: 3.125rem;
-  // color: white;
-
-  @include lg {
-    white-space: nowrap;
-  }
-}
-
-.header h4 {
-  font-size: 1.2rem;
-  max-width: 44ch;
   font-weight: 400;
-  text-transform: uppercase;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  max-width: 44ch;
+  font-family: 'Montserrat', serif;
+  color: $gray--14;
 }
 
-.light h4 {
+.light .subtitle {
   color: $light-mode-secondary;
 }
 
@@ -79,8 +68,7 @@
 
 .title-wrapper h1 {
   color: white !important;
-  background: 50% 100% / 50% 50% no-repeat
-    radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+  background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -95,8 +83,7 @@
 
 .light .title-wrapper h1 {
   color: $light-mode-secondary !important;
-  background: 50% 100% / 50% 50% no-repeat
-    radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+  background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
