@@ -122,13 +122,7 @@ export default function Home() {
       {/* <Products /> */}
       {!inProdEnvironment ? <RoadmapNew /> : <Roadmap />}
       <NewsLetter />
-      <div
-        style={{
-          paddingTop: '16rem',
-        }}
-      >
-        {!inProdEnvironment ? <PartnersNew /> : <Partners />}
-      </div>
+      {!inProdEnvironment ? <PartnersNew /> : <Partners />}
       <Map />
       <FollowUs />
     </div>
