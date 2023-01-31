@@ -29,32 +29,32 @@ function Hamburger({ onClick, className }) {
 }
 
 const selectLanguageText = {
-  'en': 'Select a Language',
-  'de': 'Wähle eine Sprache'
-}
+  en: 'Select a Language',
+  de: 'Wähle eine Sprache',
+};
 
 const languages = {
-  'en': [
+  en: [
     {
       locale: 'en',
-      language: 'English'
+      language: 'English',
     },
     {
       locale: 'de',
-      language: 'German'
-    }
+      language: 'German',
+    },
   ],
-  'de': [
+  de: [
     {
       locale: 'en',
-      language: 'Englisch'
+      language: 'Englisch',
     },
     {
       locale: 'de',
-      language: 'Deutsch'
-    }
+      language: 'Deutsch',
+    },
   ],
-}
+};
 
 function Navbar() {
   const scrollDirection = useScrollDirection();
@@ -74,18 +74,24 @@ function Navbar() {
 
   const toggleLanguageList = () => {
     setDisplayLanguages(!displayLanguages);
-  }
+  };
 
-  const switchToLocale = useCallback((locale) => {
-    const path = router.asPath;
-    return router.push(path, path, { locale, scroll: false });
-  }, [router]);
+  const switchToLocale = useCallback(
+    (locale) => {
+      const path = router.asPath;
+      return router.push(path, path, { locale, scroll: false });
+    },
+    [router]
+  );
 
-  const switchLanguage = useCallback(async (option) => {
+  const switchLanguage = useCallback(
+    async (option) => {
       const locale = option;
       setDisplayLanguages(false);
       await switchToLocale(locale);
-    }, [switchToLocale]);
+    },
+    [switchToLocale]
+  );
 
   return (
     <>
@@ -101,13 +107,14 @@ function Navbar() {
         title={selectLanguageText[locale]}
       >
         <MenuList className={styles.menu}>
-          {
-            languages[locale].map((languageSet) => (
-              <MenuItem onClick={(e) => switchLanguage(languageSet.locale)} key={languageSet.language}>
-                <span className={styles.language}>{languageSet.language}</span>
-              </MenuItem>
-            ))
-          }
+          {languages[locale].map((languageSet) => (
+            <MenuItem
+              onClick={(e) => switchLanguage(languageSet.locale)}
+              key={languageSet.language}
+            >
+              <span className={styles.language}>{languageSet.language}</span>
+            </MenuItem>
+          ))}
         </MenuList>
       </Dialog>
       <nav
@@ -140,15 +147,17 @@ function Navbar() {
             </Link>
           </span>
           <span
-            className={router.asPath === '/app' ? `${styles.active}` : ''}
+            className={router.asPath === '/products' ? `${styles.active}` : ''}
             onClick={() => setIsOpen(false)}
           >
             <Link
-              href="/app"
+              href="/products"
               title="Navbar link to app page"
-              className={router.pathname === '/app' ? `${styles.active}` : ''}
+              className={
+                router.pathname === '/products' ? `${styles.active}` : ''
+              }
             >
-              App
+              Products
             </Link>
           </span>
           <span
@@ -246,22 +255,20 @@ function Navbar() {
               Win
             </ComingSoon>
           </div>
-          {
-            !inProdEnvironment
-              ? <div className={styles.languages}>
-                  <IconButton
-                    type="button"
-                    onClick={toggleLanguageList}
-                    className={`${styles['dark-mode-toggle']} ${
-                      isDarkMode ? '' : `${styles.light}`
-                    }`}
-                  >
-                    <LanguageIcon />
-                  </IconButton>
-                </div>
-              : null
-          }
-          
+          {!inProdEnvironment ? (
+            <div className={styles.languages}>
+              <IconButton
+                type="button"
+                onClick={toggleLanguageList}
+                className={`${styles['dark-mode-toggle']} ${
+                  isDarkMode ? '' : `${styles.light}`
+                }`}
+              >
+                <LanguageIcon />
+              </IconButton>
+            </div>
+          ) : null}
+
           <button
             type="button"
             onClick={toggle}

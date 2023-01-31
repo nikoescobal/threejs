@@ -1,0 +1,271 @@
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/variables' as *;
+@use '../../../styles/colors' as *;
+
+.wrapper {
+  background: transparent !important;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.tabs-wrapper {
+  overflow-x: auto !important;
+}
+
+.products-title {
+  text-align: center;
+}
+
+.tab-list {
+  margin-top: 1rem;
+  overflow-x: auto !important;
+  // display: none;
+
+  // @include lg {
+  //   display: block;
+  // }
+}
+
+.tab-list span {
+  display: none;
+
+  @include breakpoint(1120px) {
+    display: block;
+  }
+}
+
+.tab-list div div {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(1120px) {
+    flex-direction: row;
+  }
+}
+
+.tab-item {
+  background: transparent;
+}
+
+.light .tab-item {
+  background: $light-mode-tertiary;
+}
+
+.tab-list button {
+  margin: 0 auto;
+}
+
+.tab-list button:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: $ln-blue;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.tab-list button:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.panel-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  width: 100%;
+  text-align: center;
+
+  @include breakpoint(1120px) {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+  }
+}
+
+.legacy-wallet-subtitle {
+  padding-top: 0.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.legacy-main-text {
+  padding-top: 1rem;
+}
+
+.left-content,
+.right-content {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+  align-items: center;
+  // margin: 0 auto;
+}
+
+// .MuiTabs-scroller {
+//   overflow-x: auto;
+// }
+
+.image-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 20rem;
+
+  @include lg {
+    max-width: 25rem;
+  }
+}
+
+.nft-wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.nft-right {
+  padding: 0 2rem;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.managing-mockup {
+  max-width: 15rem;
+}
+
+.products-button {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.tab-summary {
+  background: #242424;
+  border-radius: 8px;
+
+  // .MuiAccordionDetails {
+  //   color: #afaeae;
+  // }
+
+  // .MuiAccordionDetails-root {
+  //   color: #afaeae !important;
+  // }
+
+  // .MuiAccordionDetails-root p {
+  //   color: #afaeae;
+  // }
+
+  // .MuiAccordion-root {
+  //   background: rgba(255, 255, 255, 0.05) !important;
+  //   backdrop-filter: blur(15px) !important;
+  //   border-radius: 10px !important;
+  //   color: #afaeae !important;
+  //   margin: 1rem 0;
+  // }
+
+  // .MuiAccordion-root svg {
+  //   color: white !important;
+  // }
+
+  // .MuiAccordion-root.Mui-expanded svg {
+  //   color: #afaeae !important;
+  // }
+
+  // .MuiTabs-flexContainer {
+  //   overflow-x: auto !important;
+  // }
+}
+
+.image-slider-mobile,
+.nft-right-mobile {
+  display: block;
+
+  @include breakpoint(1120px) {
+    display: none !important;
+  }
+}
+
+.image-slider-desktop,
+.nft-right-desktop {
+  display: none !important;
+
+  @include breakpoint(1120px) {
+    display: block !important;
+  }
+}
+
+.fade-slider h4 {
+  font-family: 'Fjalla', serif;
+}
+
+.fade-slider .swiper-horizontal > .swiper-pagination-bullets {
+  bottom: -8px !important;
+}
+
+.fade-slider .swiper-pagination-bullet {
+  border: 1px solid white;
+}
+
+.fade-slider .swiper-pagination-bullet-active {
+  background: white !important;
+}
+
+.light .card p {
+  color: $light-mode-text-color !important;
+}
+
+.panel-wrapper {
+  display: none;
+
+  @include breakpoint(1120px) {
+    display: block;
+  }
+}
+
+.panel-spacing {
+  padding: 2rem;
+}
+
+.arrow-wrapper {
+  background: transparent;
+  border: none;
+  position: relative;
+  width: 100%;
+  max-width: 1.25rem;
+}
+
+.arrow-left-wrapper {
+  background: transparent;
+  border: none;
+  position: relative;
+  width: 100%;
+  max-width: 1.25rem;
+}
+
+.arrow-right-wrapper {
+  background: transparent;
+  border: none;
+  position: relative;
+  width: 100%;
+  max-width: 1.25rem;
+}
+
+.arrow-left {
+  position: absolute;
+  left: 2.5rem;
+  top: 25.85rem;
+}
+
+.arrow-right {
+  position: absolute;
+  left: 19.5rem;
+  top: 25.85rem;
+}
+
+.slide-text {
+  text-align: center;
+}

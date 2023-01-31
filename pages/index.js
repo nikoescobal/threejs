@@ -3,8 +3,8 @@ import Image from 'next/image';
 import ClearContainer from '../components/Generic/ClearContainer/ClearContainer';
 import WavesWrapper from '../components/Generic/WavesWrapper/WavesWrapper';
 import NewsLetter from '../components/Home/NewsLetter/NewsLetter';
-import App from '../components/Home/App/App';
-// import Products from '../components/Home/Products/Products';
+// import App from '../components/Home/App/App';
+import Products from '../components/Home/Products/Products';
 import Header from '../components/Home/Header';
 import generics from '../styles/generics.module.scss';
 import styles from '../styles/Home.module.scss';
@@ -15,7 +15,7 @@ import PartnersNew from '../components/Generic/PartnersNew/Partners';
 import Map from '../components/Home/Map/Map';
 import FollowUs from '../components/Generic/FollowUs/FollowUs';
 import CardSection from '../components/Home/CardSection/CardSection';
-import LegacyMethods from '../components/Home/LegacyMethods/LegacyMethodsList/LegacyMethods'; 
+import LegacyMethods from '../components/Home/LegacyMethods/LegacyMethodsList/LegacyMethods';
 import { Parallax } from 'react-scroll-parallax';
 import Hammer from '../public/backgrounds/hammer.webp';
 import useStore from '../store/store';
@@ -30,8 +30,8 @@ const content = {
       'Connect with like-minded people and create your own legacy',
       'Receive individual quests for your personal growth',
       "Learn about the things school didn't teach you",
-      'Playfully improve all areas of your life'
-    ]
+      'Playfully improve all areas of your life',
+    ],
   },
   de: {
     title: 'Die weltweit innovativste App zur Persönlichkeitsentwicklung',
@@ -39,10 +39,10 @@ const content = {
       'Verbinden Sie sich mit Gleichgesinnten und schaffen Sie Ihr eigenes Vermächtnis',
       'Erhalte individuelle Aufgaben für dein persönliches Wachstum',
       'Erfahren Sie über die Dinge, die Ihnen die Schule nicht beigebracht hat',
-      'Verbessern Sie spielerisch alle Bereiche Ihres Lebens'
-    ]
-  }
-}
+      'Verbessern Sie spielerisch alle Bereiche Ihres Lebens',
+    ],
+  },
+};
 
 export default function Home() {
   const { isDarkMode } = useStore();
@@ -100,14 +100,12 @@ export default function Home() {
                 padding: '0 1rem',
               }}
             >
-              {
-                content[locale].list.map((item) => (
-                  <li key={uuid}>
-                    <span>&#183;</span>
-                    {item}
-                  </li>
-                ))
-              }
+              {content[locale].list.map((item) => (
+                <li key={uuid}>
+                  <span>&#183;</span>
+                  {item}
+                </li>
+              ))}
             </ul>
           </ClearContainer>
         </div>
@@ -115,30 +113,17 @@ export default function Home() {
       <WavesWrapper hideBottom>
         <NewsLetter />
         <CardSection />
-        {
-          !inProdEnvironment
-            ? <LegacyMethods />
-            : null
-        }
+        {!inProdEnvironment ? <LegacyMethods /> : null}
       </WavesWrapper>
-      <App />
-      {/* <Products /> */}
-      { 
-        !inProdEnvironment
-          ? <RoadmapNew />
-          : <Roadmap />
-      }
+      {/* <App /> */}
+      <Products />
+      {!inProdEnvironment ? <RoadmapNew /> : <Roadmap />}
       <div
         style={{
           paddingTop: '16rem',
         }}
       >
-        { 
-        !inProdEnvironment
-          ? <PartnersNew />
-          : <Partners />
-      }
-        
+        {!inProdEnvironment ? <PartnersNew /> : <Partners />}
       </div>
       <Map />
       <FollowUs />

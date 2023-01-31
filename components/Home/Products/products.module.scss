@@ -1,7 +1,7 @@
 @use '../../../styles/breakpoints' as *;
 @import '../../../styles/variables';
 
-.app-wrapper {
+.products-wrapper {
   position: relative;
   padding-bottom: 16rem;
   gap: 2rem !important;
@@ -29,13 +29,13 @@
   }
 }
 
-.app-wrapper>h4 {
+.products-wrapper > h4 {
   max-width: 60ch;
   margin: 0 auto;
   position: relative;
 }
 
-.app-wrapper.light {
+.products-wrapper.light {
   background: $light-mode-primary;
 }
 
@@ -44,25 +44,25 @@
   right: 0;
 }
 
-.app-wrapper .floater {
+.products-wrapper .floater {
   top: 75%;
   left: 85%;
 }
 
-.app-wrapper .grid {
+.products-wrapper .grid {
   position: relative;
   margin-bottom: 2rem;
 }
 
-.app-wrapper .grid:nth-of-type(2n) {
+.products-wrapper .grid:nth-of-type(2n) {
   grid-template-columns: 4fr 1fr;
 }
 
-.app-wrapper .grid:nth-of-type(2n) .clear-container {
+.products-wrapper .grid:nth-of-type(2n) .clear-container {
   order: -1;
 }
 
-.app-wrapper .grid .clear-container {
+.products-wrapper .grid .clear-container {
   max-width: none;
   gap: 1rem;
 }
@@ -77,7 +77,7 @@
   }
 }
 
-.mockup-wrapper>span {
+.mockup-wrapper > span {
   margin-top: -2rem;
   scale: 0.8;
   overflow: visible !important;
@@ -89,33 +89,33 @@
 }
 
 @media (min-width: 768px) {
-  .app-wrapper .grid {
+  .products-wrapper .grid {
     display: grid;
     grid-template-columns: 1fr 4fr;
     align-items: center;
   }
 
-  .app-wrapper .waves-bg {
+  .products-wrapper .waves-bg {
     top: -10%;
     left: -35%;
     transform: rotate(30deg);
     width: 100%;
   }
 
-  .app-wrapper .grid .clear-container {
+  .products-wrapper .grid .clear-container {
     max-width: none;
     gap: 1rem;
   }
 
-  .app-wrapper .grid .clear-container h4 {
+  .products-wrapper .grid .clear-container h4 {
     font-size: 1.5rem;
   }
 
-  .app-wrapper .grid img {
+  .products-wrapper .grid img {
     transform: translateX(-10%) scale(2);
   }
 
-  .app-wrapper .grid:nth-of-type(2) img {
+  .products-wrapper .grid:nth-of-type(2) img {
     transform: translateX(-20%);
   }
 }
