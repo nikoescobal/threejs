@@ -9,6 +9,11 @@ const translations = {
       'en': 'Read More',
       'de': 'Mehr'
     },
+  'get_started': 
+    {
+      'en': 'Get Started',
+      'de': 'Mehr'
+    },
   'home': [
     {
       locale: 'en',

@@ -11,6 +11,7 @@ import WaveLines from '../Generic/WaveLines/WaveLines';
 import LogoParticles from './LogoParticles/LogoParticles';
 import { useMediaQuery } from '@mui/material';
 import translations from '../../language';
+import WhoAreWe from './WhoAreWe/WhoAreWe';
 
 function Header() {
   const { isDarkMode } = useStore((state) => state);
@@ -68,14 +69,10 @@ function Header() {
             </h1>
           </div>
           <h4 className={styles.subtitle}>
-            {/* Increase your mental sharpness, confidence & wellbeing. */}
             Increase your mental sharpness, confidence and wellbeing.
           </h4>
-          {/* <h4>Daily training to optimise your life.</h4> */}
         </div>
       </section>
-      <PageSlider />
-      {/* <HeroText /> */}
     </div>
   );
 }
