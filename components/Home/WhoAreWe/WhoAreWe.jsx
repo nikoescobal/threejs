@@ -12,6 +12,7 @@ import { useRouter } from 'next/router';
 import translations from '../../../language';
 import Image from 'next/image';
 import EastIcon from '@mui/icons-material/East';
+import AlternatingGrid from '../../Generic/AlternatingGrid/AlternatingGrid';
 
 function WhoAreWe() {
   const { isDarkMode } = useStore((state) => state);
@@ -29,7 +30,8 @@ function WhoAreWe() {
     >
       <div className={`${styles['cards-wrapper']}`}>
         {content[locale].map((item) => (
-          <div key={uuid} className={styles.grid}>
+          <AlternatingGrid key={uuid} className={styles.grid}>
+          {/* <div  className={styles.grid}> */}
             <div className={styles['img-wrapper']}>
               {/* <Image src={item.image} width={700} height={100} objectFit={'fill'} alt="illustration" /> */}
               <img src={item.image} width={700} height={100} alt="illustration" />
@@ -41,7 +43,8 @@ function WhoAreWe() {
                 <a className="button-blue">{item.button_text}{' '}<EastIcon /></a>
               </Link>
             </div>
-          </div>
+          {/* </div> */}
+          </AlternatingGrid>
         ))}
       </div>
     </section>

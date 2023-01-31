@@ -16,10 +16,6 @@
 }
 
 .grid {
-  display: grid;
-  align-items: center;
-  gap: 1rem;
-  position: relative;
   min-height: 24rem;
   overflow: visible;
 
@@ -29,21 +25,18 @@
 
   @include md {
     min-height: 10rem;
-    gap: 4rem;
-    grid-template-columns: repeat(2, 1fr);
   }
 
   @include lg {
     min-height: 10rem;
-    gap: 10rem;
   }
 }
 
 .grid h2 {
-  text-align: center;
+  // text-align: center;
 
   @include md {
-    text-align: left;
+    // text-align: left;
   }
 }
 
@@ -54,23 +47,13 @@
   justify-content: center;
   gap: 1rem;
   padding: 1rem 2rem;
-  margin: 1rem auto;
+  // margin: 1rem auto;
 
   @include md {
-    margin: 0;
+    // margin: 0;
     margin-top: 4rem;
   }
 }
-
-.grid:nth-of-type(2)>div:first-of-type {
-  @include md {
-    order: 1;
-  }
-}
-
-// .grid>div:nth-of-type(2n) {
-//   order: 1;
-// }
 
 .en .card:nth-of-type(4) a {
   bottom: 3.5rem;
