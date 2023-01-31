@@ -22,6 +22,8 @@ import useStore from '../store/store';
 import { useMediaQuery } from '@mui/material';
 import { inProdEnvironment } from '../utils';
 import { useRouter } from 'next/router';
+import WhoAreWe from '../components/Home/WhoAreWe/WhoAreWe';
+import WhatIsPersonalDevelopment from '../components/Home/WhatIsPersonalDevelopment/WhatIsPersonalDevelopment';
 
 const content = {
   en: {
@@ -84,7 +86,8 @@ export default function Home() {
           )}
         </div>
         <Header />
-        <div
+        <WhoAreWe />
+        {/* <div
           className={`${styles['clear-container-wrapper']} ${generics['spacing-x']}`}
         >
           <ClearContainer
@@ -108,16 +111,17 @@ export default function Home() {
               ))}
             </ul>
           </ClearContainer>
-        </div>
+        </div> */}
       </div>
-      <WavesWrapper hideBottom>
-        <NewsLetter />
+      {/* <WavesWrapper hideBottom> */}
+        <WhatIsPersonalDevelopment />
         <CardSection />
         {!inProdEnvironment ? <LegacyMethods /> : null}
-      </WavesWrapper>
+      {/* </WavesWrapper> */}
       {/* <App /> */}
       <Products />
       {!inProdEnvironment ? <RoadmapNew /> : <Roadmap />}
+      <NewsLetter />
       <div
         style={{
           paddingTop: '16rem',

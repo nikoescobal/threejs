@@ -35,7 +35,7 @@ function WhoAreWe() {
               <img src={item.image} width={700} height={100} alt="illustration" />
             </div>
             <div className={styles['card']}>
-              <h3>{item.title}</h3>
+              <h2>{item.title}</h2>
               <div dangerouslySetInnerHTML={{__html: item.body}} />
               <Link href={item.url} title={item.urlTitle}>
                 <a className="button-blue">{item.button_text}{' '}<EastIcon /></a>
