@@ -11,10 +11,12 @@
     padding-top: 8rem;
   }
 
-  background: linear-gradient(transparent 60%,
-    rgba($color: $ln-blue, $alpha: 0.2));
+  background: linear-gradient(
+    transparent 60%,
+    rgba($color: $ln-blue, $alpha: 0.2)
+  );
 
-  &>div:last-of-type {
+  & > div:last-of-type {
     position: relative;
   }
 
@@ -36,14 +38,22 @@
     padding: 1rem 0 0 0;
   }
 
+  .questions-wrapper {
+    @include lg {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 5rem;
+    }
+  }
+
   .question {
     padding-bottom: 2rem;
   }
 
-  .wrapper div:last-of-type {
-    max-width: 22rem;
-    text-align: center;
-  }
+  // .wrapper div:last-of-type {
+  //   max-width: 22rem;
+  //   text-align: center;
+  // }
 
   .button {
     max-width: 16rem;
@@ -88,10 +98,12 @@
 }
 
 .section.light {
-  background: linear-gradient(transparent 60%,
-      rgba($color: $light-mode-primary, $alpha: 1));
+  background: linear-gradient(
+    transparent 60%,
+    rgba($color: $light-mode-primary, $alpha: 1)
+  );
 
-  &>div:last-of-type {
+  & > div:last-of-type {
     background: none;
     position: relative;
   }
@@ -115,4 +127,12 @@
 
 .p {
   max-width: 100% !important;
+}
+
+.questions-h3 {
+  font-size: 2.5rem;
+}
+
+.questions-h4 {
+  font-size: 1.5rem !important;
 }

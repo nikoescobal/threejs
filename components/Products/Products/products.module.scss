@@ -14,6 +14,8 @@
 
 .products-title {
   text-align: center;
+  font-size: 3rem;
+  padding-bottom: 2rem;
 }
 
 .tab-list {
@@ -26,13 +28,13 @@
   // }
 }
 
-.tab-list span {
-  display: none;
+// .tab-list span {
+//   display: none;
 
-  @include breakpoint(1120px) {
-    display: block;
-  }
-}
+//   @include breakpoint(1120px) {
+//     display: block;
+//   }
+// }
 
 .tab-list div div {
   display: flex;
@@ -59,9 +61,9 @@
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: '';
-  display: block;
+  display: inline-block;
   height: 2px;
-  left: 50%;
+  left: 10 !important;
   position: absolute;
   background: $ln-blue;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
@@ -69,8 +71,8 @@
 }
 
 .tab-list button:hover:after {
-  width: 100%;
-  left: 0;
+  width: 50%;
+  left: 25%;
 }
 
 .panel-container {

@@ -45,7 +45,7 @@ export const lnfunctions = [
 
 export const questions = {
   en: {
-    title: 'The Legacy Network app answers three essential questions for the user',
+    title: 'We answer three essential questions for the user',
     mental_health: 'What is mental health crisis?',
     mental_description: `A mental health crisis is any situation in which a person's
                     actions, feelings, and behaviors can lead to them hurting
@@ -66,12 +66,14 @@ export const questions = {
         title: 'HOW',
         text: `In the last step, it is explained how exactly self-confidence is formed. Clear cause and reaction relationships are shown for the user to gain a deep understanding of the trait.`,
       },
-    ]
+    ],
   },
   de: {
-    title: 'Die Legacy Network App beantwortet dem Nutzer drei grundlegende Fragen:',
+    title:
+      'Die Legacy Network App beantwortet dem Nutzer drei grundlegende Fragen:',
     mental_health: 'Was ist eine psychische Erkrankung?',
-    mental_description: 'Eine psychische Erkrankung ist jede Situation, in der die Handlungen, Gefühle und Verhaltensweisen einer Person dazu führen können, dass sie sich selbst oder andere verletzen, und/oder sie dazu bringen können, sich nicht selbst versorgen oder in der Gemeinschaft auf gesunde Weise funktionieren zu können.',
+    mental_description:
+      'Eine psychische Erkrankung ist jede Situation, in der die Handlungen, Gefühle und Verhaltensweisen einer Person dazu führen können, dass sie sich selbst oder andere verletzen, und/oder sie dazu bringen können, sich nicht selbst versorgen oder in der Gemeinschaft auf gesunde Weise funktionieren zu können.',
     more: 'Mehr zur psychischen Gesundheitskriese',
     list: [
       {
@@ -87,8 +89,8 @@ export const questions = {
         text: `Im letzten Schritt wird erklärt, wie genau Selbstbewusstsein entsteht. Klare Ursache-Wirkungs-Beziehungen werden gezeigt, damit der Nutzer ein tiefes Verständnis für die Eigenschaft erlangt.
         `,
       },
-    ]
-  }
+    ],
+  },
 };
 
 // export const features = [

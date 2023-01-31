@@ -14,18 +14,22 @@
 }
 
 .image {
-  padding: 5rem 0 0;
+  // padding: 5rem 0 0;
 
   @include md {
-    transform: translateX(8%);
-  }
-
-  @include lg {
     transform: translateX(15%);
   }
 
+  @include lg {
+    transform: translateX(38%);
+  }
+
   @include breakpoint(1200px) {
-    transform: translateX(20%);
+    transform: translateX(65%);
+  }
+
+  @include xl {
+    transform: translateX(115%);
   }
 }
 

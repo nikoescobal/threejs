@@ -286,9 +286,9 @@ button {
     font-size: 2rem !important;
   }
 
-  @include xl {
-    font-size: 2.3rem !important;
-  }
+  // @include xl {
+  //   font-size: 2.3rem !important;
+  // }
 }
 
 .MuiTabs-flexContainer button.Mui-selected {
@@ -297,6 +297,11 @@ button {
 
 .MuiTabs-indicator {
   display: none;
+  // background: $ln-blue !important;
+  // display: block;
+  // width: 18% !important;
+  // left: 10% !important;
+  // transform: translateX(2rem);
 }
 
 .app-preview .MuiTabs-flexContainer {
@@ -320,10 +325,12 @@ button {
 //   background: $light-background !important;
 // }
 
-@media (min-width: 480px) {
+@media (min-width: 1120px) {
   .MuiTabs-indicator {
+    // width: 50% !important;
+    // left: 25% !important;
     display: block;
-    background: #1657ff !important;
+    // background: #1657ff !important;
   }
 
   .three-col {

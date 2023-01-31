@@ -161,15 +161,22 @@ const LegacyMainAppTab = () => {
           </p>
           <br />
           <p>
-            Each category has its own level system. The AI uses targeted
+            The categories are organized by a level system. The AI uses targeted
             questions, user behavior, feedback app tracking and other parameters
             to decide how advanced the user already is and which content is
             relevant to them. This makes the system usable for everyone, whether
             beginner or professional. The content consists of both a theoretical
             and a practical part.
           </p>
+          <br />
+
+          <p>
+            For each successfully finished category the user, and his in-Game
+            avatar level up and are being awarded with reward-chests for doing
+            so.
+          </p>
           <Link href="/about-us">
-            <a className="button-blue">Learn more &#8594;</a>
+            <a className="button-blue">Legacy App &#8594;</a>
           </Link>
         </article>
       }
