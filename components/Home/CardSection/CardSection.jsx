@@ -13,6 +13,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import content from './content';
 import translations from '../../../language';
+import Card from '../../Generic/Card/Card';
 
 function CardSection() {
   const { isDarkMode } = useStore();
@@ -34,6 +35,25 @@ function CardSection() {
       </div>
 
       <div className={`${styles['cards-wrapper']} spacing-x`}>
+      {
+          content[locale].map((card) => (
+            // <div key={card.title} className={`${styles['card']}`}>
+            //   <div className={`${styles['icon-wrapper']}`}>
+            //     <Image src={card.icon} alt="icon" />
+            //   </div>
+            //   <div>
+            //     <h4>{card.title}</h4>
+            //     <p>
+            //       {' '}
+            //       {card.description}
+            //     </p>
+            //   </div>
+            // </div>
+            <Card key={card.title} card={card} />
+          ))
+        }
+      </div>
+      {/* <div className={`${styles['cards-wrapper']} spacing-x`}>
         <img
           src={Connector1.src}
           alt="connector"
@@ -65,7 +85,7 @@ function CardSection() {
             </div>
           ))
         }
-      </div>
+      </div> */}
       <div
         style={{
           display: 'flex',

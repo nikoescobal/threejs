@@ -6,32 +6,17 @@ import Icon4 from '../../../public/icons/card-icon4.svg';
 const content = {
   'en': [
     {
-      title: "Choose a skill you want to learn",
-      description: `Our unique education system covers all essential skills for your
-        personal success in mental health, physical health, platonic
-        relationships, romantic relationships, career/finances and much
-        more.`,
+      title: "Choose a skill",
+      description: `Our unique education system covers all essential skills for your personal success in mental health, physical health, etc.`,
       icon: Icon1
     },
     {
-      title: "Play through lessons and level up your character",
-      description: `Your in-game character is a reflection of you. When the character
-        levels up in-game, you level up in real life. The character allows
-        you to gain an objective perspective of yourself and to keep track
-        of your progress.`,
+      title: "Play",
+      description: `Your in-game character is a reflection of you. When the character levels up in-game, you level up in real life.`,
       icon: Icon2
     },
     {
-      title: "Test and deepen your knowledge",
-      description: `In the beginning, the reward distribution will be pegged to
-        randomized, theoretical exams. The exams are created in a way
-        which tests your deep understanding of the topic, not your memory.
-        As the project develops further, we will implement more
-        opportunities to earn rewards.`,
-      icon: Icon3
-    },
-    {
-      title: "Earn reward chests",
+      title: "Earn rewards",
       description: `Chests can include Legacy Token (LGCT), collectibles and other
         items which can either be traded or reused within the ecosystem.`,
       icon: Icon4
