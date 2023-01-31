@@ -78,7 +78,7 @@
   grid-template-columns: 1fr;
   gap: 4rem;
   width: 100%;
-  text-align: center;
+  // text-align: center;
 
   @include breakpoint(1120px) {
     grid-template-columns: 1fr 1fr;
@@ -125,11 +125,18 @@
 }
 
 .nft-panel {
-  display: flex;
+  @include breakpoint(1120px) {
+    display: flex !important;
+    align-items: center;
+  }
 }
 
 .nft-right {
-  padding: 0 2rem;
+  padding: 3rem 0 2rem;
+
+  @include breakpoint(1120px) {
+    padding: 0 2rem;
+  }
 }
 
 .image {
@@ -150,57 +157,29 @@
 .tab-summary {
   background: #242424;
   border-radius: 8px;
-
-  // .MuiAccordionDetails {
-  //   color: #afaeae;
-  // }
-
-  // .MuiAccordionDetails-root {
-  //   color: #afaeae !important;
-  // }
-
-  // .MuiAccordionDetails-root p {
-  //   color: #afaeae;
-  // }
-
-  // .MuiAccordion-root {
-  //   background: rgba(255, 255, 255, 0.05) !important;
-  //   backdrop-filter: blur(15px) !important;
-  //   border-radius: 10px !important;
-  //   color: #afaeae !important;
-  //   margin: 1rem 0;
-  // }
-
-  // .MuiAccordion-root svg {
-  //   color: white !important;
-  // }
-
-  // .MuiAccordion-root.Mui-expanded svg {
-  //   color: #afaeae !important;
-  // }
-
-  // .MuiTabs-flexContainer {
-  //   overflow-x: auto !important;
-  // }
 }
 
-.image-slider-mobile,
-.nft-right-mobile {
-  display: block;
-
-  @include breakpoint(1120px) {
-    display: none !important;
-  }
+.light .tab-summary {
+  background: $light-mode-primary;
 }
 
-.image-slider-desktop,
-.nft-right-desktop {
-  display: none !important;
+// .image-slider-mobile,
+// .nft-right-mobile {
+//   display: block;
 
-  @include breakpoint(1120px) {
-    display: block !important;
-  }
-}
+//   @include breakpoint(1120px) {
+//     display: none !important;
+//   }
+// }
+
+// .image-slider-desktop,
+// .nft-right-desktop {
+//   display: none !important;
+
+//   @include breakpoint(1120px) {
+//     display: block !important;
+//   }
+// }
 
 .fade-slider h4 {
   font-family: 'Fjalla', serif;
@@ -231,13 +210,24 @@
 }
 
 .panel-spacing {
-  padding: 2rem;
+  @include lg {
+    padding: 2rem;
+  }
+}
+
+.nft-button-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  @include sm {
+    transform: translateY(-1.5rem);
+  }
 }
 
 .arrow-wrapper {
   background: transparent;
   border: none;
-  position: relative;
   width: 100%;
   max-width: 1.25rem;
 }
@@ -245,7 +235,6 @@
 .arrow-left-wrapper {
   background: transparent;
   border: none;
-  position: relative;
   width: 100%;
   max-width: 1.25rem;
 }
@@ -253,21 +242,31 @@
 .arrow-right-wrapper {
   background: transparent;
   border: none;
-  position: relative;
   width: 100%;
   max-width: 1.25rem;
 }
 
 .arrow-left {
-  position: absolute;
+  display: block;
+  // position: absolute;
   left: 2.5rem;
   top: 25.85rem;
 }
 
 .arrow-right {
-  position: absolute;
+  display: block;
+  // position: absolute;
   left: 19.5rem;
   top: 25.85rem;
+}
+
+.slide-wrapper {
+  width: 100%;
+}
+
+.slide {
+  scale: 1.2;
+  transform: translateY(-1.5rem);
 }
 
 .slide-text {
@@ -290,6 +289,14 @@
   // border: solid 1px white;
 }
 
+.light .circle-slider {
+  background: $light-mode-primary;
+}
+
 .circle-active {
   background: white;
+}
+
+.light .circle-active {
+  background: $sky-blue;
 }

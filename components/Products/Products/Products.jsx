@@ -376,22 +376,10 @@ const LegacyNFTTab = () => {
       return null;
     }
 
+    const { uuid } = require('crypto');
+
     return (
       <div className={styles['slider']}>
-        <button className={styles['arrow-wrapper']} onClick={prevSlide}>
-          <img
-            className={styles['arrow-left']}
-            src={LeftArrow.src}
-            alt="left arrow"
-          />
-        </button>
-        <button className={styles['arrow-wrapper']} onClick={nextSlide}>
-          <img
-            className={styles['arrow-right']}
-            src={RightArrow.src}
-            alt="right arrow"
-          />
-        </button>
         {slides.map((slide, index) => (
           <div
             className={`${styles['nft-wrapper']} ${
@@ -400,7 +388,7 @@ const LegacyNFTTab = () => {
             key={uuid}
           >
             {index === currentSlide && (
-              <div>
+              <div className={styles['slide-wrapper']}>
                 <img
                   className={styles['slide']}
                   src={slide.img}
@@ -412,6 +400,23 @@ const LegacyNFTTab = () => {
             )}
           </div>
         ))}
+        <div className={styles['nft-button-wrapper']}>
+          <button className={styles['arrow-wrapper']} onClick={prevSlide}>
+            <img
+              className={styles['arrow-left']}
+              src={LeftArrow.src}
+              alt="left arrow"
+            />
+          </button>
+          <button className={styles['arrow-wrapper']} onClick={nextSlide}>
+            <img
+              className={styles['arrow-right']}
+              src={RightArrow.src}
+              alt="right arrow"
+            />
+          </button>
+        </div>
+
         <div className={styles['circle-slider-wrapper']}>
           {slides.map((slide, index) => (
             <span
