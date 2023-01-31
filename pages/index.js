@@ -119,7 +119,7 @@ export default function Home() {
         {!inProdEnvironment ? <LegacyMethods /> : null}
       {/* </WavesWrapper> */}
       {/* <App /> */}
-      <Products />
+      {/* <Products /> */}
       {!inProdEnvironment ? <RoadmapNew /> : <Roadmap />}
       <NewsLetter />
       <div

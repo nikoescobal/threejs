@@ -1,4 +1,5 @@
 @use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
 $news-cell-height: 8rem;
 $news-cell-width: 6.5rem;
 $news-cell-gap: 0.5rem;
@@ -12,14 +13,13 @@ $news-cell-gap: 0.5rem;
   }
 }
 
-.news-letter.light {
-}
+.news-letter.light {}
 
 .news-letter.light img {
   filter: invert(1);
 }
 
-.news-letter > div:last-of-type {
+.news-letter>div:last-of-type {
   padding: 4rem 0;
 }
 
@@ -36,6 +36,10 @@ $news-cell-gap: 0.5rem;
   max-width: 50ch;
   margin: 0 auto;
   font-weight: 300;
+
+  @include md {
+    font-size: 1.1rem;
+  }
 }
 
 .news-letter form {
@@ -43,22 +47,25 @@ $news-cell-gap: 0.5rem;
   flex-direction: column;
   margin: 1rem auto 0;
   gap: 0.5rem;
-  max-width: 44rem;
+  max-width: 57rem;
   justify-content: center;
   align-items: center;
 
   @include md {
     margin: 2rem auto 0;
+    flex-direction: row;
   }
 }
 
 .news-letter input {
   width: 100%;
-  border-radius: 8px;
+  // border-radius: 8px;
+  font-size: 1rem;
+  border-radius: 5px;
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid #EEF2F6;
+  border: 1px solid $gray--15;
   color: white;
-  padding: 0.75rem 0.5rem;
+  padding: 1rem 0.75rem;
 }
 
 .news-letter.light input {
@@ -75,60 +82,7 @@ $news-cell-gap: 0.5rem;
 }
 
 .news-letter button {
-  padding: 0.75rem 2rem;
-  max-width: 10rem;
+  padding: 1.1rem 2rem;
+  max-width: 12rem;
   margin-top: 0;
-}
-
-.map {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 25vw;
-  margin-bottom: 8vw;
-  // border: 1px solid rgb(13, 47, 137);
-  max-width: 80vw;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 8px;
-}
-
-.map img{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  object-fit: contain;
-  width: 80%;
-}
-
-.map.light img {
-  filter: invert(0.6);
-}
-
-.map h4 {
-  position: relative;
-  text-align: center;
-  padding: 0 1rem;
-}
-
-@media only screen and (min-width: 768px) {
-  .news-letter {
-    // padding-bottom: clamp(2rem, 5vw, 16rem);
-    // margin-bottom: clamp(10rem, 15vw, 24rem);
-  }
-  
-  .news-letter h4,
-  .map h4 {
-    font-size: 2rem;
-  }
-
-  .news-letter p {
-    font-size: 1.1rem;
-  }
-  
-  .news-letter form {
-    flex-direction: row;
-  }
 }

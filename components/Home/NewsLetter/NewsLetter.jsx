@@ -65,7 +65,7 @@ function NewsLetter() {
         />
       </Snackbar>
       <div>
-        <h4>{content[locale].title}</h4>
+        <h2>{content[locale].title}</h2>
         <p>
            {content[locale].description}
         </p>
