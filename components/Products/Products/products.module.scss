@@ -124,6 +124,10 @@
   margin: 0 auto;
 }
 
+.nft-panel {
+  display: flex;
+}
+
 .nft-right {
   padding: 0 2rem;
 }
@@ -219,11 +223,11 @@
 }
 
 .panel-wrapper {
-  display: none;
+  // display: none;
 
-  @include breakpoint(1120px) {
-    display: block;
-  }
+  // @include breakpoint(1120px) {
+  display: block;
+  // }
 }
 
 .panel-spacing {
@@ -268,4 +272,24 @@
 
 .slide-text {
   text-align: center;
+}
+
+.circle-slider-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-top: 1rem;
+}
+
+.circle-slider {
+  background: $gray--8;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  display: block;
+  // border: solid 1px white;
+}
+
+.circle-active {
+  background: white;
 }

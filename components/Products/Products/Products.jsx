@@ -360,26 +360,6 @@ const LegacyNFTTab = () => {
     },
   ];
 
-  // {slides.map((slide, index) => {
-  //   return (
-  //     <div
-  //       className={`${styles['image-wrapper']} ${
-  //         index === currentSlide ? 'slide active' : 'slide'
-  //       }`}
-  //       key={index}
-  //     >
-  //       {index === currentSlide && (
-  //         <img
-  //           className={styles['slide']}
-  //           src={slide.img}
-  //           alt={slide.alt}
-  //           title={slide.title}
-  //         />
-  //       )}
-  //     </div>
-  //   );
-  // })}{' '}
-
   const ImageSlider = ({ slides }) => {
     console.log('slides', slides);
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -412,13 +392,12 @@ const LegacyNFTTab = () => {
             alt="right arrow"
           />
         </button>
-
         {slides.map((slide, index) => (
           <div
             className={`${styles['nft-wrapper']} ${
               index === currentSlide ? 'slide active' : 'slide'
             }`}
-            key={index}
+            key={uuid}
           >
             {index === currentSlide && (
               <div>
@@ -433,19 +412,23 @@ const LegacyNFTTab = () => {
             )}
           </div>
         ))}
+        <div className={styles['circle-slider-wrapper']}>
+          {slides.map((slide, index) => (
+            <span
+              key={uuid}
+              className={`${styles['circle-slider']} ${
+                index === currentSlide ? `${styles['circle-active']}` : ''
+              }`}
+            ></span>
+          ))}
+        </div>
       </div>
     );
-    // const [currentIndex, setCurrentUser] = useState(0);
-
-    // return;
-    // <div className={styles['slide-wrapper']}>
-    //   <img src={imageSlider[currentIndex].src} className={styles['slides']} />
-    // </div>;
   };
 
   return (
     <PanelContainer
-      className={`${styles['panel-wrapper']} ${styles['panel-spacing']}`}
+      className={`${styles['panel-wrapper']} ${styles['nft-panel']} ${styles['panel-spacing']}`}
       leftContent={
         <div className={styles['image-wrapper']}>
           <ImageSlider slides={slides} />
