@@ -43,13 +43,8 @@ function PersonalDevelopment() {
         rightObj={
           <img
             className={styles.image}
-            src={Achievements.src}
+            src={'/nft/egyptian-pose-1.png'}
             alt="achievements"
-            draggable="false"
-            style={{
-              scale: '1.2',
-              marginBottom: '1rem',
-            }}
           />
         }
         title={content[locale].title}

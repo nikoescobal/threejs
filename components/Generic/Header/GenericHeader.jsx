@@ -20,16 +20,16 @@ function GenericHeader({ title, subtitle, rightObj, waves }) {
       />
       {waves}
       <section
-        className={`${generics.header} ${styles.header} header-intro ${generics['spacing-x']} ${generics['spacing-t']}`}
+        className={`${generics.header} ${styles.header} header-intro spacing-x spacing-t`}
       >
-        <div className={`${generics['img-wrapper']}`}>
+        <div className={`${styles['img-wrapper']} ${generics['img-wrapper']}`}>
           {rightObj}
         </div>
         <div className="text">
           <div className={styles['title-wrapper']}>
             <h1 className={generics.title}>{title}</h1>
           </div>
-          <h4>{subtitle}</h4>
+          <h4 className={styles.subtitle}>{subtitle}</h4>
         </div>
       </section>
     </div>

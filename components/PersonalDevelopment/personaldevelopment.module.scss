@@ -2,17 +2,23 @@
 @import '../../styles/variables';
 
 .image {
-  @include breakpoint(1200px) {
-    transform: translateX(7%);
+  @include md {
+    scale: 1.6;
   }
 
-  @include breakpoint(1350px) {
-    transform: translateX(23%);
-  }
+  // @include breakpoint(1200px) {
+  //   transform: translateX(7%);
+  // }
 
-  @include xl {
-    transform: translateX(30%);
-  }
+  // @include breakpoint(1350px) {
+  //   transform: translateX(23%);
+  // }
+
+  // @include xl {
+  //   scale: 1.4;
+  //   // margin-bottom: 1rem;
+  //   transform: translateX(30%);
+  // }
 }
 
 .waves-wrapper {

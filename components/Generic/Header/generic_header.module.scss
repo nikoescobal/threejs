@@ -1,17 +1,14 @@
 @use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
 @import '../../../styles/variables';
 
 .container {
   position: relative;
-  // background-image: radial-gradient(circle farthest-side at 50% 40%, rgba($ln-blue, 0.5), transparent);
 }
 
-.container>div {
-  // position: relative;
-}
-
-.container.light {
-  // background-image: radial-gradient(circle farthest-side at 50% 40%, rgba(white, 0.5), transparent);
+.img-wrapper {
+  display: flex;
+  justify-content: end;
 }
 
 .header {
@@ -19,11 +16,15 @@
   gap: 3rem;
 }
 
-.header h4 {
-  font-size: 1.2rem;
-  max-width: 44ch;
+.subtitle {
   font-weight: 400;
-  text-transform: uppercase;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  max-width: 44ch;
+  font-family: 'Montserrat', serif;
+  color: $gray--14;
+}
+
+.light .subtitle {
   color: $light-mode-secondary;
 }
 
@@ -54,13 +55,6 @@
   }
 }
 
-.waves-wrapper {
-  // position: absolute;
-  // top: -20%;
-  // left: -300px;
-  // rotate: -90deg;
-}
-
 .title-wrapper h1 {
   color: white !important;
   background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
@@ -87,15 +81,5 @@
     40% {
       text-shadow: 0 0 10px $light-mode-secondary;
     }
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    // background-image: radial-gradient(circle farthest-side at 67% 30%, rgba($ln-blue, 0.75), transparent 50%);
-  }
-
-  .container.light {
-    // background-image: radial-gradient(circle farthest-side at 67% 30%, rgba(black, 0.2), transparent 50%);
   }
 }
