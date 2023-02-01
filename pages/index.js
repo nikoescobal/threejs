@@ -116,14 +116,14 @@ export default function Home() {
       {/* <WavesWrapper hideBottom> */}
         <WhatIsPersonalDevelopment />
         <CardSection />
-        {!inProdEnvironment ? <LegacyMethods /> : null}
+        {/* {!inProdEnvironment ? <LegacyMethods /> : null} */}
       {/* </WavesWrapper> */}
       {/* <App /> */}
       {/* <Products /> */}
       {!inProdEnvironment ? <RoadmapNew /> : <Roadmap />}
       <NewsLetter />
       {!inProdEnvironment ? <PartnersNew /> : <Partners />}
-      <Map />
+      {/* <Map /> */}
       <FollowUs />
     </div>
   );
