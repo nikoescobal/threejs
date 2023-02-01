@@ -16,7 +16,7 @@ const LegacyMethods = () => {
         !isDarkMode ? `${styles['light']}` : ''
       } spacing-x`}
     >
-      <h3 className={styles['title']}>The Legacy Method</h3>
+      <h2 className={styles['title']}>The Legacy Method</h2>
       <p className={styles['subtitle']} dangerouslySetInnerHTML={{__html: content[locale].subtitle}} />
 
       <div className={styles['legacy-methods']}>
