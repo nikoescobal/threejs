@@ -14,6 +14,7 @@ import styles from '../components/PersonalDevelopment/personaldevelopment.module
 import { useRouter } from 'next/router';
 import WhatIsPersonalDevelopment from '../components/PersonalDevelopment/WhatIsPersonalDevelopment/WhatIsPersonalDevelopment';
 import LegacyMethods from '../components/Home/LegacyMethods/LegacyMethodsList/LegacyMethods';
+import PillarsOfAnUnhappyLife from '../components/PersonalDevelopment/PillarsOfAnUnhappyLife/PillarsOfAnUnhappyLife';
 
 const content = {
   en: {
@@ -60,6 +61,7 @@ function PersonalDevelopment() {
       {/* <WavesWrapper hideBottom={true}>
       </WavesWrapper> */}
       <HealthCrisis />
+      <PillarsOfAnUnhappyLife />
       {/* <StepsForPersonalDevelopment /> */}
     </div>
   );

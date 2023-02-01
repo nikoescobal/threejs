@@ -1,0 +1,32 @@
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
+
+.wrapper {
+  text-align: center;
+}
+
+.wrapper p {
+  font-size: 1.25rem;
+  color: $gray--14;
+  padding: 1rem 0 4rem;
+}
+
+.row-wrapper {
+  display: grid;
+  gap: 2rem;
+  padding-bottom: 6rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.row span {
+  background: $gray--3;
+  border-radius: 30px;
+  padding: 1rem 1.5rem;
+  color: $gray--16;
+}
