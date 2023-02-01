@@ -11,30 +11,8 @@
 }
 
 .heading-wrapper {
-  display: flex;
-  justify-content: space-around;
-  transform: translateX(-2rem);
-  gap: 1.25rem;
-
-  @include sm {
-    transform: translateX(-4rem);
-  }
-
-  @include md {
-    transform: translateX(-7.5rem);
-  }
-
-  @include lg {
-    transform: translateX(-11rem);
-  }
-
-  @include xl {
-    transform: translateX(-16.65rem);
-  }
-
-  @include breakpoint(2000px) {
-    transform: translateX(-25rem);
-  }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .heading {
