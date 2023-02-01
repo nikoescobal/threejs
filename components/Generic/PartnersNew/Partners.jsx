@@ -84,13 +84,13 @@ function PartnersNew() {
     >
       <div className={styles['container']}>
         <div className={styles['slider-wrapper']}>
-          <h3
+          <h2
             className={`${styles['title']} ${
               !isDarkMode ? `${styles['light']}` : ''
             } `}
           >
             {content[locale].title}
-          </h3>
+          </h2>
           <div className={`${styles['slider']} ${styles['animate']}`}>
             <div className={styles['logo-wrapper']}>
               {partners.map((logo, index) => (
