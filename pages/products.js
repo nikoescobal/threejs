@@ -9,6 +9,7 @@ import { useMediaQuery } from '@mui/material';
 import Features from '../components/Products/Features/Features';
 import DataProtection from '../components/Products/DataProtection/DataProtection';
 import Download from '../components/Products/Download/Download';
+import LegacyApproach from '../components/Products/LegacyApproach/LegacyApproach.jsx';
 import GenericHeader from '../components/Generic/Header/GenericHeader';
 // import Character from '../public/nft/char-with-iphone.png';
 import ProductHero from '../public/mockups/product-hero.png';
@@ -50,8 +51,9 @@ function Products() {
 
       <Questions />
       <Features />
-      <Benefits />
       <ProductsPage />
+      <LegacyApproach />
+      <Benefits />
       {/* <Ln /> */}
       {/* <Download /> */}
       {/* <DataProtection /> */}
