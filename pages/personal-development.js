@@ -12,6 +12,8 @@ import WaveLines from '../components/Generic/WaveLines/WaveLines';
 import Script from 'next/script';
 import styles from '../components/PersonalDevelopment/personaldevelopment.module.scss';
 import { useRouter } from 'next/router';
+import WhatIsPersonalDevelopment from '../components/PersonalDevelopment/WhatIsPersonalDevelopment/WhatIsPersonalDevelopment';
+import LegacyMethods from '../components/Home/LegacyMethods/LegacyMethodsList/LegacyMethods';
 
 const content = {
   en: {
@@ -52,10 +54,12 @@ function PersonalDevelopment() {
         title={content[locale].title}
         subtitle={content[locale].subtitle}
       />
-      <Explanation />
-      <WavesWrapper hideBottom={true}>
+      {/* <Explanation /> */}
+      <WhatIsPersonalDevelopment />
+      <LegacyMethods />
+      {/* <WavesWrapper hideBottom={true}>
         <HealthCrisis />
-      </WavesWrapper>
+      </WavesWrapper> */}
       {/* <StepsForPersonalDevelopment /> */}
     </div>
   );

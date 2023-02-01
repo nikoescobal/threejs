@@ -1,0 +1,112 @@
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
+@use '../../../styles/variables' as *;
+
+.main-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 8rem;
+  // padding-bottom: 8rem;
+}
+
+.grid {
+  min-height: 24rem;
+  overflow: visible;
+
+  @include sm {
+    min-height: 22rem;
+  }
+
+  @include md {
+    min-height: 10rem;
+  }
+
+  @include lg {
+    min-height: 10rem;
+  }
+}
+
+.grid h2 {
+  // text-align: center;
+
+  @include md {
+    // text-align: left;
+  }
+}
+
+.grid a {
+  justify-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+
+  @include md {
+    margin-top: 4rem;
+  }
+}
+
+.card {
+  background: transparent !important;
+  border-radius: 8px;
+  padding: 0 !important;
+}
+
+.img-wrapper img {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.card h4 {
+  font-weight: 600;
+  text-transform: capitalize !important;
+  padding-bottom: 0.1rem;
+}
+
+.card p {
+  padding-top: 0.5rem;
+  color: $gray--14;
+}
+
+.body ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1rem;
+
+  @include md {
+    gap: 2rem;
+    padding-top: 1.5rem;
+  }
+}
+
+.body li {
+  list-style: none;
+  padding-left: 1.15rem;
+  position: relative;
+  color: $gray--15;
+  line-height: 2.75ch;
+}
+
+.light .body li {
+  color: $light-mode-text-color;
+}
+
+.body li::before {
+  content: '';
+  position: absolute;
+  top: 0.90rem;
+  left: 0;
+  transform: translate(0, -50%);
+  width: 0.55rem;
+  height: 0.55rem;
+  background: $gray--10;
+  border-radius: 50%;
+}
