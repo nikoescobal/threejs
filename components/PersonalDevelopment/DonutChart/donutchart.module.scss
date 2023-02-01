@@ -1,7 +1,21 @@
 @use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
+
+.wrapper h3 {
+  font-size: clamp(1.25rem, 2vw + 1rem, 1.25rem);
+  font-family: 'Montserrat', serif !important;
+  padding-bottom: 0.5rem;
+}
+
+.wrapper p {
+  color: $gray--10;
+}
+
+.wrapper canvas {
+  width: 100% !important;
+}
 
 .subtitle-wrapper {
-
   @include md {
     min-height: 8rem;
   }
@@ -30,10 +44,14 @@
   // transform: translateY(-5rem);
 }
 
+.en .text-wrapper {
+  min-height: 11.125rem;
+}
+
 .de .text-wrapper {
   min-height: 14.125rem;
 }
 
-.de .text-wrapper h4 {
+.de .text-wrapper h3 {
   min-height: 5rem;
 }

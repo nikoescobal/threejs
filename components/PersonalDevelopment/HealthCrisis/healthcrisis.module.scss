@@ -6,14 +6,30 @@
   position: relative;
 }
 
-.wrapper>div:first-of-type {
+.wrapper img {
+  margin-top: 4rem;
+  filter: invert(1);
+
+  @include md {
+    display: block;
+    width: 80% !important;
+    margin: 4rem auto 0;
+  }
+}
+
+.light img {
+  filter: invert(0);
+}
+
+.wrapper>h2,
+.wrapper>p {
   text-align: center;
-  max-width: 75ch;
+  // max-width: 75ch;
   margin: 0 auto;
 }
 
-.wrapper>div:first-of-type h3 {
-  font-size: clamp(2rem, 10vw, 3rem);
+.wrapper h2 {
+  margin-bottom: 1rem;
 }
 
 .donut-wrapper {
@@ -28,27 +44,23 @@
   @include md {
     grid-template-columns: 0.96fr 1fr;
   }
-}
 
-.donut-wrapper h4 {
-  padding-bottom: 1rem;
-
-  @include md {
-    padding-bottom: 0;
+  @include lg {
+    gap: 12rem;
   }
 }
 
 .donut-wrapper>div:first-of-type canvas {
 
   @include md {
-    transform: translateX(-18%);
+    // transform: translateX(-18%);
   }
 }
 
 .donut-wrapper>div:last-of-type canvas {
   @include md {
-    transform: translate(22%, -2%);
-    scale: 1;
+    transform: translate(0%, -2%);
+    scale: 0.99;
   }
 }
 

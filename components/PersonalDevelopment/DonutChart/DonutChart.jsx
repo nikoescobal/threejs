@@ -42,7 +42,7 @@ function DonutChart({series, labels, titleText, subtitle, legendPosition}) {
     <div className={`${styles.wrapper} ${styles[locale]} ${isDarkMode ? '' : `${styles.light}`}`}>
       <div>
         <div className={styles['text-wrapper']}>
-          <h4>{titleText}</h4>
+          <h3>{titleText}</h3>
           <div className={styles['subtitle-wrapper']}>
             <p>{subtitle}</p>
           </div>

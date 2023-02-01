@@ -58,8 +58,8 @@ function PersonalDevelopment() {
       <WhatIsPersonalDevelopment />
       <LegacyMethods />
       {/* <WavesWrapper hideBottom={true}>
-        <HealthCrisis />
       </WavesWrapper> */}
+      <HealthCrisis />
       {/* <StepsForPersonalDevelopment /> */}
     </div>
   );

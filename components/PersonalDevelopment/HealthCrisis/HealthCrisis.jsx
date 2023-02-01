@@ -25,24 +25,22 @@ function HealthCrisis() {
   }
   return (
     <>
-      <Gradient
+      {/* <Gradient
         style={{
           top: '75%',
           left: '50%',
           width: '80%',
           transform: 'translate(-50%, -75%)',
         }}
-      />
+      /> */}
       <div
-        className={`${styles.wrapper} ${!isDarkMode ? `${styles.light}` : ''} ${
-          generics['spacing-x']
-        }`}
+        className={`${styles.wrapper} ${!isDarkMode ? `${styles.light}` : ''} spacing-x max-1920`}
       >
-        <div>
-          <h3>{content[locale].title}</h3>
+          <h2>{content[locale].title}</h2>
           <p>
             {content[locale].description}
           </p>
+          <img src='/illustrations/earth.png' alt="earth illustration" />
           <div className={styles['donut-wrapper']}>
             <div className={styles.donut}>
               <DonutChart
@@ -50,7 +48,7 @@ function HealthCrisis() {
                 subtitle={content[locale].donut_1.description}
                 labels={label1[locale]}
                 series={series1}
-                legendPosition="left"
+                legendPosition="right"
               />
             </div>
             <div>
@@ -64,16 +62,15 @@ function HealthCrisis() {
 
             </div>
           </div>
-          <ComingSoon className={styles.coming}>
+          {/* <ComingSoon className={styles.coming}>
             {content[locale].more_about}
-          </ComingSoon>
-          <h3 style={{ marginBottom: '2rem', marginTop: '6rem' }}>
+          </ComingSoon> */}
+          {/* <h3 style={{ marginBottom: '2rem', marginTop: '6rem' }}>
             {content[locale].pillars}
           </h3>
           <div className={styles['pillar-wrapper']}>
             <Image src={Pillar} alt="pillar of an unhappy life" />
-          </div>
-        </div>
+          </div> */}
       </div>
     </>
   );
