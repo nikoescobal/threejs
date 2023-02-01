@@ -26,7 +26,7 @@
   }
 }
 
-.grid:nth-of-type(2)>div:first-of-type {
+.wrapper:nth-of-type(2n)>div:first-of-type {
   @include md {
     order: 1;
   }
