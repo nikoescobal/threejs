@@ -39,7 +39,7 @@ function App() {
         <ClearContainer
           title="A whole ecosystem designed to support you in building your dream life"
           to="/products"
-          urlTitle={'Link to App page'}
+          urlTitle={'Link to Products page'}
           linkText="Read More"
           reducedPadding
         >

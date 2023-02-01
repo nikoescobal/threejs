@@ -19,7 +19,7 @@ function Questions() {
       className={`${styles.section} ${!isDarkMode ? `${styles.light}` : ''}`}
     >
       <div className={`${styles['spacing-y']} spacing-x max-1920`}>
-        {isTablet ? (
+        {/* {isTablet ? (
           <Parallax speed={90} className={`${styles.staff}`}>
             <div>
               <Image src={Staff} alt="staff" draggable="false" />
@@ -29,22 +29,20 @@ function Questions() {
           <div className={styles['staff']}>
             <Image className="" src={Staff} alt="staff" draggable="false" />
           </div>
-        )}
+        )} */}
         <div className={styles.wrapper}>
-          <h3>
-            {questions[locale].title}
-          </h3>
-          {questions[locale].list.map((question, index) => (
-            <div key={index} className={styles.question}>
-              <h4>{question.title}</h4>
-              <p>{question.text}</p>
+          <h3>{questions[locale].title}</h3>
+          <div className={styles['questions-wrapper']}>
+            {questions[locale].list.map((question, index) => (
+              <div key={index} className={styles.question}>
+                <h4>{question.title}</h4>
+                <p>{question.text}</p>
+              </div>
+            ))}
+            <div>
+              <h4 className={styles.h3}>{questions[locale].mental_health}</h4>
+              <p className={styles.p}>{questions[locale].mental_description}</p>
             </div>
-          ))}
-          <div>
-            <h4 className={styles.h3}>{questions[locale].mental_health}</h4>
-            <p className={styles.p}>
-              {questions[locale].mental_description}
-            </p>
           </div>
           <div>
             <ComingSoon className={styles['btn-wrapper']}>

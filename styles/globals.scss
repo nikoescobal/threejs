@@ -1,7 +1,8 @@
 @use '../styles/breakpoints' as *;
 @import './variables';
 
-#__next * {}
+#__next * {
+}
 
 * {
   font-family: 'Montserrat', serif;
@@ -24,8 +25,9 @@
   color: $light-mode-secondary;
 }
 
-#__next>.light,
-#__next>.light a {}
+#__next > .light,
+#__next > .light a {
+}
 
 img {
   width: 100% !important;
@@ -159,7 +161,8 @@ button {
   opacity: 0.1;
 }
 
-.gradient img {}
+.gradient img {
+}
 
 .gradient span {
   overflow: visible !important;
@@ -171,7 +174,7 @@ button {
   overflow: hidden;
 }
 
-.security>div {
+.security > div {
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin-bottom: 4rem;
@@ -179,7 +182,7 @@ button {
   z-index: 5;
 }
 
-.security>img:last-of-type {
+.security > img:last-of-type {
   position: absolute;
   top: 50vw;
   right: -50vw;
@@ -209,7 +212,7 @@ button {
   color: white !important;
 }
 
-#__next>.light .apexcharts-legend-text {
+#__next > .light .apexcharts-legend-text {
   color: $light-mode-text-color !important;
 }
 
@@ -225,7 +228,9 @@ button {
   background: transparent !important;
 }
 
-.content-wrapper.light .MuiAccordionSummary-content.Mui-expanded .MuiTypography-root {
+.content-wrapper.light
+  .MuiAccordionSummary-content.Mui-expanded
+  .MuiTypography-root {
   color: $light-mode-secondary !important;
 }
 
@@ -244,6 +249,10 @@ button {
   border-radius: 10px !important;
   color: #cfcfcf !important;
   margin: 1rem 0;
+}
+
+.light .MuiAccordion-root {
+  color: $light-mode-text-color !important;
 }
 
 .MuiAccordion-root svg {
@@ -277,9 +286,9 @@ button {
     font-size: 2rem !important;
   }
 
-  @include xl {
-    font-size: 2.3rem !important;
-  }
+  // @include xl {
+  //   font-size: 2.3rem !important;
+  // }
 }
 
 .MuiTabs-flexContainer button.Mui-selected {
@@ -288,6 +297,11 @@ button {
 
 .MuiTabs-indicator {
   display: none;
+  // background: $ln-blue !important;
+  // display: block;
+  // width: 18% !important;
+  // left: 10% !important;
+  // transform: translateX(2rem);
 }
 
 .app-preview .MuiTabs-flexContainer {
@@ -298,7 +312,7 @@ button {
   max-width: 12rem !important;
 }
 
-.app-preview>div div {
+.app-preview > div div {
   background: transparent !important;
 }
 
@@ -311,10 +325,12 @@ button {
 //   background: $light-background !important;
 // }
 
-@media (min-width: 480px) {
+@media (min-width: 1120px) {
   .MuiTabs-indicator {
+    // width: 50% !important;
+    // left: 25% !important;
     display: block;
-    background: #1657ff !important;
+    // background: #1657ff !important;
   }
 
   .three-col {
@@ -330,11 +346,13 @@ button {
 }
 
 @media (min-width: 1024px) {
-  .MuiTabs-flexContainer button {}
+  .MuiTabs-flexContainer button {
+  }
 }
 
 @media (min-width: 1280px) {
-  .MuiTabs-flexContainer button {}
+  .MuiTabs-flexContainer button {
+  }
 }
 
 .st1 {
