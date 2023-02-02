@@ -130,8 +130,130 @@ const content = {
     ]
   },
   de: {
-    title: 'Das Team'
-  }
+    title: 'Das Team',
+    team: [
+      {
+        name: 'Fabio Martinetti',
+        title: 'CEO',
+        img: '/team/fabio.jpg',
+        socials: [
+          {
+            icon: <TwitterIcon />,
+            url: 'https://twitter.com'
+          },
+          {
+            icon: <InstagramIcon />,
+            url: 'https://instagram.com'
+          },
+        ]
+      },
+      {
+        name: 'Dominic Haas',
+        title: 'COO',
+        img: '/team/dominic.jpg',
+        socials: [
+          {
+            icon: <TwitterIcon />,
+            url: 'https://twitter.com'
+          },
+          {
+            icon: <InstagramIcon />,
+            url: 'https://instagram.com'
+          },
+        ]
+      },
+      {
+        name: 'Sasa Markovic',
+        title: 'CFO',
+        img: '/team/sasa.jpg',
+        socials: [
+          {
+            icon: <TwitterIcon />,
+            url: 'https://twitter.com'
+          },
+          {
+            icon: <InstagramIcon />,
+            url: 'https://instagram.com'
+          },
+        ]
+      },
+      {
+        name: 'Eleftherios Romanopoulos',
+        title: 'CGO',
+        img: '/team/elef.jpg',
+        socials: [
+          {
+            icon: <TwitterIcon />,
+            url: 'https://twitter.com'
+          },
+          {
+            icon: <InstagramIcon />,
+            url: 'https://instagram.com'
+          },
+        ]
+      },
+      {
+        name: 'Luka Petrovic',
+        title: 'CSO',
+        img: '/team/luka.jpg',
+        socials: [
+          {
+            icon: <TwitterIcon />,
+            url: 'https://twitter.com'
+          },
+          {
+            icon: <InstagramIcon />,
+            url: 'https://instagram.com'
+          },
+        ]
+      },
+      {
+        name: 'Jovana IdkLastName',
+        title: 'CJO',
+        img: '/team/jovana.jpg',
+        socials: [
+          {
+            icon: <TwitterIcon />,
+            url: 'https://twitter.com'
+          },
+          {
+            icon: <InstagramIcon />,
+            url: 'https://instagram.com'
+          },
+        ]
+      },
+      {
+        name: 'Steven Ogbodo',
+        title: 'Designer',
+        img: '/team/steven.jpg',
+        socials: [
+          {
+            icon: <TwitterIcon />,
+            url: 'https://twitter.com'
+          },
+          {
+            icon: <InstagramIcon />,
+            url: 'https://instagram.com'
+          },
+        ]
+      },
+      {
+        name: 'Nikolas Escobal',
+        title: 'Full-Stack Developer',
+        img: '/team/nik.jpg',
+        socials: [
+          {
+            icon: <TwitterIcon />,
+            url: 'https://twitter.com'
+          },
+          {
+            icon: <InstagramIcon />,
+            url: 'https://instagram.com'
+          },
+        ]
+      },
+    ]
+  },
 }
 
 export default content;
