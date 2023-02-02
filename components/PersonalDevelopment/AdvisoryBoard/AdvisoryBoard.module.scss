@@ -1,0 +1,24 @@
+@use '../../../styles/colors' as *;
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/variables' as *;
+
+.wrapper {
+  position: relative;
+  padding-top: 8rem;
+}
+
+.wrapper h2 {
+  padding-bottom: 4rem;
+}
+
+.board-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+
+  @include lg {
+    gap: 4rem 2rem;
+  }
+}

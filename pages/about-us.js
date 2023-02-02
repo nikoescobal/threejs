@@ -21,6 +21,7 @@ import PartnersNew from '../components/Generic/PartnersNew/Partners';
 import MeetTheTeam from '../components/AboutUs/MeetTheTeam/Team';
 import WhyLegacyNetwork from '../components/PersonalDevelopment/WhyLegacyNetwork/WhyLegacyNetwork';
 import Gallery from '../components/PersonalDevelopment/Gallery/Gallery';
+import AdvisoryBoard from '../components/PersonalDevelopment/AdvisoryBoard/AdvisoryBoard';
 
 const content = {
   en: {
@@ -86,6 +87,7 @@ function AboutUs() {
       <MeetTheTeam />
       <WhyLegacyNetwork />
       <Gallery />
+      <AdvisoryBoard />
       <PartnersNew />
       <FAQ />
       <div
