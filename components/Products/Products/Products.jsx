@@ -358,7 +358,7 @@ const LegacyNFTTab = () => {
     {
       img: '/mockups/african.png',
       alt: 'African Character Example',
-      title: 'Viking Character Example',
+      title: 'African Character Example',
     },
     {
       img: '/mockups/greek.png',
