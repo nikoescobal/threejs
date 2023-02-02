@@ -20,6 +20,7 @@ import { useRouter } from 'next/router';
 import PartnersNew from '../components/Generic/PartnersNew/Partners';
 import MeetTheTeam from '../components/AboutUs/MeetTheTeam/Team';
 import WhyLegacyNetwork from '../components/PersonalDevelopment/WhyLegacyNetwork/WhyLegacyNetwork';
+import Gallery from '../components/PersonalDevelopment/Gallery/Gallery';
 
 const content = {
   en: {
@@ -84,6 +85,7 @@ function AboutUs() {
       {/* <Team /> */}
       <MeetTheTeam />
       <WhyLegacyNetwork />
+      <Gallery />
       <PartnersNew />
       <FAQ />
       <div
