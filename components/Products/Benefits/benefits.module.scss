@@ -1,5 +1,6 @@
 @use '../../../styles/breakpoints' as *;
 @use '../../../styles/variables' as *;
+@use '../../../styles/colors' as *;
 
 .wrapper {
   position: relative;
@@ -114,6 +115,14 @@
     color: $ln-blue;
     font-size: 0.9rem;
   }
+}
+
+.list-wrapper li {
+  color: $gray;
+}
+
+.light .list.wrapper {
+  color: $light-mode-text-color;
 }
 
 .light.wrapper img {
