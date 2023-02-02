@@ -17,11 +17,13 @@ import WaveLines from '../components/Generic/WaveLines/WaveLines';
 import useStore from '../store/store';
 import FAQ from '../components/AboutUs/FAQ/FAQ';
 import { useRouter } from 'next/router';
+import PartnersNew from '../components/Generic/PartnersNew/Partners';
+import MeetTheTeam from '../components/AboutUs/MeetTheTeam/Team';
 
 const content = {
   en: {
     title: 'About Us',
-    subtitle: '& our goal',
+    subtitle: 'We are a cutting-edge personal development company utilizing the latest technology such as blockchain and AI. Our diverse team specialize in product design and delivery, utilizing both design thinking and agile methodologies to bring about meaningful change for our clients.',
   },
   de: {
     title: 'Über uns',
@@ -50,7 +52,12 @@ function AboutUs() {
                 scale: '1.1',
               }}
             >
-              {isDarkMode ? (
+              <img
+                src="/logo-cropped.webp"
+                alt="logo"
+                draggable="false"
+              />
+              {/* {isDarkMode ? (
                 <img
                   src="/backgrounds/about-us-dark.png"
                   alt="logo"
@@ -62,20 +69,20 @@ function AboutUs() {
                   alt="logo"
                   draggable="false"
                 />
-              )}
+              )} */}
             </div>
           }
           title={content[locale].title}
           subtitle={content[locale].subtitle}
         />
       </div>
-      <About />
-      <WavesWrapper hideBottom>
+      {/* <About /> */}
+      {/* <WavesWrapper hideBottom>
         <NewsLetter />
-        {/* <Roadmap showBackground={false} /> */}
-      </WavesWrapper>
-      <Team />
-      <Partners />
+      </WavesWrapper> */}
+      {/* <Team /> */}
+      <MeetTheTeam />
+      <PartnersNew />
       <FAQ />
       <div
         style={{
