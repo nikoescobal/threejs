@@ -31,9 +31,9 @@ function DonutChart({series, labels, titleText, subtitle, legendPosition}) {
       {
         label: '# of Votes',
         data: series,
-        backgroundColor: colors(0.2),
-        borderColor: colors(1),
-        borderWidth: 1,
+        backgroundColor: colors(0.5),
+        borderColor: colors(0.5),
+        borderWidth: 0,
       },
     ],
   };
@@ -54,8 +54,8 @@ function DonutChart({series, labels, titleText, subtitle, legendPosition}) {
                 <div key={label}>
                   <span style={{
                     display: 'inline-block',
-                    border: `1px solid ${colors(1)[index]}`,
-                    background: colors(0.2)[index],
+                    border: `1px solid ${colors(0.5)[index]}`,
+                    background: colors(0.5)[index],
                     height: '1rem',
                     width: '1rem'
                   }} />
