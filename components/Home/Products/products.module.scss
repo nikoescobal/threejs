@@ -16,24 +16,24 @@
 .image {
   // padding: 5rem 0 0;
 
-  @include md {
-    transform: translateX(15%);
-  }
+  // @include md {
+  //   transform: translateX(15%);
+  // }
 
-  @include lg {
-    transform: translateX(38%);
-  }
+  // @include lg {
+  //   transform: translateX(38%);
+  // }
 
-  @include breakpoint(1200px) {
-    transform: translateX(65%);
-  }
+  // @include breakpoint(1200px) {
+  //   transform: translateX(65%);
+  // }
 
-  @include xl {
-    transform: translateX(115%);
-  }
+  // @include xl {
+  //   transform: translateX(115%);
+  // }
 }
 
-.products-wrapper > h4 {
+.products-wrapper>h4 {
   max-width: 60ch;
   margin: 0 auto;
   position: relative;
@@ -81,7 +81,7 @@
   }
 }
 
-.mockup-wrapper > span {
+.mockup-wrapper>span {
   margin-top: -2rem;
   scale: 0.8;
   overflow: visible !important;
