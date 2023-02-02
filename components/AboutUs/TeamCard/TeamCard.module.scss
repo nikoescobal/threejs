@@ -1,0 +1,51 @@
+@import '../../../styles/breakpoints';
+@import '../../../styles/variables';
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  min-height: 26rem;
+  // width: calc(100%);
+  transition: filter 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+    scale 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+    transform 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  filter: grayscale(1) brightness(0.4);
+  position: relative;
+}
+
+.wrapper:hover {
+  filter: grayscale(0);
+  // scale: 1.1;
+  z-index: 1;
+}
+
+.info-wrapper {
+  display: none;
+  text-align: center;
+  transition: opacity 1.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  opacity: 0;
+  width: 100%;
+  // min-height: 6rem;
+  padding: 1.5rem 1rem 1rem;
+  font-size: 0.75rem;
+  gap: 0.8rem;
+  background: linear-gradient(360deg, rgba(0, 21, 62, 0.83) -1.88%, rgba(0, 0, 0, 0.7304) 139.23%);
+}
+
+.socials-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials-wrapper svg {
+  font-size: 1.05rem;
+}
+
+.wrapper:hover .info-wrapper {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+}
