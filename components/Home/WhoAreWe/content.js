@@ -14,7 +14,8 @@ const content = {
         `,
       url: '/about-us',
       urlTitle: 'Link to About Us page',
-      image: '/illustrations/whoweare.webp',
+      // image: '/illustrations/whoweare.webp',
+      image: null,
       button_text: 'Get Started'
     },
     {

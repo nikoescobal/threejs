@@ -34,7 +34,11 @@ function WhoAreWe() {
           {/* <div  className={styles.grid}> */}
             <div className={styles['img-wrapper']}>
               {/* <Image src={item.image} width={700} height={100} objectFit={'fill'} alt="illustration" /> */}
-              <img src={item.image} width={700} height={100} alt="illustration" />
+              {
+                item.image
+                  ? <img src={item.image} width={700} height={100} alt="illustration" />
+                  : null
+              }
             </div>
             <div className={styles['card']}>
               <h2>{item.title}</h2>
