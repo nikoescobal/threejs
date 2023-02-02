@@ -13,6 +13,7 @@ import { useCallback } from 'react';
 import Dialog from '../Generic/SimpleDialog/Dialog';
 import { inProdEnvironment } from '../../utils';
 import EastIcon from '@mui/icons-material/East';
+import CloseIcon from '@mui/icons-material/Close';
 
 function Hamburger({ onClick, className }) {
   return (
@@ -63,6 +64,7 @@ function Navbar() {
   const router = useRouter();
   const { locales, locale, asPath } = router;
   const [displayLanguages, setDisplayLanguages] = useState(false);
+  const [showBanner, setShowBanner] = useState(true)
 
   const toggle = () => {
     toggleDarkMode();
@@ -285,9 +287,15 @@ function Navbar() {
             />
           </button>
         </div>
-      <p className={`${styles['gradient-bar']} ${scrollDirection === 'down' ? `${styles['scroll-down']}` : ''}`} data-visible={router.pathname === '/'}>
+      <p
+        className={`${styles['gradient-bar']} ${scrollDirection === 'down' ? `${styles['scroll-down']}` : ''}`}
+        data-visible={showBanner}
+      >
         Join the Legacy Network giveaway | $1 million in prizes and seed funding | Join now, we are waiting for you
         <EastIcon />
+        <IconButton className={styles.close} onClick={() => setShowBanner(false)}>
+          <CloseIcon />
+        </IconButton>
       </p>
       </nav>
     </>
