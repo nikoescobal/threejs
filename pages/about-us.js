@@ -19,6 +19,7 @@ import FAQ from '../components/AboutUs/FAQ/FAQ';
 import { useRouter } from 'next/router';
 import PartnersNew from '../components/Generic/PartnersNew/Partners';
 import MeetTheTeam from '../components/AboutUs/MeetTheTeam/Team';
+import WhyLegacyNetwork from '../components/PersonalDevelopment/WhyLegacyNetwork/WhyLegacyNetwork';
 
 const content = {
   en: {
@@ -82,6 +83,7 @@ function AboutUs() {
       </WavesWrapper> */}
       {/* <Team /> */}
       <MeetTheTeam />
+      <WhyLegacyNetwork />
       <PartnersNew />
       <FAQ />
       <div

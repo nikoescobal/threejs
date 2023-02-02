@@ -1,0 +1,41 @@
+@use '../../../styles/colors' as *;
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/variables' as *;
+
+.wrapper {
+  display: grid;
+  gap: 2rem;
+
+  @include lg {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+}
+
+.wrapper h2,
+.wrapper h3 {
+  padding-bottom: 1.5rem;
+}
+
+.wrapper h3 {
+  font-size: 1.25rem;
+  font-family: 'Montserrat', serif;
+}
+
+.wrapper p {
+  color: $gray--14;
+}
+
+.light p {
+  color: $light-mode-text-color;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @include lg {
+    gap: 4rem;
+  }
+}
