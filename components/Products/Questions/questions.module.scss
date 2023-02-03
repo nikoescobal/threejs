@@ -10,87 +10,53 @@
   @include lg {
     padding-top: 8rem;
   }
+}
 
-  background: linear-gradient(
-    transparent 60%,
-    rgba($color: $ln-blue, $alpha: 0.2)
-  );
+.section>div:last-of-type {
+  position: relative;
+}
 
-  & > div:last-of-type {
-    position: relative;
-  }
+.section h2 {
+  max-width: 40ch;
+  padding-bottom: 4rem;
+}
 
-  h3 {
-    max-width: 40ch;
-    padding-bottom: 4rem;
-  }
+.section h3 {
+  font-size: clamp(1.75rem, 5vw, 2.25rem);
+}
 
-  h4 {
-    font-size: clamp(1.75rem, 5vw, 2.25rem);
-  }
+.section p {
+  color: $gray;
+  max-width: 40ch;
+}
 
-  p {
-    color: $gray;
-    max-width: 40ch;
-  }
+.solution {
+  padding: 1rem 0 0 0;
+}
 
-  .solution {
-    padding: 1rem 0 0 0;
-  }
-
-  .questions-wrapper {
-    @include lg {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 5rem;
-    }
-  }
-
-  .question {
-    padding-bottom: 2rem;
-  }
-
-  // .wrapper div:last-of-type {
-  //   max-width: 22rem;
-  //   text-align: center;
-  // }
-
-  .button {
-    max-width: 16rem;
-  }
-
-  .button-wrapper {
-    position: relative;
-  }
-
-  .circles {
-    top: 0;
-    right: 0;
+.questions-wrapper {
+  @include lg {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5rem;
   }
 }
 
-.staff {
-  position: absolute;
-  max-width: 100%;
-  top: 5%;
-  right: -40%;
+.question {
+  padding-bottom: 2rem;
+}
 
-  @include sm {
-    top: -10%;
-    right: -45%;
-  }
+// .wrapper div:last-of-type {
+//   max-width: 22rem;
+//   text-align: center;
+// }
 
-  @include md {
-    top: 20.5%;
-    right: -14%;
-    max-width: 55%;
-  }
+.button {
+  max-width: 16rem;
+}
 
-  @include lg {
-    top: -10%;
-    right: -15%;
-    max-width: 54rem;
-  }
+.button-wrapper {
+  position: relative;
 }
 
 .wrapper {
@@ -98,19 +64,17 @@
 }
 
 .section.light {
-  background: linear-gradient(
-    transparent 60%,
-    rgba($color: $light-mode-primary, $alpha: 1)
-  );
+  background: linear-gradient(transparent 60%,
+      rgba($color: $light-mode-primary, $alpha: 1));
+}
 
-  & > div:last-of-type {
-    background: none;
-    position: relative;
-  }
+.section.light>div:last-of-type {
+  background: none;
+  position: relative;
+}
 
-  p {
-    color: $gray-dark;
-  }
+.section.light p {
+  color: $gray-dark;
 }
 
 .spacing-y {
@@ -129,10 +93,10 @@
   max-width: 100% !important;
 }
 
-.questions-h3 {
+.title {
   font-size: 2.5rem;
 }
 
-.questions-h4 {
+.sub-title {
   font-size: 1.5rem !important;
 }

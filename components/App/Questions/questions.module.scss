@@ -11,52 +11,53 @@
     padding-top: 8rem;
   }
 
-  background: linear-gradient(transparent 60%,
-    rgba($color: $ln-blue, $alpha: 0.2));
+  // background: linear-gradient(transparent 60%,
+  //   rgba($color: $ln-blue, $alpha: 0.2));
 
-  &>div:last-of-type {
-    position: relative;
-  }
+}
 
-  h3 {
-    max-width: 40ch;
-    padding-bottom: 4rem;
-  }
+.section>div:last-of-type {
+  position: relative;
+}
 
-  h4 {
-    font-size: clamp(1.75rem, 5vw, 2.25rem);
-  }
+.solution {
+  padding: 1rem 0 0 0;
+}
 
-  p {
-    color: $gray;
-    max-width: 40ch;
-  }
+.question {
+  padding-bottom: 2rem;
+}
 
-  .solution {
-    padding: 1rem 0 0 0;
-  }
+.wrapper div:last-of-type {
+  max-width: 22rem;
+  text-align: center;
+}
 
-  .question {
-    padding-bottom: 2rem;
-  }
+.button {
+  max-width: 16rem;
+}
 
-  .wrapper div:last-of-type {
-    max-width: 22rem;
-    text-align: center;
-  }
+.button-wrapper {
+  position: relative;
+}
 
-  .button {
-    max-width: 16rem;
-  }
+.circles {
+  top: 0;
+  right: 0;
+}
 
-  .button-wrapper {
-    position: relative;
-  }
+.section h2 {
+  max-width: 40ch;
+  padding-bottom: 4rem;
+}
 
-  .circles {
-    top: 0;
-    right: 0;
-  }
+.section h3 {
+  font-size: clamp(1.75rem, 5vw, 2.25rem);
+}
+
+.section p {
+  color: $gray;
+  max-width: 40ch;
 }
 
 .staff {
@@ -88,8 +89,8 @@
 }
 
 .section.light {
-  background: linear-gradient(transparent 60%,
-      rgba($color: $light-mode-primary, $alpha: 1));
+  // background: linear-gradient(transparent 60%,
+  //     rgba($color: $light-mode-primary, $alpha: 1));
 
   &>div:last-of-type {
     background: none;

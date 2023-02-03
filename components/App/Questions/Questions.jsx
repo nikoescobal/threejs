@@ -31,11 +31,11 @@ function Questions() {
           </div>
         )} */}
         <div className={styles.wrapper}>
-          <h3>{questions[locale].title}</h3>
+          <h2>{questions[locale].title}</h2>
           <div className={styles['questions-wrapper']}>
             {questions[locale].list.map((question, index) => (
               <div key={index} className={styles.question}>
-                <h4>{question.title}</h4>
+                <h3>{question.title}</h3>
                 <p>{question.text}</p>
               </div>
             ))}
