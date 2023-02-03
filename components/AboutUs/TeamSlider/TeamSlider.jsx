@@ -4,8 +4,10 @@ import EastIcon from '@mui/icons-material/East';
 import WestIcon from '@mui/icons-material/West';
 import { IconButton } from '@mui/material';
 import { useState } from 'react';
+import useStore from '../../../store/store';
 
 function TeamSlider({team, offset}) {
+  const { isDarkMode } = useStore();
   const [x, setX] = useState(0);
   /* length of list times scroll offset * 0.5 (half of the photos occupy the screen initially) */
   const maxRight = team.length * offset * -0.5
@@ -23,7 +25,10 @@ function TeamSlider({team, offset}) {
   }
   
   return (
-    <div className={styles['wrapper']}>
+    <div className={`
+      ${styles['wrapper']}
+      ${isDarkMode ? '' : `${styles['light']}`}
+    `}>
       <div className={`${styles['arrows-wrapper']}`}>
         <IconButton onClick={handleLeftClick}>
           <WestIcon />

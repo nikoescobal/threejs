@@ -33,6 +33,11 @@
   background: linear-gradient(360deg, rgba(0, 21, 62, 0.83) -1.88%, rgba(0, 0, 0, 0.7304) 139.23%);
 }
 
+.light span,
+.light svg {
+  color: white;
+}
+
 .socials-wrapper {
   display: flex;
   gap: 0.5rem;

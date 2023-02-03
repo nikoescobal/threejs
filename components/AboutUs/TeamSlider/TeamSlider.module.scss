@@ -21,8 +21,16 @@
   border-radius: 50%;
 }
 
+.light button {
+  background: $semi-transparent-blue !important;
+}
+
 .arrows-wrapper svg {
   color: $gray--16;
+}
+
+.light .arrows-wrapper svg {
+  color: $light-mode-text-color;
 }
 
 .cards-wrapper {
