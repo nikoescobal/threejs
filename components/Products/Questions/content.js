@@ -55,15 +55,15 @@ export const questions = {
     more: 'More On Mental Health Crisis',
     list: [
       {
-        title: 'WHAT',
+        title: 'What',
         text: `Here, the user is told a fact, for example, that healthy self-confidence is important for success in various areas of life. It is shown which areas of life are affected by the trait.`,
       },
       {
-        title: 'WHY',
+        title: 'Why',
         text: `Subsequently, it is explained in detail why a healthy self-confidence is important. Understandable correlations are shown to create an “aha experience”.`,
       },
       {
-        title: 'HOW',
+        title: 'How',
         text: `In the last step, it is explained how exactly self-confidence is formed. Clear cause and reaction relationships are shown for the user to gain a deep understanding of the trait.`,
       },
     ],
