@@ -35,21 +35,20 @@ function FAQ() {
     >
       <div className={styles['content-left']}>
         <div className={styles['text-left']}>
-          <h3>Frequently Asked Questions (FAQs)</h3>
-          <p>Didn&apos;t find an answer to your question?</p>
-          <p>Drop us a line here.</p>
+          <h2>{content[locale].title}</h2>
+          <div className={styles.body} dangerouslySetInnerHTML={{__html: content[locale].body}} />
           <a
             className="button-blue"
             href="mailto:hello@legacynetwork.io?subject=I+Have+A+Question"
           >
-            Ask a question &#8594;
+            {content[locale].ask}
           </a>
         </div>
       </div>
 
       <div className={styles['content-right']}>
         <div className={styles['tab-headings']}>
-          {content[locale].map((item, index) => (
+          {content[locale].questions.map((item, index) => (
             <Button
               key={item.title}
               className={`${selectedTab === index ? `${styles.active}` : ''}`}
@@ -60,7 +59,7 @@ function FAQ() {
           ))}
         </div>
         <div className={styles['tab-content']}>
-          {content[locale][selectedTab].content.map((list, index) => (
+          {content[locale]['questions'][selectedTab].content.map((list, index) => (
             <Accordion
               key={list.question}
               expanded={expanded === index + 1}

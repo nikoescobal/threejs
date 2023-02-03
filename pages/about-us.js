@@ -87,9 +87,9 @@ function AboutUs() {
       <MeetTheTeam />
       <WhyLegacyNetwork />
       <Gallery />
-      <AdvisoryBoard />
+      {/* <AdvisoryBoard />
       <PartnersNew />
-      <FAQ />
+      <FAQ /> */}
       <div
         style={{
           marginTop: '8rem',
