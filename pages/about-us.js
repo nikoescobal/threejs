@@ -88,8 +88,8 @@ function AboutUs() {
       <WhyLegacyNetwork />
       <Gallery />
       {/* <AdvisoryBoard />
-      <PartnersNew />
-      <FAQ /> */}
+      <PartnersNew /> */}
+      <FAQ />
       <div
         style={{
           marginTop: '8rem',
