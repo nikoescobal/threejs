@@ -1,0 +1,154 @@
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/variables' as *;
+@use '../../../styles/colors' as *;
+
+.wrapper {
+  position: relative;
+  margin-top: clamp(0rem, 20vw + 1rem, 20rem);
+}
+
+.wrapper h4 {
+  padding: 0.4rem 0 1rem;
+  // text-align: center;
+
+  @include md {
+    padding-bottom: 1rem;
+  }
+
+  @include lg {
+    // text-align: left;
+  }
+}
+
+.light.wrapper h4 {
+  color: $light-mode-secondary;
+  // text-align: center;
+  padding-bottom: 1rem;
+
+  @include lg {
+    // text-align: left;
+    padding-bottom: 0.4rem;
+  }
+}
+
+.wrapper p {
+  font-size: 1.1rem;
+}
+
+.token-title {
+  font-size: 1.1rem;
+  font-family: 'Montserrat', serif;
+}
+
+.title {
+  text-align: center;
+  padding-bottom: 3rem;
+
+  @include lg {
+    padding-bottom: 4rem;
+  }
+}
+
+.header-wrapper {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.header {
+  text-align: left !important;
+  align-items: center;
+
+  @include md {
+    // transform: translateX(2.5rem);
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-right: 5rem;
+  }
+
+  @include lg {
+    justify-content: flex-start;
+  }
+}
+
+.header p {
+  color: $gray;
+  // padding-right: 1rem;
+}
+
+.wrapper ul {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 32rem;
+  margin: 0 auto;
+  // text-align: center;
+
+  @include lg {
+    max-width: none;
+  }
+}
+
+.img-wrapper {
+  text-align: center;
+  max-width: 100%;
+  align-items: center;
+}
+
+.img-wrapper img {
+  width: 100%;
+  max-width: 2.75rem;
+  transform: translateY(-0.25rem);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+
+    width: 100%;
+  }
+
+  @include lg {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem 2rem;
+  }
+}
+
+// .list-wrapper {
+//   padding-left: 1rem;
+
+//   @include md {
+//     margin: 0 auto;
+//   }
+
+//   @include lg {
+//     padding-left: 4rem;
+//   }
+
+//   li::marker {
+//     color: $ln-blue;
+//     font-size: 0.9rem;
+//   }
+// }
+
+// .list-wrapper li {
+//   color: $gray;
+// }
+
+// .light .list.wrapper {
+//   color: $light-mode-text-color;
+// }
+
+.light.wrapper img {
+  // filter: invert(68%) sepia(48%) saturate(6883%) hue-rotate(203deg) brightness(93%) contrast(98%);
+  filter: invert(43%) sepia(94%) saturate(4000%) hue-rotate(206deg)
+    brightness(97%) contrast(90%);
+}
+
+.light.wrapper li::marker {
+  color: $light-mode-secondary;
+}

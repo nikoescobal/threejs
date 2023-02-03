@@ -12,7 +12,8 @@ import ChartSection from '../components/TokenPage/ChartSection/ChartSection';
 import SidePressureSection from '../components/TokenPage/SidePressureSection/SidePressureSection';
 import StakingSection from '../components/TokenPage/StakingSection/StakingSection';
 import NFTSection from '../components/TokenPage/NFTSection/NFTSection';
-import UtilitySection from '../components/TokenPage/UtilitySection/UtilitySection';
+// import UtilitySection from '../components/TokenPage/UtilitySection/UtilitySection';
+import UtilitySectionNew from '../components/TokenPage/UtilitySectionNew/UtilitySection';
 import Waves from '../public/backgrounds/waves-5.png';
 import BlockChainBanner from '../components/TokenPage/BlockchainBanner/BlockChainBanner';
 import WaveLines from '../components/Generic/WaveLines/WaveLines';
@@ -23,12 +24,12 @@ import { useRouter } from 'next/router';
 
 const content = {
   en: {
-    subtitle: 'a multichain utility & payment token'
+    subtitle: 'a multichain utility & payment token',
   },
   de: {
-    subtitle: 'Ein Multi Chain Utility & Zahlungstoken'
-  }
-}
+    subtitle: 'Ein Multi Chain Utility & Zahlungstoken',
+  },
+};
 
 function Token() {
   const isDesktop = useMediaQuery('(min-width: 1024px)');
@@ -77,11 +78,13 @@ function Token() {
           }
         />
         <TokenIntro />
-        <WavesWrapper hideBottom={true}>
+        <UtilitySectionNew />
+
+        {/* <WavesWrapper hideBottom={true}>
           <HexagonSliderSection />
           <BlockChainBanner />
           <ChartSection />
-        </WavesWrapper>
+        </WavesWrapper> */}
         <div
           style={{
             background:
@@ -92,8 +95,9 @@ function Token() {
           <BurningRate />
           <StakingSection />
         </div>
+
         <NFTSection />
-        <UtilitySection />
+        {/* <UtilitySection /> */}
       </div>
     </>
   );

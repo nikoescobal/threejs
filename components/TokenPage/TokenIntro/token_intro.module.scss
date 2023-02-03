@@ -1,25 +1,32 @@
 @use '../../../styles/breakpoints' as *;
-@import '../../../styles/variables';
+@use '../../../styles/variables' as *;
+@use '../../../styles/colors' as *;
 
 .wrapper {
-  background: linear-gradient(
-    transparent 60%,
-    rgba($color: $ln-blue, $alpha: 0.2)
-  );
+  // background: linear-gradient(
+  //   transparent 60%,
+  //   rgba($color: $ln-blue, $alpha: 0.2)
+  // );
   padding-top: 20vw;
-  text-align: center;
+  // text-align: center;
 
   @include md {
     padding-top: 6rem;
   }
 
-  h3 {
-    padding: 0 0 1rem;
+  .token-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 0.2fr;
+    gap: 2rem;
   }
 
-  p {
-    padding: 0 0 5rem;
-  }
+  // h3 {
+  //   padding: 0 0 1rem;
+  // }
+
+  // p {
+  //   padding: 0 0 5rem;
+  // }
 }
 
 .wrapper.light {
@@ -27,27 +34,64 @@
   background: $light-mode-primary;
 }
 
-.wrapper div {
+.token-subtitle {
   max-width: 75ch;
-  margin: 0 auto;
+  margin-right: auto;
+  padding: 2rem 0;
 }
 
-.waves-wrapper {
-  position: absolute;
-  top: 10%;
-  scale: 4;
-  object-fit: cover;
+// .waves-wrapper {
+//   position: absolute;
+//   top: 10%;
+//   scale: 4;
+//   object-fit: cover;
 
-  @include md {
-    scale: 2;
-    transform: translateX(-9rem);
-    transform: translateY(2rem);
-  }
+//   @include md {
+//     scale: 2;
+//     transform: translateX(-9rem);
+//     transform: translateY(2rem);
+//   }
+
+//   @include lg {
+//     top: 10%;
+//     scale: 1.4;
+//     left: 90px;
+//     object-fit: cover;
+//   }
+// }
+
+.token-text {
+  padding: 2rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  // display: flex;
+  gap: 2rem;
 
   @include lg {
-    top: 10%;
-    scale: 1.4;
-    left: 90px;
-    object-fit: cover;
+    gap: 3rem;
   }
+  // justify-content: space-between;
+}
+
+.token-heading {
+  color: $gray;
+  white-space: nowrap;
+}
+
+.token-description {
+  width: 100%;
+  padding: 0.25rem 0;
+  white-space: nowrap;
+  padding-right: 5rem;
+  // max-width: 25rem;
+}
+
+// .token-description:nth-child(2) {
+//   padding-left: 1rem;
+// }
+
+.border {
+  background: #f4f4f4;
+  height: 2px;
+  width: 100%;
 }
