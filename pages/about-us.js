@@ -87,8 +87,8 @@ function AboutUs() {
       <MeetTheTeam />
       <WhyLegacyNetwork />
       <Gallery />
-      {/* <AdvisoryBoard />
-      <PartnersNew /> */}
+      <AdvisoryBoard />
+      {/* <PartnersNew /> */}
       <FAQ />
       <div
         style={{
