@@ -29,7 +29,7 @@ function TokenIntro() {
           <div className={styles['border']}></div>
           {content[locale].content.map((content, index) => (
             <div key={index}>
-              <div className={styles['token-wrapper']}>
+              <div className={styles['token']}>
                 <div className={styles['token-text']}>
                   <p className={styles['token-heading']}>{content.heading}</p>
                   <p className={styles['token-description']}>{content.text}</p>
