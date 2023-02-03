@@ -19,7 +19,7 @@ import PillarsOfAnUnhappyLife from '../components/PersonalDevelopment/PillarsOfA
 const content = {
   en: {
     title: 'LN Network',
-    subtitle: '& its importance'
+    subtitle: ''
   },
   de: {
     title: 'Das Netzwerk',
