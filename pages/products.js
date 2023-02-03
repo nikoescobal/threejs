@@ -50,7 +50,7 @@ function Products() {
       </div>
 
       <Questions />
-      <Features />
+      {/* <Features /> */}
       <ProductsPage />
       <LegacyApproach />
       <Benefits />
