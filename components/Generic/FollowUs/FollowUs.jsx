@@ -23,7 +23,7 @@ function FollowUs() {
       <img src="/assets/parallax/square.png" className="floating-shape" alt="" />
       <img src="/assets/parallax/triangle.png" className="floating-shape" alt="" />
       <img src="/assets/parallax/cross.png" className="floating-shape" alt="" /> */}
-      <h3>{content[locale].title}</h3>
+      <h2>{content[locale].title}</h2>
       <div className={`${styles['main-icon-wrapper']}`}>
           <a href="https://twitter.com/LegacyNetworkio" target='_blank' rel="noreferrer">
             <div className={`${styles['icon-wrapper']}`}>
