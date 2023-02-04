@@ -1,0 +1,96 @@
+@use '../../../styles/colors' as *;
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/variables' as *;
+
+.wrapper {
+  position: relative;
+  padding-top: 8rem;
+}
+
+.wrapper h2 {
+  padding-bottom: 2rem;
+}
+
+.wrapper>p {
+  max-width: 58ch;
+}
+
+.wrapper p {
+  color: $gray--12;
+}
+
+.light p {
+  color: $light-mode-text-color;
+}
+
+.grid {
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+
+  @include lg {
+    padding: 8rem 0;
+    gap: 10rem;
+  }
+}
+
+.info-wrapper {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  // align-items: center;
+}
+
+.info-wrapper>span {
+  display: block;
+  width: max-content;
+  padding: 0.5rem;
+  border-radius: 4px;
+  color: $gray--14;
+  font-size: 0.8rem;
+  background: $gray--3;
+}
+
+.light .info-wrapper>span {
+  background: $semi-transparent-blue;
+}
+
+.info-wrapper h3 {
+  font-size: 1.5rem;
+  position: relative;
+  font-family: 'Montserrat', serif;
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+
+.info-wrapper h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 5.75rem;
+  height: 3px;
+  background: $blue--2;
+}
+
+.light .info-wrapper::after {
+  background: $blue--3;
+}
+
+.list {
+  flex-direction: row;
+}
+
+.list-item {
+  color: $blue--2;
+}
+
+.light .light-item {
+  color: $blue--3;
+}
+
+.wrapper button {
+  // background: #000;
+}

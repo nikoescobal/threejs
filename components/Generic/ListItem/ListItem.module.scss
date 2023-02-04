@@ -1,0 +1,27 @@
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
+@use '../../../styles/variables' as *;
+
+.wrapper {
+  list-style: none;
+  padding-left: 1.15rem;
+  position: relative;
+  color: $gray--15;
+  line-height: 2.75ch;
+}
+
+.light.wrapper {
+  color: $light-mode-text-color;
+}
+
+.wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0.90rem;
+  left: 0;
+  transform: translate(0, -50%);
+  width: 0.55rem;
+  height: 0.55rem;
+  background: $gray--10;
+  border-radius: 50%;
+}

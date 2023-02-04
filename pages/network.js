@@ -1,20 +1,9 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import React from 'react';
 import GenericHeader from '../components/Generic/Header/GenericHeader';
-import WavesWrapper from '../components/Generic/WavesWrapper/WavesWrapper';
-import Explanation from '../components/PersonalDevelopment/Explanation/Explanation';
-import HealthCrisis from '../components/PersonalDevelopment/HealthCrisis/HealthCrisis';
-import StepsForPersonalDevelopment from '../components/PersonalDevelopment/StepsForPersonalDevelopment/StepsForPersonalDevelopment';
-import Achievements from '../public/illustrations/Achievements.png';
-import Waves from '../public/backgrounds/waves-5.png';
 import WaveLines from '../components/Generic/WaveLines/WaveLines';
-import Script from 'next/script';
 import styles from '../components/NetworkPage/Network.module.scss';
 import { useRouter } from 'next/router';
-import WhatIsPersonalDevelopment from '../components/PersonalDevelopment/WhatIsPersonalDevelopment/WhatIsPersonalDevelopment';
-import LegacyMethods from '../components/Home/LegacyMethods/LegacyMethodsList/LegacyMethods';
-import PillarsOfAnUnhappyLife from '../components/PersonalDevelopment/PillarsOfAnUnhappyLife/PillarsOfAnUnhappyLife';
+import NetworkFeatures from '../components/NetworkPage/NetworkFeatures/NetworkFeatures';
 
 const content = {
   en: {
@@ -27,14 +16,14 @@ const content = {
   }
 }
 
-function PersonalDevelopment() {
+function Network() {
   const { locale } = useRouter();
   
   return (
     <div>
       <Head>
-        <title>Personal Development</title>
-        <meta name="description" content="Personal Development" />
+        <title>Network</title>
+        <meta name="description" content="Network Information" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -50,16 +39,9 @@ function PersonalDevelopment() {
         title={content[locale].title}
         subtitle={content[locale].subtitle}
       />
-      {/* <Explanation /> */}
-      <WhatIsPersonalDevelopment />
-      <LegacyMethods />
-      {/* <WavesWrapper hideBottom={true}>
-      </WavesWrapper> */}
-      <HealthCrisis />
-      <PillarsOfAnUnhappyLife />
-      {/* <StepsForPersonalDevelopment /> */}
+      <NetworkFeatures />      
     </div>
   );
 }
 
-export default PersonalDevelopment;
+export default Network;
