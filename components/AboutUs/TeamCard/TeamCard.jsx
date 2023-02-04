@@ -14,6 +14,7 @@ function TeamCard({member, index, style}) {
   return (
     <div
       className={`${styles.wrapper} ${!isDarkMode ? `${styles.light}` : ''}`}
+      data-index={index}
       style={{
         background: `url(${member.img}) center / cover`,
         ...style

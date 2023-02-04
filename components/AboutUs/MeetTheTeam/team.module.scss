@@ -23,5 +23,7 @@
 
 .sliders-wrapper {
   display: grid;
+  // overflow-x: hidden;
+  // overflow-y: visible;
   gap: 8rem;
 }

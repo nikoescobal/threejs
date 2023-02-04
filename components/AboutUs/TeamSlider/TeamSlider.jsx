@@ -3,26 +3,45 @@ import TeamCard from '../TeamCard/TeamCard';
 import EastIcon from '@mui/icons-material/East';
 import WestIcon from '@mui/icons-material/West';
 import { IconButton } from '@mui/material';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import useStore from '../../../store/store';
 
 function TeamSlider({team, offset}) {
+  const containerRef = useRef(null);
   const { isDarkMode } = useStore();
   const [x, setX] = useState(0);
+  const [index, setIndex] = useState(0);
   /* length of list times scroll offset * 0.5 (half of the photos occupy the screen initially) */
   const maxRight = team.length * offset * -0.5
   
   const handleRightClick = () => {
     if (x > maxRight) {
       setX(x - 100)
+      setIndex(index + 1)
     }
   }
 
   const handleLeftClick = () => {
     if (x < 0) {
       setX(x + 100)
+      setIndex(index - 1)
     }
   }
+
+  useEffect(() => {
+      /* Cards visible at once */
+      const visibleCards = 4;
+      const length = containerRef.current.children.length 
+      containerRef.current.children[index].style.opacity = '1'
+      if (index > 0) {
+        containerRef.current.children[index - 1].style.opacity = '0'
+      }
+      const endOffset = length - visibleCards + index
+      if (length !== endOffset) {
+        containerRef.current.children[endOffset].style.opacity = '0'
+      }
+      containerRef.current.children[endOffset - 1].style.opacity = '1'
+  }, [index])
   
   return (
     <div className={`
@@ -38,13 +57,19 @@ function TeamSlider({team, offset}) {
         </IconButton>
       </div>
       <div
+        ref={containerRef}
         className={styles['cards-wrapper']}
       >
         {
-          team.map((member) => (
-            <TeamCard key={member.name} member={member} style={{
-              transform: `translateX(${x}%)`
-            }} />
+          team.map((member, index) => (
+            <TeamCard
+              key={member.name}
+              member={member}
+              style={{
+                translate: `${x}% 0`
+                // transform: `translateX(${x}%)`
+              }}
+            />
           ))
         }
       </div>
