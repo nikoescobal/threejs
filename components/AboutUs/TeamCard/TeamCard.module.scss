@@ -5,7 +5,8 @@
   display: flex;
   justify-content: center;
   align-items: end;
-  min-height: 26rem;
+  // min-height: 26rem;
+  aspect-ratio: 1 / 1.5;
   // width: calc(100%);
   transition: filter 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95),
     scale 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95),
@@ -16,7 +17,7 @@
 
 .wrapper:hover {
   filter: grayscale(0);
-  // scale: 1.1;
+  scale: 1.1;
   z-index: 1;
 }
 
