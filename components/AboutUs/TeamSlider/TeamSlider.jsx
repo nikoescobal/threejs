@@ -13,6 +13,8 @@ function TeamSlider({team, offset}) {
   const [index, setIndex] = useState(0);
   /* length of list times scroll offset * 0.5 (half of the photos occupy the screen initially) */
   const maxRight = team.length * offset * -0.5
+  /* Amount of cards visible at once */
+  const visibleCards = 4;
   
   const handleRightClick = () => {
     if (x > maxRight) {
@@ -29,8 +31,13 @@ function TeamSlider({team, offset}) {
   }
 
   useEffect(() => {
-      /* Cards visible at once */
-      const visibleCards = 4;
+    /* Initializes cards outside viewport to be hidden */
+    for (let i = visibleCards; i < containerRef.current.children.length ; i++) {
+      containerRef.current.children[i].style.opacity = 0
+    }
+  }, [])
+
+  useEffect(() => {
       const length = containerRef.current.children.length 
       containerRef.current.children[index].style.opacity = '1'
       if (index > 0) {
