@@ -43,6 +43,7 @@ console.log(images);
         ${styles[locale]}
         ${!isDarkMode ? `${styles['light']}` : ''}
         spacing-x
+        max-1920
       `}
     >
       <FsLightbox

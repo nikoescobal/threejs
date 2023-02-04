@@ -21,6 +21,7 @@ function WhyLegacyNetwork() {
         ${styles[locale]}
         ${!isDarkMode ? `${styles['light']}` : ''}
         spacing-x
+        max-1920
       `}
     >
       <div className={`${styles['left']}`}>
