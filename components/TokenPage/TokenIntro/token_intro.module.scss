@@ -16,17 +16,18 @@
 
   .token-wrapper {
     display: grid;
-    grid-template-columns: 2fr 0.2fr;
+    grid-template-columns: 1fr;
+    // display: flex;
     gap: 2rem;
+
+    @include lg {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include xl {
+      grid-template-columns: 1.3fr 1fr;
+    }
   }
-
-  // h3 {
-  //   padding: 0 0 1rem;
-  // }
-
-  // p {
-  //   padding: 0 0 5rem;
-  // }
 }
 
 .wrapper.light {
@@ -60,14 +61,23 @@
 //   }
 // }
 
+.token {
+  // background: red;
+  width: 100%;
+  // display: flex;
+  // justify-content: center;
+  // max-width: 20rem;
+}
+
 .token-text {
   padding: 2rem 0 0;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(100px, max-content));
   // display: flex;
   gap: 2rem;
 
   @include lg {
+    // width: 90%;
     gap: 3rem;
   }
   // justify-content: space-between;
@@ -81,8 +91,8 @@
 .token-description {
   width: 100%;
   padding: 0.25rem 0;
-  white-space: nowrap;
-  padding-right: 5rem;
+  // white-space: nowrap;
+  // padding-right: 5rem;
   // max-width: 25rem;
 }
 
