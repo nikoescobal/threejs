@@ -5,6 +5,7 @@ import styles from '../components/NetworkPage/Network.module.scss';
 import { useRouter } from 'next/router';
 import NetworkFeatures from '../components/NetworkPage/NetworkFeatures/NetworkFeatures';
 import EveryStepOfTheWay from '../components/NetworkPage/EveryStepOfTheWay/EveryStepOfTheWay';
+import DepthOfNetworking from '../components/NetworkPage/DepthOfNetworking/DepthOfNetworking';
 
 const content = {
   en: {
@@ -41,6 +42,7 @@ function Network() {
         subtitle={content[locale].subtitle}
       />
       <EveryStepOfTheWay />
+      <DepthOfNetworking />
       <NetworkFeatures />      
     </div>
   );
