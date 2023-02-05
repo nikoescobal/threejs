@@ -41,6 +41,10 @@
   padding: 2rem;
 }
 
+.light .level {
+  background: $semi-transparent-blue;
+}
+
 .level span {
   display: block;
   color: $blue--1;
