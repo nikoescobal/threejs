@@ -1,0 +1,56 @@
+@use '../../../styles/colors' as *;
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/variables' as *;
+
+.wrapper {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  // align-items: center;
+  position: relative;
+  padding-top: 8rem;
+  // text-align: center;
+}
+
+.wrapper p {
+  color: $gray--10;
+  max-width: 45ch;
+  // font-size: 1rem;
+}
+
+.light p {
+  color: $light-mode-text-color;
+}
+
+.list-wrapper {
+  display: grid;
+  gap: 2.25rem;
+  grid-auto-rows: 1fr;
+  padding-top: 2rem;
+
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include lg {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+  }
+}
+
+
+.item>div {
+  display: flex;
+  gap: 1rem;
+}
+
+.item h3 {
+  font-family: 'Montserrat', serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  padding-bottom: 1rem;
+}
+
+.item p {
+  max-width: 25ch;
+}
