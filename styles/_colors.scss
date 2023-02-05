@@ -16,16 +16,15 @@ $gray--15: #cccccc;
 $gray--16: #dddddd;
 $gray--17: #eeeeee;
 
-$blue--1: #0d2f89;
+$blue--1: rgba(30, 79, 188, 1);
 $blue--2: #1960ea;
 $blue--3: #79a4f6;
 $blue--4: #369fff;
 $blue-ln: #4683f9;
 
-$semi-transparent-blue: rgba(
-  $color: #cadbff,
-  $alpha: 0.7,
-);
+$semi-transparent-blue: rgba($color: #cadbff,
+    $alpha: 0.7,
+  );
 
 $green--1: #37ff05;
 

@@ -4,6 +4,7 @@ import WaveLines from '../components/Generic/WaveLines/WaveLines';
 import styles from '../components/NetworkPage/Network.module.scss';
 import { useRouter } from 'next/router';
 import NetworkFeatures from '../components/NetworkPage/NetworkFeatures/NetworkFeatures';
+import EveryStepOfTheWay from '../components/NetworkPage/EveryStepOfTheWay/EveryStepOfTheWay';
 
 const content = {
   en: {
@@ -39,6 +40,7 @@ function Network() {
         title={content[locale].title}
         subtitle={content[locale].subtitle}
       />
+      <EveryStepOfTheWay />
       <NetworkFeatures />      
     </div>
   );
