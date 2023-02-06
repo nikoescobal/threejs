@@ -17,6 +17,10 @@
   }
 }
 
+.light.wrapper {
+  background: rgba($color: $blue--3, $alpha: 0.5);
+}
+
 .wrapper h2 {
   padding-bottom: 2rem;
 }
