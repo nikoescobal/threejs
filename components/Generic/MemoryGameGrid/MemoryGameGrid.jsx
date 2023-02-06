@@ -45,8 +45,6 @@ function MemoryGameGrid(props) {
     <div className={`
       ${styles['wrapper']}
       ${!isDarkMode ? styles['light'] : ''}
-      spacing-x
-      max-1920
       `}
     >
       <div className={styles['grid']}>
