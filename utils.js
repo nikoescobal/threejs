@@ -15,4 +15,11 @@ function shuffle(arr) {
   return tempArr;
 }
 
-export { inProdEnvironment, shuffle };
+function a11yProps(index) {
+  return {
+    id: `tab-${index}`,
+    'aria-controls': `tabpanel-${index}`,
+  };
+}
+
+export { inProdEnvironment, shuffle, a11yProps };
