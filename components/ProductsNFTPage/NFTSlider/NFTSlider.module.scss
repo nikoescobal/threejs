@@ -1,0 +1,107 @@
+@use '../../../styles/colors' as *;
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/variables' as *;
+
+.wrapper {
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  @include md {
+    padding-bottom: 8rem;
+  }
+}
+
+.wrapper h2 {
+  padding-bottom: 2rem;
+}
+
+.wrapper>p {
+  max-width: 58ch;
+}
+
+.wrapper p {
+  color: $gray--12;
+}
+
+.light p {
+  color: $light-mode-text-color;
+}
+
+.wrapper>img {
+  // display: block;
+  display: none;
+  margin: 0 auto;
+  max-width: 36rem;
+  max-height: 33rem;
+  object-fit: contain;
+  width: 100% !important;
+}
+
+.wrapper>img[data-active="true"] {
+  display: block;
+}
+
+.bottom {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+
+  @include md {
+    padding: 3rem 0 2rem;
+  }
+}
+
+.bottom span {
+  display: block;
+  text-align: center;
+  font-family: 'fjalla', serif;
+  font-size: 1.25rem;
+  min-width: 10rem;
+}
+
+.arrow {
+  // position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  background: none;
+  border: none;
+}
+
+.arrow:first-of-type {
+  left: 0;
+}
+
+.arrow:last-of-type {
+  right: 0;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.indicators span {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: $gray--6;
+  border-radius: 50%;
+}
+
+.light .indicators span {
+  background: $semi-transparent-blue;
+}
+
+.indicators span[data-active="true"] {
+  background: white;
+}
+
+.light .indicators span[data-active="true"] {
+  background: $blue--2;
+}

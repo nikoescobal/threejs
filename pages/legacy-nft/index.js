@@ -12,6 +12,7 @@ import BoardFeatures from '../../components/NetworkPage/BoardFeatures/BoardFeatu
 import Events from '../../components/NetworkPage/Events/Events';
 import GettingStarted from '../../components/NetworkPage/GettingStarted/GettingStarted';
 import MemoryGame from '../../components/Generic/MemoryGame/MemoryGame';
+import Tribes from '../../components/ProductsNFTPage/Tribes/Tribes';
 
 const content = {
   en: {
@@ -48,6 +49,7 @@ function LegacyNFT() {
         subtitle={content[locale].subtitle}
       />
       <MemoryGame />
+      <Tribes />
     </div>
   );
 }
