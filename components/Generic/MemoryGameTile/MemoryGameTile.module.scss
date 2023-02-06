@@ -1,0 +1,47 @@
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
+@use '../../../styles/variables' as *;
+
+.wrapper {
+  position: relative;
+  aspect-ratio: 200 / 250;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid $gray--7;
+}
+
+.wrapper::after {
+  content: "";
+  background: url('/logo-cropped.webp') center / contain no-repeat $gray--5;
+  background-size: 40%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(0) perspective(100px);
+  transition: .4s;
+  backface-visibility: hidden;
+}
+
+.wrapper img {
+  // height: 100px;
+  object-fit: cover;
+  overflow: hidden;
+  object-position: center;
+  transform: rotateY(180deg) perspective(100px);
+  transition: .4s;
+  backface-visibility: hidden;
+}
+
+.wrapper[data-opened="true"]::after {
+  transform: rotateY(180deg) perspective(100px);
+}
+
+.wrapper[data-opened="true"] img {
+  transform: rotateY(0) perspective(100px);
+}
+
+.wrapper[data-finished="true"] {
+  opacity: .5;
+}

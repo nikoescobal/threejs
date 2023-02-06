@@ -1,3 +1,5 @@
+@use '../styles/breakpoints' as *;
+
 .header {
   display: flex;
   flex-direction: column;
@@ -12,7 +14,11 @@
 }
 
 .spacing-x {
-  padding: 0 clamp(2rem, 10vw, 6.1rem);
+  padding: 0 1rem;
+
+  @include md {
+    padding: 0 clamp(2rem, 7.2vw, 6.1rem);
+  }
 }
 
 .max-1920 {

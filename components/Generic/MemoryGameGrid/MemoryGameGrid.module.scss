@@ -1,0 +1,31 @@
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
+@use '../../../styles/variables' as *;
+
+.grid {
+  display: grid;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  // min-height: 24rem;
+  // overflow: visible;
+  grid-template-columns: repeat(3, 1fr);
+
+  @include sm {
+    // min-height: 22rem;
+  }
+
+  @include md {
+    grid-template-columns: repeat(4, 1fr);
+    // min-height: 10rem;
+    gap: 2rem;
+  }
+
+  @include lg {
+    // grid-template-columns: repeat(5, 1fr);
+    // min-height: 10rem;
+    // gap: 10rem;
+  }
+}
+
+.grid {}

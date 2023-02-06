@@ -1,0 +1,45 @@
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
+@use '../../../styles/variables' as *;
+
+.wrapper {
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  // min-height: 24rem;
+  // overflow: visible;
+
+  @include sm {
+    // min-height: 22rem;
+  }
+
+  @include md {
+    // min-height: 10rem;
+    gap: 4rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include lg {
+    min-height: 10rem;
+    gap: 10rem;
+  }
+}
+
+.wrapper:nth-of-type(2n)>div:first-of-type {
+  @include md {
+    order: 1;
+  }
+}
+
+.wrapper[data-reverse="true"]:nth-of-type(2n - 1)>div:first-of-type {
+  @include md {
+    order: 1;
+  }
+}
+
+.wrapper[data-reverse="true"]:nth-of-type(2n)>div:first-of-type {
+  @include md {
+    order: -1;
+  }
+}
