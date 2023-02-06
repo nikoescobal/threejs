@@ -97,6 +97,10 @@
   border-radius: 8px;
 }
 
+.light .card {
+  background: rgba($color: $blue--3, $alpha: 0.3);
+}
+
 .card img {
   display: block;
   max-width: 7rem !important;
@@ -107,4 +111,8 @@
   display: block;
   font-weight: 600;
   margin-bottom: 1rem;
+}
+
+.light .card span {
+  color: $gray--4;
 }
