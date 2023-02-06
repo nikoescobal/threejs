@@ -8,16 +8,46 @@
   position: relative;
 }
 
+.top {
+  text-align: left;
+
+  @include md {
+    text-align: center;
+  }
+}
+
+.top p {
+  padding-bottom: 4rem;
+
+  @include md {
+    padding-bottom: 0;
+  }
+}
+
 .hammer {
   position: absolute;
-  top: 10%;
-  left: -14rem;
+  top: 0;
+  left: auto;
+  scale: -1 1;
+  right: -4rem;
+
+  @include md {
+    scale: 1;
+    top: 10%;
+    left: -14rem;
+    right: auto;
+  }
 }
 
 .spikes {
-  position: absolute;
-  top: 65%;
-  right: -5rem;
+  display: none;
+
+  @include md {
+    display: block;
+    position: absolute;
+    top: 65%;
+    right: -5rem;
+  }
 }
 
 .wrapper:nth-of-type(2n)>div:first-of-type {
@@ -45,10 +75,14 @@
 
 .spear.spear {
   // position: absolute;
-  margin: 2rem 0 1rem;
+  display: none;
 
-  // width: 86% !important;
-  max-width: 50rem !important;
+  @include md {
+    display: block;
+    margin: 2rem 0 1rem;
+    max-width: 50rem !important;
+  }
+
 }
 
 .spear:first-of-type {
