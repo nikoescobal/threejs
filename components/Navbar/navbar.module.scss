@@ -394,7 +394,7 @@
     position: absolute;
     min-width: 4rem;
     max-width: 6rem;
-    right: 10.75rem;
+    // right: 10.75rem;
   }
 
   @include lg {
@@ -418,6 +418,10 @@
 }
 
 .win[data-env='false'] {
+  @include md {
+    right: 12.75rem;
+  }
+
   @include lg {
     right: 10.75rem;
   }
