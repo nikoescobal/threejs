@@ -1,0 +1,110 @@
+@use '../../../styles/colors' as *;
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/variables' as *;
+
+.wrapper {
+  position: relative;
+  align-items: center;
+  background: $gray--1;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.light.wrapper {
+  background: $semi-transparent-blue;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+
+  @include lg {
+    grid-template-columns: 2fr 1fr;
+    gap: 6rem;
+  }
+}
+
+
+
+.wrapper h2 {
+  padding-bottom: 2rem;
+
+  @include md {
+    text-align: center;
+  }
+
+  @include lg {
+    text-align: left;
+  }
+}
+
+.wrapper>p {
+  max-width: 58ch;
+  font-size: 0.9rem;
+}
+
+.wrapper p {
+  color: $gray--13;
+}
+
+.light p {
+  color: $light-mode-text-color;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+
+  @include lg {
+    grid-template-columns: 1fr 1.1fr;
+  }
+}
+
+.grid>div {
+  position: relative;
+}
+
+.grid>div>img {
+  // max-width: 20rem;
+  scale: 1.95;
+
+  @include lg {
+    position: absolute;
+    top: 50%;
+    left: -30%;
+    translate: 0 -50%;
+    scale: 1.95;
+  }
+}
+
+.cards-wrapper {
+  display: grid;
+  gap: 1rem;
+
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+  }
+}
+
+.card {
+  aspect-ratio: 300 / 360;
+  background: #0b0b0b;
+  border: 1px solid $blue--1;
+  max-width: 18rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.card img {
+  display: block;
+  max-width: 7rem !important;
+  margin: 0.5rem auto 3rem;
+}
+
+.card span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}

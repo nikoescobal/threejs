@@ -15,6 +15,7 @@ import MemoryGame from '../../components/Generic/MemoryGame/MemoryGame';
 import Tribes from '../../components/ProductsNFTPage/Tribes/Tribes';
 import AboutTheWallet from '../../components/LegacyWalletPage/AboutTheWallet/AboutTheWallet';
 import WalletFunctions from '../../components/LegacyWalletPage/WalletFunctions/WalletFunctions';
+import WalletHighlights from '../../components/LegacyWalletPage/WalletHighlights/WalletHighlights';
 
 const content = {
   en: {
@@ -52,6 +53,7 @@ function LegacyWallet() {
       />
       <AboutTheWallet />
       <WalletFunctions />
+      <WalletHighlights />
     </div>
   );
 }
