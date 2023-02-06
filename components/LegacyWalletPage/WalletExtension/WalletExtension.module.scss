@@ -1,0 +1,62 @@
+@use '../../../styles/colors' as *;
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/variables' as *;
+
+.wrapper {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-top: 8rem;
+  text-align: center;
+}
+
+.wrapper span {
+  color: $blue--1;
+  font-size: 1.25rem;
+}
+
+.light span {
+  color: $blue--2;
+}
+
+.wrapper p {
+  color: $gray--12;
+  max-width: 80ch;
+  // font-size: 1rem;
+}
+
+.light p {
+  color: $light-mode-text-color;
+}
+
+.wrapper button {
+  margin: 0;
+  margin-bottom: 2rem;
+
+  @include lg {
+    margin-bottom: 4rem;
+  }
+}
+
+.grid {
+  padding: 4rem 0 8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+
+  @include lg {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // justify-content: space-between;
+  }
+}
+
+.grid img {
+  max-width: 20rem !important;
+  max-height: 28rem;
+  width: 100% !important;
+  object-fit: contain;
+}
