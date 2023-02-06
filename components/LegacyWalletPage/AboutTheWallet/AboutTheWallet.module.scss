@@ -1,0 +1,44 @@
+@use '../../../styles/colors' as *;
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/variables' as *;
+
+.wrapper {
+  position: relative;
+  display: grid;
+  align-items: center;
+  gap: 2rem;
+  background: $gray--1;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  @include lg {
+    grid-template-columns: 2fr 1fr;
+    gap: 6rem;
+  }
+}
+
+.wrapper h2 {
+  padding-bottom: 2rem;
+}
+
+.wrapper>p {
+  max-width: 58ch;
+}
+
+.wrapper p {
+  color: $gray--13;
+}
+
+.light p {
+  color: $light-mode-text-color;
+}
+
+.wrapper img {
+  max-width: 60% !important;
+  margin: 0 auto;
+
+  @include md {
+    max-width: 100% !important;
+
+  }
+}
