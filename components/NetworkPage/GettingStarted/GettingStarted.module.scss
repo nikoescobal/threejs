@@ -1,0 +1,51 @@
+@use '../../../styles/colors' as *;
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/variables' as *;
+
+.wrapper {
+  display: grid;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 8rem;
+
+  @include lg {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+}
+
+.wrapper p {
+  color: $gray--12;
+}
+
+.light p {
+  color: $light-mode-text-color;
+}
+
+
+.right {
+  padding: 2rem;
+  background: $gray--3;
+
+}
+
+.right h3 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 400;
+}
+
+.list-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 0;
+}
+
+.list-wrapper a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  gap: 2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid $gray--8;
+}

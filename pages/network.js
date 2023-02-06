@@ -10,6 +10,7 @@ import Membership from '../components/NetworkPage/Membership/Membership';
 import HowItWorks from '../components/NetworkPage/HowItWorks/HowItWorks';
 import BoardFeatures from '../components/NetworkPage/BoardFeatures/BoardFeatures';
 import Events from '../components/NetworkPage/Events/Events';
+import GettingStarted from '../components/NetworkPage/GettingStarted/GettingStarted';
 
 const content = {
   en: {
@@ -51,6 +52,7 @@ function Network() {
       <HowItWorks />
       <BoardFeatures />
       <Events />
+      <GettingStarted />
       {/* <NetworkFeatures />       */}
     </div>
   );
