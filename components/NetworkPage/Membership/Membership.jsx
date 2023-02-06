@@ -2,7 +2,7 @@ import styles from './Membership.module.scss';
 import useStore from '../../../store/store';
 import content from './content';
 import { useRouter } from 'next/router';
-import LockOpen from '../../Generic/Icons/LockOpen/LockOpen';
+import LockOpen from '../../Icons/LockOpen/LockOpen';
 
 function Membership() {
   const { isDarkMode } = useStore((state) => state);
