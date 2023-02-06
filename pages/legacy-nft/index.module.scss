@@ -1,0 +1,24 @@
+@use '../../styles/breakpoints' as *;
+@use '../../styles/colors' as *;
+@use '../../styles/variables' as *;
+
+.image.image {
+
+  @include sm {
+    scale: 1.1;
+  }
+
+  @include md {
+    scale: 1.5;
+    translate: -13% 0;
+  }
+
+  @include lg {
+    scale: 1.5;
+    // position: absolute;
+    // top: 35%;
+    max-width: 100% !important;
+    // right: 18%;
+    translate: -13% 0;
+  }
+}

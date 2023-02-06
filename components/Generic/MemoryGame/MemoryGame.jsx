@@ -1,16 +1,26 @@
 import styles from './MemoryGame.module.scss';
-import PropTypes from 'prop-types';
+import Hammer from '../../../public/weapons/hammer-2.png';
+import Spikes from '../../../public/weapons/spikes.png';
 import axios from 'axios';
 import MemoryGameGrid from '../MemoryGameGrid/MemoryGameGrid';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+import content from './content';
+import useStore from '../../../store/store';
+import { useMediaQuery } from '@mui/material';
+import { Parallax } from 'react-scroll-parallax';
+import Image from 'next/image';
 
 function MemoryGame() {
   const [newGame, setNewGame] = useState(false);
   const [list, setList] = useState([]);
   const [visibleItems, setVisibleItems] = useState([]);
   const [duration, setDuration] = useState(0);
+  const isTablet = useMediaQuery('(min-width: 768px');
   const [finishedItems, setFinishedItems] = useState([]);
   const [winner, setWinner] = useState(false);
+  const { isDarkMode } = useStore();
+  const { locale } = useRouter()
 
   const checkItems = (firstIndex, secondIndex) => {
     if (
@@ -78,8 +88,38 @@ function MemoryGame() {
   );
   
   return (
-    <div className="text-center p-4 d-flex flex-column">
-      <button
+    <div className={`
+      ${styles.wrapper}
+      ${!isDarkMode ? styles['light'] : ''}
+      spacing-x
+      max-1920
+      `}
+    >
+      {isTablet ? (
+            <>
+              <Parallax speed={30} className={styles['hammer']}>
+                <Image className="" src={Hammer} alt="hammer" draggable="false" />
+              </Parallax>
+              <Parallax speed={60} className={styles['spikes']}>
+                <Image className="" src={Spikes} alt="spikes" draggable="false" />
+              </Parallax>
+            </>
+          ) : (
+            <>
+              <div className={styles['hammer']}>
+                <Image className="" src={Hammer} alt="hammer" draggable="false" />
+              </div>
+              <div className={styles['spikes']}>
+                <Image className="" src={Spikes} alt="spikes" draggable="false" />
+              </div>
+            </>
+          )}
+      <div className={styles.top}>
+        <h2>{content[locale].title}</h2>
+        <p>{content[locale].description}</p>
+      </div>
+        <img src="/weapons/spear-cropped.png" alt='spear weapon' className={styles.spear} />
+      {/* <button
         onClick={() => {
           setNewGame(!newGame);
           setVisibleItems([]);
@@ -89,7 +129,7 @@ function MemoryGame() {
         className="btn btn-warning mb-4"
       >
         New Game
-      </button>
+      </button> */}
       {list.length === 0 ? (
         <div>...Loading</div>
       ) : (
@@ -110,6 +150,7 @@ function MemoryGame() {
           )}
         </div>
       )}
+      <img src="/weapons/spear-cropped.png" alt='spear weapon' className={styles.spear} />
     </div>
   )
 }

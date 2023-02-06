@@ -3,27 +3,21 @@
 @use '../../../styles/variables' as *;
 
 .wrapper {
-  display: grid;
-  align-items: center;
-  gap: 1rem;
+  text-align: center;
+  padding-top: 4rem;
   position: relative;
-  // min-height: 24rem;
-  // overflow: visible;
+}
 
-  @include sm {
-    // min-height: 22rem;
-  }
+.hammer {
+  position: absolute;
+  top: 10%;
+  left: -14rem;
+}
 
-  @include md {
-    // min-height: 10rem;
-    gap: 4rem;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @include lg {
-    min-height: 10rem;
-    gap: 10rem;
-  }
+.spikes {
+  position: absolute;
+  top: 65%;
+  right: -5rem;
 }
 
 .wrapper:nth-of-type(2n)>div:first-of-type {
@@ -42,4 +36,27 @@
   @include md {
     order: -1;
   }
+}
+
+
+.top {
+  position: relative;
+}
+
+.spear.spear {
+  // position: absolute;
+  margin: 2rem 0 1rem;
+
+  // width: 86% !important;
+  max-width: 50rem !important;
+}
+
+.spear:first-of-type {
+  // inset: 4rem 0 0 0;
+  top: 4rem;
+  left: 0;
+}
+
+.spear:last-of-type {
+  scale: -1 1;
 }

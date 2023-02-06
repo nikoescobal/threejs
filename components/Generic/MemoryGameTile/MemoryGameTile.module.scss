@@ -22,6 +22,11 @@
   transform: rotateY(0) perspective(100px);
   transition: .4s;
   backface-visibility: hidden;
+  filter: grayscale(1);
+}
+
+.wrapper:hover::after {
+  filter: grayscale(0);
 }
 
 .wrapper img {

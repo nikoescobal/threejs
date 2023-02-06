@@ -10,6 +10,8 @@
   // min-height: 24rem;
   // overflow: visible;
   grid-template-columns: repeat(3, 1fr);
+  max-width: 50rem;
+  margin: 0 auto;
 
   @include sm {
     // min-height: 22rem;
