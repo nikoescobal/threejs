@@ -8,6 +8,7 @@ import EveryStepOfTheWay from '../components/NetworkPage/EveryStepOfTheWay/Every
 import DepthOfNetworking from '../components/NetworkPage/DepthOfNetworking/DepthOfNetworking';
 import Membership from '../components/NetworkPage/Membership/Membership';
 import HowItWorks from '../components/NetworkPage/HowItWorks/HowItWorks';
+import BoardFeatures from '../components/NetworkPage/BoardFeatures/BoardFeatures';
 
 const content = {
   en: {
@@ -47,6 +48,7 @@ function Network() {
       <DepthOfNetworking />
       <Membership />
       <HowItWorks />
+      <BoardFeatures />
       <NetworkFeatures />      
     </div>
   );
