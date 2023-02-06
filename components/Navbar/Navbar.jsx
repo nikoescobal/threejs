@@ -64,7 +64,7 @@ function Navbar() {
   const router = useRouter();
   const { locales, locale, asPath } = router;
   const [displayLanguages, setDisplayLanguages] = useState(false);
-  const [showBanner, setShowBanner] = useState(true)
+  const [showBanner, setShowBanner] = useState(true);
 
   const toggle = () => {
     toggleDarkMode();
@@ -124,8 +124,7 @@ function Navbar() {
           ${styles.navbar}
           ${isDarkMode ? '' : `${styles.light}`}
           ${isOpen ? `${styles.open}` : ''}
-          ${scrollDirection === 'down' ? `${styles['scroll-down']}` : ''}`
-        }
+          ${scrollDirection === 'down' ? `${styles['scroll-down']}` : ''}`}
         data-visible-gradient={router.pathname === '/'}
       >
         <div className={styles.navbar__logo__wrapper}>
@@ -287,16 +286,22 @@ function Navbar() {
             />
           </button>
         </div>
-      <p
-        className={`${styles['gradient-bar']} ${scrollDirection === 'down' ? `${styles['scroll-down']}` : ''}`}
-        data-visible={showBanner}
-      >
-        Join the Legacy Network giveaway | $1 million in prizes and seed funding | Join now, we are waiting for you
-        <EastIcon />
-        <IconButton className={styles.close} onClick={() => setShowBanner(false)}>
-          <CloseIcon />
-        </IconButton>
-      </p>
+        <p
+          className={`${styles['gradient-bar']} ${
+            scrollDirection === 'down' ? `${styles['scroll-down']}` : ''
+          }`}
+          data-visible={showBanner}
+        >
+          Join the Legacy Network giveaway | $1 million in prizes and seed
+          funding | Join now, we are waiting for you
+          <EastIcon />
+          <IconButton
+            className={styles.close}
+            onClick={() => setShowBanner(false)}
+          >
+            <CloseIcon />
+          </IconButton>
+        </p>
       </nav>
     </>
   );
