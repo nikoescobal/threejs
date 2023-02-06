@@ -1,0 +1,101 @@
+@use '../../../styles/colors' as *;
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/variables' as *;
+
+.wrapper {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  position: relative;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  overflow: visible;
+}
+
+.main-info-wrapper {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed $gray--15;
+  padding-bottom: 1rem;
+}
+
+.light .main-info-wrapper {
+  border-bottom: 1px dashed $blue--2;
+}
+
+.main-info-wrapper span:first-of-type {
+  font-weight: 600;
+}
+
+.main-info-wrapper span:last-of-type {
+  color: $blue--1;
+  font-size: 0.8rem;
+}
+
+.light .main-info-wrapper span:last-of-type {
+  color: $blue--2;
+}
+
+.wrapper p {
+  color: $gray--14;
+  max-width: 48ch;
+}
+
+.light p {
+  color: $light-mode-text-color;
+}
+
+
+.list-wrapper {
+  display: grid;
+  grid-auto-flow: column;
+  position: relative;
+  gap: 2rem;
+
+  @include lg {
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+    grid-auto-columns: calc(25%);
+    gap: 4rem;
+    // overflow-x: scroll;
+  }
+}
+
+.list-wrapper img {
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.list-wrapper h3 {
+  font-family: 'Montserrat', serif;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.list-wrapper p {
+  color: $gray--12;
+}
+
+.light list-wrapper p {
+  color: $light-mode-text-color;
+}
+
+.recording {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.author {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+p.author {
+  color: $gray--10;
+}
+
+.author span {
+  color: $gray--14;
+}

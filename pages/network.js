@@ -9,6 +9,7 @@ import DepthOfNetworking from '../components/NetworkPage/DepthOfNetworking/Depth
 import Membership from '../components/NetworkPage/Membership/Membership';
 import HowItWorks from '../components/NetworkPage/HowItWorks/HowItWorks';
 import BoardFeatures from '../components/NetworkPage/BoardFeatures/BoardFeatures';
+import Events from '../components/NetworkPage/Events/Events';
 
 const content = {
   en: {
@@ -49,7 +50,8 @@ function Network() {
       <Membership />
       <HowItWorks />
       <BoardFeatures />
-      <NetworkFeatures />      
+      <Events />
+      {/* <NetworkFeatures />       */}
     </div>
   );
 }
