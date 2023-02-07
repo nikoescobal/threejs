@@ -30,6 +30,7 @@
   display: block;
   font-weight: 600;
   font-size: 1.2rem;
+  transition: color 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 .sub-list-wrapper span {
