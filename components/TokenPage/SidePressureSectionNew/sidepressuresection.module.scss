@@ -168,14 +168,19 @@
     stroke-dashoffset: 0;
     stroke-width: 6.75;
     stroke: white;
+    stroke-dasharray: 500;
   }
   40% {
     stroke-dashoffset: 1200;
+    stroke-dasharray: 700;
+
     stroke-width: 6.75;
     stroke: $blue--2;
   }
   80% {
     stroke-dashoffset: 3000;
+    stroke-dasharray: 800;
+
     stroke-width: 6.75;
     stroke: white;
   }
