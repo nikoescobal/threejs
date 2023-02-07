@@ -71,6 +71,11 @@
 
 .text-wrapper {
   text-align: center;
+  width: 80%;
+
+  @include sm {
+    width: 100%;
+  }
 }
 
 .text-wrapper h5 {

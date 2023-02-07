@@ -11,8 +11,10 @@ import HexagonSliderSection from '../components/TokenPage/HexagonSliderSection/H
 import ChartSection from '../components/TokenPage/ChartSection/ChartSection';
 import SidePressureSectionNew from '../components/TokenPage/SidePressureSectionNew/SidePressureSection';
 // import SidePressureSection from '../components/TokenPage/SidePressureSection/SidePressureSection';
-import StakingSection from '../components/TokenPage/StakingSection/StakingSection';
-import NFTSection from '../components/TokenPage/NFTSection/NFTSection';
+// import StakingSection from '../components/TokenPage/StakingSection/StakingSection';
+import StakingSection from '../components/TokenPage/StakingSectionNew/StakingSection';
+// import NFTSection from '../components/TokenPage/NFTSection/NFTSection';
+import NFTSection from '../components/TokenPage/NFTSectionNew/NFTSection';
 // import UtilitySection from '../components/TokenPage/UtilitySection/UtilitySection';
 import UtilitySectionNew from '../components/TokenPage/UtilitySectionNew/UtilitySection';
 import Waves from '../public/backgrounds/waves-5.png';
