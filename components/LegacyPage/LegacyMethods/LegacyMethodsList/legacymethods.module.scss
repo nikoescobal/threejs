@@ -2,13 +2,27 @@
 @use '../../../../styles/colors' as *;
 @use '../../../../styles/variables' as *;
 
+.wrapper {
+  background: $gray--2;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.spikes {
+  position: absolute;
+  display: none;
+  top: -4rem;
+  left: -66rem;
+  z-index: 1;
+}
+
 .title,
 .subtitle {
   text-align: center;
 }
 
 .title {
-  padding-top: 6.68rem;
   // padding-bottom: 1rem;
 }
 

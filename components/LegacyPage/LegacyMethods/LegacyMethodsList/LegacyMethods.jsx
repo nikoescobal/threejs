@@ -15,13 +15,13 @@ const LegacyMethods = () => {
 
   return (
     <section
-      className={`${styles['legacy-method-wrapper']} ${
+      className={`${styles['wrapper']} ${
         !isDarkMode ? `${styles['light']}` : ''
-      } spacing-x`}
+      } spacing-x max-1920`}
     >
       <h2 className={styles['title']}>{content[locale].title}</h2>
       <p className={styles['subtitle']} dangerouslySetInnerHTML={{__html: content[locale].subtitle}} />
-
+      <img src="/weapons/spikes.png" alt="spikes weapon" className={styles.spikes} />
       <div className={styles['legacy-methods']}>
         <div className={styles['left-content']}>
           {content[locale].list.slice(0, 3).map((method, index) => (
