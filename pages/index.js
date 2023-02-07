@@ -25,6 +25,7 @@ import { inProdEnvironment } from '../utils';
 import { useRouter } from 'next/router';
 import WhoAreWe from '../components/Home/WhoAreWe/WhoAreWe';
 import WhatIsPersonalDevelopment from '../components/Home/WhatIsPersonalDevelopment/WhatIsPersonalDevelopment';
+import MostInnovativeApp from '../components/Home/MostInnovativeApp/MostInnovativeApp';
 
 const content = {
   en: {
@@ -88,6 +89,8 @@ export default function Home() {
         </div>
         <Header />
         <WhoAreWe />
+        <MostInnovativeApp />
+        <NewsLetter />
         <ProductsPage />
         {/* <div
           className={`${styles['clear-container-wrapper']} ${generics['spacing-x']}`}
@@ -123,7 +126,6 @@ export default function Home() {
       {/* <App /> */}
       {/* <Products /> */}
       {!inProdEnvironment ? <RoadmapNew /> : <Roadmap />}
-      <NewsLetter />
       {!inProdEnvironment ? <PartnersNew /> : <Partners />}
       {/* <Map /> */}
       <FollowUs />
