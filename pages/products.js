@@ -4,7 +4,7 @@ import React from 'react';
 import Questions from '../components/LegacyPage/Questions/Questions.jsx';
 import Ln from '../components/Products/Ln/Ln.jsx';
 import ProductsPage from '../components/Products/Products/Products';
-import Benefits from '../components/Products/Benefits/Benefits';
+// import Benefits from '../components/LegacyPage/Benefits/Benefits';
 import { useMediaQuery } from '@mui/material';
 import Features from '../components/Products/Features/Features';
 import DataProtection from '../components/Products/DataProtection/DataProtection';
@@ -53,7 +53,7 @@ function Products() {
       {/* <Features /> */}
       <ProductsPage />
       <LegacyApproach />
-      <Benefits />
+      {/* <Benefits /> */}
       {/* <Ln /> */}
       {/* <Download /> */}
       {/* <DataProtection /> */}
