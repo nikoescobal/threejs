@@ -1,0 +1,101 @@
+@import '../../../styles/variables';
+
+.section {
+  padding-top: 8rem;
+}
+
+.section.light {
+  background: linear-gradient(
+    rgba($color: $light-background, $alpha: 0.2) 10%,
+    transparent
+  );
+}
+
+.section p {
+  max-width: 95ch;
+  margin: 0 auto;
+}
+
+.text-wrapper {
+  text-align: center;
+
+  h3 {
+    padding: 1rem 0;
+  }
+}
+
+.cards-wrapper {
+  margin-top: 4rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  padding: 1rem;
+  min-height: 12rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(7.5px);
+  border-radius: 8px;
+  width: 30%;
+  min-width: 20rem;
+  max-width: 21rem;
+}
+
+.light .card {
+  background: $transparent-light;
+}
+
+.card svg {
+  padding: 0.75rem;
+  font-size: 3rem;
+}
+
+.img-wrapper {
+  max-width: 3.25rem;
+  aspect-ratio: 1 / 1;
+  background: rgba(239, 228, 252, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.light .img-wrapper {
+  background: $transparent-dark;
+}
+
+.img-wrapper img {
+  width: 60% !important;
+}
+
+.light .img-wrapper img {
+  // filter: invert(1);
+}
+
+.card:nth-of-type(3) .img-wrapper img {
+  // width: 40% !important;
+  width: 65% !important;
+
+  // transform: translateX(3px);
+}
+
+.card:nth-of-type(5) .img-wrapper img {
+  transform: translate(1px, -1px);
+}
+
+.card h4 {
+  font-size: clamp(1.5rem, 5vw + 1rem, 2.25rem);
+  // color: $light-mode-secondary;
+  font-weight: 500;
+  padding: 1rem 0 0.1rem;
+}
+
+.light .card h4 {
+  // color: $light-mode-secondary !important;
+}
+
+.card span {
+  font-size: clamp(0.75rem, 5vw + 1rem, 0.75rem);
+}

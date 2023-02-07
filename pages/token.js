@@ -9,7 +9,8 @@ import WavesWrapper from '../components/Generic/WavesWrapper/WavesWrapper';
 import TokenIntro from '../components/TokenPage/TokenIntro/TokenIntro';
 import HexagonSliderSection from '../components/TokenPage/HexagonSliderSection/HexagonSliderSection';
 import ChartSection from '../components/TokenPage/ChartSection/ChartSection';
-import SidePressureSection from '../components/TokenPage/SidePressureSection/SidePressureSection';
+import SidePressureSectionNew from '../components/TokenPage/SidePressureSectionNew/SidePressureSection';
+// import SidePressureSection from '../components/TokenPage/SidePressureSection/SidePressureSection';
 import StakingSection from '../components/TokenPage/StakingSection/StakingSection';
 import NFTSection from '../components/TokenPage/NFTSection/NFTSection';
 // import UtilitySection from '../components/TokenPage/UtilitySection/UtilitySection';
@@ -18,7 +19,8 @@ import Waves from '../public/backgrounds/waves-5.png';
 import BlockChainBanner from '../components/TokenPage/BlockchainBanner/BlockChainBanner';
 import WaveLines from '../components/Generic/WaveLines/WaveLines';
 import Script from 'next/script';
-import BurningRate from '../components/BurningRate/BurningRate';
+// import BurningRate from '../components/BurningRate/BurningRate';
+import BurningRate from '../components/BurningRateNew/BurningRate';
 import styles from '../components/TokenPage/TokenIntro/token_intro.module.scss';
 import { useRouter } from 'next/router';
 
@@ -91,7 +93,9 @@ function Token() {
               'radial-gradient(circle farthest-side at 0% 50%, rgba(30, 79, 188, 0.05), transparent 40%)',
           }}
         >
-          <SidePressureSection />
+          {/* <SidePressureSection /> */}
+          <SidePressureSectionNew />
+          {/* <BurningRate /> */}
           <BurningRate />
           <StakingSection />
         </div>
