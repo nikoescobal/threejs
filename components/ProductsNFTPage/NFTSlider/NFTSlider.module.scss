@@ -105,3 +105,12 @@
 .light .indicators span[data-active="true"] {
   background: $blue--2;
 }
+
+.arrows-wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  width: 100%;
+}

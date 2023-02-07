@@ -26,6 +26,7 @@ import BurningRate from '../components/BurningRateNew/BurningRate';
 import styles from '../components/TokenPage/TokenIntro/token_intro.module.scss';
 import { useRouter } from 'next/router';
 import TokenAllocation from '../components/TokenPage/TokenAllocation/TokenAllocation';
+import DiscoverOurNFT from '../components/TokenPage/DiscoverOurNFT/DiscoverOurNFT';
 
 const content = {
   en: {
@@ -104,7 +105,8 @@ function Token() {
           <StakingSection />
         </div>
 
-        <NFTSection />
+          <DiscoverOurNFT />
+        {/* <NFTSection /> */}
         {/* <UtilitySection /> */}
       </div>
     </>
