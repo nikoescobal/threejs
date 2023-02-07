@@ -128,7 +128,7 @@ function TokenAllocationChart() {
             </>
           ))}
         </svg> */}
-        <svg width="344" height="344" viewBox="0 0 344 344" fill="none" xmlns="http://www.w3.org/2000/svg">
+        {/* <svg width="344" height="344" viewBox="0 0 344 344" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             onMouseOver={() => setSelectedIndex(0)}
             onMouseLeave={() => setSelectedIndex(null)}
@@ -145,10 +145,51 @@ function TokenAllocationChart() {
             onMouseOver={() => setSelectedIndex(3)}
             onMouseLeave={() => setSelectedIndex(null)}
             d="M33.2778 273.687C17.2306 251.795 6.59238 226.416 2.23289 199.625C-2.12659 172.834 -0.0835314 145.391 8.19503 119.541C16.4736 93.691 30.7526 70.1671 49.8646 50.8929C68.9766 31.6186 92.3789 17.1412 118.158 8.6444L139.695 73.9866C124.227 79.0847 110.186 87.7711 98.7188 99.3357C87.2516 110.9 78.6842 125.015 73.717 140.525C68.7499 156.035 67.524 172.5 70.1397 188.575C72.7554 204.65 79.1384 219.877 88.7667 233.012L33.2778 273.687Z" fill="#0D2535"/>
+        </svg> */}
+        <svg xmlns="http://www.w3.org/2000/svg" width="344" height="344" viewBox="0 0 344 344" fill="none">
+          <path
+            onMouseOver={() => setSelectedIndex(0)}
+            onMouseLeave={() => setSelectedIndex(null)}
+            d="M33.2778 273.687C11.8037 244.391 0.155135 209.05 0.00153783 172.727C-0.152059 136.405 11.1972 100.966 32.4228 71.4903C53.6484 42.0144 83.6605 20.0148 118.158 8.64449C152.655 -2.72586 189.867 -2.88321 224.459 8.195L203.475 73.717C182.72 67.0701 160.393 67.1645 139.695 73.9867C118.996 80.8089 100.989 94.0087 88.2537 111.694C75.5183 129.38 68.7088 150.643 68.8009 172.436C68.8931 194.23 75.8822 215.435 88.7667 233.012L33.2778 273.687Z"
+            // fill="#59A040"
+            fill={data[0].color}
+          />
+          <path
+            onMouseOver={() => setSelectedIndex(1)}
+            onMouseLeave={() => setSelectedIndex(null)}
+            d="M223.899 8.01676C258.529 18.9767 288.8 40.6185 310.374 69.8402C331.948 99.0619 343.717 134.363 343.995 170.685L275.197 171.211C275.03 149.418 267.969 128.237 255.024 110.704C242.08 93.1711 223.917 80.186 203.139 73.6101L223.899 8.01676Z"
+            // fill="#A08B40"
+            fill={data[1].color}
+          />
+          <path
+            onMouseOver={() => setSelectedIndex(2)}
+            onMouseLeave={() => setSelectedIndex(null)}
+            d="M343.997 170.924C344.224 207.246 332.946 242.708 311.781 272.227L255.868 232.136C268.568 214.425 275.334 193.148 275.198 171.355L343.997 170.924Z"
+            // fill="#40A0A0"
+            fill={data[2].color}
+          />
+          <path
+            onMouseOver={() => setSelectedIndex(3)}
+            onMouseLeave={() => setSelectedIndex(null)}
+            d="M311.817 272.175C296.008 294.24 275.202 312.25 251.099 324.732C226.996 337.215 200.282 343.816 173.139 343.996L172.683 275.198C188.969 275.09 204.998 271.129 219.459 263.639C233.921 256.15 246.405 245.344 255.89 232.105L311.817 272.175Z"
+            // fill="#A04040"
+            fill={data[3].color}
+          />
+          <path
+            onMouseOver={() => setSelectedIndex(4)}
+            onMouseLeave={() => setSelectedIndex(null)}
+            d="M173.213 343.996C136.891 344.252 101.42 333.002 71.8848 311.86L111.931 255.916C129.652 268.601 150.935 275.351 172.728 275.197L173.213 343.996Z"
+            // fill="#4D40A0"
+            fill={data[4].color}
+          />
+          <path
+            onMouseOver={() => setSelectedIndex(5)}
+            onMouseLeave={() => setSelectedIndex(null)}
+            d="M71.7566 311.768C57.0899 301.249 44.1703 288.487 33.472 273.951L88.8833 233.17C95.3023 241.892 103.054 249.549 111.854 255.861L71.7566 311.768Z"
+            // fill="#A0408B"
+            fill={data[5].color}
+          />
         </svg>
-
-        {/* <button type="button" onClick={turnCounterClockwise} >Prev</button>
-        <button type="button" onClick={turnClockwise} style={{margin: '4rem'}}>Next</button> */}
       </div>
       <div className={styles['right']}>
         {data.map((item, index) => (
