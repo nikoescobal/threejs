@@ -90,18 +90,20 @@
   color: $light-mode-text-color;
 }
 
-.navbar > div {
+.navbar>div {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.navbar > img {
+.navbar>img {
   width: 4rem;
 }
 
 .navbar a,
 .navbar span {
+  display: flex;
+  align-items: center;
   color: white;
   text-decoration: none;
   font-weight: 600;
@@ -110,11 +112,12 @@
   transition: color 0.3s ease-in-out;
 
   @include lg {
-    font-size: 0.625rem;
+    justify-content: center;
+    // font-size: 0.625rem;
   }
 
   @include xl {
-    font-size: 0.75rem;
+    // font-size: 0.75rem;
   }
 }
 
@@ -122,8 +125,10 @@
   color: $light-mode-text-color;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.navbar span:hover {
   color: $ln-blue;
+  cursor: pointer;
 }
 
 .navbar__logo__wrapper {
@@ -140,7 +145,7 @@
   position: relative;
 }
 
-.boards-wrapper > div {
+.boards-wrapper>div {
   display: none;
   position: absolute;
   top: 2.9rem;
@@ -149,11 +154,11 @@
   padding: 1rem 0;
 }
 
-.light .boards-wrapper > div {
+.light .boards-wrapper>div {
   background: rgba($color: #8db2fc, $alpha: 0.2);
 }
 
-.boards-wrapper:hover > div {
+.boards-wrapper:hover>div {
   display: grid;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
@@ -164,7 +169,7 @@
   }
 }
 
-.boards-wrapper > div > span {
+.boards-wrapper>div>span {
   display: none;
 
   @include lg {
@@ -237,10 +242,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: absolute !important;
   top: 2rem;
   right: 5rem;
-  border: 1px solid white;
+  border: 1px solid white !important;
   padding: 0.5rem;
   background: rgba($color: #000000, $alpha: 0.75);
   border-radius: 12px;
@@ -325,7 +330,7 @@
     top: 0;
   }
 
-  .navbar > div {
+  .navbar>div {
     flex-direction: row;
     gap: 2.5rem;
 
@@ -646,7 +651,33 @@
 }
 
 .close {
-  position: fixed;
+  position: fixed !important;
   top: 4.8rem;
   right: 2rem;
+}
+
+.sub-menu>div {
+  // left: -1rem;
+
+  @include lg {
+    translate: -1rem 0;
+  }
+}
+
+.sub-menu>div>ul {
+  background: $gray--1 !important;
+  color: white !important;
+}
+
+.light.sub-menu>div>ul {
+  // background: rgba(141, 178, 252, 0.2);
+  // background: #e8f0fe !important;
+  background: white !important;
+  color: $light-mode-text-color !important;
+}
+
+.sub-menu li {
+  font-family: 'Montserrat', serif;
+  font-size: 0.75rem !important;
+  font-weight: 600;
 }

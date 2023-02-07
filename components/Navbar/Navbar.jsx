@@ -6,14 +6,16 @@ import useStore from '../../store/store';
 import Link from 'next/link';
 import styles from './navbar.module.scss';
 import LinkHover from '../Generic/LinkHover/LinkHover';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import ComingSoon from '../Generic/ComingSoon/ComingSoon';
 import LanguageIcon from '@mui/icons-material/Language';
-import { IconButton, MenuItem, MenuList } from '@mui/material';
+import { Button, IconButton, Menu, MenuItem, MenuList, useMediaQuery } from '@mui/material';
 import { useCallback } from 'react';
 import Dialog from '../Generic/SimpleDialog/Dialog';
 import { inProdEnvironment } from '../../utils';
 import EastIcon from '@mui/icons-material/East';
 import CloseIcon from '@mui/icons-material/Close';
+import content from './content';
 
 function Hamburger({ onClick, className }) {
   return (
@@ -62,9 +64,20 @@ function Navbar() {
   const { isDarkMode, toggleDarkMode } = useStore((state) => state);
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
-  const { locales, locale, asPath } = router;
+  const { locale } = router;
+  const { uuid } = require('crypto')
   const [displayLanguages, setDisplayLanguages] = useState(false);
   const [showBanner, setShowBanner] = useState(true);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+  const isDesktop = useMediaQuery('(min-width: 1024px)');
+
+  const handleProductsClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleProductsClose = () => {
+    setAnchorEl(null);
+  };
 
   const toggle = () => {
     toggleDarkMode();
@@ -139,15 +152,60 @@ function Navbar() {
           </Link>
         </div>
         <div className={styles.align_navbar}>
-          <span
-            className={router.asPath === '/' ? `${styles.active}` : ''}
-            onClick={() => setIsOpen(false)}
-          >
-            <Link href="/" title="Navbar link to home page">
-              Home
-            </Link>
-          </span>
-          <span
+          {
+            content.en.main_links.map((link) => {
+              
+                {
+                  return link.name !== 'Products'
+                    ? <span
+                        key={uuid}
+                        className={router.asPath === link.endpoint ? `${styles.active}` : ''}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        <Link href={link.endpoint} title={link.title}>
+                        {link.name}
+                        </Link>
+                      </span>
+                    : 
+                      <>
+                        <span
+                            aria-controls={open ? 'products-menu' : undefined}
+                            aria-haspopup="true"
+                            aria-expanded={open ? 'true' : undefined}
+                            onClick={handleProductsClick}
+                            className={styles['dropdown-button']}
+                          >
+                          {link.name}
+                          <KeyboardArrowDownIcon />
+                        </span>
+                        <Menu
+                          id="basic-menu"
+                          className={`${styles['sub-menu']} ${isDarkMode ? '' : `${styles.light}`}`}
+                          anchorEl={anchorEl}
+                          open={open}
+                          onClose={handleProductsClose}
+                          MenuListProps={{
+                            'aria-labelledby': 'basic-button',
+                          }}
+                        >
+                          {
+                            link.sub_links.map((subLink) => (
+                              <MenuItem
+                                key={uuid}
+                                onClick={() => {
+                                  console.log(subLink.name, subLink.endpoint);
+                                  router.push(subLink.endpoint, subLink.endpoint, {scroll: false})
+                                }}>{subLink.name}</MenuItem>
+                            ))
+                          }
+                        </Menu>
+                      </>
+                }
+                
+              
+              })
+          }
+          {/* <span
             className={router.asPath === '/products' ? `${styles.active}` : ''}
             onClick={() => setIsOpen(false)}
           >
@@ -206,8 +264,8 @@ function Navbar() {
             >
               About Us
             </Link>
-          </span>
-          <span
+          </span> */}
+          {/* <span
             className={router.asPath === '/blogs' ? `${styles.active}` : ''}
           >
             <a
@@ -240,7 +298,7 @@ function Navbar() {
                 <span className={styles.partners}>Partners</span>
               </span>
             </div>
-          </div>
+          </div> */}
         </div>
         <div>
           <div
@@ -256,19 +314,17 @@ function Navbar() {
               Win
             </ComingSoon>
           </div>
-          {!inProdEnvironment ? (
-            <div className={styles.languages}>
-              <IconButton
-                type="button"
-                onClick={toggleLanguageList}
-                className={`${styles['dark-mode-toggle']} ${
-                  isDarkMode ? '' : `${styles.light}`
-                }`}
-              >
-                <LanguageIcon />
-              </IconButton>
-            </div>
-          ) : null}
+          <div className={styles.languages}>
+            <IconButton
+              type="button"
+              onClick={toggleLanguageList}
+              className={`${styles['dark-mode-toggle']} ${
+                isDarkMode ? '' : `${styles.light}`
+              }`}
+            >
+              <LanguageIcon />
+            </IconButton>
+          </div>
 
           <button
             type="button"
