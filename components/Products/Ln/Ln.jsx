@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import useStore from '../../../store/store';
 import styles from './ln.module.scss';
-import { lnfunctions } from '../Questions/content';
+import { lnfunctions } from '../../LegacyPage/Questions/content';
 import TabPanel from '../../Generic/TabPanel/TabPanel';
 import { Tab, Tabs } from '@mui/material';
 import Image from 'next/image';
