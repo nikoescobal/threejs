@@ -46,23 +46,46 @@ const content = {
         srcTwo: '/nft/character.png',
         altTwo: 'african',
       },
-    ]
+    ],
+    chartexts: [
+      {
+        title: 'The Viking',
+        description:
+          'Vikings are Norse warriors best known for their relentless warfare. What many do not know is that they were also peaceful traders, craftsmen, and farmers. Vikings embodied strength and an appreciation for life like no other, and they believed in the teachings of Norse mythology.',
+      },
+      // {
+      //   title: 'The Greek',
+      //   description: "The Greek Ancient Greek heroes were brave, persevering, and able to adapt to any intense situation. In addition, Greek philosophers had a great influence on today's society, science, and politics. Valuing logic-based knowledge, rational observation, and reason and inquiry."
+      // },
+      // {
+      //   title: 'The Egyptian',
+      //   description: "The Egyptian The ancient Egyptians were a deeply spiritual people, and their beliefs were a major part of their culture. Egyptians believed that their gods and goddesses controlled the world and that they could intervene in everyday life. They believed that the gods were responsible for the natural processes of the world."
+      // },
+      // {
+      //   title: 'The African',
+      //   description: "The African Ancient African tribes were known for their many diverse cultures, customs, and languages. They developed various forms of art, architecture, and spiritual practices that have been passed down from generation to generation. Additionally, ancient African tribes had complex relationships with their environment and relied heavily on subsistence farming and herding for sustenance. The Aztec They were renowned for their sophisticated culture and their remarkable achievements in architecture, art, and astronomy. They also had a complex social structure and a powerful military."
+      // },
+      // {
+      //   title: 'The Aztec',
+      //   description: "The Aztecs were known for their religious rituals, including human sacrifice and the worship of multiple gods."
+      // },
+    ],
   },
   de: {
     title: 'Entdecken Sie unsere NFT',
-    description_1: `Die Legacy Network NFT ist ein In-Game-Charakter 
-    mit einem einzigartigen Set an Funktionen. Es gibt 5 
-    verschiedene Stämme, die das Erbe halten. Sie 
-    kommen in verschiedenen Formen von Animationen, Gesichtsaccessoires, Rüstungen, Farben und 
-    Charakterzügen. Jede Eigenschaft wie Charakter, 
-    Animation, Gesichtsaccessoire usw. hat auch 
-    mehrere Seltenheitsstufen, was zu einzigartigen und 
-    epischen Kombinationen führt, die Sie besitzen 
+    description_1: `Die Legacy Network NFT ist ein In-Game-Charakter
+    mit einem einzigartigen Set an Funktionen. Es gibt 5
+    verschiedene Stämme, die das Erbe halten. Sie
+    kommen in verschiedenen Formen von Animationen, Gesichtsaccessoires, Rüstungen, Farben und
+    Charakterzügen. Jede Eigenschaft wie Charakter,
+    Animation, Gesichtsaccessoire usw. hat auch
+    mehrere Seltenheitsstufen, was zu einzigartigen und
+    epischen Kombinationen führt, die Sie besitzen
     können!`,
-    description_2: `Die Legacy Network NFT auf Ethereum ist die erste 
-    Gruppe von Charakteren, die die Legacy Network 
-    Play-to-Earn-Spiel-App bevölkern werden. Das 
-    Erwerben dieser NFTs mit Rüstungen oder Upgrades 
+    description_2: `Die Legacy Network NFT auf Ethereum ist die erste
+    Gruppe von Charakteren, die die Legacy Network
+    Play-to-Earn-Spiel-App bevölkern werden. Das
+    Erwerben dieser NFTs mit Rüstungen oder Upgrades
     zeigt ihren Elite-Status an.`,
     characters: [
       {
@@ -100,8 +123,31 @@ const content = {
         srcTwo: '/nft/character.png',
         altTwo: 'african',
       },
-    ]
-  }
-}
+    ],
+    chartexts: [
+      {
+        title: 'The Viking',
+        description:
+          'Vikings are Norse warriors best known for their relentless warfare. What many do not know is that they were also peaceful traders, craftsmen, and farmers. Vikings embodied strength and an appreciation for life like no other, and they believed in the teachings of Norse mythology.',
+      },
+      // {
+      //   title: 'The Greek',
+      //   description: "The Greek Ancient Greek heroes were brave, persevering, and able to adapt to any intense situation. In addition, Greek philosophers had a great influence on today's society, science, and politics. Valuing logic-based knowledge, rational observation, and reason and inquiry."
+      // },
+      // {
+      //   title: 'The Egyptian',
+      //   description: "The Egyptian The ancient Egyptians were a deeply spiritual people, and their beliefs were a major part of their culture. Egyptians believed that their gods and goddesses controlled the world and that they could intervene in everyday life. They believed that the gods were responsible for the natural processes of the world."
+      // },
+      // {
+      //   title: 'The African',
+      //   description: "The African Ancient African tribes were known for their many diverse cultures, customs, and languages. They developed various forms of art, architecture, and spiritual practices that have been passed down from generation to generation. Additionally, ancient African tribes had complex relationships with their environment and relied heavily on subsistence farming and herding for sustenance. The Aztec They were renowned for their sophisticated culture and their remarkable achievements in architecture, art, and astronomy. They also had a complex social structure and a powerful military."
+      // },
+      // {
+      //   title: 'The Aztec',
+      //   description: "The Aztecs were known for their religious rituals, including human sacrifice and the worship of multiple gods."
+      // },
+    ],
+  },
+};
 
 export default content;
