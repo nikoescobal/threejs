@@ -1,0 +1,77 @@
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
+@import '../../../styles/variables';
+
+.wrapper {
+  display: grid;
+  align-items: center;
+  gap: 2rem;
+
+  @include lg {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.right {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include md {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include lg {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.right span {
+  display: block;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.sub-list-wrapper span {
+  color: $gray--10;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.light .sub-list-wrapper span {
+  color: $light-mode-text-color;
+}
+
+.dot {
+  position: relative;
+  font-size: 1.5rem;
+}
+
+// .dot::before {
+//   content: '';
+//   position: absolute;
+//   top: 50%;
+//   left: -1.5rem;
+//   transform: translate(0, -50%);
+//   width: 0.5rem;
+//   height: 0.5rem;
+//   background: $blue--2;
+//   border-radius: 50%;
+// }
+
+.title {
+  font-size: 1.0rem;
+  padding-bottom: 0.75rem;
+}
+
+.donut-wrapper {
+  margin: 0 auto;
+
+  @include lg {
+    margin: 0;
+  }
+}
+
+.donut-wrapper svg {
+  width: 100%;
+}
