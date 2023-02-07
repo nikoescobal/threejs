@@ -194,7 +194,8 @@ function Navbar() {
                                 key={uuid}
                                 onClick={() => {
                                   console.log(subLink.name, subLink.endpoint);
-                                  router.push(subLink.endpoint, subLink.endpoint, {scroll: false})
+                                  router.push(subLink.endpoint, subLink.endpoint, {scroll: false});
+                                  setAnchorEl(null);
                                 }}>{subLink.name}</MenuItem>
                             ))
                           }
