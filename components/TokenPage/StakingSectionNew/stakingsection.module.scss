@@ -1,5 +1,6 @@
 @use '../../../styles/breakpoints' as *;
 @use '../../../styles/colors' as *;
+@use '../../../styles/variables' as *;
 
 .staking-section {
   background: $gray--1;
@@ -22,6 +23,18 @@
   @include xl {
     gap: 4rem;
   }
+}
+
+.light.staking-section {
+  background: $light-mode-primary;
+}
+
+.light h4 {
+  color: $light-mode-secondary;
+}
+
+.light p {
+  color: $light-mode-text-color;
 }
 
 .img-wrapper {
@@ -114,9 +127,9 @@
   padding-bottom: 0.15rem;
 }
 
-.light .step p:last-of-type {
-  color: $gray-dark;
-}
+// .light .step p:last-of-type {
+//   color: $gray-dark;
+// }
 
 .number {
   padding-left: 2rem;
