@@ -12,12 +12,13 @@ import Roadmap from '../components/Generic/Roadmap/Roadmap';
 import RoadmapNew from '../components/Generic/RoadmapNew/Roadmap';
 import Partners from '../components/Generic/Partners/Partners';
 import PartnersNew from '../components/Generic/PartnersNew/Partners';
+import ProductsPage from '../components/Products/Products/Products';
 import Map from '../components/Home/Map/Map';
 import FollowUs from '../components/Generic/FollowUs/FollowUs';
 import CardSection from '../components/Home/CardSection/CardSection';
 import LegacyMethods from '../components/Home/LegacyMethods/LegacyMethodsList/LegacyMethods';
 import { Parallax } from 'react-scroll-parallax';
-import Hammer from '../public/backgrounds/hammer.webp';
+import Hammer from '../public/weapons/hammer.webp';
 import useStore from '../store/store';
 import { useMediaQuery } from '@mui/material';
 import { inProdEnvironment } from '../utils';
@@ -87,6 +88,7 @@ export default function Home() {
         </div>
         <Header />
         <WhoAreWe />
+        <ProductsPage />
         {/* <div
           className={`${styles['clear-container-wrapper']} ${generics['spacing-x']}`}
         >

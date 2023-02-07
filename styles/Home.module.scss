@@ -16,23 +16,25 @@
 }
 
 .hammer {
-  position: absolute;
-  left: -30%;
-  top: 65%;
-  max-width: 110%;
-  z-index: 1;
+  display: none;
 
   @include md {
+    position: absolute;
+    // left: -10%;
+    left: -8rem;
+    top: 65%;
+    max-width: 110%;
+    z-index: 1;
     top: 25%;
   }
 
   @include lg {
-    top: calc(10vh + 10vw);
+    top: calc(70vh + 10vw);
   }
 }
 
 .hammer img {
-  transform: rotateZ(-55deg);
+  // transform: rotateZ(-55deg);
 }
 
 .list-wrapper li {
@@ -66,8 +68,6 @@
 }
 
 .light .clear-container-wrapper {
-  background: linear-gradient(
-    transparent,
-    rgba($color: $light-mode-primary, $alpha: 0.2)
-  );
+  background: linear-gradient(transparent,
+      rgba($color: $light-mode-primary, $alpha: 0.2));
 }
