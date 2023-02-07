@@ -32,8 +32,10 @@ function SidePressureSection() {
             </div>
           </div>
         ))}
-        <p>{content[locale].description}</p>
       </div>
+      <p className={styles['long-description']}>
+        {content[locale].description}
+      </p>
     </section>
   );
 }
