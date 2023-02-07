@@ -52,13 +52,18 @@
   position: relative;
   gap: 2rem;
 
+  overflow-x: scroll;
+
   @include lg {
     grid-template-columns: unset;
     grid-template-rows: unset;
     grid-auto-columns: calc(25%);
     gap: 4rem;
-    // overflow-x: scroll;
   }
+}
+
+.list-wrapper>a {
+  min-width: 12rem;
 }
 
 .list-wrapper img {
@@ -75,6 +80,11 @@
 
 .list-wrapper p {
   color: $gray--12;
+  font-size: 0.8rem;
+
+  @include md {
+    font-size: 1rem;
+  }
 }
 
 .light list-wrapper p {
