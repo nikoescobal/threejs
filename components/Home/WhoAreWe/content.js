@@ -31,7 +31,8 @@ const content = {
         `,
       url: '/about-us',
       urlTitle: 'Link to About Us page',
-      image: '/illustrations/mission.png',
+      // image: '/illustrations/mission.png',
+      image: null,
       button_text: 'Our Products'
     }
   ],
