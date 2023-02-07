@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 import Questions from '../../components/LegacyPage/Questions/Questions';
 import Functionality from '../../components/LegacyPage/Functionality/Functionality';
 import LegacyMethods from '../../components/LegacyPage/LegacyMethods/LegacyMethodsList/LegacyMethods';
+import Benefits from '../../components/LegacyPage/Benefits/Benefits';
 
 const content = {
   en: {
@@ -44,6 +45,7 @@ function Legacy() {
       <Questions />
       <Functionality />
       <LegacyMethods />
+      <Benefits />
     </div>
   );
 }

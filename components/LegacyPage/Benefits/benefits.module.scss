@@ -4,7 +4,7 @@
 
 .wrapper {
   position: relative;
-  margin-bottom: clamp(0rem, 20vw + 1rem, 20rem);
+  padding: 8rem;
 }
 
 .wrapper h4 {
@@ -112,7 +112,7 @@
   }
 
   li::marker {
-    color: $ln-blue;
+    color: $gray--12;
     font-size: 0.9rem;
   }
 }
@@ -127,8 +127,7 @@
 
 .light.wrapper img {
   // filter: invert(68%) sepia(48%) saturate(6883%) hue-rotate(203deg) brightness(93%) contrast(98%);
-  filter: invert(43%) sepia(94%) saturate(4000%) hue-rotate(206deg)
-    brightness(97%) contrast(90%);
+  filter: invert(43%) sepia(94%) saturate(4000%) hue-rotate(206deg) brightness(97%) contrast(90%);
 }
 
 .light.wrapper li::marker {
