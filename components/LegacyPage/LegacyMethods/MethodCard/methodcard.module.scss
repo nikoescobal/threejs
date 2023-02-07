@@ -31,7 +31,7 @@
   border-radius: 8px;
   border-style: solid;
   border-color: transparent;
-  background: linear-gradient(#000000 70%, #000000 70%) padding-box,
+  background: linear-gradient($gray--3 70%, $gray--3 70%) padding-box,
     linear-gradient(to bottom left, #1960ea, #ffffff) border-box;
 
   @include sm {
