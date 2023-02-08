@@ -15,7 +15,7 @@ import GettingStarted from '../components/NetworkPage/GettingStarted/GettingStar
 const content = {
   en: {
     title: 'LN Network',
-    subtitle: ''
+    subtitle: 'Grow Beyond Your Limits'
   },
   de: {
     title: 'Das Netzwerk',
