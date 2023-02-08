@@ -53,7 +53,7 @@ function NFTSlider({variant, characters, onRightClick, onLeftClick}) {
       }
       {
         variant === 2
-          ? <div className={styles['arrows-wrapper']}>
+          ? <div className={`${styles.bottom} ${styles['arrows-wrapper']}`}>
               <button className={styles['arrow']} onClick={handleLeftClick}>
                 <img src={Arrow.src} alt="left arrow for NFT slider" />
               </button>
@@ -63,6 +63,18 @@ function NFTSlider({variant, characters, onRightClick, onLeftClick}) {
             </div>
           : null
       }
+      {/* {
+        variant === 2
+          ? <div className={styles['arrows-wrapper']}>
+              <button className={styles['arrow']} onClick={handleLeftClick}>
+                <img src={Arrow.src} alt="left arrow for NFT slider" />
+              </button>
+              <button className={styles['arrow']} onClick={handleRightClick} style={{scale: '-1 1'}}>
+                <img src={Arrow.src} alt="right arrow for NFT slider" />
+              </button>
+            </div>
+          : null
+      } */}
       
       <div className={styles['indicators']}>
         {

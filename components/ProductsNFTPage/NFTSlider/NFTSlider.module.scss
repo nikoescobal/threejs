@@ -108,9 +108,11 @@
 
 .arrows-wrapper {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   position: absolute;
-  top: 50%;
-  translate: 0 -50%;
+  // top: 50%;
+  // translate: 0 -50%;
+  gap: 8rem;
+  bottom: -2.4rem;
   width: 100%;
 }
