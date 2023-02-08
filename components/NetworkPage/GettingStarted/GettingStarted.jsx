@@ -4,6 +4,7 @@ import content from './content';
 import { useRouter } from 'next/router';
 import { Button } from '@mui/material';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
+import Link from 'next/link';
 
 function GettingStarted() {
   const { isDarkMode } = useStore((state) => state);
@@ -28,11 +29,13 @@ function GettingStarted() {
         <h3>{content[locale].learn_more}</h3>
         <div className={styles['list-wrapper']}>
           {
-            content[locale].list.map((item) => (
-              <a key={uuid} rel='noreferrer' target="_blank" className={styles['recording']} href={item.url}>
-                {item.text}
-                <ArrowOutwardIcon />
-              </a>
+            content[locale].list.map((item, index) => (
+              index !== 0
+                ? <a key={uuid} rel='noreferrer' target="_blank" className={styles['recording']} href={item.url}>
+                  {item.text}
+                  <ArrowOutwardIcon />
+                </a>
+                : <Link key={uuid} href={item.url}>{item.text}</Link>
             ))
           }
         </div>

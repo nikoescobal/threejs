@@ -9,7 +9,7 @@ const content = {
       list: [
         {
           text: 'Browse through our Product catelogue',
-          url: 'https://twitter.com'
+          url: '/legacy'
         },
         {
           text: 'Join the Membership Community',
