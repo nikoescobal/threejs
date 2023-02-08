@@ -34,10 +34,15 @@
 .wrapper button {
   margin: 0;
   margin-bottom: 2rem;
+  background: $blue--2;
 
   @include lg {
     margin-bottom: 4rem;
   }
+}
+
+.wrapper.light button {
+  background: $blue-ln !important;
 }
 
 .wrapper img {
