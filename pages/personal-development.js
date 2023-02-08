@@ -15,11 +15,12 @@ import { useRouter } from 'next/router';
 import WhatIsPersonalDevelopment from '../components/PersonalDevelopment/WhatIsPersonalDevelopment/WhatIsPersonalDevelopment';
 import LegacyMethods from '../components/Home/LegacyMethods/LegacyMethodsList/LegacyMethods';
 import PillarsOfAnUnhappyLife from '../components/PersonalDevelopment/PillarsOfAnUnhappyLife/PillarsOfAnUnhappyLife';
+import LegacyApproach from '../components/Products/LegacyApproach/LegacyApproach';
 
 const content = {
   en: {
     title: 'Personal Development',
-    subtitle: '& its importance'
+    subtitle: 'The foundation of your life'
   },
   de: {
     title: 'Persönlichkeitsentwicklung',
@@ -52,7 +53,7 @@ function PersonalDevelopment() {
       />
       {/* <Explanation /> */}
       <WhatIsPersonalDevelopment />
-      <LegacyMethods />
+      <LegacyApproach />
       {/* <WavesWrapper hideBottom={true}>
       </WavesWrapper> */}
       <HealthCrisis />
