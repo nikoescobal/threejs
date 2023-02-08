@@ -3,10 +3,12 @@
 
 .wrapper {
   position: relative;
-  margin-bottom: clamp(0rem, 20vw + 1rem, 20rem);
+  // margin-bottom: clamp(0rem, 20vw + 1rem, 20rem);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
-.wrapper > h4 {
+.wrapper>h4 {
   text-align: center;
   margin: 0 auto;
   margin-top: 4rem;
@@ -122,8 +124,7 @@
 
 .light .connector {
   // filter: invert(1);
-  filter: invert(77%) sepia(35%) saturate(294%) hue-rotate(190deg)
-    brightness(103%) contrast(102%);
+  filter: invert(77%) sepia(35%) saturate(294%) hue-rotate(190deg) brightness(103%) contrast(102%);
 }
 
 @media only screen and (min-width: 512px) {
