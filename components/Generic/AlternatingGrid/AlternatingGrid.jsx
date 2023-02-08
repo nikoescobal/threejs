@@ -1,34 +1,22 @@
 import styles from './alternatinggrid.module.scss';
 import PropTypes from 'prop-types';
 
-function AlternatingGrid({ columns, children, className }) {
+function AlternatingGrid({ columns, children, className, reverse }) {
   return (
-    <div className={`${styles['wrapper']} ${className}`}>
+    <div className={`${styles['wrapper']} ${className}`} data-reverse={reverse}>
       { children }
-      {/* {content[locale].map((item) => (
-        <div key={uuid} className={styles.grid}>
-          <div className={styles['img-wrapper']}>
-            <img src={item.image} width={700} height={100} alt="illustration" />
-          </div>
-          <div className={styles['card']}>
-            <h3>{item.title}</h3>
-            <div dangerouslySetInnerHTML={{__html: item.body}} />
-            <Link href={item.url} title={item.urlTitle}>
-              <a className="button-blue">{translations['get_started'][locale]}{' '}<EastIcon /></a>
-            </Link>
-          </div>
-        </div>
-      ))} */}
     </div>
   )
 }
 
 AlternatingGrid.propTypes = {
   columns: PropTypes.number,
+  reverse: PropTypes.bool,
 }
 
 AlternatingGrid.defaultProps = {
   columns: 2,
+  reverse: false,
 }
 
 export default AlternatingGrid

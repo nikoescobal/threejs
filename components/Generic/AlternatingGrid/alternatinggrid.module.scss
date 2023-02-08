@@ -31,3 +31,15 @@
     order: 1;
   }
 }
+
+.wrapper[data-reverse="true"]:nth-of-type(2n - 1)>div:first-of-type {
+  @include md {
+    order: 1;
+  }
+}
+
+.wrapper[data-reverse="true"]:nth-of-type(2n)>div:first-of-type {
+  @include md {
+    order: -1;
+  }
+}
