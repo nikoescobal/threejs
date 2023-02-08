@@ -36,6 +36,36 @@ const content = {
           ],
           button: null,
         },
+        {
+          top_text: 'Testing',
+          title: 'Bug/Feature reporting',
+          description: 'Subscribe to our newsletter to get the latest community updates',
+          features: [
+            'Live Events',
+            'Virtual Events'
+          ],
+          button: null,
+        },
+        {
+          top_text: 'Giveaway',
+          title: 'Participate in our giveaway',
+          description: 'Subscribe to our newsletter to get the latest community updates',
+          features: [
+            'Live Events',
+            'Virtual Events'
+          ],
+          button: null,
+        },
+        {
+          top_text: 'Giveaway',
+          title: 'Participate in our giveaway',
+          description: 'Subscribe to our newsletter to get the latest community updates',
+          features: [
+            'Live Events',
+            'Virtual Events'
+          ],
+          button: null,
+        },
       ],
       partners_items: [
         {
