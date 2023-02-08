@@ -12,7 +12,7 @@ const content = {
           title: 'Join the Community',
           description: `"Join our community and be a part of creating a better future. Together we can make a difference by sharing ideas, supporting each other, and working towards common goals. Let's build a stronger, more connected neighborhood. Sign up today!"`,
           link: 'Read more',
-          img: '/mockups/how-it-works-1.png',
+          img: '/mockups/How-It-Works-1.png',
           sub_list: [
             {
               icon: <Pencil />,
@@ -33,7 +33,7 @@ const content = {
           title: 'Join the Community',
           description: `"Join our community and be a part of creating a better future. Together we can make a difference by sharing ideas, supporting each other, and working towards common goals. Let's build a stronger, more connected neighborhood. Sign up today!"`,
           link: 'Read more',
-          img: '/mockups/how-it-works-2.webp',
+          img: '/mockups/How-It-Works-2.webp',
           sub_list: [
             {
               icon: <Pencil />,
