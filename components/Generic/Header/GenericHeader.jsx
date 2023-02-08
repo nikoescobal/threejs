@@ -6,14 +6,14 @@ import generics from '../../../styles/generics.module.scss';
 import useStore from '../../../store/store';
 import Gradient from '../Gradient/Gradient';
 
-function GenericHeader({ title, subtitle, rightObj, waves }) {
+function GenericHeader({ title, subtitle, rightObj, waves, className }) {
   const { isDarkMode } = useStore((state) => state);
 
   return (
     <div
       className={`${styles.container} ${
         !isDarkMode ? `${styles.light}` : ''
-      } max-1920`}
+      } ${className} max-1920`}
     >
       <Gradient
         className={styles.gradient}

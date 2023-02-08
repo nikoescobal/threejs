@@ -48,6 +48,7 @@ function AboutUs() {
 
       <div className={styles['header-wrapper']}>
         <GenericHeader
+          className={styles.header}
           waves={<WaveLines className={`${styles['waves-wrapper']}`} />}
           rightObj={
             <div
