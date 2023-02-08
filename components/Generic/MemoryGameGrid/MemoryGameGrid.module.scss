@@ -20,7 +20,7 @@
   @include md {
     grid-template-columns: repeat(4, 1fr);
     // min-height: 10rem;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   @include lg {
@@ -30,4 +30,14 @@
   }
 }
 
-.grid {}
+.wrapper>button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% 50%;
+  z-index: 1;
+}
+
+.grid[data-has-started="false"] {
+  filter: brightness(0.3);
+}

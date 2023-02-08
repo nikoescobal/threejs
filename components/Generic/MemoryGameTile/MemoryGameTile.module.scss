@@ -4,14 +4,23 @@
 
 .wrapper {
   position: relative;
-  aspect-ratio: 200 / 250;
+  aspect-ratio: 200 / 225;
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid $gray--7;
+  background: $dark-background;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .light.wrapper {
   border: 1px solid $blue--2;
+  background: $light-background;
+}
+
+.light.wrapper img {
+  filter: invert(0.8);
 }
 
 .wrapper::after {

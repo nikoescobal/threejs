@@ -22,6 +22,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
+    "@fireworks-js/react": "^2.10.1",
     "@mui/icons-material": "^5.10.3",
     "@mui/material": "^5.10.3",
     "@next/bundle-analyzer": "^13.0.5",
@@ -34,6 +35,7 @@
     "chart.js": "^3.9.1",
     "chartjs-plugin-datalabels": "^2.1.0",
     "ethers": "^5.7.2",
+    "fireworks-js": "^2.10.1",
     "framer-motion": "^7.5.2",
     "fslightbox-react": "^1.6.3",
     "html-entities": "^2.3.3",

@@ -2,6 +2,10 @@ import styles from './MemoryGameGrid.module.scss';
 import { useState } from "react";
 import useStore from "../../../store/store";
 import MemoryGameTile from "../MemoryGameTile/MemoryGameTile";
+import { Button } from '@mui/material';
+import PropTypes from 'prop-types';
+import { useEffect } from 'react';
+import { Fireworks } from '@fireworks-js/react'
 
 function MemoryGameGrid(props) {
   const {
@@ -9,9 +13,15 @@ function MemoryGameGrid(props) {
     visibleItems,
     setVisibleItems,
     finishedItems,
-    checkItems
+    checkItems,
+    gameStart,
+    gameRestart,
+    onGameStart,
+    hasWon,
+    onRestart
   } = props;
   const { isDarkMode } = useStore();
+  const [startVisible, setStartVisible] = useState(false);
 
   const handleOpen = (index) => {
     console.log('visible', visibleItems);
@@ -41,17 +51,53 @@ function MemoryGameGrid(props) {
     }
   }
 
+  const handleStart = () => {
+    setStartVisible(true);
+    onGameStart();
+  }
+  
+  const handleRestart = () => {
+    onRestart();
+    setStartVisible(true);
+    onGameStart();
+  }
+
+  const openCheck = (index) => {
+    return startVisible || (gameStart && (visibleItems.includes(index) || finishedItems.includes(index)))
+  }
+
+  useEffect(() => {
+    if (startVisible) {
+      const interval = setInterval(() => {
+        setStartVisible(false);
+      }, 3000)
+
+      return () => clearInterval(interval);
+    }
+  }, [startVisible])
+
   return (
     <div className={`
       ${styles['wrapper']}
       ${!isDarkMode ? styles['light'] : ''}
       `}
     >
-      <div className={styles['grid']}>
+      {
+        !gameStart && !gameRestart
+          ? <Button className='button-blue' onClick={handleStart}>Start</Button>
+          : null
+      }
+      {
+        !gameStart && gameRestart
+          ? <Button className='button-blue' onClick={handleRestart}>Restart</Button>
+          : null
+      }
+      <div className={styles['grid']} data-has-started={gameStart}>
         {list.map((item, index) => (
           <MemoryGameTile
             key={item.id}
-            opened={visibleItems.includes(index) || finishedItems.includes(index)}
+            // opened={gameStart && (visibleItems.includes(index) || finishedItems.includes(index))}
+            opened={openCheck(index)}
             finished={finishedItems.includes(index)}
             className={`col-3 card ${
               visibleItems.includes(index) ? "grid-card-show" : ""
@@ -70,8 +116,14 @@ function MemoryGameGrid(props) {
   );
 };
 
+MemoryGameGrid.propTypes = {
+  list: PropTypes.arrayOf(PropTypes.string),
+  start: PropTypes.bool
+}
+
 MemoryGameGrid.defaultProps = {
-  list: []
+  list: [],
+  start: false,
 };
 
 export default MemoryGameGrid;
