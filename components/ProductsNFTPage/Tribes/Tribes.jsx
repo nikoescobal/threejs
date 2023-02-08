@@ -5,11 +5,21 @@ import { useRouter } from 'next/router';
 import List from '../../Generic/List/List';
 import ListItem from '../../Generic/ListItem/ListItem';
 import NFTSlider from '../NFTSlider/NFTSlider';
+import { useState } from 'react';
 
 function Tribes() {
   const { isDarkMode } = useStore((state) => state);
   const { locale } = useRouter();
   const { uuid } = require('crypto')
+  const [slideIndex, setSlideIndex] = useState(0);
+
+  const handleRightClick = (index) => {
+      setSlideIndex(index)
+  }
+
+  const handleLeftClick = (index) => {
+      setSlideIndex(index)
+  }
 
   return (
     <section
@@ -24,8 +34,9 @@ function Tribes() {
       <h2>{content[locale].title}</h2>
       <p>{content[locale].description_1}</p>
       <br />
-      <p>{content[locale].description_2}</p>
-      <NFTSlider />
+      <p>{content[locale].information[slideIndex]}</p>
+      {/* <p>{content[locale].description_2}</p> */}
+      <NFTSlider onLeftClick={handleLeftClick} onRightClick={handleRightClick}  />
     </section>
   );
 }
