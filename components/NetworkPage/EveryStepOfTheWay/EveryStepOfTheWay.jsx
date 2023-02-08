@@ -21,7 +21,6 @@ function EveryStepOfTheWay() {
       <span>{content[locale].surtitle}</span>
       <h2>{content[locale].title}</h2>
       <p>{content[locale].description}</p>
-      <Button className="button-blue">{content[locale].button}</Button>
       <img src='/mockups/network-step-of-the-way.webp' alt='Board mockup' />
     </section>
   );
