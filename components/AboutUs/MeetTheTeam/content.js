@@ -83,7 +83,7 @@ const content = {
         ]
       },
       {
-        name: 'Jovana IdkLastName',
+        name: 'Jovana Badzic',
         title: 'CJO',
         img: '/team/jovana.jpg',
         socials: [
@@ -113,9 +113,39 @@ const content = {
         ]
       },
       {
+        name: 'Giulian Musio',
+        title: 'Designer',
+        img: '/team/giulian.jpg',
+        socials: [
+          {
+            icon: <TwitterIcon />,
+            url: 'https://twitter.com'
+          },
+          {
+            icon: <InstagramIcon />,
+            url: 'https://instagram.com'
+          },
+        ]
+      },
+      {
         name: 'Nikolas Escobal',
         title: 'Full-Stack Developer',
         img: '/team/nik.jpg',
+        socials: [
+          {
+            icon: <TwitterIcon />,
+            url: 'https://twitter.com'
+          },
+          {
+            icon: <InstagramIcon />,
+            url: 'https://instagram.com'
+          },
+        ]
+      },
+      {
+        name: 'Bujar Arllati',
+        title: 'Designer',
+        img: '/team/bujar.jpg',
         socials: [
           {
             icon: <TwitterIcon />,

@@ -25,6 +25,14 @@
   z-index: 1;
 }
 
+.dino {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  max-width: 40% !important;
+  translate: -50% 0;
+}
+
 .info-wrapper {
   display: none;
   text-align: center;

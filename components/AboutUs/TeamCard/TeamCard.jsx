@@ -27,6 +27,12 @@ function TeamCard({member, index, style}) {
             <a key={uuid} href={social.url} rel="noreferrer" target="_blank">{social.icon}</a>
           ))}
         </div>
+        
+        {
+          index === 0 
+            ? <img src="/team/dino.png" alt="dino" className={styles['dino']} />
+            : null
+        }
       </div>
     </div>
   );

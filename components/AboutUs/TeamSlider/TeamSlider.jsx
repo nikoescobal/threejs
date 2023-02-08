@@ -15,9 +15,12 @@ function TeamSlider({team, offset}) {
   const maxRight = team.length * offset * -0.5
   /* Amount of cards visible at once */
   const visibleCards = 4;
+  const { uuid } = require('crypto')
+  /* length - visible cards amount + current index - remainder */
+  // const endOffset = team.length - visibleCards + index - (team.length % visibleCards)
   
   const handleRightClick = () => {
-    if (x > maxRight) {
+    if (index < team.length - visibleCards) {
       setX(x - 100)
       setIndex(index + 1)
     }
@@ -43,8 +46,9 @@ function TeamSlider({team, offset}) {
       if (index > 0) {
         containerRef.current.children[index - 1].style.opacity = '0'
       }
-      const endOffset = length - visibleCards + index
-      if (length !== endOffset) {
+      /* Divide cards into length / visibleCards amount of sections and move through them with index */
+      const endOffset = Math.ceil(team.length / visibleCards) + 1 + index
+      if (length !== endOffset ) {
         containerRef.current.children[endOffset].style.opacity = '0'
       }
       containerRef.current.children[endOffset - 1].style.opacity = '1'
@@ -70,8 +74,9 @@ function TeamSlider({team, offset}) {
         {
           team.map((member, index) => (
             <TeamCard
-              key={member.name}
+              key={uuid}
               member={member}
+              index={index}
               style={{
                 translate: `${x}% 0`
                 // transform: `translateX(${x}%)`
