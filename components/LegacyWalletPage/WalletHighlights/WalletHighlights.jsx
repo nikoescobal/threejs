@@ -35,7 +35,7 @@ function WalletHighlights() {
     >
       <div className={styles['grid']}>
         <div>
-          <img src="/weapons/orb.png" alt="Legacy Network Orb" />
+          <img src="/weapons/Orb.png" alt="Legacy Network Orb" />
         </div>
         <div>
           <h2>{content[locale].title}</h2>
