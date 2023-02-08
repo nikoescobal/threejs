@@ -51,6 +51,31 @@
   // align-items: center;
 }
 
+.tabs-wrapper {
+  padding-top: 2rem;
+}
+
+.tabs-wrapper>div>div {
+  justify-content: center !important;
+}
+
+.tabs-wrapper>div>span {
+  background: $blue--2 !important;
+}
+
+.light .tabs-wrapper>div>span {
+  background: $blue--3 !important;
+}
+
+.tab {
+  font-family: 'Montserrat', serif !important;
+  text-transform: capitalize;
+}
+
+.light .tab {
+  color: $blue--3 !important;
+}
+
 .item>span {
   display: block;
   width: 100%;
@@ -65,6 +90,7 @@
 
 .light .item>span {
   background: $semi-transparent-blue;
+  color: $blue--2;
 }
 
 .item h3 {
