@@ -38,10 +38,11 @@ function WalletFunctions() {
         <p>{content[locale].description}</p>
       </div>
       <div className={styles['slide-wrapper']}>
-        <Swiper
+        {/* <Swiper
             className={`${styles['fade-slider']}`}
             effect={'flip'}
             grabCursor={true}
+            slideTo
             pagination={{
               clickable: true,
             }}
@@ -58,7 +59,12 @@ function WalletFunctions() {
                 </SwiperSlide>
               ))
             }
-        </Swiper>
+        </Swiper> */}
+        <div className={styles['img-wrapper']}>
+          <img src={content.pictures[value].src} alt={content.pictures[value].
+          alt} />
+        </div>
+
         <div className={styles['text-wrapper']}>
           <Tabs value={value} onChange={handleChange} aria-label="wallet function tabs" className={styles['tabs-wrapper']}>
           {

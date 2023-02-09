@@ -4,24 +4,20 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 const content = {
   pictures: [
     {
-      src: '/mockups/LegacyWallet/functions.png',
+      src: '/mockups/WalletFunctions/1.png',
       alt: 'Function Illustration 1',
     },
     {
-      src: '/mockups/LegacyWallet/functions.png',
-      alt: 'Function Illustration 1',
+      src: '/mockups/WalletFunctions/2.png',
+      alt: 'Function Illustration 2',
     },
     {
-      src: '/mockups/LegacyWallet/functions.png',
-      alt: 'Function Illustration 1',
+      src: '/mockups/WalletFunctions/3.png',
+      alt: 'Function Illustration 3',
     },
     {
-      src: '/mockups/LegacyWallet/functions.png',
-      alt: 'Function Illustration 1',
-    },
-    {
-      src: '/mockups/LegacyWallet/functions.png',
-      alt: 'Function Illustration 1',
+      src: '/mockups/WalletFunctions/4.png',
+      alt: 'Function Illustration 4',
     },
   ],
   en: {

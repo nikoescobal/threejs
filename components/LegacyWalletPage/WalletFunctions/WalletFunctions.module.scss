@@ -72,20 +72,24 @@
   color: $blue--3 !important;
 }
 
-.fade-slider {
+// .fade-slider {
+//   max-width: 16rem;
+//   margin-bottom: 4rem;
+
+//   @include lg {
+//     margin: 0 auto 0 0 !important;
+
+//   }
+// }
+
+// .fade-slider>div:last-of-type {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+.img-wrapper {
   max-width: 16rem;
-  margin-bottom: 4rem;
-
-  @include lg {
-    margin: 0 auto 0 0 !important;
-
-  }
-}
-
-.fade-slider>div:last-of-type {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .text-wrapper {
