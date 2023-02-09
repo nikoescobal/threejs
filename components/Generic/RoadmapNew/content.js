@@ -13,7 +13,7 @@ const content = {
             {
               id: 'r1',
               content: 'Pre-production of social-media content for the next months',
-              isChecked: false,
+              isChecked: true,
             },
             {
               id: 'r2',
