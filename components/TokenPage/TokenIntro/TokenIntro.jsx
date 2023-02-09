@@ -1,5 +1,4 @@
-import styles from './token_intro.module.scss';
-import generics from '../../../styles/generics.module.scss';
+import styles from './TokenIntro.module.scss';
 import useStore from '../../../store/store';
 import content from './content';
 import { useRouter } from 'next/router';
@@ -13,30 +12,26 @@ function TokenIntro() {
     <section
       className={`
       ${styles.wrapper}
-      ${generics['spacing-x']}
       ${!isDarkMode ? `${styles.light}` : ''}
+      spacing-x
+      max-1920
       `}
     >
       <div className={styles['token-wrapper']}>
         <div className={styles['token-image']}>
-          <div>
-            <img src={Coins.src} alt="Coins mockup" />
-          </div>
+          <img src={Coins.src} alt="Coins mockup" />
         </div>
         <div>
           <h2>{content[locale].title}</h2>
           <p className={styles['token-subtitle']}>{content[locale].subtitle}</p>
-          <div className={styles['border']}></div>
-          {content[locale].content.map((content, index) => (
-            <div key={index}>
-              <div className={styles['token']}>
-                <div className={styles['token-text']}>
-                  <p className={styles['token-heading']}>{content.heading}</p>
-                  <p className={styles['token-description']}>{content.text}</p>
-                </div>
+          <div className={styles['info']}>
+            {content[locale].content.map((content, index) => (
+              <div key={index} className={styles['token']}>
+                <span className={styles['token-title']}>{content.heading}</span>
+                <span className={styles['token-description']}>{content.text}</span>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

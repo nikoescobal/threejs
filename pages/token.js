@@ -23,7 +23,7 @@ import WaveLines from '../components/Generic/WaveLines/WaveLines';
 import Script from 'next/script';
 // import BurningRate from '../components/BurningRate/BurningRate';
 import BurningRate from '../components/BurningRateNew/BurningRate';
-import styles from '../components/TokenPage/TokenIntro/token_intro.module.scss';
+import styles from '../components/TokenPage/TokenIntro/TokenIntro.module.scss';
 import { useRouter } from 'next/router';
 import TokenAllocation from '../components/TokenPage/TokenAllocation/TokenAllocation';
 import DiscoverOurNFT from '../components/TokenPage/DiscoverOurNFT/DiscoverOurNFT';

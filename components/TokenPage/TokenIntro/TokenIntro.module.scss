@@ -1,0 +1,78 @@
+@use '../../../styles/breakpoints' as *;
+@use '../../../styles/variables' as *;
+@use '../../../styles/colors' as *;
+
+.wrapper {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.wrapper.light {
+  background: $light-mode-primary;
+}
+
+.token-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  @include lg {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  @include xl {
+    grid-template-columns: 1.3fr 1fr;
+  }
+}
+
+.token-subtitle {
+  max-width: 75ch;
+  margin-right: auto;
+  padding: 1rem 0 1.5rem;
+  color: $gray--15;
+}
+
+.light .token-subtitle {
+  color: $light-mode-text-color;
+}
+
+.info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding-top: 1.5rem;
+  border-top: 0.5px solid white;
+}
+
+.token {
+  display: flex;
+}
+
+.token-title {
+  width: 100%;
+  max-width: 9rem;
+  color: $gray--9;
+}
+
+.light .token-title {
+  color: $light-mode-text-color;
+}
+
+.token-description {
+  color: $gray--15;
+  font-size: 0.9rem;
+}
+
+.light .token-description {
+  color: $light-mode-text-color;
+}
+
+.token:last-of-type span:last-of-type {
+  color: $blue--2;
+}
+
+.light .token:last-of-type span:last-of-type {
+  color: $blue--3;
+}
