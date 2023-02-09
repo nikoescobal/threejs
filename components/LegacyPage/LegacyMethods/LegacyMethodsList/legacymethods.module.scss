@@ -9,12 +9,30 @@
   position: relative;
 }
 
+// .spikes {
+//   position: absolute;
+//   // display: none;
+//   top: -4rem;
+//   left: -66rem;
+//   z-index: 1;
+// }
+
 .spikes {
-  position: absolute;
   display: none;
-  top: -4rem;
-  left: -66rem;
-  z-index: 1;
+
+  @include lg {
+    scale: 0.8;
+    display: block;
+    position: absolute;
+    top: -15rem;
+    left: -22.95rem;
+    z-index: 3;
+  }
+
+  @include xl {
+    scale: 1;
+    left: -23.95rem;
+  }
 }
 
 .title,
@@ -28,6 +46,8 @@
 
 .subtitle {
   padding-bottom: 3.75rem;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .legacy-methods {
@@ -103,11 +123,11 @@
 }
 
 .light .divider-content,
-.light .divider-content>div {
+.light .divider-content > div {
   background: $light-mode-secondary;
 }
 
-.divider-content>div {
+.divider-content > div {
   display: none;
 
   @include lg {
@@ -180,7 +200,7 @@
 
 .list {
   margin-left: 1.5rem;
-  gap: 0.30rem !important;
+  gap: 0.3rem !important;
 }
 
 .list li::before {
