@@ -7,11 +7,16 @@ import { Diversity3 } from '@mui/icons-material';
 import { useRouter } from 'next/router.js';
 import List from '../../../Generic/List/List.jsx';
 import ListItem from '../../../Generic/ListItem/ListItem.jsx';
+import { Parallax } from 'react-scroll-parallax';
+import { useMediaQuery } from '@mui/material';
+import Image from 'next/image';
+import Spikes from '../../../../public/weapons/spikes.png';
 
 const LegacyMethods = () => {
   const { isDarkMode } = useStore();
   const { locale } = useRouter();
   const { uuid } = require('crypto');
+  const isDesktop = useMediaQuery('(min-width: 1023px)');
 
   return (
     <section
@@ -20,8 +25,25 @@ const LegacyMethods = () => {
       } spacing-x max-1920`}
     >
       <h2 className={styles['title']}>{content[locale].title}</h2>
-      <p className={styles['subtitle']} dangerouslySetInnerHTML={{__html: content[locale].subtitle}} />
-      <img src="/weapons/spikes.png" alt="spikes weapon" className={styles.spikes} />
+      <p
+        className={styles['subtitle']}
+        dangerouslySetInnerHTML={{ __html: content[locale].subtitle }}
+      />
+
+      {isDesktop ? (
+        <>
+          <Parallax speed={60} className={styles['spikes']}>
+            <Image className="" src={Spikes} alt="spikes" draggable="false" />
+          </Parallax>
+        </>
+      ) : (
+        <>
+          <div className={styles['spikes']}>
+            <Image className="" src={Spikes} alt="spikes" draggable="false" />
+          </div>
+        </>
+      )}
+
       <div className={styles['legacy-methods']}>
         <div className={styles['left-content']}>
           {content[locale].list.slice(0, 3).map((method, index) => (
@@ -32,9 +54,9 @@ const LegacyMethods = () => {
               // description={method.description}
             >
               <List className={styles.list}>
-              {
-                method.list.map((item) => <ListItem key={uuid}>{item}</ListItem>)
-              }
+                {method.list.map((item) => (
+                  <ListItem key={uuid}>{item}</ListItem>
+                ))}
               </List>
             </MethodCard>
           ))}
@@ -94,12 +116,12 @@ const LegacyMethods = () => {
               // description={method.description}
             >
               <List className={styles.list}>
-              {
-                method.list.map((item) => <ListItem key={uuid}>{item}</ListItem>)
-              }
+                {method.list.map((item) => (
+                  <ListItem key={uuid}>{item}</ListItem>
+                ))}
               </List>
             </MethodCard>
-            ))}
+          ))}
         </div>
       </div>
     </section>
