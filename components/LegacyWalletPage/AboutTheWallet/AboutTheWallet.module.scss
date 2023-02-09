@@ -41,8 +41,11 @@
   max-width: 60% !important;
   margin: 0 auto;
 
-  @include md {
-    max-width: 100% !important;
+  @include sm {
+    max-width: 20rem !important;
+  }
 
+  @include md {
+    max-width: 16rem !important;
   }
 }
