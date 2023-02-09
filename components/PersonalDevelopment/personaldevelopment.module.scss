@@ -3,11 +3,11 @@
 
 .image.image {
   @include md {
-    scale: 1.6;
+    scale: 1.3;
   }
 
   @include lg {
-    scale: 1.8;
+    // scale: 1.8;
   }
 }
 
