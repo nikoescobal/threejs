@@ -148,7 +148,8 @@
 }
 
 .managing-mockup {
-  max-width: 15rem;
+  width: 100%;
+  max-width: 22rem;
 }
 
 .products-button {
@@ -187,7 +188,7 @@
   font-family: 'Fjalla', serif;
 }
 
-.fade-slider .swiper-horizontal > .swiper-pagination-bullets {
+.fade-slider .swiper-horizontal>.swiper-pagination-bullets {
   bottom: -8px !important;
 }
 

@@ -23,12 +23,12 @@ import RightArrow from '../../../public/icons/double-arrow-right.svg';
 import BlurredImage from '../../../public/mockups/legacy-health-blurred.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectFlip, Navigation, Pagination, Autoplay } from 'swiper';
+import { uuidv4 as uuid } from 'uuid'
 
 function Products() {
   const { isDarkMode } = useStore();
   const [value, setValue] = useState(0);
   const { locale } = useRouter();
-  const { uuid } = require('crypto');
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -192,10 +192,10 @@ const LegacyWalletTab = () => {
   };
 
   const LegacyWalletImages = [
-    '/mockups/managing.png',
-    '/mockups/staking.png',
-    '/mockups/vesting.png',
-    '/mockups/bridging.png',
+    '/mockups/OurProducts/2.png',
+    '/mockups/OurProducts/3.png',
+    '/mockups/OurProducts/1.png',
+    '/mockups/OurProducts/4.png',
   ];
 
   return (
