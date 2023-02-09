@@ -8,7 +8,16 @@
 
 .img-wrapper {
   display: flex;
-  justify-content: end;
+  justify-content: center;
+  align-items: center;
+  // height: 80vh;
+}
+
+.img-wrapper.img-wrapper img {
+  height: 60vh;
+  width: auto !important;
+  max-width: 100% !important;
+  object-fit: contain;
 }
 
 .header {
