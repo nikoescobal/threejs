@@ -194,9 +194,14 @@ function TokenAllocationChart() {
       <div className={styles['right']}>
         {data.map((item, index) => (
           <div key={uuid}>
-            <span
-              className={styles.dot} style={{color: !isNaN(selectedIndex) && selectedIndex === index ? item.color : inactiveColor}}>{item.percentage}%</span>
-            <span className={styles.title} style={{color: !isNaN(selectedIndex) && selectedIndex === index ? item.color : inactiveColor}}>{item.title}</span>
+            <div onMouseOver={() => setSelectedIndex(index)}
+                onMouseLeave={() => setSelectedIndex(null)}>
+              <span
+                
+                className={styles.dot} style={{color: !isNaN(selectedIndex) && selectedIndex === index ? item.color : inactiveColor}}>{item.percentage}%</span>
+              <span className={styles.title} style={{color: !isNaN(selectedIndex) && selectedIndex === index ? item.color : inactiveColor}}>{item.title}</span>
+
+            </div>
             <div className={styles['sub-list-wrapper']}>
               {
                 item.description.map((subItem) => (
