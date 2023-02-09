@@ -89,7 +89,13 @@
 // }
 
 .img-wrapper {
+  margin: 0 auto;
   max-width: 16rem;
+  padding-bottom: 2rem;
+
+  @include lg {
+    padding-bottom: 0;
+  }
 }
 
 .text-wrapper {
