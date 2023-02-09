@@ -2,127 +2,172 @@
 @use '../../../styles/colors' as *;
 @use '../../../styles/variables' as *;
 
-.roadmap-wrapper {
-  background: $dark-background;
-  padding-top: 2rem;
+.wrapper {
+  padding-top: 8rem;
   padding-bottom: 2rem;
 }
 
-.light.roadmap-wrapper {
-  background: $light-mode-tertiary;
-}
-
-.navigate-wrapper {
+.heading {
+  display: grid;
   align-items: center;
-  display: flex;
-  justify-content: center;
   gap: 2rem;
-  margin-top: 5rem;
+  padding-bottom: 2rem;
+
+  @include lg {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.roadmap-title-wrapper {
+.tabs-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+}
+
+.tabs-wrapper button {
+  background: $blue--2 !important;
+  color: white !important;
+  margin-top: 0;
+}
+
+.light .tabs-wrapper button {
+  background: $light-mode-secondary !important;
+}
+
+.main {
+  display: grid;
+  grid-auto-flow: column;
+  position: relative;
+  grid-template-columns: unset;
+  grid-template-rows: unset;
+  overflow: hidden;
+  grid-auto-columns: calc(100%);
+
+  @include lg {
+    // grid-template-columns: repeat(4, 1fr);
+    grid-auto-columns: calc(50%);
+    // gap: 8rem 0;
+    // transform: attr;
+
+  }
+}
+
+.panel-headers {
+  display: grid;
+  gap: 0.65rem;
+  background: linear-gradient(to right, $gray--8 0%, $gray--8 50%, transparent 50%, transparent 100%) repeat-x left bottom;
+  background-size: 30px 1px;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.panel-headers span:first-of-type {
+  font-size: 0.9rem;
+  color: $blue--2;
+}
+
+.panel-headers span:last-of-type {
+  font-weight: 500;
+}
+
+.light .panel-headers span:first-of-type {
+  color: $blue--3;
+}
+
+.panel-checkmark {
+  font-size: 1.15rem;
+  color: $gray--4;
+  background: $gray--11;
+  border-radius: 50%;
+  padding: 0.125rem;
+}
+
+.panel-checkmark[data-complete="true"] {
+  background: $green--2;
+}
+
+.light .panel-checkmark[data-complete="true"] {
+  background: $green--3;
+}
+
+.main ul {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 0.2rem;
-  padding-bottom: 3.375rem;
-  align-items: center;
-
-  @include sm {
-    gap: 1.5rem;
-  }
-
-  @include lg {
-    flex-direction: row;
-  }
-}
-
-.title-wrapper {
-  align-items: center;
-  transform: translateX(-1rem);
-}
-
-.title {
-  white-space: nowrap;
-  // transform: translateY(-50%);
-  @include lg {
-    padding-right: 8.5rem;
-  }
-
-  @include breakpoint(1300px) {
-    padding-right: 11.5rem;
-  }
-}
-
-.legacy-button-wrapper {
-  width: 100% !important;
-  display: flex;
-  flex-direction: column !important;
   gap: 1rem;
-  padding-top: 1rem;
-  justify-content: space-between !important;
-
-  @include lg {
-    display: flex;
-    flex-direction: row !important;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    gap: 1.5rem;
-  }
-
-  @include xl {
-    justify-content: flex-end !important;
-  }
+  border-left: 2px dashed $gray--8;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  padding-left: 1rem;
 }
 
-.roadmap-button {
-  font-size: 1rem;
-  white-space: nowrap;
-  background: transparent;
-  color: #7a7a7a !important;
-  border-radius: 4px;
-  min-width: 147px !important;
-  width: 100%;
-  border: 1px solid $ln-blue !important;
-  text-transform: capitalize;
-  height: 54px;
+.light .main ul {
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-left: 1px dashed $light-mode-text-color;
+}
+
+.main li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: $gray--8;
+}
+
+.light .main li {
+  color: $light-mode-text-color;
+}
+
+.main li[data-complete="true"] {
+  color: $green--2;
+}
+
+.light .main li[data-complete="true"] {
+  color: $green--3;
+}
+
+// .tabs-wrapper {
+//   padding-top: 2rem;
+// }
+
+// .tabs-wrapper>div>div {
+//   justify-content: center !important;
+// }
+
+// .tabs-wrapper>div>span {
+//   background: $blue--2 !important;
+// }
+
+// .light .tabs-wrapper>div>span {
+//   background: $blue--3 !important;
+// }
+
+// .tab {
+//   font-family: 'Montserrat', serif !important;
+//   text-transform: capitalize;
+// }
+
+// .light .tab {
+//   color: $blue--3 !important;
+// }
+
+.arrows-wrapper {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  scroll-snap-align: start;
-  padding: 1rem 3rem;
-  text-transform: capitalize !important;
-
-  &:hover,
-  &:focus {
-    background: $sky-blue !important;
-    color: white;
-  }
-
-  @include md {
-    padding: 1rem 4rem;
-  }
-
-  @include lg {
-    max-width: 147px;
-    font-size: 14px;
-    padding: 1rem 4.5rem;
-  }
-
-  @include xl {
-    font-size: 16px;
-  }
+  gap: 2.5rem;
 }
 
-.active-button {
+.arrows-wrapper svg {
   color: white !important;
-  background: $sky-blue !important;
 }
 
-.roadmap-wrapper svg {
-  color: white;
+.light .arrows-wrapper svg {
+  color: $blue--3 !important;
 }
 
-.light.roadmap-wrapper svg {
-  color: $dark-gray;
+.panel {
+  transition: translate 0.6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
