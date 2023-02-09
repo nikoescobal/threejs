@@ -28,6 +28,10 @@
   padding: 1rem 0 0.5rem 0;
 }
 
+.light h3 {
+  color: $light-mode-text-color !important;
+}
+
 .wrapper p {
   text-align: center;
   font-size: 0.9rem;

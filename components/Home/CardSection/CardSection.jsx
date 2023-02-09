@@ -14,6 +14,7 @@ import { useRouter } from 'next/router';
 import content from './content';
 import translations from '../../../language';
 import Card from '../../Generic/Card/Card';
+import Gradient from '../../Generic/Gradient/Gradient';
 
 function CardSection() {
   const { isDarkMode } = useStore();
@@ -27,6 +28,7 @@ function CardSection() {
       } max-1920`}
     >
       <div className={styles['img-wrapper']}>
+        <Gradient className={styles.gradient} />
         <Image
           src={!error ? Chests : ChestsFallback}
           alt="chests"
@@ -48,7 +50,7 @@ function CardSection() {
           //     </p>
           //   </div>
           // </div>
-          <Card key={card.title} card={card} />
+          <Card key={card.title} card={card} className={styles.card} />
         ))}
       </div>
       {/* <div className={`${styles['cards-wrapper']} spacing-x`}>

@@ -1,4 +1,5 @@
 @use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
 @import '../../../styles/variables';
 
 .wrapper {
@@ -6,7 +7,7 @@
   margin-top: clamp(0rem, 20vw + 1rem, 20rem);
 }
 
-.wrapper > h4 {
+.wrapper>h4 {
   text-align: center;
   margin: 0 auto;
   margin-top: 4rem;
@@ -30,18 +31,43 @@
   // transform: translate(-50%, -50%);
 }
 
+.gradient {
+  opacity: 0.2;
+  top: -20%;
+  left: 55%;
+  translate: -50% 0%;
+  // overflow: visible !important;
+}
+
 .cards-wrapper {
   margin-top: 4rem;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  // display: flex;
+  // flex-wrap: wrap;
   text-align: center;
   grid-template-columns: 1fr;
   gap: 2rem;
   justify-content: center;
 
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   @include lg {
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
   }
+}
+
+.card {
+  border: 1px solid $blue--2 !important;
+  background: $gray--2 !important;
+  margin: 0 auto;
+}
+
+.light .card {
+  border: 1px solid $blue--3 !important;
+  background: $gray--17 !important;
 }
 
 // .card {
@@ -122,14 +148,13 @@
 
 .light .connector {
   // filter: invert(1);
-  filter: invert(77%) sepia(35%) saturate(294%) hue-rotate(190deg)
-    brightness(103%) contrast(102%);
+  filter: invert(77%) sepia(35%) saturate(294%) hue-rotate(190deg) brightness(103%) contrast(102%);
 }
 
 @media only screen and (min-width: 512px) {
-  .cards-wrapper {
-    grid-template-columns: 1fr 1fr;
-  }
+  // .cards-wrapper {
+  //   grid-template-columns: 1fr 1fr;
+  // }
 }
 
 @media only screen and (min-width: 1120px) {

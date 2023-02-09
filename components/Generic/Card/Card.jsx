@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import useStore from "../../../store/store";
 import styles from './card.module.scss';
 
-function Card({variant, card}) {
+function Card({variant, card, className}) {
   const { isDarkMode } = useStore((state) => state);
   const { locale } = useRouter();
 
@@ -12,6 +12,7 @@ function Card({variant, card}) {
       className={`
         ${styles['wrapper']}
         ${styles[locale]}
+        ${className}
         ${!isDarkMode ? `${styles['light']}` : ''}
       `}
     >
