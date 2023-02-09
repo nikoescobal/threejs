@@ -63,9 +63,9 @@ function Header() {
         <div className="text">
           <div className={styles['title-wrapper']}>
             <h1>
-              Legacy
+              LEGACY
               <br />
-              Network
+              NETWORK
             </h1>
           </div>
           <h4 className={styles.subtitle}>
