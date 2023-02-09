@@ -35,23 +35,21 @@ function CardSection() {
       </div>
 
       <div className={`${styles['cards-wrapper']} spacing-x`}>
-      {
-          content[locale].map((card) => (
-            // <div key={card.title} className={`${styles['card']}`}>
-            //   <div className={`${styles['icon-wrapper']}`}>
-            //     <Image src={card.icon} alt="icon" />
-            //   </div>
-            //   <div>
-            //     <h4>{card.title}</h4>
-            //     <p>
-            //       {' '}
-            //       {card.description}
-            //     </p>
-            //   </div>
-            // </div>
-            <Card key={card.title} card={card} />
-          ))
-        }
+        {content[locale].map((card) => (
+          // <div key={card.title} className={`${styles['card']}`}>
+          //   <div className={`${styles['icon-wrapper']}`}>
+          //     <Image src={card.icon} alt="icon" />
+          //   </div>
+          //   <div>
+          //     <h4>{card.title}</h4>
+          //     <p>
+          //       {' '}
+          //       {card.description}
+          //     </p>
+          //   </div>
+          // </div>
+          <Card key={card.title} card={card} />
+        ))}
       </div>
       {/* <div className={`${styles['cards-wrapper']} spacing-x`}>
         <img
@@ -98,9 +96,9 @@ function CardSection() {
         {/* <Link href="/">
           <a className='button-blue'>Learn More</a>
         </Link> */}
-        <ComingSoon style={{ paddingLeft: '2rem', paddingRight: '2rem' }}>
+        {/* <ComingSoon style={{ paddingLeft: '2rem', paddingRight: '2rem' }}>
           {translations['learn_more'][locale]}
-        </ComingSoon>
+        </ComingSoon> */}
       </div>
     </div>
   );

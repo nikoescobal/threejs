@@ -6,7 +6,7 @@
   margin-top: clamp(0rem, 20vw + 1rem, 20rem);
 }
 
-.wrapper>h4 {
+.wrapper > h4 {
   text-align: center;
   margin: 0 auto;
   margin-top: 4rem;
@@ -40,7 +40,7 @@
   justify-content: center;
 
   @include lg {
-    gap: 4.5rem;
+    gap: 2rem;
   }
 }
 
@@ -68,7 +68,6 @@
 //   background: $transparent-light;
 //   border: transparent;
 // }
-
 
 // .card>div {
 //   position: relative;
@@ -123,7 +122,8 @@
 
 .light .connector {
   // filter: invert(1);
-  filter: invert(77%) sepia(35%) saturate(294%) hue-rotate(190deg) brightness(103%) contrast(102%);
+  filter: invert(77%) sepia(35%) saturate(294%) hue-rotate(190deg)
+    brightness(103%) contrast(102%);
 }
 
 @media only screen and (min-width: 512px) {
@@ -133,7 +133,6 @@
 }
 
 @media only screen and (min-width: 1120px) {
-
   .card {
     position: relative;
   }

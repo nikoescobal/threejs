@@ -9,7 +9,14 @@ import LinkHover from '../Generic/LinkHover/LinkHover';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import ComingSoon from '../Generic/ComingSoon/ComingSoon';
 import LanguageIcon from '@mui/icons-material/Language';
-import { Button, IconButton, Menu, MenuItem, MenuList, useMediaQuery } from '@mui/material';
+import {
+  Button,
+  IconButton,
+  Menu,
+  MenuItem,
+  MenuList,
+  useMediaQuery,
+} from '@mui/material';
 import { useCallback } from 'react';
 import Dialog from '../Generic/SimpleDialog/Dialog';
 import { inProdEnvironment } from '../../utils';
@@ -65,7 +72,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
   const { locale } = router;
-  const { uuid } = require('crypto')
+  const { uuid } = require('crypto');
   const [displayLanguages, setDisplayLanguages] = useState(false);
   const [showBanner, setShowBanner] = useState(true);
   const [anchorEl, setAnchorEl] = useState(null);
@@ -152,60 +159,63 @@ function Navbar() {
           </Link>
         </div>
         <div className={styles.align_navbar}>
-          {
-            content.en.main_links.map((link) => {
-              
-                {
-                  return link.name !== 'Products'
-                    ? <span
+          {content.en.main_links.map((link) => {
+            {
+              return link.name !== 'Products' ? (
+                <span
+                  key={uuid}
+                  className={
+                    router.asPath === link.endpoint ? `${styles.active}` : ''
+                  }
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Link href={link.endpoint} title={link.title}>
+                    {link.name}
+                  </Link>
+                </span>
+              ) : (
+                <>
+                  <span
+                    aria-controls={open ? 'products-menu' : undefined}
+                    aria-haspopup="true"
+                    aria-expanded={open ? 'true' : undefined}
+                    onClick={handleProductsClick}
+                    className={styles['dropdown-button']}
+                  >
+                    {link.name}
+                    <KeyboardArrowDownIcon />
+                  </span>
+                  <Menu
+                    id="basic-menu"
+                    className={`${styles['sub-menu']} ${
+                      isDarkMode ? '' : `${styles.light}`
+                    }`}
+                    anchorEl={anchorEl}
+                    open={open}
+                    onClose={handleProductsClose}
+                    MenuListProps={{
+                      'aria-labelledby': 'basic-button',
+                    }}
+                  >
+                    {link.sub_links.map((subLink) => (
+                      <MenuItem
                         key={uuid}
-                        className={router.asPath === link.endpoint ? `${styles.active}` : ''}
-                        onClick={() => setIsOpen(false)}
+                        onClick={() => {
+                          console.log(subLink.name, subLink.endpoint);
+                          router.push(subLink.endpoint, subLink.endpoint, {
+                            scroll: false,
+                          });
+                          setAnchorEl(null);
+                        }}
                       >
-                        <Link href={link.endpoint} title={link.title}>
-                        {link.name}
-                        </Link>
-                      </span>
-                    : 
-                      <>
-                        <span
-                            aria-controls={open ? 'products-menu' : undefined}
-                            aria-haspopup="true"
-                            aria-expanded={open ? 'true' : undefined}
-                            onClick={handleProductsClick}
-                            className={styles['dropdown-button']}
-                          >
-                          {link.name}
-                          <KeyboardArrowDownIcon />
-                        </span>
-                        <Menu
-                          id="basic-menu"
-                          className={`${styles['sub-menu']} ${isDarkMode ? '' : `${styles.light}`}`}
-                          anchorEl={anchorEl}
-                          open={open}
-                          onClose={handleProductsClose}
-                          MenuListProps={{
-                            'aria-labelledby': 'basic-button',
-                          }}
-                        >
-                          {
-                            link.sub_links.map((subLink) => (
-                              <MenuItem
-                                key={uuid}
-                                onClick={() => {
-                                  console.log(subLink.name, subLink.endpoint);
-                                  router.push(subLink.endpoint, subLink.endpoint, {scroll: false});
-                                  setAnchorEl(null);
-                                }}>{subLink.name}</MenuItem>
-                            ))
-                          }
-                        </Menu>
-                      </>
-                }
-                
-              
-              })
-          }
+                        {subLink.name}
+                      </MenuItem>
+                    ))}
+                  </Menu>
+                </>
+              );
+            }
+          })}
           {/* <span
             className={router.asPath === '/products' ? `${styles.active}` : ''}
             onClick={() => setIsOpen(false)}
@@ -350,8 +360,13 @@ function Navbar() {
           data-visible={showBanner}
         >
           Join the Legacy Network giveaway | $1 million in prizes and seed
-          funding | Join now, we are waiting for you
-          <EastIcon />
+          funding |{' '}
+          <Link href="https://legacy-token-giveaway.kickoffpages.com/">
+            Join now, we are waiting for you
+          </Link>
+          <Link href="https://legacy-token-giveaway.kickoffpages.com/">
+            <EastIcon />
+          </Link>
           <IconButton
             className={styles.close}
             onClick={() => setShowBanner(false)}
