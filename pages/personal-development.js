@@ -57,7 +57,7 @@ function PersonalDevelopment() {
       {/* <WavesWrapper hideBottom={true}>
       </WavesWrapper> */}
       <HealthCrisis />
-      <PillarsOfAnUnhappyLife />
+      {/* <PillarsOfAnUnhappyLife /> */}
       {/* <StepsForPersonalDevelopment /> */}
     </div>
   );
