@@ -9,6 +9,10 @@
   position: relative;
 }
 
+.light.wrapper {
+  background: $gray--17;
+}
+
 // .spikes {
 //   position: absolute;
 //   // display: none;
@@ -123,11 +127,11 @@
 }
 
 .light .divider-content,
-.light .divider-content > div {
+.light .divider-content>div {
   background: $light-mode-secondary;
 }
 
-.divider-content > div {
+.divider-content>div {
   display: none;
 
   @include lg {
