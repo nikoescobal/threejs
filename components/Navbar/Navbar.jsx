@@ -359,7 +359,7 @@ function Navbar() {
           }`}
           data-visible={showBanner}
         >
-          <span>
+          <span className={styles['banner-top']}>
             Join the Legacy Network giveaway | $1 million in prizes and seed
             funding |
           </span>

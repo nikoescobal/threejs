@@ -639,10 +639,16 @@
   text-align: center;
   font-weight: 300;
   font-size: 0.9rem;
-  padding: 0.25rem;
+  padding: 0.4rem 0.25rem;
   top: 5rem;
   left: 0;
   background: linear-gradient(90deg, #0c145a 0%, #041e58 50.31%, #8000ff 100%);
+}
+
+.gradient-bar span {
+  @include md {
+    font-size: 0.9rem !important;
+  }
 }
 
 .gradient-bar a {
