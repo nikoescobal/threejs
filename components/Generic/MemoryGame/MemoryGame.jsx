@@ -11,6 +11,7 @@ import { Button, useMediaQuery } from '@mui/material';
 import { Parallax } from 'react-scroll-parallax';
 import Image from 'next/image';
 import { Fireworks } from '@fireworks-js/react'
+import { shuffle } from '../../../utils';
 
 function MemoryGame() {
   const [newGame, setNewGame] = useState(false);
@@ -45,52 +46,23 @@ function MemoryGame() {
     setWinner(false);
   }
 
+useEffect(() => {
+  console.log('list',list)
+}, [list])
+
   useEffect(
     () => {
-      axios
-        .get(
-          "https://api.unsplash.com/search/photos/?client_id=c0c103ae0af5122685dec516d4275b6471e81c388d2ce0791c61bb8f47285d5d&query=woman&per_page=6"
-        )
-        .then(res => {
-          // const newList = res.data.results.map(item => {
-          //   return {
-          //     id: item.id,
-          //     url: item.urls.thumb,
-          //     description: item.alt_description
-          //   };
-          // });
-          // console.log(newList);
-          setList(
-            content.pictures
-              .concat(
-                content.pictures.map(item => {
-                  return {
-                    ...item,
-                    id: item.id + "1"
-                  };
-                })
-              )
-              .sort(() => {
-                return 0.5 - Math.random();
-              })
-          );
-        });
-    },
-    // const newList = 
-    // setList(
-    //   content.pictures
-    //     .concat(
-    //       content.pictures.map(item => {
-    //         return {
-    //           ...item,
-    //           id: item.id + "1"
-    //         };
-    //       })
-    //     )
-    //     .sort(() => {
-    //       return 0.5 - Math.random();
-    //     })
-    // ),
+      const pics = [...content.pictures]; 
+      setList(shuffle(pics
+        .concat(
+          pics.map(item => {
+            return {
+              ...item,
+              id: item.id + "1"
+            };
+          })
+        )))
+    }, 
     [newGame]
   );
 

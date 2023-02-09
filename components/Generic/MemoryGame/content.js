@@ -1,34 +1,34 @@
-const { uuid } = require('crypto');
+import { v4 as uuid } from 'uuid';
 
 const content = {
   pictures: [
     {
-      id: uuid,
+      id: uuid(),
       url: '/icons/util1.svg',
       description: 'Utility Icon 1',
     },
     {
-      id: uuid,
+      id: uuid(),
       url: '/icons/util2.svg',
       description: 'Utility Icon 2',
     },
     {
-      id: uuid,
+      id: uuid(),
       url: '/icons/util3.svg',
       description: 'Utility Icon 3',
     },
     {
-      id: uuid,
+      id: uuid(),
       url: '/icons/util4.svg',
       description: 'Utility Icon 4',
     },
     {
-      id: uuid,
+      id: uuid(),
       url: '/icons/util5.svg',
       description: 'Utility Icon 5',
     },
     {
-      id: uuid,
+      id: uuid(),
       url: '/icons/util6.svg',
       description: 'Utility Icon 6',
     },
