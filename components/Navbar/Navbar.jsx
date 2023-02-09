@@ -359,19 +359,21 @@ function Navbar() {
           }`}
           data-visible={showBanner}
         >
-          Join the Legacy Network giveaway | $1 million in prizes and seed
-          funding |{' '}
-          <Link href="https://legacy-token-giveaway.kickoffpages.com/">
-            Join now, we are waiting for you
-          </Link>
-          <Link href="https://legacy-token-giveaway.kickoffpages.com/">
-            <EastIcon />
-          </Link>
+          <span className={styles['banner-top']}>
+            Join the Legacy Network giveaway | $1 million in prizes and seed
+            funding |
+          </span>
+
+          <a href="https://legacy-token-giveaway.kickoffpages.com/">
+            Join now, we are waiting for you <EastIcon />
+          </a>
+          {/* <Link href="https://legacy-token-giveaway.kickoffpages.com/">
+          </Link> */}
           <IconButton
             className={styles.close}
             onClick={() => setShowBanner(false)}
           >
-            <CloseIcon />
+            <CloseIcon className={styles['close']} />
           </IconButton>
         </p>
       </nav>

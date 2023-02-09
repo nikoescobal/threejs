@@ -27,7 +27,11 @@
 }
 
 .align_navbar {
-  padding-top: 5rem;
+  padding-top: 6rem;
+
+  @include sm {
+    padding-top: 5rem;
+  }
 
   @include lg {
     padding-top: 0;
@@ -90,13 +94,13 @@
   color: $light-mode-text-color;
 }
 
-.navbar>div {
+.navbar > div {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.navbar>img {
+.navbar > img {
   width: 4rem;
 }
 
@@ -145,7 +149,7 @@
   position: relative;
 }
 
-.boards-wrapper>div {
+.boards-wrapper > div {
   display: none;
   position: absolute;
   top: 2.9rem;
@@ -154,11 +158,11 @@
   padding: 1rem 0;
 }
 
-.light .boards-wrapper>div {
+.light .boards-wrapper > div {
   background: rgba($color: #8db2fc, $alpha: 0.2);
 }
 
-.boards-wrapper:hover>div {
+.boards-wrapper:hover > div {
   display: grid;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
@@ -169,7 +173,7 @@
   }
 }
 
-.boards-wrapper>div>span {
+.boards-wrapper > div > span {
   display: none;
 
   @include lg {
@@ -330,7 +334,7 @@
     top: 0;
   }
 
-  .navbar>div {
+  .navbar > div {
     flex-direction: row;
     gap: 2.5rem;
 
@@ -631,7 +635,6 @@
 
 .gradient-bar {
   display: flex;
-  gap: 1rem;
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -640,11 +643,41 @@
   text-align: center;
   font-weight: 300;
   font-size: 0.9rem;
-  padding: 0.25rem;
+  padding: 0.4rem 0.25rem;
   top: 5rem;
   left: 0;
   background: linear-gradient(90deg, #0c145a 0%, #041e58 50.31%, #8000ff 100%);
 }
+
+.gradient-bar span {
+  @include md {
+    font-size: 0.9rem !important;
+  }
+}
+
+.gradient-bar a {
+  font-size: 0.75rem;
+  font-weight: normal;
+  gap: 0.5rem;
+
+  @include md {
+    font-size: 0.9rem;
+  }
+}
+
+.gradient-bar span {
+  font-weight: normal;
+}
+
+.gradient-bar p {
+  @include sm {
+    width: 805px;
+  }
+}
+
+// .gradient-bar svg:first-of-type {
+//   background: red;
+// }
 
 .gradient-bar[data-visible='false'] {
   display: none;
@@ -653,10 +686,10 @@
 .close {
   position: fixed !important;
   top: 4.8rem;
-  right: 2rem;
+  right: 0;
 }
 
-.sub-menu>div {
+.sub-menu > div {
   // left: -1rem;
 
   @include lg {
@@ -664,12 +697,12 @@
   }
 }
 
-.sub-menu>div>ul {
+.sub-menu > div > ul {
   background: $gray--1 !important;
   color: white !important;
 }
 
-.light.sub-menu>div>ul {
+.light.sub-menu > div > ul {
   // background: rgba(141, 178, 252, 0.2);
   // background: #e8f0fe !important;
   background: white !important;
