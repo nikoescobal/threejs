@@ -1,7 +1,7 @@
 import styles from './cardsection.module.scss';
 
 import Image from 'next/image';
-import Chests from '../../../public/backgrounds/chests.webp';
+import Chests from '../../../public/weapons/chests.webp';
 import ChestsFallback from '../../../public/backgrounds/chests.png';
 import useStore from '../../../store/store';
 import Connector1 from '../../../public/illustrations/connector1.svg';
