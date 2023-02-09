@@ -646,10 +646,28 @@
 }
 
 .gradient-bar a {
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   font-weight: normal;
   gap: 0.5rem;
+
+  @include md {
+    font-size: 0.9rem;
+  }
 }
+
+.gradient-bar span {
+  font-weight: normal;
+}
+
+.gradient-bar p {
+  @include sm {
+    width: 805px;
+  }
+}
+
+// .gradient-bar svg:first-of-type {
+//   background: red;
+// }
 
 .gradient-bar[data-visible='false'] {
   display: none;
@@ -658,7 +676,7 @@
 .close {
   position: fixed !important;
   top: 4.8rem;
-  right: 2rem;
+  right: 0;
 }
 
 .sub-menu > div {
