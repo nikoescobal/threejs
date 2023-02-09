@@ -21,7 +21,7 @@ function HowItWorks() {
         max-1920
       `}
     >
-      <h2>{content[locale].title}</h2>
+      {/* <h2>{content[locale].title}</h2> */}
       <p>{content[locale].description}</p>
       <div className={`${styles['list-wrapper']}`}>
         {content[locale].list.map((item) => (
