@@ -27,7 +27,11 @@
 }
 
 .align_navbar {
-  padding-top: 5rem;
+  padding-top: 6rem;
+
+  @include sm {
+    padding-top: 5rem;
+  }
 
   @include lg {
     padding-top: 0;
