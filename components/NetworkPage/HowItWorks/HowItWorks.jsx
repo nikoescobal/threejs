@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import EastIcon from '@mui/icons-material/East';
 import AlternatingGrid from '../../Generic/AlternatingGrid/AlternatingGrid';
 import Image from 'next/image';
+import Gradient from '../../Generic/Gradient/Gradient';
 
 function HowItWorks() {
   const { isDarkMode } = useStore((state) => state);
@@ -22,6 +23,7 @@ function HowItWorks() {
       `}
     >
       {/* <h2>{content[locale].title}</h2> */}
+      <Gradient className={styles.gradient} />
       <p>{content[locale].description}</p>
       <div className={`${styles['list-wrapper']}`}>
         {content[locale].list.map((item) => (

@@ -12,11 +12,20 @@
   overflow: visible;
 }
 
+.gradient {
+  left: -20%;
+}
+
+.text-wrapper {
+  position: relative;
+}
+
 .main-info-wrapper {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px dashed $gray--15;
   padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .light .main-info-wrapper {
