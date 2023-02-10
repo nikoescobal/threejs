@@ -27,6 +27,7 @@
   // max-width: 20rem;
 
   @include md {
+    max-height: 14rem;
     max-width: 100%;
     scale: 1.5;
   }

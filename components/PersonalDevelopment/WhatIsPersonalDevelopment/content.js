@@ -7,7 +7,7 @@ const content = {
           Personal development is about gaining a deep understanding of our own psyche as well as human nature in general. The goal is to find harmful traits in ourselves, understand how they prevent us from succeeding, and replace them step by step with more effective traits. During this developmental journey, we can find ourselves, overcome our fears and weaknesses, develop life-changing skills and unlock our full potential.
         </p>
         `,
-      image: '/illustrations/oversee.webp',
+      image: '/nft/egyptian-2.png',
     },
     {
       title: 'Why is it important?',

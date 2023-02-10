@@ -14,10 +14,14 @@
 }
 
 .img-wrapper.img-wrapper img {
-  height: 60vh;
   width: auto !important;
   max-width: 100% !important;
   object-fit: contain;
+
+  @include md {
+    height: 60vh;
+
+  }
 }
 
 .header {
