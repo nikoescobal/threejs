@@ -129,15 +129,15 @@
 .nft-panel {
   @include breakpoint(1120px) {
     display: flex !important;
-    align-items: center;
+    // align-items: center;
   }
 }
 
 .nft-right {
-  padding: 3rem 0 2rem;
+  // padding: 3rem 0 2rem;
 
   @include breakpoint(1120px) {
-    padding: 0 2rem;
+    // padding: 0 2rem;
   }
 }
 
