@@ -11,6 +11,10 @@
   }
 }
 
+.content-wrapper {
+  position: relative;
+}
+
 .wrapper h2 {
   padding-bottom: 2rem;
 }
@@ -59,7 +63,7 @@
   color: $blue--3;
 }
 
-.wrapper>p {
+.content-wrapper>p {
   max-width: 98ch;
 }
 

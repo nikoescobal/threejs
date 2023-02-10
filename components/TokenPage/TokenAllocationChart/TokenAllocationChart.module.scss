@@ -3,6 +3,7 @@
 @import '../../../styles/variables';
 
 .wrapper {
+  position: relative;
   display: grid;
   align-items: center;
   gap: 2rem;

@@ -9,6 +9,7 @@ import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { useRouter } from 'next/router';
 import content from './content';
 import TokenAllocationChart from '../TokenAllocationChart/TokenAllocationChart';
+import Gradient from '../../Generic/Gradient/Gradient';
 
 function TokenAllocation() {
   const { isDarkMode } = useStore();
@@ -37,6 +38,8 @@ function TokenAllocation() {
         `
       }
     >
+      <Gradient className={styles.gradient} />
+      
       <h2>{content[locale].title}</h2>
       <TokenAllocationChart />
       {/* <div className={styles.bg}>
