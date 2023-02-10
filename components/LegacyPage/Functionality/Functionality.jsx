@@ -6,6 +6,7 @@ import { useMediaQuery } from '@mui/material';
 import { useRouter } from 'next/router';
 import List from '../../Generic/List/List';
 import ListItem from '../../Generic/ListItem/ListItem';
+import Gradient from '../../Generic/Gradient/Gradient';
 
 function Functionality() {
   const { isDarkMode } = useStore();
@@ -16,6 +17,8 @@ function Functionality() {
     <section
       className={`${styles.wrapper} ${!isDarkMode ? `${styles.light}` : ''} spacing-x max-1920`}
     >
+      <Gradient className={styles['gradient-1']} />
+      <Gradient className={styles['gradient-2']} />
       {
         content[locale].list.map((row, index) => (
           <div key={uuid} className={styles.row}>

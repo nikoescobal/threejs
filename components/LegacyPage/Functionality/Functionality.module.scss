@@ -11,6 +11,15 @@
   padding-bottom: 4rem;
 }
 
+.gradient-1 {
+  position: absolute;
+  // left: 10%;
+}
+
+.gradient-2 {
+  visibility: hidden;
+}
+
 .row {
   display: grid;
   gap: 2rem;
