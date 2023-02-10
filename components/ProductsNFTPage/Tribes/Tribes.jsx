@@ -6,6 +6,7 @@ import List from '../../Generic/List/List';
 import ListItem from '../../Generic/ListItem/ListItem';
 import NFTSlider from '../NFTSlider/NFTSlider';
 import { useState } from 'react';
+import Gradient from '../../Generic/Gradient/Gradient';
 
 function Tribes() {
   const { isDarkMode } = useStore((state) => state);
@@ -31,10 +32,13 @@ function Tribes() {
         max-1920
       `}
     >
-      <h2>{content[locale].title}</h2>
-      <p>{content[locale].description_1}</p>
-      <br />
-      <p>{content[locale].information[slideIndex]}</p>
+      {/* <Gradient className={styles['gradient']} /> */}
+      <div className={styles['text-wrapper']}>
+        <h2>{content[locale].title}</h2>
+        <p>{content[locale].description_1}</p>
+        <br />
+        <p>{content[locale].information[slideIndex]}</p>
+      </div>
       {/* <p>{content[locale].description_2}</p> */}
       <NFTSlider onLeftClick={handleLeftClick} onRightClick={handleRightClick}  />
     </section>

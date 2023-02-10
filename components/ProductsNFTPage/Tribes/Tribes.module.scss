@@ -4,14 +4,27 @@
 
 .wrapper {
   position: relative;
-  padding-top: 8rem;
+  padding-top: 4rem;
+
+  @include lg {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding-top: 0rem;
+  }
 }
+
+.gradient {
+  scale: 0.5;
+}
+
+.text-wrapper {}
 
 .wrapper h2 {
   padding-bottom: 2rem;
 }
 
-.wrapper>p {
+.text-wrapper>p {
   // max-width: 58ch;
 }
 
