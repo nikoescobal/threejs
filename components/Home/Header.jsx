@@ -69,7 +69,7 @@ function Header() {
             </h1>
           </div>
           <h4 className={styles.subtitle}>
-            Increase your mental sharpness, confidence and wellbeing.
+            GAMIFIED PERSONAL DEVELOPMENT THROUGH AI AND BLOCKCHAIN TECHNOLOGY
           </h4>
         </div>
       </section>
