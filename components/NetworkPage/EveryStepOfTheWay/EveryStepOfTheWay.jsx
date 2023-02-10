@@ -3,6 +3,7 @@ import useStore from '../../../store/store';
 import content from './content';
 import { useRouter } from 'next/router';
 import { Button } from '@mui/material';
+import Gradient from '../../Generic/Gradient/Gradient';
 
 function EveryStepOfTheWay() {
   const { isDarkMode } = useStore((state) => state);
@@ -18,6 +19,7 @@ function EveryStepOfTheWay() {
         max-1920
       `}
     >
+      <Gradient className={styles.gradient} />
       <span>{content[locale].surtitle}</span>
       <h2>{content[locale].title}</h2>
       <p>{content[locale].description}</p>
