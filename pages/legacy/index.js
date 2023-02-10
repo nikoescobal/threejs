@@ -7,6 +7,7 @@ import Questions from '../../components/LegacyPage/Questions/Questions';
 import Functionality from '../../components/LegacyPage/Functionality/Functionality';
 import LegacyMethods from '../../components/LegacyPage/LegacyMethods/LegacyMethodsList/LegacyMethods';
 import Benefits from '../../components/LegacyPage/Benefits/Benefits';
+import CardSection from '../../components/Home/CardSection/CardSection';
 
 const content = {
   en: {
@@ -44,6 +45,7 @@ function Legacy() {
       />
       <Questions />
       <Functionality />
+      <CardSection />
       <LegacyMethods />
       <Benefits />
     </div>
