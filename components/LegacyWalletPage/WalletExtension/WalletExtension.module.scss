@@ -12,6 +12,19 @@
   text-align: center;
 }
 
+.gradient {
+  scale: 0.75;
+  top: -10%;
+  opacity: .25;
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+
 .wrapper span {
   color: $blue--1;
   font-size: 1.25rem;
@@ -42,6 +55,7 @@
 
 .grid {
   padding: 4rem 0 8rem;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;

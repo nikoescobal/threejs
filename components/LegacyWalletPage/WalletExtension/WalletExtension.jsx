@@ -3,6 +3,7 @@ import useStore from '../../../store/store';
 import content from './content';
 import { useRouter } from 'next/router';
 import { Button } from '@mui/material';
+import Gradient from '../../Generic/Gradient/Gradient';
 
 function WalletExtension() {
   const { isDarkMode } = useStore((state) => state);
@@ -19,8 +20,11 @@ function WalletExtension() {
         max-1920
       `}
     >
-      <h2>{content[locale].title}</h2>
-      <p>{content[locale].description}</p>
+      <Gradient className={styles.gradient} />
+      <div className={styles['text-wrapper']}>
+        <h2>{content[locale].title}</h2>
+        <p>{content[locale].description}</p>
+      </div>
       <div className={styles['grid']}>
         {
           content.illustrations.map((illustration) => (
