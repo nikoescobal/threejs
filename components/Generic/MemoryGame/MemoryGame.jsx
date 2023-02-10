@@ -103,7 +103,7 @@ useEffect(() => {
       max-1920
       `}
     >
-      {isTablet ? (
+      {/* {isTablet ? (
             <>
               <Parallax speed={30} className={styles['hammer']}>
                 <Image className="" src={Hammer} alt="hammer" draggable="false" />
@@ -121,7 +121,7 @@ useEffect(() => {
                 <Image className="" src={Spikes} alt="spikes" draggable="false" />
               </div>
             </>
-          )}
+          )} */}
       <div className={styles.top}>
         <h2>{content[locale].title}</h2>
         <p>{content[locale].description}</p>
