@@ -6,6 +6,7 @@
   // margin-bottom: clamp(0rem, 20vw + 1rem, 20rem);
   padding-top: 2rem;
   padding-bottom: 2rem;
+  z-index: 1;
 }
 
 .wrapper>h4 {
@@ -33,6 +34,7 @@
 }
 
 .cards-wrapper {
+  position: relative;
   margin-top: 4rem;
   display: flex;
   flex-wrap: wrap;

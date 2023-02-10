@@ -36,6 +36,7 @@ function HealthCrisis() {
       <div
         className={`${styles.wrapper} ${!isDarkMode ? `${styles.light}` : ''} spacing-x max-1920`}
       >
+          <Gradient className={styles.gradient} />
           <h2>{content[locale].title}</h2>
           <p>
             {content[locale].description}

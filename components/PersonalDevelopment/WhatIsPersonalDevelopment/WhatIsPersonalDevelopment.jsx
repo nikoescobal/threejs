@@ -4,7 +4,7 @@ import useStore from '../../../store/store';
 import content from './content';
 import { useRouter } from 'next/router';
 import AlternatingGrid from '../../Generic/AlternatingGrid/AlternatingGrid';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import Gradient from '../../Generic/Gradient/Gradient';
 
 function WhatIsPersonalDevelopment() {
   const { isDarkMode } = useStore((state) => state);
@@ -21,6 +21,7 @@ function WhatIsPersonalDevelopment() {
         max-1920
       `}
     >
+      <Gradient className={styles.gradient} />
       <div className={`${styles['cards-wrapper']}`}>
         {content[locale].map((item) => (
           <AlternatingGrid key={uuid} className={styles.grid}>
