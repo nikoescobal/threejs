@@ -41,6 +41,12 @@ const content = {
         endpoint: '/about-us',
         title: 'Navbar link to About Us page'
       },
+      {
+        name: 'Blog',
+        endpoint: 'https://blog.legacynetwork.io',
+        title: 'Navbar link to Legacy Network blogs',
+        external: true
+      },
     ]
   }
 }

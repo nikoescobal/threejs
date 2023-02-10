@@ -162,17 +162,29 @@ function Navbar() {
           {content.en.main_links.map((link) => {
             {
               return link.name !== 'Products' ? (
-                <span
-                  key={uuid}
-                  className={
-                    router.asPath === link.endpoint ? `${styles.active}` : ''
-                  }
-                  onClick={() => setIsOpen(false)}
-                >
-                  <Link href={link.endpoint} title={link.title}>
-                    {link.name}
-                  </Link>
-                </span>
+                link.external
+                  ? <span
+                      key={uuid}
+                      className={
+                        router.asPath === link.endpoint ? `${styles.active}` : ''
+                      }
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <a href={link.endpoint} title={link.title} rel='noreferrer' target={'_blank'}>
+                        {link.name}
+                      </a>
+                    </span>
+                  :<span
+                    key={uuid}
+                    className={
+                      router.asPath === link.endpoint ? `${styles.active}` : ''
+                    }
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <Link href={link.endpoint} title={link.title}>
+                      {link.name}
+                    </Link>
+                  </span>
               ) : (
                 <>
                   <span
