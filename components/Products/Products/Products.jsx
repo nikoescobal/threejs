@@ -66,7 +66,7 @@ function Products() {
         >
           <Tab
             className={`${styles['tab-button']}`}
-            label={'Legacy Main App'}
+            label={'Legacy'}
             {...a11yProps(0)}
           />
           <Tab
@@ -153,7 +153,7 @@ const LegacyMainAppTab = () => {
       }
       rightContent={
         <article>
-          <h4>Legacy Main App</h4>
+          <h4>Legacy</h4>
           <p className={styles['legacy-main-text']}>
             In the education area of the app, the user can choose from various
             categories. Each category contains content, which can be text,
@@ -208,7 +208,7 @@ const LegacyWalletTab = () => {
               className={styles['managing-mockup']}
               src={LegacyWalletImages[expanded]}
               alt="managing mockup"
-            />
+          />
           </div>
         }
         rightContent={
