@@ -76,12 +76,12 @@ function Products() {
           />
           <Tab
             className={`${styles['tab-button']}`}
-            label={'Legacy Health'}
+            label={'Legacy NFT'}
             {...a11yProps(2)}
           />
           <Tab
             className={`${styles['tab-button']}`}
-            label={'Legacy NFT'}
+            label={'Legacy Health'}
             {...a11yProps(3)}
           />
         </Tabs>
@@ -110,7 +110,7 @@ function Products() {
           style={{ paddingLeft: 0, paddingRight: 0 }}
           index={2}
         >
-          <LegacyHealthTab />
+          <LegacyNFTTab />
         </TabPanel>
         <TabPanel
           key={uuid}
@@ -119,7 +119,7 @@ function Products() {
           style={{ paddingLeft: 0, paddingRight: 0 }}
           index={3}
         >
-          <LegacyNFTTab />
+          <LegacyHealthTab />
         </TabPanel>
       </div>
     </section>
