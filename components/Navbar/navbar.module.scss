@@ -679,6 +679,10 @@
   }
 }
 
+.light .gradient-bar a {
+  color: white;
+}
+
 .gradient-bar[data-visible='false'] {
   display: none;
 }
