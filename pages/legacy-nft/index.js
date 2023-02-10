@@ -17,7 +17,7 @@ import Tribes from '../../components/ProductsNFTPage/Tribes/Tribes';
 const content = {
   en: {
     title: 'Legacy NFT',
-    subtitle: 'Technology that works for you'
+    subtitle: 'Unleash Your Tribe, Upgrade Your Game'
   },
   de: {
     title: 'Legacy NFT',
