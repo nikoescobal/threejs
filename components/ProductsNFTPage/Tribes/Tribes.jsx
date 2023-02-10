@@ -32,7 +32,7 @@ function Tribes() {
         max-1920
       `}
     >
-      {/* <Gradient className={styles['gradient']} /> */}
+      <Gradient className={styles['gradient']} />
       <div className={styles['text-wrapper']}>
         <h2>{content[locale].title}</h2>
         <p>{content[locale].description_1}</p>
