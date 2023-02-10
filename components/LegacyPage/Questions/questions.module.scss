@@ -7,9 +7,15 @@
   position: relative;
   padding: 4rem 0 0;
 
+  background: $gray--2;
+
   @include lg {
     padding-top: 8rem;
   }
+}
+
+.light.section {
+  background: $semi-transparent-blue !important;
 }
 
 .section>div:last-of-type {
