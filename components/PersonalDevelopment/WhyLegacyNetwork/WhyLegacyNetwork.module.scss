@@ -12,6 +12,15 @@
   }
 }
 
+.wrapper>*:not(.gradient) {
+  position: relative;
+}
+
+.gradient {
+  left: -20%;
+  scale: 1.5;
+}
+
 .wrapper h2,
 .wrapper h3 {
   padding-bottom: 1.5rem;

@@ -8,6 +8,7 @@ import translations from '../../../language';
 import Image from 'next/image';
 import EastIcon from '@mui/icons-material/East';
 import AlternatingGrid from '../../Generic/AlternatingGrid/AlternatingGrid';
+import Gradient from '../../Generic/Gradient/Gradient';
 
 function WhyLegacyNetwork() {
   const { isDarkMode } = useStore((state) => state);
@@ -24,6 +25,7 @@ function WhyLegacyNetwork() {
         max-1920
       `}
     >
+      <Gradient className={styles.gradient} />
       <div className={`${styles['left']}`}>
         <h2>{content[locale].title}</h2>
         <p>{content[locale].body}</p>
