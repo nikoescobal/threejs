@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { Snackbar, SnackbarContent } from '@mui/material';
 import content from './content';
 import { useRouter } from 'next/router';
+import WordMostInnovativeAppIcon from '../../Icons/WordMostInnovativeAppIcon/WordMostInnovativeAppIcon';
 
 function MostInnovativeApp() {
   const { isDarkMode } = useStore((state) => state);
@@ -24,13 +25,16 @@ function MostInnovativeApp() {
       `
     }
     >
-      <img src="/illustrations/Home/1.png" alt="Illustration" />
-      <h2>{content[locale].title}</h2>
-      <ul>
-          {content[locale].list.map((item) => (
-          <li key={uuid}>{item}</li>
-          ))}
-      </ul>
+      <div>
+        <h2>{content[locale].title}</h2>
+        <ul>
+            {content[locale].list.map((item) => (
+              <li key={uuid}>{item}</li>
+              ))}
+        </ul>
+      </div>
+      <WordMostInnovativeAppIcon />
+      {/* <img src="/illustrations/Home/1.png" alt="Illustration" /> */}
     </section>
   );
 }
