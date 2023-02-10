@@ -58,7 +58,6 @@ function Products() {
         style={{ position: 'relative' }}
       >
         <Tabs
-          Z
           className={`${styles['tab-list']}`}
           value={value}
           onChange={handleChange}
@@ -341,34 +340,33 @@ const LegacyHealthTab = () => {
 const LegacyNFTTab = () => {
   const slides = [
     {
-      img: '/mockups/viking2.png',
+      img: '/nft/viking.webp',
       alt: 'Viking Character Example',
       title: 'Viking Character Example',
     },
     {
-      img: '/mockups/aztec.png',
+      img: '/nft/aztec.webp',
       alt: 'Aztec Character Example',
       title: 'Aztec Character Example',
     },
     {
-      img: '/mockups/egyptian.png',
+      img: '/nft/egyptian.webp',
       alt: 'Egyptian Character Example',
       title: 'Egyptian Character Example',
     },
     {
-      img: '/mockups/african.png',
+      img: '/nft/african.webp',
       alt: 'African Character Example',
       title: 'African Character Example',
     },
     {
-      img: '/mockups/greek.png',
+      img: '/nft/greek.webp',
       alt: 'Greek Character Example',
       title: 'Greek Character Example',
     },
   ];
 
   const ImageSlider = ({ slides }) => {
-    console.log('slides', slides);
     const [currentSlide, setCurrentSlide] = useState(0);
     const length = slides.length;
     const nextSlide = () => {
@@ -376,14 +374,13 @@ const LegacyNFTTab = () => {
     };
 
     const prevSlide = () => {
-      setCurrentSlide(currentSlide === length - 1 ? 0 : currentSlide - 1);
+      setCurrentSlide(currentSlide === 0 ? length - 1 : currentSlide - 1);
     };
 
     if (!Array.isArray(slides) || slides.length <= 0) {
       return null;
     }
 
-    const { uuid } = require('crypto');
 
     return (
       <div className={styles['slider']}>
@@ -394,17 +391,15 @@ const LegacyNFTTab = () => {
             }`}
             key={uuid}
           >
-            {index === currentSlide && (
-              <div className={styles['slide-wrapper']}>
-                <img
-                  className={styles['slide']}
-                  src={slide.img}
-                  alt={slide.alt}
-                  title={slide.title}
-                />
-                <p className={styles['slide-text']}>{slide.title}</p>
-              </div>
-            )}
+            <div className={styles['slide-wrapper']} data-visible={index === currentSlide}>
+              <img
+                className={styles['slide']}
+                src={slide.img}
+                alt={slide.alt}
+                title={slide.title}
+              />
+              <p className={styles['slide-text']}>{slide.title}</p>
+            </div>
           </div>
         ))}
         <div className={styles['nft-button-wrapper']}>

@@ -265,6 +265,11 @@
 
 .slide-wrapper {
   width: 100%;
+  display: none;
+}
+
+.slide-wrapper[data-visible="true"] {
+  display: block;
 }
 
 .slide {
