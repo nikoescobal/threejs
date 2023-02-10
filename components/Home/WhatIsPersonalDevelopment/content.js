@@ -18,11 +18,13 @@ const content = {
           </li>
         </ul>
         `,
-    },
-  de:
-    {
-      title: 'What is Personal Development?',
-      body: `
+        link: 'Personal Development'
+      },
+      de:
+      {
+        title: 'What is Personal Development?',
+        link: 'Personal Development',
+        body: `
         <p>
           Personal development refers to the process of improving your skills, knowledge, mindset, habits and abilities in order to grow as an individual.
         </p>

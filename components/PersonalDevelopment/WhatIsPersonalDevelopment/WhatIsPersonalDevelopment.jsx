@@ -1,18 +1,10 @@
 import Link from 'next/link';
 import styles from './whatispersonaldevelopment.module.scss';
-import generics from '../../../styles/generics.module.scss';
-import 'swiper/css';
-import 'swiper/css/effect-flip';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 import useStore from '../../../store/store';
 import content from './content';
-import Circles from '../../Generic/Circles/Circles';
 import { useRouter } from 'next/router';
-import translations from '../../../language';
-import Image from 'next/image';
-import EastIcon from '@mui/icons-material/East';
 import AlternatingGrid from '../../Generic/AlternatingGrid/AlternatingGrid';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 function WhatIsPersonalDevelopment() {
   const { isDarkMode } = useStore((state) => state);
