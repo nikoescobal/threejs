@@ -18,6 +18,10 @@
   }
 }
 
+.light.wrapper {
+  background: $semi-transparent-blue;
+}
+
 .wrapper h2 {
   max-width: 30ch;
 }
@@ -70,4 +74,19 @@
   height: 0.6rem;
   background-color: white;
   border-radius: 50%;
+}
+
+.light ul li::before {
+  background-color: $blue--3;
+}
+
+.light g rect,
+.light circle {
+  fill: $blue--3;
+}
+
+.light line,
+.light rect,
+.light path {
+  stroke: $blue--3;
 }
