@@ -65,7 +65,7 @@ function Footer() {
               </a>
             </div>
           </Dialog>
-          <Dialog
+          {/* <Dialog
             selectedValue={selectedValue}
             open={openLitePaperDialog}
             onClose={() => handleLitePaperDialogClose()}
@@ -91,7 +91,7 @@ function Footer() {
                 German
               </a>
             </div>
-          </Dialog>
+          </Dialog> */}
           <div className={`${styles.footer__column} ${styles.left}`}>
             <div className={`${styles.footer__column__items__wrapper}`}>
               <Link href="/" className={`${styles.footer__column__item}`}>
@@ -119,6 +119,7 @@ function Footer() {
           </div>
           <div className={`${styles.footer__column} ${styles.middle}`}>
             <div className={`${styles.footer__column__items__wrapper}`}>
+              <a href="https://blog.legacynetwork.io" target="_blank" rel="noopener noreferrer">Blog</a>
               <a
                 href="/pdf/audit_report.pdf"
                 target="_blank"
@@ -137,9 +138,9 @@ function Footer() {
               <button type="button" onClick={handleWhitePaperDialogOpen}>
                 Whitepaper
               </button>
-              <button type="button" onClick={handleLitePaperDialogOpen}>
+              {/* <button type="button" onClick={handleLitePaperDialogOpen}>
                 Litepaper
-              </button>
+              </button> */}
               {/* <a href="/pdf/WP-Eng.pdf" target="_blank" className={`${styles.footer__column__item}`}>
                 Whitepaper
               </a> */}
