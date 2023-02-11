@@ -6,6 +6,11 @@
   position: relative;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  background: $gray--2;
+}
+
+.light.wrapper {
+  background: $light-mode-tertiary;
 }
 
 .wrapper h4 {
@@ -69,6 +74,10 @@
 .header p {
   color: $gray;
   // padding-right: 1rem;
+}
+
+.light p {
+  color: $light-mode-text-color;
 }
 
 .wrapper ul {

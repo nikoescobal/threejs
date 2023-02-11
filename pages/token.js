@@ -86,28 +86,10 @@ function Token() {
         <TokenIntro />
         <UtilitySectionNew />
         <TokenAllocation />
-
-        {/* <WavesWrapper hideBottom={true}>
-          <HexagonSliderSection />
-          <BlockChainBanner />
-          <ChartSection />
-        </WavesWrapper> */}
-        <div
-          style={{
-            background:
-              'radial-gradient(circle farthest-side at 0% 50%, rgba(30, 79, 188, 0.05), transparent 40%)',
-          }}
-        >
-          {/* <SidePressureSection /> */}
-          <SidePressureSectionNew />
-          {/* <BurningRate /> */}
-          <BurningRate />
-          <StakingSection />
-        </div>
-
-          <DiscoverOurNFT />
-        {/* <NFTSection /> */}
-        {/* <UtilitySection /> */}
+        <SidePressureSectionNew />
+        <BurningRate />
+        <StakingSection />
+        <DiscoverOurNFT />
       </div>
     </>
   );

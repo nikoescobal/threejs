@@ -1,23 +1,25 @@
 @use '../../../styles/breakpoints' as *;
+@use '../../../styles/colors' as *;
 @import '../../../styles/variables';
 
 .wrapper {
   position: relative;
-  // margin-bottom: clamp(0rem, 20vw + 1rem, 20rem);
-  padding-top: 2rem;
-  padding-bottom: 2rem;
   z-index: 1;
+  background: $gray--2;
+}
+
+.light.wrapper {
+  background: $semi-transparent-blue;
 }
 
 .wrapper>h4 {
   text-align: center;
-  margin: 0 auto;
-  margin-top: 4rem;
+  // margin: 0 auto;
+  // margin-top: 4rem;
   max-width: 55ch;
 }
 
 .img-wrapper {
-  // position: absolute;
   display: grid;
   place-items: center;
   top: 2%;
@@ -35,7 +37,7 @@
 
 .cards-wrapper {
   position: relative;
-  margin-top: 4rem;
+  // margin-top: 4rem;
   display: flex;
   flex-wrap: wrap;
   text-align: center;

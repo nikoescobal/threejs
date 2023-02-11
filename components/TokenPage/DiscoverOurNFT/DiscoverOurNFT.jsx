@@ -33,6 +33,7 @@ function DiscoverOurNFT() {
         ${styles['wrapper']}
         ${styles[locale]}
         ${!isDarkMode ? `${styles['light']}` : ''}
+        spacing-y
         spacing-x
         max-1920
       `}

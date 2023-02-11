@@ -21,6 +21,16 @@
   }
 }
 
+.spacing-y {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  @include md {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
 .max-1920 {
   max-width: 1920px;
   margin-left: auto;

@@ -18,17 +18,12 @@ function LegacyApproach() {
     <div
       className={`${styles.wrapper} ${
         !isDarkMode ? `${styles.light}` : ''
-      } max-1920`}
+      }
+      spacing-y
+      spacing-x
+      max-1920`}
     >
-      {/* <div className={styles['img-wrapper']}>
-        <Image
-          src={!error ? Chests : ChestsFallback}
-          alt="chests"
-          onError={() => setError(true)}
-        />
-      </div> */}
-
-      <div className={`${styles['cards-wrapper']} spacing-x`}>
+      <div className={`${styles['cards-wrapper']}`}>
         {content[locale].map((card) => (
           <Card key={card.title} card={card} />
         ))}

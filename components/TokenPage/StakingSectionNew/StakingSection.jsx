@@ -4,6 +4,7 @@ import useStore from '../../../store/store';
 import content from './content';
 import { useRouter } from 'next/router';
 import Staking from '../../../public/mockups/how-staking-works.png';
+import Gradient from '../../Generic/Gradient/Gradient';
 
 function StakingSection() {
   const { isDarkMode } = useStore();
@@ -12,10 +13,14 @@ function StakingSection() {
 
   return (
     <section
-      className={`${styles['staking-section']} ${generics['spacing-x']} ${
-        !isDarkMode ? `${styles.light}` : ''
-      } max-1920`}
+      className={`
+        ${styles['staking-section']}
+        ${!isDarkMode ? `${styles.light}` : ''}
+        spacing-y
+        spacing-x
+        max-1920`}
     >
+      <Gradient className={styles.gradient} />
       <div className={styles['content-left']}>
         <div className={styles['img-wrapper']}>
           <img src={Staking.src} alt="staking mockup"></img>
@@ -30,7 +35,7 @@ function StakingSection() {
               <div className={styles['title-wrapper']}>
                 <div className={styles['text-wrapper']}>
                   <p className={styles['number']}>{step.number}</p>
-                  <h4 className={styles['title']}>{step.title}</h4>
+                  <h3 className={styles['title']}>{step.title}</h3>
                 </div>
                 <p className={styles['description']}>{step.description}</p>
               </div>

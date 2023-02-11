@@ -4,6 +4,7 @@
 
 .section {
   padding-top: 8rem;
+  position: relative;
 }
 
 .section h2 {
@@ -11,14 +12,11 @@
 }
 
 .cards-wrapper {
-  // display: flex;
-  // flex-wrap: wrap;
   display: grid;
   justify-content: center;
   gap: 10rem;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  // grid-template-columns: repeat(2, 1fr);
 
   @include md {
     grid-template-columns: repeat(3, 1fr);
@@ -74,11 +72,9 @@
 
 .svg-wrapper .svg {
   width: 19rem;
-  // transform: translate(0.5rem, -1.5rem);
 
   @include lg {
     width: 20rem;
-    // transform: translate(13px, -10px);
   }
 }
 
