@@ -80,21 +80,33 @@
 .cards-wrapper {
   display: grid;
   gap: 1rem;
+  // justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
 
   @include md {
-    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-items: center;
+  }
+
+  @include xl {
+    display: flex;
+    flex-wrap: wrap;
+    // max-width: 70%;
   }
 }
 
 .card {
-  aspect-ratio: 300 / 360;
   background: $gray--4;
   border: 1px solid $blue--1;
   max-width: 18rem;
   text-align: center;
   border-radius: 8px;
+  padding: 0 0.5rem 0.5rem;
+
+  @include md {
+    aspect-ratio: 300 / 360;
+  }
 }
 
 .light .card {
@@ -104,7 +116,11 @@
 .card img {
   display: block;
   max-width: 7rem !important;
-  margin: 0.5rem auto 3rem;
+  margin: 0.5rem auto;
+
+  @include md {
+    margin: 0.5rem auto 3rem;
+  }
 }
 
 .card span {
@@ -115,4 +131,12 @@
 
 .light .card span {
   color: $gray--4;
+}
+
+.card p {
+  font-size: 0.75rem;
+
+  @include md {
+    font-size: 1rem;
+  }
 }
