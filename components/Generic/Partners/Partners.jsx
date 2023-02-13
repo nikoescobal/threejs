@@ -85,12 +85,16 @@ function Partners() {
 
   return (
     <section
-      className={`${styles.partners} ${!isDarkMode ? `${styles.light}` : ''} `}
+      className={`
+        ${styles.partners}
+        ${!isDarkMode ? `${styles.light}` : ''}
+        spacing-y
+        spacing-x
+        max-1920
+        `}
     >
-      <h3 className={`${generics['spacing-x']}`}>Our Partners</h3>
-      <div
-        className={`${styles['logos-wrapper']} ${generics['spacing-x']} max-1920`}
-      >
+      <h2>Our Partners</h2>
+      <div className={`${styles['logos-wrapper']}`}>
         {partners.map((logo) => (
           <div key={logo.alt}>
             <a href={logo.src} target="_blank" rel="noopener noreferrer">

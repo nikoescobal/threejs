@@ -18,11 +18,14 @@ function FollowUs() {
   const { locale } = useRouter();
 
   return (
-    <section className={`${styles['follow-us']} ${isDarkMode ? '' : `${styles.light}`} ${generics['spacing-x']}`}>
-      {/* <img src="/assets/parallax/circle.png" className="floating-shape" alt="" />
-      <img src="/assets/parallax/square.png" className="floating-shape" alt="" />
-      <img src="/assets/parallax/triangle.png" className="floating-shape" alt="" />
-      <img src="/assets/parallax/cross.png" className="floating-shape" alt="" /> */}
+    <section className={`
+      ${styles['follow-us']}
+      ${isDarkMode ? '' : `${styles.light}`}
+      spacing-y
+      spacing-x
+      max-1920
+      `}
+    >
       <h2>{content[locale].title}</h2>
       <div className={`${styles['main-icon-wrapper']}`}>
           <a href="https://twitter.com/LegacyNetworkio" target='_blank' rel="noreferrer">

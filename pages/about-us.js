@@ -91,13 +91,8 @@ function AboutUs() {
       {/* <AdvisoryBoard /> */}
       {/* <PartnersNew /> */}
       <FAQ />
-      <div
-        style={{
-          marginTop: '8rem',
-        }}
-      >
-        <FollowUs />
-      </div>
+      <Partners />
+      <FollowUs />
     </div>
   );
 }

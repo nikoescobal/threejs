@@ -5,7 +5,8 @@
   display: grid;
   justify-content: center;
   position: relative;
-  margin-bottom: clamp(4rem, 20vw, 12rem);
+  // margin-bottom: clamp(4rem, 20vw, 12rem);
+  padding-bottom: 8rem;
 }
 
 .follow-us h2 {
