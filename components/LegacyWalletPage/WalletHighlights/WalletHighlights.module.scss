@@ -65,10 +65,10 @@
 }
 
 .grid>div>img {
-  // max-width: 20rem;
-  scale: 1.95;
+  scale: 1.5;
 
   @include lg {
+    scale: 1.95;
     position: absolute;
     top: 50%;
     left: -30%;
