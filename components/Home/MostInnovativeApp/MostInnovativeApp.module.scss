@@ -33,7 +33,11 @@
   @include md {
     max-height: 14rem;
     max-width: 100%;
-    scale: 1.5;
+    scale: 1.2;
+  }
+
+  @include lg {
+    // scale: 1.4;
   }
 }
 
