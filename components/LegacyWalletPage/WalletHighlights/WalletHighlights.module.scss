@@ -90,9 +90,10 @@
   }
 
   @include xl {
-    display: flex;
-    flex-wrap: wrap;
-    // max-width: 70%;
+    justify-items: start;
+    // display: flex;
+    // flex-wrap: wrap;
+    max-width: 70%;
   }
 }
 
@@ -105,7 +106,9 @@
   padding: 0 0.5rem 0.5rem;
 
   @include md {
-    aspect-ratio: 300 / 360;
+    height: 100%;
+    // aspect-ratio: 300 / 360;
+    max-width: 16rem;
   }
 }
 
