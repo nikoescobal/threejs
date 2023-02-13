@@ -14,21 +14,22 @@ function BurningRate() {
 
   return (
     <section
-      className={`${styles.wrapper} ${generics['spacing-x']} ${
-        !isDarkMode ? `${styles.light}` : ''
-      } max-1920`}
+      className={`
+      ${styles.wrapper}
+      ${!isDarkMode ? `${styles.light}` : ''}
+      spacing-x
+      spacing-y
+      max-1920`}
     >
       <h2>Subscription Token Distribution</h2>
       <div className={`${styles['cards-wrapper']}`}>
         {content[locale].cards.map((card) => (
           <div key={uuid} className={`${styles['card']}`}>
-            <div className={styles['img-wrapper']}>
-              <img src={card.icon} alt="token distribution icon" />
-            </div>
+            <img src={card.icon} alt="token distribution icon" />
             <div className={styles['text-wrapper']}>
-              <h5>{card.title}</h5>
-              <p>{card.percentage}</p>
-              <span>{card.description}</span>
+              <span>{card.title}</span>
+              <span className={styles.percentage}>{card.percentage}</span>
+              <p>{card.description}</p>
             </div>
           </div>
         ))}
