@@ -4,9 +4,11 @@
 
 .wrapper {
   padding-top: 8rem;
+  display: grid;
+  gap: 2rem;
 
   @include lg {
-    display: grid;
+    gap: 4rem;
     grid-template-columns: 1.2fr 1fr;
   }
 
