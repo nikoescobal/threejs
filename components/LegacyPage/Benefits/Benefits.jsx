@@ -9,9 +9,12 @@ function Benefits() {
 
   return (
     <section
-      className={`${styles.wrapper} ${
-        !isDarkMode ? `${styles.light}` : ''
-      } spacing-x max-1920`}
+      className={`
+        ${styles.wrapper}
+        ${!isDarkMode ? `${styles.light}` : ''}
+        spacing-y
+        spacing-x
+        max-1920`}
     >
       <div className={`${styles.title}`}>
         <h2>{content[locale].title}</h2>
