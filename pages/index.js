@@ -120,7 +120,7 @@ export default function Home() {
       </div>
       {/* <WavesWrapper hideBottom> */}
         <WhatIsPersonalDevelopment />
-        {/* <CardSection /> */}
+        <CardSection />
         {/* {!inProdEnvironment ? <LegacyMethods /> : null} */}
       {/* </WavesWrapper> */}
       {/* <App /> */}
