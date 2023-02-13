@@ -59,9 +59,31 @@
   }
 }
 
+.tabs-wrapper>div>div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+
+  @include md {
+    display: flex;
+  }
+}
+
+.tabs-wrapper>div>span {
+  display: none;
+
+  @include md {
+    display: block;
+  }
+}
+
 .tabs-wrapper button {
   text-transform: capitalize;
-  max-width: 10rem;
+  max-width: 6rem;
+
+  @include lg {
+    max-width: 10rem;
+  }
 }
 
 .tabs-wrapper>div>div {
