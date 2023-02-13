@@ -27,11 +27,11 @@
 }
 
 .align_navbar {
-  padding-top: 6rem;
+  padding-top: 2rem;
 
-  @include sm {
-    padding-top: 5rem;
-  }
+  // @include sm {
+  //   padding-top: 5rem;
+  // }
 
   @include lg {
     padding-top: 0;
@@ -347,13 +347,12 @@
     }
   }
 
-  .scroll-down {
+}
+
+.scroll-down {
+  @include lg {
     top: -5rem;
   }
-
-  // .scroll-down[data-visible-gradient="true"] {
-  //   top: calc(-5rem - 40.5px);
-  // }
 }
 
 .coming {
@@ -386,7 +385,7 @@
   height: 2.75rem;
   top: 0.75rem;
   padding: 0 0 0 1.25rem !important;
-  border-radius: 14px;
+  border-radius: 10px;
   border: none;
   text-decoration: none;
   background: $sky-blue;
@@ -441,20 +440,10 @@
 }
 
 .languages {
-  position: relative !important;
-  top: -35.75rem;
-  right: 2rem;
-
-  @include md {
-    top: -29.75rem;
-    right: 1.8rem;
-  }
+  right: 8.85rem;
 
   @include lg {
-    // top: -9.35rem;
-    // right: -4.85em;
-    top: -2.5rem;
-    right: 0.45rem;
+    right: 6.25rem;
   }
 }
 
@@ -634,7 +623,6 @@
 }
 
 .gradient-bar {
-  display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -649,9 +637,11 @@
   left: 0;
   background: linear-gradient(90deg, #0c145a 0%, #041e58 50.31%, #8000ff 100%);
   flex-direction: column;
+  display: none;
 
   @include lg {
     flex-direction: row;
+    display: flex;
   }
 }
 

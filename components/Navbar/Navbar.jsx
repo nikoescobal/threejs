@@ -337,18 +337,17 @@ function Navbar() {
               Win
             </ComingSoon>
           </div>
-          <div className={styles.languages}>
-            <IconButton
-              type="button"
-              onClick={toggleLanguageList}
-              className={`${styles['dark-mode-toggle']} ${
-                isDarkMode ? '' : `${styles.light}`
-              }`}
-            >
-              <LanguageIcon />
-            </IconButton>
-          </div>
-
+          <button
+            type="button"
+            onClick={toggleLanguageList}
+            className={`
+              ${styles['dark-mode-toggle']}
+              ${isDarkMode ? '' : `${styles.light}`}
+              ${styles.languages}`
+            }
+          >
+            <LanguageIcon />
+          </button>
           <button
             type="button"
             onClick={toggle}
