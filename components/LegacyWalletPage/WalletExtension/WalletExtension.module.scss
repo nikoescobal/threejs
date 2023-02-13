@@ -8,14 +8,26 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  padding-top: 8rem;
-  text-align: center;
+
+  @include md {
+    text-align: center;
+  }
 }
 
 .gradient {
-  scale: 0.75;
-  top: -10%;
+  scale: 1.5;
+  top: 50%;
   opacity: .25;
+
+  @include md {
+    scale: 0.75;
+    top: 25%;
+  }
+
+  @include lg {
+    scale: 0.75;
+    top: -10%;
+  }
 }
 
 .text-wrapper {
