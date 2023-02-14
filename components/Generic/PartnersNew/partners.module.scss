@@ -2,7 +2,8 @@
 @use '../../../styles/colors' as *;
 @use '../../../styles/variables' as *;
 
-.partners {}
+.partners {
+}
 
 .light .partners {
   background: $light-mode-secondary;
@@ -120,7 +121,7 @@
   }
 
   100% {
-    left: -450%;
+    left: -600%;
   }
 }
 
@@ -161,7 +162,7 @@
 }
 
 .animate {
-  width: 900%;
+  width: 1200%;
   animation: marquee 20s linear infinite;
   top: 50%;
   transform: translate(0, -50%);
