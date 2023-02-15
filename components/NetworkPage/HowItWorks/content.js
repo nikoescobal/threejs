@@ -12,7 +12,7 @@ const content = {
         title: 'Join the Elite',
         description: `Join our elite board, an exclusive area for hand-picked individuals and early supporters of the Legacy Network ecosystem. Elite members get access to multiple valuable utilities which aren’t available anywhere else. Exchange resources with experts and high-achievers, close beneficial partnerships, get early access to new products or brows through the exclusive education area. Our elite board was specially created to enhance your Legacy Network experience by adding exclusivity and value.`,
         link: 'Access Board',
-        img: '/mockups/How-It-Works-1.png',
+        img: '/mockups/How-It-Works-1.webp',
         sub_list: [
           {
             icon: <Pencil />,
@@ -35,7 +35,7 @@ const content = {
         title: 'Join the Community',
         description: `Our community board is a web3 hub where the Legacy Network team and the community come together to shape the future. Members can submit their ideas, vote on future changes, participate in challenges and register for events. Furthermore, the dashboard comes with several integrations which allows member to access all relevant information about their assets and our progress in just on place.`,
         link: 'Access Board',
-        img: '/mockups/How-It-Works-2.png',
+        img: '/mockups/How-It-Works-2.webp',
         sub_list: [
           {
             icon: <Pencil />,
