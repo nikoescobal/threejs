@@ -29,24 +29,21 @@ function Events() {
           <span>{content[locale].view_all}</span>
         </div>
         <div className={styles['list-wrapper']}>
-          {
-            content[locale].recordings_list.map((recording) => (
-              <a key={uuid} className={styles['recording']} href={recording.src}>
-                <img src={recording.img} alt="Recording header image" />
-                <h3>{recording.title}</h3>
-                <p>{recording.description}</p>
-                <p className={styles['author']}>
-                  {recording.author}
-                  <span>
-                    {' On '}
-                    {recording.date}
-                  </span>
-                </p>
-              </a>
-            ))
-          }
+          {content[locale].recordings_list.map((recording) => (
+            <a key={uuid} className={styles['recording']} href={recording.src}>
+              <img src={recording.img} alt="Recording header image" />
+              <h3>{recording.title}</h3>
+              <p>{recording.description}</p>
+              <p className={styles['author']}>
+                {recording.author}
+                <span>
+                  {' On '}
+                  {recording.date}
+                </span>
+              </p>
+            </a>
+          ))}
         </div>
-
       </div>
     </section>
   );

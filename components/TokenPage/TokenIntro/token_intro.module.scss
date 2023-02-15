@@ -1,0 +1,53 @@
+@use '../../../styles/breakpoints' as *;
+@import '../../../styles/variables';
+
+.wrapper {
+  background: linear-gradient(
+    transparent 60%,
+    rgba($color: $ln-blue, $alpha: 0.2)
+  );
+  padding-top: 20vw;
+  text-align: center;
+
+  @include md {
+    padding-top: 6rem;
+  }
+
+  h3 {
+    padding: 0 0 1rem;
+  }
+
+  p {
+    padding: 0 0 5rem;
+  }
+}
+
+.wrapper.light {
+  // background: linear-gradient(transparent 60%, rgba($color: $lg, $alpha: 0.2));
+  background: $light-mode-primary;
+}
+
+.wrapper div {
+  max-width: 75ch;
+  margin: 0 auto;
+}
+
+.waves-wrapper {
+  position: absolute;
+  top: 10%;
+  scale: 4;
+  object-fit: cover;
+
+  @include md {
+    scale: 2;
+    transform: translateX(-9rem);
+    transform: translateY(2rem);
+  }
+
+  @include lg {
+    top: 10%;
+    scale: 1.4;
+    left: 90px;
+    object-fit: cover;
+  }
+}
