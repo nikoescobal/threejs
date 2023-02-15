@@ -5,6 +5,7 @@ import content from './content';
 import { useRouter } from 'next/router';
 import Staking from '../../../public/mockups/how-staking-works.png';
 import Gradient from '../../Generic/Gradient/Gradient';
+import CheckIcon from '@mui/icons-material/Check';
 
 function StakingSection() {
   const { isDarkMode } = useStore();
@@ -33,8 +34,9 @@ function StakingSection() {
           {content[locale].steps.map((step) => (
             <div key={uuid} className={`${styles['step']}`}>
               <div className={styles['title-wrapper']}>
-                <div className={styles['text-wrapper']}>
-                  <p className={styles['number']}>{step.number}</p>
+                <p className={styles['number']}>{step.number}</p>
+                <div className={styles['title-wrapper']}>
+                  <CheckIcon className={styles.check} />
                   <h3 className={styles['title']}>{step.title}</h3>
                 </div>
                 <p className={styles['description']}>{step.description}</p>
