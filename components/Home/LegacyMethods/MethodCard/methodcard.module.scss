@@ -12,6 +12,7 @@
 
   @include lg {
     min-height: $card-height;
+    min-width: 510px;
     max-width: 510px;
     padding: 17px;
     max-height: $card-height;
@@ -19,14 +20,16 @@
 }
 
 .inner-content {
+  width: 70%;
+  margin: 0 auto;
   padding: 0 0.5rem !important;
   text-align: center;
+  align-items: center;
   display: flex;
   justify-content: center;
   gap: 1.75rem;
   flex-direction: column;
   padding: 1.5rem;
-  width: 100%;
   height: 100%;
   border-width: 0.5px;
   border-radius: 8px;
@@ -38,11 +41,17 @@
   @include sm {
     padding: 0 1.5rem !important;
   }
+
+  @include lg {
+    width: 100%;
+  }
 }
 
 .light.inner-content {
-  background: linear-gradient($transparent-light, $transparent-light) padding-box,
-    linear-gradient(to bottom left, $transparent-light, $transparent-light) border-box;
+  background: linear-gradient($transparent-light, $transparent-light)
+      padding-box,
+    linear-gradient(to bottom left, $transparent-light, $transparent-light)
+      border-box;
 }
 
 .image-border {
