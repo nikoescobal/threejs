@@ -6,6 +6,7 @@ import EastIcon from '@mui/icons-material/East';
 import AlternatingGrid from '../../Generic/AlternatingGrid/AlternatingGrid';
 import Image from 'next/image';
 import Gradient from '../../Generic/Gradient/Gradient';
+import ComingSoon from '../../Generic/ComingSoon/ComingSoon';
 
 function HowItWorks() {
   const { isDarkMode } = useStore((state) => state);
@@ -29,18 +30,31 @@ function HowItWorks() {
         {content[locale].list.map((item) => (
           <AlternatingGrid key={uuid} className={styles.grid} reverse>
             <div className={styles['img-wrapper']}>
-              <Image src={item.img} width={970} height={522} objectFit={'contain'} layout='responsive' alt="illustration" />
+              <Image
+                src={item.img}
+                width={970}
+                height={522}
+                objectFit={'contain'}
+                layout="responsive"
+                alt="illustration"
+              />
             </div>
             <div className={styles['text-wrapper']}>
               <span>{item.surtitle}</span>
               <h3>{item.title}</h3>
               <p>{item.description}</p>
-              <a className="button-blue" href="https://blog.legacynetwork.io" rel='noreferrer' target="_blank">
-                {item.link}
-                {' '}
-                <EastIcon />
-              </a>
-              <div className={styles['sub-list-wrapper']}>
+              {/* <a
+                className="button-blue"
+                href="https://blog.legacynetwork.io"
+                rel="noreferrer"
+                target="_blank"
+              >
+                {item.link} <EastIcon />
+              </a> */}
+              <ComingSoon className={`${styles.coming} `}>
+                {item.link} <EastIcon />
+              </ComingSoon>
+              {/* <div className={styles['sub-list-wrapper']}>
                 {
                   item.sub_list.map((subItem) => (
                     <div key={uuid} className={styles['sub-item']}>
@@ -55,7 +69,7 @@ function HowItWorks() {
                     </div>
                   ))
                 }
-              </div>
+              </div> */}
             </div>
           </AlternatingGrid>
         ))}

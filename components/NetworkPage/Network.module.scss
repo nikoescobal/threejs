@@ -2,11 +2,11 @@
 @use '../../styles/variables' as *;
 
 .image {
-  @include md {
-    scale: 1.2;
-  }
-
-  // @include lg {
-  //   scale: 1.4;
+  // @include md {
+  //   scale: 1.2;
   // }
+
+  @include lg {
+    scale: 0.75;
+  }
 }

@@ -22,15 +22,13 @@ function DepthOfNetworking() {
       <h2>{content[locale].title}</h2>
       <p>{content[locale].description}</p>
       <div className={styles['levels-wrapper']}>
-        {
-          content[locale].levels.map((level, index) => (
-            <div key={uuid} className={styles['level']}>
-              <span>Level {index + 1}</span>
-              <h3>{level.title}</h3>
-              <p>{level.description}</p>
-            </div>
-          ))
-        }
+        {content[locale].levels.map((level, index) => (
+          <div key={uuid} className={styles['level']}>
+            {/* <span>Level {index + 1}</span> */}
+            <h3>{level.title}</h3>
+            <p>{level.description}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

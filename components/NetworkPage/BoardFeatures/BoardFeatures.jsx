@@ -13,7 +13,7 @@ import { useState } from 'react';
 function BoardFeatures() {
   const { isDarkMode } = useStore((state) => state);
   const { locale } = useRouter();
-  const { uuid } = require('crypto')
+  const { uuid } = require('crypto');
   const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
@@ -33,7 +33,12 @@ function BoardFeatures() {
       <h2>{content[locale].title}</h2>
       <p>{content[locale].description}</p>
 
-      <Tabs value={value} className={styles['tabs-wrapper']} onChange={handleChange} aria-label="basic tabs example">
+      <Tabs
+        value={value}
+        className={styles['tabs-wrapper']}
+        onChange={handleChange}
+        aria-label="basic tabs example"
+      >
         <Tab label="Community Board" className={styles.tab} {...a11yProps(0)} />
         <Tab label="Partners Board" className={styles.tab} {...a11yProps(1)} />
       </Tabs>
@@ -41,14 +46,16 @@ function BoardFeatures() {
         <div className={styles.grid}>
           {content[locale].community_items.map((item) => (
             <div key={uuid} className={styles['item']}>
-              <span>{item.top_text}</span>
+              {/* <span>{item.top_text}</span> */}
               <h3>{item.title}</h3>
               <p>{item.description}</p>
-              <List className={styles.list}>
+              {/* <List className={styles.list}>
                 {item.features.map((feature) => (
-                  <ListItem key={uuid} className={styles['list-item']}>{feature}</ListItem>
+                  <ListItem key={uuid} className={styles['list-item']}>
+                    {feature}
+                  </ListItem>
                 ))}
-              </List>
+              </List> */}
             </div>
           ))}
         </div>
@@ -57,14 +64,16 @@ function BoardFeatures() {
         <div className={styles.grid}>
           {content[locale].partners_items.map((item) => (
             <div key={uuid} className={styles['item']}>
-              <span>{item.top_text}</span>
+              {/* <span>{item.top_text}</span> */}
               <h3>{item.title}</h3>
               <p>{item.description}</p>
-              <List className={styles.list}>
+              {/* <List className={styles.list}>
                 {item.features.map((feature) => (
-                  <ListItem key={uuid} className={styles['list-item']}>{feature}</ListItem>
+                  <ListItem key={uuid} className={styles['list-item']}>
+                    {feature}
+                  </ListItem>
                 ))}
-              </List>
+              </List> */}
             </div>
           ))}
         </div>

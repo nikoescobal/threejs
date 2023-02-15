@@ -10,7 +10,7 @@ import ListItem from '../../Generic/ListItem/ListItem';
 function NetworkFeatures() {
   const { isDarkMode } = useStore((state) => state);
   const { locale } = useRouter();
-  const { uuid } = require('crypto')
+  const { uuid } = require('crypto');
 
   return (
     <section
@@ -25,10 +25,15 @@ function NetworkFeatures() {
       <h2>{content[locale].title}</h2>
       <p>{content[locale].description}</p>
       <div className={styles.grid}>
-          {content[locale].grid_items.map((item) => (
+        {content[locale].grid_items.map((item) => (
           <AlternatingGrid key={uuid}>
             <div className={styles['img-wrapper']}>
-              <img src={item.picture} width={700} height={100} alt="Network Mockup" />
+              <img
+                src={item.picture}
+                width={700}
+                height={100}
+                alt="Network Mockup"
+              />
             </div>
             <div className={styles['info-wrapper']}>
               <span>{item.top_text}</span>
@@ -36,14 +41,14 @@ function NetworkFeatures() {
               <p>{item.description}</p>
               <List className={styles.list}>
                 {item.features.map((feature) => (
-                  <ListItem key={uuid} className={styles['list-item']}>{feature}</ListItem>
+                  <ListItem key={uuid} className={styles['list-item']}>
+                    {feature}
+                  </ListItem>
                 ))}
               </List>
-              {
-                item.button
-                  ? <Button className={'button-blue'}>{item.button}</Button>
-                  : null
-              }
+              {item.button ? (
+                <Button className={'button-blue'}>{item.button}</Button>
+              ) : null}
             </div>
           </AlternatingGrid>
         ))}

@@ -15,17 +15,17 @@ import GettingStarted from '../components/NetworkPage/GettingStarted/GettingStar
 const content = {
   en: {
     title: 'LN Network',
-    subtitle: 'Grow Beyond Your Limits'
+    subtitle: 'Grow Beyond Your Limits',
   },
   de: {
     title: 'Das Netzwerk',
-    subtitle: 'Sinnvolle Veränderung'
-  }
-}
+    subtitle: 'Sinnvolle Veränderung',
+  },
+};
 
 function Network() {
   const { locale } = useRouter();
-  
+
   return (
     <div>
       <Head>
@@ -51,7 +51,7 @@ function Network() {
       <Membership />
       <HowItWorks />
       <BoardFeatures />
-      <Events />
+      {/* <Events /> */}
       <GettingStarted />
       {/* <NetworkFeatures />       */}
     </div>

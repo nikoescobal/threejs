@@ -54,7 +54,6 @@
   color: $light-mode-text-color;
 }
 
-
 .list-wrapper {
   display: grid;
   grid-auto-flow: column;
@@ -71,7 +70,7 @@
   }
 }
 
-.list-wrapper>a {
+.list-wrapper > a {
   min-width: 12rem;
 }
 

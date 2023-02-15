@@ -10,6 +10,11 @@
   position: relative;
   padding-top: 8rem;
   overflow: visible;
+
+  @include lg {
+    padding-top: 12rem;
+    padding-bottom: 8.5rem;
+  }
   // text-align: center;
 }
 
@@ -43,7 +48,7 @@
   overflow: visible;
 }
 
-.img-wrapper>span {
+.img-wrapper > span {
   overflow: visible !important;
   width: 100% !important;
   height: 100% !important;
@@ -70,7 +75,7 @@
   gap: 4rem;
 
   @include lg {
-    gap: 8rem;
+    gap: 21rem;
   }
 }
 
@@ -123,4 +128,18 @@
 .sub-item a {
   color: $blue--2;
   justify-content: start;
+}
+
+.coming {
+  display: flex;
+  align-items: center;
+}
+
+.coming p {
+  color: white !important;
+}
+
+.coming svg {
+  fill: white;
+  transform: translate(0.5rem, 0.5rem);
 }
