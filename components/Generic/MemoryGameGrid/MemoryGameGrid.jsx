@@ -111,7 +111,7 @@ function MemoryGameGrid(props) {
             }`}
             onClick={() => handleOpen(index)}
             imgSource={item.url}
-            imgDesc={item.description}
+            imgDesc={item.alt}
           />
         ))}
       </div>

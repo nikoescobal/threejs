@@ -12,6 +12,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0.75rem;
+
+  @include md {
+    padding: 1rem;
+  }
+
+  @include lg {
+    padding: 1.25rem;
+  }
 }
 
 .light.wrapper {
