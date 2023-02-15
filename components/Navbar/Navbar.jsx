@@ -337,7 +337,7 @@ function Navbar() {
               Win
             </ComingSoon>
           </div>
-          <button
+          {/* <button
             type="button"
             onClick={toggleLanguageList}
             className={`
@@ -347,7 +347,7 @@ function Navbar() {
             }
           >
             <LanguageIcon />
-          </button>
+          </button> */}
           <button
             type="button"
             onClick={toggle}
