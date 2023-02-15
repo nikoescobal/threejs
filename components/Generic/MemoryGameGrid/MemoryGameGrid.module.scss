@@ -38,6 +38,24 @@
   z-index: 1;
 }
 
-.grid[data-has-started="false"] {
-  filter: brightness(0.3);
+// .grid[data-has-started="false"] {
+//   filter: brightness(0.3);
+// }
+
+.spear {
+  translate: 0 -50%;
+  position: absolute;
+  top: 50%;
+}
+
+.spear:first-of-type {
+  left: -58%;
+  scale: 0.8;
+  rotate: -90deg;
+}
+
+.spear:last-of-type {
+  right: -58%;
+  scale: 0.8;
+  rotate: 90deg;
 }

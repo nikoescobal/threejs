@@ -92,10 +92,13 @@ function MemoryGameGrid(props) {
           ? <Button className='button-blue' onClick={handleRestart}>Restart</Button>
           : null
       }
-      <div className={styles['grid']} data-has-started={gameStart}>
+      <div className={styles['grid']}>
+      <img src="/weapons/spear-cropped.png" alt='spear weapon' className={styles.spear} />
+      <img src="/weapons/spear-cropped.png" alt='spear weapon' className={styles.spear} />
         {list.map((item, index) => (
           <MemoryGameTile
             key={item.id}
+            hasGameStarted={gameStart}
             // opened={gameStart && (visibleItems.includes(index) || finishedItems.includes(index))}
             opened={openCheck(index)}
             finished={finishedItems.includes(index)}
