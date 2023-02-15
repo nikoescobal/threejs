@@ -26,18 +26,19 @@ import AdvisoryBoard from '../components/PersonalDevelopment/AdvisoryBoard/Advis
 const content = {
   en: {
     title: 'About Us',
-    subtitle: 'We are a cutting-edge personal development company utilizing the latest technology such as blockchain and AI. Our diverse team specialize in product design and delivery, utilizing both design thinking and agile methodologies to bring about meaningful change for our clients.',
+    subtitle:
+      'We are a cutting-edge personal development company that leverages the latest technologies, such as blockchain and AI. Our diverse team specializes in product design and delivery, utilizing both design thinking and agile methodologies to create meaningful change for our clients.',
   },
   de: {
     title: 'Über uns',
     subtitle: '& UNSER ZIEL',
-  }
-}
+  },
+};
 
 function AboutUs() {
   const { isDarkMode } = useStore();
   const { locale } = useRouter();
-  
+
   return (
     <div>
       <Head>
@@ -56,11 +57,7 @@ function AboutUs() {
                 scale: '1.1',
               }}
             >
-              <img
-                src="/logo-cropped.webp"
-                alt="logo"
-                draggable="false"
-              />
+              <img src="/logo-cropped.webp" alt="logo" draggable="false" />
               {/* {isDarkMode ? (
                 <img
                   src="/backgrounds/about-us-dark.png"

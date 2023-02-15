@@ -13,24 +13,26 @@ import Script from 'next/script';
 import styles from '../components/PersonalDevelopment/personaldevelopment.module.scss';
 import { useRouter } from 'next/router';
 import WhatIsPersonalDevelopment from '../components/PersonalDevelopment/WhatIsPersonalDevelopment/WhatIsPersonalDevelopment';
+import WhatCanBeAchieved from '../components/PersonalDevelopment/WhatCanBeAchieved/WhatCanBeAchieved';
 import LegacyMethods from '../components/Home/LegacyMethods/LegacyMethodsList/LegacyMethods';
 import PillarsOfAnUnhappyLife from '../components/PersonalDevelopment/PillarsOfAnUnhappyLife/PillarsOfAnUnhappyLife';
 import LegacyApproach from '../components/Products/LegacyApproach/LegacyApproach';
+import TheImpact from '../components/PersonalDevelopment/TheImpact/TheImpact';
 
 const content = {
   en: {
     title: 'Personal Development',
-    subtitle: 'The foundation of your life'
+    subtitle: 'The foundation of your life',
   },
   de: {
     title: 'Persönlichkeitsentwicklung',
-    subtitle: '& seine Bedeutung'
-  }
-}
+    subtitle: '& seine Bedeutung',
+  },
+};
 
 function PersonalDevelopment() {
   const { locale } = useRouter();
-  
+
   return (
     <div>
       <Head>
@@ -53,7 +55,9 @@ function PersonalDevelopment() {
       />
       {/* <Explanation /> */}
       <WhatIsPersonalDevelopment />
+      <WhatCanBeAchieved />
       <LegacyApproach />
+      <TheImpact />
       {/* <WavesWrapper hideBottom={true}>
       </WavesWrapper> */}
       <HealthCrisis />

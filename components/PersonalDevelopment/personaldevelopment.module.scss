@@ -1,5 +1,6 @@
 @use '../../styles/breakpoints' as *;
-@import '../../styles/variables';
+@use '../../styles/variables' as *;
+@use '../../styles/colors' as *;
 
 .image.image {
   @include md {
@@ -29,4 +30,8 @@
     left: 90px;
     object-fit: cover;
   }
+}
+
+.legacy.card {
+  background: transparent !important;
 }

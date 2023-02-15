@@ -5,11 +5,6 @@
 .main-wrapper {
   position: relative;
   z-index: 1;
-  background: $gray--2;
-}
-
-.light.main-wrapper {
-  background: $semi-transparent-blue;
 }
 
 .gradient {
@@ -20,13 +15,9 @@
 }
 
 .cards-wrapper {
-  display: grid;
-  grid-template-columns: 1.2fr 0.9fr;
-  gap: 2.5rem;
-
-  @include lg {
-    gap: 3.4rem;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   // padding-top: 4rem;
 
   @include md {
@@ -139,15 +130,4 @@
   height: 0.55rem;
   background: $gray--10;
   border-radius: 50%;
-}
-
-.text-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  // grid-template-columns: repeat(2, 1fr);
-}
-
-.text-wrapper h2:nth-child(1) {
-  font-size: 2rem;
 }

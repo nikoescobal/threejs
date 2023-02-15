@@ -18,19 +18,9 @@ import content from './content';
 import { useRouter } from 'next/router';
 
 const titles = {
-  en: [
-    'ABOUT US',
-    'OUR VISION',
-    'THE PROBLEM',
-    'OUR SOLUTION',
-  ],
-  de: [
-    'Über uns',
-    'Unsere Vision',
-    'Das Problem',
-    'Unsere Lösung',
-  ]
-}
+  en: ['ABOUT US', 'OUR VISION', 'THE PROBLEM', 'OUR SOLUTION'],
+  de: ['Über uns', 'Unsere Vision', 'Das Problem', 'Unsere Lösung'],
+};
 
 function About() {
   const { isDarkMode } = useStore((state) => state);
@@ -58,31 +48,27 @@ function About() {
       {isDesktop && (
         <div className={`${styles['tabs-wrapper']}`}>
           <Tabs value={value} onChange={handleChange} aria-label="tabs">
-            {
-              titles[locale].map((title, index) => (
-                <Tab key={uuid} label={title} {...a11yProps(index)} />
-              ))
-            }
+            {titles[locale].map((title, index) => (
+              <Tab key={uuid} label={title} {...a11yProps(index)} />
+            ))}
             {/* <Tab label="ABOUT US" {...a11yProps(0)} />
             <Tab label="OUR VISION" {...a11yProps(1)} />
             <Tab label="THE PROBLEM" {...a11yProps(2)} />
             <Tab label="OUR SOLUTION" {...a11yProps(3)} /> */}
           </Tabs>
-          {
-            content[locale].map((panel, index) => (
-              <TabPanel
-                key={panel.title}
-                className={`${styles['tab-list']} ${
-                  isDarkMode ? '' : `${styles.light}`
-                }`}
-                value={value}
-                index={index}
-              >
-                <h4>{panel.title}</h4>
-                <p dangerouslySetInnerHTML={{__html: panel.description}} />
-              </TabPanel>
-            ))
-          }
+          {content[locale].map((panel, index) => (
+            <TabPanel
+              key={panel.title}
+              className={`${styles['tab-list']} ${
+                isDarkMode ? '' : `${styles.light}`
+              }`}
+              value={value}
+              index={index}
+            >
+              <h4>{panel.title}</h4>
+              <p dangerouslySetInnerHTML={{ __html: panel.description }} />
+            </TabPanel>
+          ))}
         </div>
       )}
       {!isDesktop && (
@@ -97,19 +83,22 @@ function About() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Legacy Network is an international technology company based in
-                Liechtenstein/ Switzerland. Our mission is to improve
-                people&apos;s lives by developing innovative technology and
-                building international communities around personal development.
-                We firmly believe that personal development is the key to
-                success in all life areas, as well as the solution for many
-                global problems. For this reason, we committed ourselves to find
-                new ways in order to provide something of true value to the
-                world. Our central product is a gamified education app, which
-                uses a play-to-earn system to reward its users with crypto. The
-                app is powered by the first ever artificial intelligence, which
-                analyses several aspects of a user&apos;s personality and
-                reflects the collected information back to him.
+                <p>
+                  {' '}
+                  Legacy Network is the first technology company to provide an
+                  all in one solution for personal growth. Our gamified system
+                  is built around three pillars: Education, network and
+                  guidance, providing users with the necessary tools to
+                  sustainably improve all areas of their life.
+                </p>
+                <p>
+                  Our structured education app with its level- and reward-system
+                  ensures that our users stay consistent as they successfully
+                  progress along their journey. By using our networking hub,
+                  members can connect with like-minded people, build beneficial
+                  relationships, exchange value and push each other towards
+                  excellence.
+                </p>
               </Typography>
             </AccordionDetails>
           </Accordion>
