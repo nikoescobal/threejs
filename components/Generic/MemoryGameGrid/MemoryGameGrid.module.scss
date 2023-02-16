@@ -65,11 +65,12 @@
   max-width: 0.8rem;
 }
 
-.wrapper button {
+.memory-button {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  background: $blue--2;
+  background: $blue--2 !important;
   border: 5px solid #164299;
+  color: white;
   border-radius: 2.5rem;
   display: flex;
   gap: 0.625rem;
