@@ -75,7 +75,7 @@
   gap: 4rem;
 
   @include lg {
-    gap: 21rem;
+    gap: 15rem;
   }
 }
 
@@ -135,11 +135,17 @@
   align-items: center;
 }
 
+.coming p:first-child {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
 .coming p {
   color: white !important;
 }
 
 .coming svg {
   fill: white;
-  transform: translate(0.5rem, 0.5rem);
+  // transform: translate(0.5rem, 0.25rem);
 }
