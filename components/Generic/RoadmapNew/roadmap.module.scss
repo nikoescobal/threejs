@@ -22,7 +22,6 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-
 }
 
 .tabs-wrapper button {
@@ -49,14 +48,20 @@
     grid-auto-columns: calc(50%);
     // gap: 8rem 0;
     // transform: attr;
-
   }
 }
 
 .panel-headers {
   display: grid;
   gap: 0.65rem;
-  background: linear-gradient(to right, $gray--8 0%, $gray--8 50%, transparent 50%, transparent 100%) repeat-x left bottom;
+  background: linear-gradient(
+      to right,
+      $gray--8 0%,
+      $gray--8 50%,
+      transparent 50%,
+      transparent 100%
+    )
+    repeat-x left bottom;
   background-size: 30px 1px;
   padding-bottom: 2rem;
   margin-bottom: 2rem;
@@ -76,6 +81,7 @@
 }
 
 .panel-checkmark {
+  margin-left: 0.1rem;
   font-size: 1.15rem;
   color: $gray--4;
   background: $gray--11;
@@ -83,11 +89,11 @@
   padding: 0.125rem;
 }
 
-.panel-checkmark[data-complete="true"] {
+.panel-checkmark[data-complete='true'] {
   background: $green--2;
 }
 
-.light .panel-checkmark[data-complete="true"] {
+.light .panel-checkmark[data-complete='true'] {
   background: $green--3;
 }
 
@@ -97,7 +103,7 @@
   gap: 1rem;
   border-left: 2px dashed $gray--8;
   margin-top: 0.5rem;
-  margin-left: 0.5rem;
+  margin-left: 0.65rem;
   padding-left: 1rem;
 }
 
@@ -120,11 +126,11 @@
   color: $light-mode-text-color;
 }
 
-.main li[data-complete="true"] {
+.main li[data-complete='true'] {
   color: $green--2;
 }
 
-.light .main li[data-complete="true"] {
+.light .main li[data-complete='true'] {
   color: $green--3;
 }
 
