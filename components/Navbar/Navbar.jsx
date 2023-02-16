@@ -162,19 +162,25 @@ function Navbar() {
           {content.en.main_links.map((link) => {
             {
               return link.name !== 'Products' ? (
-                link.external
-                  ? <span
-                      key={uuid}
-                      className={
-                        router.asPath === link.endpoint ? `${styles.active}` : ''
-                      }
-                      onClick={() => setIsOpen(false)}
+                link.external ? (
+                  <span
+                    key={uuid}
+                    className={
+                      router.asPath === link.endpoint ? `${styles.active}` : ''
+                    }
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <a
+                      href={link.endpoint}
+                      title={link.title}
+                      rel="noreferrer"
+                      target={'_blank'}
                     >
-                      <a href={link.endpoint} title={link.title} rel='noreferrer' target={'_blank'}>
-                        {link.name}
-                      </a>
-                    </span>
-                  :<span
+                      {link.name}
+                    </a>
+                  </span>
+                ) : (
+                  <span
                     key={uuid}
                     className={
                       router.asPath === link.endpoint ? `${styles.active}` : ''
@@ -185,6 +191,7 @@ function Navbar() {
                       {link.name}
                     </Link>
                   </span>
+                )
               ) : (
                 <>
                   <span
@@ -228,82 +235,7 @@ function Navbar() {
               );
             }
           })}
-          {/* <span
-            className={router.asPath === '/products' ? `${styles.active}` : ''}
-            onClick={() => setIsOpen(false)}
-          >
-            <Link
-              href="/products"
-              title="Navbar link to app page"
-              className={
-                router.pathname === '/products' ? `${styles.active}` : ''
-              }
-            >
-              Products
-            </Link>
-          </span>
-          <span
-            className={router.asPath === '/token' ? `${styles.active}` : ''}
-            onClick={() => setIsOpen(false)}
-          >
-            <Link
-              href="/token"
-              title="Navbar link to token page"
-              className={router.pathname === '/token' ? `${styles.active}` : ''}
-            >
-              Token
-            </Link>
-          </span>
-          <span
-            className={
-              router.asPath === '/personal-development'
-                ? `${styles.active}`
-                : ''
-            }
-            onClick={() => setIsOpen(false)}
-          >
-            <Link
-              href="/personal-development"
-              title="Navbar link to personal development page"
-              className={
-                router.pathname === '/personal-development'
-                  ? `${styles.active}`
-                  : ''
-              }
-            >
-              Personal Development
-            </Link>
-          </span>
-          <span
-            className={router.asPath === '/about-us' ? `${styles.active}` : ''}
-            onClick={() => setIsOpen(false)}
-          >
-            <Link
-              href="/about-us"
-              title="Navbar link to about us page"
-              className={
-                router.pathname === '/about-us' ? `${styles.active}` : ''
-              }
-            >
-              About Us
-            </Link>
-          </span> */}
-          {/* <span
-            className={router.asPath === '/blogs' ? `${styles.active}` : ''}
-          >
-            <a
-              href="https://blog.legacynetwork.io/"
-              className={
-                router.pathname === 'https://blog.legacynetwork.io/'
-                  ? `${styles.active}`
-                  : ''
-              }
-              target="_blank"
-              rel="noreferrer"
-            >
-              Blog
-            </a>
-          </span>
+
           <div className={styles['boards-wrapper']}>
             <span className={`${isDarkMode ? '' : `${styles.light}`}`}>
               <LinkHover hoverText={'Coming Soon'}>Boards</LinkHover>
@@ -321,7 +253,7 @@ function Navbar() {
                 <span className={styles.partners}>Partners</span>
               </span>
             </div>
-          </div> */}
+          </div>
         </div>
         <div>
           <div

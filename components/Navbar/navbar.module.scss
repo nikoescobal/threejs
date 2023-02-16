@@ -94,13 +94,13 @@
   color: $light-mode-text-color;
 }
 
-.navbar>div {
+.navbar > div {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.navbar>img {
+.navbar > img {
   width: 4rem;
 }
 
@@ -116,7 +116,7 @@
   transition: color 0.3s ease-in-out;
 
   @include lg {
-    justify-content: center;
+    // justify-content: center;
     // font-size: 0.625rem;
   }
 
@@ -147,9 +147,14 @@
 
 .boards-wrapper {
   position: relative;
+  top: -2rem;
+
+  @include lg {
+    top: 0;
+  }
 }
 
-.boards-wrapper>div {
+.boards-wrapper > div {
   display: none;
   position: absolute;
   top: 2.9rem;
@@ -158,22 +163,25 @@
   padding: 1rem 0;
 }
 
-.light .boards-wrapper>div {
+.light .boards-wrapper > div {
   background: rgba($color: #8db2fc, $alpha: 0.2);
 }
 
-.boards-wrapper:hover>div {
-  display: grid;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  padding: 1.35rem 0.67rem 0.5rem;
+.boards-wrapper:hover > div {
+  @include lg {
+    transform: translateY(1.98rem);
+    display: grid;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding: 1.35rem 0.67rem 0.5rem;
+  }
 
   @include xl {
     padding: 1.75rem 0.67rem 0.4rem;
   }
 }
 
-.boards-wrapper>div>span {
+.boards-wrapper > div > span {
   display: none;
 
   @include lg {
@@ -284,13 +292,15 @@
 }
 
 .active a::after {
-  content: '';
-  position: absolute;
-  bottom: -0.5rem;
-  left: 0;
-  width: 80%;
-  height: 2px;
-  background: $ln-blue;
+  @include lg {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 80%;
+    height: 2px;
+    background: $ln-blue;
+  }
 }
 
 .win p {
@@ -334,7 +344,7 @@
     top: 0;
   }
 
-  .navbar>div {
+  .navbar > div {
     flex-direction: row;
     gap: 2.5rem;
 
@@ -346,7 +356,6 @@
       gap: 2.5rem;
     }
   }
-
 }
 
 .scroll-down {
@@ -403,7 +412,7 @@
     min-width: 4rem;
     max-width: 6rem;
     // right: 12.75rem;
-    right: 9.0rem;
+    right: 9rem;
   }
 
   @include lg {
@@ -687,7 +696,7 @@
   }
 }
 
-.sub-menu>div {
+.sub-menu > div {
   // left: -1rem;
 
   @include lg {
@@ -695,12 +704,12 @@
   }
 }
 
-.sub-menu>div>ul {
+.sub-menu > div > ul {
   background: $gray--1 !important;
   color: white !important;
 }
 
-.light.sub-menu>div>ul {
+.light.sub-menu > div > ul {
   // background: rgba(141, 178, 252, 0.2);
   // background: #e8f0fe !important;
   background: white !important;
