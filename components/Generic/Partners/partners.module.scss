@@ -3,6 +3,8 @@
 
 .partners {
   position: relative;
+  padding-left: 0;
+  padding-right: 0;
   z-index: 1;
 }
 
@@ -42,10 +44,11 @@
   width: 100%;
 }
 
-.logos-wrapper div a>span {
+.logos-wrapper div a > span {
   max-height: 5rem !important;
 
-  @include md {}
+  @include md {
+  }
 }
 
 .img-wrapper {

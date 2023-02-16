@@ -9,18 +9,18 @@ const content = {
     team: [
       {
         name: 'Fabio Martinetti',
-        title: 'CEO',
+        title: 'Founder &CEO',
         img: '/team/fabio.jpg',
         socials: [
           {
             icon: <TwitterIcon />,
-            url: 'https://twitter.com'
+            url: 'https://twitter.com',
           },
           {
             icon: <InstagramIcon />,
-            url: 'https://instagram.com'
+            url: 'https://instagram.com',
           },
-        ]
+        ],
       },
       {
         name: 'Dominic Haas',
@@ -29,13 +29,13 @@ const content = {
         socials: [
           {
             icon: <TwitterIcon />,
-            url: 'https://twitter.com'
+            url: 'https://twitter.com',
           },
           {
             icon: <InstagramIcon />,
-            url: 'https://instagram.com'
+            url: 'https://instagram.com',
           },
-        ]
+        ],
       },
       {
         name: 'Sasa Markovic',
@@ -44,13 +44,13 @@ const content = {
         socials: [
           {
             icon: <TwitterIcon />,
-            url: 'https://twitter.com'
+            url: 'https://twitter.com',
           },
           {
             icon: <InstagramIcon />,
-            url: 'https://instagram.com'
+            url: 'https://instagram.com',
           },
-        ]
+        ],
       },
       {
         name: 'Eleftherios Romanopoulos',
@@ -59,13 +59,13 @@ const content = {
         socials: [
           {
             icon: <TwitterIcon />,
-            url: 'https://twitter.com'
+            url: 'https://twitter.com',
           },
           {
             icon: <InstagramIcon />,
-            url: 'https://instagram.com'
+            url: 'https://instagram.com',
           },
-        ]
+        ],
       },
       {
         name: 'Luka Petrovic',
@@ -74,13 +74,13 @@ const content = {
         socials: [
           {
             icon: <TwitterIcon />,
-            url: 'https://twitter.com'
+            url: 'https://twitter.com',
           },
           {
             icon: <InstagramIcon />,
-            url: 'https://instagram.com'
+            url: 'https://instagram.com',
           },
-        ]
+        ],
       },
       {
         name: 'Jovana Badzic',
@@ -89,13 +89,13 @@ const content = {
         socials: [
           {
             icon: <TwitterIcon />,
-            url: 'https://twitter.com'
+            url: 'https://twitter.com',
           },
           {
             icon: <InstagramIcon />,
-            url: 'https://instagram.com'
+            url: 'https://instagram.com',
           },
-        ]
+        ],
       },
       {
         name: 'Steven Ogbodo',
@@ -104,13 +104,13 @@ const content = {
         socials: [
           {
             icon: <TwitterIcon />,
-            url: 'https://twitter.com'
+            url: 'https://twitter.com',
           },
           {
             icon: <InstagramIcon />,
-            url: 'https://instagram.com'
+            url: 'https://instagram.com',
           },
-        ]
+        ],
       },
       {
         name: 'Giulian Musio',
@@ -119,13 +119,13 @@ const content = {
         socials: [
           {
             icon: <TwitterIcon />,
-            url: 'https://twitter.com'
+            url: 'https://twitter.com',
           },
           {
             icon: <InstagramIcon />,
-            url: 'https://instagram.com'
+            url: 'https://instagram.com',
           },
-        ]
+        ],
       },
       {
         name: 'Nikolas Escobal',
@@ -134,13 +134,13 @@ const content = {
         socials: [
           {
             icon: <TwitterIcon />,
-            url: 'https://twitter.com'
+            url: 'https://twitter.com',
           },
           {
             icon: <InstagramIcon />,
-            url: 'https://instagram.com'
+            url: 'https://instagram.com',
           },
-        ]
+        ],
       },
       {
         name: 'Bujar Arllati',
@@ -149,15 +149,15 @@ const content = {
         socials: [
           {
             icon: <TwitterIcon />,
-            url: 'https://twitter.com'
+            url: 'https://twitter.com',
           },
           {
             icon: <InstagramIcon />,
-            url: 'https://instagram.com'
+            url: 'https://instagram.com',
           },
-        ]
+        ],
       },
-    ]
+    ],
   },
   de: {
     title: 'Das Team',
@@ -169,13 +169,13 @@ const content = {
         socials: [
           {
             icon: <TwitterIcon />,
-            url: 'https://twitter.com'
+            url: 'https://twitter.com',
           },
           {
             icon: <InstagramIcon />,
-            url: 'https://instagram.com'
+            url: 'https://instagram.com',
           },
-        ]
+        ],
       },
       {
         name: 'Dominic Haas',
@@ -184,13 +184,13 @@ const content = {
         socials: [
           {
             icon: <TwitterIcon />,
-            url: 'https://twitter.com'
+            url: 'https://twitter.com',
           },
           {
             icon: <InstagramIcon />,
-            url: 'https://instagram.com'
+            url: 'https://instagram.com',
           },
-        ]
+        ],
       },
       {
         name: 'Sasa Markovic',
@@ -199,13 +199,13 @@ const content = {
         socials: [
           {
             icon: <TwitterIcon />,
-            url: 'https://twitter.com'
+            url: 'https://twitter.com',
           },
           {
             icon: <InstagramIcon />,
-            url: 'https://instagram.com'
+            url: 'https://instagram.com',
           },
-        ]
+        ],
       },
       {
         name: 'Eleftherios Romanopoulos',
@@ -214,13 +214,13 @@ const content = {
         socials: [
           {
             icon: <TwitterIcon />,
-            url: 'https://twitter.com'
+            url: 'https://twitter.com',
           },
           {
             icon: <InstagramIcon />,
-            url: 'https://instagram.com'
+            url: 'https://instagram.com',
           },
-        ]
+        ],
       },
       {
         name: 'Luka Petrovic',
@@ -229,13 +229,13 @@ const content = {
         socials: [
           {
             icon: <TwitterIcon />,
-            url: 'https://twitter.com'
+            url: 'https://twitter.com',
           },
           {
             icon: <InstagramIcon />,
-            url: 'https://instagram.com'
+            url: 'https://instagram.com',
           },
-        ]
+        ],
       },
       {
         name: 'Jovana IdkLastName',
@@ -244,13 +244,13 @@ const content = {
         socials: [
           {
             icon: <TwitterIcon />,
-            url: 'https://twitter.com'
+            url: 'https://twitter.com',
           },
           {
             icon: <InstagramIcon />,
-            url: 'https://instagram.com'
+            url: 'https://instagram.com',
           },
-        ]
+        ],
       },
       {
         name: 'Steven Ogbodo',
@@ -259,13 +259,13 @@ const content = {
         socials: [
           {
             icon: <TwitterIcon />,
-            url: 'https://twitter.com'
+            url: 'https://twitter.com',
           },
           {
             icon: <InstagramIcon />,
-            url: 'https://instagram.com'
+            url: 'https://instagram.com',
           },
-        ]
+        ],
       },
       {
         name: 'Nikolas Escobal',
@@ -274,16 +274,16 @@ const content = {
         socials: [
           {
             icon: <TwitterIcon />,
-            url: 'https://twitter.com'
+            url: 'https://twitter.com',
           },
           {
             icon: <InstagramIcon />,
-            url: 'https://instagram.com'
+            url: 'https://instagram.com',
           },
-        ]
+        ],
       },
-    ]
+    ],
   },
-}
+};
 
 export default content;

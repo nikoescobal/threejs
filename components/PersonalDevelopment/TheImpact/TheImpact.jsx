@@ -1,5 +1,4 @@
-import styles from './legacyapproach.module.scss';
-import Image from 'next/image';
+import styles from './theimpact.module.scss';
 import useStore from '../../../store/store';
 import Link from 'next/link';
 import ComingSoon from '../../Generic/ComingSoon/ComingSoon';
@@ -7,9 +6,9 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import content from './content';
 import translations from '../../../language';
-import Card from '../../Generic/Card/Card';
+import CardNoImage from '../../Generic/CardNoImage/CardNoImage';
 
-function LegacyApproach({ className }) {
+function TheImpact({ className, title, description }) {
   const { isDarkMode } = useStore();
   const [error, setError] = useState(false);
   const { locale } = useRouter();
@@ -23,26 +22,30 @@ function LegacyApproach({ className }) {
       spacing-x
       max-1920`}
     >
+      <div className={styles['heading']}>
+        <h2>The Impact</h2>
+        <p>
+          With practice, users can improve all aspects of life - from work to
+          relationships and mental wellbeing.
+        </p>
+      </div>
+
       <div className={`${styles['cards-wrapper']} `}>
         {content[locale].map((card) => (
-          <Card key={card.title} card={card} />
+          <CardNoImage key={card.title} card={card} />
         ))}
       </div>
       <div
         style={{
           display: 'flex',
           justifyContent: 'center',
-          marginTop: '2rem',
+          // marginTop: '2rem',
           position: 'relative',
           zIndex: '1',
         }}
-      >
-        <ComingSoon style={{ paddingLeft: '2rem', paddingRight: '2rem' }}>
-          {translations['learn_more'][locale]}
-        </ComingSoon>
-      </div>
+      ></div>
     </div>
   );
 }
 
-export default LegacyApproach;
+export default TheImpact;

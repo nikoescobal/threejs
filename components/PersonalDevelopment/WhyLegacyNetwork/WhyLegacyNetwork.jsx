@@ -13,7 +13,7 @@ import Gradient from '../../Generic/Gradient/Gradient';
 function WhyLegacyNetwork() {
   const { isDarkMode } = useStore((state) => state);
   const { locale } = useRouter();
-  const { uuid } = require('crypto')
+  const { uuid } = require('crypto');
 
   return (
     <section
@@ -29,14 +29,14 @@ function WhyLegacyNetwork() {
       <div className={`${styles['left']}`}>
         <h2>{content[locale].title}</h2>
         <p>{content[locale].body}</p>
+        <br />
+        <p>{content[locale].subtext}</p>
       </div>
       <div className={`${styles['right']}`}>
         {content[locale].extras.map((item) => (
           <div key={item.title}>
             <h3>{item.title}</h3>
-            <p>
-              {item.body}
-            </p>
+            <p>{item.body}</p>
           </div>
         ))}
       </div>

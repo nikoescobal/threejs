@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import styles from './whatispersonaldevelopment.module.scss';
+import styles from './whatcanbeachieved.module.scss';
 import useStore from '../../../store/store';
 import content from './content';
 import { useRouter } from 'next/router';
@@ -26,9 +26,31 @@ function WhatIsPersonalDevelopment() {
       <Gradient className={styles.gradient} />
       <div className={`${styles['cards-wrapper']}`}>
         {content[locale].map((item) => (
-          <div key={uuid} className={styles['text-wrapper']}>
-            <h2>{item.title}</h2>
-            <p>{item.text}</p>
+          <div key={uuid} className={styles.grid}>
+            {/* <div  className={styles.grid}> */}
+            <div className={styles['img-wrapper']}>
+              {/* <Image
+                src={item.image}
+                width={700}
+                height={100}
+                objectFit={'fill'}
+                alt="illustration"
+              /> */}
+              <img
+                src={item.image}
+                width={700}
+                height={100}
+                alt="illustration"
+              />
+            </div>
+            <div className={styles['card']}>
+              <h2>{item.title}</h2>
+              <div
+                dangerouslySetInnerHTML={{ __html: item.body }}
+                className={styles.body}
+              />
+            </div>
+            {/* </div> */}
           </div>
         ))}
       </div>

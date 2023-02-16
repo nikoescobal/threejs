@@ -30,7 +30,7 @@ const LegacyMethods = () => {
         dangerouslySetInnerHTML={{ __html: content[locale].subtitle }}
       />
 
-      {isDesktop ? (
+      {/* {isDesktop ? (
         <>
           <Parallax speed={60} className={styles['spikes']}>
             <Image className="" src={Spikes} alt="spikes" draggable="false" />
@@ -42,7 +42,7 @@ const LegacyMethods = () => {
             <Image className="" src={Spikes} alt="spikes" draggable="false" />
           </div>
         </>
-      )}
+      )} */}
 
       <div className={styles['legacy-methods']}>
         <div className={styles['left-content']}>
