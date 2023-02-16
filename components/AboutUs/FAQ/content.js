@@ -3,7 +3,7 @@ const content = {
     title: 'Your questions answered',
     body: `
       <p>
-        Didn’t find an answer your question?
+        Didn’t find an answer to your question?
       </p>
       <p>
         Drop us a line.
