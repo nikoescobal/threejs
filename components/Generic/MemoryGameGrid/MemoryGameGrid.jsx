@@ -90,13 +90,13 @@ function MemoryGameGrid(props) {
       `}
     >
       {!gameStart && !gameRestart ? (
-        <Button className={styles['memory-button']} onClick={handleStart}>
+        <Button className="button-blue" onClick={handleStart}>
           <img src={Start.src} alt="Start icon" className={styles.start} />
           Start
         </Button>
       ) : null}
       {!gameStart && gameRestart ? (
-        <Button className={styles['memory-button']} onClick={handleRestart}>
+        <Button className="button-blue" onClick={handleRestart}>
           <img
             src={Restart.src}
             alt="Restart icon"

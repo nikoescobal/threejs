@@ -65,7 +65,7 @@
   max-width: 0.8rem;
 }
 
-.memory-button {
+.wrapper button {
   padding-top: 0.5rem !important;
   width: 100% !important;
   max-width: 13rem !important;
@@ -80,11 +80,11 @@
   justify-content: center !important;
 }
 
-.memory-button:active,
-.memory-button:hover {
+.wrapper button:active,
+.wrapper button:hover {
   background: $blue--1 !important;
 }
 
-.light .memory-button {
+.light .wrapper button {
   background: $light-mode-secondary !important;
 }
