@@ -32,9 +32,28 @@
   filter: invert(0.8);
 }
 
+.wrapper::before {
+  content: "";
+  width: 100%;
+  background-color: $gray--3;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(0) perspective(100px);
+  transition: .4s;
+  backface-visibility: hidden;
+  // filter: grayscale(1);
+}
+
+.light.wrapper::before {
+  background-color: #dae6ff;
+}
+
 .wrapper::after {
   content: "";
-  background: url('/logo-cropped.webp') center / contain no-repeat $gray--5;
+  // background: url('/logo-cropped.webp') center / contain no-repeat $gray--5;
+  background: url('/logo-cropped.webp') center / contain no-repeat;
   background-size: 40%;
   width: 100%;
   height: 100%;
@@ -47,9 +66,9 @@
   filter: grayscale(1);
 }
 
-.light.wrapper::after {
-  background-color: #dae6ff;
-}
+// .light.wrapper::after {
+//   background-color: #dae6ff;
+// }
 
 .wrapper:hover::after {
   filter: grayscale(0);
@@ -65,6 +84,7 @@
   backface-visibility: hidden;
 }
 
+.wrapper[data-opened="true"]::before,
 .wrapper[data-opened="true"]::after {
   transform: rotateY(180deg) perspective(100px);
 }
