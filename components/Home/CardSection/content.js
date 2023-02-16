@@ -6,24 +6,25 @@ import Icon4 from '../../../public/icons/card-icon4.svg';
 const content = {
   en: [
     {
-      title: 'Play',
-      description: `The in-game character serves as a reflection of you. When the character levels up in-game, you level up in real life.`,
+      title: 'Select a Module',
+      description: `You can choose between modules to learn different topics. Each module is structured chronologically, enabling you to build knowledge step-by-step and create a strong foundation for your future growth.`,
       icon: Icon1,
     },
     {
-      title: 'Expand Knowledge',
-      description: `In the beginning, the reward distribution will be pegged to randomized, theoretical exams. `,
+      title: 'Play Through a Lesson',
+      description: `Each topic is broken down into Levels & Lessons. Every lesson focuses on a distinct concept and contains text, visual elements, and a practical task to complete.
+      `,
       icon: Icon2,
     },
     {
-      title: 'Choose a skill',
-      description: `Our unique education system covers all essential skills for your personal success in mental health, physical health, etc.`,
+      title: 'Complete the Quiz',
+      description: `At the end of each module, you will answer questions to check if you have grasped the key takeaways. This repetition helps you to retain the information.
+      `,
       icon: Icon3,
     },
     {
-      title: 'Earn rewards',
-      description: `Chests can include Legacy Token (LGCT), collectibles and other
-        items which can either be traded or reused within the ecosystem.`,
+      title: 'Earn Rewards',
+      description: `If the quiz is passed successfully, reward chests are being distributed. Chests can include Legacy tokens, collectibles and other items which can either be traded or reused within the ecosystem.`,
       icon: Icon4,
     },
   ],
