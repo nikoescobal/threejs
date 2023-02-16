@@ -27,7 +27,7 @@ const content = {
   en: {
     title: 'About Us',
     subtitle:
-      'We are a cutting-edge personal development company that leverages the latest technologies, such as blockchain and AI. Our diverse team specializes in product design and delivery, utilizing both design thinking and agile methodologies to create meaningful change for our clients.',
+      'We are a cutting-edge personal development company that leverages the latest technologies, such as blockchain and AI. Our diverse team specializes in product design and delivery, utilizing both design thinking and agile methodologies to create meaningful change for our users.',
   },
   de: {
     title: 'Über uns',
