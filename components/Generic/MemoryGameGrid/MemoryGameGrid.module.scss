@@ -66,14 +66,14 @@
 }
 
 .memory-button {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
   background: $blue--2 !important;
   border: 5px solid #164299;
   color: white !important;
-  border-radius: 2.5rem;
-  display: flex;
-  gap: 0.625rem;
-  align-items: center;
-  justify-content: center;
+  border-radius: 2.5rem !important;
+  display: flex !important;
+  gap: 0.625rem !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
