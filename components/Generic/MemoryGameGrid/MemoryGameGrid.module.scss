@@ -30,7 +30,7 @@
   }
 }
 
-.wrapper>button {
+.wrapper > button {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -58,4 +58,20 @@
   right: -58%;
   scale: 0.8;
   rotate: 90deg;
+}
+
+.start,
+.restart {
+  max-width: 0.8rem;
+}
+
+.wrapper button {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border: 5px solid #164299;
+  border-radius: 2.5rem;
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: center;
 }
