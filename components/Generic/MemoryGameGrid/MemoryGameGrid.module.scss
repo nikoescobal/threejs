@@ -67,6 +67,8 @@
 
 .memory-button {
   padding-top: 0.5rem !important;
+  width: 100% !important;
+  max-width: 13rem !important;
   padding-bottom: 0.5rem !important;
   background: $blue--2 !important;
   border: 5px solid #164299;
@@ -76,4 +78,13 @@
   gap: 0.625rem !important;
   align-items: center !important;
   justify-content: center !important;
+}
+
+.memory-button:active,
+.memory-button:hover {
+  background: $blue--1 !important;
+}
+
+.light .memory-button {
+  background: $light-mode-secondary !important;
 }
