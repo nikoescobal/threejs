@@ -45,6 +45,8 @@
 .row img {
   display: block;
   margin: 0 auto;
+  max-height: 28rem;
+  object-fit: contain;
 
   @include lg {
     margin: 0;

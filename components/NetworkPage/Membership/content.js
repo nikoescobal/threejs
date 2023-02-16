@@ -1,5 +1,8 @@
 import LinkedIn from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import Forum from '../../Icons/Forum';
+import LockOpen from '../../Icons/LockOpen/LockOpen';
+import Repeat from '../../Icons/Repeat';
 
 const content = {
   en: {
@@ -7,15 +10,18 @@ const content = {
       list: [
         {
           title: 'Join like-minded people',
-          description: 'Networking with like-minded people promotes personal and professional growth and enhances social skills, leading to significant improvements in all areas.'
+          description: 'Networking with like-minded people promotes personal and professional growth and enhances social skills, leading to significant improvements in all areas.',
+          icon: <LockOpen />
         },
         {
           title: 'Exchange Knowledge',
-          description: 'Just share thoughts and knowledge with the community, share ideas and discuss things in our different channels.'
+          description: 'Just share thoughts and knowledge with the community, share ideas and discuss things in our different channels.',
+          icon: <Repeat />
         },
         {
           title: 'Get Support',
-          description: 'Get support from a base of active entrepreneurs and builders. Also support others with your knowledge and experience.'
+          description: 'Get support from a base of active entrepreneurs and builders. Also support others with your knowledge and experience.',
+          icon: <Forum />
         },
       ]
     },

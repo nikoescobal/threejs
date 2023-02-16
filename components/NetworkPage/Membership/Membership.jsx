@@ -25,7 +25,7 @@ function Membership() {
           content[locale].list.map((item, index) => (
             <div key={uuid} className={styles['item']}>
               <div>
-                <LockOpen />
+                {item.icon}
                 <h3>{item.title}</h3>
               </div>
               <p>{item.description}</p>
