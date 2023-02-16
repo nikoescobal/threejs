@@ -364,7 +364,7 @@ function Navbar() {
             />
           </button>
         </div>
-        <p
+        {/* <p
           className={`${styles['gradient-bar']} ${
             scrollDirection === 'down' ? `${styles['scroll-down']}` : ''
           }`}
@@ -381,7 +381,7 @@ function Navbar() {
           >
             <CloseIcon className={styles['close']} />
           </IconButton>
-        </p>
+        </p> */}
       </nav>
     </>
   );
