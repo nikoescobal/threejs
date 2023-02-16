@@ -9,7 +9,7 @@ const content = {
     steps: [
       {
         number: 'Step 1',
-        title: 'Get LGCT Token',
+        title: 'Get Legacy Token',
         description: `You can get your hands on Legacy Token (LGCT) by using our ecosystem, by participating in raffles or by buying them on the open market, public or private sale.`,
       },
       {

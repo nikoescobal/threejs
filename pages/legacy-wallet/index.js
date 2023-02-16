@@ -21,17 +21,17 @@ import WalletExtension from '../../components/LegacyWalletPage/WalletExtension/W
 const content = {
   en: {
     title: 'Legacy Wallet',
-    subtitle: 'A non-custodial multi-chain wallet'
+    subtitle: 'A non-custodial multi-chain wallet',
   },
   de: {
     title: 'Legacy Wallet',
-    subtitle: 'Sinnvolle Veränderung'
-  }
-}
+    subtitle: 'Sinnvolle Veränderung',
+  },
+};
 
 function LegacyWallet() {
   const { locale } = useRouter();
-  
+
   return (
     <div>
       <Head>
@@ -45,7 +45,7 @@ function LegacyWallet() {
         rightObj={
           <img
             className={styles.image}
-            src={'/headers/legacy-wallet.png'}
+            src={'/headers/legacy-wallet-2.png'}
             alt="legacy wallet illustration"
           />
         }

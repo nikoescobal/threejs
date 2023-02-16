@@ -12,17 +12,17 @@ import CardSection from '../../components/Home/CardSection/CardSection';
 const content = {
   en: {
     title: 'Legacy',
-    subtitle: 'The future of education'
+    subtitle: 'The future of education',
   },
   de: {
     title: 'Legacy',
-    subtitle: 'Sinnvolle Veränderung'
-  }
-}
+    subtitle: 'Sinnvolle Veränderung',
+  },
+};
 
 function Legacy() {
   const { locale } = useRouter();
-  
+
   return (
     <div>
       <Head>
@@ -36,7 +36,7 @@ function Legacy() {
         rightObj={
           <img
             className={styles.image}
-            src={'/headers/legacy.png'}
+            src={'/headers/legacy-hero.png'}
             alt="legacy application illustration"
           />
         }
