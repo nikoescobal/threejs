@@ -103,6 +103,7 @@
 
 .number {
   color: $blue--2;
+  padding-left: 1rem;
 
   @include md {
     padding-left: 1rem;
@@ -132,7 +133,7 @@
 .description {
   color: $gray--9;
   border-left: 2px dashed $gray--12;
-  padding: 1.5rem;
+  padding: 0.1rem 1.5rem 1.5rem;
   margin-left: -0.5rem;
   margin-top: 1rem;
   max-width: 47ch;
