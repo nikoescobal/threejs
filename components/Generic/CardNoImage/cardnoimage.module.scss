@@ -5,7 +5,7 @@
 .wrapper {
   background: $gray--4;
   // border: 1px solid $gray--6;
-  // border: 1px solid $blue--2;
+  border: 1px solid $blue--2;
 
   border-radius: 8px;
   padding: 1rem 1rem 2rem;
@@ -14,7 +14,7 @@
 
 .light.wrapper {
   background: rgba($color: $light-mode-secondary, $alpha: 0.1);
-  // border: 1px solid $blue--2;
+  border: 1px solid $blue--2;
   // background: rgba(84, 128, 234, 0.1);
 }
 

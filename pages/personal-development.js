@@ -56,7 +56,7 @@ function PersonalDevelopment() {
       {/* <Explanation /> */}
       <WhatIsPersonalDevelopment />
       <WhatCanBeAchieved />
-      <LegacyApproach />
+      <LegacyApproach className={styles['legacy']} />
       <TheImpact />
       {/* <WavesWrapper hideBottom={true}>
       </WavesWrapper> */}
