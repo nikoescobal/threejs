@@ -39,7 +39,7 @@ function Network() {
         rightObj={
           <img
             className={styles.image}
-            src={'/headers/network.png'}
+            src={'/headers/network.svg'}
             alt="network illustration"
           />
         }
