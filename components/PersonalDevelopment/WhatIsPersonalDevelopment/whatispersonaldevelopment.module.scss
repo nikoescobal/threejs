@@ -6,6 +6,11 @@
   position: relative;
   z-index: 1;
   background: $gray--2;
+  margin-top: 2rem;
+
+  @include md {
+    margin-top: 0;
+  }
 }
 
 .light.main-wrapper {
@@ -13,6 +18,7 @@
 }
 
 .gradient {
+  z-index: 0;
   left: -60%;
   top: auto;
   bottom: 0;
@@ -21,12 +27,15 @@
 
 .cards-wrapper {
   display: grid;
-  grid-template-columns: 1.2fr 0.9fr;
   gap: 2.5rem;
+  position: relative;
+  z-index: 10;
 
   @include lg {
+    grid-template-columns: 1.2fr 0.9fr;
     gap: 3.4rem;
   }
+
   // padding-top: 4rem;
 
   @include md {
@@ -45,6 +54,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+
   min-height: 24rem;
   overflow: visible;
   align-items: center;
