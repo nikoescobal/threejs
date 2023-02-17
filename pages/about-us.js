@@ -22,6 +22,7 @@ import MeetTheTeam from '../components/AboutUs/MeetTheTeam/Team';
 import WhyLegacyNetwork from '../components/PersonalDevelopment/WhyLegacyNetwork/WhyLegacyNetwork';
 import Gallery from '../components/PersonalDevelopment/Gallery/Gallery';
 import AdvisoryBoard from '../components/PersonalDevelopment/AdvisoryBoard/AdvisoryBoard';
+import TheTeam from '../components/AboutUs/TheTeam/TheTeam';
 
 const content = {
   en: {
@@ -83,6 +84,7 @@ function AboutUs() {
       </WavesWrapper> */}
       {/* <Team /> */}
       <MeetTheTeam />
+      <TheTeam />
       <WhyLegacyNetwork />
       <Gallery />
       {/* <AdvisoryBoard /> */}

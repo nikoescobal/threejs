@@ -1,24 +1,19 @@
-import { IconButton, useMediaQuery } from '@mui/material';
 import { useRouter } from 'next/router';
 import useStore from '../../../store/store';
-import TeamCard from '../TeamCard/TeamCard';
 import content from './content';
 import styles from './team.module.scss';
-import { useState } from 'react';
 import TeamSlider from '../TeamSlider/TeamSlider';
 
 function MeetTheTeam() {
-  const isTablet = useMediaQuery('(min-width: 768px)');
   const { isDarkMode } = useStore();
   const { locale } = useRouter();
-  const { uuid } = require('crypto');
 
   return (
-    <section className={`${!isDarkMode ? `${styles.light}` : ''} ${styles['meet-team']} spacing-x max-1920`}>
+    <section className={`${!isDarkMode ? `${styles.light}` : ''} ${styles['meet-team']} spacing-y spacing-x max-1920`}>
       <h2>{content[locale].title}</h2>
       <div className={styles['sliders-wrapper']}>
         <TeamSlider team={content[locale].team} offset={100} />
-        <TeamSlider team={content[locale].team} offset={100} />
+        {/* <TeamSlider team={content[locale].team} offset={100} /> */}
       </div>
       {/* <div
         className={styles['cards-wrapper']}

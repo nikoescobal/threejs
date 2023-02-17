@@ -5,7 +5,7 @@ import RedditIcon from '@mui/icons-material/Reddit';
 
 const content = {
   en: {
-    title: 'Meet The Core Team',
+    title: 'The Team',
     team: [
       {
         name: 'Fabio Martinetti',
