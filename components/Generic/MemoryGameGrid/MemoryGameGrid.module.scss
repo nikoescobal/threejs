@@ -30,12 +30,32 @@
   }
 }
 
-.wrapper>button {
+.wrapper > button {
   position: absolute;
   top: 50%;
   left: 50%;
   translate: -50% 50%;
   z-index: 1;
+  padding-bottom: 0.5rem !important;
+  padding-top: 0.5rem !important;
+  border: 5px solid #164299;
+  color: white !important;
+  justify-content: center !important;
+  align-items: center !important;
+  display: flex !important;
+  gap: 0.625rem !important;
+  border-radius: 2.5rem !important;
+  background: $blue--2 !important;
+  text-transform: capitalize;
+}
+
+.wrapper > button:active,
+.wrapper > button:hover {
+  background: #164299 !important;
+}
+
+.light .wrapper > button {
+  background: $light-mode-secondary !important;
 }
 
 // .grid[data-has-started="false"] {
@@ -58,4 +78,9 @@
   right: -58%;
   scale: 0.8;
   rotate: 90deg;
+}
+
+.start,
+.restart {
+  max-width: 0.8rem;
 }

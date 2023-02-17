@@ -1,11 +1,13 @@
 import styles from './MemoryGameGrid.module.scss';
-import { useState } from "react";
-import useStore from "../../../store/store";
-import MemoryGameTile from "../MemoryGameTile/MemoryGameTile";
+import { useState } from 'react';
+import useStore from '../../../store/store';
+import MemoryGameTile from '../MemoryGameTile/MemoryGameTile';
 import { Button } from '@mui/material';
 import PropTypes from 'prop-types';
 import { useEffect } from 'react';
-import { Fireworks } from '@fireworks-js/react'
+import { Fireworks } from '@fireworks-js/react';
+import Restart from '../../../public/icons/restart.svg';
+import Start from '../../../public/icons/start.svg';
 
 function MemoryGameGrid(props) {
   const {
@@ -18,7 +20,7 @@ function MemoryGameGrid(props) {
     gameRestart,
     onGameStart,
     hasWon,
-    onRestart
+    onRestart,
   } = props;
   const { isDarkMode } = useStore();
   const [startVisible, setStartVisible] = useState(false);
@@ -26,75 +28,94 @@ function MemoryGameGrid(props) {
   const handleOpen = (index) => {
     console.log('visible', visibleItems);
     console.log('finished', finishedItems);
-    console.log('clicked')
+    console.log('clicked');
     if (!finishedItems.includes(index)) {
       switch (visibleItems.length) {
         case 0:
           setVisibleItems([index]);
-          console.log('1')
+          console.log('1');
           break;
         case 1:
           if (visibleItems[0] !== index) {
             setVisibleItems(visibleItems.concat(index));
-            console.log('2')
+            console.log('2');
             checkItems(visibleItems[0], index);
           }
           break;
         case 2:
           setVisibleItems([index]);
-          console.log('3')
+          console.log('3');
           break;
         default:
           setVisibleItems([]);
-          console.log('default')
+          console.log('default');
       }
     }
-  }
+  };
 
   const handleStart = () => {
     setStartVisible(true);
     onGameStart();
-  }
-  
+  };
+
   const handleRestart = () => {
     onRestart();
     setStartVisible(true);
     onGameStart();
-  }
+  };
 
   const openCheck = (index) => {
-    return startVisible || (gameStart && (visibleItems.includes(index) || finishedItems.includes(index)))
-  }
+    return (
+      startVisible ||
+      (gameStart &&
+        (visibleItems.includes(index) || finishedItems.includes(index)))
+    );
+  };
 
   useEffect(() => {
     if (startVisible) {
       const interval = setInterval(() => {
         setStartVisible(false);
-      }, 3000)
+      }, 3000);
 
       return () => clearInterval(interval);
     }
-  }, [startVisible])
+  }, [startVisible]);
 
   return (
-    <div className={`
+    <div
+      className={`
       ${styles['wrapper']}
       ${!isDarkMode ? styles['light'] : ''}
       `}
     >
-      {
-        !gameStart && !gameRestart
-          ? <Button className='button-blue' onClick={handleStart}>Start</Button>
-          : null
-      }
-      {
-        !gameStart && gameRestart
-          ? <Button className='button-blue' onClick={handleRestart}>Restart</Button>
-          : null
-      }
+      {!gameStart && !gameRestart ? (
+        <Button className="button-blue" onClick={handleStart}>
+          <img src={Start.src} alt="Start icon" className={styles.start} />
+          Start
+        </Button>
+      ) : null}
+      {!gameStart && gameRestart ? (
+        <Button className="button-blue" onClick={handleRestart}>
+          <img
+            src={Restart.src}
+            alt="Restart icon"
+            className={styles.restart}
+          />
+          Restart
+        </Button>
+      ) : null}
       <div className={styles['grid']}>
-      <img src="/weapons/spear-cropped.png" alt='spear weapon' className={styles.spear} />
-      <img src="/weapons/spear-cropped.png" alt='spear weapon' className={styles.spear} />
+        <img
+          src="/weapons/spear-cropped.png"
+          alt="spear weapon"
+          className={styles.spear}
+        />
+        <img
+          src="/weapons/spear-cropped.png"
+          alt="spear weapon"
+          className={styles.spear}
+        />
         {list.map((item, index) => (
           <MemoryGameTile
             key={item.id}
@@ -103,11 +124,11 @@ function MemoryGameGrid(props) {
             opened={openCheck(index)}
             finished={finishedItems.includes(index)}
             className={`col-3 card ${
-              visibleItems.includes(index) ? "grid-card-show" : ""
+              visibleItems.includes(index) ? 'grid-card-show' : ''
             } ${
               finishedItems.includes(index)
-                ? "grid-card-show grid-card-finished"
-                : ""
+                ? 'grid-card-show grid-card-finished'
+                : ''
             }`}
             onClick={() => handleOpen(index)}
             imgSource={item.url}
@@ -117,12 +138,12 @@ function MemoryGameGrid(props) {
       </div>
     </div>
   );
-};
+}
 
 MemoryGameGrid.propTypes = {
   list: PropTypes.arrayOf(PropTypes.string),
-  start: PropTypes.bool
-}
+  start: PropTypes.bool,
+};
 
 MemoryGameGrid.defaultProps = {
   list: [],

@@ -17,7 +17,7 @@ const content = {
           </p>
         `,
         img: {
-          src: '/mockups/Legacy/1.png',
+          src: '/mockups/Legacy/game-of-life.png',
           alt: 'Legacy App Mockup',
         },
       },
@@ -61,7 +61,7 @@ const content = {
           </p>
         `,
         img: {
-          src: '/mockups/Legacy/1.png',
+          src: '/mockups/Legacy/game-of-life.png',
           alt: 'Legacy App Mockup',
         },
       },
