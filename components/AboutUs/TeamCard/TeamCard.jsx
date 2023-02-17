@@ -28,11 +28,11 @@ function TeamCard({member, index, style}) {
           ))}
         </div>
         
-        {
+        {/* {
           index === 0 
             ? <img src="/team/dino.png" alt="dino" className={styles['dino']} />
             : null
-        }
+        } */}
       </div>
     </div>
   );
