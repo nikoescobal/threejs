@@ -23,6 +23,8 @@ import WhyLegacyNetwork from '../components/PersonalDevelopment/WhyLegacyNetwork
 import Gallery from '../components/PersonalDevelopment/Gallery/Gallery';
 import AdvisoryBoard from '../components/PersonalDevelopment/AdvisoryBoard/AdvisoryBoard';
 import TheTeam from '../components/AboutUs/TheTeam/TheTeam';
+import Script from 'next/script';
+// import brainglb from '../public/3d/brain.glb';
 
 const content = {
   en: {
@@ -53,12 +55,12 @@ function AboutUs() {
           className={styles.header}
           waves={<WaveLines className={`${styles['waves-wrapper']}`} />}
           rightObj={
-            <div
-              style={{
-                scale: '1.1',
-              }}
-            >
-              <img src="/logo-cropped.webp" alt="logo" draggable="false" />
+            <div>
+              <div id="brain3d" className={styles['brain']}></div>
+              <Script src="/3d/brain.js" />
+
+              {/* <img src="/logo-cropped.webp" alt="logo" draggable="false" /> */}
+              {/* <Brain /> */}
               {/* {isDarkMode ? (
                 <img
                   src="/backgrounds/about-us-dark.png"

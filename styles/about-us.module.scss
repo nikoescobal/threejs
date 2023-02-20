@@ -28,3 +28,32 @@
 .header img {
   scale: 0.8;
 }
+
+// .brain {
+//   width: 800px;
+//   height: 800px;
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   right: 0;
+//   left: 0;
+
+// }
+
+.brain {
+  // position: absolute;
+  // top: -13%;
+  // left: 75%;
+  width: 800px;
+  height: 800px;
+  // scale: 1.75;
+  background-color: transparent;
+  // z-index: 100;
+  // transform: translate(37.5rem, -10rem);
+}
+
+.brain canvas {
+  outline: none;
+  transition: opacity 1s;
+  // width: 500px !important;
+}
